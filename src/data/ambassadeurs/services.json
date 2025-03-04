@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "image": "assets/imgs/serv-icons/0.png",
+    "title": "Sécurisation des données",
+    "text": "Sécuriser les informations sensibles via des mécanismes comme le chiffrement et le contrôle d'accès."
+  },
+  {
+    "id": 2,
+    "image": "assets/imgs/serv-icons/1.png",
+    "title": "Détection des menaces",
+    "text": "Surveiller les systèmes avec des outils de détection pour identifier et bloquer les activités suspectes en temps réel."
+  },
+  {
+    "id": 3,
+    "image": "assets/imgs/serv-icons/2.png",
+    "title": "Gestion des incidents",
+    "text": "Réagir aux cyberattaques, restaurer les systèmes touchés et analyser l'incident pour renforcer la sécurité"
+  }
+]

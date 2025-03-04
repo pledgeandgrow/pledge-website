@@ -1,0 +1,32 @@
+[
+    {
+      "title": "Avantages Partenaires",
+      "subtitle": "Accédez à une gamme de privilèges et d'opportunités conçus pour nos partenaires."
+    },
+    [
+      {
+        "id": 1,
+        "icon": "Lightbulb",
+        "title": "Innovation Continue",
+        "text": "Accès exclusif aux dernières technologies et innovations de Pledge and Grow."
+      },
+      {
+        "id": 2,
+        "icon": "ScanEye",
+        "title": "Visibilité Accrue",
+        "text": "Renforcez votre image de marque à travers des collaborations stratégiques."
+      },
+      {
+        "id": 3,
+        "icon": "Split",
+        "title": "Opportunités Commerciale",
+        "text": "Élargissez votre réseau et découvrez de nouvelles opportunités de marché."
+      },
+      {
+        "id": 4,
+        "icon": "PersonStanding",
+        "title": "Support Expert",
+        "text": "Bénéficiez de notre expertise et accompagnement personnalisé."
+      }
+    ]
+  ]

@@ -1,0 +1,65 @@
+[
+	{
+	  "id": 1,
+	  "background": "assets/imgs/sectors/healthcare.jpg",
+	  "tehcnologies": "Technologies : IA, IoT, Gestion des données.",
+	  "impact": "Impact : Amélioration des diagnostics, Gestion des dossiers médicaux électroniques, Télémédecine.",
+	  "category": "Rami Hadri",
+	  "title": "Santé et Médecine"
+	},
+	{
+	  "id": 2,
+	  "background": "assets/imgs/sectors/finance.jpg",
+	  "tehcnologies": "Technologies : Blockchain, Big data, Fintech.",
+	  "impact": "Impact: Sécurité des transactions, Analyse des risques, Services financiers innovants",
+	  "category": "Ambassadeur US",
+	  "title": "Finance et Assurance"
+	},
+	{
+	  "id": 3,
+	  "background": "assets/imgs/sectors/e-commerce.jpg",
+	  "tehcnologies": "Technologies: Cloud computing, Data analytics, Automatisation des ventes",
+	  "impact": "Impact: Optimisation des stocks, Personnalisation des expériences d'achat.",
+	  "category": "Maxime Neau",
+	  "title": "E-commerce et Retail"
+	},
+	{
+	  "id": 4,
+	  "background": "assets/imgs/sectors/energy.jpg",
+	  "tehcnologies": "Technologies : Smart grids, IoT, Data analytics.",
+	  "impact": "Impact: Gestion des ressources, Efficacité énergétique.",
+	  "title": "Énergie et Utilities"
+	},
+	{
+	  "id": 5,
+	  "background": "assets/imgs/sectors/transport.jpg",
+	  "tehcnologies": "Technologies : IA, Suivi en temps réel, Automatisation.",
+	  "impact": "Impact: Optimisation des chaînes d'approvisionnement, Réduction des coûts.",
+	  "category": "Louis Junqua-Salanne",
+	  "title": "Transports et Logistique"
+	},
+	{
+	  "id": 6,
+	  "background": "assets/imgs/sectors/education.jpg",
+	  "tehcnologies": "Technologies : Platforme d'apprentissage en ligne, Outils de collaboration",
+	  "impact": "Impact: Accéssibilité , Personnalisation de l'apprentissage.",
+	  "category": "Wassim TALI AMAR",
+	  "title": "Éducation et Formation"
+	},
+	{
+	  "id": 7,
+	  "background": "assets/imgs/sectors/hotel.jpg",
+	  "tehcnologies": "Technologies : Réservations en ligne",
+	  "impact": "Impact: Amélioration de l'éxperience client , Gestion des réservations",
+	  "category": "Wassim TALI AMAR",
+	  "title": "Tourisme et Hotellerie"
+	},
+	{
+	  "id": 8,
+	  "background": "assets/imgs/sectors/construction.jpg",
+	  "tehcnologies": "Technologies : BIIM (Modélisation de l'information du batiment) , IOT (gestion de projets)",
+	  "impact": "Impact: Éfficacité de la construction , Gestion optimisée de projets.",
+	  "category": "Wassim TALI AMAR",
+	  "title": "Immobilier et construction"
+	}
+  ]

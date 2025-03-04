@@ -1,0 +1,75 @@
+[
+	{
+	  "id": 1,
+	  "image": "assets/imgs/team/2.png",
+	  "name": "Mehdi BEREL",
+	  "position": "",
+	  "country": "CEO",
+	  "linkedLink":"https://www.linkedin.com/in/mehdi-berel-3aa261259/"
+	},
+	{
+	  "id": 2,
+	  "image": "assets/imgs/team/5.png",
+	  "name": "Shihab BEREL",
+	  "position": "",
+	  "country": "CTO",
+	  "linkedLink":"https://www.linkedin.com/in/berel-shihab-9a147b287/"
+
+
+	},
+	{
+	  "id": 3,
+	  "image": "assets/imgs/team/10.png",
+	  "name": "Noah PLA",
+	  "position": "",
+	  "country": "VP",
+	  "linkedLink":"https://www.linkedin.com/in/noah-pla-82110630b/"
+
+	},
+	{
+	  "id": 4,
+	  "image": "assets/imgs/team/9.png",
+	  "name": "Maxime NEAU",
+	  "position": "",
+	  "country": "Ambassadeur",
+	  "linkedLink":"https://www.linkedin.com/in/maxime-neau-966761301/"
+
+	},
+	{
+	  "id": 5,
+	  "image": "assets/imgs/team/3.png",
+	  "name": "Ilyas BEREL",
+	  "position": "",
+	  "country": "CFO",
+	  "linkedLink":"https://www.linkedin.com/in/mehdi-berel-3aa261259/"
+
+	},
+	  {
+		"id": 6,
+		"image": "assets/imgs/team/4.png",
+		"name": "Seydina FAYE",
+		"position": "",
+	  	"country": "CSO",
+		  "linkedLink":"https://www.linkedin.com/in/lyna-hammoud-73bb20262/"
+
+	  },
+	  {
+		"id": 6,
+		"image": "assets/imgs/team/6.png",
+		"name": "Lyna HAMMOUD",
+		"position": "",
+	  	"country": "CCO",
+		  "linkedLink":"https://www.linkedin.com/in/seydina-m-faye/"
+
+	  },
+	 
+	  {
+		"id": 6,
+		"image": "assets/imgs/team/7.png",
+		"name": "Mehdi OUALI",
+		"position": "",
+	  	"country": "CSMO",
+		  "linkedLink":"https://www.linkedin.com/in/mehdi-ouali-2433b525a/"
+
+	  }
+  ]

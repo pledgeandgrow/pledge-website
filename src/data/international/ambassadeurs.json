@@ -1,0 +1,24 @@
+[
+	{
+	  "id": 1,
+	  "image": "assets/imgs/team/9.png",
+	  "name": "Maxime NEAU",
+	  "position": "Créateur de Contenu",
+	  "country": "France"
+	},
+	{
+	  "id": 2,
+	  "image": "assets/imgs/team/1.png",
+	  "name": "Samy RABIA",
+	  "position": "",
+	  "country": "Émirats arabes unis"
+	},
+	  {
+		"id": 3,
+		"image": "assets/imgs/team/4.png",
+		"name": "Zac GREEZE",
+		"position": "Royaume-Uni",
+		"country": "Royaume-Uni"
+	  }
+	
+  ]

@@ -1,0 +1,46 @@
+{
+  "name": "original-pledge-and-grow",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.5",
+    "@mui/material": "^6.4.5",
+    "@radix-ui/react-icons": "^1.3.2",
+    "@radix-ui/react-navigation-menu": "^1.2.5",
+    "@radix-ui/react-slot": "^1.1.2",
+    "class-variance-authority": "^0.7.1",
+    "framer-motion": "^12.4.3",
+    "gsap": "^3.12.7",
+    "lucide-react": "^0.475.0",
+    "next": "15.1.7",
+    "next-themes": "^0.4.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-intersection-observer": "^9.15.1",
+    "react-simple-typewriter": "^5.0.1",
+    "react-typing-effect": "^2.0.5",
+    "splitting": "^1.1.0",
+    "swiper": "^11.2.4",
+    "tailwind-merge": "^3.0.1",
+    "wow.js": "^1.2.2"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.7",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

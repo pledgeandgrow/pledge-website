@@ -1,0 +1,22 @@
+[
+	{
+		"id": 1,
+		"image": "assets/imgs/clients/OVH_logo_1.png",
+		"name": "OVH",
+		"website": "https://erb-btp.com/"
+	},
+	{
+		"id": 2,
+		"image": "assets/imgs/clients/Vercel_logo.png",
+		"name": "Vercel",
+		"website": "https://erb-btp.com/"
+	},
+	{
+		"id": 3,
+		"image": "assets/imgs/clients/github_logo.png",
+		"name": "Github",
+		"website": "https://erb-btp.com/"
+	}
+	
+	
+  ]

@@ -1,0 +1,58 @@
+[
+	{
+	  "id": 1,
+	  "image": "assets/imgs/clients/erb-btp.png",
+	  "name": "ERB - BTP",
+      "website": "https://erb-btp.com/",
+	  "description": "Site Web"
+	},
+	{
+	  "id": 2,
+	  "image": "assets/imgs/clients/connectanddrive.png",
+	  "name": "Connect & Drive",
+      "website": "https://www.connectanddrive.fr/",
+	  "description": "Référencement / SEO"
+	},
+	{
+	  "id": 3,
+	  "image": "assets/imgs/clients/spg.png",
+	  "name": "SPG",
+      "website": "SPG",
+	  "description": "Logiciel"
+	},
+    {
+      "id": 4,
+      "image": "assets/imgs/clients/beauty92.png",
+      "name": "Beauty Salon 92",
+      "website": "https://beautysalon92.fr/",
+	  "description": "Site Web"
+    },
+    {
+      "id": 5,
+      "image": "assets/imgs/clients/cleanesofa.png",
+      "name": "Clean-E Sofa",
+      "website": "Clean-E Sofa",
+	  "description": "Site Web"
+    },
+    {
+        "id": 6,
+        "image": "assets/imgs/clients/chronos.png",
+        "name": "ChronosCorp",
+        "website": "https://chronoscorp.com/",
+	  "description": "Site Web"
+    },
+    {
+        "id": 7,
+        "image": "assets/imgs/clients/qubemasters.png",
+        "name": "Qube Masters",
+        "website": "https://qubemasters.com/",
+	  "description": "Site Web"
+    },
+    {
+        "id": 7,
+        "image": "assets/imgs/clients/joulia.png",
+        "name": "Joulia",
+        "website": "Joulia",
+	  "description":  "Application Web et Site Web"
+    }
+  ]

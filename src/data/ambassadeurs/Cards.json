@@ -1,0 +1,27 @@
+[
+  {
+    "subtitle": "",
+    "title": "Pourquoi Devenir Ambassadeur ?",
+    "image": "/dark/assets/imgs/serv-icons/rocket.png"
+  },
+  [
+    {
+      "id": 1,
+      "icon": "WorkflowIcon",
+      "title": "Avantages Exclusifs",
+      "text": "Accédez à des produits et services exclusifs, participez à des événements VIP, et bénéficiez de nombreux privilèges."
+    },
+    {
+      "id": 2,
+      "icon": "Users",
+      "title": "Rémunération Compétitive",
+      "text": "Profitez d'une rémunération attractive basée sur un modèle de commission d'affiliation ainsi qu'une base fixe."
+    },
+    {
+      "id": 3,
+      "icon": "EuroIcon",
+      "title": "Visibilité et Croissance :",
+      "text": "Utilisez notre plateforme pour accroître votre visibilité et engager votre audience avec du contenu de qualité."
+    }
+  ]
+]

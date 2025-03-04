@@ -1,0 +1,44 @@
+[
+	{
+	  "id": 1,
+	  "image": "assets/imgs/clients/erb-btp.png",
+	  "name": "Ali Tombari, président @ERB - BTP",
+      "content": "Le site web conçu par Pledge & Grow a boosté notre visibilité en ligne, nous permettant de toucher de nouveaux clients dans le secteur du BTP."
+	},
+	{
+	  "id": 2,
+	  "image": "assets/imgs/clients/connectanddrive.png",
+	  "name": "Boubaker Sriri, président @Connect & Drive",
+      "content": "Leur expertise en SEO a considérablement augmenté notre trafic, un réel avantage pour le développement de notre entreprise."
+	},
+	{
+	  "id": 3,
+	  "image": "assets/imgs/clients/spg.png",
+	  "name": "Anonyme, fondateur @SPG",
+      "content": "Le logiciel sur-mesure qu'ils ont développé a amélioré notre gestion et nous a permis de gagner en efficacité."
+	},
+    {
+      "id": 4,
+      "image": "assets/imgs/clients/beauty92.png",
+      "name": "Fatiha et Hanen, @Beauty Salon 92",
+      "content": "Travailler avec l'équipe de Pledge & Grow a été un vrai plaisir, grâce à leur disponibilité et leur esprit de collaboration."
+    },
+    {
+      "id": 5,
+      "image": "assets/imgs/clients/cleanesofa.png",
+      "name": "Naveck Ngoma, fondateur @Clean-E Sofa",
+      "content": "L'équipe est professionnelle et à l'écoute, nous avons créé une relation de confiance qui a facilité tout le processus."
+    },
+    {
+        "id": 6,
+        "image": "assets/imgs/clients/chronos.png",
+        "name": "Nizar Ounich, président @ChronosCorp",
+        "content": "L'équipe est professionnelle et à l'écoute, nous avons créé une relation de confiance qui a facilité tout le processus."
+      },
+      {
+        "id": 7,
+        "image": "assets/imgs/clients/joulia.png",
+        "name": "Hedi Komiha, Co-fondateur @JOULIA",
+        "content": "L'équipe a su être réactive et à l'écoute tout au long du projet. Le résultat final, une application Flutter fluide et efficace, correspond exactement à ce que j'avais imaginé."
+      }
+  ]
