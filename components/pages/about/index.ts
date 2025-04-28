@@ -1,0 +1,6 @@
+export { default as Hero } from "./Hero";
+export { default as Mission } from "./Mission";
+export { default as Values } from "./Values";
+export { default as History } from "./History";
+export { default as Team } from "./Team";
+export { default as Cta } from "./Cta";

@@ -1,0 +1,9 @@
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M47.5 40L30 50L47.5 60L65 50L47.5 40Z" fill="#FF9900"/>
+  <path d="M47.5 20L30 30L47.5 40L65 30L47.5 20Z" fill="#FF9900"/>
+  <path d="M82.5 30L65 40L82.5 50L100 40L82.5 30Z" fill="#FF9900"/>
+  <path d="M47.5 60L30 50L30 70L47.5 80L65 70L65 50L47.5 60Z" fill="#FF9900"/>
+  <path d="M47.5 40L30 30L30 50L47.5 40Z" fill="#232F3E"/>
+  <path d="M47.5 40L65 30L65 50L47.5 40Z" fill="#232F3E"/>
+  <text x="110" y="50" font-family="Arial" font-size="16" font-weight="bold" fill="#232F3E">AWS</text>
+</svg>

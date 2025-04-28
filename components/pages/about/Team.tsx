@@ -1,0 +1,305 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { Github, Linkedin, Twitter, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+export default function Team() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [autoplay, setAutoplay] = useState(true);
+  const [activeCategory, setActiveCategory] = useState("board");
+
+  const boardMembers = [
+    {
+      name: "Mehdi BEREL",
+      role: "Chairman",
+      companyRole: "Chief Executive Officer",
+      bio: "With extensive experience in business leadership, Mehdi drives the strategic vision and growth of our company.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      }
+    },
+    {
+      name: "Shihab BEREL",
+      role: "Chairman",
+      companyRole: "Chief Technology Officer",
+      bio: "Shihab brings innovative thinking and technical expertise to our leadership team, focusing on product development.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      }
+    },
+    {
+      name: "Ilyas BEREL",
+      role: "Chairman",
+      companyRole: "Chief Financial Officer",
+      bio: "Ilyas oversees operations and client relationships, ensuring we deliver exceptional value and service.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      }
+    },
+    {
+      name: "Noah PLA",
+      role: "Board Member",
+      companyRole: "Chief Operating Officer",
+      bio: "Noah contributes strategic insights and industry expertise to guide our company's direction and growth.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      }
+    },
+    {
+      name: "Maxime NEAU",
+      role: "Board Member",
+      companyRole: "Ambassador",
+      bio: "Maxime brings financial acumen and business development expertise to our board of directors.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      }
+    },
+    {
+      name: "Zakaria HADRAOUI",
+      role: "Board Member",
+      companyRole: "Chief Information Officer",
+      bio: "Zakaria's technical background and innovation mindset help shape our product strategy and development.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      }
+    },
+    {
+      name: "Mazen ISMAIL",
+      role: "Board Member",
+      companyRole: "Chief Blockchain Officer",
+      bio: "Mazen's international business experience helps guide our global expansion and partnerships.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      }
+    }
+  ];
+
+  const staffMembers = [
+    {
+      name: "Louis JUNQUA",
+      role: "Staff Member",
+      companyRole: "Chargé commercial",
+      bio: "Louis manages our commercial relationships and helps clients find the perfect solutions for their needs.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      }
+    },
+    {
+      name: "Lyna",
+      role: "Staff Member",
+      companyRole: "Chargé de communication",
+      bio: "Lyna oversees our communication strategy, ensuring our message reaches the right audience effectively.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      }
+    },
+    {
+      name: "Mehdi OUALI",
+      role: "Staff Member",
+      companyRole: "Chargé de réseaux sociaux",
+      bio: "Mehdi manages our social media presence, creating engaging content that connects with our community.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      }
+    },
+    {
+      name: "Brandon MERYEL",
+      role: "Staff Member",
+      companyRole: "Modérateur Discord",
+      bio: "Brandon maintains our Discord community, ensuring a positive and supportive environment for all members.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      }
+    },
+    {
+      name: "Rayane BEDRANI",
+      role: "Staff Member",
+      companyRole: "Business Développeur",
+      bio: "Rayane identifies and pursues new business opportunities, helping our company grow and expand into new markets.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        github: "#"
+      }
+    }
+  ];
+
+  const activeMembers = activeCategory === "board" ? boardMembers : staffMembers;
+
+  // Autoplay functionality
+  useEffect(() => {
+    let interval: NodeJS.Timeout | undefined;
+    if (autoplay) {
+      interval = setInterval(() => {
+        setActiveIndex((current) => (current + 1) % activeMembers.length);
+      }, 5000);
+    }
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [autoplay, activeMembers.length, activeCategory]);
+
+  // Navigation functions
+  const goToPrevious = () => {
+    setActiveIndex((current) => (current === 0 ? activeMembers.length - 1 : current - 1));
+    setAutoplay(false);
+  };
+
+  const goToNext = () => {
+    setActiveIndex((current) => (current + 1) % activeMembers.length);
+    setAutoplay(false);
+  };
+
+  const goToSlide = (index: number) => {
+    setActiveIndex(index);
+    setAutoplay(false);
+  };
+
+  const switchCategory = (category: string) => {
+    setActiveCategory(category);
+    setActiveIndex(0);
+    setAutoplay(true);
+  };
+
+  return (
+    <section className="bg-background text-foreground py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl mx-auto mb-8 text-center animate-fade-up">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Our Team
+          </h2>
+          <p className="text-muted-foreground text-lg md:text-xl">
+            Meet the talented individuals behind our success.
+          </p>
+        </div>
+
+        {/* Category Tabs */}
+        <div className="flex justify-center mb-10">
+          <div className="bg-card border border-border rounded-full p-1 inline-flex">
+            <button
+              onClick={() => switchCategory("board")}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                activeCategory === "board" 
+                  ? "bg-primary text-primary-foreground" 
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Board Members
+            </button>
+            <button
+              onClick={() => switchCategory("staff")}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                activeCategory === "staff" 
+                  ? "bg-primary text-primary-foreground" 
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              Staff
+            </button>
+          </div>
+        </div>
+        
+        {/* Carousel */}
+        <div className="relative max-w-4xl mx-auto mb-12">
+          {/* Main carousel slide */}
+          <div className="bg-card border border-border rounded-lg shadow-md p-8 md:p-12 animate-fade-in">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="order-2 md:order-1">
+                <h3 className="text-2xl font-bold mb-2">{activeMembers[activeIndex].name}</h3>
+                <p className="text-primary font-medium mb-1">{activeMembers[activeIndex].role}</p>
+                <p className="text-muted-foreground mb-4 text-sm">{activeMembers[activeIndex].companyRole}</p>
+                <p className="text-muted-foreground mb-6">{activeMembers[activeIndex].bio}</p>
+                <div className="flex space-x-4 mb-6">
+                  <Link href={activeMembers[activeIndex].social.linkedin} className="text-muted-foreground hover:text-primary transition-colors">
+                    <Linkedin className="h-5 w-5" />
+                  </Link>
+                  <Link href={activeMembers[activeIndex].social.twitter} className="text-muted-foreground hover:text-primary transition-colors">
+                    <Twitter className="h-5 w-5" />
+                  </Link>
+                  <Link href={activeMembers[activeIndex].social.github} className="text-muted-foreground hover:text-primary transition-colors">
+                    <Github className="h-5 w-5" />
+                  </Link>
+                </div>
+              </div>
+              <div className="order-1 md:order-2 flex justify-center">
+                <div className="relative h-64 w-64 bg-primary/10 rounded-full flex items-center justify-center">
+                  <div className="text-4xl font-bold text-primary">
+                    {activeMembers[activeIndex].name.split(' ').map(n => n[0]).join('')}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Navigation buttons */}
+          <button 
+            onClick={goToPrevious}
+            className="absolute top-1/2 left-4 -translate-y-1/2 bg-background/80 backdrop-blur-sm text-foreground p-2 rounded-full shadow-md hover:bg-background transition-colors"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <button 
+            onClick={goToNext}
+            className="absolute top-1/2 right-4 -translate-y-1/2 bg-background/80 backdrop-blur-sm text-foreground p-2 rounded-full shadow-md hover:bg-background transition-colors"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+          
+          {/* Indicators */}
+          <div className="flex justify-center mt-6 space-x-2 overflow-x-auto py-2">
+            {activeMembers.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`h-2 rounded-full transition-all ${
+                  activeIndex === index ? "w-8 bg-primary" : "w-2 bg-primary/30"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+        
+        {/* View Company Tree button */}
+        <div className="text-center">
+          <Button 
+            variant="outline" 
+            className="group"
+            asChild
+          >
+            <Link href="/company-tree">
+              View Company Tree
+              <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
