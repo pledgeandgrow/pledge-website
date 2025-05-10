@@ -14,7 +14,7 @@ export default function Values() {
     },
     {
       icon: <Heart className="h-10 w-10 text-primary" />,
-      title: "Loyauté",
+      title: "Loyalty",
       description: "We build lasting relationships based on trust, commitment, and mutual respect with our clients, team members, and stakeholders."
     },
     {

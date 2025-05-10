@@ -55,65 +55,65 @@ export default function CompanyShowcase() {
       ]
     },
     {
-      id: "tech-ventures",
-      name: "Tech Ventures",
-      logo: "/images/groupe/logo-techventures.png",
-      category: "Investment",
-      description: "Venture capital arm focusing on early-stage technology startups with innovative solutions.",
-      longDescription: "Tech Ventures is our investment division dedicated to identifying and supporting promising technology startups. We provide not just capital, but also strategic guidance, industry connections, and operational support to help early-stage companies scale effectively. Our investment philosophy centers on backing visionary founders who are solving meaningful problems with scalable technology solutions.",
-      founded: "2020",
-      location: "Paris, France & London, UK",
-      team: "12 investment professionals",
-      website: "https://techventures.pledgeandgrow.com",
-      services: [
-        "Seed and Series A Investments",
-        "Strategic Advisory",
-        "Startup Mentorship",
-        "Growth Acceleration",
-        "Corporate Innovation Partnerships"
-      ],
-      achievements: [
-        "Invested in 15+ technology startups",
-        "3 successful exits within 3 years",
-        "Portfolio companies raised €75M+ in follow-on funding",
-        "Created 200+ tech jobs through portfolio companies"
-      ]
-    },
-    {
-      id: "digital-academy",
-      name: "Digital Academy",
-      logo: "/images/groupe/logo-academy.png",
-      category: "Education",
-      description: "Educational institution offering specialized courses in digital skills and technology.",
-      longDescription: "Digital Academy is our educational initiative aimed at addressing the digital skills gap. We offer comprehensive training programs in web development, data science, digital marketing, and other in-demand tech skills. Our curriculum is designed in collaboration with industry experts to ensure it remains relevant to current market needs. We combine theoretical knowledge with practical projects to prepare students for successful careers in the digital economy.",
+      id: "taskmate",
+      name: "TaskMate",
+      logo: "/images/groupe/logo-taskmate.png",
+      category: "Productivity",
+      description: "AI-powered task management and productivity platform for teams and individuals.",
+      longDescription: "TaskMate is our innovative productivity solution that leverages artificial intelligence to help teams and individuals manage tasks more efficiently. The platform intelligently prioritizes tasks, automates routine work, and provides insights to optimize productivity. With features like smart scheduling, collaborative workspaces, and performance analytics, TaskMate transforms how teams organize their work and achieve their goals.",
       founded: "2021",
       location: "Paris, France",
-      team: "25 instructors and staff",
-      website: "https://academy.pledgeandgrow.com",
+      team: "18 productivity experts",
+      website: "https://taskmate.pledgeandgrow.com",
       services: [
-        "Web Development Bootcamps",
-        "Data Science Courses",
-        "Digital Marketing Certification",
-        "UX/UI Design Programs",
-        "Corporate Training Solutions"
+        "AI Task Prioritization",
+        "Team Collaboration Tools",
+        "Productivity Analytics",
+        "Smart Scheduling",
+        "Workflow Automation"
       ],
       achievements: [
-        "Trained 500+ students in digital skills",
-        "92% job placement rate within 6 months",
-        "Partnerships with 30+ tech companies",
-        "Launched online learning platform with 10,000+ users"
+        "Used by 50,000+ professionals worldwide",
+        "Increased team productivity by an average of 32%",
+        "Featured in top productivity app rankings",
+        "Processes over 1 million tasks daily"
       ]
     },
     {
-      id: "cloud-solutions",
-      name: "Cloud Solutions",
-      logo: "/images/groupe/logo-cloudsolutions.png",
-      category: "Infrastructure",
-      description: "Cloud infrastructure and DevOps services for businesses of all sizes.",
-      longDescription: "Cloud Solutions specializes in helping organizations leverage cloud technologies to improve scalability, security, and operational efficiency. Our team of certified cloud architects and DevOps engineers designs and implements robust cloud infrastructures tailored to each client's specific requirements. We offer migration services, managed cloud solutions, and DevOps automation to help businesses focus on their core operations while we handle their technology infrastructure.",
-      founded: "2019",
+      id: "verdalize",
+      name: "Verdalize",
+      logo: "/images/groupe/logo-verdalize.png",
+      category: "Sustainability",
+      description: "Sustainability platform helping businesses measure, reduce, and report their environmental impact.",
+      longDescription: "Verdalize provides organizations with the tools and expertise to measure, manage, and communicate their environmental impact. Our platform combines data analytics with sustainability expertise to help businesses track their carbon footprint, identify reduction opportunities, and report on their progress. We enable companies to transform sustainability challenges into competitive advantages while contributing to global environmental goals.",
+      founded: "2020",
       location: "Lyon, France",
-      team: "30+ cloud specialists",
+      team: "22 sustainability specialists",
+      website: "https://verdalize.pledgeandgrow.com",
+      services: [
+        "Carbon Footprint Measurement",
+        "Sustainability Reporting",
+        "ESG Data Management",
+        "Green Transition Consulting",
+        "Sustainability Communication"
+      ],
+      achievements: [
+        "Helped reduce over 100,000 tons of CO2 emissions",
+        "Partnered with 75+ companies on sustainability initiatives",
+        "Developed industry-leading carbon accounting methodology",
+        "Recognized for innovation in climate tech"
+      ]
+    },
+    {
+      id: "pledge-and-cloud",
+      name: "Pledge & Cloud",
+      logo: "/images/groupe/logo-pledgecloud.png",
+      category: "Infrastructure",
+      description: "Cloud infrastructure and DevOps services for businesses of all sizes. (Coming Soon)",
+      longDescription: "Pledge & Cloud is our upcoming initiative that will specialize in helping organizations leverage cloud technologies to improve scalability, security, and operational efficiency. Our team of certified cloud architects and DevOps engineers will design and implement robust cloud infrastructures tailored to each client's specific requirements. We will offer migration services, managed cloud solutions, and DevOps automation to help businesses focus on their core operations.",
+      founded: "Coming Soon",
+      location: "Paris, France",
+      team: "In formation",
       website: "https://cloud.pledgeandgrow.com",
       services: [
         "Cloud Migration & Strategy",
@@ -123,60 +123,60 @@ export default function CompanyShowcase() {
         "Cloud Security & Compliance"
       ],
       achievements: [
-        "Managed migration of 50+ enterprises to cloud platforms",
-        "Reduced infrastructure costs by average of 35% for clients",
-        "Achieved 99.99% uptime for managed services",
-        "Implemented CI/CD pipelines for 100+ applications"
+        "Project in development phase",
+        "Team recruitment underway",
+        "Technology partnerships being established",
+        "Launch planned for Q3 2025"
       ]
     },
     {
-      id: "data-insights",
-      name: "Data Insights",
-      logo: "/images/groupe/logo-datainsights.png",
-      category: "Analytics",
-      description: "Data analytics and business intelligence solutions to drive informed decision-making.",
-      longDescription: "Data Insights helps organizations harness the power of their data to gain valuable business intelligence. Our data scientists and analysts work closely with clients to identify key metrics, implement data collection systems, and develop custom analytics dashboards. We specialize in transforming raw data into actionable insights that drive strategic decision-making and business growth.",
-      founded: "2020",
-      location: "Bordeaux, France",
-      team: "20+ data specialists",
-      website: "https://data.pledgeandgrow.com",
-      services: [
-        "Business Intelligence",
-        "Data Visualization",
-        "Predictive Analytics",
-        "Big Data Solutions",
-        "Machine Learning Implementation"
-      ],
-      achievements: [
-        "Processed and analyzed 10+ petabytes of data",
-        "Developed custom analytics platforms for 25+ enterprises",
-        "Increased client revenue by average of 22% through data-driven strategies",
-        "Built award-winning ML models for predictive maintenance"
-      ]
-    },
-    {
-      id: "creative-studio",
-      name: "Creative Studio",
-      logo: "/images/groupe/logo-creativestudio.png",
-      category: "Design",
-      description: "Creative agency specializing in brand identity, UX/UI design, and digital content creation.",
-      longDescription: "Creative Studio is our design-focused agency that helps brands establish compelling visual identities and engaging digital experiences. Our team of designers, illustrators, and content creators combines artistic vision with strategic thinking to develop brand assets that resonate with target audiences. From logo design to comprehensive UX/UI systems, we create visual solutions that help businesses stand out in crowded markets.",
-      founded: "2019",
+      id: "pledge-and-events",
+      name: "Pledge & Events",
+      logo: "/images/groupe/logo-pledgeevents.png",
+      category: "Events",
+      description: "Digital event management platform and services for virtual, hybrid, and in-person experiences. (Coming Soon)",
+      longDescription: "Pledge & Events is our upcoming venture that will combine technology and creativity to deliver exceptional event experiences across virtual, hybrid, and in-person formats. Our platform will provide comprehensive tools for event planning, registration, audience engagement, and analytics. We aim to help organizations create memorable events that connect with audiences, drive engagement, and deliver measurable results, regardless of format or scale.",
+      founded: "Coming Soon",
       location: "Paris, France",
-      team: "18 creative professionals",
-      website: "https://creative.pledgeandgrow.com",
+      team: "In formation",
+      website: "https://events.pledgeandgrow.com",
       services: [
-        "Brand Identity Design",
-        "UX/UI Design",
-        "Digital Content Creation",
-        "Motion Graphics",
-        "Interactive Experiences"
+        "Virtual Event Platform",
+        "Hybrid Event Solutions",
+        "Event Registration & Management",
+        "Audience Engagement Tools",
+        "Event Analytics & Reporting"
       ],
       achievements: [
-        "Created brand identities for 40+ companies",
-        "Won 5 international design awards",
-        "Designed interfaces used by 1M+ users daily",
-        "Increased client conversion rates by average of 40% through UX improvements"
+        "Platform prototype in development",
+        "Initial partnerships established",
+        "Market research completed",
+        "Launch planned for Q4 2025"
+      ]
+    },
+    {
+      id: "pledge-and-properties",
+      name: "Pledge & Properties",
+      logo: "/images/groupe/logo-pledgeproperties.png",
+      category: "Real Estate",
+      description: "Digital solutions for real estate management, sales, and property technology innovation. (Coming Soon)",
+      longDescription: "Pledge & Properties is our upcoming initiative that will bring digital transformation to the real estate industry through innovative proptech solutions. We plan to offer platforms for property management, virtual tours, smart building technology, and real estate analytics. Our solutions will help property developers, managers, and agents streamline operations, enhance customer experiences, and maximize property values through technology-driven approaches.",
+      founded: "Coming Soon",
+      location: "Bordeaux, France",
+      team: "In formation",
+      website: "https://properties.pledgeandgrow.com",
+      services: [
+        "Property Management Software",
+        "Virtual Tour Technology",
+        "Smart Building Solutions",
+        "Real Estate Analytics",
+        "Digital Marketing for Properties"
+      ],
+      achievements: [
+        "Concept development underway",
+        "Industry partnerships being established",
+        "Initial market analysis completed",
+        "Launch planned for Q1 2026"
       ]
     }
   ];
@@ -184,11 +184,11 @@ export default function CompanyShowcase() {
   const categories = [
     { id: "all", name: "All Companies" },
     { id: "Digital Services", name: "Digital Services" },
-    { id: "Investment", name: "Investment" },
-    { id: "Education", name: "Education" },
+    { id: "Productivity", name: "Productivity" },
+    { id: "Sustainability", name: "Sustainability" },
     { id: "Infrastructure", name: "Infrastructure" },
-    { id: "Analytics", name: "Analytics" },
-    { id: "Design", name: "Design" }
+    { id: "Events", name: "Events" },
+    { id: "Real Estate", name: "Real Estate" }
   ];
 
   return (

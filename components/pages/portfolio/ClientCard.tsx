@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ClientModal, ClientProject } from "@/components/ui/client-modal";
 import { ArrowRight } from "lucide-react";
@@ -16,15 +15,7 @@ export default function ClientCard({ project }: ClientCardProps) {
   return (
     <>
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all hover:shadow-lg">
-        <div className="relative h-48 bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-6">
-          <Image 
-            src={project.logo} 
-            alt={project.name} 
-            width={200} 
-            height={100} 
-            className="max-h-32 w-auto object-contain" 
-          />
-        </div>
+
         <div className="p-6">
           <div className="flex justify-between items-start mb-4">
             <div>

@@ -1,4 +1,4 @@
-import { Target, Heart, Zap } from "lucide-react";
+import { Lightbulb, Link2, Laptop } from "lucide-react";
 
 export default function Mission() {
   return (
@@ -17,36 +17,36 @@ export default function Mission() {
           <div className="bg-card rounded-lg p-6 shadow-sm border border-border animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <div className="flex justify-center mb-4">
               <div className="p-3 rounded-full bg-primary/10">
-                <Target className="h-8 w-8 text-primary" />
+                <Lightbulb className="h-8 w-8 text-primary" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-center mb-3">Purpose-Driven</h3>
+            <h3 className="text-xl font-bold text-center mb-3">Simplify</h3>
             <p className="text-muted-foreground text-center">
-              We create digital solutions that serve a clear purpose and deliver measurable results for our clients.
+              Making technology accessible to everyone through simplified solutions.
             </p>
           </div>
           
           <div className="bg-card rounded-lg p-6 shadow-sm border border-border animate-fade-in" style={{ animationDelay: "0.2s" }}>
             <div className="flex justify-center mb-4">
               <div className="p-3 rounded-full bg-primary/10">
-                <Heart className="h-8 w-8 text-primary" />
+                <Link2 className="h-8 w-8 text-primary" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-center mb-3">User-Centered</h3>
+            <h3 className="text-xl font-bold text-center mb-3">Connect</h3>
             <p className="text-muted-foreground text-center">
-              We put users at the heart of everything we design, creating experiences that are intuitive, accessible, and delightful.
+              Linking innovation with business needs through strategic technology solutions.
             </p>
           </div>
           
           <div className="bg-card rounded-lg p-6 shadow-sm border border-border animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <div className="flex justify-center mb-4">
               <div className="p-3 rounded-full bg-primary/10">
-                <Zap className="h-8 w-8 text-primary" />
+                <Laptop className="h-8 w-8 text-primary" />
               </div>
             </div>
-            <h3 className="text-xl font-bold text-center mb-3">Innovation-Focused</h3>
+            <h3 className="text-xl font-bold text-center mb-3">Digitalize</h3>
             <p className="text-muted-foreground text-center">
-              We continuously explore new technologies and approaches to deliver cutting-edge solutions that keep our clients ahead.
+              Transforming businesses through custom software solutions that drive growth and efficiency.
             </p>
           </div>
         </div>

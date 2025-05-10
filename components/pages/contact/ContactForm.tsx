@@ -46,12 +46,34 @@ export default function ContactForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    console.log(values);
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      // Send data to our API endpoint
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...values,
+          subject: 'New Contact Form Submission'
+        }),
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+      
+      // Success
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      // You could add toast notifications here for error handling
+      alert('Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   if (isSubmitted) {

@@ -3,7 +3,6 @@ import {
   HelpCenterHero, 
   Documentation, 
   FAQs, 
-  Troubleshooting, 
   ContactSupport
 } from '@/components/pages/help-center';
 import Navbar from '@/components/layout/Navbar';
@@ -30,7 +29,6 @@ export default function HelpCenterPage() {
         <HelpCenterHero />
         <Documentation />
         <FAQs />
-        <Troubleshooting />
         <ContactSupport />
       </main>
       <Footer />

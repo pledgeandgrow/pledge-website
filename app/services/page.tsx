@@ -11,6 +11,7 @@ import {
 } from "@/components/pages/services";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ServicesTabbed from "@/components/pages/services/ServicesTabbed";
 
 export const metadata: Metadata = {
   title: "Services & Solutions | Pledge & Grow",
@@ -39,12 +40,8 @@ export default function ServicesPage() {
       <Navbar />
       <main className="flex-grow pt-16">
         <ServicesHero />
-        <CreationServices />
-        <IntegrationServices />
-        <ComplementaryServices />
+        <ServicesTabbed />
         <OfferPackages />
-        <CloudServices />
-        <CustomSolutions />
         <VipServices />
       </main>
       <Footer />

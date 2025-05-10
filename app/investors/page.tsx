@@ -7,7 +7,7 @@ import {
   FinancialHighlights,
   InvestmentOpportunities,
   InvestorFAQ,
-  LeadershipTeam
+  InvestorsPhase
 } from "@/components/pages/investors";
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ export default function InvestorsPage() {
         <CompanyOverview />
         <FinancialHighlights />
         <InvestmentOpportunities />
-        <LeadershipTeam />
+        <InvestorsPhase />
         <InvestorFAQ />
       </main>
       <Footer />

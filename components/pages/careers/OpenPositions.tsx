@@ -29,52 +29,52 @@ export default function OpenPositions() {
   const jobPositions: JobPosition[] = [
     {
       id: "dev-001",
-      title: "Senior Frontend Developer",
-      department: "Engineering",
+      title: "Chief Sales Officer",
+      department: "Executive",
       location: "Paris, France",
       locationType: "Hybrid",
       employmentType: "Full-time",
-      description: "We're looking for an experienced Frontend Developer with expertise in React, Next.js, and TypeScript to join our engineering team.",
+      description: "We're looking for an experienced Chief Sales Officer to lead our sales strategy, drive revenue growth, and build strong client relationships across all markets.",
       postedDate: "2025-04-15"
     },
     {
       id: "dev-002",
-      title: "Backend Developer",
-      department: "Engineering",
+      title: "Marketing interne",
+      department: "Marketing",
       location: "Remote",
       locationType: "Remote",
       employmentType: "Full-time",
-      description: "Join our backend team to build scalable and robust APIs and services using Node.js, Express, and PostgreSQL.",
+      description: "Join our marketing team to develop and implement internal marketing strategies that strengthen our brand identity and company culture.",
       postedDate: "2025-04-18"
     },
     {
       id: "design-001",
-      title: "UX/UI Designer",
-      department: "Design",
+      title: "Business Developer",
+      department: "Business",
       location: "Lyon, France",
       locationType: "Hybrid",
       employmentType: "Full-time",
-      description: "We're seeking a talented UX/UI Designer to create intuitive and engaging user experiences for our digital products.",
+      description: "We're seeking a talented Business Developer to identify growth opportunities and build strategic partnerships to expand our market presence.",
       postedDate: "2025-04-20"
     },
     {
       id: "marketing-001",
-      title: "Digital Marketing Specialist",
-      department: "Marketing",
+      title: "Chief Marketing Officer",
+      department: "Executive",
       location: "Paris, France",
       locationType: "On-site",
       employmentType: "Full-time",
-      description: "Help us grow our digital presence and reach new clients through innovative marketing strategies and campaigns.",
+      description: "Lead our marketing vision and strategy to elevate our brand, drive market growth, and oversee all marketing initiatives across digital and traditional channels.",
       postedDate: "2025-04-10"
     },
     {
       id: "pm-001",
-      title: "Project Manager",
-      department: "Operations",
+      title: "Salesman",
+      department: "Sales",
       location: "Remote",
       locationType: "Remote",
       employmentType: "Full-time",
-      description: "Lead and coordinate digital projects from inception to completion, ensuring they meet client requirements and deadlines.",
+      description: "Drive revenue growth by identifying and pursuing new sales opportunities, building client relationships, and closing deals effectively.",
       postedDate: "2025-04-22"
     },
     {

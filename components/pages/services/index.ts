@@ -6,6 +6,7 @@ import OfferPackages from "./OfferPackages";
 import CloudServices from "./CloudServices";
 import CustomSolutions from "./CustomSolutions";
 import VipServices from "./VipServices";
+import ServicesTabbed from "./ServicesTabbed";
 
 export {
   ServicesHero,
@@ -15,5 +16,6 @@ export {
   OfferPackages,
   CloudServices,
   CustomSolutions,
-  VipServices
+  VipServices,
+  ServicesTabbed
 };

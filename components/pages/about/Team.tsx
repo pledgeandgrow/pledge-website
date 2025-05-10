@@ -224,66 +224,44 @@ export default function Team() {
         </div>
         
         {/* Carousel */}
-        <div className="relative max-w-4xl mx-auto mb-12">
-          {/* Main carousel slide */}
-          <div className="bg-card border border-border rounded-lg shadow-md p-8 md:p-12 animate-fade-in">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="order-2 md:order-1">
-                <h3 className="text-2xl font-bold mb-2">{activeMembers[activeIndex].name}</h3>
-                <p className="text-primary font-medium mb-1">{activeMembers[activeIndex].role}</p>
-                <p className="text-muted-foreground mb-4 text-sm">{activeMembers[activeIndex].companyRole}</p>
-                <p className="text-muted-foreground mb-6">{activeMembers[activeIndex].bio}</p>
-                <div className="flex space-x-4 mb-6">
-                  <Link href={activeMembers[activeIndex].social.linkedin} className="text-muted-foreground hover:text-primary transition-colors">
-                    <Linkedin className="h-5 w-5" />
-                  </Link>
-                  <Link href={activeMembers[activeIndex].social.twitter} className="text-muted-foreground hover:text-primary transition-colors">
-                    <Twitter className="h-5 w-5" />
-                  </Link>
-                  <Link href={activeMembers[activeIndex].social.github} className="text-muted-foreground hover:text-primary transition-colors">
-                    <Github className="h-5 w-5" />
-                  </Link>
-                </div>
-              </div>
-              <div className="order-1 md:order-2 flex justify-center">
-                <div className="relative h-64 w-64 bg-primary/10 rounded-full flex items-center justify-center">
-                  <div className="text-4xl font-bold text-primary">
-                    {activeMembers[activeIndex].name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
+        <div className="relative max-w-3xl mx-auto mb-12">
           {/* Navigation buttons */}
           <button 
             onClick={goToPrevious}
-            className="absolute top-1/2 left-4 -translate-y-1/2 bg-background/80 backdrop-blur-sm text-foreground p-2 rounded-full shadow-md hover:bg-background transition-colors"
+            className="absolute top-1/2 left-[-50px] -translate-y-1/2 bg-background/80 backdrop-blur-sm text-foreground p-2 rounded-full shadow-md hover:bg-background transition-colors hidden md:block"
             aria-label="Previous slide"
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button 
             onClick={goToNext}
-            className="absolute top-1/2 right-4 -translate-y-1/2 bg-background/80 backdrop-blur-sm text-foreground p-2 rounded-full shadow-md hover:bg-background transition-colors"
+            className="absolute top-1/2 right-[-50px] -translate-y-1/2 bg-background/80 backdrop-blur-sm text-foreground p-2 rounded-full shadow-md hover:bg-background transition-colors hidden md:block"
             aria-label="Next slide"
           >
             <ChevronRight className="h-6 w-6" />
           </button>
-          
-          {/* Indicators */}
-          <div className="flex justify-center mt-6 space-x-2 overflow-x-auto py-2">
-            {activeMembers.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`h-2 rounded-full transition-all ${
-                  activeIndex === index ? "w-8 bg-primary" : "w-2 bg-primary/30"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
+
+          {/* Main carousel slide */}
+          <div className="bg-card border border-border rounded-lg shadow-md p-8 md:p-12 animate-fade-in">
+            <div className="flex flex-col items-center text-center">
+              <h3 className="text-2xl font-bold mb-2">{activeMembers[activeIndex].name}</h3>
+              <p className="text-primary font-medium mb-1">{activeMembers[activeIndex].role}</p>
+              <p className="text-muted-foreground mb-4 text-sm">{activeMembers[activeIndex].companyRole}</p>
+              <p className="text-muted-foreground mb-6 max-w-prose">{activeMembers[activeIndex].bio}</p>
+              <div className="flex space-x-4">
+                <Link href={activeMembers[activeIndex].social.linkedin} className="text-muted-foreground hover:text-primary transition-colors">
+                  <Linkedin className="h-5 w-5" />
+                </Link>
+                <Link href={activeMembers[activeIndex].social.twitter} className="text-muted-foreground hover:text-primary transition-colors">
+                  <Twitter className="h-5 w-5" />
+                </Link>
+                <Link href={activeMembers[activeIndex].social.github} className="text-muted-foreground hover:text-primary transition-colors">
+                  <Github className="h-5 w-5" />
+                </Link>
+              </div>
+            </div>
           </div>
+
         </div>
         
         {/* View Company Tree button */}

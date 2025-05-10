@@ -91,10 +91,10 @@ export default function Navbar() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 px-2">
                   {/* About Us Column */}
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">About Us</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">About</h3>
                     <ul className="space-y-3">
                       <li>
-                        <Link href="/our-identity" className="text-gray-700 dark:text-gray-300">
+                        <Link href="/about" className="text-gray-700 dark:text-gray-300">
                           Identity
                         </Link>
                       </li>
