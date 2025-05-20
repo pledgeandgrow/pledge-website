@@ -70,7 +70,7 @@ export default function DiscordChannels() {
             Explore Our Channels
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our Discord server is organized into various channels to help you find exactly what you're looking for.
+            Our Discord server is organized into various channels to help you find exactly what you&apos;re looking for.
           </p>
         </motion.div>
 

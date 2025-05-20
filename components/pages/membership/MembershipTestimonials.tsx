@@ -75,7 +75,7 @@ export default function MembershipTestimonials() {
                     <Quote className="h-8 w-8" />
                   </div>
                   <p className="text-muted-foreground mb-6 flex-grow">
-                    "{testimonial.quote}"
+                    &quot;{testimonial.quote}&quot;
                   </p>
                   <div className="flex items-center">
                     <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">

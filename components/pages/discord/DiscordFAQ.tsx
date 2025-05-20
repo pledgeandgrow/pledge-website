@@ -59,7 +59,7 @@ export default function DiscordFAQ() {
           </h2>
           <p className="text-lg text-muted-foreground">
             Find answers to common questions about our Discord community.
-            If you don't see your question here, feel free to ask in our server.
+            If you don&apos;t see your question here, feel free to ask in our server.
           </p>
         </motion.div>
 

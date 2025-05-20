@@ -99,7 +99,7 @@ export default function VipServices() {
               </CardHeader>
               <CardContent className="pt-6">
                 <div className="space-y-6">
-                  {vipBenefits.map((benefit, index) => (
+                  {vipBenefits.map((benefit) => (
                     <div key={benefit.id} className="flex gap-4">
                       <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                         {benefit.icon}
@@ -133,7 +133,7 @@ export default function VipServices() {
             <h3 className="text-2xl font-bold text-foreground mb-6">Elevate Your Experience</h3>
             
             <p className="text-muted-foreground mb-6">
-              Our VIP program is designed for clients who demand the highest level of service and attention. As a VIP client, you'll enjoy a range of exclusive benefits that enhance your experience and ensure your projects receive the priority they deserve.
+              Our VIP program is designed for clients who demand the highest level of service and attention. As a VIP client, you&apos;ll enjoy a range of exclusive benefits that enhance your experience and ensure your projects receive the priority they deserve.
             </p>
             
             <div className="bg-card rounded-lg p-6 border border-border mb-6">

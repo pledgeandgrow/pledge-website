@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Image from "next/image";
 import {
   Dialog,
   DialogContent,
@@ -60,11 +61,14 @@ export function ClientModal({ project, isOpen, onClose }: ClientModalProps) {
       <DialogContent className="sm:max-w-[800px] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold flex items-center gap-3">
-            <img 
-              src={project.logo} 
-              alt={`${project.name} logo`} 
-              className="h-8 w-auto" 
-            />
+            <div className="relative h-8 w-8">
+              <Image 
+                src={project.logo} 
+                alt={`${project.name} logo`} 
+                fill
+                className="object-contain" 
+              />
+            </div>
             {project.name}
           </DialogTitle>
           <DialogDescription className="text-base">
@@ -217,7 +221,7 @@ export function ClientModal({ project, isOpen, onClose }: ClientModalProps) {
             {project.outcome.testimonial && (
               <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
                 <blockquote className="text-lg italic text-gray-700 dark:text-gray-300">
-                  "{project.outcome.testimonial.quote}"
+                  &quot;{project.outcome.testimonial.quote}&quot;
                 </blockquote>
                 <div className="mt-4">
                   <p className="font-semibold">{project.outcome.testimonial.author}</p>

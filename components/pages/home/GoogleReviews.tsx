@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { Skeleton } from "@/components/ui/skeleton";
 
 interface GoogleReview {
@@ -162,14 +163,16 @@ export default function GoogleReviews() {
                       {renderStars(review.rating)}
                     </div>
                     <blockquote className="text-lg italic mb-4 line-clamp-4">
-                      "{review.text}"
+                      &quot;{review.text}&quot;
                     </blockquote>
                     <div className="flex items-center">
                       {review.profile_photo_url ? (
-                        <img 
+                        <Image 
                           src={review.profile_photo_url} 
                           alt={review.author_name} 
-                          className="w-10 h-10 rounded-full object-cover"
+                          width={40}
+                          height={40}
+                          className="rounded-full object-cover"
                         />
                       ) : (
                         <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">

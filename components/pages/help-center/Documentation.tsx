@@ -262,7 +262,7 @@ export default function Documentation() {
           className="text-center mt-12"
         >
           <p className="text-muted-foreground mb-4">
-            Can't find what you're looking for? Check our FAQs or contact our support team.
+            Can&apos;t find what you&apos;re looking for? Check our FAQs or contact our support team.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button variant="outline" asChild>

@@ -2,11 +2,9 @@ import { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { 
-  GrantsHero, 
+  GrantsHero,
   GrantsOverview,
   AvailableGrants,
-  ApplicationProcess,
-  SuccessStories,
   GrantsFAQ,
   GrantsCTA
 } from "@/components/pages/grants-subsidies";
@@ -40,8 +38,6 @@ export default function GrantsSubsidiesPage() {
         <GrantsHero />
         <GrantsOverview />
         <AvailableGrants />
-        <ApplicationProcess />
-        <SuccessStories />
         <GrantsFAQ />
         <GrantsCTA />
       </main>

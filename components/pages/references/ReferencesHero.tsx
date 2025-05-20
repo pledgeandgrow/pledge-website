@@ -27,7 +27,7 @@ export default function ReferencesHero() {
           </h1>
           
           <p className="text-lg text-muted-foreground mb-8">
-            Discover how we've helped businesses across various industries achieve their digital goals through innovative solutions and strategic partnerships.
+            Discover how we&apos;ve helped businesses across various industries achieve their digital goals through innovative solutions and strategic partnerships.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

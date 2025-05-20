@@ -134,7 +134,7 @@ export default function ContactSupport() {
           >
             <h3 className="text-2xl font-bold tracking-tight mb-4">Send Us a Message</h3>
             <p className="text-muted-foreground mb-6">
-              Fill out the form below and we'll get back to you as soon as possible.
+              Fill out the form below and we&apos;ll get back to you as soon as possible.
             </p>
             
             {formState.submitted ? (
@@ -142,7 +142,7 @@ export default function ContactSupport() {
                 <CheckCircle className="h-6 w-6" />
                 <div>
                   <h4 className="font-semibold">Message Sent Successfully</h4>
-                  <p>Thank you for contacting us. We'll respond to your inquiry shortly.</p>
+                  <p>Thank you for contacting us. We&apos;ll respond to your inquiry shortly.</p>
                 </div>
               </div>
             ) : (

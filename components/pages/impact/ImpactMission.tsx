@@ -59,13 +59,13 @@ export default function ImpactMission() {
           >
             <h2 className="text-3xl font-bold tracking-tight mb-4">Our Mission & Values</h2>
             <p className="text-lg text-muted-foreground mb-6">
-              At Pledge & Grow, we believe that technology has the power to address some of the world's most pressing challenges. Our mission is to leverage our expertise to create positive social impact and contribute to a more equitable and sustainable future.
+              At Pledge & Grow, we believe that technology has the power to address some of the world&apos;s most pressing challenges. Our mission is to leverage our expertise to create positive social impact and contribute to a more equitable and sustainable future.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              We're committed to using our skills, resources, and influence to support causes that align with our values. Through pro bono work, charitable initiatives, and sustainable practices, we strive to be a force for good in the communities we serve.
+              We&apos;re committed to using our skills, resources, and influence to support causes that align with our values. Through pro bono work, charitable initiatives, and sustainable practices, we strive to be a force for good in the communities we serve.
             </p>
             <p className="text-lg text-muted-foreground">
-              Our approach is guided by a simple principle: technology should serve humanity, not the other way around. We're dedicated to developing solutions that empower people, protect our planet, and promote social justice.
+              Our approach is guided by a simple principle: technology should serve humanity, not the other way around. We&apos;re dedicated to developing solutions that empower people, protect our planet, and promote social justice.
             </p>
           </motion.div>
           

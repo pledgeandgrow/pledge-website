@@ -6,9 +6,7 @@ import {
   Shield, 
   Users, 
   Sparkles, 
-  Lightbulb, 
-  Heart, 
-  Globe 
+  Lightbulb 
 } from "lucide-react";
 
 interface Value {
@@ -38,16 +36,6 @@ export default function CompanyValues() {
       icon: <Lightbulb className="h-10 w-10 text-primary" />,
       title: "Innovation",
       description: "We embrace creativity and forward-thinking, continuously exploring new ideas and technologies to stay at the forefront of our industry."
-    },
-    {
-      icon: <Heart className="h-10 w-10 text-primary" />,
-      title: "Empathy",
-      description: "We prioritize understanding the needs and perspectives of our clients and team members, building relationships based on respect and compassion."
-    },
-    {
-      icon: <Globe className="h-10 w-10 text-primary" />,
-      title: "Impact",
-      description: "We are committed to making a positive difference through our work, contributing to meaningful solutions that benefit our clients and society."
     }
   ];
 
@@ -71,7 +59,7 @@ export default function CompanyValues() {
               />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-primary/10 p-8 rounded-lg hidden md:block">
-              <div className="text-4xl font-bold text-primary">6+</div>
+              <div className="text-4xl font-bold text-primary">4+</div>
               <div className="text-sm text-muted-foreground">Core Values</div>
             </div>
           </motion.div>
@@ -86,7 +74,7 @@ export default function CompanyValues() {
               Our Values
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Our values define who we are and guide how we work. They're the foundation of our culture and the principles that drive our success.
+              Our values define who we are and guide how we work. They&apos;re the foundation of our culture and the principles that drive our success.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

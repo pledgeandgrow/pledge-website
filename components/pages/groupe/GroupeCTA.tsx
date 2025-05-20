@@ -18,8 +18,8 @@ export default function GroupeCTA() {
         >
           <h2 className="text-3xl font-bold tracking-tight mb-4">Join Our Ecosystem</h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Whether you're looking to collaborate, invest, or explore career opportunities within our group, 
-            we'd love to hear from you. Connect with us to discover how we can grow together.
+            Whether you&apos;re looking to collaborate, invest, or explore career opportunities within our group, 
+            we&apos;d love to hear from you. Connect with us to discover how we can grow together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="font-medium">

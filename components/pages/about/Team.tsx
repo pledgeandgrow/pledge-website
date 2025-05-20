@@ -174,10 +174,6 @@ export default function Team() {
     setAutoplay(false);
   };
 
-  const goToSlide = (index: number) => {
-    setActiveIndex(index);
-    setAutoplay(false);
-  };
 
   const switchCategory = (category: string) => {
     setActiveCategory(category);

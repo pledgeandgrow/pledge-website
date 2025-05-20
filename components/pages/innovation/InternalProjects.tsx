@@ -9,7 +9,11 @@ import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { TechStack, TechItem } from "@/components/ui/tech-stack";
-import { ArrowRight, ExternalLink, Github, Calendar, Users, Trophy } from "lucide-react";
+import * as SiIcons from "react-icons/si";
+
+// Type for the icons from react-icons/si
+type SiIconType = keyof typeof SiIcons;
+import { ExternalLink, Github, Calendar, Trophy } from "lucide-react";
 import Link from "next/link";
 
 interface ProjectTechnology {
@@ -275,7 +279,7 @@ export default function InternalProjects() {
   const convertToTechItem = (tech: ProjectTechnology): TechItem => {
     return {
       name: tech.name,
-      icon: tech.icon as any,
+      icon: tech.icon as SiIconType,
       color: tech.color
     };
   };
@@ -292,7 +296,7 @@ export default function InternalProjects() {
         >
           <h2 className="text-3xl font-bold tracking-tight mb-4">Internal Projects</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Discover the innovative projects we've built in-house to solve real-world problems, explore new technologies, and enhance our service offerings.
+            Discover the innovative projects we&apos;ve built in-house to solve real-world problems, explore new technologies, and enhance our service offerings.
           </p>
         </motion.div>
 

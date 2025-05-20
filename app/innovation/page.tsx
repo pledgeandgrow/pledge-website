@@ -1,11 +1,8 @@
 import type { Metadata } from 'next';
 import { 
-  InnovationHero, 
   InnovationApproach, 
   TechnologyRadar,
-  StartupIncubator,
   InternalProjects,
-  TechnologyPartners,
   InnovationCTA
 } from '@/components/pages/innovation';
 import Navbar from '@/components/layout/Navbar';
@@ -29,12 +26,9 @@ export default function InnovationPage() {
     <>
       <Navbar />
       <main className="flex-grow pt-16">
-        <InnovationHero />
         <InnovationApproach />
         <TechnologyRadar />
         <InternalProjects />
-        <StartupIncubator />
-        <TechnologyPartners />
         <InnovationCTA />
       </main>
       <Footer />

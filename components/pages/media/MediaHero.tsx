@@ -19,7 +19,7 @@ export default function MediaHero() {
             Our <span className="text-primary">Media</span> Presence
           </h1>
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Discover Pledge & Grow's appearances across various media platforms, from social networks to TV shows, podcasts, and digital publications.
+            Discover Pledge & Grow&apos;s appearances across various media platforms, from social networks to TV shows, podcasts, and digital publications.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button asChild size="lg" className="font-medium">

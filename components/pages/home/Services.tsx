@@ -4,7 +4,7 @@ import { Code, Layout, Smartphone, Globe, Database, LineChart, Server, Cloud, Za
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
-import { useRef } from "react";
+
 
 // Component for Creation Services
 const CreationServices = () => {
@@ -286,7 +286,6 @@ const CustomSolutions = () => {
 };
 
 export default function Services() {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   return (
     <section className="bg-background text-foreground py-16 md:py-24">

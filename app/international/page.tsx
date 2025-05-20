@@ -2,12 +2,8 @@ import { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { 
-  InternationalHero, 
   GlobalMap,
-  InternationalServices,
-  GlobalClients,
-  LocalizationServices,
-  GlobalTeam
+  LocalizationServices
 } from "@/components/pages/international";
 
 export const metadata: Metadata = {
@@ -36,12 +32,8 @@ export default function InternationalPage() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow pt-16">
-        <InternationalHero />
         <GlobalMap />
-        <InternationalServices />
-        <GlobalTeam />
         <LocalizationServices />
-        <GlobalClients />
       </main>
       <Footer />
     </div>

@@ -2,8 +2,6 @@ import type { Metadata } from 'next';
 import { 
   ImpactHero, 
   ImpactMission, 
-  ProBonoInitiatives, 
-  ImpactMetrics, 
   SustainablePractices, 
   ImpactCTA
 } from '@/components/pages/impact';
@@ -30,8 +28,6 @@ export default function ImpactPage() {
       <main className="flex-grow pt-16">
         <ImpactHero />
         <ImpactMission />
-        <ProBonoInitiatives />
-        <ImpactMetrics />
         <SustainablePractices />
         <ImpactCTA />
       </main>

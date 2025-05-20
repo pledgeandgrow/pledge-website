@@ -10,7 +10,6 @@ import { useForm, FormProvider } from "react-hook-form";
 // UI Components
 import { Button } from "@/components/ui/button";
 import {
-  Form,
   FormControl,
   FormField,
   FormItem,
@@ -29,7 +28,7 @@ import {
 } from "@/components/ui/select";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
+
 import { Progress } from "@/components/ui/progress";
 
 // Icons
@@ -221,7 +220,7 @@ export default function ProjectForm() {
     }
   };
   
-  const updateFormData = (data: any) => {
+  const updateFormData = (data: Record<string, unknown>) => {
     setFormData({
       ...formData,
       ...data,
@@ -257,15 +256,7 @@ export default function ProjectForm() {
     nextStep();
   };
   
-  const handleBudgetSubmit = (data: z.infer<typeof budgetSchema>) => {
-    updateFormData(data);
-    nextStep();
-  };
-  
-  const handleContactSubmit = (data: z.infer<typeof contactSchema>) => {
-    updateFormData(data);
-    nextStep();
-  };
+  // Handler functions are implemented directly in the form submissions
   
   const submitForm = async () => {
     setIsSubmitting(true);

@@ -6,12 +6,11 @@ import Image from "next/image";
 import { 
   Card, 
   CardContent, 
-  CardDescription, 
   CardHeader, 
   CardTitle 
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Users, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 interface Office {
   id: string;
@@ -68,42 +67,6 @@ export default function GlobalMap() {
       coordinates: { x: 25, y: 35 }
     },
     {
-      id: "sanfrancisco",
-      city: "San Francisco",
-      country: "United States",
-      region: "North America",
-      address: "415 Mission St, San Francisco, CA 94105",
-      phone: "+1 415 901 7000",
-      email: "sanfrancisco@pledgeandgrow.com",
-      teamSize: 78,
-      timezone: "PST (UTC-8)",
-      coordinates: { x: 16, y: 35 }
-    },
-    {
-      id: "singapore",
-      city: "Singapore",
-      country: "Singapore",
-      region: "Asia",
-      address: "1 Raffles Place, Singapore 048616",
-      phone: "+65 6123 4567",
-      email: "singapore@pledgeandgrow.com",
-      teamSize: 42,
-      timezone: "SGT (UTC+8)",
-      coordinates: { x: 76, y: 55 }
-    },
-    {
-      id: "tokyo",
-      city: "Tokyo",
-      country: "Japan",
-      region: "Asia",
-      address: "1-1-2 Marunouchi, Chiyoda-ku, Tokyo 100-0005",
-      phone: "+81 3 1234 5678",
-      email: "tokyo@pledgeandgrow.com",
-      teamSize: 35,
-      timezone: "JST (UTC+9)",
-      coordinates: { x: 85, y: 38 }
-    },
-    {
       id: "sydney",
       city: "Sydney",
       country: "Australia",
@@ -126,18 +89,6 @@ export default function GlobalMap() {
       teamSize: 25,
       timezone: "GST (UTC+4)",
       coordinates: { x: 60, y: 42 }
-    },
-    {
-      id: "saopaulo",
-      city: "São Paulo",
-      country: "Brazil",
-      region: "South America",
-      address: "Av. Paulista, 1000, São Paulo, SP 01310-100",
-      phone: "+55 11 3456 7890",
-      email: "saopaulo@pledgeandgrow.com",
-      teamSize: 32,
-      timezone: "BRT (UTC-3)",
-      coordinates: { x: 32, y: 65 }
     }
   ];
 
@@ -161,11 +112,12 @@ export default function GlobalMap() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Our Global Offices
+            Our Contacts
           </h2>
           <p className="text-lg text-muted-foreground">
             With offices across major global hubs, we deliver localized expertise with a global perspective.
             Our international presence allows us to serve clients in their time zone and language.
+            Here is the contacts for commercial purpose internationally.
           </p>
         </motion.div>
 
@@ -245,14 +197,9 @@ export default function GlobalMap() {
                     <MapPin className="h-4 w-4 text-primary" />
                     {office.city}, {office.country}
                   </CardTitle>
-                  <CardDescription>{office.address}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3 text-sm">
-                    <div className="flex items-center gap-2">
-                      <Users className="h-4 w-4 text-muted-foreground" />
-                      <span className="text-muted-foreground">{office.teamSize} team members</span>
-                    </div>
                     <div className="flex items-center gap-2">
                       <Phone className="h-4 w-4 text-muted-foreground" />
                       <span className="text-muted-foreground">{office.phone}</span>

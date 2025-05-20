@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
+
 import { motion } from "framer-motion";
 import { 
   Card, 
   CardContent, 
-  CardDescription, 
   CardHeader, 
   CardTitle 
 } from "@/components/ui/card";
@@ -108,7 +107,7 @@ export default function ProjectRequirements() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-4">Our Collaboration Requirements</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            For a successful partnership, we've established these key requirements to ensure smooth collaboration and exceptional results.
+            For a successful partnership, we&apos;ve established these key requirements to ensure smooth collaboration and exceptional results.
           </p>
         </div>
         

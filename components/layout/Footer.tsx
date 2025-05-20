@@ -66,13 +66,13 @@ export default function Footer() {
               <h2 className="mb-6 text-sm font-semibold uppercase text-gray-800 dark:text-white">Resources</h2>
               <ul className="text-gray-600 dark:text-gray-300 font-medium">
                 <li className="mb-4">
+                  <Link href="/blog" className="hover:underline">Blog</Link>
+                </li>
+                <li className="mb-4">
                   <Link href="/help-center" className="hover:underline">Help Center</Link>
                 </li>
                 <li className="mb-4">
                   <Link href="/references" className="hover:underline">References</Link>
-                </li>
-                <li className="mb-4">
-                  <Link href="/faq" className="hover:underline">FAQ</Link>
                 </li>
                 <li className="mb-4">
                   <Link href="/site-plan" className="hover:underline">Site Plan</Link>
@@ -133,13 +133,13 @@ export default function Footer() {
               {expandedSection === 'resources' && (
                 <ul className="text-gray-600 dark:text-gray-300 font-medium mt-4 pl-2 space-y-3">
                   <li>
+                    <Link href="/blog" className="hover:underline">Blog</Link>
+                  </li>
+                  <li>
                     <Link href="/help-center" className="hover:underline">Help Center</Link>
                   </li>
                   <li>
                     <Link href="/references" className="hover:underline">References (Annuaires)</Link>
-                  </li>
-                  <li>
-                    <Link href="/faq" className="hover:underline">FAQ</Link>
                   </li>
                   <li>
                     <Link href="/site-plan" className="hover:underline">Site Plan</Link>

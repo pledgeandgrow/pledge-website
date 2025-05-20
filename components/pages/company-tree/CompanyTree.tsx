@@ -204,7 +204,7 @@ export default function CompanyTree() {
           <div className="mb-8 animate-fade-up">
             <h1 className="text-3xl md:text-4xl font-bold mb-4">Company Organizational Structure</h1>
             <p className="text-muted-foreground text-lg">
-              Explore our company's organizational structure and leadership hierarchy.
+              Explore our company&apos;s organizational structure and leadership hierarchy.
             </p>
           </div>
           

@@ -1,12 +1,7 @@
 import { Metadata } from "next";
 import {
   ServicesHero,
-  CreationServices,
-  IntegrationServices,
-  ComplementaryServices,
   OfferPackages,
-  CloudServices,
-  CustomSolutions,
   VipServices
 } from "@/components/pages/services";
 import Navbar from "@/components/layout/Navbar";

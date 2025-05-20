@@ -64,8 +64,8 @@ export default function InnovationApproach() {
           >
             <h2 className="text-3xl font-bold tracking-tight mb-4">Our Approach to Innovation</h2>
             <p className="text-lg text-muted-foreground mb-6">
-              At Pledge & Grow, innovation isn't just a buzzword—it's embedded in our culture and processes. 
-              We've developed a systematic approach to staying at the forefront of technology while delivering 
+              At Pledge & Grow, innovation isn&apos;t just a buzzword—it&apos;s embedded in our culture and processes. 
+              We&apos;ve developed a systematic approach to staying at the forefront of technology while delivering 
               practical, value-driven solutions for our clients.
             </p>
             <p className="text-lg text-muted-foreground mb-6">

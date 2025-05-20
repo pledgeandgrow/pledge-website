@@ -90,7 +90,7 @@ export function ServiceModal({
             </div>
             
             <div>
-              <h3 className="text-lg font-medium mb-2">Secteurs d'activité</h3>
+              <h3 className="text-lg font-medium mb-2">Secteurs d&apos;activité</h3>
               <div className="flex flex-wrap gap-2">
                 {specifications.sectors.map((sector, index) => (
                   <Badge key={index} variant="outline" className="bg-primary/5">

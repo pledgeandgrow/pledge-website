@@ -43,7 +43,7 @@ export default function Testimonials() {
             What Our Clients Say
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl">
-            Don't just take our word for it - hear from some of our satisfied clients.
+            Don&apos;t just take our word for it - hear from some of our satisfied clients.
           </p>
         </div>
         <div className="grid gap-8 lg:grid-cols-3 sm:grid-cols-2">
@@ -57,7 +57,7 @@ export default function Testimonials() {
                 {renderStars(testimonial.rating)}
               </div>
               <blockquote className="text-lg italic mb-4">
-                "{testimonial.quote}"
+                &quot;{testimonial.quote}&quot;
               </blockquote>
               <div className="flex items-center">
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">

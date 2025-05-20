@@ -141,7 +141,7 @@ export default function CaseStudies() {
             Success Stories
           </h2>
           <p className="text-lg text-muted-foreground">
-            Discover how we've helped businesses across different sectors overcome challenges and achieve their digital transformation goals.
+            Discover how we&apos;ve helped businesses across different sectors overcome challenges and achieve their digital transformation goals.
           </p>
         </motion.div>
 
@@ -219,7 +219,7 @@ export default function CaseStudies() {
                         {caseStudy.testimonial && (
                           <div className="bg-primary/5 p-4 rounded-lg">
                             <blockquote className="italic text-muted-foreground mb-3">
-                              "{caseStudy.testimonial.quote}"
+                              &quot;{caseStudy.testimonial.quote}&quot;
                             </blockquote>
                             <div className="text-right">
                               <p className="font-medium">{caseStudy.testimonial.author}</p>

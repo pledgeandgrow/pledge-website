@@ -20,7 +20,7 @@ export default function ProgressCTA() {
             Be Part of Our Journey
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join us as we continue to grow and innovate in the digital landscape. Whether as a client, partner, or team member, there's a place for you in our story.
+            Join us as we continue to grow and innovate in the digital landscape. Whether as a client, partner, or team member, there&apos;s a place for you in our story.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="font-medium">

@@ -1,16 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { ExternalLink, Heart, MessageCircle, Share2, Eye } from "lucide-react";
 import { 
-  SiInstagram, 
-  SiLinkedin, 
-  SiX, 
   SiFacebook, 
   SiYoutube, 
   SiTiktok 
@@ -33,9 +29,6 @@ interface SocialPost {
 export default function SocialMediaSection() {
   const platforms = [
     { id: "all", name: "All Platforms", icon: null },
-    { id: "instagram", name: "Instagram", icon: <SiInstagram className="h-4 w-4" /> },
-    { id: "linkedin", name: "LinkedIn", icon: <SiLinkedin className="h-4 w-4" /> },
-    { id: "twitter", name: "Twitter", icon: <SiX className="h-4 w-4" /> },
     { id: "facebook", name: "Facebook", icon: <SiFacebook className="h-4 w-4" /> },
     { id: "youtube", name: "YouTube", icon: <SiYoutube className="h-4 w-4" /> },
     { id: "tiktok", name: "TikTok", icon: <SiTiktok className="h-4 w-4" /> },
@@ -52,28 +45,6 @@ export default function SocialMediaSection() {
       comments: 89,
       shares: 56,
       url: "https://instagram.com/pledgeandgrow"
-    },
-    {
-      id: "linkedin1",
-      platform: "linkedin",
-      content: "Excited to announce our new partnership with TechVentures to expand our digital transformation services across Europe. This collaboration will enable us to deliver even more innovative solutions to our clients.",
-      image: "/images/media/social/linkedin-partnership.jpg",
-      date: "March 28, 2025",
-      likes: 876,
-      comments: 124,
-      shares: 215,
-      url: "https://linkedin.com/company/pledgeandgrow"
-    },
-    {
-      id: "twitter1",
-      platform: "twitter",
-      content: "Just released our latest case study on how we helped FinTech startup SecurePay increase conversion rates by 45% through UX optimization. Check it out! #UXDesign #ConversionOptimization",
-      image: "/images/media/social/twitter-casestudy.jpg",
-      date: "April 2, 2025",
-      likes: 432,
-      comments: 28,
-      shares: 87,
-      url: "https://twitter.com/pledgeandgrow"
     },
     {
       id: "facebook1",
@@ -109,39 +80,6 @@ export default function SocialMediaSection() {
       shares: 876,
       views: 45678,
       url: "https://tiktok.com/@pledgeandgrow"
-    },
-    {
-      id: "insta2",
-      platform: "instagram",
-      content: "Our office culture in one photo: collaboration, creativity, and coffee! ☕ #AgencyLife #TeamWork",
-      image: "/images/media/social/instagram-office.jpg",
-      date: "March 22, 2025",
-      likes: 987,
-      comments: 45,
-      shares: 23,
-      url: "https://instagram.com/pledgeandgrow"
-    },
-    {
-      id: "linkedin2",
-      platform: "linkedin",
-      content: "Proud to share that our client's e-commerce platform has reached €1M in monthly sales after our recent redesign and optimization project. A testament to the power of user-centered design and data-driven decision making.",
-      image: "/images/media/social/linkedin-success.jpg",
-      date: "April 5, 2025",
-      likes: 1432,
-      comments: 156,
-      shares: 287,
-      url: "https://linkedin.com/company/pledgeandgrow"
-    },
-    {
-      id: "twitter2",
-      platform: "twitter",
-      content: "Join us next week for our free webinar on 'Optimizing Mobile UX for Conversion' with our Head of UX Design, Marie Laurent. Register now! #UXDesign #MobileFirst",
-      image: "/images/media/social/twitter-webinar.jpg",
-      date: "April 12, 2025",
-      likes: 321,
-      comments: 43,
-      shares: 98,
-      url: "https://twitter.com/pledgeandgrow"
     }
   ];
 
@@ -157,12 +95,6 @@ export default function SocialMediaSection() {
 
   const getPlatformIcon = (platform: string) => {
     switch (platform) {
-      case 'instagram':
-        return <SiInstagram className="h-5 w-5 text-pink-600" />;
-      case 'linkedin':
-        return <SiLinkedin className="h-5 w-5 text-blue-600" />;
-      case 'twitter':
-        return <SiX className="h-5 w-5 text-blue-400" />;
       case 'facebook':
         return <SiFacebook className="h-5 w-5 text-blue-700" />;
       case 'youtube':

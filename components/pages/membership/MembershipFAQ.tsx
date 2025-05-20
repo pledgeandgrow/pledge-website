@@ -59,7 +59,7 @@ export default function MembershipFAQ() {
           </h2>
           <p className="text-lg text-muted-foreground">
             Find answers to common questions about our membership program.
-            If you don't see your question here, feel free to contact us.
+            If you don&apos;t see your question here, feel free to contact us.
           </p>
         </motion.div>
 

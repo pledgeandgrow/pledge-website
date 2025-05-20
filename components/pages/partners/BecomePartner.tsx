@@ -21,7 +21,7 @@ export default function BecomePartner() {
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Join our partner ecosystem and collaborate on innovative solutions. 
-              We're always looking for strategic partnerships that create value for our clients.
+              We&apos;re always looking for strategic partnerships that create value for our clients.
             </p>
           </motion.div>
         </div>

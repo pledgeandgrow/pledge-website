@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   TrendingUp, 
@@ -51,10 +51,10 @@ export default function CompanyOverview() {
               Pledge & Grow is a leading technology company specializing in digital transformation, web and mobile development, cloud solutions, and innovative software products.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Founded in 2020, we've rapidly expanded our operations globally, serving clients ranging from startups to Fortune 500 companies. Our mission is to empower businesses with cutting-edge technology solutions that drive growth and innovation.
+              Founded in 2020, we&apos;ve rapidly expanded our operations globally, serving clients ranging from startups to Fortune 500 companies. Our mission is to empower businesses with cutting-edge technology solutions that drive growth and innovation.
             </p>
             <p className="text-lg text-muted-foreground">
-              With a focus on quality, innovation, and client satisfaction, we've established ourselves as a trusted partner for businesses looking to thrive in the digital age.
+              With a focus on quality, innovation, and client satisfaction, we&apos;ve established ourselves as a trusted partner for businesses looking to thrive in the digital age.
             </p>
           </motion.div>
           

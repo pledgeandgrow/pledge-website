@@ -99,7 +99,7 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/achievements" className="text-gray-700 dark:text-gray-300">
+                        <Link href="/progress" className="text-gray-700 dark:text-gray-300">
                           Progress
                         </Link>
                       </li>
@@ -121,7 +121,7 @@ export default function Navbar() {
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Opportunities</h3>
                     <ul className="space-y-3">
                       <li>
-                        <Link href="/grants-and-subsidies" className="text-gray-700 dark:text-gray-300">
+                        <Link href="/grants-subsidies" className="text-gray-700 dark:text-gray-300">
                           Grants & Subsidies
                         </Link>
                       </li>
@@ -357,7 +357,7 @@ export default function Navbar() {
                     <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Opportunities</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
-                        <Link href="/grants-and-subsidies" className="text-gray-700 dark:text-gray-300">
+                        <Link href="/grants-subsidies" className="text-gray-700 dark:text-gray-300">
                           Grants & Subsidies
                         </Link>
                       </li>

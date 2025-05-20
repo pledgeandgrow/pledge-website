@@ -3,21 +3,13 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
-  Rocket, 
   Users, 
   Globe, 
-  Lightbulb, 
-  Heart, 
   TrendingUp 
 } from "lucide-react";
 
 export default function WhyJoinUs() {
   const benefits = [
-    {
-      title: "Innovation Culture",
-      description: "Work with cutting-edge technologies and contribute to innovative projects that shape the digital landscape.",
-      icon: <Rocket className="h-6 w-6 text-primary" />
-    },
     {
       title: "Collaborative Environment",
       description: "Join a supportive team that values collaboration, knowledge sharing, and mutual growth.",
@@ -27,16 +19,6 @@ export default function WhyJoinUs() {
       title: "Global Opportunities",
       description: "Work with clients and teams from around the world, gaining international experience and perspective.",
       icon: <Globe className="h-6 w-6 text-primary" />
-    },
-    {
-      title: "Continuous Learning",
-      description: "Access to ongoing training, workshops, conferences, and resources to keep your skills sharp.",
-      icon: <Lightbulb className="h-6 w-6 text-primary" />
-    },
-    {
-      title: "Work-Life Balance",
-      description: "Flexible working arrangements and policies designed to support your wellbeing and personal life.",
-      icon: <Heart className="h-6 w-6 text-primary" />
     },
     {
       title: "Career Growth",
@@ -59,7 +41,7 @@ export default function WhyJoinUs() {
             Why Join Pledge & Grow
           </h2>
           <p className="text-lg text-muted-foreground">
-            We're more than just a workplace. We're a community of passionate professionals dedicated to growth, innovation, and making a difference.
+            We&apos;re more than just a workplace. We&apos;re a community of passionate professionals dedicated to growth, innovation, and making a difference.
           </p>
         </motion.div>
 

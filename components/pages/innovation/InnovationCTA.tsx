@@ -24,7 +24,7 @@ export default function InnovationCTA() {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8">
-              Whether you're looking to transform your business with cutting-edge technology, 
+              Whether you&apos;re looking to transform your business with cutting-edge technology, 
               join our startup incubator, or collaborate on an innovative project, 
               our team is ready to help turn your vision into reality.
             </p>

@@ -49,23 +49,13 @@ export default function OpenPositions() {
     },
     {
       id: "design-001",
-      title: "Business Developer",
-      department: "Business",
+      title: "IT Development Intern",
+      department: "Engineering",
       location: "Lyon, France",
       locationType: "Hybrid",
-      employmentType: "Full-time",
-      description: "We're seeking a talented Business Developer to identify growth opportunities and build strategic partnerships to expand our market presence.",
+      employmentType: "Internship",
+      description: "Join our engineering team as an IT Development Intern to gain hands-on experience with modern web technologies while working on real-world projects under experienced mentors.",
       postedDate: "2025-04-20"
-    },
-    {
-      id: "marketing-001",
-      title: "Chief Marketing Officer",
-      department: "Executive",
-      location: "Paris, France",
-      locationType: "On-site",
-      employmentType: "Full-time",
-      description: "Lead our marketing vision and strategy to elevate our brand, drive market growth, and oversee all marketing initiatives across digital and traditional channels.",
-      postedDate: "2025-04-10"
     },
     {
       id: "pm-001",
@@ -76,16 +66,6 @@ export default function OpenPositions() {
       employmentType: "Full-time",
       description: "Drive revenue growth by identifying and pursuing new sales opportunities, building client relationships, and closing deals effectively.",
       postedDate: "2025-04-22"
-    },
-    {
-      id: "intern-001",
-      title: "Web Development Intern",
-      department: "Engineering",
-      location: "Paris, France",
-      locationType: "On-site",
-      employmentType: "Internship",
-      description: "Gain hands-on experience in web development while working alongside our experienced engineering team.",
-      postedDate: "2025-04-25"
     }
   ];
 

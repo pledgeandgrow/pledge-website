@@ -42,7 +42,7 @@ export default function SectorsOverview() {
               At Pledge & Grow, we understand that each industry faces unique challenges and opportunities in the digital landscape. Our specialized teams combine deep sector knowledge with technical expertise to deliver solutions that address your specific business needs.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              From retail and healthcare to finance and manufacturing, we've helped organizations across diverse sectors leverage technology to enhance efficiency, improve customer experiences, and drive growth.
+              From retail and healthcare to finance and manufacturing, we&apos;ve helped organizations across diverse sectors leverage technology to enhance efficiency, improve customer experiences, and drive growth.
             </p>
             <p className="text-lg text-muted-foreground">
               Our industry-focused approach ensures that we not only understand your technical requirements but also the regulatory considerations, market dynamics, and competitive pressures that shape your business environment.

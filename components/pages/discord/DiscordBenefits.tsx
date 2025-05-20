@@ -71,7 +71,7 @@ export default function DiscordBenefits() {
             Why Join Our Discord
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our Discord server is more than just a chat platform—it's a vibrant community where you can learn, connect, and grow with fellow professionals.
+            Our Discord server is more than just a chat platform—it&apos;s a vibrant community where you can learn, connect, and grow with fellow professionals.
           </p>
         </motion.div>
 

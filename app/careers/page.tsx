@@ -2,11 +2,9 @@ import { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { 
-  CareersHero, 
   WhyJoinUs,
   OpenPositions,
   CompanyValues,
-  TeamTestimonials,
   ApplicationProcess,
   CareersCTA
 } from "@/components/pages/careers";
@@ -37,11 +35,9 @@ export default function CareersPage() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow pt-16">
-        <CareersHero />
         <WhyJoinUs />
         <CompanyValues />
         <OpenPositions />
-        <TeamTestimonials />
         <ApplicationProcess />
         <CareersCTA />
       </main>

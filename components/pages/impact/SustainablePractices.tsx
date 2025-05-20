@@ -69,7 +69,7 @@ export default function SustainablePractices() {
           >
             <h2 className="text-3xl font-bold tracking-tight mb-4">Sustainable Practices</h2>
             <p className="text-lg text-muted-foreground mb-6">
-              At Pledge & Grow, we recognize that technology has both environmental costs and the potential to drive sustainability. We're committed to minimizing our ecological footprint while developing solutions that help our clients and communities do the same.
+              At Pledge & Grow, we recognize that technology has both environmental costs and the potential to drive sustainability. We&apos;re committed to minimizing our ecological footprint while developing solutions that help our clients and communities do the same.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
               Our approach to sustainability encompasses everything from our development practices and infrastructure choices to our office operations and supply chain management. We continuously measure, report, and improve our environmental performance.
@@ -118,7 +118,7 @@ export default function SustainablePractices() {
         >
           <h3 className="text-2xl font-bold mb-4">Our Environmental Commitment</h3>
           <p className="text-lg mb-2">
-            We're committed to achieving carbon neutrality in our operations by 2026 and helping our clients reduce their environmental impact through thoughtful technology solutions.
+            We&apos;re committed to achieving carbon neutrality in our operations by 2026 and helping our clients reduce their environmental impact through thoughtful technology solutions.
           </p>
           <p className="text-muted-foreground">
             Each year, we publish a sustainability report detailing our progress and setting new targets for improvement.

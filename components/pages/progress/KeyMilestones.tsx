@@ -5,7 +5,6 @@ import {
   Flag, 
   Award, 
   Users, 
-  Globe, 
   Building, 
   TrendingUp 
 } from "lucide-react";
@@ -21,60 +20,39 @@ interface Milestone {
 export default function KeyMilestones() {
   const milestones: Milestone[] = [
     {
-      year: "2018",
-      title: "Company Founded",
-      description: "Pledge & Grow was established with a vision to help businesses leverage digital technologies for growth and innovation.",
+      year: "2022",
+      title: "The Beginning",
+      description: "Originally started by a small team with a big vision. We wanted to be a digital agency that offered every service possible aimed at entrepreneurs, and started working on our vision.",
       icon: <Flag className="h-8 w-8 text-blue-500" />,
       color: "border-blue-500"
     },
     {
-      year: "2019",
-      title: "First Major Client",
-      description: "Secured our first enterprise client and successfully delivered a transformative digital solution that set the foundation for our reputation.",
-      icon: <Award className="h-8 w-8 text-green-500" />,
-      color: "border-green-500"
-    },
-    {
-      year: "2020",
-      title: "Team Expansion",
-      description: "Grew our team to 25 talented professionals across development, design, and strategy to meet increasing client demand.",
-      icon: <Users className="h-8 w-8 text-purple-500" />,
-      color: "border-purple-500"
-    },
-    {
-      year: "2021",
-      title: "International Expansion",
-      description: "Opened our first international office and began serving clients across Europe, marking the beginning of our global presence.",
-      icon: <Globe className="h-8 w-8 text-red-500" />,
-      color: "border-red-500"
-    },
-    {
-      year: "2022",
-      title: "New Headquarters",
-      description: "Moved into our new headquarters in Paris, designed to foster collaboration, innovation, and employee wellbeing.",
-      icon: <Building className="h-8 w-8 text-amber-500" />,
-      color: "border-amber-500"
-    },
-    {
       year: "2023",
-      title: "100th Client Milestone",
-      description: "Celebrated our 100th client partnership, with a client retention rate of over 90% - a testament to our quality and service.",
+      title: "Finding Our Focus",
+      description: "Had our first clients and started seeing demand in marketing and IT where we excelled the most. We made the strategic decision to cut off other services except those two core areas.",
       icon: <TrendingUp className="h-8 w-8 text-cyan-500" />,
       color: "border-cyan-500"
     },
     {
-      year: "2024",
-      title: "Technology Innovation Award",
-      description: "Received industry recognition for our innovative approach to digital solutions and positive client outcomes.",
-      icon: <Award className="h-8 w-8 text-emerald-500" />,
-      color: "border-emerald-500"
+      year: "Early 2024",
+      title: "IT Specialization",
+      description: "Our team got bigger and we switched fully to IT services with huge demands and most opportunities coming from that field, allowing us to focus our expertise.",
+      icon: <Users className="h-8 w-8 text-purple-500" />,
+      color: "border-purple-500"
+    },
+    {
+      year: "Late 2024",
+      title: "French Establishment",
+      description: "Established our company in France, started to get our first clients, and our team evolved with time, building a solid foundation for future growth.",
+      icon: <Building className="h-8 w-8 text-amber-500" />,
+      color: "border-amber-500"
     },
     {
       year: "2025",
-      title: "Sustainability Initiative",
-      description: "Launched our sustainability program, committing to carbon-neutral operations and environmentally responsible practices.",
-      icon: <Globe className="h-8 w-8 text-teal-500" />,
-      color: "border-teal-500"
+      title: "Innovation Focus",
+      description: "Worked on our vision and R&D to add more value to what we can offer. Pledge & Grow is not only your digital IT agency but also building the innovations of tomorrow.",
+      icon: <Award className="h-8 w-8 text-emerald-500" />,
+      color: "border-emerald-500"
     }
   ];
 
@@ -92,7 +70,7 @@ export default function KeyMilestones() {
             Key Milestones
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our journey of growth and achievement over the years as we've built Pledge & Grow into a leading digital solutions provider.
+            Our journey of growth and achievement over the years as we&apos;ve built Pledge & Grow into a leading digital solutions provider.
           </p>
         </motion.div>
 

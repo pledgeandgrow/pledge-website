@@ -76,13 +76,12 @@ const pricingPlans: PricingPlan[] = [
 
 export default function OfferPackages() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
 
   // Check if we're on mobile
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      // Mobile check is handled by CSS media queries
     };
     
     checkMobile();
@@ -147,7 +146,7 @@ export default function OfferPackages() {
             onScroll={handleScroll}
           >
             <div className="flex">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan) => (
                 <div 
                   key={plan.id}
                   className="min-w-full snap-center px-4"

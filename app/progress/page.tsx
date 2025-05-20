@@ -5,7 +5,7 @@ import {
   ProgressHero, 
   KeyMilestones,
   GrowthMetrics,
-  ClientTestimonials,
+  GlobalOffices,
   FutureVision,
   ProgressCTA
 } from "@/components/pages/progress";
@@ -39,7 +39,7 @@ export default function ProgressPage() {
         <ProgressHero />
         <KeyMilestones />
         <GrowthMetrics />
-        <ClientTestimonials />
+        <GlobalOffices />
         <FutureVision />
         <ProgressCTA />
       </main>

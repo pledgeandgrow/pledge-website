@@ -58,7 +58,7 @@ export default function ApplicationProcess() {
             Our Application Process
           </h2>
           <p className="text-lg text-muted-foreground">
-            We've designed a straightforward and transparent hiring process to help us find the right talent and give you clarity every step of the way.
+            We&apos;ve designed a straightforward and transparent hiring process to help us find the right talent and give you clarity every step of the way.
           </p>
         </motion.div>
 

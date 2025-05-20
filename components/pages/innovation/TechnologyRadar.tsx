@@ -1,11 +1,15 @@
 "use client";
 
-import { useState } from "react";
+
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { TechStack, TechItem } from "@/components/ui/tech-stack";
+import * as SiIcons from "react-icons/si";
+
+// Type for the icons from react-icons/si
+type SiIconType = keyof typeof SiIcons;
 
 interface TechCategory {
   id: string;
@@ -128,7 +132,7 @@ export default function TechnologyRadar() {
   const convertToTechItem = (tech: TechRadarItem): TechItem => {
     return {
       name: tech.name,
-      icon: tech.icon as any,
+      icon: tech.icon as SiIconType,
       color: getStatusColor(tech.status)
     };
   };
@@ -170,7 +174,7 @@ export default function TechnologyRadar() {
         >
           <h2 className="text-3xl font-bold tracking-tight mb-4">Technology Radar</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We continuously monitor, evaluate, and adopt emerging technologies to ensure we're delivering the most effective and future-proof solutions for our clients.
+            We continuously monitor, evaluate, and adopt emerging technologies to ensure we&apos;re delivering the most effective and future-proof solutions for our clients.
           </p>
         </motion.div>
 

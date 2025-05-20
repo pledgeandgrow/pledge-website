@@ -137,7 +137,7 @@ export default function LocalizationServices() {
           </div>
           <div className="text-center">
             <p className="text-muted-foreground mb-6">
-              Don't see your required language? We can support additional languages upon request.
+              Don&apos;t see your required language? We can support additional languages upon request.
             </p>
             <Button asChild>
               <Link href="/contact?subject=Localization Services Inquiry">

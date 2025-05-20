@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
 interface PartnerCardProps {
-  id: string;
   name: string;
   logo: string;
   category: string;
@@ -18,7 +17,7 @@ interface PartnerCardProps {
   featured?: boolean;
 }
 
-export default function PartnerCard({ id, name, logo, category, description, website, featured = false }: PartnerCardProps) {
+export default function PartnerCard({ name, logo, category, description, website, featured = false }: PartnerCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

@@ -2,8 +2,8 @@
 
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+
 import { Globe, Smartphone, Code, Gamepad, MonitorSmartphone } from "lucide-react";
 import { ServiceModal, ServiceSpecifications, ServiceTechnology, ServiceConditions } from "@/components/ui/service-modal";
 

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, Calendar, MessageSquare } from "lucide-react";
+import { ArrowRight, Heart, MessageSquare } from "lucide-react";
 import Link from "next/link";
 
 export default function ImpactCTA() {
@@ -24,9 +24,9 @@ export default function ImpactCTA() {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8">
-              Whether you're a nonprofit organization in need of technology support, 
+              Whether you&apos;re a nonprofit organization in need of technology support, 
               a company looking to partner on social impact initiatives, 
-              or an individual who wants to contribute, we'd love to hear from you.
+              or an individual who wants to contribute, we&apos;d love to hear from you.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

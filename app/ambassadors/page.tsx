@@ -4,7 +4,6 @@ import Footer from "@/components/layout/Footer";
 import { 
   AmbassadorsHero, 
   AmbassadorsList, 
-  AmbassadorImpact,
   BecomeAmbassador 
 } from "@/components/pages/ambassadors";
 
@@ -35,7 +34,6 @@ export default function AmbassadorsPage() {
       <Navbar />
       <main className="flex-grow pt-16">
         <AmbassadorsHero />
-        <AmbassadorImpact />
         <AmbassadorsList />
         <BecomeAmbassador />
       </main>

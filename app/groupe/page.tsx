@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { 
-  GroupeHero, 
   GroupeOverview,
   CompanyShowcase,
-  GroupePartners,
   GroupeCTA
 } from '@/components/pages/groupe';
 import Navbar from '@/components/layout/Navbar';
@@ -27,10 +25,8 @@ export default function GroupePage() {
     <>
       <Navbar />
       <main className="flex-grow pt-16">
-        <GroupeHero />
         <GroupeOverview />
         <CompanyShowcase />
-        <GroupePartners />
         <GroupeCTA />
       </main>
       <Footer />

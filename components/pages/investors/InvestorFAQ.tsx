@@ -51,7 +51,7 @@ export default function InvestorFAQ() {
           </h2>
           <p className="text-lg text-muted-foreground">
             Common questions from our investors and potential investment partners.
-            If you don't find the answer you're looking for, please contact our investor relations team.
+            If you don&apos;t find the answer you&apos;re looking for, please contact our investor relations team.
           </p>
         </motion.div>
 

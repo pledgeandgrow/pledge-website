@@ -21,7 +21,7 @@ export default function BecomeAmbassador() {
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Join our global community of ambassadors and help us spread our mission. 
-              As an ambassador, you'll represent Pledge & Grow in your region and connect with like-minded professionals.
+              As an ambassador, you&apos;ll represent Pledge & Grow in your region and connect with like-minded professionals.
             </p>
           </motion.div>
         </div>

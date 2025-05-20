@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Search, Plus, Minus } from "lucide-react";
+import { Search } from "lucide-react";
 import Link from "next/link";
 
 interface FAQ {
@@ -171,7 +171,7 @@ export default function FAQs() {
                 className="max-w-3xl mx-auto"
               >
                 <Accordion type="single" collapsible className="w-full">
-                  {filteredFAQs.map((faq, index) => (
+                  {filteredFAQs.map((faq) => (
                     <AccordionItem key={faq.id} value={faq.id}>
                       <AccordionTrigger className="text-left text-lg font-medium">
                         {faq.question}
@@ -203,7 +203,7 @@ export default function FAQs() {
         >
           <h3 className="text-xl font-semibold mb-4">Still have questions?</h3>
           <p className="text-muted-foreground mb-6">
-            If you couldn't find the answer you were looking for, our support team is here to help.
+            If you couldn&apos;t find the answer you were looking for, our support team is here to help.
           </p>
           <Button asChild>
             <Link href="#contact">

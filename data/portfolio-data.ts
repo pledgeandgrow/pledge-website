@@ -2,6 +2,110 @@ import { ClientProject } from "@/components/ui/client-modal";
 
 export const portfolioProjects: ClientProject[] = [
   {
+    id: "14",
+    name: "Cabinet Michou",
+    logo: "/images/portfolio/cabinet-michou-logo.png",
+    description: "Développement d'un site web professionnel pour un cabinet d'avocats spécialisé, avec système de prise de rendez-vous et espace client sécurisé.",
+    industry: "Juridique",
+    year: 2024,
+    deliverables: [
+      "Site Web Responsive",
+      "Système de Rendez-vous",
+      "Espace Client Sécurisé",
+      "Gestion Documentaire"
+    ],
+    needs: [
+      "Créer une présence en ligne professionnelle",
+      "Faciliter la prise de rendez-vous pour les clients",
+      "Sécuriser l'échange de documents juridiques",
+      "Mettre en valeur l'expertise du cabinet"
+    ],
+    methodology: {
+      approach: "Nous avons adopté une approche centrée sur la sécurité et le professionnalisme, en créant une interface élégante qui reflète les valeurs du cabinet tout en garantissant la confidentialité des données.",
+      technologies: ["Secure Authentication", "Document Management", "Appointment Scheduling", "SSL Encryption"],
+      languages: ["TypeScript", "HTML5", "CSS3"],
+      frameworks: ["Next.js", "Tailwind CSS"],
+      libraries: ["React", "Framer Motion", "PDF.js"],
+      apis: ["Google Calendar", "DocuSign", "Stripe"]
+    },
+    outcome: {
+      statistics: [
+        { label: "Augmentation des Consultations", value: "35%" },
+        { label: "Taux de Satisfaction Client", value: "96%" },
+        { label: "Réduction du Temps Administratif", value: "42%" }
+      ],
+      benefits: [
+        "Image professionnelle renforcée avec un design élégant et sobre",
+        "Processus de prise de rendez-vous simplifié pour les clients",
+        "Échange sécurisé de documents confidentiels",
+        "Meilleure visibilité de l'expertise du cabinet"
+      ],
+      improvements: [
+        "Intégration d'un blog juridique pour le partage d'expertise",
+        "Mise en place d'un système de notification pour les rendez-vous",
+        "Création d'une FAQ dynamique sur les services proposés",
+        "Optimisation pour les moteurs de recherche spécialisés"
+      ],
+      testimonial: {
+        quote: "Le site développé par Pledge & Grow a transformé notre relation client et notre organisation interne. La qualité du travail et le professionnalisme de l'équipe ont dépassé nos attentes.",
+        author: "Maître Michou",
+        position: "Fondateur, Cabinet Michou"
+      }
+    }
+  },
+  {
+    id: "15",
+    name: "Cabinet Mas Rocher",
+    logo: "/images/portfolio/mas-rocher-logo.png",
+    description: "Création d'une plateforme digitale pour un cabinet de conseil fiscal et patrimonial, incluant des outils de simulation et un portail client personnalisé.",
+    industry: "Finance & Conseil",
+    year: 2024,
+    deliverables: [
+      "Plateforme Web Responsive",
+      "Outils de Simulation Fiscale",
+      "Portail Client",
+      "Système de Notification"
+    ],
+    needs: [
+      "Digitaliser les services de conseil fiscal et patrimonial",
+      "Offrir des outils de simulation accessibles aux clients",
+      "Créer un espace sécurisé pour le suivi des dossiers",
+      "Améliorer la communication avec les clients"
+    ],
+    methodology: {
+      approach: "Nous avons développé une solution sur mesure en étroite collaboration avec les experts du cabinet, en mettant l'accent sur la précision des calculs fiscaux et la sécurité des données financières.",
+      technologies: ["Financial Modeling", "Secure Data Storage", "Tax Calculation", "Client Portal"],
+      languages: ["TypeScript", "Python", "SQL"],
+      frameworks: ["Next.js", "Django", "Express"],
+      libraries: ["React", "Pandas", "NumPy", "D3.js"],
+      apis: ["Banking APIs", "Tax Data", "Document Verification"]
+    },
+    outcome: {
+      statistics: [
+        { label: "Augmentation de la Clientèle", value: "28%" },
+        { label: "Temps de Traitement Réduit", value: "53%" },
+        { label: "Satisfaction Client", value: "92%" }
+      ],
+      benefits: [
+        "Accessibilité accrue aux services de conseil fiscal",
+        "Simulations personnalisées pour les clients",
+        "Suivi transparent des dossiers en cours",
+        "Communication améliorée entre conseillers et clients"
+      ],
+      improvements: [
+        "Intégration d'alertes fiscales personnalisées",
+        "Développement d'un tableau de bord analytique",
+        "Mise en place d'un système de signature électronique",
+        "Création d'une base de connaissances fiscales"
+      ],
+      testimonial: {
+        quote: "La plateforme développée par Pledge & Grow a révolutionné notre façon de travailler et d'interagir avec nos clients. Les outils de simulation sont particulièrement appréciés et nous ont permis d'offrir un service à plus haute valeur ajoutée.",
+        author: "Jean Mas",
+        position: "Associé Principal, Cabinet Mas Rocher"
+      }
+    }
+  },
+  {
     id: "1",
     name: "Dualink",
     logo: "/images/portfolio/dualink-logo.png",

@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ExternalLink, MapPin, Users, Calendar, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -103,93 +101,10 @@ export default function CompanyShowcase() {
         "Developed industry-leading carbon accounting methodology",
         "Recognized for innovation in climate tech"
       ]
-    },
-    {
-      id: "pledge-and-cloud",
-      name: "Pledge & Cloud",
-      logo: "/images/groupe/logo-pledgecloud.png",
-      category: "Infrastructure",
-      description: "Cloud infrastructure and DevOps services for businesses of all sizes. (Coming Soon)",
-      longDescription: "Pledge & Cloud is our upcoming initiative that will specialize in helping organizations leverage cloud technologies to improve scalability, security, and operational efficiency. Our team of certified cloud architects and DevOps engineers will design and implement robust cloud infrastructures tailored to each client's specific requirements. We will offer migration services, managed cloud solutions, and DevOps automation to help businesses focus on their core operations.",
-      founded: "Coming Soon",
-      location: "Paris, France",
-      team: "In formation",
-      website: "https://cloud.pledgeandgrow.com",
-      services: [
-        "Cloud Migration & Strategy",
-        "DevOps Automation",
-        "Infrastructure as Code",
-        "Managed Cloud Services",
-        "Cloud Security & Compliance"
-      ],
-      achievements: [
-        "Project in development phase",
-        "Team recruitment underway",
-        "Technology partnerships being established",
-        "Launch planned for Q3 2025"
-      ]
-    },
-    {
-      id: "pledge-and-events",
-      name: "Pledge & Events",
-      logo: "/images/groupe/logo-pledgeevents.png",
-      category: "Events",
-      description: "Digital event management platform and services for virtual, hybrid, and in-person experiences. (Coming Soon)",
-      longDescription: "Pledge & Events is our upcoming venture that will combine technology and creativity to deliver exceptional event experiences across virtual, hybrid, and in-person formats. Our platform will provide comprehensive tools for event planning, registration, audience engagement, and analytics. We aim to help organizations create memorable events that connect with audiences, drive engagement, and deliver measurable results, regardless of format or scale.",
-      founded: "Coming Soon",
-      location: "Paris, France",
-      team: "In formation",
-      website: "https://events.pledgeandgrow.com",
-      services: [
-        "Virtual Event Platform",
-        "Hybrid Event Solutions",
-        "Event Registration & Management",
-        "Audience Engagement Tools",
-        "Event Analytics & Reporting"
-      ],
-      achievements: [
-        "Platform prototype in development",
-        "Initial partnerships established",
-        "Market research completed",
-        "Launch planned for Q4 2025"
-      ]
-    },
-    {
-      id: "pledge-and-properties",
-      name: "Pledge & Properties",
-      logo: "/images/groupe/logo-pledgeproperties.png",
-      category: "Real Estate",
-      description: "Digital solutions for real estate management, sales, and property technology innovation. (Coming Soon)",
-      longDescription: "Pledge & Properties is our upcoming initiative that will bring digital transformation to the real estate industry through innovative proptech solutions. We plan to offer platforms for property management, virtual tours, smart building technology, and real estate analytics. Our solutions will help property developers, managers, and agents streamline operations, enhance customer experiences, and maximize property values through technology-driven approaches.",
-      founded: "Coming Soon",
-      location: "Bordeaux, France",
-      team: "In formation",
-      website: "https://properties.pledgeandgrow.com",
-      services: [
-        "Property Management Software",
-        "Virtual Tour Technology",
-        "Smart Building Solutions",
-        "Real Estate Analytics",
-        "Digital Marketing for Properties"
-      ],
-      achievements: [
-        "Concept development underway",
-        "Industry partnerships being established",
-        "Initial market analysis completed",
-        "Launch planned for Q1 2026"
-      ]
     }
   ];
 
-  const categories = [
-    { id: "all", name: "All Companies" },
-    { id: "Digital Services", name: "Digital Services" },
-    { id: "Productivity", name: "Productivity" },
-    { id: "Sustainability", name: "Sustainability" },
-    { id: "Infrastructure", name: "Infrastructure" },
-    { id: "Events", name: "Events" },
-    { id: "Real Estate", name: "Real Estate" }
-  ];
+  // No categories needed as tabs have been removed
 
   return (
     <section id="companies" className="py-16 md:py-24 bg-muted/30">
@@ -207,21 +122,8 @@ export default function CompanyShowcase() {
           </p>
         </motion.div>
 
-        <Tabs defaultValue="all" className="w-full">
-          <TabsList className="flex flex-wrap justify-center mb-8">
-            {categories.map((category) => (
-              <TabsTrigger key={category.id} value={category.id}>
-                {category.name}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-
-          {categories.map((category) => (
-            <TabsContent key={category.id} value={category.id} className="mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {companies
-                  .filter(company => category.id === "all" || company.category === category.id)
-                  .map((company) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {companies.map((company) => (
                     <motion.div
                       key={company.id}
                       initial={{ opacity: 0, y: 20 }}
@@ -232,14 +134,6 @@ export default function CompanyShowcase() {
                       <Card className="h-full flex flex-col overflow-hidden group hover:shadow-md transition-shadow">
                         <CardHeader className="pb-4">
                           <div className="flex items-center justify-between">
-                            <div className="w-16 h-16 relative mb-2">
-                              <Image
-                                src={company.logo}
-                                alt={`${company.name} logo`}
-                                fill
-                                className="object-contain"
-                              />
-                            </div>
                             <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-primary/10 text-primary">
                               {company.category}
                             </span>
@@ -279,21 +173,11 @@ export default function CompanyShowcase() {
                               {selectedCompany && (
                                 <>
                                   <DialogHeader>
-                                    <div className="flex items-center gap-4">
-                                      <div className="w-16 h-16 relative">
-                                        <Image
-                                          src={selectedCompany.logo}
-                                          alt={`${selectedCompany.name} logo`}
-                                          fill
-                                          className="object-contain"
-                                        />
-                                      </div>
-                                      <div>
-                                        <DialogTitle className="text-2xl">{selectedCompany.name}</DialogTitle>
-                                        <DialogDescription className="text-primary">
-                                          {selectedCompany.category}
-                                        </DialogDescription>
-                                      </div>
+                                    <div>
+                                      <DialogTitle className="text-2xl">{selectedCompany.name}</DialogTitle>
+                                      <DialogDescription className="text-primary">
+                                        {selectedCompany.category}
+                                      </DialogDescription>
                                     </div>
                                   </DialogHeader>
                                   
@@ -377,10 +261,7 @@ export default function CompanyShowcase() {
                       </Card>
                     </motion.div>
                   ))}
-              </div>
-            </TabsContent>
-          ))}
-        </Tabs>
+        </div>
       </div>
     </section>
   );

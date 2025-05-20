@@ -28,7 +28,7 @@ export default function ImpactHero() {
             
             <p className="text-lg text-muted-foreground mb-8 max-w-xl">
               At Pledge & Grow, we believe in the power of technology to create positive change. 
-              We're committed to leveraging our expertise to support causes that make the world a better place.
+              We&apos;re committed to leveraging our expertise to support causes that make the world a better place.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

@@ -14,7 +14,6 @@ interface SocialLink {
 }
 
 interface AmbassadorCardProps {
-  id: string;
   name: string;
   image: string;
   role: string;
@@ -25,7 +24,6 @@ interface AmbassadorCardProps {
 }
 
 export default function AmbassadorCard({ 
-  id, 
   name, 
   image, 
   role, 
