@@ -10,8 +10,11 @@ import RelatedArticles from '@/components/pages/blog/RelatedArticles';
 import { Button } from '@/components/ui/button';
 import { getArticleById } from '@/data/blog-data';
 
+// Define the page params type
+type ArticlePageParams = { id: string };
+
 // Generate metadata for the page
-export function generateMetadata({ params }: { params: { id: string } }): Metadata {
+export function generateMetadata({ params }: { params: ArticlePageParams }): Metadata {
   const article = getArticleById(params.id);
   
   if (!article) {
@@ -32,12 +35,7 @@ export function generateMetadata({ params }: { params: { id: string } }): Metada
   };
 }
 
-type Props = {
-  params: { id: string }
-}
-
-export default function ArticlePage(props: Props) {
-  const { params } = props;
+export default function ArticlePage({ params }: { params: ArticlePageParams }) {
   const article = getArticleById(params.id);
   
   if (!article) {
