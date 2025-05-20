@@ -1,0 +1,139 @@
+{
+  "id": "seo",
+  "slug": "seo",
+  "title": "Search Engine Optimization",
+  "subtitle": "Improve visibility and drive organic traffic to your website",
+  "description": "We help businesses improve their search engine rankings to attract more qualified visitors. Our comprehensive SEO approach combines technical optimization, content strategy, and link building to deliver sustainable organic growth.",
+  "heroImage": "/images/expertise/seo-hero.jpg",
+  "category": "Complementary",
+  "features": [
+    {
+      "title": "Technical SEO",
+      "description": "Optimizing site structure, speed, and accessibility",
+      "icon": "code"
+    },
+    {
+      "title": "On-Page Optimization",
+      "description": "Enhancing content and metadata for better rankings",
+      "icon": "document-text"
+    },
+    {
+      "title": "Content Strategy",
+      "description": "Creating valuable content that ranks and converts",
+      "icon": "pencil-square"
+    },
+    {
+      "title": "Link Building",
+      "description": "Earning quality backlinks to boost authority",
+      "icon": "link"
+    }
+  ],
+  "technologies": [
+    { "name": "Google Search Console", "logo": "/images/tech/google-search-console.svg" },
+    { "name": "SEMrush", "logo": "/images/tech/semrush.svg" },
+    { "name": "Ahrefs", "logo": "/images/tech/ahrefs.svg" },
+    { "name": "Screaming Frog", "logo": "/images/tech/screaming-frog.svg" },
+    { "name": "Google Analytics", "logo": "/images/tech/google-analytics.svg" }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "SEO Audit",
+      "description": "Comprehensive analysis of your current search performance",
+      "icon": "magnifying-glass"
+    },
+    {
+      "step": 2,
+      "title": "Keyword Research",
+      "description": "Identifying valuable search terms your audience uses",
+      "icon": "document-search"
+    },
+    {
+      "step": 3,
+      "title": "Technical Optimization",
+      "description": "Fixing issues that impact search engine crawling and indexing",
+      "icon": "wrench"
+    },
+    {
+      "step": 4,
+      "title": "Content Optimization",
+      "description": "Enhancing existing content and creating new SEO-focused content",
+      "icon": "document-plus"
+    },
+    {
+      "step": 5,
+      "title": "Off-Page SEO",
+      "description": "Building authority through quality backlinks and mentions",
+      "icon": "globe"
+    },
+    {
+      "step": 6,
+      "title": "Monitoring & Reporting",
+      "description": "Tracking progress and continuously improving results",
+      "icon": "chart-bar"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Increased Organic Traffic",
+      "description": "Attract more visitors without paying for each click",
+      "icon": "users"
+    },
+    {
+      "title": "Better Quality Leads",
+      "description": "Connect with users actively searching for your solutions",
+      "icon": "user-plus"
+    },
+    {
+      "title": "Long-Term Results",
+      "description": "Build sustainable traffic that continues to grow over time",
+      "icon": "arrow-trending-up"
+    },
+    {
+      "title": "Enhanced Brand Credibility",
+      "description": "Gain trust through higher search rankings and visibility",
+      "icon": "badge-check"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How long does SEO take to show results?",
+      "answer": "SEO is a long-term strategy. While some improvements can be seen within 1-3 months, significant results typically take 4-6 months or longer, depending on your industry, competition, and starting point."
+    },
+    {
+      "question": "What makes your SEO approach different?",
+      "answer": "We focus on sustainable, white-hat techniques that build long-term value. Our approach combines technical expertise, quality content creation, and strategic link building—all tailored to your specific business goals."
+    },
+    {
+      "question": "Do you guarantee first-page rankings?",
+      "answer": "No reputable SEO agency can guarantee specific rankings, as search algorithms are constantly evolving. We focus on measurable improvements in visibility, traffic, and conversions rather than promising specific positions."
+    },
+    {
+      "question": "How do you report on SEO progress?",
+      "answer": "We provide transparent monthly reports showing key metrics like organic traffic, keyword rankings, backlink growth, and conversion data, along with insights and recommendations for continued improvement."
+    }
+  ],
+  "casestudies": [
+    {
+      "title": "Local Business Visibility Boost",
+      "description": "Increased organic traffic by 215% and first-page rankings for 45 target keywords",
+      "image": "/images/case-studies/local-seo.jpg",
+      "client": "Professional Services Firm",
+      "industry": "Legal"
+    },
+    {
+      "title": "E-commerce SEO Overhaul",
+      "description": "Doubled organic revenue through category and product page optimization",
+      "image": "/images/case-studies/ecommerce-seo.jpg",
+      "client": "Online Retailer",
+      "industry": "Home Goods"
+    }
+  ],
+  "relatedExpertise": ["digital-marketing", "website", "content-strategy"],
+  "cta": {
+    "title": "Ready to climb the search rankings?",
+    "description": "Let's create an SEO strategy that drives sustainable organic growth for your business.",
+    "buttonText": "Start Your SEO Project",
+    "buttonLink": "/digital-project?service=seo"
+  }
+}

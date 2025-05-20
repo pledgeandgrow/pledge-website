@@ -1,0 +1,150 @@
+{
+  "id": "video-games",
+  "slug": "video-games",
+  "title": "Video Game Development",
+  "subtitle": "Create engaging, immersive gaming experiences across platforms",
+  "description": "We develop captivating video games for various platforms, from mobile to console and PC. Our game development expertise combines creative storytelling, stunning visuals, and engaging gameplay mechanics to create memorable gaming experiences.",
+  "heroImage": "/images/expertise/video-games-hero.jpg",
+  "category": "Creation",
+  "features": [
+    {
+      "title": "Game Design",
+      "description": "Comprehensive game design documents and mechanics",
+      "icon": "gamepad-2"
+    },
+    {
+      "title": "2D/3D Development",
+      "description": "High-quality graphics and animations for any style",
+      "icon": "cube"
+    },
+    {
+      "title": "Cross-Platform",
+      "description": "Games that work seamlessly across multiple devices",
+      "icon": "monitor-smartphone"
+    },
+    {
+      "title": "Multiplayer Integration",
+      "description": "Real-time multiplayer experiences with robust networking",
+      "icon": "users"
+    }
+  ],
+  "technologies": [
+    { "name": "Unity", "logo": "/images/tech/unity.svg" },
+    { "name": "Unreal Engine", "logo": "/images/tech/unreal.svg" },
+    { "name": "Godot", "logo": "/images/tech/godot.svg" },
+    { "name": "Blender", "logo": "/images/tech/blender.svg" },
+    { "name": "PlayFab", "logo": "/images/tech/playfab.svg" }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Concept & Design",
+      "description": "Defining the game concept, mechanics, and core gameplay",
+      "icon": "lightbulb"
+    },
+    {
+      "step": 2,
+      "title": "Prototyping",
+      "description": "Creating playable prototypes to test core mechanics",
+      "icon": "puzzle"
+    },
+    {
+      "step": 3,
+      "title": "Asset Creation",
+      "description": "Developing graphics, animations, sound, and music",
+      "icon": "palette"
+    },
+    {
+      "step": 4,
+      "title": "Development",
+      "description": "Building the game with all systems and features",
+      "icon": "code"
+    },
+    {
+      "step": 5,
+      "title": "Testing & Polishing",
+      "description": "Quality assurance and gameplay refinement",
+      "icon": "bug"
+    },
+    {
+      "step": 6,
+      "title": "Release & Support",
+      "description": "Launching the game and providing ongoing updates",
+      "icon": "rocket"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Engaging User Experience",
+      "description": "Captivating gameplay that keeps players coming back",
+      "icon": "heart"
+    },
+    {
+      "title": "Monetization Opportunities",
+      "description": "Multiple revenue streams through in-app purchases or premium models",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Brand Awareness",
+      "description": "Increased visibility and engagement with your brand",
+      "icon": "badge"
+    },
+    {
+      "title": "Community Building",
+      "description": "Create loyal communities around your gaming experiences",
+      "icon": "users-round"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What platforms can you develop games for?",
+      "answer": "We develop games for multiple platforms including mobile (iOS and Android), PC (Windows, Mac, Linux), web browsers, and consoles. Our cross-platform approach ensures your game reaches the widest possible audience."
+    },
+    {
+      "question": "How long does it take to develop a video game?",
+      "answer": "Development timelines vary significantly based on the scope and complexity of the game. Simple mobile games might take 3-6 months, while more complex titles can take 12-24 months or more. We'll provide a detailed timeline during the planning phase."
+    },
+    {
+      "question": "What game engines do you use?",
+      "answer": "We primarily work with Unity and Unreal Engine, two of the most powerful and versatile game engines available. For certain projects, we also use Godot or custom-built engines depending on the specific requirements."
+    },
+    {
+      "question": "Can you help with publishing my game?",
+      "answer": "Yes, we offer end-to-end support including publishing assistance. We can help with store submissions (App Store, Google Play, Steam, etc.), marketing materials, and launch strategies to ensure your game gets the attention it deserves."
+    },
+    {
+      "question": "Do you create games with AR/VR capabilities?",
+      "answer": "Absolutely! We have expertise in developing augmented reality (AR) and virtual reality (VR) games and experiences. We work with technologies like ARKit, ARCore, and various VR platforms to create immersive experiences."
+    }
+  ],
+  "casestudies": [
+    {
+      "title": "Fantasy Adventure RPG",
+      "description": "A cross-platform role-playing game with rich storytelling and strategic combat that achieved over 500,000 downloads in its first month.",
+      "image": "/images/case-studies/game-rpg.jpg",
+      "client": "GameWorld Studios",
+      "industry": "Entertainment"
+    },
+    {
+      "title": "Educational Puzzle Game",
+      "description": "A series of puzzle games designed to teach STEM concepts to children aged 8-12, used by over 200 schools nationwide.",
+      "image": "/images/case-studies/game-education.jpg",
+      "client": "EduPlay Interactive",
+      "industry": "Education"
+    },
+    {
+      "title": "Multiplayer Racing Game",
+      "description": "A fast-paced racing game with real-time multiplayer capabilities and customizable vehicles that generated significant in-app purchase revenue.",
+      "image": "/images/case-studies/game-racing.jpg",
+      "client": "SpeedLine Games",
+      "industry": "Entertainment"
+    }
+  ],
+  "relatedExpertise": ["mobile-app", "ux-ui-design", "cloud-devops"],
+  "cta": {
+    "title": "Ready to Create Your Game?",
+    "description": "Let's discuss your game concept and bring it to life with our expert development team.",
+    "buttonText": "Start Your Game Project",
+    "buttonLink": "/contact"
+  }
+}

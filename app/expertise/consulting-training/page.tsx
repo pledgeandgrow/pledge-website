@@ -12,13 +12,12 @@ import {
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
 export const metadata: Metadata = {
-  title: "UX/UI Design | Pledge & Grow",
-  description: "Create intuitive, engaging user experiences with our UX/UI design expertise. We help you design interfaces that delight users and drive conversions.",
+  title: "Consulting & Training | Pledge & Grow",
+  description: "Expert guidance and knowledge transfer for digital transformation. Our consulting and training services help organizations build internal capabilities and navigate digital challenges.",
 };
 
-export default function UXUIDesignExpertisePage() {
-  // Using the ux-ui-design.json data for the design-ux-ix page
-  const expertise = getExpertiseBySlug('ux-ui-design');
+export default function ConsultingTrainingExpertisePage() {
+  const expertise = getExpertiseBySlug('consulting-training');
   
   if (!expertise) {
     return <div>Expertise not found</div>;
@@ -29,16 +28,16 @@ export default function UXUIDesignExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Design Features"
-        subtitle="Creating intuitive and engaging user experiences"
+        title="Key Services"
+        subtitle="Expert guidance and specialized training"
       />
       
       {/* Technologies Section */}
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="Design Tools & Technologies"
-          subtitle="Modern solutions for effective interface design"
+          title="Technologies & Frameworks"
+          subtitle="Modern tools we teach and implement"
         />
       )}
       
@@ -46,16 +45,16 @@ export default function UXUIDesignExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Design Process"
-          subtitle="How we create user-centered interfaces"
+          title="Our Consulting & Training Approach"
+          subtitle="How we transfer knowledge and expertise"
         />
       )}
       
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Professional UX/UI Design"
-        subtitle="Why thoughtful design matters"
+        title="Benefits of Professional Consulting & Training"
+        subtitle="Why investing in your team's capabilities matters"
       />
       
       {/* FAQs Section */}
@@ -63,7 +62,7 @@ export default function UXUIDesignExpertisePage() {
         <ExpertiseFAQ 
           faqs={expertise.faqs}
           title="Frequently Asked Questions"
-          subtitle="Common questions about UX/UI design"
+          subtitle="Common questions about our consulting and training services"
         />
       )}
       
@@ -71,8 +70,8 @@ export default function UXUIDesignExpertisePage() {
       {expertise.casestudies && (
         <ExpertiseCaseStudies 
           cases={expertise.casestudies}
-          title="Design Success Stories"
-          subtitle="Real design solutions for real products"
+          title="Success Stories"
+          subtitle="Real transformation through knowledge sharing"
         />
       )}
     </ExpertiseLayout>

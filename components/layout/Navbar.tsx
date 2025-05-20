@@ -266,7 +266,7 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/expertise/ux-ui-design" className="text-gray-700 dark:text-gray-300">
+                        <Link href="/expertise/design-ux-ui" className="text-gray-700 dark:text-gray-300">
                           UX/UI Design
                         </Link>
                       </li>
@@ -492,7 +492,7 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/expertise/ux-ui-design" className="text-gray-700 dark:text-gray-300">
+                        <Link href="/expertise/design-ux-ui" className="text-gray-700 dark:text-gray-300">
                           UX/UI Design
                         </Link>
                       </li>

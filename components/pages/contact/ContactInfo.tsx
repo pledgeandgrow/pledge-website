@@ -1,25 +1,39 @@
-import { Mail, Phone, MapPin, Clock, Linkedin, Twitter, Instagram, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Instagram, Facebook, Youtube, MessageCircle } from "lucide-react";
+import { FaTiktok } from "react-icons/fa";
+import { FaXTwitter, FaDiscord } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function ContactInfo() {
   const contactDetails = [
     {
       icon: <Mail className="h-5 w-5 text-primary" />,
-      title: "Email",
-      value: "contact@pledgeandgrow.com",
-      link: "mailto:contact@pledgeandgrow.com"
+      title: "Support Email",
+      value: "support@pledgeandgrow.com",
+      link: "mailto:support@pledgeandgrow.com"
     },
     {
       icon: <Phone className="h-5 w-5 text-primary" />,
-      title: "Phone",
-      value: "+33 7 53 69 58 40",
-      link: "tel:+33753695840"
+      title: "Support Phone",
+      value: "+33 7 53 69 58 40 (WhatsApp business)",
+      link: "https://wa.me/33753695840"
+    },
+    {
+      icon: <Mail className="h-5 w-5 text-primary" />,
+      title: "Commercial Email",
+      value: "commercial@pledgeandgrow.com",
+      link: "mailto:commercial@pledgeandgrow.com"
+    },
+    {
+      icon: <Phone className="h-5 w-5 text-primary" />,
+      title: "Commercial Phone",
+      value: "+971 50 392 7710 (WhatsApp business)",
+      link: "https://wa.me/971503927710"
     },
     {
       icon: <MapPin className="h-5 w-5 text-primary" />,
       title: "Address",
-      value: "4Bis Rue Alfred Nobel - 77420 - Ile-de-france",
-      link: "https://maps.google.com/?q=4Bis+Rue+Alfred+Nobel,+77420,+Ile-de-france,+France"
+      value: "16 Rue Théroigne de Méricourt, 75013 Paris",
+      link: "https://maps.google.com/?q=16+Rue+Th%C3%A9roigne+de+M%C3%A9ricourt,+75013+Paris,+France"
     },
     {
       icon: <Clock className="h-5 w-5 text-primary" />,
@@ -31,24 +45,39 @@ export default function ContactInfo() {
 
   const socialLinks = [
     {
-      icon: <Twitter className="h-5 w-5" />,
-      name: "Twitter",
-      link: "https://twitter.com"
-    },
-    {
-      icon: <Linkedin className="h-5 w-5" />,
-      name: "LinkedIn",
-      link: "https://linkedin.com"
-    },
-    {
       icon: <Instagram className="h-5 w-5" />,
       name: "Instagram",
-      link: "https://instagram.com"
+      link: "https://www.instagram.com/pledgeandgrow/"
+    },
+    {
+      icon: <FaTiktok className="h-5 w-5" />,
+      name: "TikTok",
+      link: "https://www.tiktok.com/@pledgeandgrowfr"
+    },
+    {
+      icon: <FaXTwitter className="h-5 w-5" />,
+      name: "X",
+      link: "https://x.com/PledgeandGrow"
     },
     {
       icon: <Facebook className="h-5 w-5" />,
       name: "Facebook",
-      link: "https://facebook.com"
+      link: "https://www.facebook.com/100095753672290/"
+    },
+    {
+      icon: <Youtube className="h-5 w-5" />,
+      name: "YouTube",
+      link: "https://www.youtube.com/@pledgeandgrow"
+    },
+    {
+      icon: <FaDiscord className="h-5 w-5" />,
+      name: "Discord",
+      link: "https://discord.gg/hVSSMd63"
+    },
+    {
+      icon: <MessageCircle className="h-5 w-5" />,
+      name: "WhatsApp",
+      link: "https://wa.me/33753695840"
     }
   ];
 

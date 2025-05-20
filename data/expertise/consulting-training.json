@@ -1,0 +1,139 @@
+{
+  "id": "consulting-training",
+  "slug": "consulting-training",
+  "title": "Consulting & Training",
+  "subtitle": "Expert guidance and knowledge transfer for digital transformation",
+  "description": "We provide strategic consulting and customized training to help organizations build internal capabilities and navigate digital transformation. Our experts share knowledge, best practices, and hands-on guidance to empower your team and drive sustainable success.",
+  "heroImage": "/images/expertise/consulting-training-hero.jpg",
+  "category": "Support",
+  "features": [
+    {
+      "title": "Technical Consulting",
+      "description": "Expert guidance on technology selection and implementation",
+      "icon": "light-bulb"
+    },
+    {
+      "title": "Digital Strategy",
+      "description": "Roadmaps for successful digital transformation",
+      "icon": "map"
+    },
+    {
+      "title": "Developer Training",
+      "description": "Hands-on technical workshops for your development team",
+      "icon": "code"
+    },
+    {
+      "title": "Leadership Coaching",
+      "description": "Guidance for executives leading digital initiatives",
+      "icon": "user-group"
+    }
+  ],
+  "technologies": [
+    { "name": "React", "logo": "/images/tech/react.svg" },
+    { "name": "Next.js", "logo": "/images/tech/nextjs.svg" },
+    { "name": "TypeScript", "logo": "/images/tech/typescript.svg" },
+    { "name": "Node.js", "logo": "/images/tech/nodejs.svg" },
+    { "name": "Tailwind CSS", "logo": "/images/tech/tailwind.svg" }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Needs Assessment",
+      "description": "Understanding your organization's challenges and goals",
+      "icon": "clipboard-document-list"
+    },
+    {
+      "step": 2,
+      "title": "Solution Design",
+      "description": "Creating a tailored consulting or training program",
+      "icon": "pencil-square"
+    },
+    {
+      "step": 3,
+      "title": "Knowledge Transfer",
+      "description": "Delivering expertise through workshops, mentoring, or documentation",
+      "icon": "academic-cap"
+    },
+    {
+      "step": 4,
+      "title": "Implementation Support",
+      "description": "Providing guidance during practical application",
+      "icon": "hand-raised"
+    },
+    {
+      "step": 5,
+      "title": "Progress Assessment",
+      "description": "Evaluating outcomes and adjusting approaches as needed",
+      "icon": "chart-bar"
+    },
+    {
+      "step": 6,
+      "title": "Ongoing Support",
+      "description": "Continued guidance to ensure long-term success",
+      "icon": "lifebuoy"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Enhanced Team Capabilities",
+      "description": "Build internal expertise and reduce dependency on external resources",
+      "icon": "user-plus"
+    },
+    {
+      "title": "Accelerated Innovation",
+      "description": "Implement new technologies and methodologies more quickly",
+      "icon": "rocket"
+    },
+    {
+      "title": "Risk Reduction",
+      "description": "Avoid common pitfalls with expert guidance",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Knowledge Retention",
+      "description": "Ensure critical skills and information remain within your organization",
+      "icon": "brain"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What types of training do you offer?",
+      "answer": "We offer a range of training formats including interactive workshops, hands-on coding sessions, mentoring programs, and self-paced learning materials. Our training covers technical topics (React, Next.js, TypeScript, etc.), methodologies (Agile, DevOps), and soft skills for digital teams."
+    },
+    {
+      "question": "How is your consulting approach different?",
+      "answer": "Our consulting focuses on knowledge transfer and building internal capabilities, not creating dependency. We work collaboratively with your team, sharing our expertise while ensuring your organization develops the skills to succeed independently in the long term."
+    },
+    {
+      "question": "Can you customize training for our specific needs?",
+      "answer": "Absolutely. We tailor all training programs to your team's current skill level, specific technologies, and business context. We can use your actual projects as training examples to make the learning immediately applicable to your work."
+    },
+    {
+      "question": "How long do consulting engagements typically last?",
+      "answer": "Engagements vary widely based on your needs. We offer everything from short-term assessments (1-2 weeks) to embedded consulting (3-6 months) and ongoing advisory relationships. We're flexible and can adjust our involvement as your needs evolve."
+    }
+  ],
+  "casestudies": [
+    {
+      "title": "Development Team Upskilling",
+      "description": "Transformed a traditional development team into a modern React/Next.js powerhouse",
+      "image": "/images/case-studies/team-training.jpg",
+      "client": "Enterprise Software Company",
+      "industry": "Technology"
+    },
+    {
+      "title": "Digital Transformation Strategy",
+      "description": "Guided executive team through technology selection and implementation roadmap",
+      "image": "/images/case-studies/digital-strategy.jpg",
+      "client": "Traditional Retailer",
+      "industry": "Retail"
+    }
+  ],
+  "relatedExpertise": ["documentation", "maintenance", "website"],
+  "cta": {
+    "title": "Ready to build your team's capabilities?",
+    "description": "Let's discuss how our consulting and training services can help your organization thrive in the digital landscape.",
+    "buttonText": "Explore Consulting & Training",
+    "buttonLink": "/digital-project?service=consulting-training"
+  }
+}

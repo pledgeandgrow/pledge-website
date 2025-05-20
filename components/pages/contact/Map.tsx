@@ -17,14 +17,14 @@ export default function Map() {
             Our Location
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl">
-            Visit us at our office in San Francisco, California.
+            Visit us at our office: 16 Rue Théroigne de Méricourt, 75013 Paris.
           </p>
         </div>
         
         <div className="rounded-lg overflow-hidden shadow-md border border-border animate-fade-in h-[400px] w-full">
           {isMounted && (
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0968143526147!2d-122.41941492393559!3d37.77492997197701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1682532597276!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.7999017871055!2d2.3651747!3d48.8327318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6723f12a8b569%3A0xc27c7c572daa7d86!2s16%20Rue%20Th%C3%A9roigne%20de%20M%C3%A9ricourt%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1716386800000!5m2!1sfr!2sfr"
               width="100%"
               height="100%"
               style={{ border: 0 }}

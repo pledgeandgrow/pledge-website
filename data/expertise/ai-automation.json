@@ -1,0 +1,139 @@
+{
+  "id": "ai-solutions",
+  "slug": "ai-solutions",
+  "title": "AI Solutions",
+  "subtitle": "Transform your business with intelligent automation and insights",
+  "description": "We develop custom artificial intelligence solutions that help businesses automate processes, gain deeper insights, and create more personalized customer experiences. Our AI implementations are practical, ethical, and designed to deliver measurable business value.",
+  "heroImage": "/images/expertise/ai-solutions-hero.jpg",
+  "category": "Innovation",
+  "features": [
+    {
+      "title": "Machine Learning Models",
+      "description": "Custom algorithms that learn from your data",
+      "icon": "cpu"
+    },
+    {
+      "title": "Natural Language Processing",
+      "description": "Systems that understand and generate human language",
+      "icon": "chat-bubble-left-right"
+    },
+    {
+      "title": "Computer Vision",
+      "description": "Applications that can analyze and interpret visual information",
+      "icon": "eye"
+    },
+    {
+      "title": "Predictive Analytics",
+      "description": "Forecasting tools that anticipate future trends",
+      "icon": "chart-bar"
+    }
+  ],
+  "technologies": [
+    { "name": "TensorFlow", "logo": "/images/tech/tensorflow.svg" },
+    { "name": "PyTorch", "logo": "/images/tech/pytorch.svg" },
+    { "name": "OpenAI", "logo": "/images/tech/openai.svg" },
+    { "name": "Google Cloud AI", "logo": "/images/tech/google-cloud-ai.svg" },
+    { "name": "AWS SageMaker", "logo": "/images/tech/aws-sagemaker.svg" }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Discovery",
+      "description": "Identifying opportunities where AI can add value",
+      "icon": "light-bulb"
+    },
+    {
+      "step": 2,
+      "title": "Data Assessment",
+      "description": "Evaluating available data and infrastructure requirements",
+      "icon": "database"
+    },
+    {
+      "step": 3,
+      "title": "Solution Design",
+      "description": "Creating the architecture and selecting appropriate AI models",
+      "icon": "pencil-square"
+    },
+    {
+      "step": 4,
+      "title": "Development",
+      "description": "Building and training custom AI models",
+      "icon": "code"
+    },
+    {
+      "step": 5,
+      "title": "Integration",
+      "description": "Connecting AI solutions with your existing systems",
+      "icon": "puzzle-piece"
+    },
+    {
+      "step": 6,
+      "title": "Deployment & Monitoring",
+      "description": "Launching and continuously improving your AI solution",
+      "icon": "rocket"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Enhanced Efficiency",
+      "description": "Automate repetitive tasks and streamline operations",
+      "icon": "clock"
+    },
+    {
+      "title": "Data-Driven Insights",
+      "description": "Uncover patterns and opportunities hidden in your data",
+      "icon": "light-bulb"
+    },
+    {
+      "title": "Personalized Experiences",
+      "description": "Deliver tailored interactions for customers and users",
+      "icon": "user-circle"
+    },
+    {
+      "title": "Competitive Advantage",
+      "description": "Stay ahead with innovative AI-powered capabilities",
+      "icon": "trophy"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Do we need a large amount of data to implement AI?",
+      "answer": "While more data generally leads to better AI models, we can work with various data volumes. For smaller datasets, we can use transfer learning, synthetic data generation, or pre-trained models to achieve good results."
+    },
+    {
+      "question": "How long does it take to develop an AI solution?",
+      "answer": "Timelines vary based on complexity. A basic implementation might take 2-3 months, while more sophisticated solutions can take 6+ months to develop, train, and deploy."
+    },
+    {
+      "question": "How do you ensure AI ethics and transparency?",
+      "answer": "We follow ethical AI principles throughout development, including bias detection, explainability methods, and privacy-preserving techniques. Our solutions are designed to be transparent and accountable."
+    },
+    {
+      "question": "What kind of ROI can we expect from AI implementation?",
+      "answer": "ROI varies by application, but our clients typically see returns through cost savings (20-40% in automated processes), revenue growth (10-30% with personalization), or risk reduction. We'll help define clear success metrics for your specific project."
+    }
+  ],
+  "casestudies": [
+    {
+      "title": "Customer Service AI Assistant",
+      "description": "Reduced support costs by 35% while improving customer satisfaction scores",
+      "image": "/images/case-studies/ai-customer-service.jpg",
+      "client": "Telecommunications Provider",
+      "industry": "Telecom"
+    },
+    {
+      "title": "Predictive Maintenance System",
+      "description": "Decreased equipment downtime by 45% through early failure prediction",
+      "image": "/images/case-studies/predictive-maintenance.jpg",
+      "client": "Manufacturing Company",
+      "industry": "Industrial"
+    }
+  ],
+  "relatedExpertise": ["cloud-services", "data-analytics", "saas"],
+  "cta": {
+    "title": "Ready to harness the power of AI?",
+    "description": "Let's explore how artificial intelligence can solve challenges and create opportunities for your business.",
+    "buttonText": "Start Your AI Project",
+    "buttonLink": "/digital-project?service=ai-solutions"
+  }
+}

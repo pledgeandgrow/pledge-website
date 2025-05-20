@@ -1,0 +1,139 @@
+{
+  "id": "cloud-services",
+  "slug": "cloud-services",
+  "title": "Cloud Services",
+  "subtitle": "Scale your business with secure, flexible cloud infrastructure",
+  "description": "We help businesses migrate to the cloud and build scalable, resilient infrastructure. Our cloud solutions optimize performance, enhance security, and reduce operational costs while providing the flexibility to adapt to changing business needs.",
+  "heroImage": "/images/expertise/cloud-services-hero.jpg",
+  "category": "Infrastructure",
+  "features": [
+    {
+      "title": "Cloud Migration",
+      "description": "Seamless transition from on-premises to cloud environments",
+      "icon": "arrow-up-on-square"
+    },
+    {
+      "title": "Infrastructure as Code",
+      "description": "Automated, consistent deployment of cloud resources",
+      "icon": "code"
+    },
+    {
+      "title": "Serverless Architecture",
+      "description": "Event-driven applications that scale automatically",
+      "icon": "server"
+    },
+    {
+      "title": "DevOps Integration",
+      "description": "Streamlined development and operations workflows",
+      "icon": "arrow-path"
+    }
+  ],
+  "technologies": [
+    { "name": "AWS", "logo": "/images/tech/aws.svg" },
+    { "name": "Microsoft Azure", "logo": "/images/tech/azure.svg" },
+    { "name": "Google Cloud", "logo": "/images/tech/google-cloud.svg" },
+    { "name": "Kubernetes", "logo": "/images/tech/kubernetes.svg" },
+    { "name": "Terraform", "logo": "/images/tech/terraform.svg" }
+  ],
+  "process": [
+    {
+      "step": 1,
+      "title": "Assessment",
+      "description": "Evaluating your current infrastructure and requirements",
+      "icon": "clipboard-document-list"
+    },
+    {
+      "step": 2,
+      "title": "Architecture Design",
+      "description": "Creating a cloud architecture aligned with your goals",
+      "icon": "rectangle-stack"
+    },
+    {
+      "step": 3,
+      "title": "Migration Planning",
+      "description": "Developing a phased approach to minimize disruption",
+      "icon": "map"
+    },
+    {
+      "step": 4,
+      "title": "Implementation",
+      "description": "Building and configuring your cloud environment",
+      "icon": "cog"
+    },
+    {
+      "step": 5,
+      "title": "Testing & Optimization",
+      "description": "Ensuring performance, security, and cost-efficiency",
+      "icon": "beaker"
+    },
+    {
+      "step": 6,
+      "title": "Ongoing Management",
+      "description": "Monitoring, maintaining, and evolving your cloud infrastructure",
+      "icon": "chart-bar"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Scalability",
+      "description": "Easily adjust resources to match changing business demands",
+      "icon": "arrows-pointing-out"
+    },
+    {
+      "title": "Cost Optimization",
+      "description": "Pay only for what you use with reduced capital expenditure",
+      "icon": "currency-dollar"
+    },
+    {
+      "title": "Enhanced Security",
+      "description": "Implement robust security measures and compliance controls",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Business Continuity",
+      "description": "Improve reliability with redundancy and disaster recovery",
+      "icon": "arrow-path"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Which cloud provider is best for our business?",
+      "answer": "The ideal provider depends on your specific needs, existing technology stack, and business requirements. We'll help you evaluate options like AWS, Azure, and Google Cloud to find the best fit for your organization."
+    },
+    {
+      "question": "How secure is cloud computing?",
+      "answer": "Major cloud providers offer robust security features that often exceed what most organizations can implement on-premises. We implement security best practices and compliance controls to ensure your data remains protected."
+    },
+    {
+      "question": "How long does cloud migration take?",
+      "answer": "Migration timelines vary based on complexity. Simple applications might migrate in weeks, while large enterprise environments can take 6-12 months with a phased approach. We'll create a realistic timeline for your specific situation."
+    },
+    {
+      "question": "How can we control cloud costs?",
+      "answer": "We implement cost optimization strategies including right-sizing resources, utilizing reserved instances, implementing auto-scaling, and continuous monitoring to ensure you're getting maximum value from your cloud investment."
+    }
+  ],
+  "casestudies": [
+    {
+      "title": "Enterprise Cloud Migration",
+      "description": "Reduced infrastructure costs by 40% while improving application performance",
+      "image": "/images/case-studies/cloud-migration.jpg",
+      "client": "Financial Services Company",
+      "industry": "Finance"
+    },
+    {
+      "title": "Serverless Application Platform",
+      "description": "Built a scalable architecture handling 10x traffic spikes with no performance degradation",
+      "image": "/images/case-studies/serverless.jpg",
+      "client": "Media Publishing Company",
+      "industry": "Media"
+    }
+  ],
+  "relatedExpertise": ["ai-solutions", "saas", "website"],
+  "cta": {
+    "title": "Ready to transform your infrastructure?",
+    "description": "Let's build a cloud solution that gives your business the agility and scalability it needs to thrive.",
+    "buttonText": "Start Your Cloud Project",
+    "buttonLink": "/digital-project?service=cloud-services"
+  }
+}

@@ -12,13 +12,12 @@ import {
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
 export const metadata: Metadata = {
-  title: "UX/UI Design | Pledge & Grow",
-  description: "Create intuitive, engaging user experiences with our UX/UI design expertise. We help you design interfaces that delight users and drive conversions.",
+  title: "Search Engine Optimization (SEO) | Pledge & Grow",
+  description: "Improve your online visibility and drive organic traffic with our comprehensive SEO services. We help businesses rank higher in search results and reach their target audience.",
 };
 
-export default function UXUIDesignExpertisePage() {
-  // Using the ux-ui-design.json data for the design-ux-ix page
-  const expertise = getExpertiseBySlug('ux-ui-design');
+export default function SEOExpertisePage() {
+  const expertise = getExpertiseBySlug('seo');
   
   if (!expertise) {
     return <div>Expertise not found</div>;
@@ -29,16 +28,16 @@ export default function UXUIDesignExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Design Features"
-        subtitle="Creating intuitive and engaging user experiences"
+        title="Key SEO Services"
+        subtitle="Comprehensive optimization strategies for better visibility"
       />
       
       {/* Technologies Section */}
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="Design Tools & Technologies"
-          subtitle="Modern solutions for effective interface design"
+          title="SEO Tools & Technologies"
+          subtitle="Advanced tools for effective search optimization"
         />
       )}
       
@@ -46,16 +45,16 @@ export default function UXUIDesignExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Design Process"
-          subtitle="How we create user-centered interfaces"
+          title="Our SEO Process"
+          subtitle="How we improve your search rankings"
         />
       )}
       
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Professional UX/UI Design"
-        subtitle="Why thoughtful design matters"
+        title="Benefits of Professional SEO"
+        subtitle="Why search optimization matters for your business"
       />
       
       {/* FAQs Section */}
@@ -63,7 +62,7 @@ export default function UXUIDesignExpertisePage() {
         <ExpertiseFAQ 
           faqs={expertise.faqs}
           title="Frequently Asked Questions"
-          subtitle="Common questions about UX/UI design"
+          subtitle="Common questions about SEO services"
         />
       )}
       
@@ -71,8 +70,8 @@ export default function UXUIDesignExpertisePage() {
       {expertise.casestudies && (
         <ExpertiseCaseStudies 
           cases={expertise.casestudies}
-          title="Design Success Stories"
-          subtitle="Real design solutions for real products"
+          title="Success Stories"
+          subtitle="Real results from our SEO strategies"
         />
       )}
     </ExpertiseLayout>
