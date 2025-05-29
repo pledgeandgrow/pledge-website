@@ -4,9 +4,7 @@ import {
   ExpertiseLayout, 
   ExpertiseFeatures, 
   ExpertiseTechnologies, 
-  ExpertiseProcess,
-  ExpertiseBenefits,
-  ExpertiseFAQ
+  ExpertiseBenefits
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -40,15 +38,6 @@ export default function WebsiteExpertisePage() {
         />
       )}
       
-      {/* Process Section */}
-      {expertise.process && (
-        <ExpertiseProcess 
-          process={expertise.process}
-          title="Our Process"
-          subtitle="How we bring your website to life"
-        />
-      )}
-      
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
@@ -56,14 +45,7 @@ export default function WebsiteExpertisePage() {
         subtitle="Why invest in a custom website"
       />
       
-      {/* FAQs Section */}
-      {expertise.faqs && (
-        <ExpertiseFAQ 
-          faqs={expertise.faqs}
-          title="Frequently Asked Questions"
-          subtitle="Common questions about website development"
-        />
-      )}
+
       
 
     </ExpertiseLayout>

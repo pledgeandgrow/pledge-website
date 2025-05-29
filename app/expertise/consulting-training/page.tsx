@@ -4,9 +4,7 @@ import {
   ExpertiseLayout, 
   ExpertiseFeatures, 
   ExpertiseTechnologies, 
-  ExpertiseProcess,
-  ExpertiseBenefits,
-  ExpertiseFAQ
+  ExpertiseBenefits
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -40,15 +38,6 @@ export default function ConsultingTrainingExpertisePage() {
         />
       )}
       
-      {/* Process Section */}
-      {expertise.process && (
-        <ExpertiseProcess 
-          process={expertise.process}
-          title="Our Process"
-          subtitle="How we transfer knowledge and expertise"
-        />
-      )}
-      
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
@@ -56,14 +45,6 @@ export default function ConsultingTrainingExpertisePage() {
         subtitle="Why investing in your team's capabilities matters"
       />
       
-      {/* FAQs Section */}
-      {expertise.faqs && (
-        <ExpertiseFAQ 
-          faqs={expertise.faqs}
-          title="Frequently Asked Questions"
-          subtitle="Common questions about our consulting and training services"
-        />
-      )}
     </ExpertiseLayout>
   );
 }

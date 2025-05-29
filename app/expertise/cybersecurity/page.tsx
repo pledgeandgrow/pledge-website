@@ -4,9 +4,7 @@ import {
   ExpertiseLayout, 
   ExpertiseFeatures, 
   ExpertiseTechnologies, 
-  ExpertiseProcess,
-  ExpertiseBenefits,
-  ExpertiseFAQ
+  ExpertiseBenefits
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -31,31 +29,12 @@ export default function CybersecurityExpertisePage() {
         subtitle="Comprehensive protection for your digital assets"
       />
       
-      {/* Process Section */}
-      {expertise.process && (
-        <ExpertiseProcess 
-          process={expertise.process}
-          title="Our Process"
-          subtitle="How we secure your business"
-        />
-      )}
-      
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
         title="Benefits"
         subtitle="Why investing in security matters"
       />
-      
-      {/* FAQs Section */}
-      {expertise.faqs && (
-        <ExpertiseFAQ 
-          faqs={expertise.faqs}
-          title="Frequently Asked Questions"
-          subtitle="Common questions about cybersecurity"
-        />
-      )}
     </ExpertiseLayout>
   );
 }
-

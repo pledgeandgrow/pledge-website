@@ -4,9 +4,7 @@ import {
   ExpertiseLayout, 
   ExpertiseFeatures, 
   ExpertiseTechnologies, 
-  ExpertiseProcess,
-  ExpertiseBenefits,
-  ExpertiseFAQ
+  ExpertiseBenefits
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -40,15 +38,6 @@ export default function VideoGamesExpertisePage() {
         />
       )}
       
-      {/* Process Section */}
-      {expertise.process && (
-        <ExpertiseProcess 
-          process={expertise.process}
-          title="Our Process"
-          subtitle="How we bring your game concept to life"
-        />
-      )}
-      
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
@@ -56,14 +45,7 @@ export default function VideoGamesExpertisePage() {
         subtitle="Why partner with experts for your game project"
       />
       
-      {/* FAQs Section */}
-      {expertise.faqs && (
-        <ExpertiseFAQ 
-          faqs={expertise.faqs}
-          title="Frequently Asked Questions"
-          subtitle="Common questions about game development"
-        />
-      )}
+
     </ExpertiseLayout>
   );
 }

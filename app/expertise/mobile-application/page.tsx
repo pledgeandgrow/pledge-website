@@ -4,9 +4,7 @@ import {
   ExpertiseLayout, 
   ExpertiseFeatures, 
   ExpertiseTechnologies, 
-  ExpertiseProcess,
-  ExpertiseBenefits,
-  ExpertiseFAQ
+  ExpertiseBenefits
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -40,15 +38,6 @@ export default function MobileAppExpertisePage() {
         />
       )}
       
-      {/* Process Section */}
-      {expertise.process && (
-        <ExpertiseProcess 
-          process={expertise.process}
-          title="Our Process"
-          subtitle="How we bring your mobile app vision to life"
-        />
-      )}
-      
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
@@ -56,14 +45,7 @@ export default function MobileAppExpertisePage() {
         subtitle="Why your business needs a mobile presence"
       />
       
-      {/* FAQs Section */}
-      {expertise.faqs && (
-        <ExpertiseFAQ 
-          faqs={expertise.faqs}
-          title="Frequently Asked Questions"
-          subtitle="Common questions about mobile app development"
-        />
-      )}
+
     </ExpertiseLayout>
   );
 }
