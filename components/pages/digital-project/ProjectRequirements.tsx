@@ -1,6 +1,6 @@
 "use client";
 
-
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
   Card, 
@@ -8,7 +8,8 @@ import {
   CardHeader, 
   CardTitle 
 } from "@/components/ui/card";
-import { Check, Info } from "lucide-react";
+import { Check, Info, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface CollaborationRequirement {
@@ -101,6 +102,32 @@ const clientProvisions = [
 ];
 
 export default function ProjectRequirements() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if we're on mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Set initial value
+    checkMobile();
+    
+    // Add event listener
+    window.addEventListener('resize', checkMobile);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const handlePrevious = () => {
+    setCurrentIndex((prev) => Math.max(0, prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => Math.min(collaborationRequirements.length - 1, prev + 1));
+  };
   return (
     <section className="py-16 bg-background dark:bg-background">
       <div className="container mx-auto px-4">
@@ -111,7 +138,8 @@ export default function ProjectRequirements() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {/* Desktop Grid View */}
+        <div className={`${!isMobile ? 'grid' : 'hidden'} grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16`}>
           {collaborationRequirements.map((req, index) => (
             <motion.div
               key={req.id}
@@ -133,6 +161,68 @@ export default function ProjectRequirements() {
             </motion.div>
           ))}
         </div>
+
+        {/* Mobile Carousel View */}
+        {isMobile && (
+          <div className="relative max-w-md mx-auto mb-16">
+            {/* Navigation Buttons */}
+            <div className="absolute top-1/2 -left-4 -translate-y-1/2 z-10">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="rounded-full bg-background shadow-md"
+                onClick={handlePrevious}
+                disabled={currentIndex === 0}
+              >
+                <ChevronLeft className="h-5 w-5" />
+                <span className="sr-only">Previous</span>
+              </Button>
+            </div>
+
+            <div className="absolute top-1/2 -right-4 -translate-y-1/2 z-10">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="rounded-full bg-background shadow-md"
+                onClick={handleNext}
+                disabled={currentIndex >= collaborationRequirements.length - 1}
+              >
+                <ChevronRight className="h-5 w-5" />
+                <span className="sr-only">Next</span>
+              </Button>
+            </div>
+
+            {/* Single card display */}
+            <div className="px-4 transition-all duration-300">
+              <Card className="h-full">
+                <CardHeader className="flex flex-row items-center gap-4">
+                  <div className="bg-primary/10 p-2 rounded-full">
+                    {collaborationRequirements[currentIndex].icon}
+                  </div>
+                  <CardTitle className="text-xl">{collaborationRequirements[currentIndex].title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{collaborationRequirements[currentIndex].description}</p>
+                  <div className="mt-4 text-center text-primary font-medium">
+                    {currentIndex + 1} of {collaborationRequirements.length}
+                  </div>
+                </CardContent>
+              </Card>
+              
+              {/* Pagination dots */}
+              <div className="flex justify-center mt-4 space-x-2">
+                {collaborationRequirements.map((_, idx) => (
+                  <button 
+                    key={idx}
+                    className={`w-2 h-2 rounded-full ${idx === currentIndex ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'}`}
+                    onClick={() => setCurrentIndex(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
         
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-2 mb-6">

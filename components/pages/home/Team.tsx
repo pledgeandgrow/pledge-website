@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Twitter, ChevronLeft, ChevronRight } from "lucide-react";
+import { Linkedin, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -40,9 +40,7 @@ export default function Team() {
       bio: "With extensive experience in business leadership, Mehdi drives the strategic vision and growth of our company.",
 
       social: {
-        linkedin: "https://linkedin.com/in/mehdi-berel",
-        twitter: "https://twitter.com/mehdi-berel",
-        github: "https://github.com/mehdi-berel"
+        linkedin: "https://linkedin.com/in/mehdi-berel"
       }
     },
     {
@@ -52,9 +50,7 @@ export default function Team() {
       bio: "Shihab brings innovative thinking and technical expertise to our leadership team, focusing on product development.",
 
       social: {
-        linkedin: "https://linkedin.com/in/shihab-berel",
-        twitter: "https://twitter.com/shihab-berel",
-        github: "https://github.com/shihab-berel"
+        linkedin: "https://linkedin.com/in/shihab-berel"
       }
     },
     {
@@ -64,9 +60,7 @@ export default function Team() {
       bio: "Ilyas oversees operations and client relationships, ensuring we deliver exceptional value and service.",
 
       social: {
-        linkedin: "https://linkedin.com/in/ilyas-berel",
-        twitter: "https://twitter.com/ilyas-berel",
-        github: "https://github.com/ilyas-berel"
+        linkedin: "https://linkedin.com/in/ilyas-berel"
       }
     }
   ];
@@ -99,12 +93,6 @@ export default function Team() {
                 <div className="flex space-x-3">
                   <Link href={member.social.linkedin} className="text-muted-foreground hover:text-primary transition-colors">
                     <Linkedin className="h-5 w-5" />
-                  </Link>
-                  <Link href={member.social.twitter} className="text-muted-foreground hover:text-primary transition-colors">
-                    <Twitter className="h-5 w-5" />
-                  </Link>
-                  <Link href={member.social.github} className="text-muted-foreground hover:text-primary transition-colors">
-                    <Github className="h-5 w-5" />
                   </Link>
               </div>
               </div>
@@ -156,12 +144,6 @@ export default function Team() {
                   <div className="flex space-x-3">
                     <Link href={teamMembers[currentIndex].social.linkedin} className="text-muted-foreground hover:text-primary transition-colors">
                       <Linkedin className="h-5 w-5" />
-                    </Link>
-                    <Link href={teamMembers[currentIndex].social.twitter} className="text-muted-foreground hover:text-primary transition-colors">
-                      <Twitter className="h-5 w-5" />
-                    </Link>
-                    <Link href={teamMembers[currentIndex].social.github} className="text-muted-foreground hover:text-primary transition-colors">
-                      <Github className="h-5 w-5" />
                     </Link>
                   </div>
                 </div>

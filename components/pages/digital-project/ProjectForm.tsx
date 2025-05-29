@@ -1,7 +1,7 @@
 "use client";
 
 // Imports
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -137,6 +137,7 @@ const formSteps = [
 
 export default function ProjectForm() {
   const [currentStep, setCurrentStep] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const [formData, setFormData] = useState({
     projectType: "",
     projectName: "",
@@ -153,6 +154,22 @@ export default function ProjectForm() {
     phone: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  // Check if we're on mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Set initial value
+    checkMobile();
+    
+    // Add event listener
+    window.addEventListener('resize', checkMobile);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   // Create form instances for each step
   const projectTypeForm = useForm<z.infer<typeof projectTypeSchema>>({
@@ -302,39 +319,51 @@ export default function ProjectForm() {
   const progress = ((currentStep) / (formSteps.length - 1)) * 100;
   
   return (
-    <section id="project-form" className="py-16 bg-background dark:bg-background">
+    <section id="project-form" className="py-10 md:py-16 bg-background dark:bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Start Your Project</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3 md:mb-4">Start Your Project</h2>
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
             Fill out this form to help us understand your project needs and provide you with an accurate estimate.
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
           {/* Progress bar */}
-          <div className="mb-8">
+          <div className="mb-6 md:mb-8">
             <Progress value={progress} className="h-2" />
-            <div className="flex justify-between mt-2">
-              {formSteps.map((step, index) => (
-                <div
-                  key={step.id}
-                  className={`flex flex-col items-center ${index <= currentStep ? 'text-primary' : 'text-muted-foreground'}`}
-                >
-                  {step.icon}
-                  <span className="text-xs mt-1">{step.title}</span>
+            {isMobile ? (
+              <div className="flex justify-between mt-2">
+                <div className="flex items-center text-primary">
+                  {formSteps[currentStep].icon}
+                  <span className="text-xs ml-1">{formSteps[currentStep].title}</span>
                 </div>
-              ))}
-            </div>
+                <span className="text-xs text-muted-foreground">
+                  Step {currentStep + 1} of {formSteps.length}
+                </span>
+              </div>
+            ) : (
+              <div className="flex justify-between mt-2">
+                {formSteps.map((step, index) => (
+                  <div
+                    key={step.id}
+                    className={`flex flex-col items-center ${index <= currentStep ? 'text-primary' : 'text-muted-foreground'}`}
+                  >
+                    {step.icon}
+                    <span className="text-xs mt-1">{step.title}</span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           <Card className="w-full">
-            <CardHeader>
-              <CardTitle>{formSteps[currentStep].title}</CardTitle>
-              <CardDescription>{formSteps[currentStep].description}</CardDescription>
+            <CardHeader className="px-4 md:px-6 py-4 md:py-6">
+              <CardTitle className="text-xl md:text-2xl">{formSteps[currentStep].title}</CardTitle>
+              <CardDescription className="text-sm md:text-base">{formSteps[currentStep].description}</CardDescription>
             </CardHeader>
 
-            <CardContent>
+            <CardContent className="px-4 md:px-6 py-2 md:py-4">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={currentStep}
@@ -351,7 +380,7 @@ export default function ProjectForm() {
                           name="projectType"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel>Project Type</FormLabel>
+                              <FormLabel className="text-sm md:text-base">Project Type</FormLabel>
                               <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
                                   <SelectTrigger>
@@ -382,7 +411,7 @@ export default function ProjectForm() {
                             name="projectName"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Project Name</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Project Name</FormLabel>
                                 <FormControl>
                                   <Input placeholder="Enter project name" {...field} />
                                 </FormControl>
@@ -395,7 +424,7 @@ export default function ProjectForm() {
                             name="projectDescription"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Project Description</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Project Description</FormLabel>
                                 <FormControl>
                                   <Textarea placeholder="Describe your project in detail" {...field} />
                                 </FormControl>
@@ -408,7 +437,7 @@ export default function ProjectForm() {
                             name="targetAudience"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Target Audience</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Target Audience</FormLabel>
                                 <FormControl>
                                   <Input placeholder="Who is this project for?" {...field} />
                                 </FormControl>
@@ -431,7 +460,7 @@ export default function ProjectForm() {
                             name="startDate"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Start Date</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Start Date</FormLabel>
                                 <FormControl>
                                   <Input type="date" {...field} className="w-full" />
                                 </FormControl>
@@ -444,7 +473,7 @@ export default function ProjectForm() {
                             name="deadline"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Deadline (Optional)</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Deadline (Optional)</FormLabel>
                                 <FormControl>
                                   <Input type="date" {...field} className="w-full" />
                                 </FormControl>
@@ -457,7 +486,7 @@ export default function ProjectForm() {
                             name="flexibility"
                             render={({ field }) => (
                               <FormItem className="space-y-3">
-                                <FormLabel>Timeline Flexibility</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Timeline Flexibility</FormLabel>
                                 <FormControl>
                                   <RadioGroup
                                     onValueChange={field.onChange}
@@ -509,7 +538,7 @@ export default function ProjectForm() {
                             name="budgetRange"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Budget Range</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Budget Range</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                   <FormControl>
                                     <SelectTrigger>
@@ -533,7 +562,7 @@ export default function ProjectForm() {
                             name="budgetAmount"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Specific Budget Amount (Optional)</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Specific Budget Amount (Optional)</FormLabel>
                                 <FormControl>
                                   <Input 
                                     type="number" 
@@ -553,7 +582,7 @@ export default function ProjectForm() {
                             name="paymentPreference"
                             render={({ field }) => (
                               <FormItem className="space-y-3">
-                                <FormLabel>Payment Preference</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Payment Preference</FormLabel>
                                 <FormControl>
                                   <RadioGroup
                                     onValueChange={field.onChange}
@@ -604,7 +633,7 @@ export default function ProjectForm() {
                             name="name"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Full Name</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Full Name</FormLabel>
                                 <FormControl>
                                   <Input placeholder="Enter your full name" {...field} />
                                 </FormControl>
@@ -618,7 +647,7 @@ export default function ProjectForm() {
                             name="email"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Email Address</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Email Address</FormLabel>
                                 <FormControl>
                                   <Input 
                                     type="email" 
@@ -636,7 +665,7 @@ export default function ProjectForm() {
                             name="company"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Company (Optional)</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Company (Optional)</FormLabel>
                                 <FormControl>
                                   <Input 
                                     placeholder="Enter your company name" 
@@ -653,7 +682,7 @@ export default function ProjectForm() {
                             name="phone"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel>Phone Number (Optional)</FormLabel>
+                                <FormLabel className="text-sm md:text-base">Phone Number (Optional)</FormLabel>
                                 <FormControl>
                                   <Input 
                                     type="tel" 
@@ -673,32 +702,44 @@ export default function ProjectForm() {
               </AnimatePresence>
             </CardContent>
 
-            <CardFooter className="flex justify-between">
+            <CardFooter className="flex justify-between px-4 md:px-6 py-4 md:py-6 flex-wrap gap-2">
               {currentStep > 0 && (
                 <Button
                   type="button"
                   variant="outline"
                   onClick={prevStep}
+                  className={isMobile ? "text-sm py-2 h-9" : ""}
+                  size={isMobile ? "sm" : "default"}
                 >
-                  <ArrowLeft className="mr-2 h-4 w-4" /> Previous
+                  <ArrowLeft className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4" /> {isMobile ? "Back" : "Previous"}
                 </Button>
               )}
 
               {currentStep < formSteps.length - 1 ? (
-                <Button type="button" onClick={nextStep} className="ml-auto">
-                  Next <ArrowRight className="ml-2 h-4 w-4" />
+                <Button 
+                  type="button" 
+                  onClick={nextStep} 
+                  className={`${currentStep > 0 ? "ml-auto" : "w-full md:w-auto"} ${isMobile ? "text-sm py-2 h-9" : ""}`}
+                  size={isMobile ? "sm" : "default"}
+                >
+                  Next <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
                 </Button>
               ) : (
-                <Button onClick={submitForm} disabled={isSubmitting} className="ml-auto">
+                <Button 
+                  onClick={submitForm} 
+                  disabled={isSubmitting} 
+                  className={`${currentStep > 0 ? "ml-auto" : "w-full md:w-auto"} ${isMobile ? "text-sm py-2 h-9" : ""}`}
+                  size={isMobile ? "sm" : "default"}
+                >
                   {isSubmitting ? (
                     <>
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      Submitting...
+                      <Loader2 className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4 animate-spin" />
+                      {isMobile ? "Sending..." : "Submitting..."}
                     </>
                   ) : (
                     <>
-                      <Send className="mr-2 h-4 w-4" />
-                      Submit Project
+                      <Send className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4" />
+                      {isMobile ? "Submit" : "Submit Project"}
                     </>
                   )}
                 </Button>
