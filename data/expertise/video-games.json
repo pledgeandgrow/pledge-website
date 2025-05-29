@@ -33,7 +33,9 @@
     { "name": "Unreal Engine", "logo": "/images/tech/unreal.svg" },
     { "name": "Godot", "logo": "/images/tech/godot.svg" },
     { "name": "Blender", "logo": "/images/tech/blender.svg" },
-    { "name": "PlayFab", "logo": "/images/tech/playfab.svg" }
+    { "name": "Lua", "logo": "/images/tech/lua.svg" },
+    { "name": "C#", "logo": "/images/tech/csharp.svg" },
+    { "name": "Java", "logo": "/images/tech/java.svg" }
   ],
   "process": [
     {

@@ -29,11 +29,11 @@
     }
   ],
   "technologies": [
-    { "name": "Node.js", "logo": "/images/tech/nodejs.svg" },
+    { "name": "C++", "logo": "/images/tech/cpp.svg" },
     { "name": "Python", "logo": "/images/tech/python.svg" },
     { "name": "Java", "logo": "/images/tech/java.svg" },
-    { "name": ".NET", "logo": "/images/tech/dotnet.svg" },
-    { "name": "PostgreSQL", "logo": "/images/tech/postgresql.svg" }
+    { "name": "C#", "logo": "/images/tech/csharp.svg" },
+    { "name": "C", "logo": "/images/tech/c.svg" }
   ],
   "process": [
     {

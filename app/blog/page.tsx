@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { 
-  BlogFeatured,
   BlogNewsletter,
   BlogList
 } from '@/components/pages/blog';
@@ -25,7 +24,6 @@ export default function BlogPage() {
     <>
       <Navbar />
       <main className="flex-grow pt-16">
-        <BlogFeatured />
         <BlogList />
         <BlogNewsletter />
       </main>

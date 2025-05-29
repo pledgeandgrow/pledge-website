@@ -31,7 +31,8 @@
   "technologies": [
     { "name": "Shopify", "logo": "/images/tech/shopify.svg" },
     { "name": "WooCommerce", "logo": "/images/tech/woocommerce.svg" },
-    { "name": "Magento", "logo": "/images/tech/magento.svg" },
+    { "name": "Squarespace", "logo": "/images/tech/squarespace.svg" },
+    { "name": "Webflow", "logo": "/images/tech/webflow.svg" },
     { "name": "Next.js", "logo": "/images/tech/nextjs.svg" },
     { "name": "Stripe", "logo": "/images/tech/stripe.svg" }
   ],

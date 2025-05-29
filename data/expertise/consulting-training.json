@@ -29,11 +29,11 @@
     }
   ],
   "technologies": [
-    { "name": "React", "logo": "/images/tech/react.svg" },
-    { "name": "Next.js", "logo": "/images/tech/nextjs.svg" },
-    { "name": "TypeScript", "logo": "/images/tech/typescript.svg" },
-    { "name": "Node.js", "logo": "/images/tech/nodejs.svg" },
-    { "name": "Tailwind CSS", "logo": "/images/tech/tailwind.svg" }
+    { "name": "Jira", "logo": "/images/tech/jira.svg" },
+    { "name": "Google Suite", "logo": "/images/tech/google-suite.svg" },
+    { "name": "Discord", "logo": "/images/tech/discord.svg" },
+    { "name": "WhatsApp", "logo": "/images/tech/whatsapp.svg" },
+    { "name": "Microsoft Suite", "logo": "/images/tech/microsoft-suite.svg" }
   ],
   "process": [
     {

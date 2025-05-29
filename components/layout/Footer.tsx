@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { Phone, Mail, MapPin, ChevronDown, Instagram, Facebook, Youtube, MessageCircle } from "lucide-react";
 import { FaTiktok } from "react-icons/fa";
-import { FaXTwitter, FaDiscord } from "react-icons/fa6";
+import { FaDiscord } from "react-icons/fa6";
 
 export default function Footer() {
   const { theme, resolvedTheme } = useTheme();
@@ -248,9 +248,6 @@ export default function Footer() {
             </a>
             <a href="https://www.tiktok.com/@pledgeandgrowfr" className="text-gray-500 hover:text-gray-900 dark:hover:text-white" aria-label="TikTok">
               <FaTiktok className="w-4 h-4" />
-            </a>
-            <a href="https://x.com/PledgeandGrow" className="text-gray-500 hover:text-gray-900 dark:hover:text-white" aria-label="X">
-              <FaXTwitter className="w-4 h-4" />
             </a>
             <a href="https://www.facebook.com/100095753672290/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white" aria-label="Facebook">
               <Facebook className="w-4 h-4" />

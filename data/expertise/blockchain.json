@@ -29,11 +29,11 @@
     }
   ],
   "technologies": [
-    { "name": "Ethereum", "logo": "/images/tech/ethereum.svg" },
+    { "name": "Rust", "logo": "/images/tech/rust.svg" },
     { "name": "Solidity", "logo": "/images/tech/solidity.svg" },
-    { "name": "Hyperledger", "logo": "/images/tech/hyperledger.svg" },
+    { "name": "Python", "logo": "/images/tech/python.svg" },
     { "name": "Web3.js", "logo": "/images/tech/web3js.svg" },
-    { "name": "IPFS", "logo": "/images/tech/ipfs.svg" }
+    { "name": "Hedera", "logo": "/images/tech/hedera.svg" }
   ],
   "process": [
     {

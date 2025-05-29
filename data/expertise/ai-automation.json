@@ -32,8 +32,8 @@
     { "name": "TensorFlow", "logo": "/images/tech/tensorflow.svg" },
     { "name": "PyTorch", "logo": "/images/tech/pytorch.svg" },
     { "name": "OpenAI", "logo": "/images/tech/openai.svg" },
-    { "name": "Google Cloud AI", "logo": "/images/tech/google-cloud-ai.svg" },
-    { "name": "AWS SageMaker", "logo": "/images/tech/aws-sagemaker.svg" }
+    { "name": "Claude Mistral", "logo": "/images/tech/claude.svg" },
+    { "name": "LLama", "logo": "/images/tech/llama.svg" }
   ],
   "process": [
     {

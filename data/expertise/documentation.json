@@ -29,8 +29,8 @@
     }
   ],
   "technologies": [
-    { "name": "Markdown", "logo": "/images/tech/markdown.svg" },
-    { "name": "Swagger", "logo": "/images/tech/swagger.svg" },
+    { "name": "Notion", "logo": "/images/tech/notion.svg" },
+    { "name": "OneDrive", "logo": "/images/tech/onedrive.svg" },
     { "name": "GitBook", "logo": "/images/tech/gitbook.svg" },
     { "name": "Docusaurus", "logo": "/images/tech/docusaurus.svg" },
     { "name": "Draw.io", "logo": "/images/tech/drawio.svg" }

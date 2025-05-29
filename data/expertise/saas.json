@@ -31,8 +31,8 @@
   "technologies": [
     { "name": "Node.js", "logo": "/images/tech/nodejs.svg" },
     { "name": "React", "logo": "/images/tech/react.svg" },
-    { "name": "AWS", "logo": "/images/tech/aws.svg" },
-    { "name": "MongoDB", "logo": "/images/tech/mongodb.svg" },
+    { "name": "Angular", "logo": "/images/tech/angular.svg" },
+    { "name": "Java Spring", "logo": "/images/tech/spring.svg" },
     { "name": "Docker", "logo": "/images/tech/docker.svg" }
   ],
   "process": [
