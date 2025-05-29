@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -28,7 +27,7 @@ export default function MobileAppExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Features"
+        title="What We Offer"
         subtitle="Everything you need for a successful mobile application"
       />
       
@@ -36,8 +35,8 @@ export default function MobileAppExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="Technologies We Use"
-          subtitle="Modern frameworks for cross-platform mobile development"
+          title="Technologies & Tools"
+          subtitle="Technologies & Tools"
         />
       )}
       
@@ -45,7 +44,7 @@ export default function MobileAppExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Development Process"
+          title="Our Process"
           subtitle="How we bring your mobile app vision to life"
         />
       )}
@@ -53,7 +52,7 @@ export default function MobileAppExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Mobile Applications"
+        title="Benefits"
         subtitle="Why your business needs a mobile presence"
       />
       
@@ -65,15 +64,8 @@ export default function MobileAppExpertisePage() {
           subtitle="Common questions about mobile app development"
         />
       )}
-      
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="Success Stories"
-          subtitle="Real mobile solutions for real clients"
-        />
-      )}
     </ExpertiseLayout>
   );
 }
+
+

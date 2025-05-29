@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
 import { 
-  MediaHero, 
+  MediaHero,
   SocialMediaSection,
-  TVAppearancesSection,
-  PodcastsSection,
-  DigitalPresenceSection,
   MediaCTA
 } from '@/components/pages/media';
 import Navbar from '@/components/layout/Navbar';
@@ -30,9 +27,6 @@ export default function MediaPage() {
       <main className="flex-grow pt-16">
         <MediaHero />
         <SocialMediaSection />
-        <TVAppearancesSection />
-        <PodcastsSection />
-        <DigitalPresenceSection />
         <MediaCTA />
       </main>
       <Footer />

@@ -5,8 +5,6 @@ import {
   MembershipHero, 
   MembershipBenefits,
   MembershipPlans,
-  MembershipTestimonials,
-  MembershipFAQ,
   MembershipCTA
 } from "@/components/pages/membership";
 
@@ -39,8 +37,6 @@ export default function MembershipPage() {
         <MembershipHero />
         <MembershipBenefits />
         <MembershipPlans />
-        <MembershipTestimonials />
-        <MembershipFAQ />
         <MembershipCTA />
       </main>
       <Footer />

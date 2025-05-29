@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -28,7 +27,7 @@ export default function MaintenanceExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Features"
+        title="What We Offer"
         subtitle="Complete maintenance solutions for your applications"
       />
       
@@ -36,8 +35,8 @@ export default function MaintenanceExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="Maintenance Tools & Technologies"
-          subtitle="Modern tools for effective application maintenance"
+          title="Technologies & Tools"
+          subtitle="Technologies & Tools"
         />
       )}
       
@@ -45,7 +44,7 @@ export default function MaintenanceExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Maintenance Process"
+          title="Our Process"
           subtitle="How we keep your applications running smoothly"
         />
       )}
@@ -53,7 +52,7 @@ export default function MaintenanceExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Professional Maintenance"
+        title="Benefits"
         subtitle="Why ongoing maintenance is crucial for your business"
       />
       
@@ -65,15 +64,8 @@ export default function MaintenanceExpertisePage() {
           subtitle="Common questions about application maintenance"
         />
       )}
-      
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="Success Stories"
-          subtitle="Real maintenance solutions for real clients"
-        />
-      )}
     </ExpertiseLayout>
   );
 }
+
+

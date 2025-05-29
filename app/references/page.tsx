@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { 
-  ReferencesHero, 
-  ReferencesList
+  ReferencesList,
 } from '@/components/pages/references';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -24,7 +23,6 @@ export default function ReferencesPage() {
     <>
       <Navbar />
       <main className="flex-grow pt-16">
-        <ReferencesHero />
         <ReferencesList />
       </main>
       <Footer />

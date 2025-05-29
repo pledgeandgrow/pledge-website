@@ -4,9 +4,6 @@ import Footer from "@/components/layout/Footer";
 import { 
   DiscordHero, 
   DiscordBenefits,
-  DiscordChannels,
-  DiscordCommunity,
-  DiscordFAQ,
   DiscordCTA
 } from "@/components/pages/discord";
 
@@ -38,9 +35,6 @@ export default function DiscordPage() {
       <main className="flex-grow pt-16">
         <DiscordHero />
         <DiscordBenefits />
-        <DiscordChannels />
-        <DiscordCommunity />
-        <DiscordFAQ />
         <DiscordCTA />
       </main>
       <Footer />

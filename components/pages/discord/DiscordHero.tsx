@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, MessageSquare } from "lucide-react";
 
 export default function DiscordHero() {
@@ -41,8 +42,15 @@ export default function DiscordHero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="hidden md:block"
           >
-            <div className="relative w-full h-[400px] bg-discord-illustration bg-contain bg-center bg-no-repeat">
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-background/80 rounded-lg"></div>
+            <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border border-border">
+              <Image
+                src="/images/discord/discord.png"
+                alt="Pledge & Grow Discord Community"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-background/80 rounded-2xl"></div>
             </div>
           </motion.div>
         </div>

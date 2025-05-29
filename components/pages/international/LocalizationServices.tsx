@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -7,6 +8,22 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Languages, Globe, FileText, Code } from "lucide-react";
 
 export default function LocalizationServices() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
   const services = [
     {
       title: "Website & App Localization",
@@ -54,13 +71,7 @@ export default function LocalizationServices() {
     }
   ];
 
-  const languages = [
-    "English", "French", "German", "Spanish", "Portuguese", "Italian", 
-    "Dutch", "Russian", "Chinese", "Japanese", "Korean", "Arabic", 
-    "Hindi", "Turkish", "Polish", "Swedish", "Norwegian", "Finnish", 
-    "Danish", "Czech", "Greek", "Hungarian", "Romanian", "Thai", 
-    "Vietnamese", "Indonesian", "Malay", "Hebrew", "Ukrainian"
-  ];
+  // Languages array removed as requested
 
   return (
     <section className="py-16 md:py-24 bg-muted/30">
@@ -81,71 +92,85 @@ export default function LocalizationServices() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full flex flex-col">
-                <CardHeader>
-                  <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                    {service.icon}
+        {/* Mobile Carousel View */}
+        {isMobile && (
+          <div className="mb-10">
+            <div className="overflow-x-auto pb-6">
+              <div className="flex space-x-4 w-max px-4">
+                {services.map((service, index) => (
+                  <div key={index} className="w-[85vw] max-w-[300px] flex-shrink-0">
+                    <Card className="h-full flex flex-col">
+                      <CardHeader>
+                        <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                          {service.icon}
+                        </div>
+                        <CardTitle className="text-xl">{service.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex-grow">
+                        <p className="text-muted-foreground mb-6">{service.description}</p>
+                        <ul className="space-y-2">
+                          {service.features.map((feature, i) => (
+                            <li key={i} className="flex items-start">
+                              <Check className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
+                              <span>{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-start">
-                        <Check className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+                ))}
+              </div>
+              <div className="flex justify-center mt-4">
+                <div className="flex space-x-2">
+                  {services.map((_, index) => (
+                    <div 
+                      key={index} 
+                      className={`h-2 w-2 rounded-full bg-primary/30`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="bg-card border border-border rounded-lg p-8"
-        >
-          <h3 className="text-2xl font-bold mb-6 text-center">Supported Languages</h3>
-          <div className="flex flex-wrap justify-center gap-x-4 gap-y-3 mb-8">
-            {languages.map((language, index) => (
+        {/* Desktop Grid View */}
+        {!isMobile && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {services.map((service, index) => (
               <motion.div
-                key={language}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.02 }}
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="px-3 py-1.5 bg-muted rounded-full text-sm"
               >
-                {language}
+                <Card className="h-full flex flex-col">
+                  <CardHeader>
+                    <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                      {service.icon}
+                    </div>
+                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground mb-6">{service.description}</p>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, i) => (
+                        <li key={i} className="flex items-start">
+                          <Check className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
               </motion.div>
             ))}
           </div>
-          <div className="text-center">
-            <p className="text-muted-foreground mb-6">
-              Don&apos;t see your required language? We can support additional languages upon request.
-            </p>
-            <Button asChild>
-              <Link href="/contact?subject=Localization Services Inquiry">
-                Request a Localization Consultation
-              </Link>
-            </Button>
-          </div>
-        </motion.div>
+        )}
+
+        {/* Supported Languages section removed as requested */}
       </div>
     </section>
   );

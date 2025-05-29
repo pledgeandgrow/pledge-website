@@ -4,8 +4,6 @@ import Footer from "@/components/layout/Footer";
 import { 
   ProgressHero, 
   KeyMilestones,
-  GrowthMetrics,
-  GlobalOffices,
   FutureVision,
   ProgressCTA
 } from "@/components/pages/progress";
@@ -38,8 +36,6 @@ export default function ProgressPage() {
       <main className="flex-grow pt-16">
         <ProgressHero />
         <KeyMilestones />
-        <GrowthMetrics />
-        <GlobalOffices />
         <FutureVision />
         <ProgressCTA />
       </main>

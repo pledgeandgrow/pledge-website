@@ -25,7 +25,7 @@ const complementaryServices: ServiceCard[] = [
     icon: <FileText className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Services de documentation technique et utilisateur",
-      clients: ["Startups", "PME", "Grandes entreprises", "Éditeurs de logiciels"],
+      clients: ["Startups", "SMEs", "Large enterprises", "Software publishers"],
       sectors: ["Technologie", "Santé", "Finance", "Industrie", "Services", "Éducation"],
       recommendedFor: [
         "Produits numériques nécessitant des guides utilisateurs",
@@ -66,7 +66,7 @@ const complementaryServices: ServiceCard[] = [
     icon: <Palette className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Services de conception d'expérience et d'interface utilisateur",
-      clients: ["Startups", "PME", "Grandes entreprises", "Agences"],
+      clients: ["Startups", "SMEs", "Large enterprises", "Agencies"],
       sectors: ["E-commerce", "SaaS", "Finance", "Santé", "Médias", "Services"],
       recommendedFor: [
         "Projets nécessitant une expérience utilisateur optimale",
@@ -103,7 +103,7 @@ const complementaryServices: ServiceCard[] = [
   {
     id: "seo",
     title: "SEO",
-    description: "Services d'optimisation pour les moteurs de recherche pour améliorer votre visibilité en ligne.",
+    description: "Search engine optimization services to improve your online visibility.",
     icon: <Search className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Services d'optimisation pour les moteurs de recherche",
@@ -111,7 +111,7 @@ const complementaryServices: ServiceCard[] = [
       sectors: ["Retail", "Services", "Médias", "Santé", "Éducation", "B2B", "B2C"],
       recommendedFor: [
         "Sites web cherchant à améliorer leur visibilité organique",
-        "Entreprises souhaitant réduire leur dépendance aux publicités payantes",
+        "Businesses wanting to reduce their dependence on paid advertising",
         "Projets nécessitant une stratégie de contenu optimisée",
         "Sites web avec des problèmes techniques affectant le référencement"
       ]
@@ -148,7 +148,7 @@ const complementaryServices: ServiceCard[] = [
     icon: <Wrench className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Services de maintenance et support technique",
-      clients: ["Startups", "PME", "Grandes entreprises", "Organisations"],
+      clients: ["Startups", "SMEs", "Large enterprises", "Organizations"],
       sectors: ["Tous secteurs avec présence numérique"],
       recommendedFor: [
         "Sites web et applications nécessitant des mises à jour régulières",
@@ -185,16 +185,16 @@ const complementaryServices: ServiceCard[] = [
   {
     id: "consulting-training",
     title: "Consulting / Formation",
-    description: "Services de conseil et de formation pour aider votre équipe à maîtriser les technologies numériques.",
+    description: "Consulting and training services to help your team master digital technologies.",
     icon: <GraduationCap className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Services de conseil stratégique et formation technique",
-      clients: ["Startups", "PME", "Grandes entreprises", "Institutions"],
+      clients: ["Startups", "SMEs", "Large enterprises", "Institutions"],
       sectors: ["Technologie", "Finance", "Santé", "Retail", "Industrie", "Services"],
       recommendedFor: [
         "Organisations cherchant à renforcer leurs compétences internes",
         "Équipes nécessitant une montée en compétence technique",
-        "Entreprises en transformation numérique",
+        "Businesses in digital transformation",
         "Projets nécessitant une expertise externe ponctuelle"
       ]
     },

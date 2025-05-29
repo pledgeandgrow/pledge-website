@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { ExternalLink, MapPin, Users, Calendar, ArrowUpRight } from "lucide-react";
+import { ExternalLink, MapPin, Users, Calendar } from "lucide-react";
 import Link from "next/link";
 
 interface Company {
@@ -25,6 +25,22 @@ interface Company {
 
 export default function CompanyShowcase() {
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
   
   const companies: Company[] = [
     {
@@ -49,55 +65,55 @@ export default function CompanyShowcase() {
         "Delivered 100+ successful digital projects",
         "Recognized as a top digital agency in France",
         "Achieved 98% client satisfaction rate",
-        "Developed award-winning mobile applications"
+        "Partnered with leading technology providers"
       ]
     },
     {
       id: "taskmate",
-      name: "TaskMate",
-      logo: "/images/groupe/logo-taskmate.png",
-      category: "Productivity",
-      description: "AI-powered task management and productivity platform for teams and individuals.",
-      longDescription: "TaskMate is our innovative productivity solution that leverages artificial intelligence to help teams and individuals manage tasks more efficiently. The platform intelligently prioritizes tasks, automates routine work, and provides insights to optimize productivity. With features like smart scheduling, collaborative workspaces, and performance analytics, TaskMate transforms how teams organize their work and achieve their goals.",
-      founded: "2021",
-      location: "Paris, France",
-      team: "18 productivity experts",
-      website: "https://taskmate.pledgeandgrow.com",
+      name: "Taskmate",
+      logo: "/images/groupe/logo-fintech.png",
+      category: "Financial Technology",
+      description: "Innovative financial technology solutions for banks, insurance companies, and financial service providers.",
+      longDescription: "Taskmate develops cutting-edge financial technology products that help traditional financial institutions modernize their operations and improve customer experiences. Our team combines deep financial industry knowledge with technical expertise to create secure, compliant, and user-friendly solutions that address the evolving needs of the financial sector.",
+      founded: "2019",
+      location: "London, UK",
+      team: "30+ specialists",
+      website: "https://taskmate.com",
       services: [
-        "AI Task Prioritization",
-        "Team Collaboration Tools",
-        "Productivity Analytics",
-        "Smart Scheduling",
-        "Workflow Automation"
+        "Digital Banking Platforms",
+        "Payment Processing Solutions",
+        "Wealth Management Software",
+        "Regulatory Compliance Tools",
+        "Financial Data Analytics"
       ],
       achievements: [
-        "Used by 50,000+ professionals worldwide",
-        "Increased team productivity by an average of 32%",
-        "Featured in top productivity app rankings",
-        "Processes over 1 million tasks daily"
+        "Processed over €2 billion in transactions",
+        "Reduced operational costs by 30% for clients",
+        "Received innovation award in fintech sector",
+        "Expanded to 5 European markets"
       ]
     },
     {
       id: "verdalize",
       name: "Verdalize",
-      logo: "/images/groupe/logo-verdalize.png",
+      logo: "/images/groupe/logo-greentech.png",
       category: "Sustainability",
-      description: "Sustainability platform helping businesses measure, reduce, and report their environmental impact.",
-      longDescription: "Verdalize provides organizations with the tools and expertise to measure, manage, and communicate their environmental impact. Our platform combines data analytics with sustainability expertise to help businesses track their carbon footprint, identify reduction opportunities, and report on their progress. We enable companies to transform sustainability challenges into competitive advantages while contributing to global environmental goals.",
+      description: "Sustainable technology solutions focused on reducing environmental impact and promoting eco-friendly practices.",
+      longDescription: "GreenTech Innovations creates technology solutions that help businesses reduce their environmental footprint while improving operational efficiency. Our products and services enable organizations to monitor, manage, and minimize resource consumption, waste generation, and carbon emissions, contributing to a more sustainable future.",
       founded: "2020",
-      location: "Lyon, France",
-      team: "22 sustainability specialists",
-      website: "https://verdalize.pledgeandgrow.com",
+      location: "Berlin, Germany",
+      team: "25+ environmental experts",
+      website: "https://greentechinnovations.com",
       services: [
-        "Carbon Footprint Measurement",
-        "Sustainability Reporting",
-        "ESG Data Management",
-        "Green Transition Consulting",
-        "Sustainability Communication"
+        "Carbon Footprint Monitoring",
+        "Sustainable Supply Chain Management",
+        "Energy Efficiency Solutions",
+        "ESG Reporting Tools",
+        "Circular Economy Consulting"
       ],
       achievements: [
-        "Helped reduce over 100,000 tons of CO2 emissions",
-        "Partnered with 75+ companies on sustainability initiatives",
+        "Helped clients reduce carbon emissions by 45%",
+        "Implemented solutions in 50+ organizations",
         "Developed industry-leading carbon accounting methodology",
         "Recognized for innovation in climate tech"
       ]
@@ -122,146 +138,299 @@ export default function CompanyShowcase() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {companies.map((company) => (
-                    <motion.div
-                      key={company.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: 0.1 }}
-                      viewport={{ once: true }}
-                    >
-                      <Card className="h-full flex flex-col overflow-hidden group hover:shadow-md transition-shadow">
-                        <CardHeader className="pb-4">
-                          <div className="flex items-center justify-between">
-                            <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-primary/10 text-primary">
-                              {company.category}
-                            </span>
+        {/* Mobile Carousel View */}
+        {isMobile && (
+          <div className="mb-10">
+            <div className="overflow-x-auto pb-6">
+              <div className="flex space-x-4 w-max px-4">
+                {companies.map((company) => (
+                  <div key={company.id} className="w-[85vw] max-w-[300px] flex-shrink-0">
+                    <Card className="h-full flex flex-col overflow-hidden group hover:shadow-md transition-shadow">
+                      <CardHeader className="pb-4">
+                        <div className="flex items-center justify-between">
+                          <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-primary/10 text-primary">
+                            {company.category}
+                          </span>
+                        </div>
+                        <CardTitle className="text-xl">{company.name}</CardTitle>
+                        <CardDescription className="line-clamp-2">
+                          {company.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="flex-grow">
+                        <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+                          <div className="flex items-center gap-2">
+                            <Calendar className="h-4 w-4 text-primary" />
+                            <span>Founded: {company.founded}</span>
                           </div>
-                          <CardTitle className="text-xl">{company.name}</CardTitle>
-                          <CardDescription className="line-clamp-2">
-                            {company.description}
-                          </CardDescription>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                          <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-                            <div className="flex items-center gap-2">
-                              <Calendar className="h-4 w-4 text-primary" />
-                              <span>Founded: {company.founded}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <MapPin className="h-4 w-4 text-primary" />
-                              <span>{company.location}</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <Users className="h-4 w-4 text-primary" />
-                              <span>{company.team}</span>
-                            </div>
+                          <div className="flex items-center gap-2">
+                            <MapPin className="h-4 w-4 text-primary" />
+                            <span>{company.location}</span>
                           </div>
-                        </CardContent>
-                        <CardFooter className="flex justify-between pt-2">
-                          <Dialog>
-                            <DialogTrigger asChild>
-                              <Button 
-                                variant="ghost" 
-                                onClick={() => setSelectedCompany(company)}
-                              >
-                                Learn More
-                              </Button>
-                            </DialogTrigger>
-                            <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-                              {selectedCompany && (
-                                <>
-                                  <DialogHeader>
-                                    <div>
-                                      <DialogTitle className="text-2xl">{selectedCompany.name}</DialogTitle>
-                                      <DialogDescription className="text-primary">
-                                        {selectedCompany.category}
-                                      </DialogDescription>
-                                    </div>
-                                  </DialogHeader>
+                          <div className="flex items-center gap-2">
+                            <Users className="h-4 w-4 text-primary" />
+                            <span>{company.team}</span>
+                          </div>
+                        </div>
+                      </CardContent>
+                      <CardFooter className="flex justify-between pt-2">
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Button 
+                              variant="ghost" 
+                              onClick={() => setSelectedCompany(company)}
+                            >
+                              Learn More
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+                            {selectedCompany && (
+                              <>
+                                <DialogHeader>
+                                  <div>
+                                    <DialogTitle className="text-2xl">{selectedCompany.name}</DialogTitle>
+                                    <DialogDescription className="text-primary">
+                                      {selectedCompany.category}
+                                    </DialogDescription>
+                                  </div>
+                                </DialogHeader>
+                                
+                                <div className="mt-6 space-y-6">
+                                  <div>
+                                    <h3 className="text-lg font-semibold mb-2">About</h3>
+                                    <p className="text-muted-foreground">
+                                      {selectedCompany.longDescription}
+                                    </p>
+                                  </div>
                                   
-                                  <div className="mt-6 space-y-6">
-                                    <div>
-                                      <h3 className="text-lg font-semibold mb-2">About</h3>
-                                      <p className="text-muted-foreground">
-                                        {selectedCompany.longDescription}
-                                      </p>
+                                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
+                                    <div className="flex flex-col gap-1">
+                                      <span className="text-sm text-muted-foreground">Founded</span>
+                                      <span className="font-medium flex items-center gap-2">
+                                        <Calendar className="h-4 w-4 text-primary" />
+                                        {selectedCompany.founded}
+                                      </span>
                                     </div>
-                                    
-                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
-                                      <div className="flex flex-col gap-1">
-                                        <span className="text-sm text-muted-foreground">Founded</span>
-                                        <span className="font-medium flex items-center gap-2">
-                                          <Calendar className="h-4 w-4 text-primary" />
-                                          {selectedCompany.founded}
-                                        </span>
-                                      </div>
-                                      <div className="flex flex-col gap-1">
-                                        <span className="text-sm text-muted-foreground">Location</span>
-                                        <span className="font-medium flex items-center gap-2">
-                                          <MapPin className="h-4 w-4 text-primary" />
-                                          {selectedCompany.location}
-                                        </span>
-                                      </div>
-                                      <div className="flex flex-col gap-1">
-                                        <span className="text-sm text-muted-foreground">Team</span>
-                                        <span className="font-medium flex items-center gap-2">
-                                          <Users className="h-4 w-4 text-primary" />
-                                          {selectedCompany.team}
-                                        </span>
-                                      </div>
+                                    <div className="flex flex-col gap-1">
+                                      <span className="text-sm text-muted-foreground">Location</span>
+                                      <span className="font-medium flex items-center gap-2">
+                                        <MapPin className="h-4 w-4 text-primary" />
+                                        {selectedCompany.location}
+                                      </span>
                                     </div>
-                                    
-                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                      <div>
-                                        <h3 className="text-lg font-semibold mb-3">Services & Solutions</h3>
-                                        <ul className="space-y-2">
-                                          {selectedCompany.services.map((service, index) => (
-                                            <li key={index} className="flex items-start gap-2">
-                                              <span className="text-primary mt-1">•</span>
-                                              <span>{service}</span>
-                                            </li>
-                                          ))}
-                                        </ul>
-                                      </div>
-                                      
-                                      <div>
-                                        <h3 className="text-lg font-semibold mb-3">Key Achievements</h3>
-                                        <ul className="space-y-2">
-                                          {selectedCompany.achievements.map((achievement, index) => (
-                                            <li key={index} className="flex items-start gap-2">
-                                              <span className="text-primary mt-1">•</span>
-                                              <span>{achievement}</span>
-                                            </li>
-                                          ))}
-                                        </ul>
-                                      </div>
-                                    </div>
-                                    
-                                    <div className="pt-4">
-                                      <Button asChild className="w-full sm:w-auto">
-                                        <Link href={selectedCompany.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                                          Visit Website <ExternalLink className="h-4 w-4" />
-                                        </Link>
-                                      </Button>
+                                    <div className="flex flex-col gap-1">
+                                      <span className="text-sm text-muted-foreground">Team</span>
+                                      <span className="font-medium flex items-center gap-2">
+                                        <Users className="h-4 w-4 text-primary" />
+                                        {selectedCompany.team}
+                                      </span>
                                     </div>
                                   </div>
-                                </>
-                              )}
-                            </DialogContent>
-                          </Dialog>
-                          
-                          <Button variant="outline" size="icon" asChild>
-                            <Link href={company.website} target="_blank" rel="noopener noreferrer">
-                              <ArrowUpRight className="h-4 w-4" />
-                            </Link>
+                                  
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                      <h3 className="text-lg font-semibold mb-3">Services & Solutions</h3>
+                                      <ul className="space-y-2">
+                                        {selectedCompany.services.map((service, index) => (
+                                          <li key={index} className="flex items-start gap-2">
+                                            <span className="text-primary mt-1">•</span>
+                                            <span>{service}</span>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                    
+                                    <div>
+                                      <h3 className="text-lg font-semibold mb-3">Key Achievements</h3>
+                                      <ul className="space-y-2">
+                                        {selectedCompany.achievements.map((achievement, index) => (
+                                          <li key={index} className="flex items-start gap-2">
+                                            <span className="text-primary mt-1">•</span>
+                                            <span>{achievement}</span>
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  
+                                  <div className="pt-4">
+                                    <Button asChild className="w-full sm:w-auto">
+                                      <Link href={selectedCompany.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                                        Visit Website <ExternalLink className="h-4 w-4" />
+                                      </Link>
+                                    </Button>
+                                  </div>
+                                </div>
+                              </>
+                            )}
+                          </DialogContent>
+                        </Dialog>
+                        <Link href={company.website} target="_blank" rel="noopener noreferrer">
+                          <Button variant="ghost" size="icon">
+                            <ExternalLink className="h-4 w-4" />
                           </Button>
-                        </CardFooter>
-                      </Card>
-                    </motion.div>
+                        </Link>
+                      </CardFooter>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+              <div className="flex justify-center mt-4">
+                <div className="flex space-x-2">
+                  {companies.map((_, index) => (
+                    <div 
+                      key={index} 
+                      className={`h-2 w-2 rounded-full bg-primary/30`}
+                    />
                   ))}
-        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        
+        {/* Desktop Grid View */}
+        {!isMobile && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {companies.map((company) => (
+              <motion.div
+                key={company.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full flex flex-col overflow-hidden group hover:shadow-md transition-shadow">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs font-medium px-2.5 py-1 rounded-full bg-primary/10 text-primary">
+                        {company.category}
+                      </span>
+                    </div>
+                    <CardTitle className="text-xl">{company.name}</CardTitle>
+                    <CardDescription className="line-clamp-2">
+                      {company.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <div className="flex flex-col gap-2 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-primary" />
+                        <span>Founded: {company.founded}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-primary" />
+                        <span>{company.location}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Users className="h-4 w-4 text-primary" />
+                        <span>{company.team}</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                  <CardFooter className="flex justify-between pt-2">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button 
+                          variant="ghost" 
+                          onClick={() => setSelectedCompany(company)}
+                        >
+                          Learn More
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+                        {selectedCompany && (
+                          <>
+                            <DialogHeader>
+                              <div>
+                                <DialogTitle className="text-2xl">{selectedCompany.name}</DialogTitle>
+                                <DialogDescription className="text-primary">
+                                  {selectedCompany.category}
+                                </DialogDescription>
+                              </div>
+                            </DialogHeader>
+                            
+                            <div className="mt-6 space-y-6">
+                              <div>
+                                <h3 className="text-lg font-semibold mb-2">About</h3>
+                                <p className="text-muted-foreground">
+                                  {selectedCompany.longDescription}
+                                </p>
+                              </div>
+                              
+                              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
+                                <div className="flex flex-col gap-1">
+                                  <span className="text-sm text-muted-foreground">Founded</span>
+                                  <span className="font-medium flex items-center gap-2">
+                                    <Calendar className="h-4 w-4 text-primary" />
+                                    {selectedCompany.founded}
+                                  </span>
+                                </div>
+                                <div className="flex flex-col gap-1">
+                                  <span className="text-sm text-muted-foreground">Location</span>
+                                  <span className="font-medium flex items-center gap-2">
+                                    <MapPin className="h-4 w-4 text-primary" />
+                                    {selectedCompany.location}
+                                  </span>
+                                </div>
+                                <div className="flex flex-col gap-1">
+                                  <span className="text-sm text-muted-foreground">Team</span>
+                                  <span className="font-medium flex items-center gap-2">
+                                    <Users className="h-4 w-4 text-primary" />
+                                    {selectedCompany.team}
+                                  </span>
+                                </div>
+                              </div>
+                              
+                              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                  <h3 className="text-lg font-semibold mb-3">Services & Solutions</h3>
+                                  <ul className="space-y-2">
+                                    {selectedCompany.services.map((service, index) => (
+                                      <li key={index} className="flex items-start gap-2">
+                                        <span className="text-primary mt-1">•</span>
+                                        <span>{service}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                                
+                                <div>
+                                  <h3 className="text-lg font-semibold mb-3">Key Achievements</h3>
+                                  <ul className="space-y-2">
+                                    {selectedCompany.achievements.map((achievement, index) => (
+                                      <li key={index} className="flex items-start gap-2">
+                                        <span className="text-primary mt-1">•</span>
+                                        <span>{achievement}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </div>
+                              
+                              <div className="pt-4">
+                                <Button asChild className="w-full sm:w-auto">
+                                  <Link href={selectedCompany.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                                    Visit Website <ExternalLink className="h-4 w-4" />
+                                  </Link>
+                                </Button>
+                              </div>
+                            </div>
+                          </>
+                        )}
+                      </DialogContent>
+                    </Dialog>
+                    <Link href={company.website} target="_blank" rel="noopener noreferrer">
+                      <Button variant="ghost" size="icon">
+                        <ExternalLink className="h-4 w-4" />
+                      </Button>
+                    </Link>
+                  </CardFooter>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

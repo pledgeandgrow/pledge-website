@@ -14,94 +14,51 @@ export default function ImpactCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-primary/10 rounded-xl p-8 md:p-12 relative overflow-hidden"
+          className="bg-card rounded-xl p-8 md:p-12 relative overflow-hidden shadow-lg border border-border"
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/20 z-0" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background/50 to-primary/10 z-0" />
+          <div className="absolute -top-24 -right-24 w-48 h-48 rounded-full bg-primary/10 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-primary/5 blur-3xl"></div>
           
           <div className="relative z-10 max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">
               Join Us in Making a Difference
             </h2>
             
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
               Whether you&apos;re a nonprofit organization in need of technology support, 
               a company looking to partner on social impact initiatives, 
               or an individual who wants to contribute, we&apos;d love to hear from you.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
-                <Link href="/contact?subject=Pro Bono Application" className="flex items-center gap-2">
-                  <Heart className="h-5 w-5" /> 
-                  Apply for Pro Bono Support
-                </Link>
-              </Button>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button asChild size="lg" className="px-6 py-6 h-auto text-base font-medium shadow-md">
+                  <Link href="/contact?subject=Pro Bono Application" className="flex items-center gap-3">
+                    <Heart className="h-5 w-5" /> 
+                    Save the World
+                  </Link>
+                </Button>
+              </motion.div>
               
-              <Button variant="outline" asChild size="lg">
-                <Link href="/contact?subject=Impact Partnership" className="flex items-center gap-2">
-                  <MessageSquare className="h-5 w-5" /> 
-                  Discuss a Partnership
-                </Link>
-              </Button>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Button variant="outline" asChild size="lg" className="px-6 py-6 h-auto text-base font-medium shadow-sm">
+                  <Link href="/contact?subject=Impact Partnership" className="flex items-center gap-3">
+                    <MessageSquare className="h-5 w-5" /> 
+                    Community Partnership
+                  </Link>
+                </Button>
+              </motion.div>
             </div>
           </div>
         </motion.div>
         
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h3 className="text-xl font-semibold mb-3">Pro Bono Application</h3>
-            <p className="text-muted-foreground mb-4">
-              Nonprofit organizations can apply for pro bono technology services through our quarterly selection process.
-            </p>
-            <Button variant="link" asChild>
-              <Link href="/pro-bono-application" className="flex items-center gap-1 justify-center">
-                Learn More <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h3 className="text-xl font-semibold mb-3">Volunteer Opportunities</h3>
-            <p className="text-muted-foreground mb-4">
-              Join our team in volunteering technical expertise and time to support worthy causes in our communities.
-            </p>
-            <Button variant="link" asChild>
-              <Link href="/careers#volunteer" className="flex items-center gap-1 justify-center">
-                Get Involved <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h3 className="text-xl font-semibold mb-3">Impact Events</h3>
-            <p className="text-muted-foreground mb-4">
-              Attend our workshops, hackathons, and community events focused on technology for social good.
-            </p>
-            <Button variant="link" asChild>
-              <Link href="/events" className="flex items-center gap-1 justify-center">
-                View Calendar <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
       </div>
     </section>
   );

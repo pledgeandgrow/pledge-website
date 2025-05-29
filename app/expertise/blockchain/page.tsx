@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -28,7 +27,7 @@ export default function BlockchainExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Features"
+        title="What We Offer"
         subtitle="Transformative blockchain capabilities"
       />
       
@@ -36,7 +35,7 @@ export default function BlockchainExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="Blockchain Technologies & Frameworks"
+          title="Technologies & Tools"
           subtitle="Cutting-edge tools for distributed solutions"
         />
       )}
@@ -45,7 +44,7 @@ export default function BlockchainExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Blockchain Implementation Process"
+          title="Our Process"
           subtitle="How we integrate blockchain into your business"
         />
       )}
@@ -53,7 +52,7 @@ export default function BlockchainExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Blockchain Technology"
+        title="Benefits"
         subtitle="How distributed ledgers transform business"
       />
       
@@ -66,14 +65,7 @@ export default function BlockchainExpertisePage() {
         />
       )}
       
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="Blockchain Success Stories"
-          subtitle="Real blockchain solutions for real businesses"
-        />
-      )}
+
     </ExpertiseLayout>
   );
 }

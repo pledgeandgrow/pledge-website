@@ -21,15 +21,10 @@ export default function MediaCTA() {
             Interested in featuring Pledge & Grow in your publication, podcast, or show? 
             Our team of experts is available for interviews, speaking engagements, and media opportunities.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button asChild size="lg" className="font-medium">
               <Link href="/contact?subject=Media Inquiry" className="flex items-center gap-2">
                 <MessageSquare className="h-5 w-5" /> Media Inquiries
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="font-medium">
-              <Link href="/press-kit" className="flex items-center gap-2">
-                Download Press Kit <ArrowRight className="h-5 w-5" />
               </Link>
             </Button>
           </div>

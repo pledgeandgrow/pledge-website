@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
   Search, 
@@ -8,6 +9,7 @@ import {
   BarChart, 
   Shield 
 } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 interface ApproachStep {
   icon: React.ReactNode;
@@ -16,6 +18,22 @@ interface ApproachStep {
 }
 
 export default function ApproachSection() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
   const steps: ApproachStep[] = [
     {
       icon: <Search className="h-10 w-10 text-primary" />,
@@ -62,26 +80,63 @@ export default function ApproachSection() {
           </p>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto">
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="flex flex-col md:flex-row gap-6 mb-12 last:mb-0 items-center"
-            >
-              <div className="bg-primary/10 p-6 rounded-full flex items-center justify-center">
-                {step.icon}
+        {/* Mobile Carousel View */}
+        {isMobile && (
+          <div className="mb-10">
+            <div className="overflow-x-auto pb-6">
+              <div className="flex space-x-4 w-max px-4">
+                {steps.map((step, index) => (
+                  <div key={index} className="w-[85vw] max-w-[300px] flex-shrink-0">
+                    <div className="flex flex-col items-center text-center h-full bg-card rounded-lg p-6 shadow-sm border border-border">
+                      <div className="bg-primary/10 p-6 rounded-full flex items-center justify-center mb-4">
+                        {step.icon}
+                      </div>
+                      <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                      <p className="text-muted-foreground">{step.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-muted-foreground">{step.description}</p>
+              <div className="flex justify-center mt-4">
+                <div className="flex space-x-2">
+                  {steps.slice(0, Math.min(5, steps.length)).map((_, index) => (
+                    <div 
+                      key={index} 
+                      className={`h-2 w-2 rounded-full bg-primary/30`}
+                    />
+                  ))}
+                  {steps.length > 5 && (
+                    <div className="h-2 w-2 rounded-full bg-primary/30">...</div>
+                  )}
+                </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          </div>
+        )}
+
+        {/* Desktop List View */}
+        {!isMobile && (
+          <div className="max-w-5xl mx-auto">
+            {steps.map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex flex-col md:flex-row gap-6 mb-12 last:mb-0 items-center"
+              >
+                <div className="bg-primary/10 p-6 rounded-full flex items-center justify-center">
+                  {step.icon}
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground">{step.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

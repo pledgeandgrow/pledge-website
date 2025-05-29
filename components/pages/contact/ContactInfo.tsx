@@ -4,31 +4,36 @@ import { FaXTwitter, FaDiscord } from "react-icons/fa6";
 import Link from "next/link";
 
 export default function ContactInfo() {
-  const contactDetails = [
+  // Support contact information
+  const supportContacts = [
     {
       icon: <Mail className="h-5 w-5 text-primary" />,
-      title: "Support Email",
       value: "support@pledgeandgrow.com",
       link: "mailto:support@pledgeandgrow.com"
     },
     {
       icon: <Phone className="h-5 w-5 text-primary" />,
-      title: "Support Phone",
       value: "+33 7 53 69 58 40 (WhatsApp business)",
       link: "https://wa.me/33753695840"
-    },
+    }
+  ];
+  
+  // Commercial contact information
+  const commercialContacts = [
     {
       icon: <Mail className="h-5 w-5 text-primary" />,
-      title: "Commercial Email",
       value: "commercial@pledgeandgrow.com",
       link: "mailto:commercial@pledgeandgrow.com"
     },
     {
       icon: <Phone className="h-5 w-5 text-primary" />,
-      title: "Commercial Phone",
       value: "+971 50 392 7710 (WhatsApp business)",
       link: "https://wa.me/971503927710"
-    },
+    }
+  ];
+  
+  // Location and hours information
+  const locationInfo = [
     {
       icon: <MapPin className="h-5 w-5 text-primary" />,
       title: "Address",
@@ -43,6 +48,7 @@ export default function ContactInfo() {
     }
   ];
 
+  // Social media links
   const socialLinks = [
     {
       icon: <Instagram className="h-5 w-5" />,
@@ -85,25 +91,73 @@ export default function ContactInfo() {
     <div className="space-y-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
       <div className="bg-card border border-border rounded-lg p-8 shadow-sm">
         <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-        <div className="space-y-6">
-          {contactDetails.map((item, index) => (
-            <div key={index} className="flex items-start">
-              <div className="flex-shrink-0 mt-1">{item.icon}</div>
-              <div className="ml-4">
-                <h3 className="font-medium">{item.title}</h3>
-                {item.link ? (
-                  <Link 
-                    href={item.link} 
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {item.value}
-                  </Link>
-                ) : (
-                  <p className="text-muted-foreground">{item.value}</p>
-                )}
-              </div>
+        
+        <div className="space-y-8">
+          {/* Support Section */}
+          <div className="space-y-3">
+            <h3 className="text-xl font-semibold text-primary">Support</h3>
+            <div className="space-y-3">
+              {supportContacts.map((item, index) => (
+                <div key={index} className="flex items-center">
+                  <div className="flex-shrink-0 mr-3">{item.icon}</div>
+                  {item.link ? (
+                    <Link 
+                      href={item.link} 
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {item.value}
+                    </Link>
+                  ) : (
+                    <p className="text-muted-foreground">{item.value}</p>
+                  )}
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          
+          {/* Commercial Section */}
+          <div className="space-y-3">
+            <h3 className="text-xl font-semibold text-primary">Commercial</h3>
+            <div className="space-y-3">
+              {commercialContacts.map((item, index) => (
+                <div key={index} className="flex items-center">
+                  <div className="flex-shrink-0 mr-3">{item.icon}</div>
+                  {item.link ? (
+                    <Link 
+                      href={item.link} 
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {item.value}
+                    </Link>
+                  ) : (
+                    <p className="text-muted-foreground">{item.value}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Location and Hours Information */}
+          <div className="space-y-6">
+            {locationInfo.map((item, index) => (
+              <div key={index} className="flex items-start">
+                <div className="flex-shrink-0 mt-1">{item.icon}</div>
+                <div className="ml-4">
+                  <h3 className="font-medium">{item.title}</h3>
+                  {item.link ? (
+                    <Link 
+                      href={item.link} 
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      {item.value}
+                    </Link>
+                  ) : (
+                    <p className="text-muted-foreground">{item.value}</p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 

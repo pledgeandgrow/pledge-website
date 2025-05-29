@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -29,7 +28,7 @@ export default function UXUIDesignExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Design Features"
+        title="What We Offer"
         subtitle="Creating intuitive and engaging user experiences"
       />
       
@@ -37,7 +36,7 @@ export default function UXUIDesignExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="Design Tools & Technologies"
+          title="Technologies & Tools"
           subtitle="Modern solutions for effective interface design"
         />
       )}
@@ -46,7 +45,7 @@ export default function UXUIDesignExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Design Process"
+          title="Our Process"
           subtitle="How we create user-centered interfaces"
         />
       )}
@@ -54,7 +53,7 @@ export default function UXUIDesignExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Professional UX/UI Design"
+        title="Benefits"
         subtitle="Why thoughtful design matters"
       />
       
@@ -66,15 +65,8 @@ export default function UXUIDesignExpertisePage() {
           subtitle="Common questions about UX/UI design"
         />
       )}
-      
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="Design Success Stories"
-          subtitle="Real design solutions for real products"
-        />
-      )}
     </ExpertiseLayout>
   );
 }
+
+

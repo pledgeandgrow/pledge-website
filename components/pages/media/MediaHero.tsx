@@ -21,28 +21,7 @@ export default function MediaHero() {
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
             Discover Pledge & Grow&apos;s appearances across various media platforms, from social networks to TV shows, podcasts, and digital publications.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button asChild size="lg" className="font-medium">
-              <Link href="#social-media" className="flex items-center gap-2">
-                <Instagram className="h-5 w-5" /> Social Media
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="font-medium">
-              <Link href="#tv-appearances" className="flex items-center gap-2">
-                <Tv className="h-5 w-5" /> TV Appearances
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="font-medium">
-              <Link href="#podcasts" className="flex items-center gap-2">
-                <Radio className="h-5 w-5" /> Podcasts
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="font-medium">
-              <Link href="#digital-presence" className="flex items-center gap-2">
-                <Globe className="h-5 w-5" /> Digital Presence
-              </Link>
-            </Button>
-          </div>
+
         </motion.div>
       </div>
       

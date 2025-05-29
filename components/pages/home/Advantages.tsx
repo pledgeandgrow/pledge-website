@@ -1,6 +1,31 @@
-import { CheckCircle } from "lucide-react";
+"use client";
+
+import { useState, useEffect } from "react";
+import { CheckCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Advantages() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleItems, setVisibleItems] = useState(3);
+
+  // Update visible items based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) { // sm breakpoint
+        setVisibleItems(1);
+      } else if (window.innerWidth < 1024) { // lg breakpoint
+        setVisibleItems(2);
+      } else {
+        setVisibleItems(3);
+      }
+    };
+    
+    // Set initial visible items
+    handleResize();
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const advantages = [
     {
       title: "Innovative Solutions",
@@ -45,24 +70,54 @@ export default function Advantages() {
             We combine innovation, expertise, and dedication to deliver exceptional results for our clients.
           </p>
         </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {advantages.map((advantage, index) => (
-            <div 
-              key={index} 
-              className="p-6 bg-card rounded-lg border border-border shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: `${0.1 + index * 0.1}s` }}
+        <div className="relative">
+          {/* Navigation Buttons */}
+          <div className="absolute top-1/2 -left-4 -translate-y-1/2 z-10">
+            <Button 
+              variant="outline" 
+              size="icon" 
+              className="rounded-full bg-background shadow-md"
+              onClick={() => setCurrentIndex(Math.max(0, currentIndex - 1))}
+              disabled={currentIndex === 0}
             >
-              <div className="flex items-center mb-4">
-                {advantage.icon}
-                <h3 className="ml-2 text-xl font-bold">
-                  {advantage.title}
-                </h3>
+              <ChevronLeft className="h-5 w-5" />
+              <span className="sr-only">Previous</span>
+            </Button>
+          </div>
+
+          <div className="absolute top-1/2 -right-4 -translate-y-1/2 z-10">
+            <Button 
+              variant="outline" 
+              size="icon" 
+              className="rounded-full bg-background shadow-md"
+              onClick={() => setCurrentIndex(Math.max(0, Math.min(advantages.length - visibleItems, currentIndex + 1)))}
+              disabled={currentIndex >= Math.max(0, advantages.length - visibleItems)}
+            >
+              <ChevronRight className="h-5 w-5" />
+              <span className="sr-only">Next</span>
+            </Button>
+          </div>
+
+          {/* Advantages Grid - Carousel with 1 card per line on mobile */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-300">
+            {advantages.slice(currentIndex, currentIndex + visibleItems).map((advantage, index) => (
+              <div 
+                key={index} 
+                className="p-6 bg-card rounded-lg border border-border shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in"
+                style={{ animationDelay: `${0.1 + index * 0.1}s` }}
+              >
+                <div className="flex items-center mb-4">
+                  {advantage.icon}
+                  <h3 className="ml-2 text-xl font-bold">
+                    {advantage.title}
+                  </h3>
+                </div>
+                <p className="text-muted-foreground">
+                  {advantage.description}
+                </p>
               </div>
-              <p className="text-muted-foreground">
-                {advantage.description}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

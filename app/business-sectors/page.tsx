@@ -2,10 +2,8 @@ import { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { 
-  SectorsHero, 
   SectorsOverview,
   IndustrySolutions,
-  CaseStudies,
   ApproachSection,
   SectorsCTA
 } from "@/components/pages/business-sectors";
@@ -36,10 +34,8 @@ export default function BusinessSectorsPage() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow pt-16">
-        <SectorsHero />
         <SectorsOverview />
         <IndustrySolutions />
-        <CaseStudies />
         <ApproachSection />
         <SectorsCTA />
       </main>

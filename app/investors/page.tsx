@@ -2,11 +2,8 @@ import { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { 
-  InvestorsHero, 
   CompanyOverview,
-  FinancialHighlights,
   InvestmentOpportunities,
-  InvestorFAQ,
   InvestorsPhase
 } from "@/components/pages/investors";
 
@@ -36,12 +33,9 @@ export default function InvestorsPage() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow pt-16">
-        <InvestorsHero />
         <CompanyOverview />
-        <FinancialHighlights />
-        <InvestmentOpportunities />
         <InvestorsPhase />
-        <InvestorFAQ />
+        <InvestmentOpportunities />
       </main>
       <Footer />
     </div>

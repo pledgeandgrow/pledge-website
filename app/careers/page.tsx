@@ -4,7 +4,6 @@ import Footer from "@/components/layout/Footer";
 import { 
   WhyJoinUs,
   OpenPositions,
-  CompanyValues,
   ApplicationProcess,
   CareersCTA
 } from "@/components/pages/careers";
@@ -36,7 +35,6 @@ export default function CareersPage() {
       <Navbar />
       <main className="flex-grow pt-16">
         <WhyJoinUs />
-        <CompanyValues />
         <OpenPositions />
         <ApplicationProcess />
         <CareersCTA />

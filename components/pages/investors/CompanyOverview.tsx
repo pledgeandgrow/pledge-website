@@ -1,7 +1,7 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   TrendingUp, 
@@ -9,8 +9,21 @@ import {
   Globe, 
   Award 
 } from "lucide-react";
+import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
 
 export default function CompanyOverview() {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Check if on mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   const highlights = [
     {
       icon: <TrendingUp className="h-6 w-6 text-primary" />,
@@ -63,19 +76,44 @@ export default function CompanyOverview() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-6"
           >
-            {highlights.map((highlight, index) => (
-              <Card key={index} className="border border-border">
-                <CardContent className="p-6">
-                  <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                    {highlight.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2">{highlight.title}</h3>
-                  <p className="text-muted-foreground">{highlight.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+            {isMobile ? (
+              <div className="mt-8">
+                <MobileCarousel>
+                  {highlights.map((highlight, index) => (
+                    <MobileCarouselItem key={index}>
+                      <Card className="h-full mx-2">
+                        <CardContent className="p-6">
+                          <div className="mb-4">{highlight.icon}</div>
+                          <h3 className="text-xl font-semibold mb-2">{highlight.title}</h3>
+                          <p className="text-muted-foreground">{highlight.description}</p>
+                        </CardContent>
+                      </Card>
+                    </MobileCarouselItem>
+                  ))}
+                </MobileCarousel>
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 gap-4">
+                {highlights.map((highlight, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <Card className="h-full">
+                      <CardContent className="p-6">
+                        <div className="mb-4">{highlight.icon}</div>
+                        <h3 className="text-xl font-semibold mb-2">{highlight.title}</h3>
+                        <p className="text-muted-foreground">{highlight.description}</p>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            )}
           </motion.div>
         </div>
       </div>

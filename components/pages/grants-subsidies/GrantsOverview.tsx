@@ -85,13 +85,15 @@ export default function GrantsOverview() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-square relative rounded-lg overflow-hidden">
+            <div className="aspect-square relative rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/grants-subsidies/overview.jpg"
+                src="/images/grants-subsidies/grants.png"
                 alt="Grants and subsidies overview"
                 fill
                 className="object-cover"
+                priority
               />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent mix-blend-overlay"></div>
             </div>
             <div className="absolute -bottom-6 -left-6 bg-primary/10 p-8 rounded-lg hidden md:block">
               <div className="text-4xl font-bold text-primary">€5M+</div>

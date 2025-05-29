@@ -62,7 +62,40 @@ export default function ApplicationProcess() {
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
+        {/* Mobile Scroll View (visible only on mobile) */}
+        <div className="md:hidden overflow-x-auto pb-6">
+          <div className="flex space-x-4 w-max px-4">
+            {steps.map((step, index) => (
+              <div key={index} className="w-[85vw] max-w-[300px] flex-shrink-0">
+                <div className="bg-white border border-border rounded-lg p-6 h-full flex flex-col">
+                  <div className="flex items-center mb-4">
+                    <div className="bg-primary/10 p-3 rounded-full flex items-center justify-center mr-3">
+                      {step.icon}
+                    </div>
+                    <div className="bg-primary/10 h-6 w-6 rounded-full flex items-center justify-center text-sm font-medium text-primary">
+                      {index + 1}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-center mt-4">
+            <div className="flex space-x-2">
+              {steps.map((_, index) => (
+                <div 
+                  key={index} 
+                  className={`h-2 w-2 rounded-full bg-primary/30`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+        
+        {/* Desktop Timeline View (visible only on desktop) */}
+        <div className="hidden md:block max-w-4xl mx-auto">
           {steps.map((step, index) => (
             <motion.div
               key={index}

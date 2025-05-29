@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -28,7 +27,7 @@ export default function CloudDevOpsExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Cloud & DevOps Features"
+        title="What We Offer"
         subtitle="Scalable infrastructure and efficient pipelines"
       />
       
@@ -36,7 +35,7 @@ export default function CloudDevOpsExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="Cloud Platforms & DevOps Tools"
+          title="Technologies & Tools"
           subtitle="Modern solutions for infrastructure and automation"
         />
       )}
@@ -45,7 +44,7 @@ export default function CloudDevOpsExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Implementation Process"
+          title="Our Process"
           subtitle="How we transform your infrastructure and workflows"
         />
       )}
@@ -53,7 +52,7 @@ export default function CloudDevOpsExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Cloud & DevOps"
+        title="Benefits"
         subtitle="How modern infrastructure transforms business"
       />
       
@@ -63,15 +62,6 @@ export default function CloudDevOpsExpertisePage() {
           faqs={expertise.faqs}
           title="Frequently Asked Questions"
           subtitle="Common questions about cloud and DevOps"
-        />
-      )}
-      
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="Success Stories"
-          subtitle="Real cloud solutions for real businesses"
         />
       )}
     </ExpertiseLayout>

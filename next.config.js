@@ -18,6 +18,15 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   poweredByHeader: false,
+  async redirects() {
+    return [
+      {
+        source: '/methodology',
+        destination: '/ecosysteme',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

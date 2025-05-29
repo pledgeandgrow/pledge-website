@@ -28,91 +28,91 @@ interface Grant {
 export default function AvailableGrants() {
   const allGrants: Grant[] = [
     {
-      id: "digital-innovation",
-      title: "Digital Innovation Fund",
-      description: "Supports businesses implementing innovative digital solutions that enhance productivity or create new business models.",
-      amount: "Up to €50,000",
-      deadline: "June 30, 2025",
-      eligibility: ["SMEs", "Established 2+ years", "All sectors"],
+      id: "cir",
+      title: "01. Crédit d'Impôt Recherche (CIR)",
+      description: "Le Crédit d'Impôt Recherche est un dispositif fiscal permettant aux entreprises de bénéficier d'un crédit d'impôt sur les dépenses de recherche et développement (R&D). Il peut couvrir jusqu'à 30% des dépenses éligibles, ce qui peut représenter un soutien financier considérable pour vos projets innovants.",
+      amount: "Up to 30% of eligible expenses",
+      deadline: "Ongoing",
+      eligibility: ["All companies with R&D activities", "Research and development projects"],
       category: "digital",
-      source: "European Commission",
+      source: "French Government",
       link: "#"
     },
     {
-      id: "ecommerce-boost",
-      title: "E-commerce Acceleration Grant",
-      description: "Funding for businesses looking to establish or enhance their e-commerce capabilities and online presence.",
-      amount: "€10,000 - €30,000",
-      deadline: "August 15, 2025",
-      eligibility: ["Retail businesses", "B2C companies", "Revenue under €2M"],
+      id: "bpifrance",
+      title: "02. Aides de Bpifrance",
+      description: "Bpifrance offre une gamme variée de financements et d'aides pour les entreprises de toutes tailles. Parmi ces aides, vous pouvez trouver : Prêts à l'innovation : pour financer des projets innovants à tous les stades de développement. Aides à l'innovation : subventions et avances remboursables pour les projets de recherche, développement et innovation.",
+      amount: "Varies by program",
+      deadline: "Ongoing",
+      eligibility: ["Companies of all sizes", "Innovation projects", "R&D activities"],
       category: "digital",
-      source: "Ministry of Economy",
+      source: "Bpifrance",
       link: "#"
     },
     {
-      id: "green-tech",
-      title: "Green Technology Adoption",
-      description: "Supports the implementation of environmentally friendly technologies and sustainable digital practices.",
-      amount: "Up to €75,000",
-      deadline: "September 30, 2025",
-      eligibility: ["All business sizes", "Sustainability focus", "Measurable impact"],
-      category: "sustainability",
-      source: "Environmental Agency",
-      link: "#"
-    },
-    {
-      id: "startup-boost",
-      title: "Startup Digital Boost",
-      description: "Designed specifically for startups needing funding for digital infrastructure, marketing, and technology adoption.",
-      amount: "€15,000 - €40,000",
-      deadline: "July 31, 2025",
-      eligibility: ["Startups under 3 years", "Under 10 employees", "Innovative business model"],
-      category: "startup",
-      source: "Innovation Hub",
-      link: "#"
-    },
-    {
-      id: "ai-ml-adoption",
-      title: "AI & Machine Learning Integration",
-      description: "Funding for businesses implementing artificial intelligence and machine learning solutions to improve operations.",
-      amount: "Up to €100,000",
-      deadline: "October 15, 2025",
-      eligibility: ["Established businesses", "Data-rich operations", "Clear implementation plan"],
+      id: "fsn",
+      title: "03. Le Fonds pour la Société Numérique (FSN)",
+      description: "Le FSN finance des projets visant à développer les infrastructures numériques et les services numériques innovants. Les entreprises peuvent obtenir des subventions ou des prêts pour des projets répondant à ces critères.",
+      amount: "Varies by project",
+      deadline: "Ongoing",
+      eligibility: ["Digital infrastructure projects", "Innovative digital services"],
       category: "digital",
-      source: "Tech Innovation Fund",
+      source: "French Government",
       link: "#"
     },
     {
-      id: "rural-digital",
-      title: "Rural Digital Transformation",
-      description: "Supports businesses in rural areas implementing digital solutions to overcome geographical challenges.",
-      amount: "€20,000 - €60,000",
-      deadline: "November 30, 2025",
-      eligibility: ["Rural location", "All business sizes", "Local economic impact"],
+      id: "regional",
+      title: "04. Subventions Régionales",
+      description: "Les régions françaises offrent également des subventions pour soutenir les projets informatiques et numériques. Les critères d'éligibilité et les montants varient selon les régions, mais ces subventions peuvent représenter une aide précieuse.",
+      amount: "Varies by region",
+      deadline: "Varies by program",
+      eligibility: ["Regional criteria apply", "Digital and IT projects"],
       category: "regional",
-      source: "Regional Development Agency",
+      source: "Regional Governments",
       link: "#"
     },
     {
-      id: "export-digital",
-      title: "Digital Export Enablement",
-      description: "Helps businesses leverage digital tools to expand into international markets and enhance export capabilities.",
-      amount: "Up to €45,000",
-      deadline: "August 31, 2025",
-      eligibility: ["Export potential", "B2B or B2C", "Growth strategy"],
+      id: "horizon-europe",
+      title: "05. Programme Horizon Europe",
+      description: "Hoizon europe est le programme cadre de l'union européenne pour la recherche et l'innovation. Il propose des financements pour des projets de recherche et d'innovation dans divers domaines y compris IT(information technology) et TIC(communication).",
+      amount: "Varies by call for proposals",
+      deadline: "Multiple deadlines",
+      eligibility: ["Research organizations", "Companies", "Public entities", "Consortia"],
       category: "international",
-      source: "Trade Commission",
+      source: "European Union",
       link: "#"
     },
     {
-      id: "cybersecurity",
-      title: "Cybersecurity Enhancement",
-      description: "Funding for implementing advanced cybersecurity measures to protect business data and customer information.",
-      amount: "€15,000 - €35,000",
-      deadline: "July 15, 2025",
-      eligibility: ["Handles sensitive data", "All business sizes", "Digital operations"],
-      category: "security",
-      source: "Digital Security Agency",
+      id: "digital-transition",
+      title: "06. Aide à la transition numérique",
+      description: "Diverses aides sont disponibles pour accompagner les PME dans leur transition numérique, telles que : Le Chèque France Num : une aide forfaitaire pour financer des dépenses liées à la transformation numérique des entreprises. Diagnostics numériques : des aides pour réaliser des audits et diagnostics de vos besoins numériques.",
+      amount: "Varies by program",
+      deadline: "Ongoing",
+      eligibility: ["SMEs", "Digital transformation projects"],
+      category: "digital",
+      source: "Various agencies",
+      link: "#"
+    },
+    {
+      id: "bank-loans",
+      title: "07. Prêts Bancaires et Financements Privés",
+      description: "Outre les aides publiques, les entreprises peuvent également se tourner vers des prêts bancaires et des financements privés pour soutenir leurs projets informatiques. De nombreuses banques et institutions financières offrent des solutions de financement adaptées aux besoins des entreprises technologiques.",
+      amount: "Varies by institution",
+      deadline: "Ongoing",
+      eligibility: ["Credit requirements vary", "IT and technology projects"],
+      category: "other",
+      source: "Banks and financial institutions",
+      link: "#"
+    },
+    {
+      id: "business-angels",
+      title: "08. BUSINESS ANGELS",
+      description: "Individuals who can invest in your project.",
+      amount: "Varies by investor",
+      deadline: "Ongoing",
+      eligibility: ["Startups", "Innovative projects", "Growth potential"],
+      category: "startup",
+      source: "Private investors",
       link: "#"
     }
   ];
@@ -146,6 +146,8 @@ export default function AvailableGrants() {
             <TabsList>
               <TabsTrigger value="all" onClick={() => setActiveCategory("all")}>All Grants</TabsTrigger>
               <TabsTrigger value="digital" onClick={() => setActiveCategory("digital")}>Digital</TabsTrigger>
+              <TabsTrigger value="regional" onClick={() => setActiveCategory("regional")}>Regional</TabsTrigger>
+              <TabsTrigger value="international" onClick={() => setActiveCategory("international")}>International</TabsTrigger>
               <TabsTrigger value="startup" onClick={() => setActiveCategory("startup")}>Startups</TabsTrigger>
               <TabsTrigger value="other" onClick={() => setActiveCategory("other")}>Other</TabsTrigger>
             </TabsList>

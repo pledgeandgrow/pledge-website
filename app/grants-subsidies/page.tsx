@@ -2,10 +2,8 @@ import { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { 
-  GrantsHero,
   GrantsOverview,
   AvailableGrants,
-  GrantsFAQ,
   GrantsCTA
 } from "@/components/pages/grants-subsidies";
 
@@ -35,10 +33,8 @@ export default function GrantsSubsidiesPage() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow pt-16">
-        <GrantsHero />
         <GrantsOverview />
         <AvailableGrants />
-        <GrantsFAQ />
         <GrantsCTA />
       </main>
       <Footer />

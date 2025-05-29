@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -28,7 +27,7 @@ export default function DocumentationExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Documentation Features"
+        title="What We Offer"
         subtitle="Clear, comprehensive, and user-friendly documentation"
       />
       
@@ -36,7 +35,7 @@ export default function DocumentationExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="Documentation Tools & Platforms"
+          title="Technologies & Tools"
           subtitle="Modern solutions for effective technical writing"
         />
       )}
@@ -45,7 +44,7 @@ export default function DocumentationExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Documentation Process"
+          title="Our Process"
           subtitle="How we create clear and effective documentation"
         />
       )}
@@ -53,7 +52,7 @@ export default function DocumentationExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Professional Documentation"
+        title="Benefits"
         subtitle="Why quality documentation matters"
       />
       
@@ -65,15 +64,8 @@ export default function DocumentationExpertisePage() {
           subtitle="Common questions about technical documentation"
         />
       )}
-      
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="Documentation Success Stories"
-          subtitle="Real documentation solutions for real products"
-        />
-      )}
     </ExpertiseLayout>
   );
 }
+
+

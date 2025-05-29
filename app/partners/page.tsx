@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { 
-  PartnersHero, 
   PartnersList, 
   BecomePartner 
 } from "@/components/pages/partners";
@@ -33,7 +32,6 @@ export default function PartnersPage() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow pt-16">
-        <PartnersHero />
         <PartnersList />
         <BecomePartner />
       </main>

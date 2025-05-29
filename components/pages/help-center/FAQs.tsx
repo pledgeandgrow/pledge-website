@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Search } from "lucide-react";
+import { Search, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 interface FAQ {
@@ -19,6 +19,23 @@ interface FAQ {
 export default function FAQs() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile on component mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkMobile);
+    
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   
   const categories = [
     { id: "all", name: "All Questions" },
@@ -120,32 +137,32 @@ export default function FAQs() {
   };
 
   return (
-    <section id="faqs" className="py-16 md:py-24 bg-muted/30">
+    <section id="faqs" className="py-12 md:py-24 bg-muted/30">
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8 md:mb-12"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Frequently Asked Questions</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-tight mb-3 md:mb-4">Frequently Asked Questions</h2>
+          <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-6 md:mb-8">
             Find quick answers to common questions about our services, process, and policies.
           </p>
           
-          <form onSubmit={handleSearch} className="relative max-w-2xl mx-auto mb-12">
+          <form onSubmit={handleSearch} className="relative max-w-2xl mx-auto mb-8 md:mb-12">
             <Input
               type="text"
-              placeholder="Search for questions or keywords..."
-              className="pr-12"
+              placeholder="Search for questions..."
+              className="pr-12 h-10"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />
             <Button 
               type="submit" 
               size="icon" 
-              className="absolute right-2 top-1/2 transform -translate-y-1/2"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 h-8 w-8"
             >
               <Search className="h-4 w-4" />
             </Button>
@@ -153,9 +170,13 @@ export default function FAQs() {
         </motion.div>
 
         <Tabs defaultValue="all" className="w-full" onValueChange={setSelectedCategory}>
-          <TabsList className="flex flex-wrap justify-center mb-8">
+          <TabsList className={`flex ${isMobile ? 'flex-nowrap overflow-x-auto pb-2 justify-start' : 'flex-wrap justify-center'} mb-6 md:mb-8`}>
             {categories.map((category) => (
-              <TabsTrigger key={category.id} value={category.id}>
+              <TabsTrigger 
+                key={category.id} 
+                value={category.id}
+                className={isMobile ? 'flex-shrink-0' : ''}
+              >
                 {category.name}
               </TabsTrigger>
             ))}
@@ -172,21 +193,21 @@ export default function FAQs() {
               >
                 <Accordion type="single" collapsible className="w-full">
                   {filteredFAQs.map((faq) => (
-                    <AccordionItem key={faq.id} value={faq.id}>
-                      <AccordionTrigger className="text-left text-lg font-medium">
+                    <AccordionItem key={faq.id} value={faq.id} className="border-b">
+                      <AccordionTrigger className="text-left text-base md:text-lg font-medium py-4 hover:no-underline">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        <p>{faq.answer}</p>
+                      <AccordionContent className="text-muted-foreground text-sm md:text-base">
+                        <p className="pb-2">{faq.answer}</p>
                       </AccordionContent>
                     </AccordionItem>
                   ))}
                 </Accordion>
               </motion.div>
             ) : (
-              <div className="text-center py-12">
-                <p className="text-muted-foreground mb-4">No results found for your search.</p>
-                <Button variant="outline" onClick={() => setSearchQuery("")}>
+              <div className="text-center py-8 md:py-12">
+                <p className="text-muted-foreground mb-4 text-sm md:text-base">No results found for your search.</p>
+                <Button variant="outline" size={isMobile ? "sm" : "default"} onClick={() => setSearchQuery("")}>
                   Clear Search
                 </Button>
               </div>

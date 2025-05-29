@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -28,7 +27,7 @@ export default function VideoGamesExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Features"
+        title="What We Offer"
         subtitle="Everything you need for successful game development"
       />
       
@@ -36,8 +35,8 @@ export default function VideoGamesExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="Game Engines & Technologies"
-          subtitle="Powerful tools for immersive gaming experiences"
+          title="Technologies & Tools"
+          subtitle="Technologies & Tools"
         />
       )}
       
@@ -45,7 +44,7 @@ export default function VideoGamesExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Game Development Process"
+          title="Our Process"
           subtitle="How we bring your game concept to life"
         />
       )}
@@ -53,7 +52,7 @@ export default function VideoGamesExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Professional Game Development"
+        title="Benefits"
         subtitle="Why partner with experts for your game project"
       />
       
@@ -65,15 +64,8 @@ export default function VideoGamesExpertisePage() {
           subtitle="Common questions about game development"
         />
       )}
-      
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="Game Portfolio"
-          subtitle="Our successful game projects"
-        />
-      )}
     </ExpertiseLayout>
   );
 }
+
+

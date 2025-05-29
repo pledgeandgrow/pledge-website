@@ -21,16 +21,16 @@ const creationServices: ServiceCard[] = [
   {
     id: "website",
     title: "Site Web",
-    description: "Sites web professionnels pour entreprises et organisations avec design responsive.",
+    description: "Professional websites for businesses and organizations with responsive design.",
     icon: <Globe className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Développement de sites web sur mesure et CMS",
-      clients: ["Startups", "PME", "Grandes entreprises", "E-commerce", "Institutions"],
+      type: "Custom website development and CMS",
+      clients: ["Startups", "SMEs", "Large enterprises", "E-commerce", "Institutions"],
       sectors: ["Commerce", "Santé", "Éducation", "Finance", "Technologie", "Industrie"],
       recommendedFor: [
-        "Entreprises cherchant à établir une présence en ligne professionnelle",
+        "Businesses looking to establish a professional online presence",
         "Organisations nécessitant des fonctionnalités web avancées",
-        "Entreprises souhaitant améliorer leur visibilité en ligne",
+        "Businesses wanting to improve their online visibility",
         "Projets nécessitant une interface utilisateur moderne et responsive"
       ]
     },
@@ -65,11 +65,11 @@ const creationServices: ServiceCard[] = [
     description: "Solutions Software as a Service personnalisées avec architecture multi-tenant.",
     icon: <Code className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Développement de plateformes SaaS sur mesure",
-      clients: ["Startups", "Scale-ups", "Entreprises technologiques", "Innovateurs"],
+      type: "Custom SaaS platform development",
+      clients: ["Startups", "Scale-ups", "Technology companies", "Innovators"],
       sectors: ["B2B", "B2C", "Technologie", "Finance", "Santé", "Éducation"],
       recommendedFor: [
-        "Entreprises souhaitant transformer un produit en service par abonnement",
+        "Businesses looking to transform a product into a subscription service",
         "Startups cherchant à développer une solution cloud évolutive",
         "Organisations nécessitant une plateforme multi-utilisateurs",
         "Projets nécessitant une architecture évolutive et sécurisée"
@@ -106,11 +106,11 @@ const creationServices: ServiceCard[] = [
     description: "Applications mobiles natives et cross-platform pour iOS et Android.",
     icon: <Smartphone className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Développement d'applications mobiles natives et hybrides",
-      clients: ["Startups", "PME", "Grandes entreprises", "Organisations"],
+      type: "Native and hybrid mobile application development",
+      clients: ["Startups", "SMEs", "Large enterprises", "Organizations"],
       sectors: ["E-commerce", "Santé", "Finance", "Éducation", "Divertissement", "Services"],
       recommendedFor: [
-        "Entreprises cherchant à étendre leur présence sur mobile",
+        "Businesses looking to extend their mobile presence",
         "Organisations nécessitant des applications avec fonctionnalités natives",
         "Projets nécessitant une expérience utilisateur optimisée sur mobile",
         "Services nécessitant des fonctionnalités hors ligne"
@@ -144,14 +144,14 @@ const creationServices: ServiceCard[] = [
   {
     id: "software",
     title: "Logiciel",
-    description: "Logiciels sur mesure pour répondre aux besoins spécifiques de votre entreprise.",
+    description: "Custom software to meet the specific needs of your business.",
     icon: <MonitorSmartphone className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Développement de logiciels de bureau et d'entreprise sur mesure",
-      clients: ["PME", "Grandes entreprises", "Institutions", "Industries spécialisées"],
+      type: "Custom desktop and enterprise software development",
+      clients: ["SMEs", "Large enterprises", "Institutions", "Specialized industries"],
       sectors: ["Industrie", "Finance", "Santé", "Logistique", "Éducation", "Services professionnels"],
       recommendedFor: [
-        "Entreprises nécessitant des solutions logicielles spécifiques",
+        "Businesses requiring specific software solutions",
         "Organisations cherchant à automatiser des processus métier",
         "Projets nécessitant l'intégration avec des systèmes existants",
         "Secteurs avec des exigences réglementaires spécifiques"
@@ -188,8 +188,8 @@ const creationServices: ServiceCard[] = [
     description: "Jeux vidéo engageants pour plusieurs plateformes avec des expériences immersives.",
     icon: <Gamepad className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Développement de jeux vidéo 2D et 3D pour diverses plateformes",
-      clients: ["Studios indépendants", "Éditeurs", "Entreprises", "Institutions éducatives"],
+      type: "2D and 3D video game development for various platforms",
+      clients: ["Independent studios", "Publishers", "Businesses", "Educational institutions"],
       sectors: ["Divertissement", "Éducation", "Formation", "Marketing", "Santé"],
       recommendedFor: [
         "Projets de divertissement interactif",
@@ -245,7 +245,7 @@ export default function CreationServices() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-4">Création</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Nous concevons et développons des produits numériques qui aident les entreprises à se développer et à réussir dans le paysage numérique.
+            We design and develop digital products that help businesses grow and succeed in the digital landscape.
           </p>
         </div>
         

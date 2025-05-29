@@ -260,19 +260,7 @@ export default function Team() {
 
         </div>
         
-        {/* View Company Tree button */}
-        <div className="text-center">
-          <Button 
-            variant="outline" 
-            className="group"
-            asChild
-          >
-            <Link href="/company-tree">
-              View Company Tree
-              <ExternalLink className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Button>
-        </div>
+        {/* Company Tree button removed as requested */}
       </div>
     </section>
   );

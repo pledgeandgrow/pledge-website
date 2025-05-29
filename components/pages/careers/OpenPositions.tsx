@@ -151,55 +151,118 @@ export default function OpenPositions() {
         </div>
 
         {sortedJobs.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {sortedJobs.map((job, index) => (
-              <motion.div
-                key={job.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full flex flex-col">
-                  <CardHeader>
-                    <div className="flex justify-between items-start mb-2">
-                      <CardTitle className="text-xl">{job.title}</CardTitle>
-                      <Badge variant={
-                        job.locationType === "Remote" ? "outline" : 
-                        job.locationType === "Hybrid" ? "secondary" : "default"
-                      }>
-                        {job.locationType}
-                      </Badge>
-                    </div>
-                    <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
-                      <div className="flex items-center">
-                        <Briefcase className="h-4 w-4 mr-2" />
-                        <span>{job.department} • {job.employmentType}</span>
+          <>
+            {/* Mobile Scroll View (visible only on mobile) */}
+            <div className="md:hidden overflow-x-auto pb-6">
+              <div className="flex space-x-4 w-max px-4">
+                {sortedJobs.map((job, index) => (
+                  <div key={job.id} className="w-[85vw] max-w-[350px] flex-shrink-0">
+                    <Card className="h-full flex flex-col">
+                      <CardHeader>
+                        <div className="flex justify-between items-start mb-2">
+                          <CardTitle className="text-xl">{job.title}</CardTitle>
+                          <Badge variant={
+                            job.locationType === "Remote" ? "outline" : 
+                            job.locationType === "Hybrid" ? "secondary" : "default"
+                          }>
+                            {job.locationType}
+                          </Badge>
+                        </div>
+                        <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
+                          <div className="flex items-center">
+                            <Briefcase className="h-4 w-4 mr-2" />
+                            <span>{job.department} • {job.employmentType}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <MapPin className="h-4 w-4 mr-2" />
+                            <span>{job.location}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <Clock className="h-4 w-4 mr-2" />
+                            <span>Posted {formatDate(job.postedDate)}</span>
+                          </div>
+                        </div>
+                      </CardHeader>
+                      <CardContent className="flex-grow">
+                        <p className="text-muted-foreground line-clamp-3">{job.description}</p>
+                      </CardContent>
+                      <CardFooter>
+                        <Button asChild className="w-full">
+                          <Link href={`/careers/${job.id}`} className="flex items-center justify-center">
+                            View Details <ArrowRight className="ml-2 h-4 w-4" />
+                          </Link>
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+              <div className="flex justify-center mt-4 md:hidden">
+                <div className="flex space-x-2">
+                  {sortedJobs.slice(0, Math.min(5, sortedJobs.length)).map((_, index) => (
+                    <div 
+                      key={index} 
+                      className={`h-2 w-2 rounded-full bg-primary/30`}
+                    />
+                  ))}
+                  {sortedJobs.length > 5 && (
+                    <div className="h-2 w-2 rounded-full bg-primary/30">...</div>
+                  )}
+                </div>
+              </div>
+            </div>
+            
+            {/* Desktop Grid (visible only on desktop) */}
+            <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              {sortedJobs.map((job, index) => (
+                <motion.div
+                  key={job.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                >
+                  <Card className="h-full flex flex-col">
+                    <CardHeader>
+                      <div className="flex justify-between items-start mb-2">
+                        <CardTitle className="text-xl">{job.title}</CardTitle>
+                        <Badge variant={
+                          job.locationType === "Remote" ? "outline" : 
+                          job.locationType === "Hybrid" ? "secondary" : "default"
+                        }>
+                          {job.locationType}
+                        </Badge>
                       </div>
-                      <div className="flex items-center">
-                        <MapPin className="h-4 w-4 mr-2" />
-                        <span>{job.location}</span>
+                      <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
+                        <div className="flex items-center">
+                          <Briefcase className="h-4 w-4 mr-2" />
+                          <span>{job.department} • {job.employmentType}</span>
+                        </div>
+                        <div className="flex items-center">
+                          <MapPin className="h-4 w-4 mr-2" />
+                          <span>{job.location}</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="h-4 w-4 mr-2" />
+                          <span>Posted {formatDate(job.postedDate)}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center">
-                        <Clock className="h-4 w-4 mr-2" />
-                        <span>Posted {formatDate(job.postedDate)}</span>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{job.description}</p>
-                  </CardContent>
-                  <CardFooter>
-                    <Button asChild className="w-full">
-                      <Link href={`/careers/${job.id}`} className="flex items-center justify-center">
-                        View Details <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <p className="text-muted-foreground">{job.description}</p>
+                    </CardContent>
+                    <CardFooter>
+                      <Button asChild className="w-full">
+                        <Link href={`/careers/${job.id}`} className="flex items-center justify-center">
+                          View Details <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </>
         ) : (
           <div className="text-center py-12 max-w-5xl mx-auto">
             <p className="text-lg text-muted-foreground">

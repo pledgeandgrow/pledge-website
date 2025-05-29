@@ -21,7 +21,7 @@ export default function AmbassadorCategories({
           className="rounded-full"
           onClick={() => setActiveRegion("all")}
         >
-          All Regions
+          Global
         </Button>
         
         {regions.map((region) => (

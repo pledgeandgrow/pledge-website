@@ -20,8 +20,21 @@ export default function GoogleReviews() {
   const [error, setError] = useState<string | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Number of reviews to display at once
-  const displayCount = 3;
+  // Number of reviews to display at once based on screen size
+  const [displayCount, setDisplayCount] = useState(3);
+
+  // Update display count based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setDisplayCount(window.innerWidth < 768 ? 1 : 3);
+    };
+    
+    // Set initial display count
+    handleResize();
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     const fetchGoogleReviews = async () => {
@@ -96,7 +109,7 @@ export default function GoogleReviews() {
         </div>
 
         {loading ? (
-          <div className="grid gap-8 lg:grid-cols-3 sm:grid-cols-2">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
             {Array(3).fill(0).map((_, index) => (
               <div key={index} className="p-8 bg-card border border-border rounded-lg shadow-sm">
                 <div className="flex items-center mb-4">
@@ -113,10 +126,8 @@ export default function GoogleReviews() {
               </div>
             ))}
           </div>
-        ) : error && reviews.length === 0 ? (
-          <div className="text-center p-8">
-            <p className="text-muted-foreground">{error}</p>
-          </div>
+        ) : error ? (
+          <div className="text-center text-muted-foreground">{error}</div>
         ) : (
           <>
             <div className="relative">
@@ -151,8 +162,8 @@ export default function GoogleReviews() {
                 </>
               )}
 
-              {/* Reviews Grid */}
-              <div className="grid gap-8 lg:grid-cols-3 sm:grid-cols-2 transition-all duration-300">
+              {/* Reviews Grid - 1 card per line on mobile */}
+              <div className="grid gap-8 grid-cols-1 md:grid-cols-3 transition-all duration-300">
                 {visibleReviews.map((review, index) => (
                   <div 
                     key={index} 
@@ -216,31 +227,31 @@ const sampleReviews: GoogleReview[] = [
   {
     author_name: "Jean Dupont",
     rating: 5,
-    text: "Excellent travail! L'équipe de Pledge a complètement transformé notre présence en ligne. Notre nouveau site web est non seulement magnifique, mais il génère également beaucoup plus de leads pour notre entreprise.",
+    text: "Excellent work! The Pledge team has completely transformed our online presence. Our new website is not only beautiful, but it also generates many more leads for our business.",
     time: 1714503600, // May 1, 2024
   },
   {
     author_name: "Marie Lambert",
     rating: 5,
-    text: "Je recommande vivement Pledge pour tout projet de développement web. Leur expertise technique et leur sens du design ont permis de créer un site qui dépasse toutes nos attentes. Très professionnels et à l'écoute.",
+    text: "I highly recommend Pledge for any web development project. Their technical expertise and design sense have created a site that exceeds all our expectations. Very professional and attentive.",
     time: 1712084400, // April 3, 2024
   },
   {
     author_name: "Thomas Martin",
     rating: 4,
-    text: "Très bonne expérience avec Pledge. L'équipe est réactive et professionnelle. Notre application mobile fonctionne parfaitement et les retours de nos utilisateurs sont excellents.",
+    text: "Very good experience with Pledge. The team is responsive and professional. Our mobile application works perfectly and user feedback has been excellent.",
     time: 1709492400, // March 4, 2024
   },
   {
     author_name: "Sophie Dubois",
     rating: 5,
-    text: "Un grand merci à toute l'équipe de Pledge pour leur excellent travail sur notre projet e-commerce. Le site est rapide, facile à utiliser et nos ventes ont augmenté de 35% depuis le lancement!",
+    text: "A big thank you to the entire Pledge team for their excellent work on our e-commerce project. The site is fast, easy to use, and our sales have increased by 35% since launch!",
     time: 1706900400, // February 3, 2024
   },
   {
     author_name: "Pierre Moreau",
     rating: 5,
-    text: "Pledge a développé une solution sur mesure pour notre entreprise qui a considérablement amélioré notre efficacité. Leur approche méthodique et leur communication claire ont rendu le processus très fluide.",
+    text: "Pledge developed a custom solution for our company that has significantly improved our efficiency. Their methodical approach and clear communication made the process very smooth.",
     time: 1704308400, // January 4, 2024
   }
 ];

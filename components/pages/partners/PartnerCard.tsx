@@ -10,14 +10,13 @@ import { ExternalLink } from "lucide-react";
 
 interface PartnerCardProps {
   name: string;
-  logo: string;
   category: string;
   description: string;
   website: string;
   featured?: boolean;
 }
 
-export default function PartnerCard({ name, logo, category, description, website, featured = false }: PartnerCardProps) {
+export default function PartnerCard({ name, category, description, website, featured = false }: PartnerCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -27,25 +26,7 @@ export default function PartnerCard({ name, logo, category, description, website
     >
       <Card className={`h-full flex flex-col transition-all duration-300 hover:shadow-lg ${featured ? 'border-primary/50 bg-primary/5 dark:bg-primary/10' : ''}`}>
         <CardHeader className="pb-4">
-          <div className="flex justify-between items-start">
-            <Badge variant={featured ? "default" : "secondary"} className="mb-2">
-              {category}
-            </Badge>
-            {featured && (
-              <Badge variant="outline" className="bg-primary/20 text-primary border-primary/30">
-                Featured Partner
-              </Badge>
-            )}
-          </div>
-          <div className="flex justify-center items-center h-20 mb-4 bg-white dark:bg-black/40 rounded-md p-4">
-            <Image
-              src={logo}
-              alt={`${name} logo`}
-              width={160}
-              height={80}
-              className="object-contain max-h-full"
-            />
-          </div>
+          {/* Category and featured tags removed as requested */}
           <CardTitle className="text-xl">{name}</CardTitle>
         </CardHeader>
         <CardContent className="flex-grow">

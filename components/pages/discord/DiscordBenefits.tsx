@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
@@ -14,6 +15,22 @@ import {
 } from "lucide-react";
 
 export default function DiscordBenefits() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
   const benefits = [
     {
       title: "Real-time Support",
@@ -75,31 +92,71 @@ export default function DiscordBenefits() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full flex flex-col">
-                <CardHeader>
-                  <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                    {benefit.icon}
+        {/* Mobile Carousel View */}
+        {isMobile && (
+          <div className="mb-10">
+            <div className="overflow-x-auto pb-6">
+              <div className="flex space-x-4 w-max px-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="w-[85vw] max-w-[300px] flex-shrink-0">
+                    <Card className="h-full flex flex-col">
+                      <CardHeader>
+                        <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                          {benefit.icon}
+                        </div>
+                        <CardTitle className="text-xl">{benefit.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent className="flex-grow">
+                        <CardDescription className="text-muted-foreground">
+                          {benefit.description}
+                        </CardDescription>
+                      </CardContent>
+                    </Card>
                   </div>
-                  <CardTitle className="text-xl">{benefit.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <CardDescription className="text-muted-foreground">
-                    {benefit.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+                ))}
+              </div>
+              <div className="flex justify-center mt-4">
+                <div className="flex space-x-2">
+                  {benefits.map((_, index) => (
+                    <div 
+                      key={index} 
+                      className={`h-2 w-2 rounded-full bg-primary/30`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        
+        {/* Desktop Grid View */}
+        {!isMobile && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full flex flex-col">
+                  <CardHeader>
+                    <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                      {benefit.icon}
+                    </div>
+                    <CardTitle className="text-xl">{benefit.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <CardDescription className="text-muted-foreground">
+                      {benefit.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

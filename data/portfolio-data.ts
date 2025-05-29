@@ -5,8 +5,8 @@ export const portfolioProjects: ClientProject[] = [
     id: "14",
     name: "Cabinet Michou",
     logo: "/images/portfolio/cabinet-michou-logo.png",
-    description: "Développement d'un site web professionnel pour un cabinet d'avocats spécialisé, avec système de prise de rendez-vous et espace client sécurisé.",
-    industry: "Juridique",
+    description: "Development of a professional website for a specialized law firm, with an appointment booking system and secure client portal.",
+    industry: "Legal",
     year: 2024,
     deliverables: [
       "Site Web Responsive",

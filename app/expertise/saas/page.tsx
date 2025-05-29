@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -28,7 +27,7 @@ export default function SaasExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Features"
+        title="What We Offer"
         subtitle="Everything you need for a successful SaaS product"
       />
       
@@ -36,8 +35,8 @@ export default function SaasExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="Technologies We Use"
-          subtitle="Modern tools for scalable SaaS solutions"
+          title="Technologies & Tools"
+          subtitle="Technologies & Tools"
         />
       )}
       
@@ -45,7 +44,7 @@ export default function SaasExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Development Process"
+          title="Our Process"
           subtitle="How we bring your SaaS vision to life"
         />
       )}
@@ -53,7 +52,7 @@ export default function SaasExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of SaaS Development"
+        title="Benefits"
         subtitle="Why choose the SaaS model for your business"
       />
       
@@ -65,15 +64,8 @@ export default function SaasExpertisePage() {
           subtitle="Common questions about SaaS development"
         />
       )}
-      
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="Success Stories"
-          subtitle="Real SaaS solutions for real clients"
-        />
-      )}
     </ExpertiseLayout>
   );
 }
+
+

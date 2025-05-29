@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -28,24 +27,15 @@ export default function CybersecurityExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Security Features"
+        title="What We Offer"
         subtitle="Comprehensive protection for your digital assets"
       />
-      
-      {/* Technologies Section */}
-      {expertise.technologies && (
-        <ExpertiseTechnologies 
-          technologies={expertise.technologies}
-          title="Security Technologies & Tools"
-          subtitle="Advanced solutions for robust protection"
-        />
-      )}
       
       {/* Process Section */}
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Security Implementation Process"
+          title="Our Process"
           subtitle="How we secure your business"
         />
       )}
@@ -53,7 +43,7 @@ export default function CybersecurityExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Professional Cybersecurity"
+        title="Benefits"
         subtitle="Why investing in security matters"
       />
       
@@ -65,15 +55,7 @@ export default function CybersecurityExpertisePage() {
           subtitle="Common questions about cybersecurity"
         />
       )}
-      
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="Security Success Stories"
-          subtitle="Real security solutions for real businesses"
-        />
-      )}
     </ExpertiseLayout>
   );
 }
+

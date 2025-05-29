@@ -1,7 +1,37 @@
-import { Github, Linkedin, Twitter } from "lucide-react";
+"use client";
+
+import { useState, useEffect } from "react";
+import { Github, Linkedin, Twitter, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Team() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if we're on mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Set initial value
+    checkMobile();
+    
+    // Add event listener
+    window.addEventListener('resize', checkMobile);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const handlePrevious = () => {
+    setCurrentIndex((prev) => Math.max(0, prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => Math.min(teamMembers.length - 1, prev + 1));
+  };
   const teamMembers = [
     {
       name: "Mehdi BEREL",
@@ -52,7 +82,8 @@ export default function Team() {
             Meet our leadership team guiding the vision and success of our company.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+        {/* Desktop view - grid layout */}
+        <div className={`${!isMobile ? 'grid gap-8 grid-cols-1 md:grid-cols-3' : 'hidden'}`}>
           {teamMembers.map((member, index) => (
             <div 
               key={index} 
@@ -80,6 +111,76 @@ export default function Team() {
             </div>
           ))}
         </div>
+
+        {/* Mobile view - carousel */}
+        {isMobile && (
+          <div className="relative">
+            {/* Navigation Buttons */}
+            <div className="absolute top-1/2 -left-4 -translate-y-1/2 z-10">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="rounded-full bg-background shadow-md"
+                onClick={handlePrevious}
+                disabled={currentIndex === 0}
+              >
+                <ChevronLeft className="h-5 w-5" />
+                <span className="sr-only">Previous</span>
+              </Button>
+            </div>
+
+            <div className="absolute top-1/2 -right-4 -translate-y-1/2 z-10">
+              <Button 
+                variant="outline" 
+                size="icon" 
+                className="rounded-full bg-background shadow-md"
+                onClick={handleNext}
+                disabled={currentIndex >= teamMembers.length - 1}
+              >
+                <ChevronRight className="h-5 w-5" />
+                <span className="sr-only">Next</span>
+              </Button>
+            </div>
+
+            {/* Single card display */}
+            <div className="px-4 transition-all duration-300">
+              <div 
+                key={teamMembers[currentIndex].name} 
+                className="bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in p-6"
+              >
+                <div>
+                  <h3 className="text-xl font-bold">{teamMembers[currentIndex].name}</h3>
+                  <p className="text-primary font-medium mb-1">{teamMembers[currentIndex].role}</p>
+                  <p className="text-muted-foreground text-sm mb-2">{teamMembers[currentIndex].companyRole}</p>
+                  <p className="text-muted-foreground mb-4">{teamMembers[currentIndex].bio}</p>
+                  <div className="flex space-x-3">
+                    <Link href={teamMembers[currentIndex].social.linkedin} className="text-muted-foreground hover:text-primary transition-colors">
+                      <Linkedin className="h-5 w-5" />
+                    </Link>
+                    <Link href={teamMembers[currentIndex].social.twitter} className="text-muted-foreground hover:text-primary transition-colors">
+                      <Twitter className="h-5 w-5" />
+                    </Link>
+                    <Link href={teamMembers[currentIndex].social.github} className="text-muted-foreground hover:text-primary transition-colors">
+                      <Github className="h-5 w-5" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Pagination dots */}
+              <div className="flex justify-center mt-4 space-x-2">
+                {teamMembers.map((_, idx) => (
+                  <button 
+                    key={idx}
+                    className={`w-2 h-2 rounded-full ${idx === currentIndex ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'}`}
+                    onClick={() => setCurrentIndex(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

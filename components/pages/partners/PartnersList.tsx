@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PartnerCard from "./PartnerCard";
 import PartnerCategories from "./PartnerCategories";
+import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
 
 // Partner data interface
 interface Partner {
@@ -42,21 +43,12 @@ const partnersData: Partner[] = [
   // Culture Partners - Foundations, schools, associations, communities
   {
     id: "3",
-    name: "Digital Education Foundation",
-    logo: "/images/partners/education.svg",
+    name: "Pepite France",
+    logo: "/images/partners/pepite.svg",
     category: "Culture",
-    description: "Non-profit organization focused on bringing technology education to underserved communities. We provide pro-bono technical consulting.",
-    website: "https://example.com/education",
+    description: "National network supporting student entrepreneurship across France. We collaborate on innovation programs and mentorship for young entrepreneurs.",
+    website: "https://www.pepite-france.fr",
     featured: true,
-    partnerType: "culture"
-  },
-  {
-    id: "4",
-    name: "Arts & Technology Association",
-    logo: "/images/partners/arts.svg",
-    category: "Culture",
-    description: "Community organization bridging the gap between arts and technology. We support their annual hackathon and creative tech workshops.",
-    website: "https://example.com/arts",
     partnerType: "culture"
   },
   
@@ -167,6 +159,19 @@ const partnersData: Partner[] = [
 ];
 
 export default function PartnersList() {
+  // State to detect if on mobile
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Check if on mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
   // Define our partner type categories with descriptions
   const partnerTypeDescriptions = {
     standard: "Loyal clients with preferred contract terms and conditions",
@@ -178,13 +183,12 @@ export default function PartnersList() {
   // Get unique categories from partners data
   const categories = Array.from(new Set(partnersData.map(partner => partner.category)));
   
-  // State for active category filter
-  const [activeCategory, setActiveCategory] = useState("all");
+  // State for active category filter - default to first non-Standard category
+  const filteredCategories = categories.filter(category => category !== "Standard");
+  const [activeCategory, setActiveCategory] = useState(filteredCategories[0] || "Culture");
   
-  // Filter partners based on active category
-  const filteredPartners = activeCategory === "all" 
-    ? partnersData 
-    : partnersData.filter(partner => partner.category === activeCategory);
+  // Filter partners based on active category and exclude Standard category
+  const filteredPartners = partnersData.filter(partner => partner.category === activeCategory);
 
   return (
     <section id="partners-list" className="py-16 md:py-24 bg-background">
@@ -192,30 +196,60 @@ export default function PartnersList() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
           Our Partnership Network
         </h2>
-        <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-12">
+        <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-8">
           We collaborate with a diverse range of partners across different categories to deliver exceptional value to our clients.
         </p>
         
         <PartnerCategories 
-          categories={categories} 
+          categories={categories.filter(category => category !== "Standard")} 
           activeCategory={activeCategory} 
           setActiveCategory={setActiveCategory} 
         />
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredPartners.map((partner) => (
-            <PartnerCard 
-              key={partner.id}
-              id={partner.id}
-              name={partner.name}
-              logo={partner.logo}
-              category={partner.category}
-              description={partner.description}
-              website={partner.website}
-              featured={partner.featured}
-            />
-          ))}
+        {/* Category description */}
+        <div className="mt-4 mb-8 p-6 bg-secondary/5 rounded-lg max-w-3xl mx-auto">
+          <h3 className="text-xl font-semibold mb-2">{activeCategory} Partners</h3>
+          <p className="text-muted-foreground">
+            {activeCategory === "Culture" && partnerTypeDescriptions.culture}
+            {activeCategory === "Technology" && partnerTypeDescriptions.technology}
+            {activeCategory === "Exclusive" && partnerTypeDescriptions.exclusive}
+          </p>
         </div>
+        
+        {isMobile ? (
+          // Mobile carousel view
+          <div className="mt-4">
+            <MobileCarousel>
+              {filteredPartners.map((partner) => (
+                <MobileCarouselItem key={partner.id}>
+                  <div className="px-1 py-2">
+                    <PartnerCard 
+                      name={partner.name}
+                      category={partner.category}
+                      description={partner.description}
+                      website={partner.website}
+                      featured={partner.featured}
+                    />
+                  </div>
+                </MobileCarouselItem>
+              ))}
+            </MobileCarousel>
+          </div>
+        ) : (
+          // Desktop grid view
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filteredPartners.map((partner) => (
+              <PartnerCard 
+                key={partner.id}
+                name={partner.name}
+                category={partner.category}
+                description={partner.description}
+                website={partner.website}
+                featured={partner.featured}
+              />
+            ))}
+          </div>
+        )}
         
         {filteredPartners.length === 0 && (
           <div className="text-center py-12">
@@ -223,17 +257,7 @@ export default function PartnersList() {
           </div>
         )}
         
-        {activeCategory !== "all" && (
-          <div className="mt-12 p-6 bg-secondary/5 rounded-lg max-w-3xl mx-auto">
-            <h3 className="text-xl font-semibold mb-2">{activeCategory} Partners</h3>
-            <p className="text-muted-foreground">
-              {activeCategory === "Standard" && partnerTypeDescriptions.standard}
-              {activeCategory === "Culture" && partnerTypeDescriptions.culture}
-              {activeCategory === "Technology" && partnerTypeDescriptions.technology}
-              {activeCategory === "Exclusive" && partnerTypeDescriptions.exclusive}
-            </p>
-          </div>
-        )}
+        {/* Category description moved above cards */}
       </div>
     </section>
   );

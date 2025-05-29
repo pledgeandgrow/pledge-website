@@ -16,15 +16,20 @@ export default function PartnerCategories({
   return (
     <div className="mb-10">
       <div className="flex flex-wrap justify-center gap-2 md:gap-4">
-        <Button
-          variant={activeCategory === "all" ? "default" : "outline"}
-          className="rounded-full"
-          onClick={() => setActiveCategory("all")}
-        >
-          All Partners
-        </Button>
+        {/* Manually sort categories to put Exclusive first */}
+        {categories.includes("Exclusive") && (
+          <Button
+            key="Exclusive"
+            variant={activeCategory === "Exclusive" ? "default" : "outline"}
+            className="rounded-full"
+            onClick={() => setActiveCategory("Exclusive")}
+          >
+            Exclusive
+          </Button>
+        )}
         
-        {categories.map((category) => (
+        {/* Show all other categories */}
+        {categories.filter(cat => cat !== "Exclusive").map((category) => (
           <Button
             key={category}
             variant={activeCategory === category ? "default" : "outline"}

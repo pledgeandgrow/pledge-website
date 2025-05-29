@@ -24,14 +24,14 @@ const integrationServices: ServiceCard[] = [
     description: "Solutions complètes de boutique en ligne avec traitement des paiements et gestion des stocks.",
     icon: <ShoppingCart className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Développement et intégration de solutions e-commerce",
+      type: "E-commerce solution development and integration",
       clients: ["Détaillants", "Grossistes", "Marques", "Startups", "PME"],
       sectors: ["Retail", "Mode", "Alimentation", "Électronique", "Artisanat", "Services"],
       recommendedFor: [
-        "Entreprises souhaitant vendre en ligne",
+        "Businesses wanting to sell online",
         "Commerces physiques cherchant à étendre leur présence en ligne",
         "Marques souhaitant vendre directement aux consommateurs (D2C)",
-        "Entreprises nécessitant une gestion omnicanale"
+        "Businesses requiring omnichannel management"
       ]
     },
     technology: {
@@ -66,10 +66,10 @@ const integrationServices: ServiceCard[] = [
     icon: <Brain className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Intégration d'intelligence artificielle et automatisation des processus",
-      clients: ["Startups", "PME", "Grandes entreprises", "Institutions"],
+      clients: ["Startups", "SMEs", "Large enterprises", "Institutions"],
       sectors: ["Finance", "Santé", "Retail", "Industrie", "Services", "Éducation"],
       recommendedFor: [
-        "Entreprises cherchant à optimiser leurs processus métier",
+        "Businesses looking to optimize their business processes",
         "Organisations souhaitant exploiter leurs données",
         "Services clients nécessitant une assistance automatisée",
         "Projets nécessitant des prédictions basées sur les données"
@@ -106,8 +106,8 @@ const integrationServices: ServiceCard[] = [
     description: "Applications blockchain sécurisées et transparentes pour diverses industries et cas d'utilisation.",
     icon: <Database className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Développement de solutions basées sur la blockchain",
-      clients: ["Startups", "Entreprises innovantes", "Institutions financières", "Organisations"],
+      type: "Blockchain-based solution development",
+      clients: ["Startups", "Innovative businesses", "Financial institutions", "Organizations"],
       sectors: ["Finance", "Supply Chain", "Immobilier", "Santé", "Droit", "Art"],
       recommendedFor: [
         "Projets nécessitant une transparence et une traçabilité accrues",
@@ -148,11 +148,11 @@ const integrationServices: ServiceCard[] = [
     icon: <Shield className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Implémentation de solutions de cybersécurité",
-      clients: ["PME", "Grandes entreprises", "Institutions", "Organisations gouvernementales"],
+      clients: ["SMEs", "Large enterprises", "Institutions", "Government organizations"],
       sectors: ["Finance", "Santé", "Défense", "Éducation", "Retail", "Services"],
       recommendedFor: [
         "Organisations manipulant des données sensibles",
-        "Entreprises souhaitant renforcer leur posture de sécurité",
+        "Businesses wanting to strengthen their security posture",
         "Projets nécessitant une conformité réglementaire",
         "Systèmes exposés à des risques de sécurité élevés"
       ]
@@ -185,17 +185,17 @@ const integrationServices: ServiceCard[] = [
   {
     id: "cloud-devops",
     title: "Cloud / DevOps",
-    description: "Solutions cloud évolutives et pratiques DevOps pour optimiser votre infrastructure et déploiements.",
+    description: "Scalable cloud solutions and DevOps practices to optimize your infrastructure and deployments.",
     icon: <Cloud className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Implémentation de solutions cloud et pratiques DevOps",
-      clients: ["Startups", "PME", "Grandes entreprises", "Organisations technologiques"],
+      clients: ["Startups", "SMEs", "Large enterprises", "Technology organizations"],
       sectors: ["Technologie", "Finance", "Santé", "E-commerce", "Médias", "Services"],
       recommendedFor: [
-        "Entreprises cherchant à migrer vers le cloud",
-        "Organisations souhaitant optimiser leurs processus de développement",
+        "Businesses looking to migrate to the cloud",
+        "Organizations wanting to optimize their development processes",
         "Projets nécessitant une infrastructure évolutive",
-        "Équipes de développement cherchant à améliorer leur cycle de livraison"
+        "Development teams looking to improve their delivery cycle"
       ]
     },
     technology: {
@@ -210,7 +210,7 @@ const integrationServices: ServiceCard[] = [
         "Architecture système actuelle",
         "Objectifs de performance et d'évolutivité",
         "Exigences de disponibilité et de reprise après sinistre",
-        "Processus de développement existants"
+        "Existing development processes"
       ],
       deliverables: [
         "Infrastructure cloud configurée",

@@ -1,224 +1,220 @@
 "use client";
 
-import Image from "next/image";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { ExternalLink, Heart, MessageCircle, Share2, Eye } from "lucide-react";
-import { 
-  SiFacebook, 
-  SiYoutube, 
-  SiTiktok 
-} from "react-icons/si";
 import Link from "next/link";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { FaInstagram, FaFacebook, FaTiktok, FaLinkedin, FaYoutube } from "react-icons/fa";
 
-interface SocialPost {
-  id: string;
+interface SocialMediaCardProps {
   platform: string;
-  content: string;
-  image: string;
-  date: string;
-  likes: number;
-  comments: number;
-  shares: number;
-  views?: number;
+  icon: React.ReactNode;
+  username: string;
   url: string;
+  followers: string;
+  color: string;
+  description: string;
+  bgColor: string;
 }
 
+const SocialMediaCard = ({
+  platform,
+  icon,
+  username,
+  url,
+  followers,
+  color,
+  description,
+  bgColor
+}: SocialMediaCardProps) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      whileHover={{ y: -5 }}
+      className="h-full"
+    >
+      <Card className="overflow-hidden h-full border border-border hover:shadow-md transition-all duration-300">
+        <div className={`h-48 w-full flex items-center justify-center ${bgColor}`}>
+          <div className="text-7xl text-white">{icon}</div>
+        </div>
+        <CardContent className="p-5">
+          <div className="flex justify-between items-center mb-3">
+            <h3 className="font-bold text-lg">{platform}</h3>
+            <span className="text-sm text-muted-foreground">{followers} followers</span>
+          </div>
+          <p className="text-muted-foreground mb-4 line-clamp-3">{description}</p>
+          <Button asChild variant="outline" className="w-full">
+            <Link href={url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
+              Follow Us <ExternalLink className="h-4 w-4" />
+            </Link>
+          </Button>
+        </CardContent>
+      </Card>
+    </motion.div>
+  );
+};
+
+// Mobile-specific card component with a simpler layout
+const MobileSocialMediaCard = ({
+  platform,
+  icon,
+  url,
+  followers,
+  bgColor
+}: Pick<SocialMediaCardProps, 'platform' | 'icon' | 'url' | 'followers' | 'bgColor'>) => {
+  return (
+    <Link 
+      href={url} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="block w-full"
+    >
+      <div className={`${bgColor} rounded-lg p-4 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow`}>
+        <div className="text-4xl text-white">{icon}</div>
+        <div className="text-white">
+          <div className="font-bold">{platform}</div>
+          <div className="text-xs opacity-80">{followers} followers</div>
+        </div>
+      </div>
+    </Link>
+  );
+};
+
 export default function SocialMediaSection() {
-  const platforms = [
-    { id: "all", name: "All Platforms", icon: null },
-    { id: "facebook", name: "Facebook", icon: <SiFacebook className="h-4 w-4" /> },
-    { id: "youtube", name: "YouTube", icon: <SiYoutube className="h-4 w-4" /> },
-    { id: "tiktok", name: "TikTok", icon: <SiTiktok className="h-4 w-4" /> },
-  ];
-
-  const socialPosts: SocialPost[] = [
-    {
-      id: "insta1",
-      platform: "instagram",
-      content: "Celebrating our team's success at the Annual Digital Innovation Awards! 🏆 #DigitalExcellence #PledgeAndGrow",
-      image: "/images/media/social/instagram-awards.jpg",
-      date: "April 15, 2025",
-      likes: 1243,
-      comments: 89,
-      shares: 56,
-      url: "https://instagram.com/pledgeandgrow"
-    },
-    {
-      id: "facebook1",
-      platform: "facebook",
-      content: "We're hiring! Join our growing team of digital experts and help shape the future of technology. Check out our Careers page for open positions in web development, UX/UI design, and digital marketing.",
-      image: "/images/media/social/facebook-hiring.jpg",
-      date: "March 10, 2025",
-      likes: 543,
-      comments: 76,
-      shares: 124,
-      url: "https://facebook.com/pledgeandgrow"
-    },
-    {
-      id: "youtube1",
-      platform: "youtube",
-      content: "Watch our CEO's keynote speech at the Digital Transformation Summit 2025, discussing the future of AI in business applications and how companies can prepare for the next wave of innovation.",
-      image: "/images/media/social/youtube-keynote.jpg",
-      date: "February 18, 2025",
-      likes: 1876,
-      comments: 234,
-      shares: 412,
-      views: 24567,
-      url: "https://youtube.com/pledgeandgrow"
-    },
-    {
-      id: "tiktok1",
-      platform: "tiktok",
-      content: "Behind the scenes at Pledge & Grow: Watch our design team's creative process in action! #DesignProcess #CreativeTech",
-      image: "/images/media/social/tiktok-behindscenes.jpg",
-      date: "April 10, 2025",
-      likes: 3421,
-      comments: 187,
-      shares: 876,
-      views: 45678,
-      url: "https://tiktok.com/@pledgeandgrow"
-    }
-  ];
-
-  const formatNumber = (num: number): string => {
-    if (num >= 1000000) {
-      return (num / 1000000).toFixed(1) + 'M';
-    } else if (num >= 1000) {
-      return (num / 1000).toFixed(1) + 'K';
-    } else {
-      return num.toString();
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const nextSlide = () => {
+    if (currentIndex < socialMediaAccounts.length - 1) {
+      setCurrentIndex(currentIndex + 1);
     }
   };
-
-  const getPlatformIcon = (platform: string) => {
-    switch (platform) {
-      case 'facebook':
-        return <SiFacebook className="h-5 w-5 text-blue-700" />;
-      case 'youtube':
-        return <SiYoutube className="h-5 w-5 text-red-600" />;
-      case 'tiktok':
-        return <SiTiktok className="h-5 w-5 text-black dark:text-white" />;
-      default:
-        return null;
+  
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
     }
   };
+  
+  // Auto-advance the carousel every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentIndex < socialMediaAccounts.length - 1) {
+        setCurrentIndex(currentIndex + 1);
+      } else {
+        setCurrentIndex(0);
+      }
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
+  const socialMediaAccounts = [
+    {
+      platform: "Instagram",
+      icon: <FaInstagram />,
+      username: "pledgeandgrow",
+      url: "https://instagram.com/pledgeandgrow",
+      followers: "12.5K",
+      color: "pink-500",
+      description: "Follow us for inspiring stories, behind-the-scenes content, and updates on our latest projects and initiatives.",
+      bgColor: "bg-gradient-to-r from-purple-500 to-pink-500"
+    },
+    {
+      platform: "Facebook",
+      icon: <FaFacebook />,
+      username: "pledgeandgrow",
+      url: "https://facebook.com/pledgeandgrow",
+      followers: "8.3K",
+      color: "blue-600",
+      description: "Join our community to stay updated on events, announcements, and engaging discussions about technology for good.",
+      bgColor: "bg-blue-600"
+    },
+    {
+      platform: "TikTok",
+      icon: <FaTiktok />,
+      username: "pledgeandgrow",
+      url: "https://tiktok.com/@pledgeandgrow",
+      followers: "15.2K",
+      color: "black",
+      description: "Watch our short-form videos showcasing tech tips, innovation highlights, and fun moments from our team.",
+      bgColor: "bg-black"
+    },
+    {
+      platform: "LinkedIn",
+      icon: <FaLinkedin />,
+      username: "pledge-and-grow",
+      url: "https://linkedin.com/company/pledge-and-grow",
+      followers: "5.7K",
+      color: "blue-700",
+      description: "Connect with us professionally for industry insights, career opportunities, and business partnership discussions.",
+      bgColor: "bg-blue-700"
+    },
+    {
+      platform: "YouTube",
+      icon: <FaYoutube />,
+      username: "PledgeAndGrowOfficial",
+      url: "https://youtube.com/c/PledgeAndGrowOfficial",
+      followers: "7.1K",
+      color: "red-600",
+      description: "Subscribe to our channel for in-depth tutorials, webinars, event recordings, and impact stories from our projects.",
+      bgColor: "bg-red-600"
+    }
+  ];
 
   return (
-    <section id="social-media" className="py-16 md:py-24">
+    <section className="py-16 md:py-24">
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Social Media Presence</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+            Connect With Us
+          </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Follow us across our social media channels to stay updated with our latest news, insights, and behind-the-scenes content.
+            Follow us on social media to stay updated on our latest projects, events, and initiatives. 
+            Join our growing community of tech enthusiasts and change-makers.
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {platforms.slice(1).map((platform) => (
-            <Button 
-              key={platform.id}
-              variant="outline" 
-              asChild
-              className="flex items-center gap-2"
-            >
-              <Link href={`https://${platform.id}.com/${platform.id === 'twitter' ? '' : 'company/'}pledgeandgrow`} target="_blank" rel="noopener noreferrer">
-                {platform.icon}
-                <span>Follow on {platform.name}</span>
-              </Link>
-            </Button>
+        {/* Desktop view */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {socialMediaAccounts.map((account) => (
+            <SocialMediaCard
+              key={account.platform}
+              platform={account.platform}
+              icon={account.icon}
+              username={account.username}
+              url={account.url}
+              followers={account.followers}
+              color={account.color}
+              description={account.description}
+              bgColor={account.bgColor}
+            />
           ))}
         </div>
-
-        <Tabs defaultValue="all" className="w-full">
-          <TabsList className="flex flex-wrap justify-center mb-8">
-            {platforms.map((platform) => (
-              <TabsTrigger key={platform.id} value={platform.id} className="flex items-center gap-2">
-                {platform.icon}
-                <span>{platform.name}</span>
-              </TabsTrigger>
-            ))}
-          </TabsList>
-
-          {platforms.map((platform) => (
-            <TabsContent key={platform.id} value={platform.id} className="mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {socialPosts
-                  .filter(post => platform.id === "all" || post.platform === platform.id)
-                  .map((post) => (
-                    <motion.div
-                      key={post.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                      viewport={{ once: true }}
-                    >
-                      <Card className="h-full flex flex-col overflow-hidden hover:shadow-md transition-shadow">
-                        <CardHeader className="pb-2">
-                          <div className="flex items-center justify-between">
-                            <div className="flex items-center gap-2">
-                              {getPlatformIcon(post.platform)}
-                              <span className="font-medium">{post.platform.charAt(0).toUpperCase() + post.platform.slice(1)}</span>
-                            </div>
-                            <span className="text-sm text-muted-foreground">{post.date}</span>
-                          </div>
-                        </CardHeader>
-                        <CardContent className="flex-grow p-0">
-                          <div className="relative aspect-video w-full overflow-hidden">
-                            <Image
-                              src={post.image}
-                              alt={`${post.platform} post`}
-                              fill
-                              className="object-cover"
-                            />
-                          </div>
-                          <div className="p-4">
-                            <p className="text-sm mb-4">{post.content}</p>
-                            <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                              <div className="flex items-center gap-1">
-                                <Heart className="h-4 w-4" />
-                                <span>{formatNumber(post.likes)}</span>
-                              </div>
-                              <div className="flex items-center gap-1">
-                                <MessageCircle className="h-4 w-4" />
-                                <span>{formatNumber(post.comments)}</span>
-                              </div>
-                              <div className="flex items-center gap-1">
-                                <Share2 className="h-4 w-4" />
-                                <span>{formatNumber(post.shares)}</span>
-                              </div>
-                              {post.views && (
-                                <div className="flex items-center gap-1">
-                                  <Eye className="h-4 w-4" />
-                                  <span>{formatNumber(post.views)}</span>
-                                </div>
-                              )}
-                            </div>
-                          </div>
-                        </CardContent>
-                        <CardFooter className="pt-2">
-                          <Button variant="outline" size="sm" asChild className="w-full">
-                            <Link href={post.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-                              View on {post.platform.charAt(0).toUpperCase() + post.platform.slice(1)}
-                              <ExternalLink className="h-4 w-4" />
-                            </Link>
-                          </Button>
-                        </CardFooter>
-                      </Card>
-                    </motion.div>
-                  ))}
-              </div>
-            </TabsContent>
+        
+        {/* Mobile view - simple stacked list */}
+        <div className="md:hidden space-y-4 px-4">
+          {socialMediaAccounts.map((account) => (
+            <MobileSocialMediaCard
+              key={account.platform}
+              platform={account.platform}
+              icon={account.icon}
+              url={account.url}
+              followers={account.followers}
+              bgColor={account.bgColor}
+            />
           ))}
-        </Tabs>
+        </div>
       </div>
     </section>
   );

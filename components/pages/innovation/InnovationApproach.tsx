@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,6 +20,22 @@ interface ApproachItem {
 }
 
 export default function InnovationApproach() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
   const approachItems: ApproachItem[] = [
     {
       icon: <Lightbulb className="h-10 w-10 text-primary" />,
@@ -72,13 +89,15 @@ export default function InnovationApproach() {
               Our commitment to innovation enables us to anticipate industry trends, solve complex problems 
               with creative solutions, and continuously improve our service offerings to meet evolving digital needs.
             </p>
-            <div className="relative h-80 w-full rounded-lg overflow-hidden mt-8 lg:hidden">
+            <div className="relative h-80 w-full rounded-2xl overflow-hidden mt-8 lg:hidden shadow-lg border border-border">
               <Image
-                src="/images/innovation/innovation-approach.jpg"
+                src="/images/innovation/innovation.png"
                 alt="Innovation at Pledge & Grow"
                 fill
                 className="object-cover"
+                priority
               />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-background/10 rounded-2xl"></div>
             </div>
           </motion.div>
           
@@ -89,36 +108,72 @@ export default function InnovationApproach() {
             viewport={{ once: true }}
             className="hidden lg:block"
           >
-            <div className="relative h-[500px] w-full rounded-lg overflow-hidden">
+            <div className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-lg border border-border">
               <Image
-                src="/images/innovation/innovation-approach.jpg"
+                src="/images/innovation/innovation.png"
                 alt="Innovation at Pledge & Grow"
                 fill
                 className="object-cover"
+                priority
               />
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-background/10 rounded-2xl"></div>
             </div>
           </motion.div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-          {approachItems.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Card className="h-full">
-                <CardContent className="pt-6">
-                  <div className="mb-4">{item.icon}</div>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+        {/* Mobile Carousel View */}
+        {isMobile && (
+          <div className="mt-16">
+            <div className="overflow-x-auto pb-6">
+              <div className="flex space-x-4 w-max px-4">
+                {approachItems.map((item, index) => (
+                  <div key={index} className="w-[85vw] max-w-[300px] flex-shrink-0">
+                    <Card className="h-full">
+                      <CardContent className="pt-6">
+                        <div className="mb-4">{item.icon}</div>
+                        <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                        <p className="text-muted-foreground">{item.description}</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+              <div className="flex justify-center mt-4">
+                <div className="flex space-x-2">
+                  {approachItems.map((_, index) => (
+                    <div 
+                      key={index} 
+                      className={`h-2 w-2 rounded-full bg-primary/30`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        
+        {/* Desktop Grid View */}
+        {!isMobile && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+            {approachItems.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="h-full">
+                  <CardContent className="pt-6">
+                    <div className="mb-4">{item.icon}</div>
+                    <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                    <p className="text-muted-foreground">{item.description}</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

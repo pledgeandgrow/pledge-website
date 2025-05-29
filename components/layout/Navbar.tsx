@@ -109,8 +109,8 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/methodology" className="text-gray-700 dark:text-gray-300">
-                          Methodology
+                        <Link href="/ecosysteme" className="text-gray-700 dark:text-gray-300">
+                          Ecosysteme
                         </Link>
                       </li>
                     </ul>
@@ -347,8 +347,8 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/methodology" className="text-gray-700 dark:text-gray-300">
-                          Methodology
+                        <Link href="/ecosysteme" className="text-gray-700 dark:text-gray-300">
+                          Ecosysteme
                         </Link>
                       </li>
                     </ul>

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
   ShoppingBag, 
@@ -15,7 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { useState } from "react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 interface Industry {
   id: string;
@@ -28,6 +29,22 @@ interface Industry {
 }
 
 export default function IndustrySolutions() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
   const industries: Industry[] = [
     {
       id: "retail",
@@ -123,39 +140,90 @@ export default function IndustrySolutions() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {industries.map((industry, index) => (
-            <motion.div
-              key={industry.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              viewport={{ once: true }}
-            >
-              <Card 
-                className="h-full cursor-pointer hover:shadow-md transition-shadow duration-300"
-                onClick={() => setActiveIndustry(industry)}
-              >
-                <CardHeader>
-                  <div className="bg-primary/10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                    {industry.icon}
+        {/* Mobile Carousel View */}
+        {isMobile && (
+          <div className="mb-10">
+            <div className="overflow-x-auto pb-6">
+              <div className="flex space-x-4 w-max px-4">
+                {industries.map((industry, index) => (
+                  <div key={industry.id} className="w-[85vw] max-w-[300px] flex-shrink-0">
+                    <Card 
+                      className="h-full cursor-pointer hover:shadow-md transition-shadow duration-300"
+                      onClick={() => setActiveIndustry(industry)}
+                    >
+                      <CardHeader>
+                        <div className="bg-primary/10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                          {industry.icon}
+                        </div>
+                        <CardTitle className="text-xl">{industry.title}</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-muted-foreground mb-4">
+                          {industry.description}
+                        </CardDescription>
+                      </CardContent>
+                      <CardFooter>
+                        <Button variant="outline" size="sm" className="w-full">
+                          View Solutions
+                        </Button>
+                      </CardFooter>
+                    </Card>
                   </div>
-                  <CardTitle className="text-xl">{industry.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground mb-4">
-                    {industry.description}
-                  </CardDescription>
-                </CardContent>
-                <CardFooter>
-                  <Button variant="outline" size="sm" className="w-full">
-                    View Solutions
-                  </Button>
-                </CardFooter>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+                ))}
+              </div>
+              <div className="flex justify-center mt-4">
+                <div className="flex space-x-2">
+                  {industries.slice(0, Math.min(5, industries.length)).map((_, index) => (
+                    <div 
+                      key={index} 
+                      className={`h-2 w-2 rounded-full bg-primary/30`}
+                    />
+                  ))}
+                  {industries.length > 5 && (
+                    <div className="h-2 w-2 rounded-full bg-primary/30">...</div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Desktop Grid View */}
+        {!isMobile && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {industries.map((industry, index) => (
+              <motion.div
+                key={industry.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                viewport={{ once: true }}
+              >
+                <Card 
+                  className="h-full cursor-pointer hover:shadow-md transition-shadow duration-300"
+                  onClick={() => setActiveIndustry(industry)}
+                >
+                  <CardHeader>
+                    <div className="bg-primary/10 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                      {industry.icon}
+                    </div>
+                    <CardTitle className="text-xl">{industry.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-muted-foreground mb-4">
+                      {industry.description}
+                    </CardDescription>
+                  </CardContent>
+                  <CardFooter>
+                    <Button variant="outline" size="sm" className="w-full">
+                      View Solutions
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        )}
 
         {activeIndustry && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
@@ -222,11 +290,6 @@ export default function IndustrySolutions() {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-end">
-                  {activeIndustry.caseStudyAvailable && (
-                    <Badge variant="outline" className="self-start sm:self-auto">
-                      Case Study Available
-                    </Badge>
-                  )}
                   <Button asChild>
                     <Link href={`/contact?subject=${activeIndustry.title} Solutions`}>
                       Discuss Your Project

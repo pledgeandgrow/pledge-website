@@ -1,6 +1,6 @@
 "use client";
 
-
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,6 +26,22 @@ interface TechRadarItem {
 }
 
 export default function TechnologyRadar() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
   const categories: TechCategory[] = [
     {
       id: "all",
@@ -194,13 +210,29 @@ export default function TechnologyRadar() {
         </div>
 
         <Tabs defaultValue="all" className="w-full">
-          <TabsList className="flex flex-wrap justify-center mb-8">
-            {categories.map((category) => (
-              <TabsTrigger key={category.id} value={category.id}>
-                {category.name}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+          {/* Desktop Tabs */}
+          {!isMobile && (
+            <TabsList className="flex flex-wrap justify-center mb-8">
+              {categories.map((category) => (
+                <TabsTrigger key={category.id} value={category.id}>
+                  {category.name}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          )}
+          
+          {/* Mobile Tabs Scrollable */}
+          {isMobile && (
+            <div className="overflow-x-auto pb-4">
+              <TabsList className="flex mb-8 w-max px-4">
+                {categories.map((category) => (
+                  <TabsTrigger key={category.id} value={category.id}>
+                    {category.name}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </div>
+          )}
 
           {categories.map((category) => (
             <TabsContent key={category.id} value={category.id} className="mt-0">
@@ -208,79 +240,180 @@ export default function TechnologyRadar() {
                 {category.description}
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <span className="w-3 h-3 rounded-full bg-green-500"></span>
-                      Adopt
-                    </CardTitle>
-                    <CardDescription>{statusDescriptions.adopt}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <TechStack 
-                      technologies={getTechByCategory(category.id, "adopt")} 
-                      size="md" 
-                      showLabels 
-                      className="justify-center"
-                    />
-                  </CardContent>
-                </Card>
+              {/* Mobile Carousel View */}
+              {isMobile && (
+                <div className="mb-12">
+                  <div className="overflow-x-auto pb-6">
+                    <div className="flex space-x-4 w-max px-4">
+                      <div className="w-[85vw] max-w-[300px] flex-shrink-0">
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                              <span className="w-3 h-3 rounded-full bg-green-500"></span>
+                              Adopt
+                            </CardTitle>
+                            <CardDescription>{statusDescriptions.adopt}</CardDescription>
+                          </CardHeader>
+                          <CardContent>
+                            <TechStack 
+                              technologies={getTechByCategory(category.id, "adopt")} 
+                              size="md" 
+                              showLabels 
+                              className="justify-center"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                      
+                      <div className="w-[85vw] max-w-[300px] flex-shrink-0">
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                              <span className="w-3 h-3 rounded-full bg-blue-500"></span>
+                              Trial
+                            </CardTitle>
+                            <CardDescription>{statusDescriptions.trial}</CardDescription>
+                          </CardHeader>
+                          <CardContent>
+                            <TechStack 
+                              technologies={getTechByCategory(category.id, "trial")} 
+                              size="md" 
+                              showLabels 
+                              className="justify-center"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                      
+                      <div className="w-[85vw] max-w-[300px] flex-shrink-0">
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                              <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
+                              Assess
+                            </CardTitle>
+                            <CardDescription>{statusDescriptions.assess}</CardDescription>
+                          </CardHeader>
+                          <CardContent>
+                            <TechStack 
+                              technologies={getTechByCategory(category.id, "assess")} 
+                              size="md" 
+                              showLabels 
+                              className="justify-center"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                      
+                      <div className="w-[85vw] max-w-[300px] flex-shrink-0">
+                        <Card>
+                          <CardHeader>
+                            <CardTitle className="flex items-center gap-2">
+                              <span className="w-3 h-3 rounded-full bg-red-500"></span>
+                              Hold
+                            </CardTitle>
+                            <CardDescription>{statusDescriptions.hold}</CardDescription>
+                          </CardHeader>
+                          <CardContent>
+                            <TechStack 
+                              technologies={getTechByCategory(category.id, "hold")} 
+                              size="md" 
+                              showLabels 
+                              className="justify-center"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </div>
+                    
+                    <div className="flex justify-center mt-4">
+                      <div className="flex space-x-2">
+                        <div className="h-2 w-2 rounded-full bg-primary/30" />
+                        <div className="h-2 w-2 rounded-full bg-primary/30" />
+                        <div className="h-2 w-2 rounded-full bg-primary/30" />
+                        <div className="h-2 w-2 rounded-full bg-primary/30" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              
+              {/* Desktop Grid View */}
+              {!isMobile && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <span className="w-3 h-3 rounded-full bg-green-500"></span>
+                        Adopt
+                      </CardTitle>
+                      <CardDescription>{statusDescriptions.adopt}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <TechStack 
+                        technologies={getTechByCategory(category.id, "adopt")} 
+                        size="md" 
+                        showLabels 
+                        className="justify-center"
+                      />
+                    </CardContent>
+                  </Card>
 
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <span className="w-3 h-3 rounded-full bg-blue-500"></span>
-                      Trial
-                    </CardTitle>
-                    <CardDescription>{statusDescriptions.trial}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <TechStack 
-                      technologies={getTechByCategory(category.id, "trial")} 
-                      size="md" 
-                      showLabels 
-                      className="justify-center"
-                    />
-                  </CardContent>
-                </Card>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <span className="w-3 h-3 rounded-full bg-blue-500"></span>
+                        Trial
+                      </CardTitle>
+                      <CardDescription>{statusDescriptions.trial}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <TechStack 
+                        technologies={getTechByCategory(category.id, "trial")} 
+                        size="md" 
+                        showLabels 
+                        className="justify-center"
+                      />
+                    </CardContent>
+                  </Card>
 
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
-                      Assess
-                    </CardTitle>
-                    <CardDescription>{statusDescriptions.assess}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <TechStack 
-                      technologies={getTechByCategory(category.id, "assess")} 
-                      size="md" 
-                      showLabels 
-                      className="justify-center"
-                    />
-                  </CardContent>
-                </Card>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
+                        Assess
+                      </CardTitle>
+                      <CardDescription>{statusDescriptions.assess}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <TechStack 
+                        technologies={getTechByCategory(category.id, "assess")} 
+                        size="md" 
+                        showLabels 
+                        className="justify-center"
+                      />
+                    </CardContent>
+                  </Card>
 
-                <Card>
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <span className="w-3 h-3 rounded-full bg-red-500"></span>
-                      Hold
-                    </CardTitle>
-                    <CardDescription>{statusDescriptions.hold}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <TechStack 
-                      technologies={getTechByCategory(category.id, "hold")} 
-                      size="md" 
-                      showLabels 
-                      className="justify-center"
-                    />
-                  </CardContent>
-                </Card>
-              </div>
+                  <Card>
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <span className="w-3 h-3 rounded-full bg-red-500"></span>
+                        Hold
+                      </CardTitle>
+                      <CardDescription>{statusDescriptions.hold}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <TechStack 
+                        technologies={getTechByCategory(category.id, "hold")} 
+                        size="md" 
+                        showLabels 
+                        className="justify-center"
+                      />
+                    </CardContent>
+                  </Card>
+                </div>
+              )}
             </TabsContent>
           ))}
         </Tabs>

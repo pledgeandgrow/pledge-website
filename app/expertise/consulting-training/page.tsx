@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -28,7 +27,7 @@ export default function ConsultingTrainingExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Services"
+        title="What We Offer"
         subtitle="Expert guidance and specialized training"
       />
       
@@ -36,7 +35,7 @@ export default function ConsultingTrainingExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="Technologies & Frameworks"
+          title="Technologies & Tools"
           subtitle="Modern tools we teach and implement"
         />
       )}
@@ -45,7 +44,7 @@ export default function ConsultingTrainingExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Consulting & Training Approach"
+          title="Our Process"
           subtitle="How we transfer knowledge and expertise"
         />
       )}
@@ -53,7 +52,7 @@ export default function ConsultingTrainingExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Professional Consulting & Training"
+        title="Benefits"
         subtitle="Why investing in your team's capabilities matters"
       />
       
@@ -63,15 +62,6 @@ export default function ConsultingTrainingExpertisePage() {
           faqs={expertise.faqs}
           title="Frequently Asked Questions"
           subtitle="Common questions about our consulting and training services"
-        />
-      )}
-      
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="Success Stories"
-          subtitle="Real transformation through knowledge sharing"
         />
       )}
     </ExpertiseLayout>

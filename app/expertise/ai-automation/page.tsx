@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -28,7 +27,7 @@ export default function AIAutomationExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Features"
+        title="What We Offer"
         subtitle="Transformative AI & automation capabilities"
       />
       
@@ -36,7 +35,7 @@ export default function AIAutomationExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="AI Technologies & Frameworks"
+          title="Technologies & Tools"
           subtitle="Cutting-edge tools for intelligent solutions"
         />
       )}
@@ -45,7 +44,7 @@ export default function AIAutomationExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our AI Implementation Process"
+          title="Our Process"
           subtitle="How we integrate AI into your business"
         />
       )}
@@ -53,7 +52,7 @@ export default function AIAutomationExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of AI & Automation"
+        title="Benefits"
         subtitle="How intelligent technology transforms business"
       />
       
@@ -63,15 +62,6 @@ export default function AIAutomationExpertisePage() {
           faqs={expertise.faqs}
           title="Frequently Asked Questions"
           subtitle="Common questions about AI implementation"
-        />
-      )}
-      
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="AI Success Stories"
-          subtitle="Real AI solutions for real businesses"
         />
       )}
     </ExpertiseLayout>

@@ -20,106 +20,72 @@ export default function ReferencesList() {
   const references: Reference[] = [
     // Legal Listings
     {
-      id: "infogreffe",
-      name: "Infogreffe",
-      url: "https://www.infogreffe.fr",
-      description: "Official French business registry listing for Pledge & Grow.",
+      id: "hoodspot",
+      name: "01. Hoodspot",
+      url: "https://www.hoodspot.fr",
+      description: "Business analytics platform with detailed information about Pledge & Grow.",
       category: "legal",
       date: "Updated annually"
     },
     {
-      id: "societe",
-      name: "Société.com",
-      url: "https://www.societe.com",
-      description: "French company information database with legal and financial details about Pledge & Grow.",
+      id: "figaro-entreprise",
+      name: "02. Figaro Entreprise",
+      url: "https://entreprise.lefigaro.fr",
+      description: "Business section of Le Figaro newspaper featuring company profiles including Pledge & Grow.",
+      category: "press",
+      date: "Updated quarterly"
+    },
+    {
+      id: "data-gouv",
+      name: "03. Data Gouv",
+      url: "https://www.data.gouv.fr",
+      description: "French government open data platform with official business information about Pledge & Grow.",
       category: "legal",
       date: "Updated quarterly"
     },
     {
-      id: "verif",
-      name: "Verif.com",
-      url: "https://www.verif.com",
-      description: "Business verification platform with legal and financial information about Pledge & Grow.",
+      id: "societe",
+      name: "04. Société",
+      url: "https://www.societe.com",
+      description: "French company information database with legal and financial details about Pledge & Grow.",
       category: "legal",
       date: "Updated quarterly"
     },
     
     // Business Directories
     {
-      id: "kompass",
-      name: "Kompass",
-      url: "https://fr.kompass.com",
-      description: "International B2B directory featuring Pledge & Grow's services and contact information.",
-      category: "directory",
-      date: "Updated 2024"
-    },
-    {
-      id: "europages",
-      name: "Europages",
-      url: "https://www.europages.fr",
-      description: "European B2B platform listing Pledge & Grow among digital service providers.",
-      category: "directory",
-      date: "Updated 2024"
-    },
-    {
-      id: "pagesjaunes",
-      name: "Pages Jaunes",
+      id: "pages-jaunes",
+      name: "05. Pages Jaunes",
       url: "https://www.pagesjaunes.fr",
       description: "French business directory with Pledge & Grow's contact information and services.",
       category: "directory",
       date: "Updated 2024"
     },
-    
-    // Press Mentions
     {
-      id: "lesechos",
-      name: "Les Echos",
-      url: "https://www.lesechos.fr",
-      description: "French business newspaper that featured Pledge & Grow in an article about innovative digital agencies.",
-      category: "press",
-      date: "March 2024"
+      id: "legaliste",
+      name: "06. Le Légaliste",
+      url: "https://www.legaliste.fr",
+      description: "Legal business information platform with company registration details for Pledge & Grow.",
+      category: "legal",
+      date: "Updated 2024"
     },
     {
-      id: "latribune",
-      name: "La Tribune",
-      url: "https://www.latribune.fr",
-      description: "Business publication that mentioned Pledge & Grow in a feature on digital transformation.",
-      category: "press",
-      date: "January 2024"
-    },
-    {
-      id: "techcrunch",
-      name: "TechCrunch",
-      url: "https://techcrunch.com",
-      description: "Technology news website that included Pledge & Grow in an article about European tech startups.",
-      category: "press",
-      date: "November 2023"
+      id: "greffe",
+      name: "07. Greffe",
+      url: "https://www.greffe-tc-paris.fr",
+      description: "Official commercial court registry with legal documentation for Pledge & Grow.",
+      category: "legal",
+      date: "Updated 2024"
     },
     
     // Partner Platforms
     {
-      id: "awwwards",
-      name: "Awwwards",
-      url: "https://www.awwwards.com",
-      description: "Web design awards platform where Pledge & Grow projects have been recognized.",
+      id: "sortlist",
+      name: "08. Sortlist",
+      url: "https://www.sortlist.com",
+      description: "Agency matching platform featuring Pledge & Grow's services and portfolio.",
       category: "partner",
-      date: "Ongoing"
-    },
-    {
-      id: "clutch",
-      name: "Clutch",
-      url: "https://clutch.co",
-      description: "B2B ratings and reviews platform featuring Pledge & Grow's services and client testimonials.",
-      category: "partner",
-      date: "Ongoing"
-    },
-    {
-      id: "digitalagencynetwork",
-      name: "Digital Agency Network",
-      url: "https://digitalagencynetwork.com",
-      description: "Global network of digital agencies that includes Pledge & Grow in its directory.",
-      category: "partner",
-      date: "Ongoing"
+      date: "Updated 2024"
     }
   ];
 

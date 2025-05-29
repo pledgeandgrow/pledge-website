@@ -228,7 +228,7 @@ export default function Footer() {
 
           {/* Legal Politics Menu */}
           <div className="flex flex-wrap justify-center gap-4 mb-4 sm:mb-0">
-            <Link href="/legal/terms" className="text-xs text-gray-500 dark:text-gray-400 hover:underline">
+            <Link href="/legal/terms-conditions" className="text-xs text-gray-500 dark:text-gray-400 hover:underline">
               Terms of Service
             </Link>
             <Link href="/legal/privacy-policy" className="text-xs text-gray-500 dark:text-gray-400 hover:underline">

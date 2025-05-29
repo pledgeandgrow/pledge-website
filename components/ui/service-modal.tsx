@@ -61,7 +61,7 @@ export function ServiceModal({
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold">{title}</DialogTitle>
           <DialogDescription>
-            Découvrez les détails de notre service {title}
+            Discover the details of our {title} service
           </DialogDescription>
         </DialogHeader>
         

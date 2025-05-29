@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -28,7 +27,7 @@ export default function WebsiteExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Features"
+        title="What We Offer"
         subtitle="Everything you need for a successful website"
       />
       
@@ -36,7 +35,7 @@ export default function WebsiteExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="Technologies We Use"
+          title="Technologies & Tools"
           subtitle="Modern tools for modern websites"
         />
       )}
@@ -45,7 +44,7 @@ export default function WebsiteExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our Development Process"
+          title="Our Process"
           subtitle="How we bring your website to life"
         />
       )}
@@ -53,7 +52,7 @@ export default function WebsiteExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Professional Website Development"
+        title="Benefits"
         subtitle="Why invest in a custom website"
       />
       
@@ -66,14 +65,7 @@ export default function WebsiteExpertisePage() {
         />
       )}
       
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="Success Stories"
-          subtitle="Real websites for real clients"
-        />
-      )}
+
     </ExpertiseLayout>
   );
 }

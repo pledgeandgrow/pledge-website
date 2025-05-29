@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import { 
-  HelpCenterHero, 
-  Documentation, 
   FAQs, 
   ContactSupport
 } from '@/components/pages/help-center';
@@ -26,10 +24,8 @@ export default function HelpCenterPage() {
     <>
       <Navbar />
       <main className="flex-grow pt-16">
-        <HelpCenterHero />
-        <Documentation />
-        <FAQs />
         <ContactSupport />
+        <FAQs />
       </main>
       <Footer />
     </>

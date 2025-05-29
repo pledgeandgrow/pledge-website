@@ -6,8 +6,7 @@ import {
   ExpertiseTechnologies, 
   ExpertiseProcess,
   ExpertiseBenefits,
-  ExpertiseFAQ,
-  ExpertiseCaseStudies
+  ExpertiseFAQ
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";
 
@@ -28,7 +27,7 @@ export default function ECommerceExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key Features"
+        title="What We Offer"
         subtitle="Everything you need for a successful online store"
       />
       
@@ -36,8 +35,8 @@ export default function ECommerceExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="E-commerce Platforms & Technologies"
-          subtitle="Powerful tools for online retail success"
+          title="Technologies & Tools"
+          subtitle="Technologies & Tools"
         />
       )}
       
@@ -45,7 +44,7 @@ export default function ECommerceExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our E-commerce Development Process"
+          title="Our Process"
           subtitle="How we build your online store"
         />
       )}
@@ -53,7 +52,7 @@ export default function ECommerceExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Professional E-commerce"
+        title="Benefits"
         subtitle="Why invest in a custom online store"
       />
       
@@ -65,15 +64,8 @@ export default function ECommerceExpertisePage() {
           subtitle="Common questions about e-commerce development"
         />
       )}
-      
-      {/* Case Studies Section */}
-      {expertise.casestudies && (
-        <ExpertiseCaseStudies 
-          cases={expertise.casestudies}
-          title="E-commerce Success Stories"
-          subtitle="Real online stores for real businesses"
-        />
-      )}
     </ExpertiseLayout>
   );
 }
+
+

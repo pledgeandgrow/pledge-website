@@ -49,55 +49,78 @@ export default function PortfolioGrid({ projects }: PortfolioGridProps) {
   return (
     <div className="w-full">
       {/* Filters */}
-      <div className="mb-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
-          <Input
-            placeholder="Search projects..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="pl-10"
-          />
+      <div className="mb-10 p-6 bg-card border border-border rounded-xl shadow-sm">
+        <h2 className="text-xl font-semibold mb-4 text-foreground">Find Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="relative">
+            <label className="text-sm font-medium text-muted-foreground mb-2 block">Search</label>
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary h-4 w-4" />
+              <Input
+                placeholder="Search projects..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-10 border-primary/20 focus-visible:ring-primary/30"
+              />
+            </div>
+          </div>
+          
+          <div>
+            <label className="text-sm font-medium text-muted-foreground mb-2 block">Industry</label>
+            <Select value={industryFilter} onValueChange={setIndustryFilter}>
+              <SelectTrigger className="border-primary/20 focus:ring-primary/30">
+                <SelectValue placeholder="Industry" />
+              </SelectTrigger>
+              <SelectContent>
+                {industries.map((industry) => (
+                  <SelectItem key={industry} value={industry}>
+                    {industry === "all" ? "All Industries" : industry}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          
+          <div>
+            <label className="text-sm font-medium text-muted-foreground mb-2 block">Year</label>
+            <Select value={yearFilter} onValueChange={setYearFilter}>
+              <SelectTrigger className="border-primary/20 focus:ring-primary/30">
+                <SelectValue placeholder="Year" />
+              </SelectTrigger>
+              <SelectContent>
+                {years.map((year) => (
+                  <SelectItem key={year} value={year}>
+                    {year === "all" ? "All Years" : year}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
         </div>
         
-        <div className="flex items-center gap-2">
-          <Filter className="text-muted-foreground h-4 w-4" />
-          <Select value={industryFilter} onValueChange={setIndustryFilter}>
-            <SelectTrigger>
-              <SelectValue placeholder="Industry" />
-            </SelectTrigger>
-            <SelectContent>
-              {industries.map((industry) => (
-                <SelectItem key={industry} value={industry}>
-                  {industry === "all" ? "All Industries" : industry}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+        {/* Results count */}
+        <div className="mt-6 pt-4 border-t border-border flex items-center justify-between">
+          <p className="text-muted-foreground">
+            Showing <span className="font-medium text-primary">{filteredProjects.length}</span> of {projects.length} projects
+          </p>
+          
+          {(searchQuery || industryFilter !== "all" || yearFilter !== "all") && (
+            <button 
+              onClick={() => {
+                setSearchQuery("");
+                setIndustryFilter("all");
+                setYearFilter("all");
+              }}
+              className="text-sm text-primary hover:text-primary/80 transition-colors flex items-center gap-1"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 12H5" />
+                <path d="M12 19l-7-7 7-7" />
+              </svg>
+              Reset filters
+            </button>
+          )}
         </div>
-        
-        <div className="flex items-center gap-2">
-          <Filter className="text-muted-foreground h-4 w-4" />
-          <Select value={yearFilter} onValueChange={setYearFilter}>
-            <SelectTrigger>
-              <SelectValue placeholder="Year" />
-            </SelectTrigger>
-            <SelectContent>
-              {years.map((year) => (
-                <SelectItem key={year} value={year}>
-                  {year === "all" ? "All Years" : year}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
-
-      {/* Results count */}
-      <div className="mb-6">
-        <p className="text-muted-foreground">
-          Showing {filteredProjects.length} of {projects.length} projects
-        </p>
       </div>
 
       {/* Grid of projects */}

@@ -75,7 +75,44 @@ export default function MembershipBenefits() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Mobile Scroll View (visible only on mobile) */}
+        <div className="sm:hidden overflow-x-auto pb-6">
+          <div className="flex space-x-4 w-max px-4">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="w-[85vw] max-w-[300px] flex-shrink-0">
+                <Card className="h-full flex flex-col">
+                  <CardHeader>
+                    <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                      {benefit.icon}
+                    </div>
+                    <CardTitle className="text-xl">{benefit.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <CardDescription className="text-muted-foreground">
+                      {benefit.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
+          <div className="flex justify-center mt-4">
+            <div className="flex space-x-2">
+              {benefits.slice(0, Math.min(5, benefits.length)).map((_, index) => (
+                <div 
+                  key={index} 
+                  className={`h-2 w-2 rounded-full bg-primary/30`}
+                />
+              ))}
+              {benefits.length > 5 && (
+                <div className="h-2 w-2 rounded-full bg-primary/30">...</div>
+              )}
+            </div>
+          </div>
+        </div>
+        
+        {/* Desktop Grid (visible only on desktop) */}
+        <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}

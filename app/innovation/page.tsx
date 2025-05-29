@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
 import { 
   InnovationApproach, 
-  TechnologyRadar,
-  InternalProjects,
-  InnovationCTA
+  TechnologyRadar
 } from '@/components/pages/innovation';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -28,8 +26,6 @@ export default function InnovationPage() {
       <main className="flex-grow pt-16">
         <InnovationApproach />
         <TechnologyRadar />
-        <InternalProjects />
-        <InnovationCTA />
       </main>
       <Footer />
     </>

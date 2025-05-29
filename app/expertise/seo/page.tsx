@@ -28,7 +28,7 @@ export default function SEOExpertisePage() {
       {/* Features Section */}
       <ExpertiseFeatures 
         features={expertise.features} 
-        title="Key SEO Services"
+        title="What We Offer"
         subtitle="Comprehensive optimization strategies for better visibility"
       />
       
@@ -36,8 +36,8 @@ export default function SEOExpertisePage() {
       {expertise.technologies && (
         <ExpertiseTechnologies 
           technologies={expertise.technologies}
-          title="SEO Tools & Technologies"
-          subtitle="Advanced tools for effective search optimization"
+          title="Technologies & Tools"
+          subtitle="Technologies & Tools"
         />
       )}
       
@@ -45,7 +45,7 @@ export default function SEOExpertisePage() {
       {expertise.process && (
         <ExpertiseProcess 
           process={expertise.process}
-          title="Our SEO Process"
+          title="Our Process"
           subtitle="How we improve your search rankings"
         />
       )}
@@ -53,7 +53,7 @@ export default function SEOExpertisePage() {
       {/* Benefits Section */}
       <ExpertiseBenefits 
         benefits={expertise.benefits}
-        title="Benefits of Professional SEO"
+        title="Benefits"
         subtitle="Why search optimization matters for your business"
       />
       
@@ -77,3 +77,4 @@ export default function SEOExpertisePage() {
     </ExpertiseLayout>
   );
 }
+
