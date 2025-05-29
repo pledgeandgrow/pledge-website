@@ -110,7 +110,7 @@ export default function Navbar() {
                       </li>
                       <li>
                         <Link href="/ecosysteme" className="text-gray-700 dark:text-gray-300">
-                          Ecosysteme
+                          Ecosystem
                         </Link>
                       </li>
                     </ul>
@@ -207,7 +207,7 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/expertise/mobile-app" className="text-gray-700 dark:text-gray-300">
+                        <Link href="/expertise/mobile-application" className="text-gray-700 dark:text-gray-300">
                           Mobile Application
                         </Link>
                       </li>
@@ -332,8 +332,8 @@ export default function Navbar() {
                     <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">About Us</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
-                        <Link href="/our-identity" className="text-gray-700 dark:text-gray-300">
-                          Our Identity
+                        <Link href="/about" className="text-gray-700 dark:text-gray-300">
+                          Identity
                         </Link>
                       </li>
                       <li>
@@ -348,7 +348,7 @@ export default function Navbar() {
                       </li>
                       <li>
                         <Link href="/ecosysteme" className="text-gray-700 dark:text-gray-300">
-                          Ecosysteme
+                          Ecosystem
                         </Link>
                       </li>
                     </ul>
@@ -437,7 +437,7 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/expertise/mobile-app" className="text-gray-700 dark:text-gray-300">
+                        <Link href="/expertise/mobile-application" className="text-gray-700 dark:text-gray-300">
                           Mobile Application
                         </Link>
                       </li>

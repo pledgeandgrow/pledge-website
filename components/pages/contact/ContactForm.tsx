@@ -16,6 +16,13 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle } from "lucide-react";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 // Define form schema with zod
 const formSchema = z.object({
@@ -23,6 +30,9 @@ const formSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email address" }),
   company: z.string().optional(),
   phone: z.string().optional(),
+  subject: z.string({
+    required_error: "Please select a subject",
+  }),
   message: z.string().min(10, { message: "Message must be at least 10 characters" }),
 });
 
@@ -38,6 +48,7 @@ export default function ContactForm() {
       email: "",
       company: "",
       phone: "",
+      subject: "",
       message: "",
     },
   });
@@ -55,7 +66,7 @@ export default function ContactForm() {
         },
         body: JSON.stringify({
           ...values,
-          subject: 'New Contact Form Submission'
+          emailSubject: `New Contact Form Submission: ${values.subject}`
         }),
       });
       
@@ -163,6 +174,34 @@ export default function ContactForm() {
               )}
             />
           </div>
+          
+          <FormField
+            control={form.control}
+            name="subject"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Subject</FormLabel>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <FormControl>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select a subject" />
+                    </SelectTrigger>
+                  </FormControl>
+                  <SelectContent>
+                    <SelectItem value="Support">Support</SelectItem>
+                    <SelectItem value="Commercial">Commercial</SelectItem>
+                    <SelectItem value="Partnership">Partnership</SelectItem>
+                    <SelectItem value="Investment">Investment</SelectItem>
+                    <SelectItem value="Ambassadors">Ambassadors</SelectItem>
+                    <SelectItem value="Feedback">Feedback</SelectItem>
+                    <SelectItem value="Careers">Careers</SelectItem>
+                    <SelectItem value="VIP">VIP</SelectItem>
+                  </SelectContent>
+                </Select>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           
           <FormField
             control={form.control}

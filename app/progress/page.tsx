@@ -2,10 +2,9 @@ import { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { 
-  ProgressHero, 
-  KeyMilestones,
   FutureVision,
-  ProgressCTA
+  ProgressCTA,
+  Roadmap
 } from "@/components/pages/progress";
 
 export const metadata: Metadata = {
@@ -34,8 +33,7 @@ export default function ProgressPage() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow pt-16">
-        <ProgressHero />
-        <KeyMilestones />
+        <Roadmap />
         <FutureVision />
         <ProgressCTA />
       </main>

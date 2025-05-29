@@ -1,14 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   Globe, 
   Lightbulb, 
   Users, 
   Heart,
-  Leaf 
+  Leaf,
+  ChevronLeft,
+  ChevronRight
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface VisionItem {
   icon: React.ReactNode;
@@ -18,6 +22,35 @@ interface VisionItem {
 }
 
 export default function FutureVision() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if we're on mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === visionItems.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? visionItems.length - 1 : prevIndex - 1
+    );
+  };
+  
   const visionItems: VisionItem[] = [
     {
       icon: <Globe className="h-10 w-10 text-blue-500" />,
@@ -69,7 +102,8 @@ export default function FutureVision() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {/* Desktop Grid View */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {visionItems.map((item, index) => (
             <motion.div
               key={index}
@@ -92,6 +126,66 @@ export default function FutureVision() {
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        {/* Mobile Carousel View */}
+        <div className="md:hidden max-w-sm mx-auto">
+          <div className="overflow-hidden relative min-h-[300px]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.3 }}
+                className="w-full"
+              >
+                <Card className="h-full border-0 shadow-md">
+                  <CardContent className="p-6">
+                    <div className={`${visionItems[currentIndex].color} p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto`}>
+                      {visionItems[currentIndex].icon}
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-center">{visionItems[currentIndex].title}</h3>
+                    <p className="text-muted-foreground text-center">
+                      {visionItems[currentIndex].description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+          
+          <div className="flex justify-center gap-4 mt-6">
+            <button 
+              onClick={prevSlide}
+              className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            
+            <div className="flex items-center gap-1.5">
+              {visionItems.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={cn(
+                    "w-2 h-2 rounded-full transition-colors",
+                    currentIndex === index ? "bg-primary" : "bg-muted-foreground/30"
+                  )}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+            
+            <button 
+              onClick={nextSlide}
+              className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </div>
         </div>
       </div>
     </section>

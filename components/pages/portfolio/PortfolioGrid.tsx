@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import ClientCard from "./ClientCard";
 import { ClientProject } from "@/components/ui/client-modal";
 import { Input } from "@/components/ui/input";
@@ -11,7 +12,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Search, Filter } from "lucide-react";
+import { Search, Filter, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface PortfolioGridProps {
   projects: ClientProject[];
@@ -21,6 +23,22 @@ export default function PortfolioGrid({ projects }: PortfolioGridProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [industryFilter, setIndustryFilter] = useState("all");
   const [yearFilter, setYearFilter] = useState("all");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Check if we're on mobile
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+    
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+    };
+  }, []);
 
   // Get unique industries and years for filters
   const industries = ["all", ...new Set(projects.map(project => project.industry))];
@@ -29,6 +47,11 @@ export default function PortfolioGrid({ projects }: PortfolioGridProps) {
     if (b === "all") return 1;
     return parseInt(b) - parseInt(a); // Sort years in descending order
   });
+
+  // Reset currentIndex when filters change
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [searchQuery, industryFilter, yearFilter]);
 
   // Filter projects based on search query and filters
   const filteredProjects = projects.filter(project => {
@@ -123,13 +146,67 @@ export default function PortfolioGrid({ projects }: PortfolioGridProps) {
         </div>
       </div>
 
-      {/* Grid of projects */}
+      {/* Projects display - Grid for desktop, Carousel for mobile */}
       {filteredProjects.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project) => (
-            <ClientCard key={project.id} project={project} />
-          ))}
-        </div>
+        <>
+          {/* Desktop Grid View */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredProjects.map((project) => (
+              <ClientCard key={project.id} project={project} />
+            ))}
+          </div>
+          
+          {/* Mobile Carousel View */}
+          {isMobile && (
+            <div className="md:hidden">
+              <div className="relative overflow-hidden">
+                <AnimatePresence initial={false} mode="wait">
+                  <motion.div
+                    key={currentIndex}
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-full"
+                  >
+                    <ClientCard project={filteredProjects[currentIndex]} />
+                  </motion.div>
+                </AnimatePresence>
+                
+                {/* Carousel Navigation */}
+                <div className="flex justify-between items-center mt-6">
+                  <Button 
+                    variant="outline" 
+                    size="icon"
+                    onClick={() => setCurrentIndex((prev) => 
+                      prev === 0 ? filteredProjects.length - 1 : prev - 1
+                    )}
+                    disabled={filteredProjects.length <= 1}
+                    className="rounded-full"
+                  >
+                    <ChevronLeft className="h-5 w-5" />
+                  </Button>
+                  
+                  <div className="text-center text-sm text-muted-foreground">
+                    <span className="font-medium text-foreground">{currentIndex + 1}</span> / {filteredProjects.length}
+                  </div>
+                  
+                  <Button 
+                    variant="outline" 
+                    size="icon"
+                    onClick={() => setCurrentIndex((prev) => 
+                      prev === filteredProjects.length - 1 ? 0 : prev + 1
+                    )}
+                    disabled={filteredProjects.length <= 1}
+                    className="rounded-full"
+                  >
+                    <ChevronRight className="h-5 w-5" />
+                  </Button>
+                </div>
+              </div>
+            </div>
+          )}
+        </>
       ) : (
         <div className="text-center py-12">
           <h3 className="text-xl font-semibold mb-2 text-foreground">No projects found</h3>
