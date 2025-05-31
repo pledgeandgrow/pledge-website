@@ -120,13 +120,8 @@ export default function GlobalMap() {
   ];
 
   const [selectedOffice, setSelectedOffice] = useState<Office | null>(null);
-  const [activeRegion, setActiveRegion] = useState<string>("all");
-
-  const regions = Array.from(new Set(offices.map(office => office.region)));
-  
-  const filteredOffices = activeRegion === "all" 
-    ? offices 
-    : offices.filter(office => office.region === activeRegion);
+  // Using all offices without filtering by region
+  const filteredOffices = offices;
 
   return (
     <section id="global-offices" className="py-16 md:py-24 bg-background">

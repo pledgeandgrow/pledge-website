@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart } from "lucide-react";
-import Link from "next/link";
+// Button import removed as it was unused
+import { Heart } from "lucide-react";
+// Link import removed as it was unused
 import Image from "next/image";
 
 export default function ImpactHero() {

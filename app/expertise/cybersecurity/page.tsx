@@ -3,7 +3,6 @@ import { Metadata } from "next";
 import { 
   ExpertiseLayout, 
   ExpertiseFeatures, 
-  ExpertiseTechnologies, 
   ExpertiseBenefits
 } from "@/components/pages/expertise";
 import { getExpertiseBySlug } from "@/data/expertise-data";

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Globe, Award, Users, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -46,11 +46,11 @@ export default function BenefitsCarousel() {
     );
   };
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) => 
       prevIndex === benefits.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [benefits.length]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientX);
@@ -79,7 +79,7 @@ export default function BenefitsCarousel() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [handleNext]);
 
   return (
     <div className="relative">

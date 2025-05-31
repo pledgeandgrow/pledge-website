@@ -4,7 +4,6 @@ import {
   Shield, 
   Users, 
   Scale, 
-  FileText, 
   UserCheck, 
   Lock, 
   Mail

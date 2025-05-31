@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Calendar, 
@@ -11,8 +11,7 @@ import {
   Database, 
   Globe, 
   Layers, 
-  Shield, 
-  Smartphone
+  Shield
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -64,21 +63,7 @@ const roadmapItems: RoadmapItem[] = [
 
 export default function Roadmap() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Check if we're on mobile
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    
-    return () => {
-      window.removeEventListener('resize', checkMobile);
-    };
-  }, []);
+  // Mobile detection is handled by CSS media queries instead
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 

@@ -24,13 +24,13 @@ export default function CareersCTA() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="font-medium">
-              <Link href="#open-positions" className="flex items-center gap-2">
-                View Open Positions <ArrowRight size={16} />
+              <Link href="/about" className="flex items-center gap-2">
+                Learn about us <ArrowRight size={16} />
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-medium">
-              <Link href="mailto:careers@pledgeandgrow.com" className="flex items-center gap-2">
-                <Send className="h-4 w-4" /> Send Your Resume
+              <Link href="/contact" className="flex items-center gap-2">
+                <Send className="h-4 w-4" /> Join our team
               </Link>
             </Button>
           </div>

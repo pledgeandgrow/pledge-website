@@ -1,21 +1,18 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { FaInstagram, FaFacebook, FaTiktok, FaLinkedin, FaYoutube, FaDiscord } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 interface SocialMediaCardProps {
   platform: string;
   icon: React.ReactNode;
-  username: string;
   url: string;
-  followers: string;
-  color: string;
   description: string;
   bgColor: string;
 }
@@ -23,10 +20,7 @@ interface SocialMediaCardProps {
 const SocialMediaCard = ({
   platform,
   icon,
-  username,
   url,
-  followers,
-  color,
   description,
   bgColor
 }: SocialMediaCardProps) => {
@@ -64,9 +58,8 @@ const MobileSocialMediaCard = ({
   platform,
   icon,
   url,
-  followers,
   bgColor
-}: Pick<SocialMediaCardProps, 'platform' | 'icon' | 'url' | 'followers' | 'bgColor'>) => {
+}: Pick<SocialMediaCardProps, 'platform' | 'icon' | 'url' | 'bgColor'>) => {
   return (
     <Link 
       href={url} 
@@ -85,33 +78,7 @@ const MobileSocialMediaCard = ({
 };
 
 export default function SocialMediaSection() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  
-  const nextSlide = () => {
-    if (currentIndex < socialMediaAccounts.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-  
-  const prevSlide = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-  
-  // Auto-advance the carousel every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (currentIndex < socialMediaAccounts.length - 1) {
-        setCurrentIndex(currentIndex + 1);
-      } else {
-        setCurrentIndex(0);
-      }
-    }, 5000);
-    
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
+  // Define social media accounts first to avoid using before declaration
   const socialMediaAccounts = [
     {
       platform: "Instagram",
@@ -185,6 +152,22 @@ export default function SocialMediaSection() {
     }
   ];
 
+  // Add state management after socialMediaAccounts declaration
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  // Auto-advance the carousel every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentIndex < socialMediaAccounts.length - 1) {
+        setCurrentIndex(currentIndex + 1);
+      } else {
+        setCurrentIndex(0);
+      }
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [currentIndex, socialMediaAccounts.length]);
+
   return (
     <section className="py-16 md:py-24">
       <div className="container px-4 mx-auto">
@@ -211,10 +194,7 @@ export default function SocialMediaSection() {
               key={account.platform}
               platform={account.platform}
               icon={account.icon}
-              username={account.username}
               url={account.url}
-              followers={account.followers}
-              color={account.color}
               description={account.description}
               bgColor={account.bgColor}
             />
@@ -229,7 +209,6 @@ export default function SocialMediaSection() {
               platform={account.platform}
               icon={account.icon}
               url={account.url}
-              followers={account.followers}
               bgColor={account.bgColor}
             />
           ))}

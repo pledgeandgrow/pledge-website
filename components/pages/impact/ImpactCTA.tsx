@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, MessageSquare } from "lucide-react";
+import { Heart, MessageSquare } from "lucide-react";
 import Link from "next/link";
 
 export default function ImpactCTA() {

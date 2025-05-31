@@ -102,7 +102,7 @@ export default function InvestorsPhase() {
         {isMobile ? (
           <div className="mb-10">
             <MobileCarousel>
-              {phases.map((phase, index) => (
+              {phases.map((phase) => (
                 <MobileCarouselItem key={phase.id}>
                   <Card className="h-full flex flex-col mx-2">
                     <CardHeader>

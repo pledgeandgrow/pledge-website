@@ -9,7 +9,7 @@ import {
   BarChart, 
   Shield 
 } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+// Carousel imports removed as they were unused
 
 interface ApproachStep {
   icon: React.ReactNode;

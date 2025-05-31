@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Leaf, Recycle, Zap, Cloud, Droplets, Users } from "lucide-react";
+import { Recycle, Zap, Cloud } from "lucide-react";
 
 interface PracticeProps {
   icon: React.ReactNode;
@@ -55,9 +55,7 @@ export default function SustainablePractices() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">Sustainable Practices</h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              At Pledge & Grow, we recognize that technology has both environmental costs and the potential to drive sustainability. We&apos;re committed to minimizing our ecological footprint while developing solutions that help our clients and communities do the same.
-            </p>
+
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Our approach to sustainability encompasses everything from our development practices and infrastructure choices to our office operations and supply chain management. We continuously measure, report, and improve our environmental performance.
             </p>

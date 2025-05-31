@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+// Button import removed as it was unused
+// Link import removed as it was unused
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Languages, Globe, FileText, Code } from "lucide-react";
 

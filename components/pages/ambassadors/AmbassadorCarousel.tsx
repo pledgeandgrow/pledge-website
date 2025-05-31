@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef, useEffect, useCallback } from "react";
+// motion import removed as it was unused
 import AmbassadorCard from "./AmbassadorCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -37,11 +37,11 @@ export default function AmbassadorCarousel({ ambassadors }: AmbassadorCarouselPr
     );
   };
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) => 
       prevIndex === ambassadors.length - 1 ? 0 : prevIndex + 1
     );
-  };
+  }, [ambassadors.length]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     setTouchStart(e.targetTouches[0].clientX);
@@ -68,9 +68,9 @@ export default function AmbassadorCarousel({ ambassadors }: AmbassadorCarouselPr
     const interval = setInterval(() => {
       handleNext();
     }, 5000);
-
+    
     return () => clearInterval(interval);
-  }, [currentIndex, ambassadors.length]);
+  }, [handleNext]);
 
   if (ambassadors.length === 0) {
     return (

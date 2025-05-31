@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Briefcase, Lightbulb, TrendingUp, Zap } from "lucide-react";
+import { Briefcase, Lightbulb, TrendingUp, Zap } from "lucide-react";
 import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
 
 export default function InvestmentOpportunities() {

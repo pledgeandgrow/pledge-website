@@ -1,8 +1,8 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Tv, Radio, Instagram, Globe } from "lucide-react";
-import Link from "next/link";
+// Button import removed as it was unused
+// Icon imports removed as they were unused
+// Link import removed as it was unused
 import { motion } from "framer-motion";
 
 export default function MediaHero() {

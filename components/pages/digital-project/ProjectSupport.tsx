@@ -1,18 +1,20 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
-import * as SiIcons from "react-icons/si";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Input } from "@/components/ui/input";
+import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
+import * as SiIcons from "react-icons/si";
 
-// Type for the icons from react-icons/si
-type SiIconType = keyof typeof SiIcons;
-
+// Interface for technology items
 interface Technology {
   name: string;
-  icon: SiIconType;
+  icon: string;
   category: string;
   color?: string;
 }
@@ -61,7 +63,7 @@ const technologies: Technology[] = [
   { name: "Drupal", icon: "SiDrupal", category: "cms", color: "text-blue-700" },
   
   // Cloud & DevOps
-  { name: "AWS", icon: "SiAmazon", category: "cloud", color: "text-orange-500" },
+  { name: "AWS", icon: "SiAmazonaws", category: "cloud", color: "text-orange-500" },
   { name: "Google Cloud", icon: "SiGooglecloud", category: "cloud", color: "text-blue-500" },
   { name: "Azure", icon: "SiMicrosoftazure", category: "cloud", color: "text-blue-600" },
   { name: "Docker", icon: "SiDocker", category: "cloud", color: "text-blue-500" },
@@ -72,6 +74,29 @@ const technologies: Technology[] = [
 ];
 
 export default function ProjectSupport() {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredTechnologies, setFilteredTechnologies] = useState(technologies);
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if the screen is mobile size
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
   const categories = [
     { id: "all", name: "All Technologies" },
     { id: "frontend", name: "Frontend" },
@@ -82,6 +107,60 @@ export default function ProjectSupport() {
     { id: "cloud", name: "Cloud & DevOps" },
   ];
 
+  // Filter technologies based on search query and active category
+  useEffect(() => {
+    const filtered = technologies.filter((tech) => {
+      const matchesCategory = activeCategory === "all" || tech.category === activeCategory;
+      const matchesSearch = tech.name.toLowerCase().includes(searchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    });
+    setFilteredTechnologies(filtered);
+  }, [searchQuery, activeCategory]);
+
+  // Handle category change
+  const handleCategoryChange = (category: string) => {
+    setActiveCategory(category);
+    setCurrentPage(0); // Reset to first page when category changes
+  };
+  
+  // Calculate items per page and total pages for mobile carousel
+  const itemsPerPage = isMobile ? 4 : filteredTechnologies.length;
+  const totalPages = Math.ceil(filteredTechnologies.length / itemsPerPage);
+  
+  // Navigate to next page
+  const nextPage = () => {
+    setCurrentPage((prev) => (prev + 1) % totalPages);
+  };
+  
+  // Navigate to previous page
+  const prevPage = () => {
+    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+  
+  // Get current page items
+  const getCurrentPageItems = () => {
+    if (!isMobile) return filteredTechnologies;
+    
+    const startIndex = currentPage * itemsPerPage;
+    return filteredTechnologies.slice(startIndex, startIndex + itemsPerPage);
+  };
+
+  // Animation variants for staggered animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
     <section className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -90,71 +169,142 @@ export default function ProjectSupport() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Technologies We Support
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-muted-foreground mb-8">
             We work with a wide range of technologies to deliver the best solutions for your digital project.
           </p>
+
+          {/* Search input */}
+          <div className="relative max-w-md mx-auto">
+            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+              <Search className="h-5 w-5 text-muted-foreground" />
+            </div>
+            <Input
+              type="text"
+              placeholder="Search technologies..."
+              className={cn(
+                "pl-10 pr-4 py-2 w-full transition-all duration-300",
+                isSearchFocused ? "ring-2 ring-primary" : ""
+              )}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setIsSearchFocused(true)}
+              onBlur={() => setIsSearchFocused(false)}
+            />
+          </div>
         </motion.div>
 
-        <Tabs defaultValue="all" className="w-full max-w-5xl mx-auto">
-          <div className="flex justify-center mb-8 overflow-x-auto pb-2">
-            <TabsList className="flex flex-nowrap">
-              {categories.map((category) => (
-                <TabsTrigger key={category.id} value={category.id} className="whitespace-nowrap">
-                  {category.name}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+        <div className="w-full max-w-5xl mx-auto">
+          {/* Category tabs - horizontally scrollable on mobile */}
+          <div className="flex justify-start md:justify-center mb-8 overflow-x-auto pb-2 scrollbar-hide">
+            <Tabs value={activeCategory} onValueChange={handleCategoryChange}>
+              <TabsList className="flex flex-nowrap">
+                {categories.map((category) => (
+                  <TabsTrigger 
+                    key={category.id} 
+                    value={category.id} 
+                    className={cn(
+                      "whitespace-nowrap px-4 py-2 text-sm md:text-base",
+                      activeCategory === category.id ? "bg-primary text-primary-foreground" : ""
+                    )}
+                  >
+                    {category.name}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
           </div>
           
-          {categories.map((category) => (
-            <TabsContent key={category.id} value={category.id} className="mt-0">
-              <Card className="border-0 shadow-sm">
-                <CardContent className="p-6">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                    {technologies
-                      .filter((tech) => category.id === "all" || tech.category === category.id)
-                      .map((tech) => {
-                        const IconComponent = SiIcons[tech.icon];
-                        
-                        return (
-                          <TooltipProvider key={tech.name}>
-                            <Tooltip>
-                              <TooltipTrigger asChild>
-                                <motion.div
-                                  whileHover={{ scale: 1.05 }}
-                                  className="flex flex-col items-center justify-center gap-3 p-4 bg-card rounded-lg hover:bg-accent/50 transition-colors cursor-pointer"
-                                >
-                                  <div className="bg-muted/50 p-3 rounded-lg flex items-center justify-center w-16 h-16">
-                                    {IconComponent && (
+          {/* Technology grid with improved responsiveness */}
+          <Card className="border-0 shadow-sm overflow-hidden">
+            <CardContent className="p-4 md:p-6">
+              {/* Mobile carousel navigation */}
+              {isMobile && filteredTechnologies.length > 4 && (
+                <div className="flex justify-between items-center mb-4">
+                  <div className="text-sm font-medium">
+                    Page {currentPage + 1} of {totalPages}
+                  </div>
+                  <div className="flex gap-2">
+                    <Button 
+                      variant="outline" 
+                      size="icon" 
+                      onClick={prevPage}
+                      className="h-8 w-8 rounded-full"
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      size="icon" 
+                      onClick={nextPage}
+                      className="h-8 w-8 rounded-full"
+                    >
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </div>
+              )}
+              
+              <AnimatePresence mode="wait">
+                <motion.div 
+                  key={activeCategory + searchQuery + currentPage}
+                  variants={containerVariants}
+                  initial="hidden"
+                  animate="show"
+                  exit={{ opacity: 0 }}
+                  className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-6"
+                >
+                  {filteredTechnologies.length > 0 ? (
+                    getCurrentPageItems().map((tech) => {
+                      return (
+                        <TooltipProvider key={tech.name}>
+                          <Tooltip delayDuration={300}>
+                            <TooltipTrigger asChild>
+                              <motion.div
+                                variants={itemVariants}
+                                whileHover={{ scale: 1.05, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)" }}
+                                className="flex flex-col items-center justify-center gap-2 md:gap-3 p-3 md:p-4 bg-card rounded-lg hover:bg-accent/50 transition-all cursor-pointer border border-transparent hover:border-border"
+                              >
+                                <div className="bg-muted/50 p-2 md:p-3 rounded-lg flex items-center justify-center w-12 h-12 md:w-16 md:h-16">
+                                  {(() => {
+                                    // Dynamically import the icon
+                                    const IconComponent = SiIcons[tech.icon as keyof typeof SiIcons];
+                                    return IconComponent ? (
                                       <IconComponent
                                         className={cn(
-                                          "h-10 w-10",
+                                          "h-7 w-7 md:h-10 md:w-10",
                                           tech.color || "text-foreground"
                                         )}
                                       />
-                                    )}
-                                  </div>
-                                  <span className="text-sm text-center font-medium">{tech.name}</span>
-                                </motion.div>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p>{tech.name}</p>
-                              </TooltipContent>
-                            </Tooltip>
-                          </TooltipProvider>
-                        );
-                      })}
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          ))}
-        </Tabs>
+                                    ) : (
+                                      <div className="h-7 w-7 md:h-10 md:w-10 bg-muted rounded-full" />
+                                    );
+                                  })()}
+                                </div>
+                                <span className="text-xs md:text-sm text-center font-medium line-clamp-2">{tech.name}</span>
+                              </motion.div>
+                            </TooltipTrigger>
+                            <TooltipContent side="top" className="bg-background border border-border shadow-md">
+                              <p className="font-medium">{tech.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      );
+                    })
+                  ) : (
+                    <div className="col-span-full py-12 text-center">
+                      <p className="text-muted-foreground">No technologies found matching your search.</p>
+                    </div>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </section>
   );

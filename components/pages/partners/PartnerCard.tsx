@@ -1,22 +1,19 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 
 interface PartnerCardProps {
   name: string;
-  category: string;
   description: string;
   website: string;
   featured?: boolean;
 }
 
-export default function PartnerCard({ name, category, description, website, featured = false }: PartnerCardProps) {
+export default function PartnerCard({ name, description, website, featured = false }: PartnerCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

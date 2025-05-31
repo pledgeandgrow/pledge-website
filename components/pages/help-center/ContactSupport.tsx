@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+// Badge import removed as it was unused
 import { MessageSquare, Phone, Clock, Mail, ArrowRight, CheckCircle } from "lucide-react";
 import Link from "next/link";
 
@@ -132,7 +132,7 @@ export default function ContactSupport() {
               <CardHeader className="pb-4">
                 <CardTitle className="text-xl">Submit a ticket</CardTitle>
                 <CardDescription>
-                  Fill out the form below and we'll get back to you as soon as possible.
+                  Fill out the form below and we&apos;ll get back to you as soon as possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -141,7 +141,7 @@ export default function ContactSupport() {
                     <CheckCircle className="h-12 w-12 md:h-16 md:w-16 text-green-500 mb-4" />
                     <h3 className="text-lg md:text-xl font-medium mb-2">Message Sent!</h3>
                     <p className="text-center text-muted-foreground text-sm md:text-base">
-                      Thank you for reaching out. We've received your message and will respond shortly.
+                      Thank you for reaching out. We&apos;ve received your message and will respond shortly.
                     </p>
                   </div>
                 ) : (

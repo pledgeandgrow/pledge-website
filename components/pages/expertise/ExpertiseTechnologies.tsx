@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+// Image import removed as it was unused
 import { ExpertiseTechnology } from "@/data/expertise-data";
 import { motion } from "framer-motion";
 import { 
@@ -13,7 +13,7 @@ import {
   SiAndroid, SiApple, SiSwift, SiKotlin, SiFlutter, 
   SiWordpress, SiShopify, SiMagento, SiWoocommerce, SiStripe, SiPaypal,
   SiFigma, SiAdobexd, SiAdobephotoshop, SiAdobeillustrator, SiSketch,
-  SiGoogleanalytics, SiGooglesearchconsole, SiGoogleads, SiMozilla,
+  SiGoogleanalytics, SiGooglesearchconsole, SiGoogleads,
   SiTensorflow, SiPytorch, SiOpenai, SiScikitlearn, SiKeras,
   SiEthereum, SiSolidity, SiPolkadot, SiBitcoin,
   SiNginx, SiApache, SiLinux, SiUbuntu, SiDebian, SiCentos,
@@ -25,8 +25,8 @@ import {
 import {
   FaCode, FaDatabase, FaServer, FaCloud, FaMobile, FaShoppingCart, 
   FaPaintBrush, FaChartLine, FaRobot, FaShieldAlt, FaFileAlt, FaTools, 
-  FaUserTie, FaDesktop, FaGamepad, FaReact, FaNodeJs, FaAws, FaMicrosoft,
-  FaEthereum, FaBitcoin, FaDocker, FaJava, FaPython, FaPhp, FaHtml5, FaCss3
+  FaUserTie, FaDesktop, FaGamepad, FaReact,
+  FaEthereum
 } from "react-icons/fa";
 
 interface ExpertiseTechnologiesProps {
@@ -64,7 +64,7 @@ const getTechIcon = (techName: string) => {
   
   // Cloud & DevOps
   if (name.includes('aws') || name.includes('amazon')) return <SiAmazon className="text-3xl text-primary" />;
-  if (name.includes('azure') || name.includes('microsoft')) return <FaMicrosoft className="text-3xl text-primary" />;
+  if (name.includes('azure') || name.includes('microsoft')) return <SiMysql className="text-3xl text-primary" />; // Temporarily using MySQL icon as placeholder
   if (name.includes('google cloud')) return <SiGooglecloud className="text-3xl text-primary" />;
   if (name.includes('docker')) return <SiDocker className="text-3xl text-primary" />;
   if (name.includes('kubernetes')) return <SiKubernetes className="text-3xl text-primary" />;

@@ -19,15 +19,13 @@ export default function ImpactMission() {
             className="lg:col-start-2"
           >
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">Our Mission</h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              At Pledge & Grow, we believe that technology has the power to address some of the world&apos;s most pressing challenges. Our mission is to leverage our expertise to create positive social impact and contribute to a more equitable and sustainable future.
-            </p>
+
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               We&apos;re committed to using our skills, resources, and influence to support causes that align with our values. Through pro bono work, charitable initiatives, and sustainable practices, we strive to be a force for good in the communities we serve.
             </p>
             <div className="p-4 bg-card border border-border rounded-lg shadow-sm mt-8 mb-4">
               <p className="text-lg font-medium text-foreground italic">
-                "Technology should serve humanity, not the other way around."
+                &quot;Technology should serve humanity, not the other way around.&quot;
               </p>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">

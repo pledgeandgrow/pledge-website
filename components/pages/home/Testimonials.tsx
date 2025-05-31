@@ -1,26 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
+import { Star, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Check if we're on mobile
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    // Set initial display count
-    handleResize();
-    
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  // For desktop view, we'll show 3 cards at a time
+  const [desktopStartIndex, setDesktopStartIndex] = useState(0);
+  const cardsPerPage = 3;
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
@@ -32,6 +22,20 @@ export default function Testimonials() {
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
+  };
+  
+  const nextDesktopSlide = () => {
+    setDesktopStartIndex((prevIndex) => {
+      const nextIndex = prevIndex + cardsPerPage;
+      return nextIndex >= testimonials.length ? 0 : nextIndex;
+    });
+  };
+
+  const prevDesktopSlide = () => {
+    setDesktopStartIndex((prevIndex) => {
+      const nextIndex = prevIndex - cardsPerPage;
+      return nextIndex < 0 ? Math.max(0, testimonials.length - cardsPerPage) : nextIndex;
+    });
   };
 
   const testimonials = [
@@ -89,31 +93,52 @@ export default function Testimonials() {
           </p>
         </div>
         
-        {/* Desktop View - 3 cards per row */}
-        <div className="hidden md:grid gap-8 grid-cols-3">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index} 
-              className="p-6 bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in"
-              style={{ animationDelay: `${0.1 + index * 0.1}s` }}
-            >
-              <div className="flex items-center mb-3">
-                {renderStars(testimonial.rating)}
-              </div>
-              <blockquote className="text-base italic mb-4">
-                &quot;{testimonial.quote}&quot;
-              </blockquote>
-              <div className="flex items-center">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                  {testimonial.name.charAt(0)}
+        {/* Desktop View - 3 cards per row with navigation */}
+        <div className="hidden md:block relative">
+          <div className="grid gap-8 grid-cols-3">
+            {testimonials
+              .slice(desktopStartIndex, desktopStartIndex + cardsPerPage)
+              .map((testimonial, index) => (
+                <div 
+                  key={desktopStartIndex + index} 
+                  className="p-6 bg-card border border-border rounded-lg shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in"
+                  style={{ animationDelay: `${0.1 + index * 0.1}s` }}
+                >
+                  <div className="flex items-center mb-3">
+                    {renderStars(testimonial.rating)}
+                  </div>
+                  <blockquote className="text-base italic mb-4">
+                    &quot;{testimonial.quote}&quot;
+                  </blockquote>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                      {testimonial.name.charAt(0)}
+                    </div>
+                    <div className="ml-3">
+                      <h3 className="text-base font-medium">{testimonial.name}</h3>
+                      <p className="text-muted-foreground text-xs">{testimonial.role}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="ml-3">
-                  <h3 className="text-base font-medium">{testimonial.name}</h3>
-                  <p className="text-muted-foreground text-xs">{testimonial.role}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          
+          {/* Desktop Navigation Arrows */}
+          <button 
+            onClick={prevDesktopSlide}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 p-3 rounded-full bg-muted hover:bg-muted/80 transition-colors shadow-md"
+            aria-label="Previous reviews"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          
+          <button 
+            onClick={nextDesktopSlide}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 p-3 rounded-full bg-muted hover:bg-muted/80 transition-colors shadow-md"
+            aria-label="Next reviews"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
         </div>
         
         {/* Mobile Carousel - 1 card at a time */}
@@ -178,6 +203,21 @@ export default function Testimonials() {
               <ChevronRight className="h-5 w-5" />
             </button>
           </div>
+        </div>
+        
+        {/* Leave a Review Button */}
+        <div className="mt-12 text-center">
+          <Button asChild className="group">
+            <a 
+              href="https://g.co/kgs/Nkzc3iu" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2"
+            >
+              Leave a review
+              <ExternalLink className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>

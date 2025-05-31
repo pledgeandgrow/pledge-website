@@ -29,8 +29,8 @@ export default function GrantsCTA() {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-medium">
-              <Link href="#available-grants" className="flex items-center gap-2">
-                Explore Available Grants <ArrowRight className="h-4 w-4" />
+              <Link href="/" className="flex items-center gap-2">
+                Go back home <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
           </div>

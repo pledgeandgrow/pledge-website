@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+// Button import removed as it was unused
+// Link import removed as it was unused
 import Image from "next/image";
 
 export default function MembershipHero() {
@@ -60,11 +60,7 @@ export default function MembershipHero() {
               </motion.div>
             </div>
             
-            <div className="flex justify-center lg:justify-start">
-              <Button size="lg" asChild>
-                <Link href="#membership-plans">View Membership Plans</Link>
-              </Button>
-            </div>
+
           </motion.div>
           
           <motion.div

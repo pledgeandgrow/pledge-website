@@ -522,9 +522,9 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="block py-2 px-3 text-gray-900 dark:text-white">
-                Contact
-              </Link>
+              <Button className="ml-4 bg-primary hover:bg-primary/90 text-white" asChild>
+                <Link href="/contact">Start my project</Link>
+              </Button>
             </li>
             <li className="mt-4">
               <Button asChild variant="default" size="sm" className="w-full">

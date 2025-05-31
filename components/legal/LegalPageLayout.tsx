@@ -2,7 +2,7 @@
 
 import React, { ReactNode, useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ChevronLeft, ArrowUp, Shield, FileText, ExternalLink } from 'lucide-react';
+import { ChevronLeft, ArrowUp, Shield, FileText } from 'lucide-react';
 
 interface Section {
   id: string;

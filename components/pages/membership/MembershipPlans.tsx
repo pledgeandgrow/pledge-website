@@ -1,14 +1,14 @@
 "use client";
 
-import { useState } from "react";
+// useState import removed as it was unused
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Check, X } from "lucide-react";
+import { Check } from "lucide-react";
 import Link from "next/link";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
+// Switch import removed as it was unused
+// Label import removed as it was unused
 
 interface PlanFeature {
   name: string;

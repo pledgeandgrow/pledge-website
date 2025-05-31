@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, BadgePercent, Users, Briefcase, Sparkles } from "lucide-react";
+import { ArrowRight, BadgePercent, Users, Briefcase, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
 

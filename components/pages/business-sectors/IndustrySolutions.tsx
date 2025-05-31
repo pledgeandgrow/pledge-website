@@ -14,9 +14,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+// Badge import removed as it was unused
 import Link from "next/link";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+// Carousel imports removed as they were unused
 
 interface Industry {
   id: string;
@@ -145,7 +145,7 @@ export default function IndustrySolutions() {
           <div className="mb-10">
             <div className="overflow-x-auto pb-6">
               <div className="flex space-x-4 w-max px-4">
-                {industries.map((industry, index) => (
+                {industries.map((industry) => (
                   <div key={industry.id} className="w-[85vw] max-w-[300px] flex-shrink-0">
                     <Card 
                       className="h-full cursor-pointer hover:shadow-md transition-shadow duration-300"

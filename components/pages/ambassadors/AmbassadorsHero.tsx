@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+// Button import removed as it was unused
+// Link import removed as it was unused
 
 export default function AmbassadorsHero() {
   return (

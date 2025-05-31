@@ -57,15 +57,15 @@ export default function TermsPage() {
         <div className="space-y-4">
           <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
             <h4 className="font-medium text-gray-900 dark:text-white mb-2">Company</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">"Company", "we", "us", or "our" refers to Pledge & Grow.</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">&quot;Company&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot; refers to Pledge & Grow.</p>
           </div>
           <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
             <h4 className="font-medium text-gray-900 dark:text-white mb-2">Services</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">"Services" refers to the services offered by Pledge & Grow, including but not limited to our website, digital solutions, and consulting services.</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">&quot;Services&quot; refers to the services offered by Pledge & Grow, including but not limited to our website, digital solutions, and consulting services.</p>
           </div>
           <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
             <h4 className="font-medium text-gray-900 dark:text-white mb-2">User</h4>
-            <p className="text-sm text-gray-600 dark:text-gray-400">"User", "you", or "your" refers to the individual or entity using our Services.</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">&quot;User&quot;, &quot;you&quot;, or &quot;your&quot; refers to the individual or entity using our Services.</p>
           </div>
         </div>
       </LegalSection>
@@ -102,7 +102,7 @@ export default function TermsPage() {
           
       <LegalSection id="termination" title="Changes to Terms" icon={<FileText className="h-6 w-6" />}>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+          We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days&apos; notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
         </p>
       </LegalSection>
           

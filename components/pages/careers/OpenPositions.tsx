@@ -9,65 +9,12 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ArrowRight, Search, MapPin, Briefcase, Clock } from "lucide-react";
 import Link from "next/link";
-
-interface JobPosition {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  locationType: "Remote" | "Hybrid" | "On-site";
-  employmentType: "Full-time" | "Part-time" | "Contract" | "Internship";
-  description: string;
-  postedDate: string;
-}
+import { jobPositions } from "@/data/careers-data";
 
 export default function OpenPositions() {
   const [searchTerm, setSearchTerm] = useState("");
   const [departmentFilter, setDepartmentFilter] = useState("all");
   const [locationTypeFilter, setLocationTypeFilter] = useState("all");
-
-  const jobPositions: JobPosition[] = [
-    {
-      id: "dev-001",
-      title: "Chief Sales Officer",
-      department: "Executive",
-      location: "Paris, France",
-      locationType: "Hybrid",
-      employmentType: "Full-time",
-      description: "We're looking for an experienced Chief Sales Officer to lead our sales strategy, drive revenue growth, and build strong client relationships across all markets.",
-      postedDate: "2025-04-15"
-    },
-    {
-      id: "dev-002",
-      title: "Marketing interne",
-      department: "Marketing",
-      location: "Remote",
-      locationType: "Remote",
-      employmentType: "Full-time",
-      description: "Join our marketing team to develop and implement internal marketing strategies that strengthen our brand identity and company culture.",
-      postedDate: "2025-04-18"
-    },
-    {
-      id: "design-001",
-      title: "IT Development Intern",
-      department: "Engineering",
-      location: "Lyon, France",
-      locationType: "Hybrid",
-      employmentType: "Internship",
-      description: "Join our engineering team as an IT Development Intern to gain hands-on experience with modern web technologies while working on real-world projects under experienced mentors.",
-      postedDate: "2025-04-20"
-    },
-    {
-      id: "pm-001",
-      title: "Salesman",
-      department: "Sales",
-      location: "Remote",
-      locationType: "Remote",
-      employmentType: "Full-time",
-      description: "Drive revenue growth by identifying and pursuing new sales opportunities, building client relationships, and closing deals effectively.",
-      postedDate: "2025-04-22"
-    }
-  ];
 
   // Get unique departments for filter
   const departments = ["all", ...new Set(jobPositions.map(job => job.department))];
@@ -155,7 +102,7 @@ export default function OpenPositions() {
             {/* Mobile Scroll View (visible only on mobile) */}
             <div className="md:hidden overflow-x-auto pb-6">
               <div className="flex space-x-4 w-max px-4">
-                {sortedJobs.map((job, index) => (
+                {sortedJobs.map((job) => (
                   <div key={job.id} className="w-[85vw] max-w-[350px] flex-shrink-0">
                     <Card className="h-full flex flex-col">
                       <CardHeader>

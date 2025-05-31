@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BadgePercent, CheckCircle, ExternalLink, Info, ArrowRight, Star } from "lucide-react";
+import { BadgePercent, CheckCircle, ExternalLink, ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
@@ -233,7 +233,7 @@ export default function EcosystemeModal({ partner }: EcosystemeModalProps) {
           
           <div className="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-lg mt-4">
             <p className="text-sm text-gray-600 dark:text-gray-300">
-              As a Pledge & Grow client, you'll receive personalized guidance on how to best leverage {partner.name} for your specific business needs.
+              As a Pledge & Grow client, you&apos;ll receive personalized guidance on how to best leverage {partner.name} for your specific business needs.
             </p>
           </div>
         </TabsContent>

@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Twitter, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Twitter, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+// Button import removed as it was unused
 
 export default function Team() {
   const [activeIndex, setActiveIndex] = useState(0);

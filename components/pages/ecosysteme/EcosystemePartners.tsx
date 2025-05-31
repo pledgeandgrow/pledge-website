@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Handshake, ArrowRight, BadgePercent, Users, Award, Shield } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Handshake, BadgePercent, Users, Award, Shield } from "lucide-react";
+// Button import removed as it was unused
 import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
-import Link from "next/link";
+// Link import removed as it was unused
 
 export default function EcosystemePartners() {
   const [isMobile, setIsMobile] = useState(false);
@@ -23,7 +23,7 @@ export default function EcosystemePartners() {
   const partnerBenefits = [
     {
       title: "Exclusive Discounts",
-      description: "Receive special pricing and offers available only to Pledge & Grow clients",
+      description: "Receive a minimum 5% reduction and special pricing on all services from our partner network",
       icon: <BadgePercent className="h-8 w-8 text-green-700 dark:text-green-400" />
     },
     {
@@ -62,7 +62,7 @@ export default function EcosystemePartners() {
             Our Partner Ecosystem
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            As a Pledge & Grow client, you gain exclusive access to our network of trusted partners, each offering special discounts and benefits.
+            As a Pledge & Grow client, you gain exclusive access to our network of trusted partners, each offering special discounts and benefits, including a minimum 5% reduction on all partner services.
           </p>
         </motion.div>
 
@@ -124,8 +124,8 @@ export default function EcosystemePartners() {
                 We carefully select partners who share our commitment to quality and innovation.
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                As our network continues to expand, you'll gain access to an ever-growing range of services and benefits, 
-                all designed to help your business thrive in today's competitive landscape.
+                As our network continues to expand, you&apos;ll gain access to an ever-growing range of services and benefits, 
+                all designed to help your business thrive in today&apos;s competitive landscape.
               </p>
             </div>
             <div className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/30 p-8 rounded-xl">
