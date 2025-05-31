@@ -5,51 +5,51 @@ export const portfolioProjects: ClientProject[] = [
     id: "14",
     name: "Cabinet Michou",
     logo: "/images/portfolio/cabinet-michou-logo.png",
-    description: "Development of a professional website for a specialized law firm, with an appointment booking system and secure client portal.",
-    industry: "Legal",
-    year: 2024,
+    description: "Complete website creation with back office for a real estate company, including property listing management, client portal, and appointment scheduling system.",
+    industry: "Real Estate",
+    year: 2025,
     deliverables: [
-      "Site Web Responsive",
-      "Système de Rendez-vous",
-      "Espace Client Sécurisé",
-      "Gestion Documentaire"
+      "Responsive Website",
+      "Property Management System",
+      "Client Portal",
+      "Advanced Search Functionality"
     ],
     needs: [
-      "Créer une présence en ligne professionnelle",
-      "Faciliter la prise de rendez-vous pour les clients",
-      "Sécuriser l'échange de documents juridiques",
-      "Mettre en valeur l'expertise du cabinet"
+      "Create a professional online presence for the real estate agency",
+      "Implement a comprehensive property listing and management system",
+      "Develop a secure client portal for buyers and sellers",
+      "Streamline the property search and viewing appointment process"
     ],
     methodology: {
-      approach: "Nous avons adopté une approche centrée sur la sécurité et le professionnalisme, en créant une interface élégante qui reflète les valeurs du cabinet tout en garantissant la confidentialité des données.",
-      technologies: ["Secure Authentication", "Document Management", "Appointment Scheduling", "SSL Encryption"],
+      approach: "We developed a user-centered solution with a focus on property showcase and management efficiency. The back office was designed to simplify property listing management while the front-end provides an intuitive property search experience.",
+      technologies: ["Property Management System", "Image Optimization", "Appointment Scheduling", "SSL Encryption"],
       languages: ["TypeScript", "HTML5", "CSS3"],
       frameworks: ["Next.js", "Tailwind CSS"],
-      libraries: ["React", "Framer Motion", "PDF.js"],
-      apis: ["Google Calendar", "DocuSign", "Stripe"]
+      libraries: ["React", "Framer Motion", "Leaflet", "PDF.js"],
+      apis: ["Google Maps", "Google Calendar", "DocuSign", "Stripe"]
     },
     outcome: {
       statistics: [
-        { label: "Augmentation des Consultations", value: "35%" },
-        { label: "Taux de Satisfaction Client", value: "96%" },
-        { label: "Réduction du Temps Administratif", value: "42%" }
+        { label: "Increase in Property Inquiries", value: "68%" },
+        { label: "Client Satisfaction Rate", value: "96%" },
+        { label: "Reduction in Administrative Time", value: "52%" }
       ],
       benefits: [
-        "Image professionnelle renforcée avec un design élégant et sobre",
-        "Processus de prise de rendez-vous simplifié pour les clients",
-        "Échange sécurisé de documents confidentiels",
-        "Meilleure visibilité de l'expertise du cabinet"
+        "Enhanced professional image with an elegant and modern design",
+        "Simplified property listing and management process",
+        "Improved client engagement through the portal",
+        "Better visibility of featured properties and services"
       ],
       improvements: [
-        "Intégration d'un blog juridique pour le partage d'expertise",
-        "Mise en place d'un système de notification pour les rendez-vous",
-        "Création d'une FAQ dynamique sur les services proposés",
-        "Optimisation pour les moteurs de recherche spécialisés"
+        "Implementation of virtual property tours",
+        "Integration of automated viewing appointment scheduling",
+        "Development of a property market analysis dashboard",
+        "Optimization for real estate search engines"
       ],
       testimonial: {
-        quote: "Le site développé par Pledge & Grow a transformé notre relation client et notre organisation interne. La qualité du travail et le professionnalisme de l'équipe ont dépassé nos attentes.",
-        author: "Maître Michou",
-        position: "Fondateur, Cabinet Michou"
+        quote: "The website and back office system developed by Pledge & Grow have revolutionized our property management and client relationships. The intuitive interface has significantly improved our efficiency and online presence.",
+        author: "Jean Michou",
+        position: "Director, Cabinet Michou"
       }
     }
   },
@@ -57,51 +57,51 @@ export const portfolioProjects: ClientProject[] = [
     id: "15",
     name: "Cabinet Mas Rocher",
     logo: "/images/portfolio/mas-rocher-logo.png",
-    description: "Création d'une plateforme digitale pour un cabinet de conseil fiscal et patrimonial, incluant des outils de simulation et un portail client personnalisé.",
-    industry: "Finance & Conseil",
-    year: 2024,
+    description: "Complete website creation with comprehensive back office for a real estate company, featuring property management system, client relationship tools, and advanced search functionality.",
+    industry: "Real Estate",
+    year: 2025,
     deliverables: [
-      "Plateforme Web Responsive",
-      "Outils de Simulation Fiscale",
-      "Portail Client",
-      "Système de Notification"
+      "Responsive Website",
+      "Advanced Property Management System",
+      "Interactive Property Search",
+      "Agent Dashboard"
     ],
     needs: [
-      "Digitaliser les services de conseil fiscal et patrimonial",
-      "Offrir des outils de simulation accessibles aux clients",
-      "Créer un espace sécurisé pour le suivi des dossiers",
-      "Améliorer la communication avec les clients"
+      "Create a premium online presence for the real estate agency",
+      "Develop a comprehensive back office for property management",
+      "Implement an advanced search system with filtering options",
+      "Streamline communication between agents and clients"
     ],
     methodology: {
-      approach: "Nous avons développé une solution sur mesure en étroite collaboration avec les experts du cabinet, en mettant l'accent sur la précision des calculs fiscaux et la sécurité des données financières.",
-      technologies: ["Financial Modeling", "Secure Data Storage", "Tax Calculation", "Client Portal"],
+      approach: "We created a sophisticated yet user-friendly platform that balances aesthetic appeal with powerful functionality. The back office was designed to maximize agent efficiency while the front-end delivers an engaging property discovery experience.",
+      technologies: ["Property Database", "Image Gallery Optimization", "Real-time Notifications", "Secure Authentication"],
       languages: ["TypeScript", "Python", "SQL"],
-      frameworks: ["Next.js", "Django", "Express"],
-      libraries: ["React", "Pandas", "NumPy", "D3.js"],
-      apis: ["Banking APIs", "Tax Data", "Document Verification"]
+      frameworks: ["Next.js", "Express", "Tailwind CSS"],
+      libraries: ["React", "Redux", "Leaflet", "Chart.js"],
+      apis: ["Google Maps", "Property Market Data", "DocuSign", "Stripe"]
     },
     outcome: {
       statistics: [
-        { label: "Augmentation de la Clientèle", value: "28%" },
-        { label: "Temps de Traitement Réduit", value: "53%" },
-        { label: "Satisfaction Client", value: "92%" }
+        { label: "Increase in Property Listings", value: "42%" },
+        { label: "Conversion Rate", value: "8.7%" },
+        { label: "Agent Productivity", value: "+65%" }
       ],
       benefits: [
-        "Accessibilité accrue aux services de conseil fiscal",
-        "Simulations personnalisées pour les clients",
-        "Suivi transparent des dossiers en cours",
-        "Communication améliorée entre conseillers et clients"
+        "Elevated brand image with a premium, modern design",
+        "Streamlined property management workflow",
+        "Enhanced client experience through intuitive search",
+        "Improved agent productivity and response time"
       ],
       improvements: [
-        "Intégration d'alertes fiscales personnalisées",
-        "Développement d'un tableau de bord analytique",
-        "Mise en place d'un système de signature électronique",
-        "Création d'une base de connaissances fiscales"
+        "Implementation of 3D virtual property tours",
+        "Development of market trend analysis tools",
+        "Integration of client relationship management features",
+        "Creation of a mobile app for agents on the go"
       ],
       testimonial: {
-        quote: "La plateforme développée par Pledge & Grow a révolutionné notre façon de travailler et d'interagir avec nos clients. Les outils de simulation sont particulièrement appréciés et nous ont permis d'offrir un service à plus haute valeur ajoutée.",
-        author: "Jean Mas",
-        position: "Associé Principal, Cabinet Mas Rocher"
+        quote: "The website and management system developed by Pledge & Grow have transformed our business operations. The intuitive back office has significantly reduced our administrative workload, while the elegant front-end has attracted more quality clients.",
+        author: "Philippe Rocher",
+        position: "CEO, Cabinet Mas Rocher"
       }
     }
   },
@@ -109,23 +109,23 @@ export const portfolioProjects: ClientProject[] = [
     id: "1",
     name: "Dualink",
     logo: "/images/portfolio/dualink-logo.png",
-    description: "Refonte complète du site web pour une agence de marketing digital avec intégration d'outils de génération de leads et amélioration du SEO.",
-    industry: "Marketing Digital",
-    year: 2023,
+    description: "Complete website creation and development for a digital marketing agency with integration of lead generation tools, CRM, and advanced SEO features.",
+    industry: "Digital Marketing",
+    year: 2024,
     deliverables: [
-      "Site Web Responsive",
-      "Stratégie SEO",
-      "Génération de Leads",
-      "Intégration CRM"
+      "Responsive Website",
+      "SEO Strategy",
+      "Lead Generation",
+      "CRM Integration"
     ],
     needs: [
-      "Moderniser l'image de marque en ligne",
-      "Améliorer le positionnement sur les moteurs de recherche",
-      "Intégrer des outils de capture de leads",
-      "Faciliter la gestion du contenu marketing"
+      "Modernize the online brand image",
+      "Improve search engine positioning",
+      "Integrate lead capture tools",
+      "Facilitate marketing content management"
     ],
     methodology: {
-      approach: "Nous avons adopté une approche centrée sur l'utilisateur, en commençant par une analyse approfondie des besoins de l'agence et de ses clients cibles. Le développement a suivi une méthodologie Agile avec des sprints de deux semaines.",
+      approach: "We adopted a user-centered approach, starting with an in-depth analysis of the agency's needs and its target clients. Development followed an Agile methodology with two-week sprints.",
       technologies: ["SEO", "Marketing Automation", "CMS", "Analytics"],
       languages: ["TypeScript", "HTML5", "CSS3"],
       frameworks: ["Next.js", "Tailwind CSS"],
@@ -134,26 +134,26 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Augmentation du Trafic Organique", value: "72%" },
-        { label: "Taux de Conversion", value: "4.8%" },
-        { label: "Leads Générés par Mois", value: "+45" }
+        { label: "Increase in Organic Traffic", value: "72%" },
+        { label: "Conversion Rate", value: "4.8%" },
+        { label: "Leads Generated per Month", value: "+45" }
       ],
       benefits: [
-        "Image de marque renforcée avec un design moderne et professionnel",
-        "Meilleure visibilité sur les moteurs de recherche",
-        "Augmentation significative des demandes de devis",
-        "Processus de qualification des leads optimisé"
+        "Strengthened brand image with a modern and professional design",
+        "Better visibility on search engines",
+        "Significant increase in quote requests",
+        "Optimized lead qualification process"
       ],
       improvements: [
-        "Intégration d'un blog optimisé pour le SEO",
-        "Mise en place de formulaires intelligents pour la capture de leads",
-        "Création d'un tableau de bord pour le suivi des performances",
-        "Optimisation de l'expérience mobile"
+        "Integration of an SEO-optimized blog",
+        "Implementation of smart forms for lead capture",
+        "Creation of a dashboard for performance tracking",
+        "Optimization of the mobile experience"
       ],
       testimonial: {
-        quote: "Notre nouveau site a complètement transformé notre présence en ligne. Les leads générés ont dépassé nos attentes et notre image de marque s'est considérablement renforcée.",
+        quote: "Our new website has completely transformed our online presence. The leads generated have exceeded our expectations and our brand image has been significantly strengthened.",
         author: "Marie Dupont",
-        position: "Directrice, Dualink"
+        position: "Director, Dualink"
       }
     }
   },
@@ -161,23 +161,23 @@ export const portfolioProjects: ClientProject[] = [
     id: "2",
     name: "Global Corporate Business",
     logo: "/images/portfolio/gcb-logo.png",
-    description: "Développement d'une plateforme de conseil pour l'expansion des entreprises à Oman, incluant des outils d'analyse comptable et financière.",
-    industry: "Conseil & Finance",
-    year: 2023,
+    description: "Complete website creation and development of a consulting platform for business expansion in Oman, including accounting and financial analysis tools with secure client portal.",
+    industry: "Consulting & Finance",
+    year: 2025,
     deliverables: [
-      "Plateforme Web",
-      "Outils d'Analyse Financière",
-      "Système de Gestion Documentaire",
-      "Portail Client"
+      "Web Platform",
+      "Financial Analysis Tools",
+      "Document Management System",
+      "Client Portal"
     ],
     needs: [
-      "Créer une plateforme pour faciliter l'expansion des entreprises à Oman",
-      "Développer des outils d'analyse comptable et financière",
-      "Mettre en place un système de gestion documentaire sécurisé",
-      "Offrir un portail client pour le suivi des dossiers"
+      "Create a platform to facilitate business expansion in Oman",
+      "Develop accounting and financial analysis tools",
+      "Implement a secure document management system",
+      "Provide a client portal for case tracking"
     ],
     methodology: {
-      approach: "Nous avons utilisé une approche progressive, en commençant par les fonctionnalités essentielles puis en ajoutant des modules spécialisés. Une attention particulière a été portée à la sécurité des données financières et à la conformité réglementaire.",
+      approach: "We used a progressive approach, starting with essential features and then adding specialized modules. Special attention was paid to the security of financial data and regulatory compliance.",
       technologies: ["Cloud Computing", "FinTech", "Document Management", "Data Security"],
       languages: ["TypeScript", "Python", "SQL"],
       frameworks: ["Next.js", "Django", "Express"],
@@ -186,26 +186,26 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Réduction du Temps de Traitement", value: "65%" },
-        { label: "Augmentation de la Clientèle", value: "40%" },
-        { label: "Taux de Satisfaction Client", value: "94%" }
+        { label: "Reduction in Processing Time", value: "65%" },
+        { label: "Increase in Client Base", value: "40%" },
+        { label: "Client Satisfaction Rate", value: "94%" }
       ],
       benefits: [
-        "Processus d'expansion à Oman simplifié et accéléré",
-        "Meilleure visibilité sur les aspects financiers et comptables",
-        "Sécurisation des échanges documentaires",
-        "Suivi en temps réel de l'avancement des dossiers"
+        "Simplified and accelerated expansion process in Oman",
+        "Better visibility on financial and accounting aspects",
+        "Secure document exchanges",
+        "Real-time tracking of case progress"
       ],
       improvements: [
-        "Automatisation des calculs financiers complexes",
-        "Mise en place d'un système d'alerte pour les échéances importantes",
-        "Création d'un tableau de bord personnalisable",
-        "Intégration d'un système de signature électronique"
+        "Automation of complex financial calculations",
+        "Implementation of an alert system for important deadlines",
+        "Creation of a customizable dashboard",
+        "Integration of an electronic signature system"
       ],
       testimonial: {
-        quote: "La plateforme a révolutionné notre façon d'accompagner les entreprises dans leur expansion à Oman. Nos clients apprécient particulièrement la transparence et l'efficacité du suivi.",
+        quote: "The platform has revolutionized our way of supporting businesses in their expansion to Oman. Our clients particularly appreciate the transparency and efficiency of the tracking.",
         author: "Ahmed Al-Saadi",
-        position: "Directeur, Global Corporate Business"
+        position: "Director, Global Corporate Business"
       }
     }
   },
@@ -213,23 +213,23 @@ export const portfolioProjects: ClientProject[] = [
     id: "3",
     name: "ERB-BTP",
     logo: "/images/portfolio/erb-btp-logo.png",
-    description: "Refonte complète du site web pour une société de construction, rénovation, étanchéité et démolition avec mise en valeur des projets réalisés.",
+    description: "Complete website creation and development for a construction, renovation, waterproofing, and demolition company with an interactive portfolio of completed projects and quote request system.",
     industry: "Construction",
-    year: 2024,
+    year: 2025,
     deliverables: [
-      "Site Web Vitrine",
-      "Portfolio de Projets",
-      "Formulaire de Contact",
-      "Optimisation SEO"
+      "Showcase Website",
+      "Project Portfolio",
+      "Contact Form",
+      "SEO Optimization"
     ],
     needs: [
-      "Moderniser l'image de l'entreprise en ligne",
-      "Mettre en valeur les projets réalisés avec un portfolio détaillé",
-      "Faciliter la prise de contact pour les prospects",
-      "Améliorer la visibilité sur les moteurs de recherche"
+      "Modernize the company's online image",
+      "Highlight completed projects with a detailed portfolio",
+      "Facilitate contact for prospects",
+      "Improve visibility on search engines"
     ],
     methodology: {
-      approach: "Nous avons adopté une approche centrée sur le visuel, mettant en avant les réalisations de l'entreprise à travers des photos de haute qualité et des descriptions détaillées des projets. Le site a été conçu pour être facilement navigable et optimisé pour tous les appareils.",
+      approach: "We adopted a visual-centric approach, showcasing the company's achievements through high-quality photos and detailed project descriptions. The site was designed to be easily navigable and optimized for all devices.",
       technologies: ["Responsive Design", "SEO", "CMS", "Image Optimization"],
       languages: ["TypeScript", "HTML5", "CSS3"],
       frameworks: ["Next.js", "Tailwind CSS"],
@@ -238,26 +238,26 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Augmentation des Demandes de Devis", value: "58%" },
-        { label: "Amélioration du Positionnement SEO", value: "Top 5" },
-        { label: "Taux de Rebond Réduit", value: "-35%" }
+        { label: "Increase in Quote Requests", value: "58%" },
+        { label: "Improvement in SEO Positioning", value: "Top 5" },
+        { label: "Reduced Bounce Rate", value: "-35%" }
       ],
       benefits: [
-        "Image professionnelle renforcée avec un design moderne",
-        "Meilleure présentation des services et compétences",
-        "Augmentation des demandes de devis via le formulaire de contact",
-        "Amélioration de la visibilité locale sur les moteurs de recherche"
+        "Enhanced professional image with a modern design",
+        "Better presentation of services and skills",
+        "Increase in quote requests via the contact form",
+        "Improved local visibility on search engines"
       ],
       improvements: [
-        "Création d'un portfolio filtrable par type de projet",
-        "Intégration de témoignages clients",
-        "Optimisation des images pour un chargement rapide",
-        "Structure de navigation intuitive"
+        "Creation of a portfolio filterable by project type",
+        "Integration of client testimonials",
+        "Optimization of images for fast loading",
+        "Intuitive navigation structure"
       ],
       testimonial: {
-        quote: "Notre nouveau site reflète parfaitement notre savoir-faire et notre professionnalisme. Les retours de nos clients sont excellents et nous avons constaté une augmentation significative des demandes de devis.",
+        quote: "Our new website perfectly reflects our expertise and professionalism. The feedback from our clients is excellent and we have seen a significant increase in quote requests.",
         author: "Eric Bouton",
-        position: "Directeur, ERB-BTP"
+        position: "Director, ERB-BTP"
       }
     }
   },
@@ -265,23 +265,23 @@ export const portfolioProjects: ClientProject[] = [
     id: "4",
     name: "JABB",
     logo: "/images/portfolio/jabb-logo.png",
-    description: "Refonte complète du site web d'une entreprise d'imprimerie avec amélioration du référencement et intégration d'un système de devis en ligne.",
-    industry: "Imprimerie",
-    year: 2022,
+    description: "Complete redesign of a printing company's website with improved SEO and integration of an online quote system.",
+    industry: "Printing",
+    year: 2025,
     deliverables: [
-      "Site Web Responsive",
-      "Système de Devis en Ligne",
-      "Catalogue de Produits",
-      "Stratégie SEO"
+      "Responsive Website",
+      "Online Quote System",
+      "Product Catalog",
+      "SEO Strategy"
     ],
     needs: [
-      "Moderniser le site web existant avec un design attractif",
-      "Améliorer le référencement pour augmenter la visibilité",
-      "Intégrer un système de devis en ligne pour les clients",
-      "Présenter le catalogue de produits et services de manière claire"
+      "Modernize the existing website with an attractive design",
+      "Improve SEO to increase visibility",
+      "Integrate an online quote system for customers",
+      "Present the product and service catalog clearly"
     ],
     methodology: {
-      approach: "Nous avons commencé par une analyse approfondie du site existant et de la concurrence pour identifier les points d'amélioration. La refonte a été réalisée en mettant l'accent sur l'expérience utilisateur et l'optimisation pour les moteurs de recherche.",
+      approach: "We began with an in-depth analysis of the existing site and competition to identify areas for improvement. The redesign was carried out with an emphasis on user experience and search engine optimization.",
       technologies: ["Responsive Design", "SEO", "E-commerce", "UX/UI"],
       languages: ["JavaScript", "HTML5", "CSS3", "PHP"],
       frameworks: ["WordPress", "WooCommerce"],
@@ -290,26 +290,26 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Augmentation du Trafic Organique", value: "120%" },
-        { label: "Taux de Conversion des Devis", value: "18%" },
-        { label: "Positionnement sur les Mots-clés Cibles", value: "Top 3" }
+        { label: "Increase in Organic Traffic", value: "120%" },
+        { label: "Quote Conversion Rate", value: "18%" },
+        { label: "Positioning for Target Keywords", value: "Top 3" }
       ],
       benefits: [
-        "Visibilité considérablement améliorée sur les moteurs de recherche",
-        "Processus de demande de devis simplifié pour les clients",
-        "Présentation plus attractive des produits et services",
-        "Image de marque modernisée et professionnelle"
+        "Significantly improved visibility on search engines",
+        "Simplified quote request process for customers",
+        "More attractive presentation of products and services",
+        "Modernized and professional brand image"
       ],
       improvements: [
-        "Optimisation technique du site pour améliorer les performances",
-        "Création de contenu optimisé pour le SEO",
-        "Mise en place d'un système de devis personnalisés",
-        "Intégration d'une galerie de réalisations"
+        "Technical optimization of the site to improve performance",
+        "Creation of SEO-optimized content",
+        "Implementation of a customized quote system",
+        "Integration of a project gallery"
       ],
       testimonial: {
-        quote: "La refonte de notre site a eu un impact immédiat sur notre activité. Le nombre de demandes de devis a explosé et notre visibilité en ligne s'est considérablement améliorée.",
+        quote: "The redesign of our site had an immediate impact on our business. The number of quote requests has exploded and our online visibility has improved considerably.",
         author: "Jean Bertrand",
-        position: "Gérant, JABB"
+        position: "Manager, JABB"
       }
     }
   },
@@ -317,23 +317,23 @@ export const portfolioProjects: ClientProject[] = [
     id: "5",
     name: "JABB Events",
     logo: "/images/portfolio/jabb-events-logo.png",
-    description: "Création d'un site e-commerce pour une société d'organisation d'événements, permettant la réservation et le paiement en ligne.",
-    industry: "Événementiel",
-    year: 2023,
+    description: "Creation of an e-commerce website for an event planning company, allowing online booking and payment.",
+    industry: "Event Planning",
+    year: 2025,
     deliverables: [
-      "Site E-commerce",
-      "Système de Réservation",
-      "Paiement en Ligne",
-      "Gestion des Événements"
+      "E-commerce Website",
+      "Booking System",
+      "Online Payment",
+      "Event Management"
     ],
     needs: [
-      "Créer une plateforme de réservation d'événements en ligne",
-      "Intégrer un système de paiement sécurisé",
-      "Permettre la personnalisation des événements",
-      "Faciliter la gestion des réservations pour l'administrateur"
+      "Create an online event booking platform",
+      "Integrate a secure payment system",
+      "Allow event customization",
+      "Facilitate reservation management for the administrator"
     ],
     methodology: {
-      approach: "Nous avons développé une solution e-commerce sur mesure, adaptée aux spécificités du secteur événementiel. L'accent a été mis sur la simplicité du processus de réservation et la sécurité des transactions.",
+      approach: "We developed a custom e-commerce solution, adapted to the specificities of the event planning sector. The emphasis was on the simplicity of the booking process and the security of transactions.",
       technologies: ["E-commerce", "Payment Gateway", "Booking System", "Event Management"],
       languages: ["TypeScript", "PHP", "SQL"],
       frameworks: ["Next.js", "Laravel"],
@@ -342,26 +342,26 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Augmentation des Réservations", value: "85%" },
-        { label: "Réduction du Temps de Traitement", value: "70%" },
-        { label: "Taux de Satisfaction Client", value: "96%" }
+        { label: "Increase in Bookings", value: "85%" },
+        { label: "Reduction in Processing Time", value: "70%" },
+        { label: "Client Satisfaction Rate", value: "96%" }
       ],
       benefits: [
-        "Processus de réservation simplifié pour les clients",
-        "Réduction significative des tâches administratives",
-        "Meilleure visibilité sur les événements à venir",
-        "Augmentation du chiffre d'affaires grâce aux ventes en ligne"
+        "Simplified booking process for clients",
+        "Significant reduction in administrative tasks",
+        "Better visibility on upcoming events",
+        "Increased revenue through online sales"
       ],
       improvements: [
-        "Mise en place d'un système de personnalisation des événements",
-        "Intégration d'un calendrier interactif pour la disponibilité",
-        "Création d'un tableau de bord administrateur complet",
-        "Automatisation des confirmations et rappels par email"
+        "Implementation of an event customization system",
+        "Integration of an interactive calendar for availability",
+        "Creation of a comprehensive administrator dashboard",
+        "Automation of email confirmations and reminders"
       ],
       testimonial: {
-        quote: "La plateforme a transformé notre façon de gérer les événements. Nos clients apprécient la simplicité de réservation et nous avons considérablement réduit notre charge administrative.",
+        quote: "The platform has transformed our way of managing events. Our clients appreciate the simplicity of booking and we have significantly reduced our administrative workload.",
         author: "Sophie Martin",
-        position: "Directrice, JABB Events"
+        position: "Director, JABB Events"
       }
     }
   },
@@ -369,23 +369,23 @@ export const portfolioProjects: ClientProject[] = [
     id: "6",
     name: "Gudule",
     logo: "/images/portfolio/gudule-logo.png",
-    description: "Développement d'une plateforme de formation en ligne avec gestion des cours, suivi des progrès et système d'évaluation.",
-    industry: "Formation",
-    year: 2023,
+    description: "Complete website creation and development of an online training platform with course management, progress tracking, evaluation system, and interactive learning modules.",
+    industry: "Training",
+    year: 2025,
     deliverables: [
-      "Plateforme E-learning",
-      "Gestion des Cours",
-      "Système d'Évaluation",
-      "Suivi des Progrès"
+      "E-learning Platform",
+      "Course Management",
+      "Evaluation System",
+      "Progress Tracking"
     ],
     needs: [
-      "Créer une plateforme de formation en ligne intuitive",
-      "Développer un système de gestion des cours et du contenu",
-      "Intégrer des outils d'évaluation et de certification",
-      "Permettre le suivi des progrès des apprenants"
+      "Create an intuitive online training platform",
+      "Develop a course and content management system",
+      "Integrate evaluation and certification tools",
+      "Enable tracking of learner progress"
     ],
     methodology: {
-      approach: "Nous avons adopté une approche centrée sur l'expérience d'apprentissage, en développant une interface intuitive et des fonctionnalités pédagogiques avancées. La plateforme a été conçue pour être évolutive et facilement administrable.",
+      approach: "We adopted a learning experience-centered approach, developing an intuitive interface and advanced pedagogical features. The platform was designed to be scalable and easily manageable.",
       technologies: ["E-learning", "LMS", "Content Management", "Assessment Tools"],
       languages: ["TypeScript", "Python", "SQL"],
       frameworks: ["Next.js", "Django"],
@@ -394,26 +394,26 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Taux de Complétion des Cours", value: "78%" },
-        { label: "Augmentation des Inscriptions", value: "65%" },
-        { label: "Satisfaction des Utilisateurs", value: "4.8/5" }
+        { label: "Course Completion Rate", value: "78%" },
+        { label: "Increase in Registrations", value: "65%" },
+        { label: "User Satisfaction", value: "4.8/5" }
       ],
       benefits: [
-        "Expérience d'apprentissage améliorée avec des fonctionnalités interactives",
-        "Gestion simplifiée des cours et du contenu pédagogique",
-        "Suivi précis des progrès et des performances des apprenants",
-        "Processus d'évaluation et de certification automatisé"
+        "Enhanced learning experience with interactive features",
+        "Simplified management of courses and educational content",
+        "Precise tracking of learner progress and performance",
+        "Automated evaluation and certification process"
       ],
       improvements: [
-        "Création d'un éditeur de cours intuitif pour les formateurs",
-        "Intégration de quiz interactifs et d'exercices pratiques",
-        "Développement d'un tableau de bord personnalisé pour les apprenants",
-        "Mise en place d'un système de badges et de certifications"
+        "Creation of an intuitive course editor for trainers",
+        "Integration of interactive quizzes and practical exercises",
+        "Development of a customized dashboard for learners",
+        "Implementation of a badge and certification system"
       ],
       testimonial: {
-        quote: "La plateforme a transformé notre offre de formation. Nos formateurs peuvent facilement créer du contenu de qualité et nos apprenants bénéficient d'une expérience d'apprentissage optimale.",
+        quote: "The platform has transformed our training offerings. Our trainers can easily create quality content and our learners benefit from an optimal learning experience.",
         author: "Claire Dubois",
-        position: "Responsable Formation, Gudule"
+        position: "Training Manager, Gudule"
       }
     }
   },
@@ -421,23 +421,23 @@ export const portfolioProjects: ClientProject[] = [
     id: "7",
     name: "Mairie de Chelles",
     logo: "/images/portfolio/chelles-logo.png",
-    description: "Création d'un site vitrine pour la ville de Chelles, mettant en avant les services municipaux, les événements locaux et les informations pratiques.",
-    industry: "Secteur Public",
+    description: "Creation of a showcase website for the city of Chelles, highlighting municipal services, local events, and practical information.",
+    industry: "Public Sector",
     year: 2022,
     deliverables: [
-      "Site Web Institutionnel",
-      "Agenda des Événements",
-      "Annuaire des Services",
-      "Formulaires en Ligne"
+      "Institutional Website",
+      "Events Calendar",
+      "Services Directory",
+      "Online Forms"
     ],
     needs: [
-      "Créer un site web moderne et accessible pour les citoyens",
-      "Faciliter l'accès aux informations et services municipaux",
-      "Mettre en place un agenda des événements locaux",
-      "Développer des formulaires en ligne pour les démarches administratives"
+      "Modernize the city's online presence",
+      "Facilitate access to municipal information and services",
+      "Promote local events and initiatives",
+      "Improve communication with citizens"
     ],
     methodology: {
-      approach: "Nous avons travaillé en étroite collaboration avec les services municipaux pour identifier les besoins des citoyens et créer une architecture d'information claire. Le site a été développé selon les normes d'accessibilité RGAA pour garantir l'accès à tous les utilisateurs.",
+      approach: "We worked closely with municipal services to identify citizens' needs and create a clear information architecture. The site was developed according to RGAA accessibility standards to ensure access for all users.",
       technologies: ["Responsive Design", "Accessibility", "CMS", "Forms Management"],
       languages: ["JavaScript", "HTML5", "CSS3", "PHP"],
       frameworks: ["WordPress", "Bootstrap"],
@@ -446,26 +446,26 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Augmentation de la Fréquentation", value: "125%" },
-        { label: "Réduction des Appels au Standard", value: "40%" },
-        { label: "Formulaires Soumis en Ligne", value: "+500/mois" }
+        { label: "Increase in Website Traffic", value: "125%" },
+        { label: "Reduction in Phone Calls", value: "40%" },
+        { label: "Online Forms Submitted", value: "+500/month" }
       ],
       benefits: [
-        "Meilleure communication entre la municipalité et les citoyens",
-        "Accès simplifié aux informations et services municipaux",
-        "Réduction de la charge administrative grâce aux formulaires en ligne",
-        "Promotion efficace des événements locaux"
+        "Better communication between the municipality and citizens",
+        "Simplified access to municipal information and services",
+        "Reduced administrative workload thanks to online forms",
+        "Effective promotion of local events"
       ],
       improvements: [
-        "Création d'une architecture d'information intuitive",
-        "Développement d'un moteur de recherche interne performant",
-        "Mise en place d'un système de notification pour les actualités",
-        "Intégration d'une carte interactive des services municipaux"
+        "Creation of an intuitive information architecture",
+        "Development of a powerful internal search engine",
+        "Implementation of a notification system for news",
+        "Integration of an interactive map of municipal services"
       ],
       testimonial: {
-        quote: "Le nouveau site de la ville a considérablement amélioré notre communication avec les citoyens. Les retours sont très positifs et nous avons constaté une réduction significative des demandes d'information par téléphone.",
+        quote: "The new city website has significantly improved our communication with citizens. The feedback is very positive and we have seen a significant reduction in information requests by phone.",
         author: "Brice Rabaste",
-        position: "Maire de Chelles"
+        position: "Mayor of Chelles"
       }
     }
   },
@@ -473,23 +473,23 @@ export const portfolioProjects: ClientProject[] = [
     id: "8",
     name: "Chronos Corp.",
     logo: "/images/portfolio/chronos-logo.png",
-    description: "Développement d'une application sur mesure pour la gestion du temps et des projets, intégrant des fonctionnalités avancées de reporting et d'analyse.",
-    industry: "Logiciel d'Entreprise",
-    year: 2024,
+    description: "Digital consulting and development of a custom application for time and project management, integrating advanced reporting and analysis features.",
+    industry: "Enterprise Software",
+    year: 2022,
     deliverables: [
-      "Application Web",
-      "Application Mobile",
-      "Tableau de Bord Analytique",
-      "Système de Reporting"
+      "Web Application",
+      "Mobile Application",
+      "Analytical Dashboard",
+      "Reporting System"
     ],
     needs: [
-      "Développer une solution de gestion du temps et des projets sur mesure",
-      "Intégrer des fonctionnalités avancées de reporting et d'analyse",
-      "Créer une interface utilisateur intuitive et responsive",
-      "Permettre l'accès aux données en mobilité"
+      "Develop a custom time and project management solution",
+      "Integrate advanced reporting and analysis features",
+      "Create an intuitive and responsive user interface",
+      "Enable mobile access to data"
     ],
     methodology: {
-      approach: "Nous avons adopté une approche de développement itérative, en commençant par un MVP puis en ajoutant progressivement des fonctionnalités basées sur les retours utilisateurs. L'accent a été mis sur la performance et la fiabilité du système.",
+      approach: "We adopted an iterative development approach, starting with an MVP and then progressively adding features based on user feedback. The emphasis was on system performance and reliability.",
       technologies: ["Progressive Web App", "Real-time Analytics", "Cloud Computing", "Mobile Development"],
       languages: ["TypeScript", "Kotlin", "Swift", "SQL"],
       frameworks: ["Next.js", "React Native", "NestJS"],
@@ -498,24 +498,24 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Augmentation de la Productivité", value: "32%" },
-        { label: "Réduction des Erreurs de Saisie", value: "95%" },
-        { label: "Temps Économisé par Semaine", value: "12h/utilisateur" }
+        { label: "Productivity Increase", value: "32%" },
+        { label: "Reduction in Data Entry Errors", value: "95%" },
+        { label: "Time Saved per Week", value: "12h/user" }
       ],
       benefits: [
-        "Gestion du temps et des projets optimisée et centralisée",
-        "Prise de décision facilitée grâce aux tableaux de bord analytiques",
-        "Réduction significative des tâches administratives",
-        "Meilleure visibilité sur l'allocation des ressources"
+        "Optimized and centralized time and project management",
+        "Easier decision-making thanks to analytical dashboards",
+        "Significant reduction in administrative tasks",
+        "Better visibility on resource allocation"
       ],
       improvements: [
-        "Développement d'algorithmes d'analyse prédictive",
-        "Création d'interfaces personnalisables selon les rôles",
-        "Mise en place d'un système de notifications intelligentes",
-        "Intégration avec les outils existants de l'entreprise"
+        "Development of predictive analysis algorithms",
+        "Creation of customizable interfaces based on roles",
+        "Implementation of an intelligent notification system",
+        "Integration with existing company tools"
       ],
       testimonial: {
-        quote: "Cette solution a révolutionné notre façon de gérer les projets et le temps de nos équipes. Les fonctionnalités d'analyse nous permettent d'identifier rapidement les opportunités d'optimisation et d'améliorer constamment nos processus.",
+        quote: "This solution has revolutionized the way we manage projects and our teams' time. The analysis features allow us to quickly identify optimization opportunities and continuously improve our processes.",
         author: "Thomas Leroy",
         position: "CTO, Chronos Corp."
       }
@@ -525,23 +525,23 @@ export const portfolioProjects: ClientProject[] = [
     id: "9",
     name: "Melytop",
     logo: "/images/portfolio/melytop-logo.png",
-    description: "Création d'une landing page pour une indépendante spécialisée dans l'accompagnement à la maternité, avec un design chaleureux et rassurant.",
-    industry: "Santé & Bien-être",
-    year: 2023,
+    description: "Creation of a landing page for an independent professional specializing in maternity support, with a warm and reassuring design.",
+    industry: "Health & Wellness",
+    year: 2025,
     deliverables: [
       "Landing Page",
-      "Formulaire de Contact",
-      "Optimisation Mobile",
-      "Intégration de Témoignages"
+      "Contact Form",
+      "Mobile Optimization",
+      "Testimonials Integration"
     ],
     needs: [
-      "Créer une présence en ligne professionnelle et rassurante",
-      "Mettre en avant les services d'accompagnement à la maternité",
-      "Faciliter la prise de contact pour les futures mamans",
-      "Présenter les témoignages de clientes satisfaites"
+      "Create a professional and reassuring online presence",
+      "Highlight maternity support services",
+      "Facilitate contact for expectant mothers",
+      "Present testimonials from satisfied clients"
     ],
     methodology: {
-      approach: "Nous avons adopté une approche centrée sur l'émotion et la confiance, en utilisant des couleurs douces et des images évocatrices. La landing page a été conçue pour être simple, rassurante et efficace pour générer des contacts.",
+      approach: "We adopted an approach centered on emotion and trust, using soft colors and evocative images. The landing page was designed to be simple, reassuring, and effective for generating contacts.",
       technologies: ["Responsive Design", "SEO Local", "UX/UI", "Performance Optimization"],
       languages: ["HTML5", "CSS3", "JavaScript"],
       frameworks: ["Next.js", "Tailwind CSS"],
@@ -550,26 +550,26 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Augmentation des Prises de Contact", value: "145%" },
-        { label: "Taux de Conversion", value: "6.2%" },
-        { label: "Positionnement Local", value: "Top 3" }
+        { label: "Increase in Contact Requests", value: "145%" },
+        { label: "Conversion Rate", value: "6.2%" },
+        { label: "Local Positioning", value: "Top 3" }
       ],
       benefits: [
-        "Image professionnelle établie avec une présence en ligne de qualité",
-        "Augmentation significative des demandes de rendez-vous",
-        "Meilleure visibilité locale pour les services d'accompagnement",
-        "Renforcement de la confiance grâce aux témoignages mis en avant"
+        "Professional image established with a quality online presence",
+        "Significant increase in appointment requests",
+        "Better local visibility for support services",
+        "Enhanced trust through highlighted testimonials"
       ],
       improvements: [
-        "Optimisation des temps de chargement pour une expérience fluide",
-        "Création d'un formulaire de contact intuitif et rassurant",
-        "Intégration d'une section de témoignages dynamique",
-        "Mise en place d'un système de prise de rendez-vous en ligne"
+        "Optimization of loading times for a smooth experience",
+        "Creation of an intuitive and reassuring contact form",
+        "Integration of a dynamic testimonials section",
+        "Implementation of an online appointment booking system"
       ],
       testimonial: {
-        quote: "Ma landing page a complètement transformé mon activité. Les futures mamans me contactent facilement et j'ai pu développer ma clientèle de manière significative.",
+        quote: "My landing page has completely transformed my business. Expectant mothers contact me easily and I have been able to significantly grow my client base.",
         author: "Mélanie Dupont",
-        position: "Fondatrice, Melytop"
+        position: "Founder, Melytop"
       }
     }
   },
@@ -577,23 +577,23 @@ export const portfolioProjects: ClientProject[] = [
     id: "10",
     name: "Connect & Drive",
     logo: "/images/portfolio/connect-drive-logo.png",
-    description: "Refonte du site web d'une entreprise d'installation de panneaux électriques avec amélioration du référencement et intégration d'un calculateur d'économies.",
-    industry: "Énergie",
+    description: "Redesign of a website for an electrical panel installation company with improved SEO and integration of a savings calculator.",
+    industry: "Energy",
     year: 2024,
     deliverables: [
-      "Site Web Responsive",
-      "Calculateur d'Économies",
-      "Stratégie SEO",
-      "Formulaire de Devis"
+      "Responsive Website",
+      "Savings Calculator",
+      "SEO Strategy",
+      "Quote Form"
     ],
     needs: [
-      "Moderniser le site web existant avec un design professionnel",
-      "Améliorer le référencement pour augmenter la visibilité",
-      "Intégrer un outil de calcul d'économies d'énergie",
-      "Faciliter la demande de devis pour les prospects"
+      "Modernize the existing website with a professional design",
+      "Improve SEO to increase visibility",
+      "Integrate an energy savings calculation tool",
+      "Facilitate quote requests for prospects"
     ],
     methodology: {
-      approach: "Nous avons commencé par une analyse approfondie du marché des énergies renouvelables et des attentes des clients. La refonte a été axée sur la pédagogie et la démonstration des bénéfices économiques et écologiques des installations.",
+      approach: "We began with an in-depth analysis of the renewable energy market and customer expectations. The redesign focused on education and demonstrating the economic and ecological benefits of the installations.",
       technologies: ["Responsive Design", "SEO", "Interactive Tools", "UX/UI"],
       languages: ["TypeScript", "HTML5", "CSS3"],
       frameworks: ["Next.js", "Tailwind CSS"],
@@ -602,26 +602,26 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Augmentation du Trafic Organique", value: "95%" },
-        { label: "Taux de Conversion des Devis", value: "8.5%" },
-        { label: "Utilisation du Calculateur", value: "+300/mois" }
+        { label: "Increase in Organic Traffic", value: "95%" },
+        { label: "Quote Conversion Rate", value: "8.5%" },
+        { label: "Calculator Usage", value: "+300/month" }
       ],
       benefits: [
-        "Positionnement renforcé comme expert en installations électriques",
-        "Augmentation significative des demandes de devis qualifiées",
-        "Meilleure compréhension des bénéfices par les prospects",
-        "Image de marque modernisée et professionnelle"
+        "Strengthened positioning as an expert in electrical installations",
+        "Significant increase in qualified quote requests",
+        "Better understanding of benefits by prospects",
+        "Modernized and professional brand image"
       ],
       improvements: [
-        "Développement d'un calculateur d'économies interactif",
-        "Création de contenu pédagogique sur les énergies renouvelables",
-        "Optimisation technique du site pour améliorer les performances",
-        "Mise en place d'un système de suivi des demandes de devis"
+        "Development of an interactive savings calculator",
+        "Creation of educational content on renewable energy",
+        "Technical optimization of the site to improve performance",
+        "Implementation of a quote request tracking system"
       ],
       testimonial: {
-        quote: "Notre nouveau site a considérablement amélioré notre image et notre capacité à convaincre les clients. Le calculateur d'économies est particulièrement apprécié et nous aide à convertir plus de prospects.",
+        quote: "Our new website has significantly improved our image and our ability to convince customers. The savings calculator is particularly appreciated and helps us convert more prospects.",
         author: "Pierre Martin",
-        position: "Directeur, Connect & Drive"
+        position: "Director, Connect & Drive"
       }
     }
   },
@@ -629,23 +629,23 @@ export const portfolioProjects: ClientProject[] = [
     id: "11",
     name: "AS13F",
     logo: "/images/portfolio/as13f-logo.png",
-    description: "Consulting digital pour un club de football amateur visant à améliorer sa présence en ligne et sa communication avec les membres et supporters.",
+    description: "Digital consulting for an amateur football club aimed at improving its online presence and communication with members and supporters.",
     industry: "Sport",
     year: 2023,
     deliverables: [
-      "Audit Digital",
-      "Stratégie de Communication",
-      "Plan de Présence Sociale",
-      "Formation des Bénévoles"
+      "Digital Audit",
+      "Communication Strategy",
+      "Social Media Plan",
+      "Volunteer Training"
     ],
     needs: [
-      "Analyser la présence digitale existante du club",
-      "Développer une stratégie de communication cohérente",
-      "Améliorer l'engagement des supporters sur les réseaux sociaux",
-      "Former les bénévoles à la gestion des outils digitaux"
+      "Analyze the club's existing digital presence",
+      "Develop a coherent communication strategy",
+      "Improve supporter engagement on social networks",
+      "Train volunteers in digital tool management"
     ],
     methodology: {
-      approach: "Nous avons réalisé un audit complet de la présence digitale du club, puis élaboré une stratégie adaptée à ses ressources limitées. L'accent a été mis sur des solutions pratiques et faciles à mettre en œuvre par les bénévoles.",
+      approach: "We conducted a comprehensive audit of the club's digital presence, then developed a strategy adapted to its limited resources. The focus was on practical solutions that could be easily implemented by volunteers.",
       technologies: ["Social Media", "Content Strategy", "Community Management", "Digital Training"],
       languages: [],
       frameworks: [],
@@ -654,26 +654,26 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Augmentation des Abonnés", value: "210%" },
-        { label: "Engagement sur les Publications", value: "+175%" },
-        { label: "Fréquentation des Matchs", value: "+35%" }
+        { label: "Increase in Followers", value: "210%" },
+        { label: "Post Engagement", value: "+175%" },
+        { label: "Match Attendance", value: "+35%" }
       ],
       benefits: [
-        "Communication plus efficace avec les membres et supporters",
-        "Meilleure visibilité locale pour attirer de nouveaux joueurs",
-        "Augmentation de la participation aux événements du club",
-        "Autonomie des bénévoles dans la gestion des outils digitaux"
+        "More effective communication with members and supporters",
+        "Better local visibility to attract new players",
+        "Increased participation in club events",
+        "Volunteer autonomy in digital tool management"
       ],
       improvements: [
-        "Création d'un calendrier éditorial pour les réseaux sociaux",
-        "Mise en place d'un système de communication des résultats de matchs",
-        "Développement d'une stratégie de contenu mettant en avant les joueurs",
-        "Formation des bénévoles aux outils de création graphique simples"
+        "Creation of an editorial calendar for social networks",
+        "Implementation of a match results communication system",
+        "Development of a content strategy highlighting players",
+        "Training volunteers in simple graphic design tools"
       ],
       testimonial: {
-        quote: "Le consulting digital nous a permis de professionnaliser notre communication avec des moyens limités. Nos supporters sont plus engagés et nous avons attiré de nouveaux joueurs grâce à notre présence en ligne améliorée.",
+        quote: "The digital consulting allowed us to professionalize our communication with limited resources. Our supporters are more engaged and we've attracted new players thanks to our improved online presence.",
         author: "Marc Dubois",
-        position: "Président, AS13F"
+        position: "President, AS13F"
       }
     }
   },
@@ -681,24 +681,24 @@ export const portfolioProjects: ClientProject[] = [
     id: "12",
     name: "Clean-E Sofa",
     logo: "/images/portfolio/clean-e-sofa-logo.png",
-    description: "Consulting digital pour une société de nettoyage de canapés et meubles à domicile, visant à améliorer sa visibilité locale et sa génération de leads.",
-    industry: "Services à Domicile",
+    description: "Digital consulting for an in-home sofa and furniture cleaning company, aimed at improving local visibility and lead generation.",
+    industry: "Home Services",
     year: 2022,
     deliverables: [
-      "Audit SEO Local",
-      "Stratégie de Contenu",
-      "Plan de Présence Google My Business",
-      "Optimisation des Conversions"
+      "Local SEO Audit",
+      "Content Strategy",
+      "Google My Business Presence Plan",
+      "Conversion Optimization"
     ],
     needs: [
-      "Améliorer la visibilité dans les recherches locales",
-      "Développer une stratégie de contenu pertinente",
-      "Optimiser la présence sur Google My Business",
-      "Augmenter le taux de conversion des visiteurs en clients"
+      "Improve visibility in local searches",
+      "Develop a relevant content strategy",
+      "Optimize Google My Business presence",
+      "Increase visitor-to-customer conversion rate"
     ],
     methodology: {
-      approach: "Nous avons adopté une approche centrée sur le SEO local et la génération de leads. L'accent a été mis sur l'optimisation de la présence Google My Business et la création de contenu répondant aux questions fréquentes des clients potentiels.",
-      technologies: ["SEO Local", "Content Marketing", "Conversion Rate Optimization", "Google My Business"],
+      approach: "We adopted an approach centered on local SEO and lead generation. The focus was on optimizing Google My Business presence and creating content that addresses frequently asked questions from potential customers.",
+      technologies: ["Local SEO", "Content Marketing", "Conversion Rate Optimization", "Google My Business"],
       languages: [],
       frameworks: [],
       libraries: [],
@@ -706,26 +706,26 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Augmentation des Recherches Locales", value: "185%" },
-        { label: "Taux de Conversion", value: "7.8%" },
-        { label: "Avis Google Positifs", value: "+45" }
+        { label: "Increase in Local Searches", value: "185%" },
+        { label: "Conversion Rate", value: "7.8%" },
+        { label: "Positive Google Reviews", value: "+45" }
       ],
       benefits: [
-        "Visibilité considérablement améliorée dans les recherches locales",
-        "Augmentation significative des demandes de devis qualifiées",
-        "Meilleure réputation en ligne grâce aux avis clients",
-        "Réduction des coûts d'acquisition client"
+        "Significantly improved visibility in local searches",
+        "Substantial increase in qualified quote requests",
+        "Better online reputation thanks to customer reviews",
+        "Reduced customer acquisition costs"
       ],
       improvements: [
-        "Optimisation complète du profil Google My Business",
-        "Création d'une stratégie de collecte d'avis clients",
-        "Développement de contenu répondant aux questions fréquentes",
-        "Mise en place d'un suivi des performances marketing"
+        "Complete optimization of Google My Business profile",
+        "Creation of a customer review collection strategy",
+        "Development of content addressing frequently asked questions",
+        "Implementation of marketing performance tracking"
       ],
       testimonial: {
-        quote: "Le consulting digital a transformé notre activité. Nous sommes maintenant visibles localement et les clients nous trouvent facilement. Notre carnet de commandes est plein et nous avons dû embaucher pour répondre à la demande.",
+        quote: "The digital consulting transformed our business. We are now visible locally and customers find us easily. Our order book is full, and we've had to hire more staff to meet demand.",
         author: "Sophie Lambert",
-        position: "Gérante, Clean-E Sofa"
+        position: "Manager, Clean-E Sofa"
       }
     }
   },
@@ -733,23 +733,23 @@ export const portfolioProjects: ClientProject[] = [
     id: "13",
     name: "Beauty Salon 92",
     logo: "/images/portfolio/beauty-salon-92-logo.png",
-    description: "Développement d'une application sur mesure pour la gestion des rendez-vous et la fidélisation des clients d'un salon de beauté premium.",
-    industry: "Beauté & Bien-être",
+    description: "Digital consulting for a premium beauty salon, focusing on digital strategy, online presence optimization, and recommendations for appointment management and customer loyalty systems.",
+    industry: "Beauty & Wellness",
     year: 2024,
     deliverables: [
-      "Application Web",
-      "Application Mobile",
-      "Système de Réservation",
-      "Programme de Fidélité"
+      "Web Application",
+      "Mobile Application",
+      "Booking System",
+      "Loyalty Program"
     ],
     needs: [
-      "Créer un système de réservation en ligne intuitif",
-      "Développer un programme de fidélité digital",
-      "Permettre aux clients de consulter l'historique de leurs soins",
-      "Faciliter la gestion des rendez-vous pour le personnel"
+      "Create an intuitive online booking system",
+      "Develop a digital loyalty program",
+      "Allow clients to view their treatment history",
+      "Facilitate appointment management for staff"
     ],
     methodology: {
-      approach: "Nous avons développé une solution sur mesure répondant aux besoins spécifiques d'un salon de beauté premium. L'accent a été mis sur l'expérience utilisateur, tant pour les clients que pour le personnel du salon.",
+      approach: "We developed a custom solution meeting the specific needs of a premium beauty salon. The focus was on user experience, both for clients and salon staff.",
       technologies: ["Progressive Web App", "Mobile Development", "Booking System", "CRM"],
       languages: ["TypeScript", "Kotlin", "Swift", "SQL"],
       frameworks: ["Next.js", "React Native", "NestJS"],
@@ -758,26 +758,130 @@ export const portfolioProjects: ClientProject[] = [
     },
     outcome: {
       statistics: [
-        { label: "Réservations en Ligne", value: "78%" },
-        { label: "Réduction des No-Shows", value: "85%" },
-        { label: "Augmentation du Panier Moyen", value: "24%" }
+        { label: "Online Bookings", value: "78%" },
+        { label: "Reduction in No-Shows", value: "85%" },
+        { label: "Increase in Average Spend", value: "24%" }
       ],
       benefits: [
-        "Processus de réservation simplifié pour les clients",
-        "Réduction significative des tâches administratives",
-        "Augmentation de la fidélisation client grâce au programme digital",
-        "Meilleure gestion des stocks et des ressources humaines"
+        "Simplified booking process for clients",
+        "Significant reduction in administrative tasks",
+        "Increased customer loyalty thanks to the digital program",
+        "Better management of inventory and human resources"
       ],
       improvements: [
-        "Mise en place d'un système de rappels automatiques",
-        "Développement d'un tableau de bord pour l'analyse des performances",
-        "Création d'un programme de fidélité personnalisable",
-        "Intégration d'un système de recommandation de produits"
+        "Implementation of an automatic reminder system",
+        "Development of a dashboard for performance analysis",
+        "Creation of a customizable loyalty program",
+        "Integration of a product recommendation system"
       ],
       testimonial: {
-        quote: "Cette application a révolutionné notre façon de travailler. Nos clients adorent pouvoir réserver en ligne et suivre leur programme de soins. Notre équipe gagne un temps précieux sur l'administratif pour se concentrer sur l'essentiel : le service client.",
+        quote: "This application has revolutionized our way of working. Our clients love being able to book online and track their treatment program. Our team saves precious time on administrative tasks to focus on what's essential: customer service.",
         author: "Isabelle Moreau",
-        position: "Directrice, Beauty Salon 92"
+        position: "Director, Beauty Salon 92"
+      }
+    }
+  },
+  {
+    id: "16",
+    name: "Diaspora Medina",
+    logo: "/images/portfolio/diaspora-medina-logo.png",
+    description: "Digital consulting for a cultural association promoting African diaspora arts and culture, focused on online event management and community engagement.",
+    industry: "Arts & Culture",
+    year: 2022,
+    deliverables: [
+      "Digital Strategy",
+      "Social Media Plan",
+      "Event Management System",
+      "Community Engagement Tools"
+    ],
+    needs: [
+      "Develop a cohesive digital strategy for cultural events",
+      "Improve social media presence and engagement",
+      "Create an efficient system for managing online and hybrid events",
+      "Build stronger connections with the diaspora community"
+    ],
+    methodology: {
+      approach: "We developed a culturally sensitive digital strategy that honored the association's mission while modernizing their approach to community engagement. The focus was on accessible tools that could be managed by volunteers with varying technical skills.",
+      technologies: ["Digital Strategy", "Social Media Management", "Event Planning", "Community Building"],
+      languages: [],
+      frameworks: [],
+      libraries: [],
+      apis: ["Facebook", "Instagram", "Eventbrite", "Mailchimp"]
+    },
+    outcome: {
+      statistics: [
+        { label: "Event Attendance", value: "+125%" },
+        { label: "Social Media Engagement", value: "+240%" },
+        { label: "Community Growth", value: "+85%" }
+      ],
+      benefits: [
+        "Significantly increased visibility for cultural events",
+        "More efficient volunteer coordination and management",
+        "Stronger connections with diaspora communities across Europe",
+        "Improved fundraising capabilities through digital channels"
+      ],
+      improvements: [
+        "Creation of a digital content calendar highlighting cultural events",
+        "Implementation of a volunteer management system",
+        "Development of multilingual communication strategies",
+        "Integration of digital payment systems for donations and event tickets"
+      ],
+      testimonial: {
+        quote: "The digital consulting provided by Pledge & Grow transformed our ability to connect with diaspora communities. Our events now reach a much wider audience, and we've built a vibrant online community that complements our physical gatherings.",
+        author: "Aminata Diop",
+        position: "President, Diaspora Medina"
+      }
+    }
+  },
+  {
+    id: "16",
+    name: "Plac'Occitanie",
+    logo: "/images/portfolio/plac-occitanie-logo.png",
+    description: "Digital consulting for a regional job placement agency specializing in connecting local businesses with qualified candidates in the Occitanie region of France.",
+    industry: "Recruitment",
+    year: 2022,
+    deliverables: [
+      "Digital Transformation Strategy",
+      "CRM Implementation",
+      "Candidate Matching System",
+      "Analytics Dashboard"
+    ],
+    needs: [
+      "Modernize the recruitment process through digital tools",
+      "Improve matching between job seekers and local businesses",
+      "Develop data-driven insights for regional employment trends",
+      "Enhance communication between all stakeholders"
+    ],
+    methodology: {
+      approach: "We created a comprehensive digital transformation strategy focused on the unique needs of regional recruitment. The approach emphasized user-friendly systems that could serve both rural and urban communities across the diverse Occitanie region.",
+      technologies: ["CRM", "Data Analytics", "Matching Algorithms", "Digital Communication"],
+      languages: [],
+      frameworks: [],
+      libraries: [],
+      apis: ["LinkedIn", "Google Analytics", "Mailchimp", "Zapier"]
+    },
+    outcome: {
+      statistics: [
+        { label: "Successful Placements", value: "+68%" },
+        { label: "Time-to-Hire", value: "-42%" },
+        { label: "Client Satisfaction", value: "94%" }
+      ],
+      benefits: [
+        "More efficient matching between candidates and local businesses",
+        "Reduced administrative workload for placement specialists",
+        "Better insights into regional employment trends and needs",
+        "Improved candidate experience throughout the placement process"
+      ],
+      improvements: [
+        "Implementation of a skill-based matching system",
+        "Development of a regional employment trends dashboard",
+        "Creation of automated communication workflows",
+        "Integration with regional economic development initiatives"
+      ],
+      testimonial: {
+        quote: "The digital consulting services have revolutionized how we connect talent with opportunity in our region. We now have data-driven insights that help us better serve both job seekers and businesses, while significantly reducing our administrative burden.",
+        author: "Jean-Pierre Rousseau",
+        position: "Director, Plac'Occitanie"
       }
     }
   }

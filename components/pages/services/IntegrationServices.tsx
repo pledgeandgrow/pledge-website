@@ -21,58 +21,58 @@ const integrationServices: ServiceCard[] = [
   {
     id: "e-commerce",
     title: "E-commerce",
-    description: "Solutions complètes de boutique en ligne avec traitement des paiements et gestion des stocks.",
+    description: "Complete online store solutions with payment processing and inventory management.",
     icon: <ShoppingCart className="h-8 w-8 text-primary" />,
     specifications: {
       type: "E-commerce solution development and integration",
-      clients: ["Détaillants", "Grossistes", "Marques", "Startups", "PME"],
-      sectors: ["Retail", "Mode", "Alimentation", "Électronique", "Artisanat", "Services"],
+      clients: ["Retailers", "Wholesalers", "Brands", "Startups", "SMEs"],
+      sectors: ["Retail", "Fashion", "Food", "Electronics", "Crafts", "Services"],
       recommendedFor: [
         "Businesses wanting to sell online",
-        "Commerces physiques cherchant à étendre leur présence en ligne",
-        "Marques souhaitant vendre directement aux consommateurs (D2C)",
+        "Physical stores looking to extend their online presence",
+        "Brands wanting to sell directly to consumers (D2C)",
         "Businesses requiring omnichannel management"
       ]
     },
     technology: {
       programs: ["Adobe XD", "Figma", "Photoshop", "Illustrator"],
-      technologies: ["API de paiement", "Gestion des stocks", "Panier d'achat", "Passerelles de paiement"],
+      technologies: ["Payment APIs", "Inventory Management", "Shopping Cart", "Payment Gateways"],
       languages: ["PHP", "JavaScript", "TypeScript", "Python", "Ruby"],
       frameworks: ["Shopify", "WooCommerce", "Magento", "PrestaShop", "Sylius", "Next.js"],
       libraries: ["React", "Vue.js", "jQuery", "Bootstrap", "TailwindCSS"]
     },
     conditions: {
       requirements: [
-        "Catalogue de produits",
-        "Informations de compte marchand",
-        "Exigences de traitement des paiements",
-        "Logistique et expédition"
+        "Product catalog",
+        "Merchant account information",
+        "Payment processing requirements",
+        "Logistics and shipping"
       ],
       deliverables: [
-        "Boutique en ligne complète et fonctionnelle",
-        "Intégration des paiements",
-        "Gestion des stocks",
-        "Formation à l'administration",
-        "Documentation utilisateur"
+        "Complete and functional online store",
+        "Payment integration",
+        "Inventory management",
+        "Administration training",
+        "User documentation"
       ],
-      timeline: "2 à 4 mois selon la complexité du projet",
-      support: "Support technique et maintenance disponibles via contrat séparé"
+      timeline: "2 to 4 months depending on project complexity",
+      support: "Technical support and maintenance available via separate contract"
     }
   },
   {
     id: "ai-automation",
-    title: "IA & Automatisation",
-    description: "Solutions intelligentes qui exploitent l'IA et l'automatisation pour optimiser les processus métier.",
+    title: "AI & Automation",
+    description: "Intelligent solutions leveraging AI and automation to optimize business processes.",
     icon: <Brain className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Intégration d'intelligence artificielle et automatisation des processus",
+      type: "Artificial intelligence integration and process automation",
       clients: ["Startups", "SMEs", "Large enterprises", "Institutions"],
-      sectors: ["Finance", "Santé", "Retail", "Industrie", "Services", "Éducation"],
+      sectors: ["Finance", "Healthcare", "Retail", "Industry", "Services", "Education"],
       recommendedFor: [
         "Businesses looking to optimize their business processes",
-        "Organisations souhaitant exploiter leurs données",
-        "Services clients nécessitant une assistance automatisée",
-        "Projets nécessitant des prédictions basées sur les données"
+        "Organizations looking to leverage their data",
+        "Customer services requiring automated assistance",
+        "Projects requiring data-based predictions"
       ]
     },
     technology: {
@@ -84,36 +84,36 @@ const integrationServices: ServiceCard[] = [
     },
     conditions: {
       requirements: [
-        "Données structurées ou non structurées",
-        "Définition claire des processus à automatiser",
-        "Objectifs mesurables",
-        "Accès aux systèmes existants"
+        "Structured or unstructured data",
+        "Clear definition of processes to automate",
+        "Measurable objectives",
+        "Access to existing systems"
       ],
       deliverables: [
-        "Solution d'IA ou d'automatisation sur mesure",
-        "Documentation technique",
-        "Formation utilisateur",
-        "Rapports de performance",
-        "Intégration avec les systèmes existants"
+        "Custom AI or automation solution",
+        "Technical documentation",
+        "User training",
+        "Performance reports",
+        "Integration with existing systems"
       ],
-      timeline: "3 à 8 mois selon la complexité du projet",
-      support: "Maintenance continue et amélioration des modèles via contrat SLA"
+      timeline: "3 to 8 months depending on project complexity",
+      support: "Ongoing maintenance and model improvement via SLA contract"
     }
   },
   {
     id: "blockchain",
     title: "Blockchain",
-    description: "Applications blockchain sécurisées et transparentes pour diverses industries et cas d'utilisation.",
+    description: "Secure and transparent blockchain applications for various industries and use cases.",
     icon: <Database className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Blockchain-based solution development",
       clients: ["Startups", "Innovative businesses", "Financial institutions", "Organizations"],
-      sectors: ["Finance", "Supply Chain", "Immobilier", "Santé", "Droit", "Art"],
+      sectors: ["Finance", "Supply Chain", "Real Estate", "Healthcare", "Law", "Art"],
       recommendedFor: [
-        "Projets nécessitant une transparence et une traçabilité accrues",
-        "Applications financières décentralisées",
-        "Systèmes de gestion de la chaîne d'approvisionnement",
-        "Solutions de tokenisation d'actifs"
+        "Projects requiring increased transparency and traceability",
+        "Decentralized financial applications",
+        "Supply chain management systems",
+        "Asset tokenization solutions"
       ]
     },
     technology: {
@@ -125,61 +125,61 @@ const integrationServices: ServiceCard[] = [
     },
     conditions: {
       requirements: [
-        "Cas d'utilisation blockchain clairement défini",
-        "Exigences de sécurité et de conformité",
-        "Modèle économique pour la solution",
-        "Définition des rôles et permissions"
+        "Clearly defined blockchain use case",
+        "Security and compliance requirements",
+        "Business model for the solution",
+        "Definition of roles and permissions"
       ],
       deliverables: [
-        "Application blockchain fonctionnelle",
-        "Smart contracts audités",
-        "Documentation technique",
-        "Formation utilisateur",
-        "Tests de sécurité"
+        "Functional blockchain application",
+        "Audited smart contracts",
+        "Technical documentation",
+        "User training",
+        "Security testing"
       ],
-      timeline: "4 à 12 mois selon la complexité du projet",
-      support: "Maintenance et mises à jour via contrat séparé"
+      timeline: "4 to 12 months depending on project complexity",
+      support: "Maintenance and updates via separate contract"
     }
   },
   {
     id: "cybersecurity",
-    title: "Cybersécurité",
-    description: "Solutions de sécurité robustes pour protéger vos données, systèmes et utilisateurs.",
+    title: "Cybersecurity",
+    description: "Robust security solutions to protect your data, systems, and users.",
     icon: <Shield className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Implémentation de solutions de cybersécurité",
+      type: "Implementation of cybersecurity solutions",
       clients: ["SMEs", "Large enterprises", "Institutions", "Government organizations"],
-      sectors: ["Finance", "Santé", "Défense", "Éducation", "Retail", "Services"],
+      sectors: ["Finance", "Healthcare", "Defense", "Education", "Retail", "Services"],
       recommendedFor: [
-        "Organisations manipulant des données sensibles",
+        "Organizations handling sensitive data",
         "Businesses wanting to strengthen their security posture",
-        "Projets nécessitant une conformité réglementaire",
-        "Systèmes exposés à des risques de sécurité élevés"
+        "Projects requiring regulatory compliance",
+        "Systems exposed to high security risks"
       ]
     },
     technology: {
       programs: ["Wireshark", "Metasploit", "Nessus", "Burp Suite", "OWASP ZAP"],
-      technologies: ["Cryptographie", "Authentification multi-facteurs", "Détection d'intrusion", "WAF", "SIEM"],
+      technologies: ["Cryptography", "Multi-factor Authentication", "Intrusion Detection", "WAF", "SIEM"],
       languages: ["Python", "Go", "C/C++", "JavaScript", "Bash"],
       frameworks: ["OWASP", "NIST", "ISO 27001", "CIS", "GDPR"],
       libraries: ["OpenSSL", "Cryptography.io", "PyJWT", "Passlib", "OWASP ESAPI"]
     },
     conditions: {
       requirements: [
-        "Évaluation des risques et vulnérabilités",
-        "Inventaire des actifs numériques",
-        "Politiques de sécurité existantes",
-        "Exigences réglementaires applicables"
+        "Risk and vulnerability assessment",
+        "Digital asset inventory",
+        "Existing security policies",
+        "Applicable regulatory requirements"
       ],
       deliverables: [
-        "Solutions de sécurité implémentées",
-        "Rapports d'audit et de test d'intrusion",
-        "Documentation des politiques et procédures",
-        "Formation à la sensibilisation à la sécurité",
-        "Plan de réponse aux incidents"
+        "Implemented security solutions",
+        "Audit and penetration testing reports",
+        "Documentation of policies and procedures",
+        "Security awareness training",
+        "Incident response plan"
       ],
-      timeline: "2 à 6 mois selon l'étendue du projet",
-      support: "Surveillance continue et réponse aux incidents via contrat SLA"
+      timeline: "2 to 6 months depending on project scope",
+      support: "Continuous monitoring and incident response via SLA contract"
     }
   },
   {
@@ -188,39 +188,39 @@ const integrationServices: ServiceCard[] = [
     description: "Scalable cloud solutions and DevOps practices to optimize your infrastructure and deployments.",
     icon: <Cloud className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Implémentation de solutions cloud et pratiques DevOps",
+      type: "Implementation of cloud solutions and DevOps practices",
       clients: ["Startups", "SMEs", "Large enterprises", "Technology organizations"],
-      sectors: ["Technologie", "Finance", "Santé", "E-commerce", "Médias", "Services"],
+      sectors: ["Technology", "Finance", "Healthcare", "E-commerce", "Media", "Services"],
       recommendedFor: [
         "Businesses looking to migrate to the cloud",
         "Organizations wanting to optimize their development processes",
-        "Projets nécessitant une infrastructure évolutive",
+        "Projects requiring scalable infrastructure",
         "Development teams looking to improve their delivery cycle"
       ]
     },
     technology: {
       programs: ["Docker", "Kubernetes", "Terraform", "Jenkins", "GitLab CI/CD"],
-      technologies: ["Conteneurisation", "Orchestration", "IaC", "CI/CD", "Monitoring"],
+      technologies: ["Containerization", "Orchestration", "IaC", "CI/CD", "Monitoring"],
       languages: ["YAML", "Bash", "Python", "Go", "HCL"],
       frameworks: ["AWS", "Azure", "GCP", "OpenStack", "Kubernetes"],
       libraries: ["Helm", "Ansible", "Prometheus", "Grafana", "ELK Stack"]
     },
     conditions: {
       requirements: [
-        "Architecture système actuelle",
-        "Objectifs de performance et d'évolutivité",
-        "Exigences de disponibilité et de reprise après sinistre",
+        "Current system architecture",
+        "Performance and scalability objectives",
+        "Availability and disaster recovery requirements",
         "Existing development processes"
       ],
       deliverables: [
-        "Infrastructure cloud configurée",
-        "Pipelines CI/CD automatisés",
-        "Documentation d'architecture",
-        "Formation DevOps",
-        "Monitoring et alerting"
+        "Configured cloud infrastructure",
+        "Automated CI/CD pipelines",
+        "Architecture documentation",
+        "DevOps training",
+        "Monitoring and alerting"
       ],
-      timeline: "2 à 6 mois selon la complexité du projet",
-      support: "Support opérationnel et optimisation continue via contrat SLA"
+      timeline: "2 to 6 months depending on project complexity",
+      support: "Operational support and continuous optimization via SLA contract"
     }
   }
 ];
@@ -243,9 +243,9 @@ export default function IntegrationServices() {
     <section className="py-16 bg-background dark:bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Intégration</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-4">Integration</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Nous intégrons des technologies avancées pour créer des solutions numériques complètes et performantes.
+            We integrate advanced technologies to create comprehensive and high-performance digital solutions.
           </p>
         </div>
         

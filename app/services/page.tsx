@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import {
   ServicesHero,
-  OfferPackages,
   VipServices
 } from "@/components/pages/services";
 import Navbar from "@/components/layout/Navbar";
@@ -36,7 +35,6 @@ export default function ServicesPage() {
       <main className="flex-grow pt-16">
         <ServicesHero />
         <ServicesTabbed />
-        <OfferPackages />
         <VipServices />
       </main>
       <Footer />

@@ -20,18 +20,18 @@ interface ServiceCard {
 const creationServices: ServiceCard[] = [
   {
     id: "website",
-    title: "Site Web",
+    title: "Website",
     description: "Professional websites for businesses and organizations with responsive design.",
     icon: <Globe className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Custom website development and CMS",
       clients: ["Startups", "SMEs", "Large enterprises", "E-commerce", "Institutions"],
-      sectors: ["Commerce", "Santé", "Éducation", "Finance", "Technologie", "Industrie"],
+      sectors: ["Commerce", "Healthcare", "Education", "Finance", "Technology", "Industry"],
       recommendedFor: [
         "Businesses looking to establish a professional online presence",
-        "Organisations nécessitant des fonctionnalités web avancées",
+        "Organizations requiring advanced web functionality",
         "Businesses wanting to improve their online visibility",
-        "Projets nécessitant une interface utilisateur moderne et responsive"
+        "Projects requiring a modern and responsive user interface"
       ]
     },
     technology: {
@@ -43,36 +43,36 @@ const creationServices: ServiceCard[] = [
     },
     conditions: {
       requirements: [
-        "Brief détaillé du projet",
-        "Contenu textuel et visuel",
-        "Identité visuelle (logo, charte graphique)",
-        "Accès aux comptes d'hébergement et domaine"
+        "Detailed project brief",
+        "Textual and visual content",
+        "Visual identity (logo, brand guidelines)",
+        "Access to hosting and domain accounts"
       ],
       deliverables: [
-        "Site web responsive et optimisé",
-        "Formation à l'utilisation du CMS",
-        "Documentation technique",
-        "Optimisation SEO de base",
-        "Tests cross-browser"
+        "Responsive and optimized website",
+        "CMS usage training",
+        "Technical documentation",
+        "Basic SEO optimization",
+        "Cross-browser testing"
       ],
-      timeline: "4 à 12 semaines selon la complexité du projet",
-      support: "Maintenance et support technique disponibles via contrat séparé"
+      timeline: "4 to 12 weeks depending on project complexity",
+      support: "Maintenance and technical support available via separate contract"
     }
   },
   {
     id: "saas",
     title: "SaaS",
-    description: "Solutions Software as a Service personnalisées avec architecture multi-tenant.",
+    description: "Custom Software as a Service solutions with multi-tenant architecture.",
     icon: <Code className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Custom SaaS platform development",
       clients: ["Startups", "Scale-ups", "Technology companies", "Innovators"],
-      sectors: ["B2B", "B2C", "Technologie", "Finance", "Santé", "Éducation"],
+      sectors: ["B2B", "B2C", "Technology", "Finance", "Healthcare", "Education"],
       recommendedFor: [
         "Businesses looking to transform a product into a subscription service",
-        "Startups cherchant à développer une solution cloud évolutive",
-        "Organisations nécessitant une plateforme multi-utilisateurs",
-        "Projets nécessitant une architecture évolutive et sécurisée"
+        "Startups looking to develop a scalable cloud solution",
+        "Organizations requiring a multi-user platform",
+        "Projects requiring a scalable and secure architecture"
       ]
     },
     technology: {
@@ -84,143 +84,143 @@ const creationServices: ServiceCard[] = [
     },
     conditions: {
       requirements: [
-        "Spécifications fonctionnelles détaillées",
-        "Modèle économique et stratégie d'abonnement",
-        "Définition des rôles utilisateurs et flux de travail",
-        "Exigences en matière de sécurité et conformité"
+        "Detailed functional specifications",
+        "Business model and subscription strategy",
+        "Definition of user roles and workflows",
+        "Security and compliance requirements"
       ],
       deliverables: [
-        "Application SaaS complète et testée",
-        "Documentation technique et d'API",
-        "Formation à l'administration",
-        "Déploiement sur infrastructure cloud",
-        "Tests de sécurité et de performance"
+        "Complete and tested SaaS application",
+        "Technical and API documentation",
+        "Administration training",
+        "Deployment on cloud infrastructure",
+        "Security and performance testing"
       ],
-      timeline: "3 à 9 mois selon la complexité du projet",
-      support: "Support technique et mises à jour disponibles via contrat SLA"
+      timeline: "3 to 9 months depending on project complexity",
+      support: "Technical support and updates available via SLA contract"
     }
   },
   {
     id: "mobile-app",
-    title: "Application Mobile",
-    description: "Applications mobiles natives et cross-platform pour iOS et Android.",
+    title: "Mobile",
+    description: "Native and cross-platform mobile applications for iOS and Android.",
     icon: <Smartphone className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Native and hybrid mobile application development",
       clients: ["Startups", "SMEs", "Large enterprises", "Organizations"],
-      sectors: ["E-commerce", "Santé", "Finance", "Éducation", "Divertissement", "Services"],
+      sectors: ["E-commerce", "Healthcare", "Finance", "Education", "Entertainment", "Services"],
       recommendedFor: [
         "Businesses looking to extend their mobile presence",
-        "Organisations nécessitant des applications avec fonctionnalités natives",
-        "Projets nécessitant une expérience utilisateur optimisée sur mobile",
-        "Services nécessitant des fonctionnalités hors ligne"
+        "Organizations requiring applications with native functionality",
+        "Projects requiring optimized mobile user experience",
+        "Services requiring offline functionality"
       ]
     },
     technology: {
       programs: ["Xcode", "Android Studio", "Figma", "Adobe XD"],
-      technologies: ["Push Notifications", "GPS/Localisation", "Bluetooth", "NFC", "Réalité augmentée"],
+      technologies: ["Push Notifications", "GPS/Location", "Bluetooth", "NFC", "Augmented Reality"],
       languages: ["Swift", "Kotlin", "JavaScript", "TypeScript", "Dart"],
       frameworks: ["React Native", "Flutter", "Ionic", "SwiftUI", "Jetpack Compose"],
       libraries: ["Redux", "MobX", "RxSwift", "Room", "Realm"]
     },
     conditions: {
       requirements: [
-        "Spécifications fonctionnelles détaillées",
-        "Maquettes d'interface utilisateur",
-        "Comptes développeur Apple/Google",
-        "Définition des fonctionnalités natives requises"
+        "Detailed functional specifications",
+        "User interface mockups",
+        "Apple/Google developer accounts",
+        "Definition of required native features"
       ],
       deliverables: [
-        "Applications mobiles pour iOS et/ou Android",
-        "Code source complet",
-        "Documentation technique",
-        "Publication sur les app stores",
-        "Tests sur différents appareils"
+        "Mobile applications for iOS and/or Android",
+        "Complete source code",
+        "Technical documentation",
+        "Publication on app stores",
+        "Testing on various devices"
       ],
-      timeline: "3 à 6 mois selon la complexité du projet",
-      support: "Maintenance et mises à jour disponibles via contrat séparé"
+      timeline: "3 to 6 months depending on project complexity",
+      support: "Maintenance and updates available via separate contract"
     }
   },
   {
     id: "software",
-    title: "Logiciel",
+    title: "Software",
     description: "Custom software to meet the specific needs of your business.",
     icon: <MonitorSmartphone className="h-8 w-8 text-primary" />,
     specifications: {
       type: "Custom desktop and enterprise software development",
       clients: ["SMEs", "Large enterprises", "Institutions", "Specialized industries"],
-      sectors: ["Industrie", "Finance", "Santé", "Logistique", "Éducation", "Services professionnels"],
+      sectors: ["Industry", "Finance", "Healthcare", "Logistics", "Education", "Professional Services"],
       recommendedFor: [
         "Businesses requiring specific software solutions",
-        "Organisations cherchant à automatiser des processus métier",
-        "Projets nécessitant l'intégration avec des systèmes existants",
-        "Secteurs avec des exigences réglementaires spécifiques"
+        "Organizations looking to automate business processes",
+        "Projects requiring integration with existing systems",
+        "Sectors with specific regulatory requirements"
       ]
     },
     technology: {
       programs: ["Visual Studio", "IntelliJ IDEA", "Eclipse", "Qt Creator"],
-      technologies: ["Bases de données SQL/NoSQL", "Services Windows", "Systèmes distribués", "Intégration API"],
+      technologies: ["SQL/NoSQL Databases", "Windows Services", "Distributed Systems", "API Integration"],
       languages: ["C#", "Java", "C++", "Python", "JavaScript"],
       frameworks: [".NET", "JavaFX", "Electron", "Qt", "WPF"],
       libraries: ["Entity Framework", "Hibernate", "Spring", "React", "Angular"]
     },
     conditions: {
       requirements: [
-        "Cahier des charges détaillé",
-        "Description des processus métier",
-        "Spécifications techniques des systèmes existants",
-        "Exigences en matière de sécurité et performance"
+        "Detailed specifications",
+        "Business process description",
+        "Technical specifications of existing systems",
+        "Security and performance requirements"
       ],
       deliverables: [
-        "Logiciel sur mesure",
-        "Documentation technique et utilisateur",
-        "Formation des utilisateurs",
-        "Installation et configuration",
-        "Tests fonctionnels et de performance"
+        "Custom software",
+        "Technical and user documentation",
+        "User training",
+        "Installation and configuration",
+        "Functional and performance testing"
       ],
-      timeline: "4 à 12 mois selon la complexité du projet",
-      support: "Support technique et maintenance via contrat SLA"
+      timeline: "4 to 12 months depending on project complexity",
+      support: "Technical support and maintenance via SLA contract"
     }
   },
   {
     id: "video-games",
-    title: "Jeux Vidéo",
-    description: "Jeux vidéo engageants pour plusieurs plateformes avec des expériences immersives.",
+    title: "Video Games",
+    description: "Engaging video games for multiple platforms with immersive experiences.",
     icon: <Gamepad className="h-8 w-8 text-primary" />,
     specifications: {
       type: "2D and 3D video game development for various platforms",
       clients: ["Independent studios", "Publishers", "Businesses", "Educational institutions"],
-      sectors: ["Divertissement", "Éducation", "Formation", "Marketing", "Santé"],
+      sectors: ["Entertainment", "Education", "Training", "Marketing", "Healthcare"],
       recommendedFor: [
-        "Projets de divertissement interactif",
-        "Serious games pour la formation ou l'éducation",
-        "Gamification d'applications ou services existants",
-        "Expériences marketing immersives"
+        "Interactive entertainment projects",
+        "Serious games for training or education",
+        "Gamification of existing applications or services",
+        "Immersive marketing experiences"
       ]
     },
     technology: {
       programs: ["Unity", "Unreal Engine", "Blender", "Maya", "Photoshop"],
-      technologies: ["3D Rendering", "Réalité virtuelle", "Réalité augmentée", "Intelligence artificielle", "Multijoueur"],
+      technologies: ["3D Rendering", "Virtual Reality", "Augmented Reality", "Artificial Intelligence", "Multiplayer"],
       languages: ["C#", "C++", "JavaScript", "Python", "GDScript"],
       frameworks: ["Unity", "Unreal Engine", "Godot", "Phaser", "PlayCanvas"],
       libraries: ["FMOD", "Wwise", "Box2D", "Havok Physics", "Steamworks"]
     },
     conditions: {
       requirements: [
-        "Document de conception de jeu (GDD)",
-        "Assets graphiques et sonores",
-        "Spécifications techniques et plateformes cibles",
-        "Modèle de monétisation (si applicable)"
+        "Game Design Document (GDD)",
+        "Graphical and sound assets",
+        "Technical specifications and target platforms",
+        "Monetization model (if applicable)"
       ],
       deliverables: [
-        "Jeu vidéo complet et testé",
-        "Code source et assets",
-        "Documentation technique",
-        "Publication sur les plateformes cibles",
-        "Support post-lancement initial"
+        "Complete and tested video game",
+        "Source code and assets",
+        "Technical documentation",
+        "Publication on target platforms",
+        "Initial post-launch support"
       ],
-      timeline: "6 à 18 mois selon la complexité du projet",
-      support: "Mises à jour et maintenance disponibles via contrat séparé"
+      timeline: "6 to 18 months depending on project complexity",
+      support: "Updates and maintenance available via separate contract"
     }
   }
 ];
@@ -243,7 +243,7 @@ export default function CreationServices() {
     <section className="py-16 bg-background dark:bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Création</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-4">Creation</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             We design and develop digital products that help businesses grow and succeed in the digital landscape.
           </p>

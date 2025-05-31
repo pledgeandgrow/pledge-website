@@ -99,13 +99,15 @@ export default function ArticlePage({ params }: { params: ArticlePageParams }) {
           </div>
           
           {/* Featured image */}
-          <div className="max-w-5xl mx-auto mb-12 rounded-xl overflow-hidden">
-            <div className="relative w-full h-[400px] md:h-[500px]">
+          <div className="w-full max-w-4xl mx-auto mb-8 px-4">
+            <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden">
               <Image 
                 src={article.image} 
                 alt={article.title}
-                fill
-                className="object-cover"
+                width={1000}
+                height={562}
+                style={{ width: '100%', height: 'auto' }}
+                className="rounded-xl"
                 priority
               />
             </div>
@@ -114,8 +116,17 @@ export default function ArticlePage({ params }: { params: ArticlePageParams }) {
           {/* Article content */}
           <div className="max-w-4xl mx-auto">
             <div 
-              className="prose prose-lg dark:prose-invert max-w-none mb-12"
+              className="prose prose-lg dark:prose-invert max-w-none mb-12 article-content"
               dangerouslySetInnerHTML={{ __html: article.content }}
+              style={{
+                '--article-p-margin': '1.5rem',
+                '--article-h2-margin-top': '2.5rem',
+                '--article-h2-margin-bottom': '1.5rem',
+                '--article-h3-margin-top': '2rem',
+                '--article-h3-margin-bottom': '1rem',
+                '--article-list-margin': '1.5rem',
+                '--article-list-item-margin': '0.5rem',
+              } as React.CSSProperties}
             />
             
             {/* Tags */}

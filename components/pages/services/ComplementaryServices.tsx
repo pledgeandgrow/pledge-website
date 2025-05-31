@@ -21,83 +21,83 @@ const complementaryServices: ServiceCard[] = [
   {
     id: "documentation",
     title: "Documentation",
-    description: "Services de documentation complets pour vos produits numériques et systèmes techniques.",
+    description: "Comprehensive documentation services for your digital products and technical systems.",
     icon: <FileText className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Services de documentation technique et utilisateur",
+      type: "Technical and user documentation services",
       clients: ["Startups", "SMEs", "Large enterprises", "Software publishers"],
-      sectors: ["Technologie", "Santé", "Finance", "Industrie", "Services", "Éducation"],
+      sectors: ["Technology", "Healthcare", "Finance", "Industry", "Services", "Education"],
       recommendedFor: [
-        "Produits numériques nécessitant des guides utilisateurs",
-        "Projets techniques nécessitant une documentation complète",
-        "APIs et frameworks nécessitant une documentation pour développeurs",
-        "Systèmes complexes nécessitant des manuels d'utilisation"
+        "Digital products requiring user guides",
+        "Technical projects requiring comprehensive documentation",
+        "APIs and frameworks requiring developer documentation",
+        "Complex systems requiring user manuals"
       ]
     },
     technology: {
       programs: ["Adobe InDesign", "Markdown", "Confluence", "GitBook", "Docusaurus"],
-      technologies: ["Documentation as Code", "Systèmes de gestion de contenu", "Wikis", "Bases de connaissances"],
+      technologies: ["Documentation as Code", "Content Management Systems", "Wikis", "Knowledge Bases"],
       languages: ["Markdown", "HTML", "XML", "AsciiDoc", "reStructuredText"],
       frameworks: ["Jekyll", "Hugo", "Sphinx", "MkDocs", "Docusaurus"],
       libraries: ["Swagger/OpenAPI", "JSDoc", "Doxygen", "ReadTheDocs", "Storybook"]
     },
     conditions: {
       requirements: [
-        "Accès aux produits ou systèmes à documenter",
-        "Informations techniques et spécifications",
-        "Définition du public cible",
-        "Exigences de format et de style"
+        "Access to products or systems to document",
+        "Technical information and specifications",
+        "Target audience definition",
+        "Format and style requirements"
       ],
       deliverables: [
-        "Documentation complète et structurée",
-        "Guides utilisateurs",
-        "Documentation technique",
-        "Documentation d'API (si applicable)",
-        "Formats adaptés (PDF, HTML, wiki, etc.)"
+        "Complete and structured documentation",
+        "User guides",
+        "Technical documentation",
+        "API documentation (if applicable)",
+        "Adapted formats (PDF, HTML, wiki, etc.)"
       ],
-      timeline: "2 à 8 semaines selon l'étendue du projet",
-      support: "Mises à jour et maintenance de la documentation disponibles via contrat séparé"
+      timeline: "2 to 8 weeks depending on project scope",
+      support: "Documentation updates and maintenance available via separate contract"
     }
   },
   {
     id: "ux-ui-design",
     title: "UX/UI Design",
-    description: "Services de design centrés sur l'utilisateur qui créent des expériences numériques intuitives.",
+    description: "User-centered design services that create intuitive digital experiences.",
     icon: <Palette className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Services de conception d'expérience et d'interface utilisateur",
+      type: "User experience and interface design services",
       clients: ["Startups", "SMEs", "Large enterprises", "Agencies"],
-      sectors: ["E-commerce", "SaaS", "Finance", "Santé", "Médias", "Services"],
+      sectors: ["E-commerce", "SaaS", "Finance", "Healthcare", "Media", "Services"],
       recommendedFor: [
-        "Projets nécessitant une expérience utilisateur optimale",
-        "Applications avec des flux utilisateurs complexes",
-        "Refonte d'interfaces existantes",
-        "Produits numériques visant une forte adoption utilisateur"
+        "Projects requiring optimal user experience",
+        "Applications with complex user flows",
+        "Redesign of existing interfaces",
+        "Digital products aiming for strong user adoption"
       ]
     },
     technology: {
       programs: ["Figma", "Adobe XD", "Sketch", "InVision", "Axure"],
-      technologies: ["Prototypage", "Design Systems", "Responsive Design", "Accessibilité", "Animation UI"],
+      technologies: ["Prototyping", "Design Systems", "Responsive Design", "Accessibility", "UI Animation"],
       languages: ["HTML", "CSS", "JavaScript"],
       frameworks: ["Material Design", "Apple Human Interface", "Fluent Design", "Bootstrap", "Tailwind CSS"],
       libraries: ["Framer Motion", "Lottie", "Storybook", "Chakra UI", "shadcn/ui"]
     },
     conditions: {
       requirements: [
-        "Brief de projet détaillé",
-        "Personas et parcours utilisateurs",
-        "Exigences fonctionnelles",
-        "Identité visuelle existante (si applicable)"
+        "Detailed project brief",
+        "User personas and journeys",
+        "Functional requirements",
+        "Existing visual identity (if applicable)"
       ],
       deliverables: [
-        "Wireframes et maquettes",
-        "Prototypes interactifs",
+        "Wireframes and mockups",
+        "Interactive prototypes",
         "Design system",
-        "Spécifications de design",
-        "Assets graphiques"
+        "Design specifications",
+        "Graphic assets"
       ],
-      timeline: "4 à 12 semaines selon la complexité du projet",
-      support: "Révisions et ajustements inclus dans le projet initial"
+      timeline: "4 to 12 weeks depending on project complexity",
+      support: "Revisions and adjustments included in the initial project"
     }
   },
   {
@@ -106,14 +106,14 @@ const complementaryServices: ServiceCard[] = [
     description: "Search engine optimization services to improve your online visibility.",
     icon: <Search className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Services d'optimisation pour les moteurs de recherche",
-      clients: ["E-commerce", "Blogs", "Sites corporate", "Startups", "PME"],
-      sectors: ["Retail", "Services", "Médias", "Santé", "Éducation", "B2B", "B2C"],
+      type: "Search engine optimization services",
+      clients: ["E-commerce", "Blogs", "Corporate sites", "Startups", "SMEs"],
+      sectors: ["Retail", "Services", "Media", "Healthcare", "Education", "B2B", "B2C"],
       recommendedFor: [
-        "Sites web cherchant à améliorer leur visibilité organique",
+        "Websites looking to improve their organic visibility",
         "Businesses wanting to reduce their dependence on paid advertising",
-        "Projets nécessitant une stratégie de contenu optimisée",
-        "Sites web avec des problèmes techniques affectant le référencement"
+        "Projects requiring an optimized content strategy",
+        "Websites with technical issues affecting SEO"
       ]
     },
     technology: {
@@ -125,102 +125,102 @@ const complementaryServices: ServiceCard[] = [
     },
     conditions: {
       requirements: [
-        "Accès aux plateformes d'analyse",
-        "Accès au back-office du site web",
-        "Objectifs commerciaux et KPIs",
-        "Mots-clés cibles (si déjà identifiés)"
+        "Access to analytics platforms",
+        "Access to website back-office",
+        "Business objectives and KPIs",
+        "Target keywords (if already identified)"
       ],
       deliverables: [
-        "Audit SEO complet",
-        "Optimisations techniques",
-        "Stratégie de contenu",
-        "Optimisations on-page",
-        "Rapports de performance mensuels"
+        "Complete SEO audit",
+        "Technical optimizations",
+        "Content strategy",
+        "On-page optimizations",
+        "Monthly performance reports"
       ],
-      timeline: "3 à 6 mois pour des résultats significatifs",
-      support: "Suivi et optimisation continue via contrat mensuel"
+      timeline: "3 to 6 months for significant results",
+      support: "Ongoing monitoring and optimization via monthly contract"
     }
   },
   {
     id: "maintenance",
     title: "Maintenance",
-    description: "Services de maintenance pour assurer le bon fonctionnement et la sécurité de vos solutions numériques.",
+    description: "Maintenance services to ensure the proper functioning and security of your digital solutions.",
     icon: <Wrench className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Services de maintenance et support technique",
+      type: "Maintenance services and technical support",
       clients: ["Startups", "SMEs", "Large enterprises", "Organizations"],
-      sectors: ["Tous secteurs avec présence numérique"],
+      sectors: ["All sectors with digital presence"],
       recommendedFor: [
-        "Sites web et applications nécessitant des mises à jour régulières",
-        "Systèmes critiques nécessitant une surveillance continue",
-        "Projets nécessitant un support technique régulier",
-        "Applications avec des exigences de sécurité élevées"
+        "Websites and applications requiring regular updates",
+        "Critical systems requiring continuous monitoring",
+        "Projects requiring regular technical support",
+        "Applications with high security requirements"
       ]
     },
     technology: {
       programs: ["JIRA", "Zendesk", "Freshdesk", "Sentry", "New Relic"],
       technologies: ["Monitoring", "Backup Systems", "CI/CD", "Security Scanning", "Performance Optimization"],
-      languages: ["Selon les technologies du projet maintenu"],
-      frameworks: ["Selon les technologies du projet maintenu"],
-      libraries: ["Selon les technologies du projet maintenu"]
+      languages: ["Depending on the technologies of the maintained project"],
+      frameworks: ["Depending on the technologies of the maintained project"],
+      libraries: ["Depending on the technologies of the maintained project"]
     },
     conditions: {
       requirements: [
-        "Accès aux systèmes à maintenir",
-        "Documentation technique existante",
-        "Définition des niveaux de service (SLA)",
-        "Processus d'escalade"
+        "Access to systems to maintain",
+        "Existing technical documentation",
+        "Definition of service levels (SLA)",
+        "Escalation process"
       ],
       deliverables: [
-        "Mises à jour régulières de sécurité",
-        "Corrections de bugs",
-        "Surveillance des performances",
-        "Sauvegardes régulières",
-        "Rapports d'activité mensuels"
+        "Regular security updates",
+        "Bug fixes",
+        "Performance monitoring",
+        "Regular backups",
+        "Monthly activity reports"
       ],
-      timeline: "Contrat continu avec engagement minimum de 3 à 12 mois",
-      support: "Support technique selon le SLA défini (8/5, 24/7, etc.)"
+      timeline: "Ongoing contract with minimum commitment of 3 to 12 months",
+      support: "Technical support according to defined SLA (8/5, 24/7, etc.)"
     }
   },
   {
     id: "consulting-training",
-    title: "Consulting / Formation",
+    title: "Consulting / Training",
     description: "Consulting and training services to help your team master digital technologies.",
     icon: <GraduationCap className="h-8 w-8 text-primary" />,
     specifications: {
-      type: "Services de conseil stratégique et formation technique",
+      type: "Strategic consulting and technical training services",
       clients: ["Startups", "SMEs", "Large enterprises", "Institutions"],
-      sectors: ["Technologie", "Finance", "Santé", "Retail", "Industrie", "Services"],
+      sectors: ["Technology", "Finance", "Healthcare", "Retail", "Industry", "Services"],
       recommendedFor: [
-        "Organisations cherchant à renforcer leurs compétences internes",
-        "Équipes nécessitant une montée en compétence technique",
+        "Organizations looking to strengthen their internal skills",
+        "Teams requiring technical skill development",
         "Businesses in digital transformation",
-        "Projets nécessitant une expertise externe ponctuelle"
+        "Projects requiring occasional external expertise"
       ]
     },
     technology: {
       programs: ["LMS (Moodle, Teachable)", "Microsoft Teams", "Zoom", "Slack", "Notion"],
-      technologies: ["E-learning", "Workshops", "Mentorat", "Documentation", "Évaluation des compétences"],
-      languages: ["Selon les technologies concernées par la formation"],
-      frameworks: ["Selon les technologies concernées par la formation"],
-      libraries: ["Selon les technologies concernées par la formation"]
+      technologies: ["E-learning", "Workshops", "Mentoring", "Documentation", "Skills assessment"],
+      languages: ["Depending on the technologies covered by the training"],
+      frameworks: ["Depending on the technologies covered by the training"],
+      libraries: ["Depending on the technologies covered by the training"]
     },
     conditions: {
       requirements: [
-        "Évaluation des besoins de formation",
-        "Niveau de compétence actuel des participants",
-        "Objectifs d'apprentissage",
-        "Calendrier et disponibilité des équipes"
+        "Assessment of training needs",
+        "Current skill level of participants",
+        "Learning objectives",
+        "Schedule and team availability"
       ],
       deliverables: [
-        "Sessions de formation personnalisées",
-        "Matériel de formation",
-        "Exercices pratiques",
-        "Évaluations et certifications (si applicable)",
-        "Support post-formation"
+        "Customized training sessions",
+        "Training materials",
+        "Practical exercises",
+        "Assessments and certifications (if applicable)",
+        "Post-training support"
       ],
-      timeline: "1 jour à 3 mois selon l'étendue du programme",
-      support: "Support post-formation disponible pendant 30 jours"
+      timeline: "1 day to 3 months depending on program scope",
+      support: "Post-training support available for 30 days"
     }
   }
 ];
@@ -243,9 +243,9 @@ export default function ComplementaryServices() {
     <section className="py-16 bg-background dark:bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Services Complémentaires</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-4">Complementary Services</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Nous proposons une gamme de services complémentaires pour maximiser la valeur et la performance de vos solutions numériques.
+            We offer a range of complementary services to maximize the value and performance of your digital solutions.
           </p>
         </div>
         

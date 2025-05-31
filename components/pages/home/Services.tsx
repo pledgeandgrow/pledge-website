@@ -22,10 +22,10 @@ const CreationServices = () => {
       link: "/services/mobile-development",
     },
     {
-      title: "UI/UX Design",
-      description: "User-centered design that creates intuitive and engaging digital experiences.",
+      title: "SaaS",
+      description: "Scalable Software-as-a-Service solutions with subscription models, multi-tenancy, and seamless updates.",
       icon: <Layout className="w-10 h-10 text-primary" />,
-      link: "/services/ui-ux-design",
+      link: "/services/saas",
     }
   ];
 
@@ -38,7 +38,7 @@ const CreationServices = () => {
         </p>
       </div>
       
-      {/* Mobile scrollable container */}
+      {/* Conteneur mobile défilant */}
       <div className="md:hidden overflow-x-auto pb-6 -mx-4 px-4">
         <div className="flex space-x-4" style={{ minWidth: "min-content" }}>
           {services.map((service, index) => (
@@ -60,7 +60,7 @@ const CreationServices = () => {
               </p>
               <div className="text-center mt-auto">
                 <Button variant="outline" size="sm" className="w-full" asChild>
-                  <Link href={service.link}>Learn More</Link>
+                  <Link href={service.link}>En savoir plus</Link>
                 </Button>
               </div>
             </div>
@@ -68,7 +68,7 @@ const CreationServices = () => {
         </div>
       </div>
       
-      {/* Desktop grid layout */}
+      {/* Disposition en grille pour bureau */}
       <div className="hidden md:grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, index) => (
           <div 
@@ -103,22 +103,22 @@ const CreationServices = () => {
 const IntegrationServices = () => {
   const services = [
     {
-      title: "Backend Development",
-      description: "Robust and scalable backend solutions with Node.js and PostgreSQL.",
+      title: "E-commerce",
+      description: "Custom e-commerce solutions with secure payment gateways, inventory management, and seamless user experience.",
       icon: <Database className="w-10 h-10 text-primary" />,
-      link: "/services/backend-development",
+      link: "/services/e-commerce",
     },
     {
-      title: "API Integration",
-      description: "Seamless integration with third-party services and APIs to extend your application's capabilities.",
+      title: "AI - Automation",
+      description: "Intelligent automation solutions powered by AI to streamline workflows, enhance productivity, and reduce operational costs.",
       icon: <Server className="w-10 h-10 text-primary" />,
-      link: "/services/api-integration",
+      link: "/services/ai-automation",
     },
     {
-      title: "Cloud Services",
-      description: "Deployment and management of applications on AWS, Azure, and Google Cloud platforms.",
+      title: "Blockchain",
+      description: "Secure and transparent blockchain solutions for digital assets, smart contracts, and decentralized applications.",
       icon: <Cloud className="w-10 h-10 text-primary" />,
-      link: "/services/cloud-services",
+      link: "/services/blockchain",
     }
   ];
 
@@ -131,7 +131,7 @@ const IntegrationServices = () => {
         </p>
       </div>
       
-      {/* Mobile scrollable container */}
+      {/* Conteneur mobile défilant */}
       <div className="md:hidden overflow-x-auto pb-6 -mx-4 px-4">
         <div className="flex space-x-4" style={{ minWidth: "min-content" }}>
           {services.map((service, index) => (
@@ -153,7 +153,7 @@ const IntegrationServices = () => {
               </p>
               <div className="text-center mt-auto">
                 <Button variant="outline" size="sm" className="w-full" asChild>
-                  <Link href={service.link}>Learn More</Link>
+                  <Link href={service.link}>En savoir plus</Link>
                 </Button>
               </div>
             </div>
@@ -161,7 +161,7 @@ const IntegrationServices = () => {
         </div>
       </div>
       
-      {/* Desktop grid layout */}
+      {/* Disposition en grille pour bureau */}
       <div className="hidden md:grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, index) => (
           <div 
@@ -192,39 +192,39 @@ const IntegrationServices = () => {
   );
 };
 
-// Component for Custom Solutions
+// Component for Complementary Services
 const CustomSolutions = () => {
   const services = [
     {
-      title: "Custom Software",
-      description: "Tailored software solutions designed to address your specific business needs.",
+      title: "Maintenance",
+      description: "Ongoing support, updates, and maintenance to keep your digital products running smoothly and securely.",
       icon: <Code className="w-10 h-10 text-primary" />,
-      link: "/services/custom-software",
+      link: "/services/maintenance",
     },
     {
-      title: "Analytics & Optimization",
-      description: "Data-driven insights and performance optimization to maximize your digital assets.",
+      title: "SEO",
+      description: "Search engine optimization strategies to improve visibility, drive traffic, and increase conversions.",
       icon: <LineChart className="w-10 h-10 text-primary" />,
-      link: "/services/analytics-optimization",
+      link: "/services/seo",
     },
     {
-      title: "Performance Optimization",
-      description: "Speed up your applications and improve user experience through advanced optimization techniques.",
+      title: "UX/UI Design",
+      description: "User-centered design that creates intuitive, engaging, and accessible digital experiences.",
       icon: <Zap className="w-10 h-10 text-primary" />,
-      link: "/services/performance-optimization",
+      link: "/services/ux-ui-design",
     }
   ];
 
   return (
     <div className="animate-fade-in">
       <div className="mb-8 text-center">
-        <h3 className="text-2xl font-bold mb-4">Custom Solutions</h3>
+        <h3 className="text-2xl font-bold mb-4">Complementary Services</h3>
         <p className="text-muted-foreground">
-          We develop specialized solutions tailored to your unique business challenges and opportunities.
+          We provide essential supporting services to enhance, maintain, and optimize your digital products.
         </p>
       </div>
       
-      {/* Mobile scrollable container */}
+      {/* Conteneur mobile défilant */}
       <div className="md:hidden overflow-x-auto pb-6 -mx-4 px-4">
         <div className="flex space-x-4" style={{ minWidth: "min-content" }}>
           {services.map((service, index) => (
@@ -246,7 +246,7 @@ const CustomSolutions = () => {
               </p>
               <div className="text-center mt-auto">
                 <Button variant="outline" size="sm" className="w-full" asChild>
-                  <Link href={service.link}>Learn More</Link>
+                  <Link href={service.link}>En savoir plus</Link>
                 </Button>
               </div>
             </div>
@@ -254,7 +254,7 @@ const CustomSolutions = () => {
         </div>
       </div>
       
-      {/* Desktop grid layout */}
+      {/* Disposition en grille pour bureau */}
       <div className="hidden md:grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service, index) => (
           <div 
@@ -286,41 +286,37 @@ const CustomSolutions = () => {
 };
 
 export default function Services() {
-
   return (
-    <section className="bg-background text-foreground py-16 md:py-24">
+    <section className="bg-muted/30 text-foreground py-16 md:py-24" id="services">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto mb-12 text-center animate-fade-up">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-up">
             Our Services
           </h2>
-          <p className="text-muted-foreground text-lg md:text-xl mb-8">
-            We offer a comprehensive range of digital services to help your business thrive in the digital landscape.
+          <p className="text-muted-foreground text-lg animate-fade-up" style={{ animationDelay: "0.1s" }}>
+            We offer a comprehensive range of digital services to help businesses thrive in the digital age.
           </p>
         </div>
-        
+
         <Tabs defaultValue="creation" className="w-full max-w-4xl mx-auto">
-          <TabsList className="grid grid-cols-3 mb-8 w-full max-w-md mx-auto">
+          <TabsList className="grid w-full grid-cols-3 mb-8">
             <TabsTrigger value="creation">Creation</TabsTrigger>
             <TabsTrigger value="integration">Integration</TabsTrigger>
-            <TabsTrigger value="custom">Custom Solutions</TabsTrigger>
+            <TabsTrigger value="custom">Complementary</TabsTrigger>
           </TabsList>
-          
           <TabsContent value="creation">
             <CreationServices />
           </TabsContent>
-          
           <TabsContent value="integration">
             <IntegrationServices />
           </TabsContent>
-          
           <TabsContent value="custom">
             <CustomSolutions />
           </TabsContent>
         </Tabs>
-        
-        <div className="mt-16 text-center animate-fade-up" style={{ animationDelay: "0.6s" }}>
-          <Button size="lg" className="px-8" asChild>
+
+        <div className="text-center mt-12">
+          <Button variant="outline" className="animate-scale-in" asChild>
             <Link href="/services">View All Services</Link>
           </Button>
         </div>

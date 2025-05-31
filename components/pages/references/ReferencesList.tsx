@@ -22,7 +22,7 @@ export default function ReferencesList() {
     {
       id: "hoodspot",
       name: "01. Hoodspot",
-      url: "https://www.hoodspot.fr",
+      url: "https://hoodspot.fr/programmeur-informatique/pledge-and-grow-93157766200014/",
       description: "Business analytics platform with detailed information about Pledge & Grow.",
       category: "legal",
       date: "Updated annually"
@@ -30,7 +30,7 @@ export default function ReferencesList() {
     {
       id: "figaro-entreprise",
       name: "02. Figaro Entreprise",
-      url: "https://entreprise.lefigaro.fr",
+      url: "https://entreprises.lefigaro.fr/pledge-and-grow-77/entreprise-931577662",
       description: "Business section of Le Figaro newspaper featuring company profiles including Pledge & Grow.",
       category: "press",
       date: "Updated quarterly"
@@ -38,7 +38,7 @@ export default function ReferencesList() {
     {
       id: "data-gouv",
       name: "03. Data Gouv",
-      url: "https://www.data.gouv.fr",
+      url: "https://annuaire-entreprises.data.gouv.fr/entreprise/pledge-and-grow-931577662",
       description: "French government open data platform with official business information about Pledge & Grow.",
       category: "legal",
       date: "Updated quarterly"
@@ -46,7 +46,7 @@ export default function ReferencesList() {
     {
       id: "societe",
       name: "04. Société",
-      url: "https://www.societe.com",
+      url: "https://www.societe.com/societe/pledge-and-grow-931577662.html",
       description: "French company information database with legal and financial details about Pledge & Grow.",
       category: "legal",
       date: "Updated quarterly"
@@ -56,7 +56,7 @@ export default function ReferencesList() {
     {
       id: "pages-jaunes",
       name: "05. Pages Jaunes",
-      url: "https://www.pagesjaunes.fr",
+      url: "https://www.pagesjaunes.fr/pros/63262977",
       description: "French business directory with Pledge & Grow's contact information and services.",
       category: "directory",
       date: "Updated 2024"
@@ -64,7 +64,7 @@ export default function ReferencesList() {
     {
       id: "legaliste",
       name: "06. Le Légaliste",
-      url: "https://www.legaliste.fr",
+      url: "https://www.lelegaliste.fr/annonce/constitution/societe-par-actions-simplifiees-sas/1637931",
       description: "Legal business information platform with company registration details for Pledge & Grow.",
       category: "legal",
       date: "Updated 2024"
@@ -72,7 +72,7 @@ export default function ReferencesList() {
     {
       id: "greffe",
       name: "07. Greffe",
-      url: "https://www.greffe-tc-paris.fr",
+      url: "https://www.greffe.io/fr/entreprise/pledge-and-grow-931577662",
       description: "Official commercial court registry with legal documentation for Pledge & Grow.",
       category: "legal",
       date: "Updated 2024"
@@ -82,7 +82,7 @@ export default function ReferencesList() {
     {
       id: "sortlist",
       name: "08. Sortlist",
-      url: "https://www.sortlist.com",
+      url: "https://www.sortlist.fr/agency/pledge-and-grow",
       description: "Agency matching platform featuring Pledge & Grow's services and portfolio.",
       category: "partner",
       date: "Updated 2024"
