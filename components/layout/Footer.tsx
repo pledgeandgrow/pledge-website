@@ -255,7 +255,7 @@ export default function Footer() {
             <a href="https://www.youtube.com/@pledgeandgrow" className="text-gray-500 hover:text-gray-900 dark:hover:text-white" aria-label="YouTube">
               <Youtube className="w-4 h-4" />
             </a>
-            <a href="https://discord.gg/hVSSMd63" className="text-gray-500 hover:text-gray-900 dark:hover:text-white" aria-label="Discord">
+            <a href="https://discord.gg/Ud22W3Gp" className="text-gray-500 hover:text-gray-900 dark:hover:text-white" aria-label="Discord">
               <FaDiscord className="w-4 h-4" />
             </a>
             <a href="https://wa.me/33753695840" className="text-gray-500 hover:text-gray-900 dark:hover:text-white" aria-label="WhatsApp">

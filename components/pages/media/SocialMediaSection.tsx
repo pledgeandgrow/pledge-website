@@ -6,7 +6,8 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
-import { FaInstagram, FaFacebook, FaTiktok, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaTiktok, FaLinkedin, FaYoutube, FaDiscord } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 interface SocialMediaCardProps {
   platform: string;
@@ -43,9 +44,8 @@ const SocialMediaCard = ({
           <div className="text-7xl text-white">{icon}</div>
         </div>
         <CardContent className="p-5">
-          <div className="flex justify-between items-center mb-3">
+          <div className="mb-3">
             <h3 className="font-bold text-lg">{platform}</h3>
-            <span className="text-sm text-muted-foreground">{followers} followers</span>
           </div>
           <p className="text-muted-foreground mb-4 line-clamp-3">{description}</p>
           <Button asChild variant="outline" className="w-full">
@@ -78,7 +78,6 @@ const MobileSocialMediaCard = ({
         <div className="text-4xl text-white">{icon}</div>
         <div className="text-white">
           <div className="font-bold">{platform}</div>
-          <div className="text-xs opacity-80">{followers} followers</div>
         </div>
       </div>
     </Link>
@@ -138,7 +137,7 @@ export default function SocialMediaSection() {
       platform: "TikTok",
       icon: <FaTiktok />,
       username: "pledgeandgrow",
-      url: "https://tiktok.com/@pledgeandgrow",
+      url: "https://tiktok.com/@pledgeandgrowfr",
       followers: "15.2K",
       color: "black",
       description: "Watch our short-form videos showcasing tech tips, innovation highlights, and fun moments from our team.",
@@ -158,11 +157,31 @@ export default function SocialMediaSection() {
       platform: "YouTube",
       icon: <FaYoutube />,
       username: "PledgeAndGrowOfficial",
-      url: "https://youtube.com/c/PledgeAndGrowOfficial",
+      url: "https://www.youtube.com/@pledgeandgrow",
       followers: "7.1K",
       color: "red-600",
       description: "Subscribe to our channel for in-depth tutorials, webinars, event recordings, and impact stories from our projects.",
       bgColor: "bg-red-600"
+    },
+    {
+      platform: "X",
+      icon: <FaXTwitter />,
+      username: "pledgeandgrow",
+      url: "https://x.com/PledgeandGrow",
+      followers: "9.3K",
+      color: "gray-900",
+      description: "Follow us for the latest tech news, industry insights, and quick updates about our projects and initiatives.",
+      bgColor: "bg-black"
+    },
+    {
+      platform: "Discord",
+      icon: <FaDiscord />,
+      username: "pledgeandgrow",
+      url: "https://discord.gg/Ud22W3Gp",
+      followers: "3.8K",
+      color: "indigo-600",
+      description: "Join our community to connect with like-minded professionals, participate in discussions, and get real-time support.",
+      bgColor: "bg-indigo-600"
     }
   ];
 

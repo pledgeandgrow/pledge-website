@@ -24,7 +24,7 @@ import {
   PaginationNext, 
   PaginationPrevious 
 } from "../../../components/ui/pagination";
-import { CalendarIcon, Clock, Filter, Search, X } from "lucide-react";
+import { CalendarIcon, Clock, Filter, Search, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { articles, getAllCategories, searchArticles, getArticlesByCategory, Article } from "@/data/blog-data";
 
 export default function BlogList() {
@@ -39,6 +39,9 @@ export default function BlogList() {
     search: "",
     category: "all"
   });
+  
+  // Mobile carousel state
+  const [mobileCurrentIndex, setMobileCurrentIndex] = useState(0);
 
   // Filter posts based on active filters
   useEffect(() => {
@@ -217,69 +220,156 @@ export default function BlogList() {
             )}
           </div>
           
-          {/* Blog posts grid */}
+          {/* Blog posts grid - Desktop view (md and above) */}
           {currentPosts.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-              {currentPosts.map((post, index) => (
-                <Link key={post.id} href={`/blog/article/${post.id}`}>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card className="h-full flex flex-col overflow-hidden hover:shadow-md transition-shadow">
-                      <div className="aspect-video relative">
-                        <Image
-                          src={post.image}
-                          alt={post.title}
-                          fill
-                          className="object-cover"
-                        />
-                        <div className="absolute top-4 left-4">
-                          <Badge variant="secondary" className="bg-primary/90 text-white hover:bg-primary">
-                            {post.category}
-                          </Badge>
+            <>
+              <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                {currentPosts.map((post, index) => (
+                  <Link key={post.id} href={`/blog/article/${post.id}`}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <Card className="h-full flex flex-col overflow-hidden hover:shadow-md transition-shadow">
+                        <div className="aspect-video relative">
+                          <Image
+                            src={post.image}
+                            alt={post.title}
+                            fill
+                            className="object-cover"
+                          />
+                          <div className="absolute top-4 left-4">
+                            <Badge variant="secondary" className="bg-primary/90 text-white hover:bg-primary">
+                              {post.category}
+                            </Badge>
+                          </div>
                         </div>
-                      </div>
-                      <CardHeader className="pb-2">
-                        <CardTitle className="text-xl line-clamp-2 hover:text-primary transition-colors">
-                          {post.title}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="pb-4 flex-grow">
-                        <CardDescription className="text-muted-foreground line-clamp-3 mb-4">
-                          {post.excerpt}
-                        </CardDescription>
-                      </CardContent>
-                      <CardFooter className="flex items-center justify-between pt-0 text-sm text-muted-foreground">
-                        <div className="flex items-center gap-2">
-                          <div className="w-6 h-6 relative rounded-full overflow-hidden">
+                        <CardHeader className="pb-2">
+                          <CardTitle className="text-xl line-clamp-2 hover:text-primary transition-colors">
+                            {post.title}
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent className="pb-4 flex-grow">
+                          <CardDescription className="text-muted-foreground line-clamp-3 mb-4">
+                            {post.excerpt}
+                          </CardDescription>
+                        </CardContent>
+                        <CardFooter className="flex items-center justify-between pt-0 text-sm text-muted-foreground">
+                          <div className="flex items-center gap-2">
+                            <span>Nesrine CHTINI</span>
+                          </div>
+                          <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-1">
+                              <CalendarIcon className="h-3.5 w-3.5" />
+                              <span>{post.date}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Clock className="h-3.5 w-3.5" />
+                              <span>{post.readTime}</span>
+                            </div>
+                          </div>
+                        </CardFooter>
+                      </Card>
+                    </motion.div>
+                  </Link>
+                ))}
+              </div>
+              
+              {/* Mobile carousel view (below md) */}
+              <div className="md:hidden mb-12">
+                <div className="relative">
+                  {/* Carousel navigation buttons */}
+                  <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
+                    <Button 
+                      variant="outline" 
+                      size="icon" 
+                      className="rounded-full bg-white/80 dark:bg-gray-800/80 shadow-md"
+                      onClick={() => setMobileCurrentIndex(prev => Math.max(0, prev - 1))}
+                      disabled={mobileCurrentIndex === 0}
+                    >
+                      <ChevronLeft className="h-5 w-5" />
+                    </Button>
+                  </div>
+                  
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10">
+                    <Button 
+                      variant="outline" 
+                      size="icon" 
+                      className="rounded-full bg-white/80 dark:bg-gray-800/80 shadow-md"
+                      onClick={() => setMobileCurrentIndex(prev => Math.min(currentPosts.length - 1, prev + 1))}
+                      disabled={mobileCurrentIndex === currentPosts.length - 1}
+                    >
+                      <ChevronRight className="h-5 w-5" />
+                    </Button>
+                  </div>
+                  
+                  {/* Single post display */}
+                  <div className="overflow-hidden">
+                    <div 
+                      className="transition-transform duration-300 ease-in-out"
+                      style={{ transform: `translateX(-${mobileCurrentIndex * 100}%)` }}
+                    >
+                      <Link href={`/blog/article/${currentPosts[mobileCurrentIndex].id}`}>
+                        <Card className="flex flex-col overflow-hidden hover:shadow-md transition-shadow">
+                          <div className="aspect-video relative">
                             <Image
-                              src={post.author.avatar}
-                              alt={post.author.name}
+                              src={currentPosts[mobileCurrentIndex].image}
+                              alt={currentPosts[mobileCurrentIndex].title}
                               fill
                               className="object-cover"
                             />
+                            <div className="absolute top-4 left-4">
+                              <Badge variant="secondary" className="bg-primary/90 text-white hover:bg-primary">
+                                {currentPosts[mobileCurrentIndex].category}
+                              </Badge>
+                            </div>
                           </div>
-                          <span>{post.author.name}</span>
-                        </div>
-                        <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-1">
-                            <CalendarIcon className="h-3.5 w-3.5" />
-                            <span>{post.date}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Clock className="h-3.5 w-3.5" />
-                            <span>{post.readTime}</span>
-                          </div>
-                        </div>
-                      </CardFooter>
-                    </Card>
-                  </motion.div>
-                </Link>
-              ))}
-            </div>
+                          <CardHeader className="pb-2">
+                            <CardTitle className="text-xl line-clamp-2 hover:text-primary transition-colors">
+                              {currentPosts[mobileCurrentIndex].title}
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent className="pb-4">
+                            <CardDescription className="text-muted-foreground line-clamp-3 mb-4">
+                              {currentPosts[mobileCurrentIndex].excerpt}
+                            </CardDescription>
+                          </CardContent>
+                          <CardFooter className="flex items-center justify-between pt-0 text-sm text-muted-foreground">
+                            <div className="flex items-center gap-2">
+                              <span>Nesrine CHTINI</span>
+                            </div>
+                            <div className="flex items-center gap-4">
+                              <div className="flex items-center gap-1">
+                                <CalendarIcon className="h-3.5 w-3.5" />
+                                <span>{currentPosts[mobileCurrentIndex].date}</span>
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <Clock className="h-3.5 w-3.5" />
+                                <span>{currentPosts[mobileCurrentIndex].readTime}</span>
+                              </div>
+                            </div>
+                          </CardFooter>
+                        </Card>
+                      </Link>
+                    </div>
+                  </div>
+                  
+                  {/* Pagination indicators */}
+                  <div className="flex justify-center gap-1 mt-4">
+                    {currentPosts.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setMobileCurrentIndex(index)}
+                        className={`w-2 h-2 rounded-full ${mobileCurrentIndex === index ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'}`}
+                        aria-label={`Go to slide ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </>
           ) : (
             <div className="text-center py-12">
               <p className="text-lg text-muted-foreground mb-4">No articles found matching your criteria.</p>

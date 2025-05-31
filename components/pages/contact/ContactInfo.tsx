@@ -95,7 +95,7 @@ export default function ContactInfo() {
         <div className="space-y-8">
           {/* Support Section */}
           <div className="space-y-3">
-            <h3 className="text-xl font-semibold text-primary">Support</h3>
+            <h3 className="text-xl font-semibold">Support</h3>
             <div className="space-y-3">
               {supportContacts.map((item, index) => (
                 <div key={index} className="flex items-center">
@@ -117,7 +117,7 @@ export default function ContactInfo() {
           
           {/* Commercial Section */}
           <div className="space-y-3">
-            <h3 className="text-xl font-semibold text-primary">Commercial</h3>
+            <h3 className="text-xl font-semibold">Commercial</h3>
             <div className="space-y-3">
               {commercialContacts.map((item, index) => (
                 <div key={index} className="flex items-center">

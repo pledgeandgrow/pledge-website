@@ -184,7 +184,7 @@ const integrationServices: ServiceCard[] = [
   },
   {
     id: "cloud-devops",
-    title: "Cloud / DevOps",
+    title: "Cloud & DevOps",
     description: "Scalable cloud solutions and DevOps practices to optimize your infrastructure and deployments.",
     icon: <Cloud className="h-8 w-8 text-primary" />,
     specifications: {

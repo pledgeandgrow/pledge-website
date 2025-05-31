@@ -50,7 +50,7 @@ export default function CompanyShowcase() {
       category: "Digital Services",
       description: "Digital transformation consultancy specializing in web development, mobile applications, and digital strategy.",
       longDescription: "Pledge & Grow is the flagship company of our group, offering comprehensive digital transformation services to businesses across various sectors. Our team of experts combines technical expertise with strategic thinking to help organizations leverage technology for sustainable growth. From custom software development to digital marketing strategies, we provide end-to-end solutions tailored to each client's unique needs.",
-      founded: "2018",
+      founded: "2022",
       location: "Paris, France",
       team: "45+ professionals",
       website: "https://pledgeandgrow.com",
@@ -72,13 +72,38 @@ export default function CompanyShowcase() {
       id: "taskmate",
       name: "Taskmate",
       logo: "/images/groupe/logo-fintech.png",
+      category: "Automation Services",
+      description: "Advanced automation solutions to streamline business processes and increase operational efficiency.",
+      longDescription: "Taskmate specializes in developing intelligent automation solutions that help businesses streamline their operations and reduce manual workload. Our team combines expertise in process optimization, AI, and workflow automation to create custom solutions that address complex business challenges and drive productivity improvements across various industries.",
+      founded: "2025",
+      location: "Paris, France",
+      team: "30+ specialists",
+      website: "https://taskmate-ia.vercel.app/",
+      services: [
+        "Workflow Automation",
+        "Business Process Optimization",
+        "AI-Powered Task Management",
+        "Custom Automation Solutions",
+        "Robotic Process Automation (RPA)"
+      ],
+      achievements: [
+        "Reduced manual workload by 75% for clients",
+        "Implemented solutions in 20+ industries",
+        "Received innovation award in automation sector",
+        "Improved operational efficiency by 40%"
+      ]
+    },
+    {
+      id: "verdalize",
+      name: "Verdalize",
+      logo: "/images/groupe/logo-greentech.png",
       category: "Financial Technology",
       description: "Innovative financial technology solutions for banks, insurance companies, and financial service providers.",
-      longDescription: "Taskmate develops cutting-edge financial technology products that help traditional financial institutions modernize their operations and improve customer experiences. Our team combines deep financial industry knowledge with technical expertise to create secure, compliant, and user-friendly solutions that address the evolving needs of the financial sector.",
-      founded: "2019",
+      longDescription: "Verdalize develops cutting-edge financial technology products that help traditional financial institutions modernize their operations and improve customer experiences. Our team combines deep financial industry knowledge with technical expertise to create secure, compliant, and user-friendly solutions that address the evolving needs of the financial sector.",
+      founded: "2025",
       location: "London, UK",
-      team: "30+ specialists",
-      website: "https://taskmate.com",
+      team: "25+ environmental experts",
+      website: "https://greentechinnovations.com",
       services: [
         "Digital Banking Platforms",
         "Payment Processing Solutions",
@@ -91,31 +116,6 @@ export default function CompanyShowcase() {
         "Reduced operational costs by 30% for clients",
         "Received innovation award in fintech sector",
         "Expanded to 5 European markets"
-      ]
-    },
-    {
-      id: "verdalize",
-      name: "Verdalize",
-      logo: "/images/groupe/logo-greentech.png",
-      category: "Sustainability",
-      description: "Sustainable technology solutions focused on reducing environmental impact and promoting eco-friendly practices.",
-      longDescription: "GreenTech Innovations creates technology solutions that help businesses reduce their environmental footprint while improving operational efficiency. Our products and services enable organizations to monitor, manage, and minimize resource consumption, waste generation, and carbon emissions, contributing to a more sustainable future.",
-      founded: "2020",
-      location: "Berlin, Germany",
-      team: "25+ environmental experts",
-      website: "https://greentechinnovations.com",
-      services: [
-        "Carbon Footprint Monitoring",
-        "Sustainable Supply Chain Management",
-        "Energy Efficiency Solutions",
-        "ESG Reporting Tools",
-        "Circular Economy Consulting"
-      ],
-      achievements: [
-        "Helped clients reduce carbon emissions by 45%",
-        "Implemented solutions in 50+ organizations",
-        "Developed industry-leading carbon accounting methodology",
-        "Recognized for innovation in climate tech"
       ]
     }
   ];
@@ -167,10 +167,7 @@ export default function CompanyShowcase() {
                             <MapPin className="h-4 w-4 text-primary" />
                             <span>{company.location}</span>
                           </div>
-                          <div className="flex items-center gap-2">
-                            <Users className="h-4 w-4 text-primary" />
-                            <span>{company.team}</span>
-                          </div>
+
                         </div>
                       </CardContent>
                       <CardFooter className="flex justify-between pt-2">
@@ -322,10 +319,7 @@ export default function CompanyShowcase() {
                         <MapPin className="h-4 w-4 text-primary" />
                         <span>{company.location}</span>
                       </div>
-                      <div className="flex items-center gap-2">
-                        <Users className="h-4 w-4 text-primary" />
-                        <span>{company.team}</span>
-                      </div>
+
                     </div>
                   </CardContent>
                   <CardFooter className="flex justify-between pt-2">
@@ -373,13 +367,7 @@ export default function CompanyShowcase() {
                                     {selectedCompany.location}
                                   </span>
                                 </div>
-                                <div className="flex flex-col gap-1">
-                                  <span className="text-sm text-muted-foreground">Team</span>
-                                  <span className="font-medium flex items-center gap-2">
-                                    <Users className="h-4 w-4 text-primary" />
-                                    {selectedCompany.team}
-                                  </span>
-                                </div>
+
                               </div>
                               
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

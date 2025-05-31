@@ -175,14 +175,19 @@ export default function VipServices() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="text-center"
         >
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Ready to experience the difference? Contact our team today to learn more about our VIP program and how it can benefit your business.
-          </p>
-          <Button asChild size="lg">
-            <Link href="/contact?subject=VIP%20Membership%20Inquiry">
-              Schedule a VIP Consultation
-            </Link>
-          </Button>
+          <div className="bg-primary/10 rounded-lg p-6 mb-6 max-w-2xl mx-auto">
+            <p className="text-muted-foreground mb-6">
+              Unlock all premium benefits with our exclusive VIP membership. Includes priority support, dedicated account manager, and preferential rates on all services.
+            </p>
+            <div className="flex justify-center">
+              <Button asChild size="lg" variant="default" className="bg-primary hover:bg-primary/90">
+                <Link href="/membership">
+                  Get VIP Membership
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -30,7 +30,7 @@ export default function MembershipPlans() {
     id: "premium",
     name: "Premium Membership",
     description: "Exclusive benefits for businesses requiring dedicated support and premium service.",
-    annualPrice: 12000,
+    annualPrice: 15000,
     buttonText: "Apply Now",
     buttonVariant: "default",
     features: [
@@ -85,7 +85,7 @@ export default function MembershipPlans() {
               <CardContent className="flex-grow">
                 <div className="mb-6">
                   <p className="text-4xl font-bold">
-                    ${plan.annualPrice.toLocaleString()}
+                    €{plan.annualPrice.toLocaleString()}
                   </p>
                   <p className="text-muted-foreground text-sm">
                     per year

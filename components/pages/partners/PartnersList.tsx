@@ -117,7 +117,7 @@ const partnersData: Partner[] = [
     logo: "/images/partners/taskmate.svg",
     category: "Exclusive",
     description: "Premium task management solution provider offering special subscription plans for our clients.",
-    website: "https://example.com/taskmate",
+    website: "https://taskmate-ia.vercel.app/",
     partnerType: "exclusive"
   },
   {

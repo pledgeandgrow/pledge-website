@@ -8,6 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Pledge & Grow Website",
   description: "Official website of Pledge & Grow, building the future of digital experiences with cutting-edge technology and innovative solutions.",
+  icons: {
+    icon: "/logopledge.png",
+    apple: "/logopledge.png",
+  },
 };
 
 export default function RootLayout({

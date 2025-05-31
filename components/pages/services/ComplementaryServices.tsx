@@ -184,7 +184,7 @@ const complementaryServices: ServiceCard[] = [
   },
   {
     id: "consulting-training",
-    title: "Consulting / Training",
+    title: "Consulting",
     description: "Consulting and training services to help your team master digital technologies.",
     icon: <GraduationCap className="h-8 w-8 text-primary" />,
     specifications: {

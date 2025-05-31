@@ -95,10 +95,10 @@ export default function ContactSupport() {
                 <div className="flex items-center justify-between border-b pb-3">
                   <div className="flex items-center">
                     <Phone className="h-4 w-4 text-primary mr-2" />
-                    <span className="text-sm font-medium">Phone Support</span>
+                    <span className="text-sm font-medium">Technical Support</span>
                   </div>
                   <Button size="sm" variant="ghost" className="h-8 px-2" asChild>
-                    <Link href="tel:+33123456789">Call</Link>
+                    <Link href="tel:+33766580835">Call</Link>
                   </Button>
                 </div>
                 
@@ -118,7 +118,7 @@ export default function ContactSupport() {
                     <span className="text-sm font-medium">Live Chat</span>
                   </div>
                   <Button size="sm" variant="ghost" className="h-8 px-2" asChild>
-                    <Link href="#">Chat</Link>
+                    <Link href="https://wa.me/33753695840" target="_blank" rel="noopener noreferrer">Chat</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -255,13 +255,13 @@ export default function ContactSupport() {
                       <MessageSquare className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-medium mb-1">Live Chat</h3>
+                      <h3 className="font-medium mb-1">Live Chat Support</h3>
                       <p className="text-sm text-muted-foreground mb-2">
-                        Chat with our support team in real-time during business hours.
+                        Chat with our support team in real-time via WhatsApp Business for immediate assistance with any questions.
                       </p>
                       <Button variant="outline" size="sm" asChild>
-                        <Link href="#">
-                          Start Chat <ArrowRight className="ml-2 h-4 w-4" />
+                        <Link href="https://wa.me/33753695840" target="_blank" rel="noopener noreferrer">
+                          Chat on WhatsApp <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
                     </div>
@@ -272,11 +272,11 @@ export default function ContactSupport() {
                       <Phone className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-medium mb-1">Phone Support</h3>
+                      <h3 className="font-medium mb-1">Technical Support</h3>
                       <p className="text-sm text-muted-foreground mb-2">
-                        Call us directly for urgent matters or complex issues.
+                        Call our technical support team directly for urgent matters or complex technical issues.
                       </p>
-                      <p className="text-sm font-medium">+33 (0)1 23 45 67 89</p>
+                      <p className="text-sm font-medium">+33 7 66 58 08 35</p>
                     </div>
                   </div>
                   

@@ -35,30 +35,30 @@ export default function InvestmentOpportunities() {
       icon: <TrendingUp className="h-6 w-6" />
     },
     {
-      title: "P&C",
-      status: "Ongoing",
-      description: "Pledge & Companies with different classic approaches integrated with innovative solutions.",
+      title: "Pledge & Cloud",
+      status: "Coming Soon",
+      description: "Cloud infrastructure and hosting solutions with scalable architecture for businesses of all sizes.",
       details: [
-        "Traditional business models",
-        "Innovation integration",
-        "Cross-industry applications"
+        "Scalable cloud infrastructure",
+        "Managed hosting services",
+        "Enterprise cloud solutions"
       ],
       icon: <Briefcase className="h-6 w-6" />
     },
     {
-      title: "Gardian",
-      status: "Active",
-      description: "Cloud tools with anonymity in mind, providing secure and private digital solutions.",
+      title: "Pledge & Properties",
+      status: "Coming Soon",
+      description: "Real estate development and property management with innovative smart building technologies.",
       details: [
-        "Privacy-focused cloud services",
-        "Anonymous data processing",
-        "Secure infrastructure"
+        "Smart building technologies",
+        "Sustainable property development",
+        "Innovative living spaces"
       ],
       icon: <Zap className="h-6 w-6" />
     },
     {
-      title: "P&G Foundation",
-      status: "Active",
+      title: "Pledge & Give",
+      status: "Coming Soon",
       description: "Foundation dedicated to supporting orphans and providing essential care and opportunities.",
       details: [
         "Orphan support programs",
@@ -80,11 +80,11 @@ export default function InvestmentOpportunities() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Investment Opportunities
+            Future Opportunities
           </h2>
           <p className="text-lg text-muted-foreground">
-            Discover current and upcoming investment opportunities with Pledge & Grow. 
-            We offer various ways to invest in our growth and innovation journey.
+            Discover current and upcoming opportunities with Pledge & Grow. 
+            We offer various ways to participate in our growth and innovation journey.
           </p>
         </motion.div>
 

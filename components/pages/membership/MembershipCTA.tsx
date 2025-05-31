@@ -24,13 +24,13 @@ export default function MembershipCTA() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="font-medium">
-              <Link href="#membership-plans" className="flex items-center gap-2">
-                Join Now <ArrowRight size={16} />
+              <Link href="/careers" className="flex items-center gap-2">
+                Get a job <ArrowRight size={16} />
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-medium">
-              <Link href="/contact?subject=Membership Inquiry">
-                Contact Us
+              <Link href="/">
+                Go back home
               </Link>
             </Button>
           </div>

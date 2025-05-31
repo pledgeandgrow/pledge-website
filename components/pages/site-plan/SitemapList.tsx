@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { ChevronRight } from "lucide-react";
 
 interface SitePlanSection {
@@ -17,7 +17,7 @@ interface SitePlanSection {
 export default function SitePlanList() {
   const sitePlanData: SitePlanSection[] = [
     {
-      title: "Main Pages",
+      title: "Pledge & Grow",
       links: [
         {
           name: "Home",
@@ -25,9 +25,9 @@ export default function SitePlanList() {
           description: "Our homepage with an overview of our services and mission",
         },
         {
-          name: "About",
-          path: "/about",
-          description: "Learn about our company, mission, and values",
+          name: "Contact",
+          path: "/contact",
+          description: "Get in touch with our team for inquiries and collaborations",
         },
         {
           name: "Services",
@@ -40,39 +40,9 @@ export default function SitePlanList() {
           description: "View our past projects and client success stories",
         },
         {
-          name: "Contact",
-          path: "/contact",
-          description: "Get in touch with our team for inquiries and collaborations",
-        },
-      ],
-    },
-    {
-      title: "Business & Innovation",
-      links: [
-        {
-          name: "Investors",
-          path: "/investors",
-          description: "Information for potential investors and investment opportunities",
-        },
-        {
-          name: "Grants & Subsidies",
-          path: "/grants-subsidies",
-          description: "Available funding opportunities for digital projects",
-        },
-        {
-          name: "Innovation",
-          path: "/innovation",
-          description: "Our approach to innovation and cutting-edge technologies",
-        },
-        {
-          name: "Business Sectors",
-          path: "/business-sectors",
-          description: "Industries and sectors we serve with our digital solutions",
-        },
-        {
-          name: "Digital Projects",
-          path: "/digital-project",
-          description: "Our approach to digital project management and delivery",
+          name: "Start my project",
+          path: "/start-project",
+          description: "Begin your digital journey with our project creation process",
         },
       ],
     },
@@ -80,39 +50,29 @@ export default function SitePlanList() {
       title: "Company",
       links: [
         {
-          name: "Group",
-          path: "/groupe",
-          description: "Information about our corporate group structure",
+          name: "Identity",
+          path: "/about",
+          description: "Learn about our company, mission, and values",
         },
         {
-          name: "Company Tree",
-          path: "/company-tree",
-          description: "Organizational structure and company hierarchy",
-        },
-        {
-          name: "Careers",
-          path: "/careers",
-          description: "Job opportunities and information about working with us",
-        },
-        {
-          name: "Impact",
-          path: "/impact",
-          description: "Our social and environmental impact initiatives",
+          name: "Progress",
+          path: "/progress",
+          description: "Track our company's growth and development milestones",
         },
         {
           name: "International",
           path: "/international",
           description: "Our global presence and international services",
         },
-      ],
-    },
-    {
-      title: "Ecosystem",
-      links: [
         {
           name: "Ecosystem",
           path: "/ecosysteme",
           description: "Our digital ecosystem and collaborative approach",
+        },
+        {
+          name: "Careers",
+          path: "/careers",
+          description: "Join our team and explore career opportunities",
         },
         {
           name: "Partners",
@@ -123,6 +83,16 @@ export default function SitePlanList() {
           name: "Ambassadors",
           path: "/ambassadors",
           description: "Our brand ambassadors and advocacy program",
+        },
+        {
+          name: "Grants & Subsidies",
+          path: "/grants-subsidies",
+          description: "Available funding opportunities for digital projects",
+        },
+        {
+          name: "Business Sectors",
+          path: "/business-sectors",
+          description: "Industries and sectors we serve with our digital solutions",
         },
         {
           name: "Membership",
@@ -137,67 +107,112 @@ export default function SitePlanList() {
       ],
     },
     {
-      title: "Services",
+      title: "Expertise",
       links: [
         {
-          name: "Web Development",
-          path: "/services#web-development",
+          name: "Website",
+          path: "/expertise/website",
           description: "Professional website development services",
         },
         {
-          name: "Digital Marketing",
-          path: "/services#digital-marketing",
-          description: "Strategic digital marketing solutions",
+          name: "SaaS",
+          path: "/expertise/saas",
+          description: "Software as a Service development and solutions",
         },
         {
-          name: "E-commerce",
-          path: "/services#ecommerce",
-          description: "E-commerce platform development and optimization",
+          name: "Mobile Application",
+          path: "/expertise/mobile-application",
+          description: "Mobile app development for iOS and Android",
         },
         {
-          name: "UI/UX Design",
-          path: "/services#design",
-          description: "User interface and experience design services",
+          name: "Software",
+          path: "/expertise/software",
+          description: "Custom software development and solutions",
         },
         {
-          name: "SEO & Content",
-          path: "/services#seo",
-          description: "Search engine optimization and content strategy",
-        },
-      ],
-    },
-    {
-      title: "Expertise Areas",
-      links: [
-        {
-          name: "Expertise Overview",
-          path: "/expertise",
-          description: "Overview of our specialized technical expertise areas",
-        },
-        {
-          name: "Web Development",
-          path: "/expertise/web-development",
-          description: "Professional website and web application development",
-        },
-        {
-          name: "Mobile Development",
-          path: "/expertise/mobile-development",
-          description: "Native and cross-platform mobile app development",
+          name: "Video Games",
+          path: "/expertise/video-games",
+          description: "Game development and interactive experiences",
         },
         {
           name: "E-commerce",
           path: "/expertise/e-commerce",
-          description: "Online store and e-commerce platform development",
+          description: "Online store development and optimization",
         },
         {
-          name: "Digital Marketing",
-          path: "/expertise/digital-marketing",
-          description: "Strategic digital marketing and online presence optimization",
+          name: "AI & Automation",
+          path: "/expertise/ai-automation",
+          description: "Artificial intelligence and automation solutions",
+        },
+        {
+          name: "Blockchain",
+          path: "/expertise/blockchain",
+          description: "Blockchain technology and cryptocurrency solutions",
+        },
+        {
+          name: "Cybersecurity",
+          path: "/expertise/cybersecurity",
+          description: "Digital security and data protection services",
+        },
+        {
+          name: "Cloud / DevOps",
+          path: "/expertise/cloud-devops",
+          description: "Cloud infrastructure and DevOps solutions",
+        },
+        {
+          name: "Documentation",
+          path: "/expertise/documentation",
+          description: "Comprehensive documentation and technical writing",
+        },
+        {
+          name: "UX/UI Design",
+          path: "/expertise/design-ux-ui",
+          description: "User experience and interface design services",
+        },
+        {
+          name: "SEO",
+          path: "/expertise/seo",
+          description: "Search engine optimization and visibility solutions",
+        },
+        {
+          name: "Maintenance",
+          path: "/expertise/maintenance",
+          description: "Ongoing maintenance and support services",
+        },
+        {
+          name: "Consulting / Training",
+          path: "/expertise/consulting-training",
+          description: "Expert consulting and training services",
         },
       ],
     },
     {
-      title: "Media & Resources",
+      title: "Enterprise",
+      links: [
+        {
+          name: "Impact",
+          path: "/impact",
+          description: "Our social and environmental impact initiatives",
+        },
+        {
+          name: "Innovation",
+          path: "/innovation",
+          description: "Our approach to innovation and cutting-edge technologies",
+        },
+        {
+          name: "Groupe",
+          path: "/groupe",
+          description: "Information about our corporate group structure",
+        },
+        {
+          name: "Media",
+          path: "/media",
+          description: "Press releases, media kit, and company news",
+        },
+      ],
+    },
+    {
+      title: "Resources",
       links: [
         {
           name: "Blog",
@@ -205,9 +220,9 @@ export default function SitePlanList() {
           description: "Articles, insights, and updates from our team",
         },
         {
-          name: "Media",
-          path: "/media",
-          description: "Press releases, media kit, and company news",
+          name: "Help Center",
+          path: "/help-center",
+          description: "Support resources, FAQs, and contact options",
         },
         {
           name: "References",
@@ -215,44 +230,34 @@ export default function SitePlanList() {
           description: "Official references and listings for Pledge & Grow",
         },
         {
-          name: "Progress",
-          path: "/progress",
-          description: "Track our company's growth and development milestones",
-        },
-        {
-          name: "Help Center",
-          path: "/help-center",
-          description: "Support resources, FAQs, and contact options",
+          name: "Site Plan",
+          path: "/site-plan",
+          description: "Complete overview of all pages on our website",
         },
       ],
     },
     {
-      title: "Legal & Support",
+      title: "Legal",
       links: [
         {
-          name: "Privacy Policy",
-          path: "/legal/privacy",
-          description: "Our privacy policy and data protection practices",
-        },
-        {
           name: "Terms of Service",
-          path: "/legal/terms",
+          path: "/legal/terms-conditions",
           description: "Terms and conditions for using our services",
         },
         {
+          name: "Privacy Policy",
+          path: "/legal/privacy-policy",
+          description: "Our privacy policy and data protection practices",
+        },
+        {
           name: "Cookie Policy",
-          path: "/legal/cookies",
+          path: "/legal/cookie-policy",
           description: "Information about how we use cookies on our website",
         },
         {
-          name: "Legal Notice",
-          path: "/legal/notice",
-          description: "Legal information about our company and website",
-        },
-        {
-          name: "Site Plan",
-          path: "/site-plan",
-          description: "Complete overview of all pages on our website",
+          name: "GDPR",
+          path: "/legal/gdpr",
+          description: "Our compliance with General Data Protection Regulation",
         },
       ],
     },
@@ -276,7 +281,7 @@ export default function SitePlanList() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {sitePlanData.map((section, index) => (
             <motion.div
               key={section.title}
@@ -284,30 +289,29 @@ export default function SitePlanList() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
+              className="mb-12"
             >
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="text-xl md:text-2xl">{section.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-4">
-                    {section.links.map((link) => (
-                      <li key={link.path} className="group">
-                        <Link 
-                          href={link.path}
-                          className="flex items-start hover:text-primary transition-colors"
-                        >
-                          <ChevronRight className="h-5 w-5 mt-0.5 mr-2 text-muted-foreground group-hover:text-primary transition-colors" />
-                          <div>
-                            <h3 className="font-medium">{link.name}</h3>
-                            <p className="text-sm text-muted-foreground">{link.description}</p>
-                          </div>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">{section.title}</h2>
+              <Separator className="mb-6" />
+              
+              <ul className="space-y-3 list-none">
+                {section.links.map((link) => (
+                  <li key={link.path}>
+                    <Link 
+                      href={link.path}
+                      className="group hover:text-primary transition-colors block"
+                    >
+                      <div className="flex items-start">
+                        <ChevronRight className="h-5 w-5 mt-0.5 mr-2 text-muted-foreground group-hover:text-primary transition-colors" />
+                        <div>
+                          <h3 className="font-medium">{link.name}</h3>
+                          <p className="text-sm text-muted-foreground">{link.description}</p>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
