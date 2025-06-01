@@ -4,6 +4,10 @@ const nextConfig = {
   images: {
     domains: ['flowbite.s3.amazonaws.com', 'images.unsplash.com'],
     unoptimized: process.env.NODE_ENV === 'development',
+    // Optimize images more aggressively
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256],
+    formats: ['image/webp', 'image/avif'],
   },
   typescript: {
     // During deployment on Vercel, we want to build even if there are TypeScript errors
@@ -27,6 +31,13 @@ const nextConfig = {
     maxInactiveAge: 25 * 1000,
     // number of pages that should be kept simultaneously without being disposed
     pagesBufferLength: 2,
+  },
+  // Optimize bundle size
+  experimental: {
+    optimizeCss: true, // Enable CSS optimization
+    optimizePackageImports: ['framer-motion', '@radix-ui', 'lucide-react', 'tailwindcss'],
+    optimizeServerReact: true,
+    serverMinification: true,
   },
   async redirects() {
     return [

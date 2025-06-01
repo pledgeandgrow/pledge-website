@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { motion } from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { FileText, Palette, Search, Wrench, GraduationCap } from "lucide-react";
@@ -228,7 +227,30 @@ const complementaryServices: ServiceCard[] = [
 export default function ComplementaryServices() {
   const [selectedService, setSelectedService] = useState<ServiceCard | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isInView, setIsInView] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  // Use IntersectionObserver to trigger animations when section is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   const openModal = (service: ServiceCard) => {
     setSelectedService(service);
@@ -240,7 +262,7 @@ export default function ComplementaryServices() {
   };
 
   return (
-    <section className="py-16 bg-background dark:bg-background">
+    <section className="py-16 bg-background dark:bg-background" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-4">Complementary Services</h2>
@@ -253,14 +275,11 @@ export default function ComplementaryServices() {
         <div className="lg:hidden overflow-x-auto pb-6 -mx-4 px-4" ref={scrollContainerRef}>
           <div className="flex space-x-4" style={{ minWidth: "min-content" }}>
             {complementaryServices.map((service, index) => (
-              <motion.div
+              <div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`cursor-pointer flex-shrink-0 w-[280px] transition-all duration-500 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => openModal(service)}
-                className="cursor-pointer flex-shrink-0 w-[280px]"
               >
                 <Card className="h-full flex flex-col hover:shadow-md transition-shadow duration-300 hover:border-primary/50">
                   <CardHeader className="pb-4">
@@ -270,7 +289,7 @@ export default function ComplementaryServices() {
                     <CardTitle className="text-center">{service.title}</CardTitle>
                   </CardHeader>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -278,14 +297,11 @@ export default function ComplementaryServices() {
         {/* Desktop grid layout */}
         <div className="hidden lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {complementaryServices.map((service, index) => (
-            <motion.div
+            <div
               key={service.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`cursor-pointer transition-all duration-500 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              style={{ transitionDelay: `${index * 100}ms` }}
               onClick={() => openModal(service)}
-              className="cursor-pointer"
             >
               <Card className="h-full flex flex-col hover:shadow-md transition-shadow duration-300 hover:border-primary/50">
                 <CardHeader className="pb-4">
@@ -295,7 +311,7 @@ export default function ComplementaryServices() {
                   <CardTitle className="text-center">{service.title}</CardTitle>
                 </CardHeader>
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
