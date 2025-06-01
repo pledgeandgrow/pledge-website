@@ -12,6 +12,7 @@ import {
 } from "@/components/pages/home";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { OrganizationSchema, WebsiteSchema, ServiceSchema, CanonicalUrl } from "@/components/seo";
 // Framer Motion imports removed as they were unused
 
 // Section IDs removed as they were unused
@@ -19,6 +20,10 @@ import Footer from "@/components/layout/Footer";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      <OrganizationSchema />
+      <WebsiteSchema />
+      <ServiceSchema />
+      <CanonicalUrl />
       <Navbar />
       
       <main className="flex-grow pt-16">

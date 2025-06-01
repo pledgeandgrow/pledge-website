@@ -337,7 +337,7 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/achievements" className="text-gray-700 dark:text-gray-300">
+                        <Link href="/progress" className="text-gray-700 dark:text-gray-300">
                           Progress
                         </Link>
                       </li>
@@ -520,11 +520,6 @@ export default function Navbar() {
               <Link href="/portfolio" className="block py-2 px-3 text-gray-900 dark:text-white">
                 Portfolio
               </Link>
-            </li>
-            <li>
-              <Button className="ml-4 bg-primary hover:bg-primary/90 text-white" asChild>
-                <Link href="/contact">Start my project</Link>
-              </Button>
             </li>
             <li className="mt-4">
               <Button asChild variant="default" size="sm" className="w-full">

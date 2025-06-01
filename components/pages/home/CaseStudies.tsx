@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CaseStudies() {
   const caseStudies = [
@@ -45,8 +46,15 @@ export default function CaseStudies() {
               style={{ animationDelay: `${0.1 + index * 0.1}s` }}
             >
               <div className="relative h-48 bg-muted">
-                {/* Image placeholder - in production, use next/image with proper src */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 flex items-center justify-center text-primary">
+                <Image
+                  src={study.image}
+                  alt={study.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-secondary/40 flex items-center justify-center text-white font-medium">
                   {study.category}
                 </div>
               </div>
