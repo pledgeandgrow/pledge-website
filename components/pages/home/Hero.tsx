@@ -27,7 +27,7 @@ export default function Hero() {
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary opacity-30 blur rounded-lg"></div>
               <Image
-                src="/images/home/homehero.png"
+                src="/images/home/hero1.png"
                 alt="Hero image"
                 className="relative rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
                 width={500}

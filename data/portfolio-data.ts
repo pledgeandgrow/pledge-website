@@ -834,7 +834,7 @@ export const portfolioProjects: ClientProject[] = [
     }
   },
   {
-    id: "16",
+    id: "17",
     name: "Plac'Occitanie",
     logo: "/images/portfolio/plac-occitanie-logo.png",
     description: "Digital consulting for a regional job placement agency specializing in connecting local businesses with qualified candidates in the Occitanie region of France.",

@@ -35,7 +35,7 @@ export default function Team() {
   const teamMembers = [
     {
       name: "Mehdi BEREL",
-      role: "Chairman",
+      role: "Founder",
       companyRole: "Chief Executive Officer",
       bio: "With extensive experience in business leadership, Mehdi drives the strategic vision and growth of our company.",
 
@@ -45,7 +45,7 @@ export default function Team() {
     },
     {
       name: "Shihab BEREL",
-      role: "Chairman",
+      role: "Founder",
       companyRole: "Chief Technology Officer",
       bio: "Shihab brings innovative thinking and technical expertise to our leadership team, focusing on product development.",
 
@@ -55,7 +55,7 @@ export default function Team() {
     },
     {
       name: "Ilyas BEREL",
-      role: "Chairman",
+      role: "Founder",
       companyRole: "Chief Financial Officer",
       bio: "Ilyas oversees operations and client relationships, ensuring we deliver exceptional value and service.",
 
@@ -70,7 +70,7 @@ export default function Team() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Chairmen
+            Leadership Team
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl">
             Meet our leadership team guiding the vision and success of our company.
@@ -87,7 +87,7 @@ export default function Team() {
 
               <div>
                 <h3 className="text-xl font-bold">{member.name}</h3>
-                <p className="text-primary font-medium mb-1">{member.role}</p>
+
                 <p className="text-muted-foreground text-sm mb-2">{member.companyRole}</p>
                 <p className="text-muted-foreground mb-4">{member.bio}</p>
                 <div className="flex space-x-3">
