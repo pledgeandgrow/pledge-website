@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { TestingVisibilityProvider } from "@/components/testing";
 import { AnalyticsProvider } from "@/components/analytics";
+import ClientCookieConsent from "@/components/shared/ClientCookieConsent";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -87,6 +88,7 @@ export default function RootLayout({
               <div className="flex min-h-screen flex-col bg-background text-foreground">
                 {children}
                 {/* Testing tools now only appear in admin section */}
+                <ClientCookieConsent />
               </div>
             </TestingVisibilityProvider>
           </AnalyticsProvider>

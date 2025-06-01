@@ -136,7 +136,8 @@ export default function VipServices() {
           </div>
           
           <div
-            className={`flex flex-col justify-center transition-all duration-500 delay-400 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+            className={`flex flex-col justify-center ${isInView ? 'animate-fadeIn' : 'opacity-0'}`}
+            style={{ animationDelay: '200ms' }}
           >
             <h3 className="text-2xl font-bold text-foreground mb-6">Elevate Your Experience</h3>
             

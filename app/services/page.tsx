@@ -3,16 +3,9 @@ import { Suspense } from "react";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ServicesHero from '@/components/pages/services/ServicesHero';
 
 // Use dynamic imports with loading fallbacks to reduce initial JS bundle size
-const ServicesHero = dynamic(
-  () => import("@/components/pages/services/ServicesHero"),
-  { 
-    loading: () => <div className="h-[400px] flex items-center justify-center"><div className="animate-pulse text-xl">Loading services...</div></div>,
-    ssr: true
-  }
-);
-
 const ServicesTabbed = dynamic(
   () => import("@/components/pages/services/ServicesTabbed"),
   { 

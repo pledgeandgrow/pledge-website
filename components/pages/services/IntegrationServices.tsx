@@ -277,8 +277,8 @@ export default function IntegrationServices() {
             {integrationServices.map((service, index) => (
               <div
                 key={service.id}
-                className={`cursor-pointer flex-shrink-0 w-[280px] transition-all duration-500 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                className={`cursor-pointer flex-shrink-0 w-[280px] ${isInView ? 'animate-fadeIn' : 'opacity-0'}`}
+                style={{ animationDelay: `${index * 50}ms` }}
                 onClick={() => openModal(service)}
               >
                 <Card className="h-full flex flex-col hover:shadow-md transition-shadow duration-300 hover:border-primary/50">
@@ -299,8 +299,8 @@ export default function IntegrationServices() {
           {integrationServices.map((service, index) => (
             <div
               key={service.id}
-              className={`cursor-pointer transition-all duration-500 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              className={`cursor-pointer ${isInView ? 'animate-fadeIn' : 'opacity-0'}`}
+              style={{ animationDelay: `${index * 50}ms` }}
               onClick={() => openModal(service)}
             >
               <Card className="h-full flex flex-col hover:shadow-md transition-shadow duration-300 hover:border-primary/50">

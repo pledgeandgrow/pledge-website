@@ -35,10 +35,12 @@ const nextConfig = {
   // Optimize bundle size
   experimental: {
     optimizeCss: true, // Enable CSS optimization
-    optimizePackageImports: ['framer-motion', '@radix-ui', 'lucide-react', 'tailwindcss'],
+    optimizePackageImports: ['@radix-ui', 'lucide-react', 'tailwindcss'],
     optimizeServerReact: true,
     serverMinification: true,
+    scrollRestoration: true,
   },
+  serverExternalPackages: ['sharp'],
   async redirects() {
     return [
       {
