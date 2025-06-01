@@ -6,6 +6,8 @@ import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FormProvider } from "react-hook-form";
+import { useAnalytics } from "@/hooks/useAnalytics";
+import { EventCategory, EventAction } from "@/lib/analytics";
 
 // UI Components
 import { Button } from "@/components/ui/button";
@@ -138,6 +140,7 @@ const formSteps = [
 export default function ProjectForm() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const { trackEvent, trackFormSubmission, trackFormStep } = useAnalytics();
   const [formData, setFormData] = useState({
     projectType: "",
     projectName: "",
@@ -227,6 +230,8 @@ export default function ProjectForm() {
   
   const nextStep = () => {
     if (currentStep < formSteps.length - 1) {
+      // Track form step completion
+      trackFormStep('project_form', currentStep + 1, formSteps[currentStep].id);
       setCurrentStep(currentStep + 1);
     }
   };
@@ -246,6 +251,10 @@ export default function ProjectForm() {
   
   const handleProjectTypeSubmit = (data: z.infer<typeof projectTypeSchema>) => {
     updateFormData(data);
+    // Track project type selection
+    trackEvent(EventCategory.FORM, EventAction.FORM_FIELD_CHANGE, 'project_type_selection', {
+      project_type: data.projectType
+    });
     nextStep();
   };
   
@@ -278,6 +287,12 @@ export default function ProjectForm() {
   const submitForm = async () => {
     setIsSubmitting(true);
     
+    // Track form submission attempt
+    trackEvent(EventCategory.FORM, EventAction.FORM_SUBMIT, 'project_form', {
+      project_type: formData.projectType,
+      step_count: formSteps.length
+    });
+    
     try {
       // Send email via API route
       const response = await fetch('/api/send-project-email', {
@@ -291,12 +306,16 @@ export default function ProjectForm() {
       const result = await response.json();
 
       if (result.success) {
+        // Track successful submission
+        trackFormSubmission('project_form', true);
         toast({
           title: 'Project Submitted',
           description: 'Your project details have been received and sent to our team.',
           variant: 'default',
         });
       } else {
+        // Track failed submission
+        trackFormSubmission('project_form', false, 'API returned error');
         toast({
           title: 'Submission Error',
           description: 'There was an issue submitting your project. Please try again.',
@@ -305,6 +324,8 @@ export default function ProjectForm() {
       }
     } catch (error) {
       console.error('Form submission error:', error);
+      // Track error
+      trackFormSubmission('project_form', false, (error as Error).message || 'Unknown error');
       toast({
         title: 'Submission Error',
         description: 'An unexpected error occurred. Please try again.',
@@ -374,7 +395,11 @@ export default function ProjectForm() {
                 >
                   {currentStep === 0 && (
                     <FormProvider {...projectTypeForm}>
-                      <form onSubmit={projectTypeForm.handleSubmit(handleProjectTypeSubmit)} className="space-y-6">
+                      <form 
+                        onSubmit={projectTypeForm.handleSubmit(handleProjectTypeSubmit)} 
+                        className="space-y-6"
+                        onFocus={() => trackEvent(EventCategory.FORM, EventAction.FORM_START, 'project_form')}
+                      >
                         <FormField
                           control={projectTypeForm.control}
                           name="projectType"
@@ -706,8 +731,10 @@ export default function ProjectForm() {
               {currentStep > 0 && (
                 <Button
                   type="button"
-                  variant="outline"
-                  onClick={prevStep}
+                  onClick={() => {
+                    trackEvent(EventCategory.NAVIGATION, EventAction.CLICK, 'project_form_previous');
+                    prevStep();
+                  }} 
                   className={isMobile ? "text-sm py-2 h-9" : ""}
                   size={isMobile ? "sm" : "default"}
                 >
@@ -718,7 +745,12 @@ export default function ProjectForm() {
               {currentStep < formSteps.length - 1 ? (
                 <Button 
                   type="button" 
-                  onClick={nextStep} 
+                  onClick={() => {
+                    trackEvent(EventCategory.NAVIGATION, EventAction.CLICK, 'project_form_next', {
+                      current_step: formSteps[currentStep].id
+                    });
+                    nextStep();
+                  }} 
                   className={`${currentStep > 0 ? "ml-auto" : "w-full md:w-auto"} ${isMobile ? "text-sm py-2 h-9" : ""}`}
                   size={isMobile ? "sm" : "default"}
                 >
@@ -726,7 +758,10 @@ export default function ProjectForm() {
                 </Button>
               ) : (
                 <Button 
-                  onClick={submitForm} 
+                  onClick={() => {
+                    trackEvent(EventCategory.CONVERSION, EventAction.CLICK, 'project_form_submit');
+                    submitForm();
+                  }} 
                   disabled={isSubmitting} 
                   className={`${currentStep > 0 ? "ml-auto" : "w-full md:w-auto"} ${isMobile ? "text-sm py-2 h-9" : ""}`}
                   size={isMobile ? "sm" : "default"}

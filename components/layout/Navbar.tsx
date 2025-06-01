@@ -315,7 +315,7 @@ export default function Navbar() {
         
         {/* Mobile menu */}
         <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:hidden`}>
-          <ul className="flex flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+          <ul className="flex flex-col font-medium p-4 mt-4 border border-gray-100 rounded-lg bg-background dark:bg-background dark:border-gray-700">
             <li>
               <button
                 onClick={toggleCompany}
@@ -327,9 +327,9 @@ export default function Navbar() {
                 </svg>
               </button>
               {companyOpen && (
-                <div className="px-4 py-2">
+                <div className="px-4 py-2 bg-background dark:bg-background rounded-md">
                   <div className="mb-4">
-                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">About Us</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2">About Us</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
                         <Link href="/about" className="text-gray-700 dark:text-gray-300">
@@ -354,7 +354,7 @@ export default function Navbar() {
                     </ul>
                   </div>
                   <div className="mb-4">
-                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Opportunities</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2">Opportunities</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
                         <Link href="/grants-subsidies" className="text-gray-700 dark:text-gray-300">
@@ -379,7 +379,7 @@ export default function Navbar() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Community</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2">Community</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
                         <Link href="/partners" className="text-gray-700 dark:text-gray-300">
@@ -422,9 +422,9 @@ export default function Navbar() {
                 </svg>
               </button>
               {expertiseOpen && (
-                <div className="px-4 py-2">
+                <div className="px-4 py-2 bg-background dark:bg-background rounded-md">
                   <div className="mb-4">
-                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Creation</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2">Creation</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
                         <Link href="/expertise/website" className="text-gray-700 dark:text-gray-300">
@@ -454,7 +454,7 @@ export default function Navbar() {
                     </ul>
                   </div>
                   <div className="mb-4">
-                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Integration</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2">Integration</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
                         <Link href="/expertise/e-commerce" className="text-gray-700 dark:text-gray-300">
@@ -484,7 +484,7 @@ export default function Navbar() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Complementary</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2">Complementary</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
                         <Link href="/expertise/documentation" className="text-gray-700 dark:text-gray-300">

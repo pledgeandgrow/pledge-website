@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, Suspense } from "react";
 
 // Add type declarations for Google Analytics
 declare global {
@@ -12,11 +12,12 @@ declare global {
   }
 }
 
-export default function GoogleAnalytics({ 
-  measurementId 
-}: { 
-  measurementId: string 
-}) {
+/**
+ * Google Analytics component that adds GA4 tracking to the application
+ * This component should be added to the root layout
+ */
+// Separate component to handle search params with Suspense
+function AnalyticsTracker({ measurementId }: { measurementId: string }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -24,12 +25,29 @@ export default function GoogleAnalytics({
     if (!measurementId || !window.gtag) return;
 
     // When route changes, log page view with Google Analytics
-    const url = pathname + searchParams.toString();
+    const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '');
     
-    window.gtag("config", measurementId, {
-      page_path: url,
-    });
+    // Add a small delay to ensure the page has fully loaded
+    const timeout = setTimeout(() => {
+      window.gtag("config", measurementId, {
+        page_path: url,
+        page_title: document.title,
+      });
+    }, 300);
+
+    return () => clearTimeout(timeout);
   }, [pathname, searchParams, measurementId]);
+
+  return null;
+}
+
+export default function GoogleAnalytics({ 
+  measurementId 
+}: { 
+  measurementId: string 
+}) {
+
+  // Analytics tracker is wrapped in Suspense to handle useSearchParams
 
   return (
     <>
@@ -47,10 +65,14 @@ export default function GoogleAnalytics({
             gtag('js', new Date());
             gtag('config', '${measurementId}', {
               page_path: window.location.pathname,
+              send_page_view: true
             });
           `,
         }}
       />
+      <Suspense fallback={null}>
+        <AnalyticsTracker measurementId={measurementId} />
+      </Suspense>
     </>
   );
 }

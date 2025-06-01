@@ -23,6 +23,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useAnalytics } from "@/hooks/useAnalytics";
+import { EventCategory, EventAction } from "@/lib/analytics";
 
 // Define form schema with zod
 const formSchema = z.object({
@@ -39,6 +41,9 @@ const formSchema = z.object({
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  
+  // Initialize analytics tracking
+  const { trackEvent, trackFormSubmission } = useAnalytics();
 
   // Initialize form
   const form = useForm<z.infer<typeof formSchema>>({
@@ -56,6 +61,11 @@ export default function ContactForm() {
   // Form submission handler
   async function onSubmit(values: z.infer<typeof formSchema>) {
     setIsSubmitting(true);
+    
+    // Track form submission attempt
+    trackEvent(EventCategory.FORM, EventAction.FORM_SUBMIT, 'contact_form', {
+      subject: values.subject
+    });
     
     try {
       // Send data to our API endpoint
@@ -76,10 +86,13 @@ export default function ContactForm() {
         throw new Error(data.error || 'Failed to send message');
       }
       
-      // Success
+      // Success - track successful submission
+      trackFormSubmission('contact_form', true);
       setIsSubmitted(true);
     } catch (error) {
       console.error('Error sending email:', error);
+      // Track failed submission
+      trackFormSubmission('contact_form', false, (error as Error).message);
       // You could add toast notifications here for error handling
       alert('Failed to send message. Please try again later.');
     } finally {
@@ -99,11 +112,12 @@ export default function ContactForm() {
             Your message has been received. We&apos;ll get back to you as soon as possible.
           </p>
           <Button 
-            className="mt-6" 
             onClick={() => {
-              form.reset();
               setIsSubmitted(false);
+              // Track button click
+              trackEvent(EventCategory.ENGAGEMENT, EventAction.CLICK, 'send_another_message');
             }}
+            className="mt-6"
           >
             Send another message
           </Button>

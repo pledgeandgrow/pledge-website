@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { TestingVisibilityProvider } from "@/components/testing";
+import { AnalyticsProvider } from "@/components/analytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -81,12 +82,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className={inter.variable}>
       <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <TestingVisibilityProvider>
-            <div className="flex min-h-screen flex-col bg-background text-foreground">
-              {children}
-              {/* Testing tools now only appear in admin section */}
-            </div>
-          </TestingVisibilityProvider>
+          <AnalyticsProvider measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}>
+            <TestingVisibilityProvider>
+              <div className="flex min-h-screen flex-col bg-background text-foreground">
+                {children}
+                {/* Testing tools now only appear in admin section */}
+              </div>
+            </TestingVisibilityProvider>
+          </AnalyticsProvider>
         </ThemeProvider>
       </body>
     </html>
