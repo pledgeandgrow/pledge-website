@@ -1,37 +1,36 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+// Optimized version without heavy framer-motion dependency
 export default function ServicesHero() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  useEffect(() => {
+    // Simulate the animation effect with a simple state change
+    setIsLoaded(true);
+  }, []);
+
   return (
     <section className="relative bg-background dark:bg-background overflow-hidden py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h1 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <h1 
+            className={`text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           >
             Our Services & Solutions
-          </motion.h1>
-          <motion.p 
-            className="text-xl text-muted-foreground mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+          </h1>
+          <p 
+            className={`text-xl text-muted-foreground mb-10 transition-all duration-500 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
             Comprehensive digital solutions tailored to your business needs, from web and mobile development to cloud hosting and VIP services.
-          </motion.p>
+          </p>
           
-          <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+          <div
+            className={`flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 transition-all duration-500 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
             <Button 
               size="lg" 
@@ -54,7 +53,7 @@ export default function ServicesHero() {
                 Contact Our Team
               </Link>
             </Button>
-          </motion.div>
+          </div>
         </div>
       </div>
       

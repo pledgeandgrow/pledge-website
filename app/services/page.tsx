@@ -1,11 +1,33 @@
 import { Metadata } from "next";
-import {
-  ServicesHero,
-  VipServices
-} from "@/components/pages/services";
+import { Suspense } from "react";
+import dynamic from "next/dynamic";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import ServicesTabbed from "@/components/pages/services/ServicesTabbed";
+
+// Use dynamic imports with loading fallbacks to reduce initial JS bundle size
+const ServicesHero = dynamic(
+  () => import("@/components/pages/services/ServicesHero"),
+  { 
+    loading: () => <div className="h-[400px] flex items-center justify-center"><div className="animate-pulse text-xl">Loading services...</div></div>,
+    ssr: true
+  }
+);
+
+const ServicesTabbed = dynamic(
+  () => import("@/components/pages/services/ServicesTabbed"),
+  { 
+    loading: () => <div className="h-[300px] flex items-center justify-center"><div className="animate-pulse">Loading service categories...</div></div>,
+    ssr: true
+  }
+);
+
+const VipServices = dynamic(
+  () => import("@/components/pages/services/VipServices"),
+  { 
+    loading: () => <div className="h-[300px] flex items-center justify-center"><div className="animate-pulse">Loading VIP services...</div></div>,
+    ssr: true
+  }
+);
 
 export const metadata: Metadata = {
   title: "Services & Solutions | Pledge & Grow",
@@ -33,9 +55,15 @@ export default function ServicesPage() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow pt-16">
-        <ServicesHero />
-        <ServicesTabbed />
-        <VipServices />
+        <Suspense fallback={<div className="h-[400px] flex items-center justify-center"><div className="animate-pulse text-xl">Loading services...</div></div>}>
+          <ServicesHero />
+        </Suspense>
+        <Suspense fallback={<div className="h-[300px] flex items-center justify-center"><div className="animate-pulse">Loading service categories...</div></div>}>
+          <ServicesTabbed />
+        </Suspense>
+        <Suspense fallback={<div className="h-[300px] flex items-center justify-center"><div className="animate-pulse">Loading VIP services...</div></div>}>
+          <VipServices />
+        </Suspense>
       </main>
       <Footer />
     </div>

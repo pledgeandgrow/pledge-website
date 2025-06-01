@@ -240,6 +240,9 @@ export default function Footer() {
             <Link href="/legal/gdpr" className="text-xs text-gray-500 dark:text-gray-400 hover:underline">
               GDPR
             </Link>
+            <Link href="/legal-notice" className="text-xs text-gray-500 dark:text-gray-400 hover:underline">
+              Legal Notice
+            </Link>
           </div>
           
           <div className="flex space-x-4 justify-center">

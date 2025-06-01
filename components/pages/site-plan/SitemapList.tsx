@@ -259,6 +259,11 @@ export default function SitePlanList() {
           path: "/legal/gdpr",
           description: "Our compliance with General Data Protection Regulation",
         },
+        {
+          name: "Legal Notice",
+          path: "/legal-notice",
+          description: "Legal information about our company and website",
+        },
       ],
     },
   ];

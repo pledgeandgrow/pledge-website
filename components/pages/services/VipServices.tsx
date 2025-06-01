@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -41,51 +41,63 @@ const vipBenefits: VipBenefit[] = [
 ];
 
 export default function VipServices() {
+  const [isInView, setIsInView] = useState(false);
+  
+  useEffect(() => {
+    // Simple intersection observer to trigger animations when component is in view
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    const section = document.getElementById('vip-services-section');
+    if (section) {
+      observer.observe(section);
+    }
+    
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
   return (
-    <section className="py-16 bg-background dark:bg-background relative overflow-hidden">
+    <section id="vip-services-section" className="py-16 bg-background dark:bg-background relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full translate-y-1/2 -translate-x-1/2" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center mb-12">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="bg-primary/10 p-4 rounded-full mb-4"
+          <div
+            className={`bg-primary/10 p-4 rounded-full mb-4 transition-all duration-500 ${isInView ? 'opacity-100 scale-100' : 'opacity-0 scale-80'}`}
           >
             <Crown className="h-10 w-10 text-primary" />
-          </motion.div>
+          </div>
           
-          <motion.h2 
-            className="text-3xl font-bold text-foreground mb-4 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          <h2 
+            className={`text-3xl font-bold text-foreground mb-4 text-center transition-all duration-500 delay-100 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
             Client VIP Experience
-          </motion.h2>
+          </h2>
           
-          <motion.p 
-            className="text-muted-foreground max-w-2xl mx-auto text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+          <p 
+            className={`text-muted-foreground max-w-2xl mx-auto text-center transition-all duration-500 delay-200 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
             Join our exclusive VIP program for premium service, priority support, and enhanced benefits tailored to your business needs.
-          </motion.p>
+          </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+          <div
+            className={`transition-all duration-500 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+            style={{ transitionDelay: '300ms' }}
           >
             <Card className="h-full border-primary/50 shadow-md">
               <CardHeader className="bg-primary/5 border-b border-primary/20">
@@ -121,14 +133,10 @@ export default function VipServices() {
                 </Button>
               </CardFooter>
             </Card>
-          </motion.div>
+          </div>
           
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col justify-center"
+          <div
+            className={`flex flex-col justify-center transition-all duration-500 delay-400 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
             <h3 className="text-2xl font-bold text-foreground mb-6">Elevate Your Experience</h3>
             
@@ -165,30 +173,19 @@ export default function VipServices() {
             <p className="text-sm text-muted-foreground italic">
               VIP membership is available by application and is subject to approval. Contact us to discuss your eligibility and how we can tailor our VIP services to your specific needs.
             </p>
-          </motion.div>
+          </div>
         </div>
         
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="text-center"
+        <div
+          className={`text-center mt-8 transition-all duration-500 delay-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
-          <div className="bg-primary/10 rounded-lg p-6 mb-6 max-w-2xl mx-auto">
-            <p className="text-muted-foreground mb-6">
-              Unlock all premium benefits with our exclusive VIP membership. Includes priority support, dedicated account manager, and preferential rates on all services.
-            </p>
-            <div className="flex justify-center">
-              <Button asChild size="lg" variant="default" className="bg-primary hover:bg-primary/90">
-                <Link href="/membership">
-                  Get VIP Membership
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </motion.div>
+          <Button size="lg" asChild>
+            <Link href="/contact">
+              Contact Us for VIP Access
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
