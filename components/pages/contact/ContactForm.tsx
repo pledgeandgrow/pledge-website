@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
+import { useSearchParams } from "next/navigation";
 import {
   Form,
   FormControl,
@@ -41,10 +42,90 @@ const formSchema = z.object({
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const searchParams = useSearchParams();
   
   // Initialize analytics tracking
   const { trackEvent, trackFormSubmission } = useAnalytics();
 
+  // Get subject from URL if available
+  const urlSubject = searchParams.get('subject');
+  
+  // List of valid subjects for validation
+  const validSubjects = [
+    "Support", 
+    "Commercial", 
+    "Partnership", 
+    "Investment", 
+    "Ambassadors", 
+    "Feedback", 
+    "Careers", 
+    "VIP",
+    "Grants",
+    "Ambassador Program",
+    "Reference Request",
+    "Discord",
+    "VIP Membership",
+    "Grant Inquiry",
+    "Premium Membership",
+    "Media",
+    "Seed Investment",
+    "Pro Bono Application",
+    "Impact Partnership",
+    "Groupe",
+    "Industry Solutions"
+  ];
+  
+  // Format the URL subject to match our options (capitalize first letter, handle URL encoding)
+  const formattedUrlSubject = urlSubject ? 
+    decodeURIComponent(urlSubject.replace(/%20/g, ' '))
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ') : "";
+      
+  // Map common inquiry types to our valid subjects
+  const subjectMapping: Record<string, string> = {
+    // Existing mappings
+    "partnership inquiry": "Partnership",
+    "partnership": "Partnership",
+    "commercial": "Commercial",
+    "support": "Support",
+    "investment": "Investment",
+    "ambassadors": "Ambassadors",
+    "feedback": "Feedback",
+    "careers": "Careers",
+    "vip": "VIP",
+    
+    // New mappings from site links
+    "grants inquiry": "Grants",
+    "ambassador program inquiry": "Ambassador Program",
+    "reference request": "Reference Request",
+    "discord inquiry": "Discord",
+    "vip membership": "VIP Membership",
+    "grant inquiry": "Grant Inquiry",
+    "premium membership inquiry": "Premium Membership",
+    "media inquiry": "Media",
+    "investment inquiry": "Investment",
+    "seed investment": "Seed Investment",
+    "pro bono application": "Pro Bono Application",
+    "impact partnership": "Impact Partnership",
+    "groupe inquiry": "Groupe",
+    "industry solutions": "Industry Solutions"
+  };
+  
+  // Handle dynamic subjects that contain variable parts
+  if (formattedUrlSubject.toLowerCase().includes('grant inquiry:')) {
+    subjectMapping[formattedUrlSubject.toLowerCase()] = "Grant Inquiry";
+  }
+  
+  if (formattedUrlSubject.toLowerCase().includes('solutions') && 
+      !formattedUrlSubject.toLowerCase().includes('industry solutions')) {
+    subjectMapping[formattedUrlSubject.toLowerCase()] = "Industry Solutions";
+  }
+  
+  // Check if the formatted subject is in our mapping or valid subjects list
+  const mappedSubject = subjectMapping[formattedUrlSubject.toLowerCase()] || "";
+  const initialSubject = mappedSubject || (validSubjects.includes(formattedUrlSubject) ? formattedUrlSubject : "");
+  
   // Initialize form
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -53,10 +134,17 @@ export default function ContactForm() {
       email: "",
       company: "",
       phone: "",
-      subject: "",
+      subject: initialSubject,
       message: "",
     },
   });
+  
+  // Update form values when URL parameters change
+  useEffect(() => {
+    if (initialSubject && !form.getValues('subject')) {
+      form.setValue('subject', initialSubject);
+    }
+  }, [initialSubject, form, searchParams]);
 
   // Form submission handler
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -195,7 +283,7 @@ export default function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Subject</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <Select onValueChange={field.onChange} value={field.value || initialSubject}>
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder="Select a subject" />
@@ -210,6 +298,19 @@ export default function ContactForm() {
                     <SelectItem value="Feedback">Feedback</SelectItem>
                     <SelectItem value="Careers">Careers</SelectItem>
                     <SelectItem value="VIP">VIP</SelectItem>
+                    <SelectItem value="Grants">Grants</SelectItem>
+                    <SelectItem value="Ambassador Program">Ambassador Program</SelectItem>
+                    <SelectItem value="Reference Request">Reference Request</SelectItem>
+                    <SelectItem value="Discord">Discord</SelectItem>
+                    <SelectItem value="VIP Membership">VIP Membership</SelectItem>
+                    <SelectItem value="Grant Inquiry">Grant Inquiry</SelectItem>
+                    <SelectItem value="Premium Membership">Premium Membership</SelectItem>
+                    <SelectItem value="Media">Media</SelectItem>
+                    <SelectItem value="Seed Investment">Seed Investment</SelectItem>
+                    <SelectItem value="Pro Bono Application">Pro Bono Application</SelectItem>
+                    <SelectItem value="Impact Partnership">Impact Partnership</SelectItem>
+                    <SelectItem value="Groupe">Groupe</SelectItem>
+                    <SelectItem value="Industry Solutions">Industry Solutions</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />

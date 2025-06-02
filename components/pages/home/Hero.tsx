@@ -3,6 +3,42 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Hero() {
+  // Fonction de défilement fluide personnalisée
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (!element) return;
+    
+    // Position de l'élément cible
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY;
+    // Position actuelle
+    const startPosition = window.scrollY;
+    // Distance à parcourir
+    const distance = targetPosition - startPosition;
+    // Durée de l'animation en ms
+    const duration = 800;
+    // Heure de début
+    let startTime: number | null = null;
+    
+    // Fonction d'animation
+    function animation(currentTime: number) {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      
+      // Fonction d'accélération/décélération
+      const easeInOutQuart = (t: number) => {
+        return t < 0.5 ? 8 * t * t * t * t : 1 - Math.pow(-2 * t + 2, 4) / 2;
+      };
+      
+      window.scrollTo(0, startPosition + distance * easeInOutQuart(progress));
+      
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animation);
+      }
+    }
+    
+    requestAnimationFrame(animation);
+  };
   return (
     <section className="bg-background text-foreground py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -18,8 +54,14 @@ export default function Hero() {
               <Button size="lg" className="animate-scale-in" style={{ animationDelay: "0.2s" }} asChild>
                 <Link href="/contact">Get Started</Link>
               </Button>
-              <Button variant="outline" size="lg" className="animate-scale-in" style={{ animationDelay: "0.3s" }} asChild>
-                <Link href="/about">Learn More</Link>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="animate-scale-in" 
+                style={{ animationDelay: "0.3s" }} 
+                onClick={() => scrollToSection("about")}
+              >
+                Learn More
               </Button>
             </div>
           </div>
