@@ -3,16 +3,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
+import { useTranslations } from "@/hooks/useTranslations";
+import LanguageSwitcher from "@/components/shared/LanguageSwitcher";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [expertiseOpen, setExpertiseOpen] = useState(false);
   const [companyOpen, setCompanyOpen] = useState(false);
+  const [expertiseOpen, setExpertiseOpen] = useState(false);
   const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const { t } = useTranslations('common');
 
   // After mounting, we can safely show the UI that depends on the theme
   useEffect(() => {
@@ -46,14 +50,14 @@ export default function Navbar() {
           {mounted && (
             <Image 
               src={logoSrc} 
-              alt="Pledge & Grow Logo" 
-              width={240} 
-              height={80} 
-              className="h-16 w-auto"
+              alt={t('general.companyName')} 
+              width={160} 
+              height={53} 
+              className="h-12 w-auto mr-3"
             />
           )}
           <span className="self-center text-xl font-semibold whitespace-nowrap text-gray-800 dark:text-white hidden sm:block">
-            Pledge & Grow
+            {t('general.companyName')}
           </span>
         </Link>
         
@@ -65,7 +69,7 @@ export default function Navbar() {
             onClick={toggleMenu}
             aria-expanded={isMenuOpen}
           >
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only">{t('general.openMainMenu')}</span>
             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
             </svg>
@@ -80,7 +84,7 @@ export default function Navbar() {
                 onClick={toggleCompany}
                 className="flex items-center py-2 px-3 text-gray-900 dark:text-white rounded md:p-0"
               >
-                Company
+                {t('navbar.company')}
                 <svg className="w-2.5 h-2.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                 </svg>
@@ -91,26 +95,26 @@ export default function Navbar() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 px-2">
                   {/* About Us Column */}
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">About</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('navbar.companyMenu.about.title')}</h3>
                     <ul className="space-y-3">
                       <li>
                         <Link href="/about" className="text-gray-700 dark:text-gray-300">
-                          Identity
+                          {t('navbar.companyMenu.about.identity')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/progress" className="text-gray-700 dark:text-gray-300">
-                          Progress
+                          {t('navbar.companyMenu.about.progress')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/international" className="text-gray-700 dark:text-gray-300">
-                          International
+                          {t('navbar.companyMenu.about.international')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/ecosysteme" className="text-gray-700 dark:text-gray-300">
-                          Ecosystem
+                          {t('navbar.companyMenu.about.ecosystem')}
                         </Link>
                       </li>
                     </ul>
@@ -118,26 +122,26 @@ export default function Navbar() {
                   
                   {/* Opportunities Column */}
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Opportunities</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('navbar.companyMenu.opportunities.title')}</h3>
                     <ul className="space-y-3">
                       <li>
                         <Link href="/grants-subsidies" className="text-gray-700 dark:text-gray-300">
-                          Grants & Subsidies
+                          {t('navbar.companyMenu.opportunities.grantsSubsidies')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/business-sectors" className="text-gray-700 dark:text-gray-300">
-                          Business Sectors
+                          {t('navbar.companyMenu.opportunities.businessSectors')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/membership" className="text-gray-700 dark:text-gray-300">
-                          Membership
+                          {t('navbar.companyMenu.opportunities.membership')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/careers" className="text-gray-700 dark:text-gray-300">
-                          Careers
+                          {t('navbar.companyMenu.opportunities.careers')}
                         </Link>
                       </li>
                     </ul>
@@ -145,26 +149,26 @@ export default function Navbar() {
                   
                   {/* Community Column */}
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Community</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('navbar.companyMenu.community.title')}</h3>
                     <ul className="space-y-3">
                       <li>
                         <Link href="/partners" className="text-gray-700 dark:text-gray-300">
-                          Partners
+                          {t('navbar.companyMenu.community.partners')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/ambassadors" className="text-gray-700 dark:text-gray-300">
-                          Ambassadors
+                          {t('navbar.companyMenu.community.ambassadors')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/investors" className="text-gray-700 dark:text-gray-300">
-                          Investors
+                          {t('navbar.companyMenu.community.investors')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/discord" className="text-gray-700 dark:text-gray-300">
-                          Discord
+                          {t('navbar.companyMenu.community.discord')}
                         </Link>
                       </li>
                     </ul>
@@ -175,7 +179,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link href="/services" className="block py-2 px-3 text-gray-900 dark:text-white rounded md:p-0">
-                Services
+                {t('navbar.services')}
               </Link>
             </li>
             <li className="relative">
@@ -183,7 +187,7 @@ export default function Navbar() {
                 onClick={toggleExpertise}
                 className="flex items-center py-2 px-3 text-gray-900 dark:text-white rounded md:p-0"
               >
-                Expertise
+                {t('navbar.expertise')}
                 <svg className="w-2.5 h-2.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                 </svg>
@@ -194,31 +198,31 @@ export default function Navbar() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 px-2">
                   {/* Creation Column */}
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Creation</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('navbar.expertiseMenu.creation.title')}</h3>
                     <ul className="space-y-3">
                       <li>
                         <Link href="/expertise/website" className="text-gray-700 dark:text-gray-300">
-                          Website
+                          {t('navbar.expertiseMenu.creation.website')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/saas" className="text-gray-700 dark:text-gray-300">
-                          SaaS
+                          {t('navbar.expertiseMenu.creation.saas')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/mobile-application" className="text-gray-700 dark:text-gray-300">
-                          Mobile Application
+                          {t('navbar.expertiseMenu.creation.mobileApplication')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/software" className="text-gray-700 dark:text-gray-300">
-                          Software
+                          {t('navbar.expertiseMenu.creation.software')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/video-games" className="text-gray-700 dark:text-gray-300">
-                          Video Games
+                          {t('navbar.expertiseMenu.creation.videoGames')}
                         </Link>
                       </li>
                     </ul>
@@ -226,31 +230,31 @@ export default function Navbar() {
                   
                   {/* Integration Column */}
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Integration</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('navbar.expertiseMenu.integration.title')}</h3>
                     <ul className="space-y-3">
                       <li>
                         <Link href="/expertise/e-commerce" className="text-gray-700 dark:text-gray-300">
-                          E-commerce
+                          {t('navbar.expertiseMenu.integration.ecommerce')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/ai-automation" className="text-gray-700 dark:text-gray-300">
-                          AI & Automation
+                          {t('navbar.expertiseMenu.integration.aiAutomation')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/blockchain" className="text-gray-700 dark:text-gray-300">
-                          Blockchain
+                          {t('navbar.expertiseMenu.integration.blockchain')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/cybersecurity" className="text-gray-700 dark:text-gray-300">
-                          Cybersecurity
+                          {t('navbar.expertiseMenu.integration.cybersecurity')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/cloud-devops" className="text-gray-700 dark:text-gray-300">
-                          Cloud / DevOps
+                          {t('navbar.expertiseMenu.integration.cloudDevops')}
                         </Link>
                       </li>
                     </ul>
@@ -258,31 +262,31 @@ export default function Navbar() {
                   
                   {/* Complementary Column */}
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Complementary</h3>
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">{t('navbar.expertiseMenu.complementary.title')}</h3>
                     <ul className="space-y-3">
                       <li>
                         <Link href="/expertise/documentation" className="text-gray-700 dark:text-gray-300">
-                          Documentation
+                          {t('navbar.expertiseMenu.complementary.documentation')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/design-ux-ui" className="text-gray-700 dark:text-gray-300">
-                          UX/UI Design
+                          {t('navbar.expertiseMenu.complementary.designUxUi')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/seo" className="text-gray-700 dark:text-gray-300">
-                          SEO
+                          {t('navbar.expertiseMenu.complementary.seo')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/maintenance" className="text-gray-700 dark:text-gray-300">
-                          Maintenance
+                          {t('navbar.expertiseMenu.complementary.maintenance')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/consulting-training" className="text-gray-700 dark:text-gray-300">
-                          Consulting / Training
+                          {t('navbar.expertiseMenu.complementary.consultingTraining')}
                         </Link>
                       </li>
                     </ul>
@@ -293,12 +297,12 @@ export default function Navbar() {
             </li>
             <li>
               <Link href="/portfolio" className="block py-2 px-3 text-gray-900 dark:text-white rounded md:p-0">
-                Portfolio
+                {t('navbar.portfolio')}
               </Link>
             </li>
             <li>
               <Link href="/contact" className="block py-2 px-3 text-gray-900 dark:text-white rounded md:p-0">
-                Contact
+                {t('navbar.contact')}
               </Link>
             </li>
           </ul>
@@ -307,10 +311,11 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-4">
           <Button asChild variant="default" size="sm">
             <Link href="/digital-project" className="flex items-center">
-              Start My Project
+              {t('navbar.startMyProject')}
             </Link>
           </Button>
           <ThemeToggle />
+          <LanguageSwitcher />
         </div>
         
         {/* Mobile menu */}
@@ -321,7 +326,7 @@ export default function Navbar() {
                 onClick={toggleCompany}
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 dark:text-white"
               >
-                Company
+                {t('navbar.company')}
                 <svg className={`w-2.5 h-2.5 ms-2 transition-transform ${companyOpen ? 'rotate-180' : ''}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                 </svg>
@@ -329,76 +334,76 @@ export default function Navbar() {
               {companyOpen && (
                 <div className="px-4 py-2 bg-background dark:bg-background rounded-md">
                   <div className="mb-4">
-                    <h3 className="text-sm font-semibold text-primary mb-2">About Us</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2">{t('navbar.companyMenu.about.title')}</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
                         <Link href="/about" className="text-gray-700 dark:text-gray-300">
-                          Identity
+                          {t('navbar.companyMenu.about.identity')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/progress" className="text-gray-700 dark:text-gray-300">
-                          Progress
+                          {t('navbar.companyMenu.about.progress')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/international" className="text-gray-700 dark:text-gray-300">
-                          International
+                          {t('navbar.companyMenu.about.international')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/ecosysteme" className="text-gray-700 dark:text-gray-300">
-                          Ecosystem
+                          {t('navbar.companyMenu.about.ecosystem')}
                         </Link>
                       </li>
                     </ul>
                   </div>
                   <div className="mb-4">
-                    <h3 className="text-sm font-semibold text-primary mb-2">Opportunities</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2">{t('navbar.companyMenu.opportunities.title')}</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
                         <Link href="/grants-subsidies" className="text-gray-700 dark:text-gray-300">
-                          Grants & Subsidies
+                          {t('navbar.companyMenu.opportunities.grantsSubsidies')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/business-sectors" className="text-gray-700 dark:text-gray-300">
-                          Business Sectors
+                          {t('navbar.companyMenu.opportunities.businessSectors')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/membership" className="text-gray-700 dark:text-gray-300">
-                          Membership
+                          {t('navbar.companyMenu.opportunities.membership')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/careers" className="text-gray-700 dark:text-gray-300">
-                          Careers
+                          {t('navbar.companyMenu.opportunities.careers')}
                         </Link>
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-primary mb-2">Community</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2">{t('navbar.companyMenu.community.title')}</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
                         <Link href="/partners" className="text-gray-700 dark:text-gray-300">
-                          Partners
+                          {t('navbar.companyMenu.community.partners')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/ambassadors" className="text-gray-700 dark:text-gray-300">
-                          Ambassadors
+                          {t('navbar.companyMenu.community.ambassadors')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/investors" className="text-gray-700 dark:text-gray-300">
-                          Investors
+                          {t('navbar.companyMenu.community.investors')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/discord" className="text-gray-700 dark:text-gray-300">
-                          Discord
+                          {t('navbar.companyMenu.community.discord')}
                         </Link>
                       </li>
                     </ul>
@@ -408,7 +413,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link href="/services" className="block py-2 px-3 text-gray-900 dark:text-white">
-                Services
+                {t('navbar.services')}
               </Link>
             </li>
             <li>
@@ -416,7 +421,7 @@ export default function Navbar() {
                 onClick={toggleExpertise}
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 dark:text-white"
               >
-                Expertise
+                {t('navbar.expertise')}
                 <svg className={`w-2.5 h-2.5 ms-2 transition-transform ${expertiseOpen ? 'rotate-180' : ''}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                 </svg>
@@ -424,91 +429,91 @@ export default function Navbar() {
               {expertiseOpen && (
                 <div className="px-4 py-2 bg-background dark:bg-background rounded-md">
                   <div className="mb-4">
-                    <h3 className="text-sm font-semibold text-primary mb-2">Creation</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2">{t('navbar.expertiseMenu.creation.title')}</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
                         <Link href="/expertise/website" className="text-gray-700 dark:text-gray-300">
-                          Website
+                          {t('navbar.expertiseMenu.creation.website')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/saas" className="text-gray-700 dark:text-gray-300">
-                          SaaS
+                          {t('navbar.expertiseMenu.creation.saas')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/mobile-application" className="text-gray-700 dark:text-gray-300">
-                          Mobile Application
+                          {t('navbar.expertiseMenu.creation.mobileApplication')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/software" className="text-gray-700 dark:text-gray-300">
-                          Software
+                          {t('navbar.expertiseMenu.creation.software')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/video-games" className="text-gray-700 dark:text-gray-300">
-                          Video Games
+                          {t('navbar.expertiseMenu.creation.videoGames')}
                         </Link>
                       </li>
                     </ul>
                   </div>
                   <div className="mb-4">
-                    <h3 className="text-sm font-semibold text-primary mb-2">Integration</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2">{t('navbar.expertiseMenu.integration.title')}</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
                         <Link href="/expertise/e-commerce" className="text-gray-700 dark:text-gray-300">
-                          E-commerce
+                          {t('navbar.expertiseMenu.integration.ecommerce')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/ai-automation" className="text-gray-700 dark:text-gray-300">
-                          AI & Automation
+                          {t('navbar.expertiseMenu.integration.aiAutomation')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/blockchain" className="text-gray-700 dark:text-gray-300">
-                          Blockchain
+                          {t('navbar.expertiseMenu.integration.blockchain')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/cybersecurity" className="text-gray-700 dark:text-gray-300">
-                          Cybersecurity
+                          {t('navbar.expertiseMenu.integration.cybersecurity')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/cloud-devops" className="text-gray-700 dark:text-gray-300">
-                          Cloud / DevOps
+                          {t('navbar.expertiseMenu.integration.cloudDevops')}
                         </Link>
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-primary mb-2">Complementary</h3>
+                    <h3 className="text-sm font-semibold text-primary mb-2">{t('navbar.expertiseMenu.complementary.title')}</h3>
                     <ul className="space-y-2 pl-3">
                       <li>
                         <Link href="/expertise/documentation" className="text-gray-700 dark:text-gray-300">
-                          Documentation
+                          {t('navbar.expertiseMenu.complementary.documentation')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/design-ux-ui" className="text-gray-700 dark:text-gray-300">
-                          UX/UI Design
+                          {t('navbar.expertiseMenu.complementary.designUxUi')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/seo" className="text-gray-700 dark:text-gray-300">
-                          SEO
+                          {t('navbar.expertiseMenu.complementary.seo')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/maintenance" className="text-gray-700 dark:text-gray-300">
-                          Maintenance
+                          {t('navbar.expertiseMenu.complementary.maintenance')}
                         </Link>
                       </li>
                       <li>
                         <Link href="/expertise/consulting-training" className="text-gray-700 dark:text-gray-300">
-                          Consulting / Training
+                          {t('navbar.expertiseMenu.complementary.consultingTraining')}
                         </Link>
                       </li>
                     </ul>
@@ -518,18 +523,24 @@ export default function Navbar() {
             </li>
             <li>
               <Link href="/portfolio" className="block py-2 px-3 text-gray-900 dark:text-white">
-                Portfolio
+                {t('navbar.portfolio')}
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="block py-2 px-3 text-gray-900 dark:text-white">
+                {t('navbar.contact')}
               </Link>
             </li>
             <li className="mt-4">
               <Button asChild variant="default" size="sm" className="w-full">
                 <Link href="/digital-project" className="flex items-center justify-center">
-                  Start My Project
+                  {t('navbar.startMyProject')}
                 </Link>
               </Button>
             </li>
-            <li className="mt-4 flex justify-center">
+            <li className="mt-4 flex justify-center space-x-4">
               <ThemeToggle />
+              <LanguageSwitcher />
             </li>
           </ul>
         </div>

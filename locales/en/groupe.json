@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "title": "Our Group | Pledge & Grow",
+    "description": "Discover the Pledge & Grow Group of companies, our vision, structure, and the diverse businesses that make up our ecosystem."
+  },
+  "overview": {
+    "title": "Group Overview",
+    "description": "The Pledge & Grow Group brings together a portfolio of complementary businesses united by a shared vision of innovation and excellence.",
+    "items": [
+      {
+        "title": "Our Vision",
+        "description": "To create an ecosystem where innovative companies can thrive together, sharing resources, knowledge, and opportunities to deliver exceptional value to clients across various industries and markets."
+      },
+      {
+        "title": "Our Approach",
+        "description": "We foster collaboration between our companies, encouraging cross-pollination of ideas and expertise. This synergistic approach allows us to tackle complex challenges and deliver comprehensive solutions that drive meaningful results."
+      },
+      {
+        "title": "Strategic Investments",
+        "description": "We strategically invest in promising ventures that align with our values and vision. By providing capital, mentorship, and access to our network, we help these companies scale and succeed in competitive markets."
+      },
+      {
+        "title": "Global Presence",
+        "description": "With operations across multiple countries, our group leverages global perspectives while maintaining deep local expertise. This international footprint enables us to serve clients worldwide with culturally relevant solutions."
+      }
+    ]
+  },
+  "companies": {
+    "title": "Our Companies",
+    "description": "Explore the diverse businesses that make up the Pledge & Grow Group.",
+    "filters": {
+      "all": "All Companies",
+      "digital": "Digital Services",
+      "automation": "Automation Services",
+      "health": "HealthTech",
+      "sustainability": "Sustainability",
+      "education": "Education"
+    },
+    "company": {
+      "founded": "Founded",
+      "location": "Location",
+      "team": "Team",
+      "website": "Website",
+      "services": "Services",
+      "achievements": "Key Achievements",
+      "viewWebsite": "Visit Website"
+    },
+    "items": [
+      {
+        "id": "pledge-and-grow",
+        "name": "Pledge & Grow",
+        "logo": "/images/groupe/logo-pledge.png",
+        "category": "Digital Services",
+        "description": "Digital transformation consultancy specializing in web development, mobile applications, and digital strategy.",
+        "longDescription": "Pledge & Grow is the flagship company of our group, offering comprehensive digital transformation services to businesses across various sectors. Our team of experts combines technical expertise with strategic thinking to help organizations leverage technology for sustainable growth. From custom software development to digital marketing strategies, we provide end-to-end solutions tailored to each client's unique needs.",
+        "founded": "2022",
+        "location": "Paris, France",
+        "team": "45+ professionals",
+        "website": "https://pledgeandgrow.com",
+        "services": [
+          "Custom Web Development",
+          "Mobile App Development",
+          "Digital Strategy Consulting",
+          "UX/UI Design",
+          "E-commerce Solutions"
+        ],
+        "achievements": [
+          "Delivered 100+ successful digital projects",
+          "Recognized as a top digital agency in France",
+          "Achieved 98% client satisfaction rate",
+          "Partnered with leading technology providers"
+        ]
+      },
+      {
+        "id": "taskmate",
+        "name": "Taskmate",
+        "logo": "/images/groupe/logo-fintech.png",
+        "category": "Automation Services",
+        "description": "Advanced automation solutions to streamline business processes and increase operational efficiency.",
+        "longDescription": "Taskmate specializes in developing intelligent automation solutions that help businesses streamline their operations and reduce manual workload. Our team combines expertise in process optimization, AI, and workflow automation to create custom solutions that address complex business challenges and drive productivity improvements across various industries.",
+        "founded": "2025",
+        "location": "Paris, France",
+        "team": "30+ specialists",
+        "website": "https://taskmate-ia.vercel.app/",
+        "services": [
+          "Process Automation",
+          "AI-Powered Workflows",
+          "Custom Automation Solutions",
+          "Integration Services",
+          "Automation Consulting"
+        ],
+        "achievements": [
+          "Reduced operational costs by 40% for clients",
+          "Automated over 1,000 business processes",
+          "Saved clients 10,000+ work hours annually",
+          "Developed proprietary automation platform"
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Join Our Ecosystem",
+    "description": "Whether you're interested in partnering with one of our companies, exploring career opportunities, or discussing potential investment or acquisition, we'd love to hear from you.",
+    "buttons": {
+      "partner": "Become a Partner",
+      "careers": "Explore Careers",
+      "contact": "Contact Group Leadership"
+    }
+  }
+}

@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
@@ -40,6 +41,7 @@ const nextConfig = {
     serverMinification: true,
     scrollRestoration: true,
   },
+  // i18n is now handled by the middleware and App Router
   serverExternalPackages: ['sharp'],
   async redirects() {
     return [

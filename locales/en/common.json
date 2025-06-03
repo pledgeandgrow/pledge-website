@@ -1,0 +1,136 @@
+{
+  "general": {
+    "companyName": "Pledge & Grow",
+    "openMainMenu": "Open main menu",
+    "switchLanguage": "Switch language"
+  },
+  "navbar": {
+    "company": "Company",
+    "startMyProject": "Start My Project",
+    "companyMenu": {
+      "about": {
+        "title": "About",
+        "identity": "Identity",
+        "progress": "Progress",
+        "international": "International",
+        "ecosystem": "Ecosystem"
+      },
+      "opportunities": {
+        "title": "Opportunities",
+        "grantsSubsidies": "Grants & Subsidies",
+        "businessSectors": "Business Sectors",
+        "membership": "Membership",
+        "careers": "Careers"
+      },
+      "community": {
+        "title": "Community",
+        "partners": "Partners",
+        "ambassadors": "Ambassadors",
+        "investors": "Investors",
+        "discord": "Discord"
+      }
+    },
+    "services": "Services",
+    "expertise": "Expertise",
+    "expertiseMenu": {
+      "creation": {
+        "title": "Creation",
+        "website": "Website",
+        "saas": "SaaS",
+        "mobileApplication": "Mobile Application",
+        "software": "Software",
+        "videoGames": "Video Games"
+      },
+      "integration": {
+        "title": "Integration",
+        "ecommerce": "E-commerce",
+        "aiAutomation": "AI & Automation",
+        "blockchain": "Blockchain",
+        "cybersecurity": "Cybersecurity",
+        "cloudDevops": "Cloud / DevOps"
+      },
+      "complementary": {
+        "title": "Complementary",
+        "documentation": "Documentation",
+        "designUxUi": "UX/UI Design",
+        "seo": "SEO",
+        "maintenance": "Maintenance",
+        "consultingTraining": "Consulting / Training"
+      }
+    },
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "openMainMenu": "Open main menu",
+    "darkMode": "Dark mode",
+    "lightMode": "Light mode"
+  },
+  "footer": {
+    "companyName": "PLEDGE AND GROW",
+    "logoAlt": "Pledge & Grow Logo",
+    "companyDescription": "Building the future of digital experiences with cutting-edge technology and innovative solutions.",
+    "address": "16 Rue Théroigne de Méricourt, 75013 Paris",
+    "sections": {
+      "enterprise": {
+        "title": "Enterprise",
+        "impact": "Impact",
+        "innovation": "Innovation",
+        "groupe": "Groupe",
+        "media": "Media"
+      },
+      "resources": {
+        "title": "Resources",
+        "blog": "Blog",
+        "helpCenter": "Help Center",
+        "references": "References",
+        "sitePlan": "Site Plan"
+      },
+      "contact": {
+        "title": "Contact",
+        "support": {
+          "title": "Support"
+        },
+        "commercial": {
+          "title": "Commercial"
+        },
+        "whatsapp": "WhatsApp"
+      }
+    },
+    "legal": {
+      "title": "Legal",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "cookiePolicy": "Cookie Policy",
+      "gdpr": "GDPR",
+      "legalNotice": "Legal Notice"
+    },
+    "social": {
+      "instagram": "Instagram",
+      "tiktok": "TikTok",
+      "facebook": "Facebook",
+      "youtube": "YouTube",
+      "discord": "Discord",
+      "whatsapp": "WhatsApp"
+    },
+    "copyright": "All Rights Reserved.",
+    "allRightsReserved": "All rights reserved",
+    "madeWith": "Made with"
+  },
+  "buttons": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "contactUs": "Contact Us",
+    "joinOurTeam": "Join our team",
+    "seeMore": "See More"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "expandSection": "Expand section",
+    "collapseSection": "Collapse section",
+    "previous": "Previous",
+    "next": "Next"
+  }
+}

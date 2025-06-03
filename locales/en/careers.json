@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "Careers | Pledge & Grow",
+    "description": "Join our team at Pledge & Grow and be part of a dynamic company dedicated to creating innovative digital solutions. Explore open positions and our company culture."
+  },
+  "whyJoinUs": {
+    "title": "Why Join Pledge & Grow",
+    "description": "Become part of a team that's passionate about innovation, collaboration, and making a difference through technology.",
+    "benefits": {
+      "innovation": {
+        "title": "Culture of Innovation",
+        "description": "Work with cutting-edge technologies and contribute to projects that push the boundaries of what's possible."
+      },
+      "growth": {
+        "title": "Professional Growth",
+        "description": "Continuous learning opportunities, mentorship programs, and a clear career progression path."
+      },
+      "balance": {
+        "title": "Work-Life Balance",
+        "description": "Flexible working arrangements, generous time off, and a focus on wellbeing and mental health."
+      },
+      "impact": {
+        "title": "Meaningful Impact",
+        "description": "Contribute to projects that solve real-world problems and make a difference for our clients and communities."
+      },
+      "diversity": {
+        "title": "Inclusive Environment",
+        "description": "A diverse and inclusive workplace where different perspectives are valued and celebrated."
+      },
+      "benefits": {
+        "title": "Comprehensive Benefits",
+        "description": "Competitive compensation, health benefits, retirement plans, and performance bonuses."
+      }
+    }
+  },
+  "openPositions": {
+    "title": "Open Positions",
+    "description": "Explore current opportunities to join our team and contribute to innovative digital projects.",
+    "noPositions": "No positions match your search criteria.",
+    "filters": {
+      "search": "Search positions...",
+      "department": "Department",
+      "locationType": "Location Type",
+      "allDepartments": "All Departments",
+      "allLocationTypes": "All Location Types"
+    },
+    "positionCard": {
+      "applyNow": "Apply Now",
+      "postedOn": "Posted on",
+      "remote": "Remote",
+      "hybrid": "Hybrid",
+      "onsite": "Onsite"
+    },
+    "departments": {
+      "engineering": "Engineering",
+      "design": "Design",
+      "marketing": "Marketing",
+      "sales": "Sales",
+      "operations": "Operations",
+      "customerSupport": "Customer Support"
+    }
+  },
+  "applicationProcess": {
+    "title": "Our Application Process",
+    "description": "We've designed a transparent and efficient hiring process to help us find the right talent and give you a clear understanding of what to expect.",
+    "steps": {
+      "application": {
+        "title": "Application Submission",
+        "description": "Submit your resume and cover letter through our online portal. We review all applications carefully."
+      },
+      "initialScreen": {
+        "title": "Initial Screening",
+        "description": "A brief phone or video call to discuss your background, experience, and interest in the role."
+      },
+      "assessment": {
+        "title": "Skills Assessment",
+        "description": "Depending on the role, you may be asked to complete a technical assessment or case study."
+      },
+      "interviews": {
+        "title": "Team Interviews",
+        "description": "Meet with potential team members and managers to discuss your skills, experience, and cultural fit."
+      },
+      "finalDecision": {
+        "title": "Final Decision",
+        "description": "We aim to make a decision within one week of the final interview."
+      },
+      "onboarding": {
+        "title": "Onboarding",
+        "description": "A comprehensive onboarding program to help you integrate smoothly into our team and culture."
+      }
+    }
+  },
+  "cta": {
+    "title": "Join Our Talented Team",
+    "description": "We're always looking for passionate individuals to help us build innovative digital solutions.",
+    "noOpenings": "Don't see a suitable opening? Send your resume to careers@pledgeandgrow.com and we'll keep you in mind for future opportunities.",
+    "button": "View Open Positions"
+  }
+}

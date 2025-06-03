@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "title": "Our Progress | Pledge & Grow",
+    "description": "Explore our journey, milestones, and achievements as we continue to grow and make a positive impact in the digital landscape."
+  },
+  "roadmap": {
+    "title": "Our Roadmap",
+    "description": "Discover our strategic vision and upcoming milestones as we continue to innovate and expand our offerings.",
+    "items": {
+      "aiIntegration": {
+        "title": "Advanced AI Integration",
+        "description": "Implementing AI solutions for predictive analytics and automation",
+        "timeline": "Q3 2025"
+      },
+      "blockchain": {
+        "title": "Enterprise Blockchain Solutions",
+        "description": "Secure, scalable blockchain infrastructure for businesses",
+        "timeline": "Q4 2025"
+      },
+      "globalCenters": {
+        "title": "Global Development Centers",
+        "description": "24/7 support and development capabilities worldwide",
+        "timeline": "Q2 2026"
+      },
+      "security": {
+        "title": "Enhanced Security Framework",
+        "description": "Next-generation security protocols for enterprise applications",
+        "timeline": "Q3 2026"
+      },
+      "integration": {
+        "title": "Seamless Integration Platform",
+        "description": "Unified platform for connecting diverse business systems",
+        "timeline": "Q1 2027"
+      }
+    },
+    "navigation": {
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "futureVision": {
+    "title": "Our Vision for the Future",
+    "description": "We're building a future where technology empowers businesses to achieve more while maintaining security, privacy, and ethical standards.",
+    "pillars": {
+      "innovation": {
+        "title": "Continuous Innovation",
+        "description": "Staying at the forefront of technological advancements to provide cutting-edge solutions"
+      },
+      "sustainability": {
+        "title": "Digital Sustainability",
+        "description": "Creating eco-friendly digital solutions that minimize environmental impact"
+      },
+      "accessibility": {
+        "title": "Universal Accessibility",
+        "description": "Making technology accessible to businesses of all sizes and industries"
+      },
+      "security": {
+        "title": "Uncompromising Security",
+        "description": "Prioritizing data protection and privacy in all our solutions"
+      }
+    }
+  },
+  "cta": {
+    "title": "Join Us on Our Journey",
+    "description": "Be part of our growth story and help shape the future of digital innovation.",
+    "button": "Partner with Us"
+  }
+}

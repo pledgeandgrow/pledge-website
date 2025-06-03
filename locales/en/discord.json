@@ -1,0 +1,109 @@
+{
+  "meta": {
+    "title": "Discord Community | Pledge & Grow",
+    "description": "Join our Discord community to connect with like-minded professionals, get real-time support, and stay updated on the latest Pledge & Grow events and resources."
+  },
+  "hero": {
+    "title": "Join Our Discord Community",
+    "description": "Connect with like-minded professionals, get real-time support, and stay updated on the latest Pledge & Grow events and resources.",
+    "joinButton": "Join Discord Server",
+    "memberCount": "{{count}}+ members and growing",
+    "activeNow": "{{count}}+ active now"
+  },
+  "benefits": {
+    "title": "Community Benefits",
+    "description": "Our Discord server offers a range of benefits designed to support your professional growth and digital transformation journey.",
+    "items": {
+      "networking": {
+        "title": "Networking Opportunities",
+        "description": "Connect with professionals, experts, and decision-makers from various industries and regions."
+      },
+      "support": {
+        "title": "Real-time Support",
+        "description": "Get quick answers to your questions and technical support from our team and community members."
+      },
+      "resources": {
+        "title": "Exclusive Resources",
+        "description": "Access guides, templates, case studies, and other resources shared exclusively with our community."
+      },
+      "events": {
+        "title": "Virtual Events",
+        "description": "Participate in webinars, workshops, AMAs, and other virtual events hosted on our server."
+      },
+      "collaboration": {
+        "title": "Collaboration Opportunities",
+        "description": "Find potential partners, clients, or collaborators for your projects and initiatives."
+      },
+      "insights": {
+        "title": "Industry Insights",
+        "description": "Stay updated on the latest trends, news, and developments in digital transformation and technology."
+      }
+    }
+  },
+  "channels": {
+    "title": "Server Channels",
+    "description": "Our Discord server is organized into several channels to help you find the information and connections you need.",
+    "categories": {
+      "welcome": {
+        "title": "Welcome & Information",
+        "description": "Get started with our community guidelines, introductions, and announcements."
+      },
+      "general": {
+        "title": "General Discussion",
+        "description": "Engage in conversations about digital transformation, business growth, and industry trends."
+      },
+      "support": {
+        "title": "Technical Support",
+        "description": "Get help with technical questions, implementation challenges, and troubleshooting."
+      },
+      "resources": {
+        "title": "Resources & Learning",
+        "description": "Access educational content, guides, case studies, and best practices."
+      },
+      "events": {
+        "title": "Events & Webinars",
+        "description": "Stay updated on upcoming events, webinars, and community activities."
+      },
+      "networking": {
+        "title": "Networking & Collaboration",
+        "description": "Connect with other members, share opportunities, and find potential collaborators."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Join Our Community?",
+    "description": "Join our Discord server today and become part of a growing community of professionals dedicated to digital innovation and growth.",
+    "button": "Join Discord Server",
+    "alternativeText": "You can also access our Discord server via the link in our website footer or by searching for 'Pledge & Grow' on Discord."
+  },
+  "rules": {
+    "title": "Community Guidelines",
+    "description": "To ensure a positive and productive experience for all members, please follow these guidelines:",
+    "items": {
+      "respect": {
+        "title": "Be Respectful",
+        "description": "Treat all community members with respect and courtesy."
+      },
+      "ontopic": {
+        "title": "Stay On Topic",
+        "description": "Keep discussions relevant to the channel topics and purpose."
+      },
+      "nospam": {
+        "title": "No Spam or Self-Promotion",
+        "description": "Avoid excessive self-promotion, advertising, or spamming."
+      },
+      "privacy": {
+        "title": "Respect Privacy",
+        "description": "Do not share personal information of others without consent."
+      },
+      "constructive": {
+        "title": "Be Constructive",
+        "description": "Provide constructive feedback and contribute positively to discussions."
+      },
+      "compliance": {
+        "title": "Follow Discord ToS",
+        "description": "Adhere to Discord's Terms of Service and Community Guidelines."
+      }
+    }
+  }
+}

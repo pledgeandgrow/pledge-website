@@ -6,8 +6,10 @@ import Link from "next/link";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { ClientModal, ClientProject } from "@/components/ui/client-modal";
 import { portfolioProjects } from "@/data/portfolio-data";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function CaseStudiesSlider() {
+  const { t } = useTranslations("home");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedProject, setSelectedProject] = useState<ClientProject | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -61,10 +63,10 @@ export default function CaseStudiesSlider() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto mb-12 text-center animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Case Studies
+            {t("caseStudies.title")}
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl">
-            Explore our recent projects and see how we&apos;ve helped businesses achieve their goals.
+            {t("caseStudies.description")}
           </p>
         </div>
 
@@ -79,7 +81,7 @@ export default function CaseStudiesSlider() {
               disabled={currentIndex === 0}
             >
               <ChevronLeft className="h-5 w-5" />
-              <span className="sr-only">Previous</span>
+              <span className="sr-only">{t("accessibility.previous")}</span>
             </Button>
           </div>
 
@@ -92,7 +94,7 @@ export default function CaseStudiesSlider() {
               disabled={currentIndex >= maxIndex}
             >
               <ChevronRight className="h-5 w-5" />
-              <span className="sr-only">Next</span>
+              <span className="sr-only">{t("accessibility.next")}</span>
             </Button>
           </div>
 
@@ -114,7 +116,7 @@ export default function CaseStudiesSlider() {
                     className="w-full flex items-center justify-center gap-2"
                     onClick={() => openProjectModal(study)}
                   >
-                    View Case Study
+                    {t("buttons.viewCaseStudy")}
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </div>
@@ -125,7 +127,7 @@ export default function CaseStudiesSlider() {
 
         <div className="mt-12 text-center">
           <Button variant="outline" asChild>
-            <Link href="/portfolio">View All Case Studies</Link>
+            <Link href="/portfolio">{t("buttons.viewAllCaseStudies")}</Link>
           </Button>
         </div>
 

@@ -4,8 +4,10 @@ import { useState, useEffect } from "react";
 import { Linkedin, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function Team() {
+  const { t } = useTranslations("home");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -70,10 +72,10 @@ export default function Team() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Leadership Team
+            {t("team.title")}
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl">
-            Meet our leadership team guiding the vision and success of our company.
+            {t("team.description")}
           </p>
         </div>
         {/* Desktop view - grid layout */}
@@ -113,7 +115,7 @@ export default function Team() {
                 disabled={currentIndex === 0}
               >
                 <ChevronLeft className="h-5 w-5" />
-                <span className="sr-only">Previous</span>
+                <span className="sr-only">{t("accessibility.previous")}</span>
               </Button>
             </div>
 
@@ -126,7 +128,7 @@ export default function Team() {
                 disabled={currentIndex >= teamMembers.length - 1}
               >
                 <ChevronRight className="h-5 w-5" />
-                <span className="sr-only">Next</span>
+                <span className="sr-only">{t("accessibility.next")}</span>
               </Button>
             </div>
 
@@ -156,7 +158,7 @@ export default function Team() {
                     key={idx}
                     className={`w-2 h-2 rounded-full ${idx === currentIndex ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-600'}`}
                     onClick={() => setCurrentIndex(idx)}
-                    aria-label={`Go to slide ${idx + 1}`}
+                    aria-label={t("accessibility.goToSlide", { number: String(idx + 1) })}
                   />
                 ))}
               </div>

@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Media Center | Pledge & Grow",
+    "description": "Explore Pledge & Grow's media presence, press releases, media kit, and resources for journalists and content creators."
+  },
+  "hero": {
+    "title": "Our Media Presence",
+    "description": "Discover Pledge & Grow's appearances across various media platforms, from social networks to TV shows, podcasts, and digital publications."
+  },
+  "pressReleases": {
+    "title": "Press Releases",
+    "description": "Stay up-to-date with the latest announcements and news from Pledge & Grow.",
+    "viewAll": "View All Press Releases",
+    "featured": [
+      {
+        "date": "June 15, 2023",
+        "title": "Pledge & Grow Announces New Sustainability Initiative",
+        "excerpt": "Pledge & Grow today announced a new sustainability initiative aimed at reducing carbon emissions across all client projects.",
+        "link": "Read More"
+      },
+      {
+        "date": "May 3, 2023",
+        "title": "Pledge & Grow Partners with Tech for Good Foundation",
+        "excerpt": "Pledge & Grow has formed a strategic partnership with the Tech for Good Foundation to expand digital literacy programs.",
+        "link": "Read More"
+      },
+      {
+        "date": "April 18, 2023",
+        "title": "Pledge & Grow Launches New Developer Training Program",
+        "excerpt": "Pledge & Grow today announced the launch of a new developer training program focused on sustainable coding practices.",
+        "link": "Read More"
+      }
+    ]
+  },
+  "mediaKit": {
+    "title": "Media Kit",
+    "description": "Download official logos, brand guidelines, executive bios, and other resources for media coverage.",
+    "resources": [
+      {
+        "title": "Brand Logos",
+        "description": "Download our official logos in various formats and resolutions.",
+        "button": "Download Logos"
+      },
+      {
+        "title": "Brand Guidelines",
+        "description": "Access our comprehensive brand guidelines for proper usage of our visual identity.",
+        "button": "View Guidelines"
+      },
+      {
+        "title": "Executive Photos",
+        "description": "High-resolution photos of our executive team for media use.",
+        "button": "Download Photos"
+      },
+      {
+        "title": "Company Fact Sheet",
+        "description": "Key facts and figures about Pledge & Grow's history, mission, and impact.",
+        "button": "Download Fact Sheet"
+      }
+    ]
+  },
+  "mediaContacts": {
+    "title": "Media Contacts",
+    "description": "Get in touch with our media relations team for interview requests, press inquiries, and more.",
+    "contacts": [
+      {
+        "title": "Press Inquiries",
+        "name": "Sarah Johnson",
+        "position": "Media Relations Manager",
+        "email": "press@pledgeandgrow.com",
+        "phone": "+1 (555) 123-4567"
+      },
+      {
+        "title": "Interview Requests",
+        "name": "Michael Chen",
+        "position": "Communications Director",
+        "email": "interviews@pledgeandgrow.com",
+        "phone": "+1 (555) 987-6543"
+      }
+    ]
+  },
+  "socialMedia": {
+    "title": "Follow Us",
+    "description": "Connect with us on social media for the latest updates, behind-the-scenes content, and community engagement.",
+    "platforms": [
+      {
+        "platform": "Instagram",
+        "username": "pledgeandgrow",
+        "url": "https://instagram.com/pledgeandgrow",
+        "followers": "12.5K",
+        "description": "Follow us for inspiring stories, behind-the-scenes content, and updates on our latest projects and initiatives."
+      },
+      {
+        "platform": "Facebook",
+        "username": "pledgeandgrow",
+        "url": "https://facebook.com/pledgeandgrow",
+        "followers": "8.3K",
+        "description": "Join our community to stay updated on events, announcements, and engaging discussions about technology for good."
+      },
+      {
+        "platform": "TikTok",
+        "username": "pledgeandgrow",
+        "url": "https://tiktok.com/@pledgeandgrowfr",
+        "followers": "15.2K",
+        "description": "Watch our short-form videos showcasing tech tips, innovation highlights, and fun moments from our team."
+      },
+      {
+        "platform": "LinkedIn",
+        "username": "pledge-and-grow",
+        "url": "https://linkedin.com/company/pledge-and-grow",
+        "followers": "5.7K",
+        "description": "Connect with us professionally for industry insights, career opportunities, and business partnership discussions."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Need More Information?",
+    "description": "Our media relations team is ready to assist you with any additional information or resources you may need.",
+    "button": "Contact Media Relations"
+  }
+}

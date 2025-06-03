@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react";
 import { CheckCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function Advantages() {
+  const { t } = useTranslations("home");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleItems, setVisibleItems] = useState(3);
 
@@ -28,33 +30,27 @@ export default function Advantages() {
   }, []);
   const advantages = [
     {
-      title: "Innovative Solutions",
-      description: "We leverage the latest technologies to create cutting-edge solutions that keep you ahead of the competition.",
+      key: "innovativeSolutions",
       icon: <CheckCircle className="w-6 h-6 text-primary" />
     },
     {
-      title: "Expert Team",
-      description: "Our team of experienced professionals brings diverse skills and perspectives to every project.",
+      key: "expertTeam",
       icon: <CheckCircle className="w-6 h-6 text-primary" />
     },
     {
-      title: "Tailored Approach",
-      description: "We understand that every business is unique, so we customize our solutions to meet your specific needs.",
+      key: "tailoredApproach",
       icon: <CheckCircle className="w-6 h-6 text-primary" />
     },
     {
-      title: "Scalable Technology",
-      description: "Our solutions are built to grow with your business, ensuring long-term success and adaptability.",
+      key: "scalableTechnology",
       icon: <CheckCircle className="w-6 h-6 text-primary" />
     },
     {
-      title: "Responsive Support",
-      description: "We provide ongoing support and maintenance to ensure your digital assets continue to perform optimally.",
+      key: "responsiveSupport",
       icon: <CheckCircle className="w-6 h-6 text-primary" />
     },
     {
-      title: "Results-Driven",
-      description: "We focus on delivering measurable results that contribute to your business objectives and ROI.",
+      key: "resultsDriven",
       icon: <CheckCircle className="w-6 h-6 text-primary" />
     }
   ];
@@ -64,10 +60,10 @@ export default function Advantages() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto mb-12 text-center animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Why Choose Pledge & Grow?
+            {t("whyChooseUs.title")}
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl">
-            We combine innovation, expertise, and dedication to deliver exceptional results for our clients.
+            {t("whyChooseUs.description")}
           </p>
         </div>
         <div className="relative">
@@ -109,11 +105,11 @@ export default function Advantages() {
                 <div className="flex items-center mb-4">
                   {advantage.icon}
                   <h3 className="ml-2 text-xl font-bold">
-                    {advantage.title}
+                    {t(`advantages.${advantage.key}.title`)}
                   </h3>
                 </div>
                 <p className="text-muted-foreground">
-                  {advantage.description}
+                  {t(`advantages.${advantage.key}.description`)}
                 </p>
               </div>
             ))}

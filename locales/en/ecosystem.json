@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "Ecosystem | Pledge & Grow",
+    "description": "Discover the advantages of being part of the Pledge & Grow ecosystem, including access to our group companies, innovation projects, and exclusive partners with significant discounts."
+  },
+  "hero": {
+    "title": "Our Ecosystem",
+    "description": "Join a thriving network of innovators, partners, and clients working together to create exceptional digital experiences and drive business growth.",
+    "cta": "Explore Our Ecosystem"
+  },
+  "advantages": {
+    "title": "Ecosystem Advantages",
+    "description": "Being part of our ecosystem offers numerous benefits that help accelerate your digital transformation journey.",
+    "items": {
+      "collaboration": {
+        "title": "Collaborative Innovation",
+        "description": "Access to shared knowledge, resources, and expertise across our partner network"
+      },
+      "exclusiveAccess": {
+        "title": "Exclusive Access",
+        "description": "Priority access to new technologies, beta features, and innovation projects"
+      },
+      "preferentialRates": {
+        "title": "Preferential Rates",
+        "description": "Special pricing and discounts on services from Pledge & Grow and partner companies"
+      },
+      "growthOpportunities": {
+        "title": "Growth Opportunities",
+        "description": "Connections to potential clients, investors, and strategic partners"
+      }
+    }
+  },
+  "partners": {
+    "title": "Our Partner Network",
+    "description": "We've built strategic partnerships with industry leaders to enhance our service offerings and provide comprehensive solutions.",
+    "categories": {
+      "technology": {
+        "title": "Technology Partners",
+        "description": "Leading technology providers that complement our development capabilities"
+      },
+      "service": {
+        "title": "Service Partners",
+        "description": "Specialized service providers that extend our capabilities"
+      },
+      "industry": {
+        "title": "Industry Partners",
+        "description": "Sector-specific partners with deep domain expertise"
+      },
+      "innovation": {
+        "title": "Innovation Partners",
+        "description": "Research institutions and innovation hubs collaborating on cutting-edge projects"
+      }
+    },
+    "becomePartner": "Become a Partner"
+  },
+  "showcase": {
+    "title": "Ecosystem Success Stories",
+    "description": "Discover how collaboration within our ecosystem has led to remarkable outcomes for our partners and clients.",
+    "viewAllCases": "View All Case Studies"
+  },
+  "collaboration": {
+    "title": "Join Our Ecosystem",
+    "description": "Whether you're a technology provider, service company, or potential client, there's a place for you in our ecosystem.",
+    "options": {
+      "partner": {
+        "title": "Become a Partner",
+        "description": "Join our network of strategic partners and grow your business"
+      },
+      "client": {
+        "title": "Become a Client",
+        "description": "Access our full range of services and partner network"
+      },
+      "investor": {
+        "title": "Become an Investor",
+        "description": "Explore investment opportunities in our ecosystem"
+      }
+    },
+    "contactCta": "Contact Us to Learn More"
+  }
+}

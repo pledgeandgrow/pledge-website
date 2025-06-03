@@ -1,0 +1,130 @@
+{
+  "hero": {
+    "title": "Building the future",
+    "subtitle": "We create cutting-edge digital experiences that transform businesses and delight users with modern technology and exceptional design.",
+    "ctaGetStarted": "Get Started",
+    "ctaLearnMore": "Learn More"
+  },
+  "about": {
+    "title": "We're not just another agency",
+    "description": "We believe in transparency, collaboration, and delivering results that exceed expectations. Our approach is centered around understanding your unique needs and crafting solutions that drive growth and innovation.",
+    "ctaLearnMore": "Learn more about us"
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Pledge & Grow?",
+    "description": "We combine innovation, expertise, and dedication to deliver exceptional results for our clients."
+  },
+  "advantages": {
+    "innovativeSolutions": {
+      "title": "Innovative Solutions",
+      "description": "We leverage the latest technologies to create cutting-edge solutions that keep you ahead of the competition."
+    },
+    "expertTeam": {
+      "title": "Expert Team",
+      "description": "Our team of experienced professionals brings diverse skills and perspectives to every project."
+    },
+    "tailoredApproach": {
+      "title": "Tailored Approach",
+      "description": "We understand that every business is unique, so we customize our solutions to meet your specific needs."
+    },
+    "scalableTechnology": {
+      "title": "Scalable Technology",
+      "description": "Our solutions are built to grow with your business, ensuring long-term success and adaptability."
+    },
+    "responsiveSupport": {
+      "title": "Responsive Support",
+      "description": "We provide ongoing support and maintenance to ensure your digital assets continue to perform optimally."
+    },
+    "resultsDriven": {
+      "title": "Results-Driven",
+      "description": "We focus on delivering measurable results that contribute to your business objectives and ROI."
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Comprehensive digital solutions tailored to your business needs",
+    "creation": {
+      "title": "Creation Services",
+      "description": "Our team builds beautiful, functional digital products from scratch using the latest technologies.",
+      "webDevelopment": {
+        "title": "Web Development",
+        "description": "Custom websites and web applications built with Next.js, React, and modern technologies."
+      },
+      "mobileDevelopment": {
+        "title": "Mobile Development",
+        "description": "Native mobile applications for iOS and Android using React Native."
+      },
+      "saas": {
+        "title": "SaaS",
+        "description": "Scalable Software-as-a-Service solutions with subscription models, multi-tenancy, and seamless updates."
+      }
+    },
+    "integration": {
+      "title": "Integration Services",
+      "description": "We connect systems, data, and services to create powerful, integrated digital ecosystems.",
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Custom e-commerce solutions with secure payment gateways, inventory management, and seamless user experience."
+      },
+      "aiAutomation": {
+        "title": "AI - Automation",
+        "description": "Intelligent automation solutions powered by AI to streamline workflows, enhance productivity, and reduce operational costs."
+      },
+      "blockchain": {
+        "title": "Blockchain",
+        "description": "Secure and transparent blockchain solutions for digital assets, smart contracts, and decentralized applications."
+      }
+    },
+    "complementary": {
+      "title": "Complementary Services",
+      "description": "We provide essential supporting services to enhance, maintain, and optimize your digital products.",
+      "maintenance": {
+        "title": "Maintenance",
+        "description": "Ongoing support, updates, and maintenance to keep your digital products running smoothly and securely."
+      },
+      "seo": {
+        "title": "SEO",
+        "description": "Search engine optimization strategies to improve visibility, drive traffic, and increase conversions."
+      },
+      "uxUiDesign": {
+        "title": "UX/UI Design",
+        "description": "User-centered design that creates intuitive, engaging, and accessible digital experiences."
+      }
+    }
+  },
+  "caseStudies": {
+    "title": "Case Studies",
+    "description": "Explore our recent projects and see how we've helped businesses achieve their goals.",
+    "viewAll": "View All Case Studies"
+  },
+  "buttons": {
+    "viewCaseStudy": "View Case Study",
+    "viewAllCaseStudies": "View All Case Studies",
+    "viewAll": "View All Services"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "description": "Hear from businesses that have transformed their digital presence with our solutions.",
+    "leaveReview": "Leave a review"
+  },
+  "team": {
+    "title": "Meet Our Team",
+    "description": "Talented professionals dedicated to delivering exceptional results.",
+    "viewTeam": "View Full Team"
+  },
+  "cta": {
+    "title": "Ready to transform your digital presence?",
+    "description": "Let's discuss how we can help you achieve your business goals with our digital solutions.",
+    "button": "Contact Us Today"
+  },
+  "accessibility": {
+    "previous": "Previous",
+    "next": "Next",
+    "previousReviews": "Previous reviews",
+    "nextReviews": "Next reviews",
+    "previousReview": "Previous review",
+    "nextReview": "Next review",
+    "goToSlide": "Go to slide {{number}}",
+    "goToReview": "Go to review {{number}}"
+  }
+}

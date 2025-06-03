@@ -5,8 +5,10 @@ import { Star, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function Testimonials() {
+  const { t } = useTranslations("home");
   const [currentIndex, setCurrentIndex] = useState(0);
   // For desktop view, we'll show 3 cards at a time
   const [desktopStartIndex, setDesktopStartIndex] = useState(0);
@@ -86,10 +88,10 @@ export default function Testimonials() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Client Reviews
+            {t("testimonials.title")}
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl">
-            See what our clients are saying about our services.
+            {t("testimonials.description")}
           </p>
         </div>
         
@@ -127,7 +129,7 @@ export default function Testimonials() {
           <button 
             onClick={prevDesktopSlide}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-6 p-3 rounded-full bg-muted hover:bg-muted/80 transition-colors shadow-md"
-            aria-label="Previous reviews"
+            aria-label={t("accessibility.previousReviews")}
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
@@ -135,7 +137,7 @@ export default function Testimonials() {
           <button 
             onClick={nextDesktopSlide}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-6 p-3 rounded-full bg-muted hover:bg-muted/80 transition-colors shadow-md"
-            aria-label="Next reviews"
+            aria-label={t("accessibility.nextReviews")}
           >
             <ChevronRight className="h-6 w-6" />
           </button>
@@ -176,7 +178,7 @@ export default function Testimonials() {
             <button 
               onClick={prevSlide}
               className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
-              aria-label="Previous review"
+              aria-label={t("accessibility.previousReview")}
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -190,7 +192,7 @@ export default function Testimonials() {
                     "w-2 h-2 rounded-full transition-colors",
                     currentIndex === index ? "bg-primary" : "bg-muted-foreground/30"
                   )}
-                  aria-label={`Go to review ${index + 1}`}
+                  aria-label={t("accessibility.goToReview", { number: String(index + 1) })}
                 />
               ))}
             </div>
@@ -198,7 +200,7 @@ export default function Testimonials() {
             <button 
               onClick={nextSlide}
               className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
-              aria-label="Next review"
+              aria-label={t("accessibility.nextReview")}
             >
               <ChevronRight className="h-5 w-5" />
             </button>
@@ -214,7 +216,7 @@ export default function Testimonials() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2"
             >
-              Leave a review
+              {t("testimonials.leaveReview")}
               <ExternalLink className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>

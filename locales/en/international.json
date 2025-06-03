@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "Global Presence | Pledge & Grow",
+    "description": "Discover Pledge & Grow's international operations, regional expertise, and global team delivering innovative solutions worldwide."
+  },
+  "globalMap": {
+    "title": "Our Global Presence",
+    "description": "With offices and partners across multiple continents, we deliver localized solutions with global standards.",
+    "regions": {
+      "europe": {
+        "title": "Europe",
+        "description": "Headquarters in Paris with operations across major European cities",
+        "countries": ["France", "United Kingdom", "Germany", "Spain", "Italy"]
+      },
+      "middleEast": {
+        "title": "Middle East",
+        "description": "Strategic presence in the MENA region supporting digital transformation initiatives",
+        "countries": ["UAE", "Saudi Arabia", "Qatar"]
+      },
+      "africa": {
+        "title": "Africa",
+        "description": "Growing presence across key African markets",
+        "countries": ["Morocco", "South Africa", "Kenya", "Nigeria"]
+      },
+      "asia": {
+        "title": "Asia",
+        "description": "Expanding operations in major Asian technology hubs",
+        "countries": ["Singapore", "India", "Japan"]
+      },
+      "americas": {
+        "title": "Americas",
+        "description": "Strategic partnerships across North and South America",
+        "countries": ["United States", "Canada", "Brazil"]
+      }
+    },
+    "stats": {
+      "countries": "20+ Countries",
+      "languages": "15+ Languages",
+      "clients": "100+ Global Clients",
+      "team": "Diverse Team from 25+ Nationalities"
+    }
+  },
+  "localizationServices": {
+    "title": "Global Solutions, Local Expertise",
+    "description": "We combine our global experience with local insights to deliver solutions that resonate with regional markets and user preferences.",
+    "services": {
+      "localization": {
+        "title": "Product Localization",
+        "description": "Adapting digital products to meet local language, cultural, and regulatory requirements"
+      },
+      "compliance": {
+        "title": "Regional Compliance",
+        "description": "Ensuring solutions adhere to local laws, regulations, and industry standards"
+      },
+      "culturalAdaptation": {
+        "title": "Cultural Adaptation",
+        "description": "Tailoring user experiences to align with local cultural preferences and expectations"
+      },
+      "marketEntry": {
+        "title": "Market Entry Strategy",
+        "description": "Supporting businesses in successfully entering new international markets"
+      }
+    },
+    "cta": {
+      "title": "Global Ambitions?",
+      "description": "Let's discuss how we can help you expand your digital presence internationally.",
+      "button": "Contact Our Global Team"
+    }
+  }
+}

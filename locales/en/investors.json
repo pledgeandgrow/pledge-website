@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "title": "Investor Relations | Pledge & Grow",
+    "description": "Discover investment opportunities with Pledge & Grow. Learn about our financial performance, growth trajectory, and strategic vision."
+  },
+  "companyOverview": {
+    "title": "Company Overview",
+    "description": "Pledge & Grow is a digital innovation company focused on helping businesses transform and grow through technology solutions and strategic consulting.",
+    "keyMetrics": {
+      "title": "Key Metrics",
+      "founded": "Founded",
+      "foundedValue": "2018",
+      "employees": "Employees",
+      "employeesValue": "120+",
+      "clients": "Clients",
+      "clientsValue": "250+",
+      "annualGrowth": "Annual Growth",
+      "annualGrowthValue": "35%",
+      "countries": "Countries",
+      "countriesValue": "15+"
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "To simplify digital transformation for businesses of all sizes, enabling them to grow, innovate, and succeed in an increasingly digital world."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To become the leading digital transformation partner for businesses across Europe, known for our innovative solutions, exceptional service, and measurable impact."
+    }
+  },
+  "investorsPhase": {
+    "title": "Current Investment Phase",
+    "description": "We are currently in our Series B funding round, seeking strategic investors to support our European expansion and product development initiatives.",
+    "details": {
+      "round": {
+        "title": "Current Round",
+        "value": "Series B"
+      },
+      "target": {
+        "title": "Funding Target",
+        "value": "€15 Million"
+      },
+      "use": {
+        "title": "Use of Funds",
+        "value": "European Expansion, Product Development, Team Growth"
+      },
+      "timeline": {
+        "title": "Timeline",
+        "value": "Closing Q3 2025"
+      }
+    },
+    "previousRounds": {
+      "title": "Previous Funding Rounds",
+      "seedRound": {
+        "title": "Seed Round",
+        "amount": "€1.2 Million",
+        "date": "2019",
+        "investors": "Angel Investors, Founder Capital"
+      },
+      "seriesA": {
+        "title": "Series A",
+        "amount": "€5 Million",
+        "date": "2022",
+        "investors": "European Tech Ventures, Digital Growth Fund"
+      }
+    }
+  },
+  "investmentOpportunities": {
+    "title": "Investment Opportunities",
+    "description": "Discover why Pledge & Grow represents an attractive investment opportunity with strong growth potential and a clear path to market leadership.",
+    "growthStrategy": {
+      "title": "Growth Strategy",
+      "description": "Our comprehensive growth strategy focuses on three key pillars:",
+      "pillars": {
+        "expansion": {
+          "title": "Geographic Expansion",
+          "description": "Establishing a strong presence in key European markets through strategic partnerships and local teams."
+        },
+        "productDevelopment": {
+          "title": "Product Development",
+          "description": "Enhancing our digital transformation platform with AI capabilities and industry-specific solutions."
+        },
+        "marketPenetration": {
+          "title": "Market Penetration",
+          "description": "Deepening our presence in existing markets through expanded service offerings and targeted marketing."
+        }
+      }
+    },
+    "financialProjections": {
+      "title": "Financial Projections",
+      "description": "Our financial projections reflect our ambitious growth plans and strong market position.",
+      "disclaimer": "Note: These projections are based on current market conditions and company performance. Actual results may vary.",
+      "metrics": {
+        "revenue": {
+          "title": "Revenue Growth",
+          "description": "Projected 40% year-over-year revenue growth for the next three years."
+        },
+        "profitability": {
+          "title": "Profitability",
+          "description": "Expected to reach EBITDA positive by Q4 2025 with 15% margin by 2027."
+        },
+        "marketShare": {
+          "title": "Market Share",
+          "description": "Targeting 8% market share in our core segments by 2027."
+        }
+      }
+    },
+    "exitStrategy": {
+      "title": "Exit Strategy",
+      "description": "We have identified multiple potential exit paths for our investors:",
+      "options": {
+        "acquisition": {
+          "title": "Strategic Acquisition",
+          "description": "Potential acquisition by larger technology or consulting firms seeking to enhance their digital capabilities."
+        },
+        "ipo": {
+          "title": "Initial Public Offering",
+          "description": "Potential IPO on European exchanges within 5-7 years, subject to market conditions."
+        },
+        "privateEquity": {
+          "title": "Private Equity Investment",
+          "description": "Secondary sale to private equity investors for continued growth and eventual larger exit."
+        }
+      }
+    },
+    "cta": {
+      "title": "Interested in Investing?",
+      "description": "Contact our investor relations team to learn more about current investment opportunities and to request our detailed investor deck.",
+      "button": "Request Investor Information",
+      "contactInfo": "For investor inquiries, contact investors@pledgeandgrow.com"
+    }
+  }
+}

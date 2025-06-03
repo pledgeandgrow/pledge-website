@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Grants & Subsidies | Pledge & Grow",
+    "description": "Unlock funding opportunities to accelerate your digital transformation and business growth with our expert guidance on grants and subsidies."
+  },
+  "overview": {
+    "title": "Unlock Funding for Your Digital Projects",
+    "description": "Discover how grants and subsidies can significantly reduce the cost of your digital transformation initiatives and accelerate your business growth.",
+    "benefits": {
+      "financialSupport": {
+        "title": "Financial Support",
+        "description": "Access non-repayable funding to reduce the cost of your digital projects and innovation initiatives.",
+        "stat": "Up to 50%",
+        "statLabel": "cost reduction"
+      },
+      "acceleratedGrowth": {
+        "title": "Accelerated Growth",
+        "description": "Fast-track your business development with resources that might otherwise be out of reach.",
+        "stat": "2-3x",
+        "statLabel": "faster growth"
+      },
+      "timeEfficiency": {
+        "title": "Time Efficiency",
+        "description": "Focus on your core business while our experts handle the complex application processes.",
+        "stat": "Save 100+",
+        "statLabel": "hours of work"
+      },
+      "expertGuidance": {
+        "title": "Expert Guidance",
+        "description": "Benefit from our specialized knowledge of funding programs and eligibility requirements.",
+        "stat": "90%+",
+        "statLabel": "success rate"
+      }
+    },
+    "process": {
+      "title": "How We Help You Secure Funding",
+      "steps": {
+        "assessment": {
+          "title": "Eligibility Assessment",
+          "description": "We evaluate your project against current funding criteria to identify the best opportunities."
+        },
+        "strategy": {
+          "title": "Funding Strategy",
+          "description": "We develop a tailored approach to maximize your chances of securing optimal funding."
+        },
+        "application": {
+          "title": "Application Support",
+          "description": "Our team handles the complex paperwork and documentation requirements."
+        },
+        "followUp": {
+          "title": "Follow-up & Reporting",
+          "description": "We manage all post-approval requirements to ensure compliance and fund disbursement."
+        }
+      }
+    }
+  },
+  "availableGrants": {
+    "title": "Available Funding Programs",
+    "description": "We specialize in helping businesses access these key funding opportunities for digital transformation and innovation projects.",
+    "programs": {
+      "digitalTransformation": {
+        "title": "Digital Transformation Grants",
+        "description": "Funding for businesses implementing new digital technologies to improve operations and competitiveness.",
+        "eligibility": "SMEs and mid-sized companies",
+        "fundingAmount": "€10,000 - €200,000",
+        "applicationPeriod": "Ongoing"
+      },
+      "researchDevelopment": {
+        "title": "R&D Tax Credits",
+        "description": "Tax incentives for companies investing in innovative research and development activities.",
+        "eligibility": "Companies with R&D activities",
+        "fundingAmount": "Up to 30% of eligible expenses",
+        "applicationPeriod": "Annual tax filing"
+      },
+      "innovationVouchers": {
+        "title": "Innovation Vouchers",
+        "description": "Small grants to help businesses access expertise from research institutions and innovation centers.",
+        "eligibility": "SMEs and startups",
+        "fundingAmount": "€5,000 - €15,000",
+        "applicationPeriod": "Quarterly calls"
+      },
+      "greenTech": {
+        "title": "Green Technology Grants",
+        "description": "Funding for projects that incorporate sustainable and environmentally friendly technologies.",
+        "eligibility": "All business sizes",
+        "fundingAmount": "€20,000 - €500,000",
+        "applicationPeriod": "Biannual calls"
+      }
+    },
+    "disclaimer": "Funding availability and eligibility criteria may change. Contact us for the most current information."
+  },
+  "cta": {
+    "title": "Ready to Explore Funding Options?",
+    "description": "Our experts can help you identify and secure the right grants and subsidies for your digital projects.",
+    "button": "Schedule a Consultation",
+    "contactInfo": "Or contact us directly at funding@pledgeandgrow.com"
+  }
+}

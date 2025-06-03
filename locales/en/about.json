@@ -1,0 +1,83 @@
+{
+  "hero": {
+    "title": "About Pledge & Grow",
+    "description": "We are a team of passionate designers and developers committed to creating exceptional digital experiences that help businesses thrive in the digital world.",
+    "imageAlt": "Our team collaborating"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "We're on a mission to transform how businesses leverage technology to achieve their goals. Through innovative solutions and strategic partnerships, we help our clients navigate the digital landscape and unlock new opportunities for growth.",
+    "items": {
+      "simplify": {
+        "title": "Simplify",
+        "description": "Making technology accessible to everyone through simplified solutions."
+      },
+      "connect": {
+        "title": "Connect",
+        "description": "Linking innovation with business needs through strategic technology solutions."
+      },
+      "digitalize": {
+        "title": "Digitalize",
+        "description": "Transforming businesses through custom software solutions that drive growth and efficiency."
+      }
+    }
+  },
+  "values": {
+    "title": "Our Values",
+    "description": "Our values guide everything we do, from how we build our products to how we interact with our clients and each other.",
+    "items": {
+      "excellence": {
+        "title": "Excellence",
+        "description": "We strive for the highest standards in everything we do, constantly pushing boundaries to deliver exceptional results for our clients."
+      },
+      "culture": {
+        "title": "Culture",
+        "description": "We foster a diverse and inclusive environment that celebrates creativity, collaboration, and continuous growth for our team and partners."
+      },
+      "loyalty": {
+        "title": "Loyalty",
+        "description": "We build lasting relationships based on trust, commitment, and mutual respect with our clients, team members, and stakeholders."
+      },
+      "privacy": {
+        "title": "Privacy (Anonymity)",
+        "description": "We respect and protect the privacy of our clients and users, ensuring data security and confidentiality in all our operations."
+      }
+    }
+  },
+  "history": {
+    "title": "Our History",
+    "description": "From our humble beginnings to our current position as a leading digital agency, our journey has been defined by innovation, growth, and a relentless pursuit of excellence.",
+    "timeline": {
+      "founding": {
+        "year": "2020",
+        "title": "Founding",
+        "description": "Pledge & Grow was founded with a vision to create innovative digital solutions."
+      },
+      "expansion": {
+        "year": "2022",
+        "title": "Global Expansion",
+        "description": "Expanded operations to serve clients across multiple continents."
+      },
+      "innovation": {
+        "year": "2023",
+        "title": "Innovation Hub",
+        "description": "Launched our innovation hub to explore emerging technologies."
+      },
+      "ecosystem": {
+        "year": "2024",
+        "title": "Ecosystem Growth",
+        "description": "Developed a comprehensive partner ecosystem to enhance our service offerings."
+      }
+    }
+  },
+  "team": {
+    "title": "Our Team",
+    "description": "Meet the talented individuals who make our success possible. Our diverse team brings together expertise from various disciplines to deliver exceptional results.",
+    "joinCta": "Join our team"
+  },
+  "cta": {
+    "title": "Ready to work with us?",
+    "description": "Let's discuss how we can help you achieve your digital goals.",
+    "button": "Get in touch"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "hero": {
+    "title": "Construire l'avenir",
+    "subtitle": "Nous créons des expériences numériques de pointe qui transforment les entreprises et ravissent les utilisateurs grâce à une technologie moderne et un design exceptionnel.",
+    "ctaGetStarted": "Commencer",
+    "ctaLearnMore": "En Savoir Plus"
+  },
+  "about": {
+    "title": "Nous ne sommes pas une simple agence",
+    "description": "Nous croyons en la transparence, la collaboration et la livraison de résultats qui dépassent les attentes. Notre approche est centrée sur la compréhension de vos besoins uniques et l'élaboration de solutions qui favorisent la croissance et l'innovation.",
+    "ctaLearnMore": "En savoir plus sur nous"
+  },
+  "whyChooseUs": {
+    "title": "Pourquoi Choisir Pledge & Grow ?",
+    "description": "Nous combinons innovation, expertise et dévouement pour offrir des résultats exceptionnels à nos clients."
+  },
+  "advantages": {
+    "innovativeSolutions": {
+      "title": "Solutions Innovantes",
+      "description": "Nous utilisons les dernières technologies pour créer des solutions de pointe qui vous maintiennent en avance sur la concurrence."
+    },
+    "expertTeam": {
+      "title": "Équipe d'Experts",
+      "description": "Notre équipe de professionnels expérimentés apporte des compétences et des perspectives diverses à chaque projet."
+    },
+    "tailoredApproach": {
+      "title": "Approche Personnalisée",
+      "description": "Nous comprenons que chaque entreprise est unique, c'est pourquoi nous adaptons nos solutions à vos besoins spécifiques."
+    },
+    "scalableTechnology": {
+      "title": "Technologie Évolutive",
+      "description": "Nos solutions sont conçues pour évoluer avec votre entreprise, assurant un succès à long terme et une adaptabilité."
+    },
+    "responsiveSupport": {
+      "title": "Support Réactif",
+      "description": "Nous fournissons un support et une maintenance continus pour garantir que vos actifs numériques continuent de fonctionner de manière optimale."
+    },
+    "resultsDriven": {
+      "title": "Axé sur les Résultats",
+      "description": "Nous nous concentrons sur la livraison de résultats mesurables qui contribuent à vos objectifs commerciaux et à votre retour sur investissement."
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "description": "Des solutions numériques complètes adaptées aux besoins de votre entreprise",
+    "creation": {
+      "title": "Services de Création",
+      "description": "Notre équipe construit des produits numériques beaux et fonctionnels à partir de zéro en utilisant les dernières technologies.",
+      "webDevelopment": {
+        "title": "Développement Web",
+        "description": "Sites web et applications web personnalisés construits avec Next.js, React et les technologies modernes."
+      },
+      "mobileDevelopment": {
+        "title": "Développement Mobile",
+        "description": "Applications mobiles natives pour iOS et Android utilisant React Native."
+      },
+      "saas": {
+        "title": "SaaS",
+        "description": "Solutions Software-as-a-Service évolutives avec des modèles d'abonnement, multi-locataires et des mises à jour transparentes."
+      }
+    },
+    "integration": {
+      "title": "Services d'Intégration",
+      "description": "Nous connectons les systèmes, les données et les services pour créer des écosystèmes numériques puissants et intégrés.",
+      "ecommerce": {
+        "title": "E-commerce",
+        "description": "Solutions e-commerce personnalisées avec des passerelles de paiement sécurisées, gestion des stocks et une expérience utilisateur fluide."
+      },
+      "aiAutomation": {
+        "title": "IA - Automatisation",
+        "description": "Solutions d'automatisation intelligentes alimentées par l'IA pour rationaliser les flux de travail, améliorer la productivité et réduire les coûts opérationnels."
+      },
+      "blockchain": {
+        "title": "Blockchain",
+        "description": "Solutions blockchain sécurisées et transparentes pour les actifs numériques, les contrats intelligents et les applications décentralisées."
+      }
+    },
+    "complementary": {
+      "title": "Services Complémentaires",
+      "description": "Nous fournissons des services de soutien essentiels pour améliorer, maintenir et optimiser vos produits numériques.",
+      "maintenance": {
+        "title": "Maintenance",
+        "description": "Support continu, mises à jour et maintenance pour que vos produits numériques fonctionnent de manière fluide et sécurisée."
+      },
+      "seo": {
+        "title": "Référencement",
+        "description": "Stratégies d'optimisation pour les moteurs de recherche pour améliorer la visibilité, générer du trafic et augmenter les conversions."
+      },
+      "uxUiDesign": {
+        "title": "Design UX/UI",
+        "description": "Conception centrée sur l'utilisateur qui crée des expériences numériques intuitives, engageantes et accessibles."
+      }
+    }
+  },
+  "caseStudies": {
+    "title": "Études de Cas",
+    "description": "Explorez nos projets récents et découvrez comment nous avons aidé des entreprises à atteindre leurs objectifs.",
+    "viewAll": "Voir Toutes les Études de Cas"
+  },
+  "buttons": {
+    "viewCaseStudy": "Voir l'étude de cas",
+    "viewAllCaseStudies": "Voir toutes les études de cas",
+    "viewAll": "Voir tous les services"
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients",
+    "description": "Écoutez les entreprises qui ont transformé leur présence numérique avec nos solutions.",
+    "leaveReview": "Laisser un avis"
+  },
+  "team": {
+    "title": "Rencontrez Notre Équipe",
+    "description": "Des professionnels talentueux dédiés à fournir des résultats exceptionnels.",
+    "viewTeam": "Voir l'Équipe Complète"
+  },
+  "cta": {
+    "title": "Prêt à transformer votre présence numérique ?",
+    "description": "Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs commerciaux avec nos solutions numériques.",
+    "button": "Contactez-Nous Aujourd'hui"
+  },
+  "accessibility": {
+    "previous": "Précédent",
+    "next": "Suivant",
+    "previousReviews": "Avis précédents",
+    "nextReviews": "Avis suivants",
+    "previousReview": "Avis précédent",
+    "nextReview": "Avis suivant",
+    "goToSlide": "Aller à la diapositive {{number}}",
+    "goToReview": "Aller à l'avis {{number}}"
+  }
+}

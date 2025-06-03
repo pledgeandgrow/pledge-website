@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "Innovation | Pledge & Grow",
+    "description": "Discover Pledge & Grow's approach to innovation, our technology radar, and how we stay at the forefront of digital transformation."
+  },
+  "approach": {
+    "title": "Our Innovation Approach",
+    "description": "At Pledge & Grow, innovation is not just a buzzword—it's a systematic practice embedded in our culture and processes.",
+    "pillars": [
+      {
+        "title": "Continuous Learning",
+        "description": "Our team dedicates time each week to learning new technologies, frameworks, and methodologies through structured learning programs and self-directed exploration."
+      },
+      {
+        "title": "Cross-Functional Collaboration",
+        "description": "We foster collaboration between different disciplines, bringing together designers, developers, and business strategists to create innovative solutions from diverse perspectives."
+      },
+      {
+        "title": "Research & Development",
+        "description": "We invest in dedicated R&D initiatives to explore emerging technologies like AI, blockchain, and extended reality before implementing them in client projects."
+      },
+      {
+        "title": "Rapid Prototyping",
+        "description": "We embrace rapid prototyping and MVP development to quickly test ideas, gather feedback, and iterate on solutions before full-scale implementation."
+      },
+      {
+        "title": "Open Source Contribution",
+        "description": "We actively contribute to open source projects, sharing our expertise with the global developer community while staying connected to cutting-edge developments."
+      },
+      {
+        "title": "Innovation Sprints",
+        "description": "Regular innovation sprints allow our team to step away from client work and focus on creative problem-solving, exploring new ideas without constraints."
+      }
+    ]
+  },
+  "technologyRadar": {
+    "title": "Technology Radar",
+    "description": "Our technology radar helps us track and evaluate emerging technologies for potential adoption.",
+    "categories": [
+      {
+        "id": "all",
+        "name": "All Technologies",
+        "description": "Our complete technology radar across all categories"
+      },
+      {
+        "id": "frontend",
+        "name": "Frontend",
+        "description": "Technologies for building modern, responsive user interfaces"
+      },
+      {
+        "id": "backend",
+        "name": "Backend",
+        "description": "Server-side technologies for robust application development"
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile",
+        "description": "Technologies for iOS, Android, and cross-platform development"
+      },
+      {
+        "id": "data",
+        "name": "Data & AI",
+        "description": "Tools and frameworks for data processing and artificial intelligence"
+      },
+      {
+        "id": "devops",
+        "name": "DevOps & Cloud",
+        "description": "Technologies for deployment, infrastructure, and operations"
+      }
+    ],
+    "status": {
+      "adopt": "Technologies we use in production and recommend for widespread use",
+      "trial": "Technologies we're actively using in projects and evaluating for broader adoption",
+      "assess": "Technologies we're exploring and experimenting with in controlled environments",
+      "hold": "Technologies we're avoiding or phasing out due to limitations or better alternatives"
+    }
+  }
+}

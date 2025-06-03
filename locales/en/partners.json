@@ -1,0 +1,92 @@
+{
+  "meta": {
+    "title": "Our Partners | Pledge & Grow",
+    "description": "Discover our strategic partnerships and collaborations that enable us to deliver exceptional digital solutions and services."
+  },
+  "partnersList": {
+    "title": "Our Strategic Partners",
+    "description": "We collaborate with industry leaders and innovative companies to enhance our service offerings and deliver comprehensive solutions to our clients.",
+    "categories": {
+      "title": "Partner Categories",
+      "technology": {
+        "title": "Technology Partners",
+        "description": "Leading technology providers that complement our development capabilities and enhance our technical offerings."
+      },
+      "service": {
+        "title": "Service Partners",
+        "description": "Specialized service providers that extend our capabilities and help us deliver comprehensive solutions."
+      },
+      "industry": {
+        "title": "Industry Partners",
+        "description": "Sector-specific partners with deep domain expertise that help us better serve clients in specialized industries."
+      },
+      "innovation": {
+        "title": "Innovation Partners",
+        "description": "Research institutions and innovation hubs collaborating with us on cutting-edge projects and initiatives."
+      }
+    },
+    "partners": {
+      "viewAll": "View All Partners",
+      "filterBy": "Filter by category"
+    },
+    "partnerCard": {
+      "learnMore": "Learn More",
+      "visitWebsite": "Visit Website",
+      "since": "Partner since"
+    }
+  },
+  "becomePartner": {
+    "title": "Become a Partner",
+    "description": "Join our partner ecosystem and unlock new opportunities for growth, collaboration, and innovation.",
+    "benefits": {
+      "title": "Partnership Benefits",
+      "marketAccess": {
+        "title": "Market Access",
+        "description": "Reach new customers and markets through our established client base and marketing channels."
+      },
+      "technicalCollaboration": {
+        "title": "Technical Collaboration",
+        "description": "Work with our expert team on joint solutions and innovative projects."
+      },
+      "coMarketing": {
+        "title": "Co-Marketing Opportunities",
+        "description": "Benefit from joint marketing initiatives, case studies, and promotional activities."
+      },
+      "revenueGrowth": {
+        "title": "Revenue Growth",
+        "description": "Create new revenue streams through referrals, reselling, and joint offerings."
+      }
+    },
+    "process": {
+      "title": "Partnership Process",
+      "steps": {
+        "application": {
+          "title": "Application",
+          "description": "Submit your partnership application through our online form."
+        },
+        "evaluation": {
+          "title": "Evaluation",
+          "description": "Our partnership team will review your application and assess alignment."
+        },
+        "discussion": {
+          "title": "Discussion",
+          "description": "We'll schedule a meeting to discuss partnership opportunities and terms."
+        },
+        "agreement": {
+          "title": "Agreement",
+          "description": "Formalize the partnership with a clear agreement outlining expectations."
+        },
+        "onboarding": {
+          "title": "Onboarding",
+          "description": "Complete our partner onboarding process to ensure a successful start."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Partner with Us?",
+      "description": "Take the first step toward a mutually beneficial partnership that drives growth and innovation.",
+      "button": "Apply Now",
+      "contactInfo": "For partnership inquiries, contact partners@pledgeandgrow.com"
+    }
+  }
+}

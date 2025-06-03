@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "Our Ambassadors | Pledge & Grow",
+    "description": "Meet our global ambassadors who represent Pledge & Grow and help spread our mission worldwide."
+  },
+  "hero": {
+    "title": "Our Global Ambassadors",
+    "description": "Meet the passionate individuals who represent Pledge & Grow around the world and help us expand our mission and impact.",
+    "subtitle": "Representing our values and vision across the globe"
+  },
+  "ambassadorsList": {
+    "title": "Meet Our Ambassadors",
+    "description": "Our ambassadors come from diverse backgrounds and industries, united by their passion for digital innovation and growth.",
+    "regions": {
+      "title": "Ambassadors by Region",
+      "europe": "Europe",
+      "middleEast": "Middle East",
+      "africa": "Africa",
+      "asia": "Asia",
+      "americas": "Americas",
+      "oceania": "Oceania"
+    },
+    "ambassador": {
+      "location": "Location",
+      "expertise": "Expertise",
+      "since": "Ambassador since",
+      "connect": "Connect",
+      "viewProfile": "View Profile"
+    },
+    "noAmbassadors": "No ambassadors found for this region yet.",
+    "viewAll": "View All Ambassadors"
+  },
+  "becomeAmbassador": {
+    "title": "Become an Ambassador",
+    "description": "Join our global network of ambassadors and help us spread our mission while growing your professional network and influence.",
+    "benefits": {
+      "title": "Ambassador Benefits",
+      "networkAccess": {
+        "title": "Exclusive Network Access",
+        "description": "Connect with industry leaders, innovators, and decision-makers in our global community."
+      },
+      "professionalGrowth": {
+        "title": "Professional Growth",
+        "description": "Enhance your personal brand and visibility as a thought leader in digital innovation."
+      },
+      "earlyAccess": {
+        "title": "Early Access",
+        "description": "Be the first to learn about and test new technologies, services, and initiatives."
+      },
+      "recognition": {
+        "title": "Recognition & Rewards",
+        "description": "Receive recognition for your contributions and earn rewards based on your impact."
+      }
+    },
+    "responsibilities": {
+      "title": "Ambassador Responsibilities",
+      "items": {
+        "represent": {
+          "title": "Represent Pledge & Grow",
+          "description": "Embody our values and vision in your professional activities and communications."
+        },
+        "promote": {
+          "title": "Promote Our Mission",
+          "description": "Share our content, events, and initiatives with your network and community."
+        },
+        "connect": {
+          "title": "Connect & Refer",
+          "description": "Introduce potential clients, partners, and collaborators to our team."
+        },
+        "feedback": {
+          "title": "Provide Feedback",
+          "description": "Share insights from your region and industry to help us improve and adapt."
+        }
+      }
+    },
+    "application": {
+      "title": "Application Process",
+      "steps": {
+        "submit": {
+          "title": "Submit Application",
+          "description": "Complete our ambassador application form with your professional information."
+        },
+        "interview": {
+          "title": "Interview",
+          "description": "Participate in a virtual interview with our ambassador program team."
+        },
+        "onboarding": {
+          "title": "Onboarding",
+          "description": "Complete our ambassador onboarding program to learn about our offerings and approach."
+        },
+        "activation": {
+          "title": "Activation",
+          "description": "Receive your official ambassador credentials and start representing Pledge & Grow."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Represent Pledge & Grow?",
+      "description": "Apply now to become an official ambassador and join our global community of digital innovators.",
+      "button": "Apply to Become an Ambassador",
+      "contactInfo": "For questions about our ambassador program, contact ambassadors@pledgeandgrow.com"
+    }
+  }
+}

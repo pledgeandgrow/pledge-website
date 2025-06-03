@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Our Impact | Pledge & Grow",
+    "description": "Learn about Pledge & Grow's commitment to social responsibility, sustainability, and making a positive impact through technology."
+  },
+  "hero": {
+    "tagline": "Technology for Good",
+    "title": "Making a Positive Impact Through Technology",
+    "description": "At Pledge & Grow, we believe in the power of technology to create positive change. We're committed to leveraging our expertise to support causes that make the world a better place."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "We're committed to using our skills, resources, and influence to support causes that align with our values. Through pro bono work, charitable initiatives, and sustainable practices, we strive to be a force for good in the communities we serve.",
+    "quote": "Technology should serve humanity, not the other way around.",
+    "commitment": "We're dedicated to developing solutions that empower people, protect our planet, and promote social justice."
+  },
+  "sustainablePractices": {
+    "title": "Sustainable Practices",
+    "description": "Our commitment to sustainability extends to every aspect of our business operations.",
+    "practices": [
+      {
+        "title": "Green Hosting",
+        "description": "Using renewable energy-powered data centers for all our hosting services."
+      },
+      {
+        "title": "Remote-First Culture",
+        "description": "Reducing commuting emissions through our flexible remote work policies."
+      },
+      {
+        "title": "Efficient Code",
+        "description": "Developing energy-efficient applications that minimize resource consumption."
+      },
+      {
+        "title": "Paperless Operations",
+        "description": "Implementing digital workflows to eliminate paper usage across our organization."
+      }
+    ],
+    "metrics": {
+      "carbon": {
+        "title": "Carbon Footprint",
+        "value": "Reduced by 35% since 2022"
+      },
+      "energy": {
+        "title": "Renewable Energy",
+        "value": "78% of total energy consumption"
+      },
+      "waste": {
+        "title": "E-Waste Recycled",
+        "value": "100% of hardware properly recycled"
+      }
+    }
+  },
+  "cta": {
+    "title": "Join Our Impact Journey",
+    "description": "Partner with us to create technology solutions that drive positive change and sustainable growth.",
+    "button": "Contact Our Impact Team"
+  }
+}
