@@ -40,8 +40,9 @@ const partners = [
 // Function to generate positions in a circle
 function getCirclePosition(index: number, total: number, radius: number) {
   const angle = (index / total) * 2 * Math.PI;
-  const x = radius * Math.cos(angle);
-  const y = radius * Math.sin(angle);
+  // Arrondir les valeurs à 2 décimales pour éviter des différences minimes entre SSR et client
+  const x = Math.round(radius * Math.cos(angle) * 100) / 100;
+  const y = Math.round(radius * Math.sin(angle) * 100) / 100;
   return { x, y };
 }
 
@@ -91,17 +92,42 @@ export default function EcosystemeShowcase() {
   
   const circleRadius = baseCircleRadius * zoomLevel;
   
-  // Generate all slot positions
-  const slots = Array(totalSlots).fill(null).map((_, i) => ({
-    position: getCirclePosition(i, totalSlots, circleRadius),
-    circle: "single"
-  }));
+  // Use client-side rendering only for slot positions
+  const [slots, setSlots] = useState(() => {
+    return Array(totalSlots).fill(null).map((_, i) => ({
+      position: { x: 0, y: 0 }, // Initial empty positions
+      circle: "single"
+    }));
+  });
+  
+  // Calculate positions client-side only
+  useEffect(() => {
+    const calculatedSlots = Array(totalSlots).fill(null).map((_, i) => ({
+      position: getCirclePosition(i, totalSlots, circleRadius),
+      circle: "single"
+    }));
+    setSlots(calculatedSlots);
+  }, [totalSlots, circleRadius]);
   
   // Assign partners to slots (first 3 slots of inner circle)
-  const partnersWithPositions = partners.map((partner, index) => ({
-    ...partner,
-    ...slots[index * Math.floor(totalSlots / partners.length)] // Space them out evenly
-  }));
+  const [partnersWithPositions, setPartnersWithPositions] = useState(() => {
+    return partners.map(partner => ({ ...partner, position: { x: 0, y: 0 } }));
+  });
+  
+  // Update partner positions when slots change
+  useEffect(() => {
+    if (slots[0].position.x === 0 && slots[0].position.y === 0) return;
+    
+    const newPartnersWithPositions = partners.map((partner, index) => {
+      const slotIndex = index * Math.floor(totalSlots / partners.length);
+      return {
+        ...partner,
+        position: slots[slotIndex]?.position || { x: 0, y: 0 }
+      };
+    });
+    
+    setPartnersWithPositions(newPartnersWithPositions);
+  }, [slots, partners, totalSlots]);
   
   // Handle partner click
   const handlePartnerClick = (partner: (typeof partners)[0]) => {
@@ -247,8 +273,8 @@ export default function EcosystemeShowcase() {
                 key={`slot-${index}`}
                 className="absolute z-10 transform -translate-x-1/2 -translate-y-1/2"
                 style={{ 
-                  left: `calc(50% + ${position.x}px)`, 
-                  top: `calc(50% + ${position.y}px)`,
+                  left: `calc(50% + ${Math.round(position.x)}px)`, 
+                  top: `calc(50% + ${Math.round(position.y)}px)`,
                 }}
               >
                 <div 
@@ -270,18 +296,15 @@ export default function EcosystemeShowcase() {
                   <TooltipTrigger asChild>
                     <motion.div
                       className="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
-                      style={{ 
-                        left: `calc(50% + ${position.x}px)`, 
-                        top: `calc(50% + ${position.y}px)`,
-                      }}
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: 0.2 + (index * 0.1), type: "spring" }}
                       onClick={() => handlePartnerClick(partner)}
                       onMouseEnter={() => setHoveredPartner(partner.id)}
                       onMouseLeave={() => setHoveredPartner(null)}
-                      whileHover={{ scale: 1.15 }}
-                      whileTap={{ scale: 0.95 }}
+                      style={{ 
+                        left: `calc(50% + ${Math.round(position.x)}px)`, 
+                        top: `calc(50% + ${Math.round(position.y)}px)`,
+                        transform: hoveredPartner === partner.id ? 'scale(1.1)' : 'scale(1)',
+                        transition: 'transform 0.2s'
+                      }}
                     >
                       <div 
                         className="rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center border-2"
@@ -301,15 +324,15 @@ export default function EcosystemeShowcase() {
                       </div>
                       
                       {/* Connection line to center */}
-                      <svg className="absolute top-0 left-0 -z-10" style={{ width: '100%', height: '100%' }}>
+                      <svg className="absolute top-0 left-0 z-10 opacity-40" style={{width: '100%', height: '100%'}}>
                         <line 
                           x1="0" 
                           y1="0" 
-                          x2={-position.x} 
-                          y2={-position.y} 
-                          stroke={color} 
-                          strokeWidth={isHovered ? "2" : "1"} 
-                          strokeOpacity={isHovered ? "0.8" : "0.5"}
+                          x2={Math.round((partner.position.x - (partnersWithPositions.find(p => p.id === 'cordunite')?.position.x || 0)) * 100) / 100} 
+                          y2={Math.round((partner.position.y - (partnersWithPositions.find(p => p.id === 'cordunite')?.position.y || 0)) * 100) / 100} 
+                          stroke="#8b5cf6" 
+                          strokeWidth="1"
+                          strokeOpacity="0.5"
                         />
                       </svg>
                     </motion.div>
