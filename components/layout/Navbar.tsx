@@ -163,8 +163,8 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/discord" className="text-gray-700 dark:text-gray-300">
-                          Discord
+                        <Link href="/join-our-community" className="text-gray-700 dark:text-gray-300">
+                          Join Our Community
                         </Link>
                       </li>
                     </ul>
@@ -397,8 +397,8 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/discord" className="text-gray-700 dark:text-gray-300">
-                          Discord
+                        <Link href="/join-our-community" className="text-gray-700 dark:text-gray-300">
+                        Join Our Community
                         </Link>
                       </li>
                     </ul>

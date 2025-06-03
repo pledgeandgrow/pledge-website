@@ -137,11 +137,30 @@ const formSteps = [
   }
 ];
 
+// Define an interface for the form data
+interface FormData {
+  projectType: string;
+  projectName: string;
+  projectDescription: string;
+  targetAudience: string;
+  startDate: string;
+  deadline: string;
+  flexibility: "strict" | "moderate" | "flexible";
+  budgetRange: string;
+  budgetAmount?: number; // Optional, as per schema
+  paymentPreference: "milestone" | "monthly" | "completion";
+  name: string;
+  email: string;
+  company?: string; // Optional
+  phone?: string;   // Optional
+}
+
 export default function ProjectForm() {
   const [currentStep, setCurrentStep] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const { trackEvent, trackFormSubmission, trackFormStep } = useAnalytics();
-  const [formData, setFormData] = useState({
+  const { trackEvent, trackFormSubmission } = useAnalytics();
+  const [formData, setFormData] = useState<FormData>({
+    // Initial form data state using the FormData interface
     projectType: "",
     projectName: "",
     projectDescription: "",
@@ -154,7 +173,8 @@ export default function ProjectForm() {
     name: "",
     email: "",
     company: "",
-    phone: ""
+    phone: "",
+    budgetAmount: undefined // Ensure optional fields are explicitly handled if needed
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   
@@ -217,72 +237,136 @@ export default function ProjectForm() {
       phone: formData.phone,
     },
   });
+  
+  // Reset forms when formData changes
+  useEffect(() => {
+    console.log('FormData changed, resetting forms:', formData);
+    projectTypeForm.reset({ projectType: formData.projectType });
+    projectDetailsForm.reset({
+      projectName: formData.projectName,
+      projectDescription: formData.projectDescription,
+      targetAudience: formData.targetAudience,
+    });
+    timelineForm.reset({
+      startDate: formData.startDate,
+      deadline: formData.deadline,
+      flexibility: formData.flexibility as "strict" | "moderate" | "flexible",
+    });
+    budgetForm.reset({
+      budgetRange: formData.budgetRange,
+      paymentPreference: formData.paymentPreference as "milestone" | "monthly" | "completion",
+      budgetAmount: formData.budgetAmount,
+    });
+    contactForm.reset({
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      phone: formData.phone,
+    });
+  }, [formData, projectTypeForm, projectDetailsForm, timelineForm, budgetForm, contactForm]);
 
-  const onTimelineSubmit = (data: z.infer<typeof timelineSchema>) => {
-    setFormData(prev => ({
-      ...prev,
-      startDate: data.startDate,
-      deadline: data.deadline || '',
-      flexibility: data.flexibility
-    }));
-    nextStep();
-  };
-  
-  const nextStep = () => {
-    if (currentStep < formSteps.length - 1) {
-      // Track form step completion
-      trackFormStep('project_form', currentStep + 1, formSteps[currentStep].id);
-      setCurrentStep(currentStep + 1);
-    }
-  };
-  
-  const prevStep = () => {
-    if (currentStep > 0) {
-      setCurrentStep(currentStep - 1);
-    }
-  };
-  
-  const updateFormData = (data: Record<string, unknown>) => {
-    setFormData({
-      ...formData,
-      ...data,
-    });
-  };
-  
   const handleProjectTypeSubmit = (data: z.infer<typeof projectTypeSchema>) => {
-    updateFormData(data);
-    // Track project type selection
-    trackEvent(EventCategory.FORM, EventAction.FORM_FIELD_CHANGE, 'project_type_selection', {
-      project_type: data.projectType
-    });
+    setFormData((prevState: FormData) => ({ 
+      ...prevState, 
+      projectType: data.projectType 
+    }));
+    trackEvent(EventCategory.FORM, EventAction.FORM_FIELD_CHANGE, 'project_type_selection', { project_type: data.projectType });
+    console.log('Project Type submitted:', data.projectType, formData);
     nextStep();
   };
   
   const handleProjectDetailsSubmit = (data: z.infer<typeof projectDetailsSchema>) => {
-    setFormData(prev => ({
-      ...prev,
-      ...data
+    setFormData((prevState: FormData) => ({
+      ...prevState,
+      projectName: data.projectName,
+      projectDescription: data.projectDescription,
+      targetAudience: data.targetAudience
     }));
+    console.log('Project Details submitted:', data, formData);
     nextStep();
   };
 
-  const onBudgetSubmit = (data: z.infer<typeof budgetSchema>) => {
-    setFormData(prev => ({
-      ...prev,
-      ...data
+  const onTimelineSubmit = (data: z.infer<typeof timelineSchema>) => {
+    setFormData((prevState: FormData) => ({
+      ...prevState,
+      startDate: data.startDate,
+      deadline: data.deadline || '',
+      flexibility: data.flexibility
     }));
+    console.log('Timeline submitted:', data, formData);
+    nextStep();
+  };
+  
+  const onBudgetSubmit = (data: z.infer<typeof budgetSchema>) => {
+    setFormData((prevState: FormData) => ({
+      ...prevState,
+      budgetRange: data.budgetRange,
+      paymentPreference: data.paymentPreference,
+      budgetAmount: data.budgetAmount
+    }));
+    console.log('Budget submitted:', data, formData);
     nextStep();
   };
 
   const onContactSubmit = (data: z.infer<typeof contactSchema>) => {
-    setFormData(prev => ({
-      ...prev,
-      ...data
+    setFormData((prevState: FormData) => ({
+      ...prevState,
+      name: data.name,
+      email: data.email,
+      company: data.company,
+      phone: data.phone
     }));
+    console.log('Contact submitted:', data, formData);
     nextStep();
   };
   
-  // Handler functions are implemented directly in the form submissions
+  // Helper to get the current form based on the step
+  const getCurrentForm = () => {
+    switch (currentStep) {
+      case 0:
+        return projectTypeForm;
+      case 1:
+        return projectDetailsForm;
+      case 2:
+        return timelineForm;
+      case 3:
+        return budgetForm;
+      case 4:
+        return contactForm;
+      default:
+        return null;
+    }
+  };
+  
+  // Handle navigation between steps
+  const prevStep = () => {
+    setCurrentStep(prev => Math.max(prev - 1, 0));
+  };
+  
+  // Validate the current step before proceeding
+  const nextStep = async () => {
+    // Trigger validation on the current step's form
+    const currentForm = getCurrentForm();
+    if (currentForm) {
+      const isValid = await currentForm.trigger();
+      console.log(`Step ${currentStep} validation:`, isValid);
+      
+      if (isValid) {
+        // Only proceed if validation passes
+        setCurrentStep(prev => Math.min(prev + 1, formSteps.length - 1));
+        // Track step progression
+        trackEvent(EventCategory.FORM, EventAction.CLICK, `form_step_completed_${formSteps[currentStep]?.id || currentStep + 1}`);
+        
+        // Log current formData state for debugging
+        console.log('Current formData after validation:', formData);
+      } else {
+        console.log('Validation failed, staying on current step');
+      }
+    } else {
+      // If no form to validate, just proceed
+      setCurrentStep(prev => Math.min(prev + 1, formSteps.length - 1));
+    }
+  };
   
   const submitForm = async () => {
     setIsSubmitting(true);
@@ -723,6 +807,120 @@ export default function ProjectForm() {
                       </form>
                     </FormProvider>
                   )}
+
+                  {currentStep === 5 && (
+  <div className="space-y-6">
+    <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+      <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white">Project Information</h3>
+      <div className="space-y-4">
+        <div>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Project Type</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">
+            {formData.projectType === 'web' ? 'Web Development' : 
+             formData.projectType === 'mobile' ? 'Mobile App' : 
+             formData.projectType === 'design' ? 'Design Project' : 
+             formData.projectType === 'consulting' ? 'Consulting' : 
+             formData.projectType || 'Not specified'}
+          </p>
+        </div>
+        <div>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Project Name</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.projectName || 'Not specified'}</p>
+        </div>
+        <div>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Project Description</h4>
+          <p className="text-base text-gray-900 dark:text-white">{formData.projectDescription || 'Not specified'}</p>
+        </div>
+        <div>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Target Audience</h4>
+          <p className="text-base text-gray-900 dark:text-white">{formData.targetAudience || 'Not specified'}</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+      <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white">Timeline</h3>
+      <div className="space-y-4">
+        <div>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Start Date</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.startDate || 'Not specified'}</p>
+        </div>
+        {formData.deadline && (
+          <div>
+            <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Deadline</h4>
+            <p className="text-base font-medium text-gray-900 dark:text-white">{formData.deadline}</p>
+          </div>
+        )}
+        <div>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Flexibility</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">
+            {formData.flexibility === 'strict' ? 'Strict - Must be completed by deadline' :
+             formData.flexibility === 'moderate' ? 'Moderate - Some flexibility allowed' :
+             formData.flexibility === 'flexible' ? 'Flexible - Open to adjusting timeline' :
+             formData.flexibility || 'Not specified'}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+      <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white">Budget</h3>
+      <div className="space-y-4">
+        <div>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Budget Range</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">
+            {formData.budgetRange === '0-1000' ? '$0 - $1,000' :
+             formData.budgetRange === '1000-5000' ? '$1,000 - $5,000' :
+             formData.budgetRange === '5000-10000' ? '$5,000 - $10,000' :
+             formData.budgetRange === '10000+' ? '$10,000+' :
+             formData.budgetRange || 'Not specified'}
+          </p>
+        </div>
+        {formData.budgetAmount && (
+          <div>
+            <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Specific Budget Amount</h4>
+            <p className="text-base font-medium text-gray-900 dark:text-white">${formData.budgetAmount}</p>
+          </div>
+        )}
+        <div>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Payment Preference</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">
+            {formData.paymentPreference === 'milestone' ? 'Milestone - Payment upon completing specific project stages' :
+             formData.paymentPreference === 'monthly' ? 'Monthly - Consistent monthly payments' :
+             formData.paymentPreference === 'completion' ? 'Completion - Full payment upon project completion' :
+             formData.paymentPreference || 'Not specified'}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
+      <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white">Contact Information</h3>
+      <div className="space-y-4">
+        <div>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Name</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.name || 'Not specified'}</p>
+        </div>
+        <div>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.email || 'Not specified'}</p>
+        </div>
+        {formData.company && (
+          <div>
+            <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Company</h4>
+            <p className="text-base font-medium text-gray-900 dark:text-white">{formData.company}</p>
+          </div>
+        )}
+        {formData.phone && (
+          <div>
+            <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Phone</h4>
+            <p className="text-base font-medium text-gray-900 dark:text-white">{formData.phone}</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </div>
+)}
                 </motion.div>
               </AnimatePresence>
             </CardContent>

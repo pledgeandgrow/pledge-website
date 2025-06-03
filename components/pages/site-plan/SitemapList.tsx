@@ -261,7 +261,7 @@ export default function SitePlanList() {
         },
         {
           name: "Legal Notice",
-          path: "/legal-notice",
+          path: "/legal/legal-notice",
           description: "Legal information about our company and website",
         },
       ],

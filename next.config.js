@@ -48,6 +48,11 @@ const nextConfig = {
         destination: '/ecosysteme',
         permanent: true,
       },
+      {
+        source: '/legal-notice',
+        destination: '/legal/legal-notice',
+        permanent: true,
+      },
     ];
   },
   // Security headers

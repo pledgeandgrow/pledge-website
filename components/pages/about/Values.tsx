@@ -38,7 +38,7 @@ export default function Values() {
     },
     {
       icon: <Shield className="h-10 w-10 text-primary" />,
-      title: "Privacy (Anonymity)",
+      title: "Privacy",
       description: "We are dedicated to protecting data confidentiality and respecting individual privacy rights in all our operations and solutions."
     }
   ];
