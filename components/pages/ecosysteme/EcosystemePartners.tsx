@@ -26,23 +26,23 @@ export default function EcosystemePartners() {
   // Memoize partner benefits to prevent unnecessary re-renders
   const partnerBenefits = useMemo(() => [
     {
-      title: t('advantages.items.exclusiveDiscounts.title'),
-      description: t('advantages.items.exclusiveDiscounts.description'),
+      title: t('advantages.items.exclusiveDiscounts.title', { fallback: 'Exclusive Discounts' }),
+      description: t('advantages.items.exclusiveDiscounts.description', { fallback: 'Access special offers and discounts from our ecosystem partners.' }),
       icon: <BadgePercent className="h-8 w-8 text-green-700 dark:text-green-400" />
     },
     {
-      title: t('advantages.items.priorityAccess.title'),
-      description: t('advantages.items.priorityAccess.description'),
+      title: t('advantages.items.priorityAccess.title', { fallback: 'Priority Access' }),
+      description: t('advantages.items.priorityAccess.description', { fallback: 'Get early access to new features and services from our partners.' }),
       icon: <Award className="h-8 w-8 text-green-600 dark:text-green-400" />
     },
     {
-      title: t('advantages.items.expandedNetwork.title'),
-      description: t('advantages.items.expandedNetwork.description'),
+      title: t('advantages.items.expandedNetwork.title', { fallback: 'Expanded Network' }),
+      description: t('advantages.items.expandedNetwork.description', { fallback: 'Connect with a wider network of professionals and businesses.' }),
       icon: <Users className="h-8 w-8 text-green-600 dark:text-green-400" />
     },
     {
-      title: t('advantages.items.trustedPartners.title'),
-      description: t('advantages.items.trustedPartners.description'),
+      title: t('advantages.items.trustedPartners.title', { fallback: 'Trusted Partners' }),
+      description: t('advantages.items.trustedPartners.description', { fallback: 'Work with vetted and trusted partners in our ecosystem.' }),
       icon: <Shield className="h-8 w-8 text-green-600 dark:text-green-400" />
     }
   ], [t]);

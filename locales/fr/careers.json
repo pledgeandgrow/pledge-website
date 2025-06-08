@@ -72,13 +72,16 @@
     },
     "positionCard": {
       "applyNow": "Postuler Maintenant",
-      "postedOn": "Publié",
+      "postedOn": "Publié le",
       "viewDetails": "Voir les Détails",
       "remote": "Télétravail",
       "hybrid": "Hybride",
       "onsite": "Sur site",
+      "on-site": "Sur site",
       "fulltime": "Temps plein",
+      "full-time": "Temps plein",
       "parttime": "Temps partiel",
+      "part-time": "Temps partiel",
       "contract": "Contrat",
       "internship": "Stage"
     },
@@ -227,6 +230,94 @@
       "skills": ["Marketing des Médias Sociaux", "Création de Contenu", "Étude de Marché", "Marketing par E-mail", "Analytique", "Communication", "Créativité", "Organisation"],
       "reportingTo": "Responsable Marketing",
       "startDate": "Flexible"
+    },
+    "it-intern": {
+      "title": "Stagiaire en Développement IT",
+      "department": "Ingénierie",
+      "location": "Lyon, France",
+      "locationType": "Hybride",
+      "employmentType": "Stage",
+      "description": "Rejoignez notre équipe d'ingénierie en tant que Stagiaire en Développement IT pour acquérir une expérience pratique avec les technologies web modernes tout en travaillant sur des projets réels sous la supervision de mentors expérimentés.",
+      "overview": "En tant que Stagiaire en Développement IT chez Pledge & Grow, vous serez immergé dans notre équipe d'ingénierie, travaillant sur de vrais projets clients tout en apprenant les pratiques modernes de développement web. Ce stage offre un environnement d'apprentissage structuré où vous acquerrez une expérience pratique avec Next.js, React et d'autres technologies de pointe sous la direction de développeurs expérimentés.",
+      "responsibilities": [
+        "Aider au développement et à la maintenance d'applications web utilisant Next.js et React",
+        "Collaborer avec des développeurs seniors sur l'implémentation de fonctionnalités et la correction de bugs",
+        "Participer aux revues de code et aux discussions techniques",
+        "Apprendre et appliquer les meilleures pratiques en développement web",
+        "Aider à rédiger et maintenir la documentation technique",
+        "Contribuer aux améliorations et implémentations UI/UX",
+        "Tester les applications et identifier les problèmes",
+        "Participer aux processus de développement agile, y compris les daily stand-ups et la planification de sprint"
+      ],
+      "requirements": [
+        "Actuellement en cours d'études en Informatique, Génie Logiciel ou domaine technique connexe",
+        "Connaissance de base de HTML, CSS et JavaScript",
+        "Familiarité avec React ou frameworks frontend similaires est un plus",
+        "Compréhension des systèmes de contrôle de version (Git)",
+        "Désireux d'apprendre et de résoudre des problèmes",
+        "Bonnes compétences en communication et capacité à travailler en équipe",
+        "Auto-motivé avec attention aux détails",
+        "Intérêt pour le développement web et les technologies modernes"
+      ],
+      "benefits": [
+        "Stage rémunéré avec arrangement de travail hybride flexible",
+        "Expérience pratique avec des technologies web modernes",
+        "Mentorat de développeurs seniors",
+        "Exposition au cycle de vie complet du développement logiciel",
+        "Opportunité de travailler sur de vrais projets clients",
+        "Feedback régulier et revues de code",
+        "Opportunités de réseautage dans l'industrie tech",
+        "Possibilité d'emploi à temps plein après réussite du stage"
+      ],
+      "applicationProcess": "Notre processus de sélection comprend une revue de CV, une évaluation technique pour évaluer vos compétences actuelles, et un entretien avec l'équipe d'Ingénierie. Nous valorisons le potentiel et l'enthousiasme plus que la connaissance technique parfaite.",
+      "salary": "1 300 € - 1 600 € d'indemnité mensuelle",
+      "skills": ["HTML/CSS", "JavaScript", "React", "Next.js", "Git", "Design Responsive", "Résolution de Problèmes", "Travail d'Équipe"],
+      "reportingTo": "Développeur Principal",
+      "startDate": "Juin 2025"
+    },
+    "salesman": {
+      "title": "Commercial",
+      "department": "Ventes",
+      "location": "À distance",
+      "locationType": "À distance",
+      "employmentType": "Temps plein",
+      "description": "Stimulez la croissance des revenus en identifiant et poursuivant de nouvelles opportunités de vente, en établissant des relations clients et en concluant efficacement des affaires.",
+      "overview": "En tant que Commercial chez Pledge & Grow, vous serez responsable de générer de nouvelles opportunités commerciales, de gérer le processus de vente du lead à la conclusion, et de construire des relations durables avec les clients. Vous travaillerez en étroite collaboration avec nos équipes marketing et de livraison pour vous assurer que les besoins des clients sont compris et satisfaits, contribuant directement à la croissance et au succès de notre entreprise.",
+      "responsibilities": [
+        "Identifier et poursuivre de nouvelles opportunités de vente par le biais d'appels sortants, d'emails et de réseautage",
+        "Qualifier les leads et gérer efficacement le pipeline de vente",
+        "Réaliser des démonstrations de produits et des présentations aux clients potentiels",
+        "Comprendre les besoins des clients et proposer des solutions appropriées",
+        "Négocier des contrats et conclure des affaires pour atteindre les objectifs de vente",
+        "Maintenir des registres précis dans notre système CRM",
+        "Construire et entretenir des relations avec les clients existants et potentiels",
+        "Rester informé des tendances du secteur, des concurrents et des conditions du marché"
+      ],
+      "requirements": [
+        "2+ ans d'expérience en vente B2B, de préférence dans la technologie ou les services numériques",
+        "Historique prouvé d'atteinte ou de dépassement des objectifs de vente",
+        "Excellentes compétences en communication, présentation et négociation",
+        "Solides capacités à établir des relations avec des clients à différents niveaux organisationnels",
+        "Auto-motivé avec une approche axée sur les résultats",
+        "Capacité à travailler de manière indépendante dans un environnement à distance",
+        "Maîtrise des systèmes CRM et des outils de vente",
+        "Diplôme universitaire en Commerce, Marketing ou domaine connexe préféré"
+      ],
+      "benefits": [
+        "Salaire de base compétitif plus structure de commission",
+        "Package d'assurance santé complet",
+        "Plan d'épargne retraite",
+        "Arrangement de travail à distance flexible",
+        "Opportunités de développement professionnel",
+        "Outils et ressources modernes d'aide à la vente",
+        "Réunions d'équipe régulières et événements d'entreprise",
+        "Opportunités d'avancement de carrière dans une entreprise en croissance"
+      ],
+      "applicationProcess": "Notre processus d'embauche comprend un entretien téléphonique initial, un entretien vidéo avec le Responsable des Ventes, et un entretien final qui inclut un scénario de jeu de rôle de vente. Nous visons à fournir aux candidats une décision dans les trois semaines.",
+      "salary": "Base compétitive + commission",
+      "skills": ["Vente B2B", "Génération de Leads", "Négociation", "Gestion CRM", "Construction de Relations", "Démonstration de Produit", "Résolution de Problèmes", "Gestion du Temps"],
+      "reportingTo": "Responsable des Ventes",
+      "startDate": "Immédiate"
     }
   }
 }

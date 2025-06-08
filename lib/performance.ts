@@ -106,7 +106,7 @@ export const initPerformanceMonitoring = async () => {
   
   try {
     // Dynamically import web-vitals library
-    const webVitals = await import('web-vitals') as WebVitals;
+    const webVitals = await import('web-vitals') as unknown as WebVitals;
     
     // Monitor FCP
     webVitals.onFCP((metric: WebVitalsMetric) => {

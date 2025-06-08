@@ -15,6 +15,11 @@ import { useTranslations } from "@/hooks/useTranslations";
 export default function OpenPositions() {
   const { t } = useTranslations('careers');
   const translatedJobs = useTranslatedJobPositions();
+  
+  // Debug: Log the number of positions and their IDs
+  console.log(`Number of positions: ${translatedJobs.length}`);
+  console.log('Position IDs:', translatedJobs.map(job => job.id));
+  
   const [searchTerm, setSearchTerm] = useState("");
   const [departmentFilter, setDepartmentFilter] = useState("all");
   const [locationTypeFilter, setLocationTypeFilter] = useState("all");
@@ -115,13 +120,13 @@ export default function OpenPositions() {
                             job.locationType === "Remote" ? "outline" : 
                             job.locationType === "Hybrid" ? "secondary" : "default"
                           }>
-                            {job.locationType}
+                            {t(`openPositions.positionCard.${job.locationType.toLowerCase().replace(' ', '-')}`, { fallback: job.locationType })}
                           </Badge>
                         </div>
                         <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
                           <div className="flex items-center">
                             <Briefcase className="h-4 w-4 mr-2" />
-                            <span>{t(`openPositions.departments.${job.department.toLowerCase()}`, { fallback: job.department })} • {t(`openPositions.positionCard.${job.employmentType.toLowerCase()}`, { fallback: job.employmentType })}</span>
+                            <span>{t(`openPositions.departments.${job.department.toLowerCase()}`, { fallback: job.department })} • {t(`openPositions.positionCard.${job.employmentType.toLowerCase().replace(' ', '-')}`, { fallback: job.employmentType })}</span>
                           </div>
                           <div className="flex items-center">
                             <MapPin className="h-4 w-4 mr-2" />
@@ -186,7 +191,7 @@ export default function OpenPositions() {
                       <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
                         <div className="flex items-center">
                           <Briefcase className="h-4 w-4 mr-2" />
-                          <span>{t(`openPositions.departments.${job.department.toLowerCase()}`, { fallback: job.department })} • {t(`openPositions.positionCard.${job.employmentType.toLowerCase()}`, { fallback: job.employmentType })}</span>
+                          <span>{t(`openPositions.departments.${job.department.toLowerCase()}`, { fallback: job.department })} • {t(`openPositions.positionCard.${job.employmentType.toLowerCase().replace(' ', '-')}`, { fallback: job.employmentType })}</span>
                         </div>
                         <div className="flex items-center">
                           <MapPin className="h-4 w-4 mr-2" />

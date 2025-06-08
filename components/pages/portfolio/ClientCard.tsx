@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ClientModal, ClientProject } from "@/components/ui/client-modal";
@@ -14,21 +14,44 @@ interface ClientCardProps {
 export default function ClientCard({ project }: ClientCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useTranslations('portfolio');
+  // Get translations for tag labels
+  const tagLabels = {
+    deliverables: t('tags.deliverables', { fallback: 'Deliverables' }),
+    technologies: t('tags.technologies', { fallback: 'Technologies' })
+  };
 
-  // Get translated content for this specific project
-  const projectName = t(`projects.${project.id}.name`) || project.name;
-  const projectDescription = t(`projects.${project.id}.description`) || project.description;
-  const projectIndustry = t(`projects.${project.id}.industry`) || project.industry;
+  // Get translated content for this specific project with fallbacks
+  const projectName = t(`projects.${project.id}.name`, { fallback: project.name });
+  const projectDescription = t(`projects.${project.id}.description`, { fallback: project.description });
+  const projectIndustry = t(`projects.${project.id}.industry`, { fallback: project.industry });
   
-  // Get translated technologies
-  const technologies = project.methodology.technologies.map(tech => {
-    return t(`common.technologies.${tech}`, { fallback: tech });
-  });
+  // Use direct values for technologies and deliverables
+  const technologies = useMemo(() => {
+    try {
+      if (!project.methodology || !Array.isArray(project.methodology.technologies)) {
+        return [];
+      }
+      
+      return project.methodology.technologies;
+    } catch (error) {
+      console.error(`Error processing technologies for project ${project.id}:`, error);
+      return [];
+    }
+  }, [project.methodology]);
   
-  // Get translated deliverables for tags
-  const deliverables = project.deliverables.map(deliverable => {
-    return t(`projects.${project.id}.deliverables.${deliverable}`, { fallback: deliverable });
-  });
+  // Use direct values for deliverables
+  const deliverables = useMemo(() => {
+    try {
+      if (!Array.isArray(project.deliverables)) {
+        return [];
+      }
+      
+      return project.deliverables;
+    } catch (error) {
+      console.error(`Error processing deliverables for project ${project.id}:`, error);
+      return [];
+    }
+  }, [project.deliverables]);
 
   return (
     <>
@@ -74,9 +97,9 @@ export default function ClientCard({ project }: ClientCardProps) {
             {/* Deliverable tags */}
             {deliverables.length > 0 && (
               <div>
-                <p className="text-xs text-muted-foreground mb-1">{t('tags.deliverables')}</p>
+                <p className="text-xs text-muted-foreground mb-1">{tagLabels.deliverables}</p>
                 <div className="flex flex-wrap gap-2">
-                  {deliverables.slice(0, 2).map((deliverable, index) => (
+                  {deliverables.slice(0, 2).map((deliverable: string, index: number) => (
                     <span 
                       key={index} 
                       className="inline-block bg-secondary/30 text-secondary-foreground text-xs px-3 py-1 rounded-full border border-secondary/20 group-hover:border-secondary/40 transition-all duration-300"
@@ -96,9 +119,9 @@ export default function ClientCard({ project }: ClientCardProps) {
             {/* Technology tags */}
             {technologies.length > 0 && (
               <div>
-                <p className="text-xs text-muted-foreground mb-1">{t('tags.technologies')}</p>
+                <p className="text-xs text-muted-foreground mb-1">{tagLabels.technologies}</p>
                 <div className="flex flex-wrap gap-2">
-                  {technologies.slice(0, 3).map((tech, index) => (
+                  {technologies.slice(0, 3).map((tech: string, index: number) => (
                     <span 
                       key={index} 
                       className="inline-block bg-muted/70 text-foreground/80 text-xs px-3 py-1 rounded-full border border-border/30 group-hover:border-primary/20 transition-all duration-300"

@@ -22,13 +22,24 @@ export default function JobDetailPage() {
     // Find the job with the matching ID
     const id = Array.isArray(params.id) ? params.id[0] : params.id;
     
+    console.log(`Attempting to load job with ID: ${id}, locale: ${locale}`);
+    
     // Use our new translation hook to get the job with translations
     // Make sure id is a string before passing to getTranslatedJobDetail
     if (id) {
       const translatedJob = getTranslatedJobDetail(id);
+      console.log('Found job?', translatedJob ? 'Yes' : 'No');
       
       if (translatedJob) {
+        console.log('Job details:', {
+          title: translatedJob.title,
+          department: translatedJob.department,
+          locationType: translatedJob.locationType,
+          employmentType: translatedJob.employmentType
+        });
         setJob(translatedJob);
+      } else {
+        console.error(`Job with ID ${id} not found in ${locale} locale`);
       }
     }
     
@@ -102,35 +113,33 @@ export default function JobDetailPage() {
               
               <div className="flex flex-wrap gap-3 mb-6">
                 <Badge variant={job.locationType === "Remote" ? "outline" : job.locationType === "Hybrid" ? "secondary" : "default"}>
-                  {job.locationType}
+                  {t(`openPositions.positionCard.${job.locationType.toLowerCase().replace(' ', '-')}`, { fallback: job.locationType })}
                 </Badge>
-                <Badge variant="outline">{job.employmentType}</Badge>
-                <Badge variant="outline">{job.department}</Badge>
+                <Badge variant="outline">
+                  {t(`openPositions.positionCard.${job.employmentType.toLowerCase().replace(' ', '-')}`, { fallback: job.employmentType })}
+                </Badge>
+                <Badge variant="outline">
+                  {t(`openPositions.departments.${job.department.toLowerCase()}`, { fallback: job.department })}
+                </Badge>
               </div>
 
-              <div className="flex flex-col space-y-3 text-muted-foreground mb-8">
+              <div className="flex items-center space-x-4 text-sm text-muted-foreground mb-6">
+                <div className="flex items-center">
+                  <Briefcase className="h-4 w-4 mr-2" />
+                  <span>{t(`openPositions.departments.${job.department.toLowerCase()}`, { fallback: job.department })}</span>
+                </div>
                 <div className="flex items-center">
                   <MapPin className="h-4 w-4 mr-2" />
                   <span>{job.location}</span>
                 </div>
                 <div className="flex items-center">
-                  <Briefcase className="h-4 w-4 mr-2" />
-                  <span>
-                    {job.department} • 
-                    {job.employmentType}
-                  </span>
+                  <Clock className="h-4 w-4 mr-2" />
+                  <span>{t(`openPositions.positionCard.${job.employmentType.toLowerCase().replace(' ', '-').replace(' ', '-')}`, { fallback: job.employmentType })}</span>
                 </div>
                 <div className="flex items-center">
-                  <Clock className="h-4 w-4 mr-2" />
-                  <span>{t('openPositions.positionCard.postedOn', { fallback: 'Posted' })} {formatDate(job.postedDate)}</span>
+                  <Calendar className="h-4 w-4 mr-2" />
+                  <span>{t('openPositions.positionCard.postedOn', { fallback: 'Posted on' })} {formatDate(job.postedDate)}</span>
                 </div>
-                {job.startDate && (
-                  <div className="flex items-center">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span>{t('openPositions.positionCard.startDate', { fallback: 'Start date' })}: {job.startDate}</span>
-                  </div>
-                )}
-
               </div>
 
               <Separator className="my-8" />
@@ -241,18 +250,24 @@ export default function JobDetailPage() {
 }
 
 function formatDate(dateString: string): string {
+  const { locale } = useTranslations('careers');
   const date = new Date(dateString);
   const now = new Date();
   const diffTime = Math.abs(now.getTime() - date.getTime());
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   
+  // Use the current locale for date formatting
+  const localeString = locale === 'fr' ? 'fr-FR' : 'en-US';
+  
   if (diffDays === 1) {
-    return "today";
+    return locale === 'fr' ? "aujourd'hui" : "today";
   } else if (diffDays === 2) {
-    return "yesterday";
+    return locale === 'fr' ? "hier" : "yesterday";
   } else if (diffDays <= 7) {
-    return `${diffDays - 1} days ago`;
+    return locale === 'fr' 
+      ? `il y a ${diffDays - 1} jour${diffDays - 1 > 1 ? 's' : ''}` 
+      : `${diffDays - 1} days ago`;
   } else {
-    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    return date.toLocaleDateString(localeString, { month: 'short', day: 'numeric', year: 'numeric' });
   }
 }

@@ -37,15 +37,15 @@
         "title": "Culture of Innovation",
         "description": "Work with cutting-edge technologies and contribute to projects that push the boundaries of what's possible."
       },
-      "growth": {
+      "professionalGrowth": {
         "title": "Professional Growth",
         "description": "Continuous learning opportunities, mentorship programs, and a clear career progression path."
       },
-      "balance": {
+      "workLifeBalance": {
         "title": "Work-Life Balance",
         "description": "Flexible working arrangements, generous time off, and a focus on wellbeing and mental health."
       },
-      "impact": {
+      "meaningfulImpact": {
         "title": "Meaningful Impact",
         "description": "Contribute to projects that solve real-world problems and make a difference for our clients and communities."
       },
@@ -53,7 +53,7 @@
         "title": "Inclusive Environment",
         "description": "A diverse and inclusive workplace where different perspectives are valued and celebrated."
       },
-      "benefits": {
+      "comprehensiveBenefits": {
         "title": "Comprehensive Benefits",
         "description": "Competitive compensation, health benefits, retirement plans, and performance bonuses."
       }
@@ -62,9 +62,10 @@
   "openPositions": {
     "title": "Open Positions",
     "description": "Explore our current job openings and find the perfect role to match your skills and career goals.",
-    "noPositions": "No positions match your search criteria. Please try adjusting your filters.",
+    "subtitle": "Join our team and make an impact",
+    "noPositions": "No positions match your search criteria. Try adjusting your filters.",
     "filters": {
-      "search": "Search positions...",
+      "search": "Search positions",
       "department": "Filter by department",
       "locationType": "Filter by location type",
       "allDepartments": "All Departments",
@@ -72,13 +73,16 @@
     },
     "positionCard": {
       "applyNow": "Apply Now",
-      "postedOn": "Posted",
+      "postedOn": "Posted on",
       "viewDetails": "View Details",
       "remote": "Remote",
       "hybrid": "Hybrid",
       "onsite": "Onsite",
+      "on-site": "On-site",
       "fulltime": "Full-time",
+      "full-time": "Full-time",
       "parttime": "Part-time",
+      "part-time": "Part-time",
       "contract": "Contract",
       "internship": "Internship"
     },
