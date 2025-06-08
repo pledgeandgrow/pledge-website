@@ -15,8 +15,8 @@ export default function ContactInfo() {
     },
     {
       icon: <Phone className="h-5 w-5 text-primary" />,
-      value: "+33 7 53 69 58 40 (WhatsApp business)",
-      link: "https://wa.me/33753695840"
+      value: "+33 7 66 58 08 35 (WhatsApp business)",
+      link: "https://wa.me/33766580835"
     }
   ];
   
@@ -29,8 +29,8 @@ export default function ContactInfo() {
     },
     {
       icon: <Phone className="h-5 w-5 text-primary" />,
-      value: "+971 50 392 7710 (WhatsApp business)",
-      link: "https://wa.me/971503927710"
+      value: "+33 7 53 69 58 40 (WhatsApp business)",
+      link: "https://wa.me/33753695840"
     }
   ];
   
@@ -87,7 +87,7 @@ export default function ContactInfo() {
     {
       icon: <MessageCircle className="h-5 w-5" />,
       name: "WhatsApp",
-      link: "https://wa.me/33753695840"
+      link: "https://wa.me/33766580835"
     }
   ];
 

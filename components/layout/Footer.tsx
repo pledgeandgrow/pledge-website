@@ -106,7 +106,7 @@ export default function Footer() {
                   </div>
                   <div className="flex items-center ml-2">
                     <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
-                    <a href="https://wa.me/33753695840" className="hover:underline">+33 7 53 69 58 40</a>
+                    <a href="https://wa.me/33766580835" className="hover:underline">+33 7 66 58 08 35</a>
                     <span className="text-xs ml-2">({t("footer.sections.contact.whatsapp")})</span>
                   </div>
                 </li>
@@ -118,7 +118,7 @@ export default function Footer() {
                   </div>
                   <div className="flex items-center ml-2">
                     <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
-                    <a href="tel:+971503927710" className="hover:underline">+971 50 392 7710</a>
+                    <a href="https://wa.me/33753695840" className="hover:underline">+33 7 53 69 58 40</a>
                     <span className="text-xs ml-2">({t("footer.sections.contact.whatsapp")})</span>
                   </div>
                 </li>
@@ -198,7 +198,7 @@ export default function Footer() {
                     </div>
                     <div className="flex items-center ml-2">
                       <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
-                      <a href="tel:+33753695840" className="hover:underline">+33 7 53 69 58 40</a>
+                      <a href="tel:+33766580835" className="hover:underline">+33 7 66 58 08 35</a>
                       <span className="text-xs ml-2">({t("footer.sections.contact.whatsapp")})</span>
                     </div>
                   </li>
@@ -210,7 +210,7 @@ export default function Footer() {
                     </div>
                     <div className="flex items-center ml-2">
                       <Phone className="h-4 w-4 mr-2 flex-shrink-0" />
-                      <a href="tel:+971503927710" className="hover:underline">+971 50 392 7710</a>
+                      <a href="tel:+33753695840" className="hover:underline">+33 7 53 69 58 40</a>
                       <span className="text-xs ml-2">({t("footer.sections.contact.whatsapp")})</span>
                     </div>
                   </li>
