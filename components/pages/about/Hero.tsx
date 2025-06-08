@@ -11,11 +11,9 @@ export default function Hero() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-6 animate-fade-up">
-            <div className="max-w-2xl mx-auto text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl dark:text-white">
-                {t('hero.title') || "About Pledge & Grow"}
-              </h1>
-            </div>
+            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-6">
+              {t('hero.title') || "About Pledge & Grow"}
+            </h1>
             <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-8">
               {t('hero.description') || "We are a team of passionate designers and developers committed to creating exceptional digital experiences that help businesses thrive in the digital world."}
             </p>

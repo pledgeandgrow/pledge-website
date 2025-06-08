@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ClientModal, ClientProject } from "@/components/ui/client-modal";
 import { ArrowRight } from "lucide-react";
@@ -60,27 +59,14 @@ export default function ClientCard({ project }: ClientCardProps) {
         <div className="h-3 bg-gradient-to-r from-primary via-primary/80 to-primary/60 group-hover:from-primary/90 group-hover:to-primary transition-all duration-500"></div>
         
         <div className="p-6">
-          {/* Header with logo and year */}
+          {/* Header with year */}
           <div className="flex justify-between items-start mb-4">
-            <div className="flex items-center gap-3">
-              {project.logo && (
-                <div className="relative h-10 w-10 rounded-md overflow-hidden border border-border/30 bg-background flex items-center justify-center">
-                  <Image 
-                    src={project.logo} 
-                    alt={`${projectName} ${t('logo')}`}
-                    width={32}
-                    height={32}
-                    className="object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-              )}
-              <div>
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">{projectName}</h3>
-                <p className="text-sm text-muted-foreground flex items-center gap-2">
-                  <span className="inline-block w-2 h-2 rounded-full bg-primary/60"></span>
-                  {projectIndustry}
-                </p>
-              </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">{projectName}</h3>
+              <p className="text-sm text-muted-foreground flex items-center gap-2">
+                <span className="inline-block w-2 h-2 rounded-full bg-primary/60"></span>
+                {projectIndustry}
+              </p>
             </div>
             <span className="text-sm font-medium bg-primary/10 text-primary px-3 py-1 rounded-full border border-primary/20 group-hover:bg-primary/20 transition-colors duration-300">
               {project.year}

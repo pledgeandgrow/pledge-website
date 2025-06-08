@@ -17,7 +17,7 @@ import { useTranslations } from "@/hooks/useTranslations";
 export interface ClientProject {
   id: string;
   name: string;
-  logo: string;
+  logo?: string;
   description: string;
   industry: string;
   year: number;
@@ -62,15 +62,7 @@ export function ClientModal({ project, isOpen, onClose }: ClientModalProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[800px] max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold flex items-center gap-3">
-            <div className="relative h-8 w-8">
-              <Image 
-                src={project.logo} 
-                alt={`${project.name} logo`} 
-                fill
-                className="object-contain" 
-              />
-            </div>
+          <DialogTitle className="text-2xl font-bold">
             {project.name}
           </DialogTitle>
           <DialogDescription className="text-base">

@@ -5,6 +5,9 @@
     "ctaGetStarted": "Commencer",
     "ctaLearnMore": "En Savoir Plus"
   },
+  "clients": {
+    "trustedBy": "Fait confiance par les leaders de l'industrie"
+  },
   "about": {
     "title": "Nous ne sommes pas une simple agence",
     "description": "Nous croyons en la transparence, la collaboration et la livraison de résultats qui dépassent les attentes. Notre approche est centrée sur la compréhension de vos besoins uniques et l'élaboration de solutions qui favorisent la croissance et l'innovation.",
@@ -111,32 +114,32 @@
     "defaultQuote": "Pledge & Grow a livré des résultats exceptionnels pour notre entreprise.",
     "items": [
       {
-        "name": "Jean Dupont",
+        "name": "Aida BEN SALAH",
         "role": "PDG, Global Corporate Business",
         "quote": "Pledge & Grow a transformé notre présence en ligne et augmenté notre visibilité de manière significative. Leur approche stratégique et leur expertise technique ont dépassé nos attentes.",
         "rating": 5
       },
       {
-        "name": "Marie Laurent",
-        "role": "Directrice Marketing, ERB-BTP",
+        "name": "Ali TOMBARI",
+        "role": "PDG, ERB-BTP",
         "quote": "L'équipe de Pledge & Grow a parfaitement compris nos besoins et a livré un site web qui représente parfaitement notre marque et nos valeurs.",
         "rating": 5
       },
       {
-        "name": "Thomas Moreau",
+        "name": "Boubaker SRIRI",
         "role": "Fondateur, Connect & Drive",
         "quote": "Grâce à Pledge & Grow, notre entreprise a pu atteindre de nouveaux marchés et augmenter ses revenus de manière significative.",
         "rating": 5
       },
       {
-        "name": "Sophie Dubois",
-        "role": "Responsable Marketing, JABB Events",
+        "name": "Pierre MOUTON",
+        "role": "PDG, JABB Events",
         "quote": "Le site e-commerce développé par Pledge & Grow a considérablement amélioré notre processus de réservation et augmenté nos ventes en ligne.",
         "rating": 5
       },
       {
-        "name": "Alexandre Martin",
-        "role": "Directeur Technique, Chronos Corp",
+        "name": "Nizar OUNICH",
+        "role": "PDG, Dualink",
         "quote": "L'application de gestion de temps développée par Pledge & Grow nous a permis d'optimiser nos processus internes et d'améliorer notre productivité.",
         "rating": 5
       }

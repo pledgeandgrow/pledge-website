@@ -21,7 +21,7 @@ export const useCurrentLanguage = () => {
       // Check for language in cookie
       const cookieLocale = typeof window !== 'undefined' ? getCookie('NEXT_LOCALE') : null;
         
-      if (cookieLocale) {
+      if (cookieLocale && typeof cookieLocale === 'string') {
         setLanguage(cookieLocale);
       } else {
         // Fallback to browser language
