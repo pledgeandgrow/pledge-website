@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Star, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "@/hooks/useTranslations";
+import { portfolioProjects } from "@/data/portfolio-data";
 
 export default function Testimonials() {
   const { t } = useTranslations("home");
@@ -40,38 +41,22 @@ export default function Testimonials() {
     });
   };
 
-  const testimonials = [
-    {
-      name: "Ali Tombari",
-      role: "ERB BTP",
-      quote: "Site web parfait qui représente exactement notre expertise dans le bâtiment.",
-      rating: 5
-    },
-    {
-      name: "Nizar Ounich",
-      role: "Chronos Corp. / Dualink",
-      quote: "Expertise technique et design impeccables, résultats au-delà de nos attentes.",
-      rating: 5
-    },
-    {
-      name: "Pierre Mouton",
-      role: "JABB EVENT",
-      quote: "Notre e-commerce performe au-delà de nos espérances, merci Pledge!",
-      rating: 5
-    },
-    {
-      name: "Alexandre Besombes",
-      role: "GUDULE",
-      quote: "Site web impeccable qui reflète parfaitement notre identité de marque.",
-      rating: 5
-    },
-    {
-      name: "Jonathan Alev",
-      role: "JABB",
-      quote: "Développement web de qualité supérieure, résultats au-delà de nos attentes.",
-      rating: 5
-    }
-  ];
+  // Extract testimonials from portfolio projects case studies
+  const testimonials = useMemo(() => {
+    return portfolioProjects
+      .filter(project => project.outcome?.testimonial) // Only projects with testimonials
+      .map(project => {
+        // Since we've filtered for projects with testimonials, we can safely assert non-null
+        const testimonial = project.outcome!.testimonial!;
+        return {
+          name: testimonial.author,
+          role: `${testimonial.position}, ${project.name}`,
+          quote: testimonial.quote,
+          rating: 5, // Assuming all case study testimonials are 5 stars
+          projectId: project.id // Store project ID for potential link to case study
+        };
+      });
+  }, []);
 
   const renderStars = (rating: number) => {
     return Array(5).fill(0).map((_, i) => (

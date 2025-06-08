@@ -5,10 +5,12 @@ import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import Link from "next/link";
 import { getConsentStatus, setConsentStatus } from "@/utils/cookieConsent";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export function CookieConsent() {
   // Initialize with false, then check in useEffect to avoid hydration mismatch
   const [showBanner, setShowBanner] = useState(false);
+  const { t } = useTranslations("common");
 
   useEffect(() => {
     // Ensure this only runs on the client side
@@ -45,17 +47,17 @@ export function CookieConsent() {
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4 bg-background/95 backdrop-blur-sm border-t border-border shadow-lg">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex-1">
-          <h3 className="text-lg font-semibold mb-1">Cookie Consent</h3>
+          <h3 className="text-lg font-semibold mb-1">{t("cookieConsent.title")}</h3>
           <p className="text-sm text-muted-foreground">
-            We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our{" "}
+            {t("cookieConsent.description")}{" "}
             <Link href="/legal/cookie-policy" className="text-primary hover:underline">
-              Cookie Policy
+              {t("cookieConsent.cookiePolicy")}
             </Link>{" "}
-            and{" "}
+            {t("cookieConsent.and")}{" "}
             <Link href="/legal/privacy-policy" className="text-primary hover:underline">
-              Privacy Policy
+              {t("cookieConsent.privacyPolicy")}
             </Link>{" "}
-            for more information.
+            {t("cookieConsent.forMoreInfo")}
           </p>
         </div>
         <div className="flex flex-shrink-0 gap-2 items-center">
@@ -65,7 +67,7 @@ export function CookieConsent() {
             onClick={handleDecline}
             className="whitespace-nowrap"
           >
-            Decline
+            {t("cookieConsent.decline")}
           </Button>
           <Button
             variant="default"
@@ -73,14 +75,14 @@ export function CookieConsent() {
             onClick={handleAccept}
             className="whitespace-nowrap"
           >
-            Accept All
+            {t("cookieConsent.acceptAll")}
           </Button>
           <Button
             variant="ghost"
             size="icon"
             onClick={handleDecline}
             className="md:hidden"
-            aria-label="Close cookie banner"
+            aria-label={t("cookieConsent.close")}
           >
             <X className="h-4 w-4" />
           </Button>

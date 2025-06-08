@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { usePathname } from "next/navigation";
+
 import { useTranslations } from "@/hooks/useTranslations";
 import LanguageSwitcher from "@/components/shared/LanguageSwitcher";
 
@@ -17,6 +17,7 @@ export default function Navbar() {
   const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const { t } = useTranslations('common');
+
 
   // After mounting, we can safely show the UI that depends on the theme
   useEffect(() => {
@@ -167,7 +168,7 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/discord" className="text-gray-700 dark:text-gray-300">
+                        <Link href="/join-our-community" className="text-gray-700 dark:text-gray-300">
                           {t('navbar.companyMenu.community.discord')}
                         </Link>
                       </li>
@@ -402,7 +403,7 @@ export default function Navbar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="/discord" className="text-gray-700 dark:text-gray-300">
+                        <Link href="/join-our-community" className="text-gray-700 dark:text-gray-300">
                           {t('navbar.companyMenu.community.discord')}
                         </Link>
                       </li>

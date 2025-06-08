@@ -78,7 +78,7 @@ export const trackEvent = (
     }
 
     // Send event to Google Analytics
-    (window as any).gtag('event', action, eventParams);
+    (window as Window & { gtag: (command: string, action: string, params: Record<string, unknown>) => void }).gtag('event', action, eventParams);
     
     // Log event in development mode
     if (process.env.NODE_ENV === 'development') {
@@ -94,7 +94,7 @@ export const trackEvent = (
  */
 export const trackPageView = (url: string, title?: string) => {
   if (typeof window !== 'undefined' && 'gtag' in window) {
-    (window as any).gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
+    (window as Window & { gtag: (command: string, id: string | undefined, params: Record<string, unknown>) => void }).gtag('config', process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
       page_path: url,
       page_title: title,
     });

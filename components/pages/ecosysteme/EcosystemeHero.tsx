@@ -8,7 +8,7 @@ import { ArrowRight, Percent, Users, Building } from "lucide-react";
 export default function EcosystemeHero() {
   return (
     <section className="relative pt-32 pb-20 md:pt-36 md:pb-28 overflow-hidden bg-white dark:bg-gray-950">
-      <div className="absolute inset-0 bg-gradient-to-br from-green-50/70 to-transparent dark:from-green-950/30 dark:to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-green-100/70 to-transparent dark:from-green-950/30 dark:to-transparent"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -18,13 +18,13 @@ export default function EcosystemeHero() {
             transition={{ duration: 0.5 }}
             className="flex flex-col space-y-6"
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-sm font-medium mb-2">
+            <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-200 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-sm font-medium mb-2">
               <Percent className="w-4 h-4 mr-2" />
               <span>Exclusive Benefits</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-              Join Our <span className="text-green-600 dark:text-green-400">Powerful</span> Ecosystem
+              Join Our <span className="text-primary dark:text-green-400">Powerful</span> Ecosystem
             </h1>
             
             <p className="text-lg text-gray-700 dark:text-gray-300 max-w-xl">
@@ -33,21 +33,21 @@ export default function EcosystemeHero() {
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
               <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+                <div className="w-10 h-10 rounded-full bg-green-200 dark:bg-green-900/30 flex items-center justify-center text-primary dark:text-green-400">
                   <Building className="w-5 h-5" />
                 </div>
                 <span className="font-medium">Group Companies</span>
               </div>
               
               <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+                <div className="w-10 h-10 rounded-full bg-green-200 dark:bg-green-900/30 flex items-center justify-center text-primary dark:text-green-400">
                   <Users className="w-5 h-5" />
                 </div>
                 <span className="font-medium">Exclusive Partners</span>
               </div>
               
               <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600 dark:text-green-400">
+                <div className="w-10 h-10 rounded-full bg-green-200 dark:bg-green-900/30 flex items-center justify-center text-primary dark:text-green-400">
                   <Percent className="w-5 h-5" />
                 </div>
                 <span className="font-medium">Special Discounts</span>

@@ -16,7 +16,7 @@ export default function MembershipHero() {
             transition={{ duration: 0.5 }}
             className="text-center lg:text-left"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary">
               Premium Membership
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-3xl mx-auto lg:mx-0">

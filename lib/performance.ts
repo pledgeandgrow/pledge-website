@@ -11,7 +11,7 @@ interface WebVitalsMetric {
   value: number;
   delta: number;
   id: string;
-  entries: any[];
+  entries: PerformanceEntry[];
 }
 
 type MetricHandler = (metric: WebVitalsMetric) => void;
@@ -152,7 +152,7 @@ export const initPerformanceMonitoring = async () => {
 declare global {
   interface Window {
     Sentry?: {
-      captureMessage: (message: string, options?: any) => void;
+      captureMessage: (message: string, options?: Record<string, unknown>) => void;
     };
   }
 }

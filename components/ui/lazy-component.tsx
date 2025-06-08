@@ -4,8 +4,8 @@ import { Suspense, lazy, ComponentType } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 
 interface LazyComponentProps {
-  importFunc: () => Promise<{ default: ComponentType<any> }>;
-  props?: Record<string, any>;
+  importFunc: () => Promise<{ default: ComponentType<Record<string, unknown>> }>;
+  props?: Record<string, unknown>;
   fallback?: React.ReactNode;
   height?: string | number;
 }

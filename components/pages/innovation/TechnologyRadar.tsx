@@ -7,14 +7,28 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { TechStack, TechItem } from "@/components/ui/tech-stack";
 import * as SiIcons from "react-icons/si";
+import { useTranslations } from "@/hooks/useTranslations";
 
-// Type for the icons from react-icons/si
-type SiIconType = keyof typeof SiIcons;
+// Type for icon components from react-icons/si
 
 interface TechCategory {
   id: string;
   name: string;
   description: string;
+}
+
+interface TechnologyRadarTranslation {
+  categories?: Record<string, {
+    name?: string;
+    description?: string;
+  }>;
+  statusDescriptions?: {
+    adopt?: string;
+    trial?: string;
+    assess?: string;
+    hold?: string;
+  };
+  items?: Record<string, TechRadarItem>;
 }
 
 interface TechRadarItem {
@@ -26,6 +40,7 @@ interface TechRadarItem {
 }
 
 export default function TechnologyRadar() {
+  const { t } = useTranslations('innovation');
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -42,45 +57,79 @@ export default function TechnologyRadar() {
     // Cleanup
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
-  const categories: TechCategory[] = [
-    {
-      id: "all",
-      name: "All Technologies",
-      description: "Our complete technology radar across all categories"
-    },
-    {
-      id: "frontend",
-      name: "Frontend",
-      description: "Technologies for building modern, responsive user interfaces"
-    },
-    {
-      id: "backend",
-      name: "Backend",
-      description: "Server-side technologies for robust application development"
-    },
-    {
-      id: "mobile",
-      name: "Mobile",
-      description: "Technologies for iOS, Android, and cross-platform development"
-    },
-    {
-      id: "data",
-      name: "Data & AI",
-      description: "Tools and frameworks for data processing and artificial intelligence"
-    },
-    {
-      id: "devops",
-      name: "DevOps & Cloud",
-      description: "Technologies for deployment, infrastructure, and operations"
+  
+  // Try to get categories from translations, but use hardcoded fallback if missing
+  let categories: TechCategory[] = [];
+  try {
+    const radarData = t('technologyRadar') as TechnologyRadarTranslation;
+    const categoriesData = radarData?.categories || {};
+    
+    // Create categories from the translation structure
+    if (categoriesData && Object.keys(categoriesData).length > 0) {
+      categories = Object.keys(categoriesData).map(id => ({
+        id,
+        name: categoriesData[id]?.name || id,
+        description: categoriesData[id]?.description || ''
+      }));
     }
-  ];
+  } catch (error) {
+    console.warn('Error loading technology radar translations:', error);
+  }
+  
+  // Fallback categories if translations are missing
+  if (categories.length === 0) {
+    // Try to get translations from the technologyRadar namespace
+    const radarData = t('technologyRadar', { returnObjects: true }) as TechnologyRadarTranslation;
+    const fallbackCategories = radarData?.categories || {};
+    
+    // Create fallback categories with translations if available
+    const categoryIds = ["all", "frontend", "backend", "mobile", "data", "devops"];
+    categories = categoryIds.map(id => {
+      const fallbackCategory = fallbackCategories[id] || {};
+      return {
+        id,
+        name: fallbackCategory.name || {
+          all: "All Technologies",
+          frontend: "Frontend",
+          backend: "Backend",
+          mobile: "Mobile",
+          data: "Data & AI",
+          devops: "DevOps & Cloud"
+        }[id] || id,
+        description: fallbackCategory.description || {
+          all: "Our complete technology radar across all categories",
+          frontend: "Technologies for building modern, responsive user interfaces",
+          backend: "Server-side technologies for robust application development",
+          mobile: "Technologies for iOS, Android, and cross-platform development",
+          data: "Tools and frameworks for data processing and artificial intelligence",
+          devops: "Technologies for deployment, infrastructure, and operations"
+        }[id] || ''
+      };
+    });
+  }
 
+  // Get status descriptions from translations with fallbacks
   const statusDescriptions = {
-    adopt: "Technologies we use in production and recommend for widespread use",
-    trial: "Technologies we're actively using in projects and evaluating for broader adoption",
-    assess: "Technologies we're exploring and experimenting with in controlled environments",
-    hold: "Technologies we're either phasing out or not recommending for new projects"
+    adopt: t('technologyRadar.statusDescriptions.adopt', { fallback: 'Technologies we use in production and recommend for widespread use' }),
+    trial: t('technologyRadar.statusDescriptions.trial', { fallback: 'Technologies we\'re actively using in projects and evaluating for broader adoption' }),
+    assess: t('technologyRadar.statusDescriptions.assess', { fallback: 'Technologies we\'re exploring and experimenting with in controlled environments' }),
+    hold: t('technologyRadar.statusDescriptions.hold', { fallback: 'Technologies we\'re either phasing out or not recommending for new projects' })
   };
+  
+  try {
+    const radarData = t('technologyRadar') as TechnologyRadarTranslation;
+    const statusDescriptionsData = radarData?.statusDescriptions || {};
+    
+    // Only override with translations if they exist
+    if (statusDescriptionsData) {
+      if (statusDescriptionsData.adopt) statusDescriptions.adopt = statusDescriptionsData.adopt;
+      if (statusDescriptionsData.trial) statusDescriptions.trial = statusDescriptionsData.trial;
+      if (statusDescriptionsData.assess) statusDescriptions.assess = statusDescriptionsData.assess;
+      if (statusDescriptionsData.hold) statusDescriptions.hold = statusDescriptionsData.hold;
+    }
+  } catch (error) {
+    console.warn('Error loading status descriptions:', error);
+  }
 
   // Frontend technologies
   const frontendTech: TechRadarItem[] = [
@@ -131,7 +180,7 @@ export default function TechnologyRadar() {
     { name: "GitHub Actions", icon: "SiGithubactions", category: "devops", status: "adopt", description: "CI/CD platform integrated with our version control workflow" },
     { name: "Terraform", icon: "SiTerraform", category: "devops", status: "trial", description: "Infrastructure as code tool we're increasingly using for cloud provisioning" },
     { name: "Google Cloud", icon: "SiGooglecloud", category: "devops", status: "trial", description: "Secondary cloud platform we're using for specific services and clients" },
-    { name: "Azure", icon: "SiAzure", category: "devops", status: "assess", description: "Cloud platform we're evaluating for enterprise clients and .NET applications" },
+    { name: "Azure", icon: "SiMicrosoftazure", category: "devops", status: "assess", description: "Cloud platform we're evaluating for enterprise clients and .NET applications" },
     { name: "Jenkins", icon: "SiJenkins", category: "devops", status: "hold", description: "CI/CD tool we maintain for legacy projects but replacing with modern alternatives" }
   ];
 
@@ -145,10 +194,19 @@ export default function TechnologyRadar() {
   ];
 
   // Function to convert TechRadarItem to TechItem for the TechStack component
+  // Ensure technology names are displayed as-is without translation
   const convertToTechItem = (tech: TechRadarItem): TechItem => {
+    // Directly access the icon from SiIcons
+    const iconKey = tech.icon as keyof typeof SiIcons;
+    const IconComponent = SiIcons[iconKey];
+    
+    if (!IconComponent) {
+      console.error(`Icon ${tech.icon} not found in react-icons/si`);
+    }
+    
     return {
       name: tech.name,
-      icon: tech.icon as SiIconType,
+      icon: iconKey,
       color: getStatusColor(tech.status)
     };
   };
@@ -171,10 +229,17 @@ export default function TechnologyRadar() {
 
   // Function to get technologies by category and status
   const getTechByCategory = (category: string, status?: string): TechItem[] => {
+    console.log(`Getting tech for category: ${category}, status: ${status || 'all'}`);
+    
+    // Filter technologies based on category and status
     const filteredTech = allTech.filter(tech => 
       (category === "all" || tech.category === category) && 
       (!status || tech.status === status)
     );
+    
+    console.log(`Found ${filteredTech.length} technologies matching criteria`);
+    
+    // Convert TechRadarItem to TechItem using the convertToTechItem function
     return filteredTech.map(convertToTechItem);
   };
 
@@ -188,24 +253,24 @@ export default function TechnologyRadar() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Technology Radar</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-4">{t('technologyRadar.title')}</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We continuously monitor, evaluate, and adopt emerging technologies to ensure we&apos;re delivering the most effective and future-proof solutions for our clients.
+            {t('technologyRadar.description')}
           </p>
         </motion.div>
 
         <div className="flex flex-wrap justify-center gap-3 mb-8">
           <Badge variant="outline" className="bg-green-500/10 text-green-500 hover:bg-green-500/20">
-            Adopt
+            {t('technologyRadar.status.adopt', { fallback: 'Adopt' })}
           </Badge>
           <Badge variant="outline" className="bg-blue-500/10 text-blue-500 hover:bg-blue-500/20">
-            Trial
+            {t('technologyRadar.status.trial', { fallback: 'Trial' })}
           </Badge>
           <Badge variant="outline" className="bg-yellow-500/10 text-yellow-500 hover:bg-yellow-500/20">
-            Assess
+            {t('technologyRadar.status.assess', { fallback: 'Assess' })}
           </Badge>
           <Badge variant="outline" className="bg-red-500/10 text-red-500 hover:bg-red-500/20">
-            Hold
+            {t('technologyRadar.status.hold', { fallback: 'Hold' })}
           </Badge>
         </div>
 
@@ -250,7 +315,7 @@ export default function TechnologyRadar() {
                           <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                               <span className="w-3 h-3 rounded-full bg-green-500"></span>
-                              Adopt
+                              {t('technologyRadar.status.adopt', { fallback: 'Adopt' })}
                             </CardTitle>
                             <CardDescription>{statusDescriptions.adopt}</CardDescription>
                           </CardHeader>
@@ -270,7 +335,7 @@ export default function TechnologyRadar() {
                           <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                               <span className="w-3 h-3 rounded-full bg-blue-500"></span>
-                              Trial
+                              {t('technologyRadar.status.trial', { fallback: 'Trial' })}
                             </CardTitle>
                             <CardDescription>{statusDescriptions.trial}</CardDescription>
                           </CardHeader>
@@ -290,7 +355,7 @@ export default function TechnologyRadar() {
                           <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                               <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
-                              Assess
+                              {t('technologyRadar.status.assess', { fallback: 'Assess' })}
                             </CardTitle>
                             <CardDescription>{statusDescriptions.assess}</CardDescription>
                           </CardHeader>
@@ -310,7 +375,7 @@ export default function TechnologyRadar() {
                           <CardHeader>
                             <CardTitle className="flex items-center gap-2">
                               <span className="w-3 h-3 rounded-full bg-red-500"></span>
-                              Hold
+                              {t('technologyRadar.status.hold', { fallback: 'Hold' })}
                             </CardTitle>
                             <CardDescription>{statusDescriptions.hold}</CardDescription>
                           </CardHeader>
@@ -345,7 +410,7 @@ export default function TechnologyRadar() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <span className="w-3 h-3 rounded-full bg-green-500"></span>
-                        Adopt
+                        {t('technologyRadar.status.adopt', { fallback: 'Adopt' })}
                       </CardTitle>
                       <CardDescription>{statusDescriptions.adopt}</CardDescription>
                     </CardHeader>
@@ -363,7 +428,7 @@ export default function TechnologyRadar() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <span className="w-3 h-3 rounded-full bg-blue-500"></span>
-                        Trial
+                        {t('technologyRadar.status.trial', { fallback: 'Trial' })}
                       </CardTitle>
                       <CardDescription>{statusDescriptions.trial}</CardDescription>
                     </CardHeader>
@@ -381,7 +446,7 @@ export default function TechnologyRadar() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
-                        Assess
+                        {t('technologyRadar.status.assess', { fallback: 'Assess' })}
                       </CardTitle>
                       <CardDescription>{statusDescriptions.assess}</CardDescription>
                     </CardHeader>
@@ -399,7 +464,7 @@ export default function TechnologyRadar() {
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
                         <span className="w-3 h-3 rounded-full bg-red-500"></span>
-                        Hold
+                        {t('technologyRadar.status.hold', { fallback: 'Hold' })}
                       </CardTitle>
                       <CardDescription>{statusDescriptions.hold}</CardDescription>
                     </CardHeader>

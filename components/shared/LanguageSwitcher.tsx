@@ -9,8 +9,8 @@ import {
   DropdownMenuItem, 
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
-import { Globe, Loader2 } from 'lucide-react';
-import { locales, defaultLocale, preloadAllTranslations } from '@/hooks/useTranslations';
+import { Globe } from 'lucide-react';
+import { locales, defaultLocale, useTranslations } from '@/hooks/useTranslations';
 
 // Language options
 const languages = [
@@ -22,6 +22,7 @@ export default function LanguageSwitcher() {
   const [currentLocale, setCurrentLocale] = useState(defaultLocale);
   const [isOpen, setIsOpen] = useState(false);
   const [isPending, setIsPending] = useState(false);
+  const { t } = useTranslations('common');
 
   useEffect(() => {
     // Get locale from cookie on component mount
@@ -51,6 +52,21 @@ export default function LanguageSwitcher() {
         await import(`../../locales/${locale}/common.json`);
         // Preload home translations
         await import(`../../locales/${locale}/home.json`);
+        // Preload progress translations
+        await import(`../../locales/${locale}/progress.json`);
+        // Preload international translations
+        await import(`../../locales/${locale}/international.json`).catch(() => console.warn(`No international translations for ${locale}`));
+        // Preload blog translations
+        await import(`../../locales/${locale}/blog.json`).catch(() => console.warn(`No blog translations for ${locale}`));
+        
+        // Preload blog article translations
+        try {
+          await import(`../../locales/${locale}/blog/article-1.json`);
+          await import(`../../locales/${locale}/blog/article-2.json`);
+          await import(`../../locales/${locale}/blog/article-3.json`);
+        } catch (err) {
+          console.warn(`Error loading blog articles for ${locale}:`, err);
+        }
         // Reload page to apply new translations
         window.location.reload();
       } catch (error) {
@@ -73,7 +89,7 @@ export default function LanguageSwitcher() {
           disabled={isPending}
         >
           <Globe className="h-5 w-5" />
-          <span className="sr-only">Switch Language</span>
+          <span className="sr-only">{t('languageSwitcher.switchLanguage')}</span>
           <span className="absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-medium text-primary-foreground">
             {currentLocale.toUpperCase()}
           </span>
