@@ -22,6 +22,13 @@ function getCirclePosition(index: number, total: number, radius: number) {
 }
 
 export default function EcosystemeShowcase() {
+  // Client-side only component
+  const [isMounted, setIsMounted] = useState(false);
+  
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+  
   const { t } = useTranslations('ecosystem');
   // Define partner type for better type safety
   type Partner = {
@@ -40,33 +47,40 @@ export default function EcosystemeShowcase() {
   const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
   const [open, setOpen] = useState(false);
   
-  // Load partner data from translations
-  const partners = useMemo(() => [
+  // Define static partner data structure to avoid translation dependency issues
+  const partnerData = [
     { 
       id: "taskmate",
-      name: t('showcase.partners.taskmate.name'),
-      description: t('showcase.partners.taskmate.description'),
-      discount: t('showcase.partners.taskmate.discount'),
-      category: t('showcase.partners.taskmate.category'),
       color: "#4ade80" // green-400
     },
     { 
       id: "sharka",
-      name: t('showcase.partners.sharka.name'),
-      description: t('showcase.partners.sharka.description'),
-      discount: t('showcase.partners.sharka.discount'),
-      category: t('showcase.partners.sharka.category'),
       color: "#f97316" // orange-500
     },
     { 
       id: "cordunite",
-      name: t('showcase.partners.cordunite.name'),
-      description: t('showcase.partners.cordunite.description'),
-      discount: t('showcase.partners.cordunite.discount'),
-      category: t('showcase.partners.cordunite.category'),
       color: "#8b5cf6" // violet-500
     }
-  ], [t]);
+  ];
+  
+  // Load partner data from translations - only when mounted to avoid SSR issues
+  const partners = useMemo(() => {
+    if (!isMounted) return [];
+    
+    try {
+      return partnerData.map(partner => ({
+        id: partner.id,
+        name: t(`showcase.partners.${partner.id}.name`),
+        description: t(`showcase.partners.${partner.id}.description`),
+        discount: t(`showcase.partners.${partner.id}.discount`),
+        category: t(`showcase.partners.${partner.id}.category`),
+        color: partner.color
+      }));
+    } catch (error) {
+      console.error('Error loading partner data:', error);
+      return [];
+    }
+  }, [t, isMounted]);
   const [isMobile, setIsMobile] = useState(false);
   const [zoomLevel, setZoomLevel] = useState(1);
   const [hoveredPartner, setHoveredPartner] = useState<string | null>(null);
@@ -108,7 +122,10 @@ export default function EcosystemeShowcase() {
     return () => window.removeEventListener('resize', updateRadius);
   }, []);
   
-  const circleRadius = baseCircleRadius * zoomLevel;
+  // Memoize the circle radius to prevent unnecessary recalculations
+  const circleRadius = useMemo(() => baseCircleRadius * zoomLevel, [baseCircleRadius, zoomLevel]);
+  
+  // Circle radius is now memoized above
   
   // Use client-side rendering only for slot positions
   const [slots, setSlots] = useState(() => {
@@ -120,32 +137,33 @@ export default function EcosystemeShowcase() {
   
   // Calculate positions client-side only
   useEffect(() => {
+    if (!isMounted) return;
+    
     const calculatedSlots = Array(totalSlots).fill(null).map((_, index) => ({
       position: getCirclePosition(index, totalSlots, circleRadius),
       circle: "single"
     }));
     setSlots(calculatedSlots);
-  }, [totalSlots, circleRadius]);
+  }, [totalSlots, circleRadius, isMounted]);
   
   // Partner type already defined above
-
-  // Assign partners to slots (first 3 slots of inner circle)
-  const [partnersWithPositions, setPartnersWithPositions] = useState<Partner[]>([]);
   
-  // Update partner positions when slots change
-  useEffect(() => {
-    if (slots[0].position.x === 0 && slots[0].position.y === 0) return;
+  // Memoize partner positions instead of using state
+  const partnersWithPositions = useMemo(() => {
+    if (!isMounted || partners.length === 0 || slots.length === 0 || 
+        (slots[0] && slots[0].position.x === 0 && slots[0].position.y === 0)) {
+      return [];
+    }
     
-    const newPartnersWithPositions = partners.map((partner, index) => {
+    return partners.map((partner, index) => {
+      // Distribute partners evenly around the circle
       const slotIndex = index * Math.floor(totalSlots / partners.length);
       return {
         ...partner,
         position: slots[slotIndex]?.position || { x: 0, y: 0 }
       };
     });
-    
-    setPartnersWithPositions(newPartnersWithPositions);
-  }, [slots, partners, totalSlots]);
+  }, [slots, partners, totalSlots, isMounted]);
   
   // Handle partner click
   const handlePartnerClick = (partner: (typeof partners)[0]) => {
@@ -322,18 +340,22 @@ export default function EcosystemeShowcase() {
                       onMouseLeave={() => setHoveredPartner(null)}
                       style={{ 
                         left: `calc(50% + ${Math.round(position.x)}px)`, 
-                        top: `calc(50% + ${Math.round(position.y)}px)`,
-                        transform: hoveredPartner === partner.id ? 'scale(1.1)' : 'scale(1)',
-                        transition: 'transform 0.2s'
+                        top: `calc(50% + ${Math.round(position.y)}px)`
                       }}
+                      animate={{
+                        scale: hoveredPartner === partner.id ? 1.1 : 1
+                      }}
+                      transition={{ duration: 0.2 }}
                     >
-                      <div 
+                      <motion.div 
                         className="rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center border-2"
-                        style={{ 
+                        animate={{ 
                           width: isHovered ? '20px' : '14px', 
-                          height: isHovered ? '20px' : '14px',
-                          borderColor: color,
-                          transition: 'all 0.2s ease'
+                          height: isHovered ? '20px' : '14px'
+                        }}
+                        transition={{ duration: 0.2 }}
+                        style={{ 
+                          borderColor: color
                         }}
                       >
                         <span 
@@ -342,16 +364,16 @@ export default function EcosystemeShowcase() {
                         >
                           {partner.name.substring(0, 1)}
                         </span>
-                      </div>
+                      </motion.div>
                       
                       {/* Connection line to center */}
                       <svg className="absolute top-0 left-0 z-10 opacity-40" style={{width: '100%', height: '100%'}}>
                         <line 
                           x1="0" 
                           y1="0" 
-                          x2={Math.round((position.x - (partnersWithPositions.find(p => p.id === 'cordunite')?.position?.x || 0)) * 100) / 100} 
-                          y2={Math.round((position.y - (partnersWithPositions.find(p => p.id === 'cordunite')?.position?.y || 0)) * 100) / 100} 
-                          stroke="#8b5cf6" 
+                          x2="0" 
+                          y2={-Math.round(circleRadius * 0.6)} 
+                          stroke={color} 
                           strokeWidth="1"
                           strokeOpacity="0.5"
                         />
@@ -395,11 +417,11 @@ export default function EcosystemeShowcase() {
                   <DialogTitle>{selectedPartner.name}</DialogTitle>
                 </div>
                 <DialogDescription>
-                  {selectedPartner.category}
+                  {t(`partners.categories.${selectedPartner.category.toLowerCase().replace(/\s+/g, '_')}.title`, { fallback: selectedPartner.category })}
                 </DialogDescription>
                 <div className="mt-2">
                   <Badge variant="outline">
-                    {t('showcase.partnerCategory', { category: selectedPartner.category })}
+                    {t('showcase.partnerCategory', { category: t(`partners.categories.${selectedPartner.category.toLowerCase().replace(/\s+/g, '_')}.title`, { fallback: selectedPartner.category }) })}
                   </Badge>
                 </div>
               </DialogHeader>

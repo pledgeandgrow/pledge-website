@@ -1,13 +1,16 @@
 {
   "meta": {
     "title": "Carrières | Pledge & Grow",
-    "description": "Rejoignez notre équipe chez Pledge & Grow et faites partie d'une entreprise dynamique dédiée à la création de solutions numériques innovantes. Découvrez les postes ouverts et notre culture d'entreprise."
+    "description": "Rejoignez notre équipe chez Pledge & Grow et faites partie d'une entreprise dynamique dédiée à la création de solutions numériques innovantes. Découvrez les postes ouverts et notre culture d'entreprise.",
+    "home": "Accueil",
+    "careers": "Carrières"
   },
   "breadcrumbs": {
     "home": "Accueil",
     "careers": "Carrières",
     "backToPositions": "Retour à tous les postes"
   },
+
   "whyJoinUs": {
     "title": "Pourquoi Rejoindre Pledge & Grow",
     "description": "Nous sommes plus qu'un simple lieu de travail. Nous sommes une communauté de professionnels passionnés dédiés à la croissance, l'innovation et à faire la différence.",
@@ -62,7 +65,7 @@
   "openPositions": {
     "title": "Postes Ouverts",
     "description": "Explorez nos offres d'emploi actuelles et trouvez le poste parfait correspondant à vos compétences et objectifs de carrière.",
-    "noPositions": "Aucun poste ne correspond à vos critères de recherche. Veuillez ajuster vos filtres.",
+    "noPositions": "Aucun poste ouvert pour le moment. Veuillez vérifier plus tard ou nous envoyer votre CV.",
     "filters": {
       "search": "Rechercher des postes...",
       "department": "Filtrer par département",
@@ -72,7 +75,14 @@
     },
     "positionCard": {
       "applyNow": "Postuler Maintenant",
+      "posted": "Publié le",
       "postedOn": "Publié le",
+      "today": "aujourd'hui",
+      "yesterday": "hier",
+      "daysAgo": "jours",
+      "department": "Département",
+      "location": "Lieu",
+      "employmentType": "Type d'emploi",
       "viewDetails": "Voir les Détails",
       "remote": "Télétravail",
       "hybrid": "Hybride",
@@ -80,11 +90,14 @@
       "on-site": "Sur site",
       "fulltime": "Temps plein",
       "full-time": "Temps plein",
+      "temps-plein": "Temps plein",
       "parttime": "Temps partiel",
       "part-time": "Temps partiel",
       "contract": "Contrat",
-      "internship": "Stage"
+      "internship": "Stage",
+      "stage": "Stage"
     },
+    "backToPositions": "Retour à tous les postes",
     "departments": {
       "engineering": "Ingénierie",
       "design": "Design",
@@ -93,10 +106,17 @@
       "operations": "Opérations",
       "customerSupport": "Support Client",
       "executive": "Direction",
+      "direction": "Direction",
       "it": "Informatique",
-      "development": "Développement"
+      "development": "Développement",
+      "ingénierie": "Ingénierie",
+      "ventes": "Ventes",
+      "temps-plein": "Temps plein",
+      "stage": "Stage"
     }
   },
+
+
   "applicationProcess": {
     "title": "Notre Processus de Candidature",
     "description": "Nous avons conçu un processus de recrutement simple et transparent pour nous aider à trouver les meilleurs talents et vous donner une clarté à chaque étape.",
@@ -132,8 +152,12 @@
     "reportingTo": "Responsable Hiérarchique",
     "department": "Département",
     "requiredSkills": "Compétences Requises",
-    "salaryRange": "Fourchette de Salaire",
+    "salary": "Fourchette de Salaire",
     "applyNow": "Postuler Maintenant",
+    "applyText": "Prêt à rejoindre notre équipe? Soumettez votre candidature aujourd'hui.",
+    "submitApplication": "Soumettre une Candidature",
+    "sharePosition": "Partager le Poste",
+    "keySkills": "Compétences Clés",
     "startDate": "Date de Début"
   },
   "cta": {

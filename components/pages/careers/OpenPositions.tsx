@@ -13,16 +13,32 @@ import { useTranslatedJobPositions } from "@/data/careers-data";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export default function OpenPositions() {
-  const { t } = useTranslations('careers');
+  const { t, locale } = useTranslations('careers');
   const translatedJobs = useTranslatedJobPositions();
-  
-  // Debug: Log the number of positions and their IDs
-  console.log(`Number of positions: ${translatedJobs.length}`);
-  console.log('Position IDs:', translatedJobs.map(job => job.id));
   
   const [searchTerm, setSearchTerm] = useState("");
   const [departmentFilter, setDepartmentFilter] = useState("all");
   const [locationTypeFilter, setLocationTypeFilter] = useState("all");
+  
+  // Format date with translations
+  const formatDate = (dateString: string): string => {
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffTime = Math.abs(now.getTime() - date.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays === 1) {
+      return t('openPositions.positionCard.today', { fallback: 'today' });
+    } else if (diffDays === 2) {
+      return t('openPositions.positionCard.yesterday', { fallback: 'yesterday' });
+    } else if (diffDays <= 7) {
+      return `${diffDays - 1} ${t('openPositions.positionCard.daysAgo', { fallback: 'days ago' })}`;
+    } else {
+      // Use the browser's locale for date formatting based on current language
+      const localeString = locale === 'fr' ? 'fr-FR' : 'en-US';
+      return date.toLocaleDateString(localeString, { month: 'short', day: 'numeric', year: 'numeric' });
+    }
+  };
 
   // Get unique departments for filter
   const departments = ["all", ...new Set(translatedJobs.map(job => job.department))];
@@ -228,21 +244,4 @@ export default function OpenPositions() {
       </div>
     </section>
   );
-}
-
-function formatDate(dateString: string): string {
-  const date = new Date(dateString);
-  const now = new Date();
-  const diffTime = Math.abs(now.getTime() - date.getTime());
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  
-  if (diffDays === 1) {
-    return "today";
-  } else if (diffDays === 2) {
-    return "yesterday";
-  } else if (diffDays <= 7) {
-    return `${diffDays - 1} days ago`;
-  } else {
-    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  }
 }

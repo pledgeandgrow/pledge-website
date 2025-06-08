@@ -1,13 +1,16 @@
 {
   "meta": {
     "title": "Careers | Pledge & Grow",
-    "description": "Join our team at Pledge & Grow and be part of a dynamic company dedicated to creating innovative digital solutions. Explore open positions and our company culture."
+    "description": "Join our team at Pledge & Grow and be part of a dynamic company dedicated to creating innovative digital solutions. Explore open positions and our company culture.",
+    "home": "Home",
+    "careers": "Careers"
   },
   "breadcrumbs": {
     "home": "Home",
     "careers": "Careers",
     "backToPositions": "Back to all positions"
   },
+
   "whyJoinUs": {
     "title": "Why Join Pledge & Grow",
     "description": "We're more than just a workplace. We're a community of passionate professionals dedicated to growth, innovation, and making a difference.",
@@ -61,31 +64,42 @@
   },
   "openPositions": {
     "title": "Open Positions",
-    "description": "Explore our current job openings and find the perfect role to match your skills and career goals.",
-    "subtitle": "Join our team and make an impact",
-    "noPositions": "No positions match your search criteria. Try adjusting your filters.",
+    "description": "Join our growing team and help us shape the future of digital innovation. Explore our current openings below and find the perfect role for your skills and ambitions.",
+    "searchPlaceholder": "Search positions...",
+    "filterDepartment": "Filter by department",
+    "filterLocationType": "Filter by location type",
+    "noPositions": "No open positions at the moment. Please check back later or send us your resume.",
     "filters": {
-      "search": "Search positions",
+      "search": "Search positions...",
       "department": "Filter by department",
       "locationType": "Filter by location type",
-      "allDepartments": "All Departments",
-      "allLocationTypes": "All Location Types"
+      "allDepartments": "All departments",
+      "allLocationTypes": "All location types"
     },
     "positionCard": {
-      "applyNow": "Apply Now",
+      "posted": "Posted",
       "postedOn": "Posted on",
+      "today": "today",
+      "yesterday": "yesterday",
+      "daysAgo": "days ago",
+      "department": "Department",
+      "location": "Location",
+      "employmentType": "Employment Type",
       "viewDetails": "View Details",
-      "remote": "Remote",
-      "hybrid": "Hybrid",
-      "onsite": "Onsite",
-      "on-site": "On-site",
       "fulltime": "Full-time",
       "full-time": "Full-time",
+      "temps-plein": "Full-time",
       "parttime": "Part-time",
       "part-time": "Part-time",
       "contract": "Contract",
-      "internship": "Internship"
+      "internship": "Internship",
+      "stage": "Internship",
+      "remote": "Remote",
+      "hybrid": "Hybrid",
+      "onsite": "On-site",
+      "on-site": "On-site"
     },
+    "backToPositions": "Back to all positions",
     "departments": {
       "engineering": "Engineering",
       "design": "Design",
@@ -94,10 +108,15 @@
       "operations": "Operations",
       "customerSupport": "Customer Support",
       "executive": "Executive",
+      "direction": "Executive",
       "it": "IT",
-      "development": "Development"
+      "development": "Development",
+      "ingénierie": "Engineering",
+      "ventes": "Sales"
     }
   },
+
+
   "applicationProcess": {
     "title": "Our Application Process",
     "description": "We've designed a straightforward and transparent hiring process to help us find the right talent and give you clarity every step of the way.",
@@ -133,8 +152,12 @@
     "reportingTo": "Reporting To",
     "department": "Department",
     "requiredSkills": "Required Skills",
-    "salaryRange": "Salary Range",
+    "salary": "Salary Range",
     "applyNow": "Apply Now",
+    "applyText": "Ready to join our team? Submit your application today.",
+    "submitApplication": "Submit Application",
+    "sharePosition": "Share Position",
+    "keySkills": "Key Skills",
     "startDate": "Start Date"
   },
   "cta": {

@@ -1,13 +1,13 @@
 import { useTranslations } from '@/hooks/useTranslations';
 
-// Job position interface matching the structure in careers.json
+// Job position interface
 export interface JobPosition {
   id: string;
   title: string;
   department: string;
   location: string;
-  locationType: "Remote" | "Hybrid" | "On-site";
-  employmentType: "Full-time" | "Part-time" | "Contract" | "Internship";
+  locationType: "Remote" | "Hybrid" | "On-site" | "À distance" | "Hybride" | "Sur site";
+  employmentType: "Full-time" | "Part-time" | "Contract" | "Internship" | "Temps plein" | "Temps partiel" | "Contrat" | "Stage";
   description: string;
   postedDate: string;
   overview: string;
@@ -21,66 +21,66 @@ export interface JobPosition {
   startDate?: string;
 }
 
+// Job IDs that we know exist in the translations
+// These must match exactly the keys in the positions object in careers.json
+const jobIds = ["cso", "marketing-intern", "it-intern", "salesman"];
+
 /**
- * Hook to get translated job positions from careers.json
- * @returns Array of translated job positions
+ * Hook to get job positions with translations applied
+ * @returns Array of job positions
  */
 export function useTranslatedJobPositions(): JobPosition[] {
   const { t } = useTranslations('careers');
   
   try {
-    // Get positions object from careers.json
-    const positions = t('positions', { returnObjects: true, fallback: {} }) as Record<string, any>;
+    // Create an array to store all job positions
+    const positions: JobPosition[] = [];
     
-    console.log('Positions object:', positions);
-    console.log('Position keys in careers.json:', Object.keys(positions));
+    // Get all positions from translations directly
+    const allPositions = t('positions', { returnObjects: true, fallback: {} });
     
-    if (!positions || typeof positions !== 'object') {
-      console.error('Invalid positions data structure in careers.json');
-      return [];
+    // If we have hardcoded IDs, use those to ensure we only get valid positions
+    if (jobIds && jobIds.length > 0) {
+      // Process each job ID
+      jobIds.forEach(id => {
+        try {
+          // Get position data from translations
+          const position = allPositions[id];
+          
+          if (!position || typeof position !== 'object') {
+            return;
+          }
+          
+          // Create a job position with data from translations
+          const jobPosition: JobPosition = {
+            id,
+            title: position.title || id,
+            department: position.department || '',
+            location: position.location || '',
+            locationType: position.locationType || 'Remote',
+            employmentType: position.employmentType || 'Full-time',
+            description: position.description || '',
+            postedDate: position.postedDate || new Date().toISOString().split('T')[0],
+            overview: position.overview || '',
+            responsibilities: Array.isArray(position.responsibilities) ? position.responsibilities : [],
+            requirements: Array.isArray(position.requirements) ? position.requirements : [],
+            benefits: Array.isArray(position.benefits) ? position.benefits : [],
+            applicationProcess: position.applicationProcess || '',
+            salary: position.salary,
+            skills: Array.isArray(position.skills) ? position.skills : [],
+            reportingTo: position.reportingTo,
+            startDate: position.startDate
+          };
+          
+          positions.push(jobPosition);
+        } catch {
+          // Silent error handling
+        }
+      });
     }
     
-    // Create an array of job positions from the positions object
-    const jobPositions: JobPosition[] = [];
-    
-    // Process each position entry
-    Object.entries(positions).forEach(([id, position]: [string, any]) => {
-      if (!position || typeof position !== 'object') {
-        console.error(`Invalid position data for ID: ${id}`);
-        return; // Skip this entry
-      }
-      
-      console.log(`Processing position ${id}:`, {
-        title: position.title,
-        department: position.department,
-        employmentType: position.employmentType
-      });
-      
-      // Create a valid JobPosition object with fallbacks for all fields
-      jobPositions.push({
-        id,
-        title: position.title || '',
-        department: position.department || '',
-        location: position.location || '',
-        locationType: (position.locationType as "Remote" | "Hybrid" | "On-site") || 'Remote',
-        employmentType: (position.employmentType as "Full-time" | "Part-time" | "Contract" | "Internship") || 'Full-time',
-        description: position.description || '',
-        postedDate: position.postedDate || new Date().toISOString().split('T')[0],
-        overview: position.overview || '',
-        responsibilities: Array.isArray(position.responsibilities) ? position.responsibilities : [],
-        requirements: Array.isArray(position.requirements) ? position.requirements : [],
-        benefits: Array.isArray(position.benefits) ? position.benefits : [],
-        applicationProcess: position.applicationProcess || '',
-        salary: position.salary || '',
-        skills: Array.isArray(position.skills) ? position.skills : [],
-        reportingTo: position.reportingTo || '',
-        startDate: position.startDate || ''
-      });
-    });
-      
-    return jobPositions;
-  } catch (error) {
-    console.error('Error processing career data:', error);
+    return positions;
+  } catch {
     return [];
   }
 }
@@ -91,38 +91,55 @@ export function useTranslatedJobPositions(): JobPosition[] {
  */
 export function useTranslatedJobDetails() {
   const { t } = useTranslations('careers');
-  const allPositions = useTranslatedJobPositions();
   
   return (id: string): JobPosition | undefined => {
+    if (!id) return undefined;
+    
     try {
-      console.log(`Looking for job position with ID: ${id}`);
+      // Normalize the ID to ensure consistent matching
+      const normalizedId = String(id).trim();
       
-      // First try to find the position in our already processed positions
-      const foundPosition = allPositions.find(position => position.id === id);
-      if (foundPosition) {
-        console.log(`Found position ${id} in cached positions`);
-        return foundPosition;
-      }
+      // Get all positions from translations directly
+      const allPositions = t('positions', { returnObjects: true, fallback: {} });
       
-      // If not found, try to get it directly from translations
-      const positions = t('positions', { returnObjects: true, fallback: {} }) as Record<string, any>;
-      const position = positions[id];
+      // Get position data from translations
+      const position = allPositions[normalizedId];
       
-      console.log(`Direct lookup for position ${id}:`, position ? 'Found' : 'Not found');
-      
-      if (!position || typeof position !== 'object' || !('title' in position)) {
-        console.error(`Job position with ID ${id} not found or invalid`);
+      if (!position || typeof position !== 'object') {
+        // Try to find the position by ID in our known job IDs
+        if (jobIds.includes(normalizedId)) {
+          // If the ID is valid but data is missing, create a minimal job position
+          return {
+            id: normalizedId,
+            title: normalizedId,
+            department: '',
+            location: '',
+            locationType: 'Remote',
+            employmentType: 'Full-time',
+            description: '',
+            postedDate: new Date().toISOString().split('T')[0],
+            overview: '',
+            responsibilities: [],
+            requirements: [],
+            benefits: [],
+            applicationProcess: '',
+            skills: [],
+            reportingTo: undefined,
+            startDate: undefined,
+            salary: undefined
+          };
+        }
         return undefined;
       }
       
-      // Create a valid JobPosition object with fallbacks for all fields
+      // Create a job position with data from translations
       const jobPosition: JobPosition = {
-        id,
-        title: position.title || '',
+        id: normalizedId,
+        title: position.title || normalizedId,
         department: position.department || '',
         location: position.location || '',
-        locationType: (position.locationType as "Remote" | "Hybrid" | "On-site") || 'Remote',
-        employmentType: (position.employmentType as "Full-time" | "Part-time" | "Contract" | "Internship") || 'Full-time',
+        locationType: position.locationType || 'Remote',
+        employmentType: position.employmentType || 'Full-time',
         description: position.description || '',
         postedDate: position.postedDate || new Date().toISOString().split('T')[0],
         overview: position.overview || '',
@@ -130,15 +147,14 @@ export function useTranslatedJobDetails() {
         requirements: Array.isArray(position.requirements) ? position.requirements : [],
         benefits: Array.isArray(position.benefits) ? position.benefits : [],
         applicationProcess: position.applicationProcess || '',
-        salary: position.salary || '',
+        salary: position.salary,
         skills: Array.isArray(position.skills) ? position.skills : [],
-        reportingTo: position.reportingTo || '',
-        startDate: position.startDate || ''
+        reportingTo: position.reportingTo,
+        startDate: position.startDate
       };
       
       return jobPosition;
-    } catch (error) {
-      console.error(`Error getting job details for ID ${id}:`, error);
+    } catch {
       return undefined;
     }
   };

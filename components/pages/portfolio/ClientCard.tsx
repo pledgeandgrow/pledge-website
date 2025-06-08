@@ -37,7 +37,7 @@ export default function ClientCard({ project }: ClientCardProps) {
       console.error(`Error processing technologies for project ${project.id}:`, error);
       return [];
     }
-  }, [project.methodology]);
+  }, [project.methodology, project.id]);
   
   // Use direct values for deliverables
   const deliverables = useMemo(() => {
@@ -51,7 +51,7 @@ export default function ClientCard({ project }: ClientCardProps) {
       console.error(`Error processing deliverables for project ${project.id}:`, error);
       return [];
     }
-  }, [project.deliverables]);
+  }, [project.deliverables, project.id]);
 
   return (
     <>

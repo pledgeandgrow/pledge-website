@@ -28,7 +28,7 @@ export default function EcosystemeModal({ partner }: EcosystemeModalProps) {
   // Get the benefits and use cases for the current partner from translations - memoized to prevent unnecessary re-renders
   const benefits = useMemo(() => {
     try {
-      const partnerBenefits = t(`partners.${partner.id}.benefits`, { returnObjects: true, fallback: [] });
+      const partnerBenefits = t(`showcase.partners.${partner.id}.benefits`, { returnObjects: true, fallback: [] });
       return Array.isArray(partnerBenefits) ? partnerBenefits : [];
     } catch (error) {
       console.error(`Error getting benefits for partner ${partner.id}:`, error);
@@ -38,7 +38,7 @@ export default function EcosystemeModal({ partner }: EcosystemeModalProps) {
 
   const useCases = useMemo(() => {
     try {
-      const partnerUseCases = t(`partners.${partner.id}.useCases`, { returnObjects: true, fallback: [] });
+      const partnerUseCases = t(`showcase.partners.${partner.id}.useCases`, { returnObjects: true, fallback: [] });
       return Array.isArray(partnerUseCases) ? partnerUseCases : [];
     } catch (error) {
       console.error(`Error getting use cases for partner ${partner.id}:`, error);
@@ -61,11 +61,11 @@ export default function EcosystemeModal({ partner }: EcosystemeModalProps) {
         <TabsContent value="overview" className="space-y-4">
           {/* Partner Info */}
           <div>
-            <p className="text-gray-600 dark:text-gray-300 text-sm">{t(`partners.${partner.id}.description`, { fallback: partner.description })}</p>
+            <p className="text-gray-600 dark:text-gray-300 text-sm">{t(`showcase.partners.${partner.id}.description`, { fallback: partner.description })}</p>
             
             <div className="flex items-center gap-2 mt-3">
               <Badge variant="outline" className="bg-gray-50 dark:bg-gray-800">
-                {t(`partners.${partner.id}.category`, { fallback: partner.category })}
+                {t(`partners.categories.${partner.category.toLowerCase().replace(/\s+/g, '_')}.title`, { fallback: partner.category })}
               </Badge>
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function EcosystemeModal({ partner }: EcosystemeModalProps) {
               className="font-medium text-base"
               style={{ color: partnerColor }}
             >
-              {t(`partners.${partner.id}.discount`, { fallback: partner.discount })}
+              {t(`showcase.partners.${partner.id}.discount`, { fallback: partner.discount })}
             </p>
           </div>
           
