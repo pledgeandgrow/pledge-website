@@ -56,7 +56,7 @@ export async function POST(request: Request) {
     // Email options
     const mailOptions = {
       from: process.env.SMTP_FROM || 'noreply@pledgeandgrow.com',
-      to: 'mehdi.berel@pledgeandgrow.com',
+      to: 'support@pledgeandgrow.com',
       replyTo: email,
       subject: emailSubject,
       text: `
