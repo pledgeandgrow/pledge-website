@@ -11,6 +11,12 @@
   "industrySolutions": {
     "title": "Our Industry Solutions",
     "description": "Discover how our digital expertise translates across different sectors to solve industry-specific challenges.",
+    "viewSolutions": "View Solutions",
+    "keySolutions": "Key Solutions",
+    "industryChallenges": "Industry Challenges",
+    "noSolutions": "No specific solutions listed.",
+    "noChallenges": "No specific challenges listed.",
+    "discussProject": "Discuss Your Project",
     "sectors": {
       "finance": {
         "title": "Finance & Banking",

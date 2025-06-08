@@ -79,7 +79,17 @@ export function TechStack({
   };
 
   const renderTechItem = (tech: TechItem) => {
-    const IconComponent = SiIcons[tech.icon];
+    // Dynamically get the icon component from SiIcons
+    let IconComponent;
+    try {
+      // Try to get the icon component directly
+      IconComponent = SiIcons[tech.icon];
+      
+      // Log for debugging
+      console.log(`Icon for ${tech.name}: ${tech.icon}, exists: ${!!IconComponent}`);
+    } catch (error) {
+      console.error(`Error getting icon for ${tech.name}:`, error);
+    }
     
     return (
       <TooltipProvider key={tech.name}>
@@ -87,13 +97,18 @@ export function TechStack({
           <TooltipTrigger asChild>
             <div className="flex flex-col items-center gap-2">
               <div className="bg-muted/50 p-3 rounded-lg flex items-center justify-center">
-                {IconComponent && (
+                {IconComponent ? (
                   <IconComponent
                     className={cn(
                       sizeClasses[size],
                       tech.color || "text-foreground"
                     )}
                   />
+                ) : (
+                  // Fallback for missing icons - show first letter of tech name
+                  <div className={cn("flex items-center justify-center text-center font-bold", sizeClasses[size], tech.color || "text-foreground")}>
+                    {tech.name.charAt(0)}
+                  </div>
                 )}
               </div>
               {showLabels && (

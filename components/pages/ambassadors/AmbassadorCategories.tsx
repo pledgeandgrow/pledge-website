@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface AmbassadorCategoriesProps {
   regions: string[];
@@ -13,6 +14,7 @@ export default function AmbassadorCategories({
   activeRegion, 
   setActiveRegion 
 }: AmbassadorCategoriesProps) {
+  const { t } = useTranslations('ambassadors');
   return (
     <div className="mb-10">
       <div className="flex flex-wrap justify-center gap-2 md:gap-4">
@@ -21,7 +23,7 @@ export default function AmbassadorCategories({
           className="rounded-full"
           onClick={() => setActiveRegion("all")}
         >
-          Global
+          {t('ambassadorsList.regions.all')}
         </Button>
         
         {regions.map((region) => (
@@ -31,7 +33,7 @@ export default function AmbassadorCategories({
             className="rounded-full"
             onClick={() => setActiveRegion(region)}
           >
-            {region}
+            {t(`ambassadorsList.regions.${region.toLowerCase()}`)}
           </Button>
         ))}
       </div>

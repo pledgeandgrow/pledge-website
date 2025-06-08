@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 // Badge import removed as it was unused
 import Link from "next/link";
+import { useTranslations } from "@/hooks/useTranslations";
 // Carousel imports removed as they were unused
 
 interface Industry {
@@ -29,6 +30,7 @@ interface Industry {
 }
 
 export default function IndustrySolutions() {
+  const { t } = useTranslations('business-sectors');
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -45,50 +47,51 @@ export default function IndustrySolutions() {
     // Cleanup
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
-  const industries: Industry[] = [
+  // Get industry data from translations
+  const getIndustryData = (): Industry[] => [
     {
       id: "retail",
-      title: "Retail & E-commerce",
-      description: "Digital solutions that enhance the shopping experience, streamline operations, and drive sales across physical and online channels.",
+      title: t('industrySolutions.sectors.retail.title'),
+      description: t('industrySolutions.sectors.retail.description'),
       icon: <ShoppingBag className="h-10 w-10 text-primary" />,
-      solutions: ["E-commerce platforms", "Inventory management", "Customer loyalty apps", "Omnichannel integration", "Payment solutions"],
-      challenges: ["Increasing online competition", "Customer experience expectations", "Supply chain complexity", "Data security"],
+      solutions: t('industrySolutions.sectors.retail.keyFeatures', { returnObjects: true }) as string[],
+      challenges: t('industrySolutions.sectors.retail.challenges', { returnObjects: true }) as string[],
       caseStudyAvailable: true
     },
     {
       id: "manufacturing",
-      title: "Manufacturing",
-      description: "Technology solutions that optimize production processes, enhance quality control, and enable smart manufacturing initiatives.",
+      title: t('industrySolutions.sectors.manufacturing.title'),
+      description: t('industrySolutions.sectors.manufacturing.description'),
       icon: <Building2 className="h-10 w-10 text-primary" />,
-      solutions: ["IoT integration", "Predictive maintenance", "Supply chain optimization", "Quality management systems", "Production analytics"],
-      challenges: ["Operational efficiency", "Supply chain disruptions", "Legacy system integration", "Skilled workforce shortages"],
+      solutions: t('industrySolutions.sectors.manufacturing.keyFeatures', { returnObjects: true }) as string[],
+      challenges: t('industrySolutions.sectors.manufacturing.challenges', { returnObjects: true }) as string[],
       caseStudyAvailable: true
     },
     {
       id: "healthcare",
-      title: "Healthcare",
-      description: "Digital solutions that improve patient care, streamline administrative processes, and ensure compliance with healthcare regulations.",
+      title: t('industrySolutions.sectors.healthcare.title'),
+      description: t('industrySolutions.sectors.healthcare.description'),
       icon: <Stethoscope className="h-10 w-10 text-primary" />,
-      solutions: ["Patient management systems", "Telehealth platforms", "Medical record systems", "Healthcare analytics", "Compliance solutions"],
-      challenges: ["Data privacy regulations", "System interoperability", "Patient experience", "Administrative burden"],
+      solutions: t('industrySolutions.sectors.healthcare.keyFeatures', { returnObjects: true }) as string[],
+      challenges: t('industrySolutions.sectors.healthcare.challenges', { returnObjects: true }) as string[],
       caseStudyAvailable: true
     },
     {
       id: "education",
-      title: "Education",
-      description: "Technology solutions that enhance learning experiences, streamline administrative tasks, and facilitate communication between stakeholders.",
+      title: t('industrySolutions.sectors.education.title'),
+      description: t('industrySolutions.sectors.education.description'),
       icon: <GraduationCap className="h-10 w-10 text-primary" />,
-      solutions: ["Learning management systems", "Student information systems", "Virtual classrooms", "Educational analytics", "Administrative automation"],
-      challenges: ["Digital equity", "Engagement in online learning", "Data security", "Technology integration"],
+      solutions: t('industrySolutions.sectors.education.keyFeatures', { returnObjects: true }) as string[],
+      challenges: t('industrySolutions.sectors.education.challenges', { returnObjects: true }) as string[],
       caseStudyAvailable: false
     },
     {
       id: "finance",
-      title: "Finance & Banking",
-      description: "Secure digital solutions that modernize financial services, enhance customer experiences, and ensure regulatory compliance.",
+      title: t('industrySolutions.sectors.finance.title'),
+      description: t('industrySolutions.sectors.finance.description'),
       icon: <Briefcase className="h-10 w-10 text-primary" />,
-      solutions: ["Digital banking platforms", "Payment processing", "Fraud detection", "Regulatory compliance", "Financial analytics"],
-      challenges: ["Cybersecurity threats", "Regulatory compliance", "Legacy system modernization", "Fintech competition"],
+      solutions: t('industrySolutions.sectors.finance.keyFeatures', { returnObjects: true }) as string[],
+      challenges: t('industrySolutions.sectors.finance.challenges', { returnObjects: true }) as string[],
       caseStudyAvailable: true
     },
     {
@@ -120,6 +123,8 @@ export default function IndustrySolutions() {
     }
   ];
 
+  // Initialize industries data using translations
+  const industries = getIndustryData();
   const [activeIndustry, setActiveIndustry] = useState<Industry | null>(null);
 
   return (
@@ -133,10 +138,10 @@ export default function IndustrySolutions() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Industry Solutions
+            {t('industrySolutions.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Explore our specialized digital solutions tailored to address the unique challenges and opportunities in your industry.
+            {t('industrySolutions.description')}
           </p>
         </motion.div>
 
@@ -164,7 +169,7 @@ export default function IndustrySolutions() {
                       </CardContent>
                       <CardFooter>
                         <Button variant="outline" size="sm" className="w-full">
-                          View Solutions
+                          {t('industrySolutions.viewSolutions', { defaultValue: 'View Solutions' })}
                         </Button>
                       </CardFooter>
                     </Card>
@@ -216,7 +221,7 @@ export default function IndustrySolutions() {
                   </CardContent>
                   <CardFooter>
                     <Button variant="outline" size="sm" className="w-full">
-                      View Solutions
+                      {t('industrySolutions.viewSolutions', { defaultValue: 'View Solutions' })}
                     </Button>
                   </CardFooter>
                 </Card>
@@ -256,9 +261,9 @@ export default function IndustrySolutions() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
-                    <h4 className="text-lg font-semibold mb-3">Key Solutions</h4>
+                    <h4 className="text-lg font-semibold mb-3">{t('industrySolutions.keySolutions', { defaultValue: 'Key Solutions' })}</h4>
                     <ul className="space-y-2">
-                      {activeIndustry.solutions.map((solution, index) => (
+                      {Array.isArray(activeIndustry.solutions) ? activeIndustry.solutions.map((solution, index) => (
                         <li key={index} className="flex items-center gap-2">
                           <div className="bg-primary/10 p-1 rounded-full">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -267,13 +272,13 @@ export default function IndustrySolutions() {
                           </div>
                           {solution}
                         </li>
-                      ))}
+                      )) : <li className="text-muted-foreground">{t('industrySolutions.noSolutions', { defaultValue: 'No specific solutions listed.' })}</li>}
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-3">Industry Challenges</h4>
+                    <h4 className="text-lg font-semibold mb-3">{t('industrySolutions.industryChallenges', { defaultValue: 'Industry Challenges' })}</h4>
                     <ul className="space-y-2">
-                      {activeIndustry.challenges.map((challenge, index) => (
+                      {Array.isArray(activeIndustry.challenges) ? activeIndustry.challenges.map((challenge, index) => (
                         <li key={index} className="flex items-center gap-2">
                           <div className="bg-primary/10 p-1 rounded-full">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -284,7 +289,7 @@ export default function IndustrySolutions() {
                           </div>
                           {challenge}
                         </li>
-                      ))}
+                      )) : <li className="text-muted-foreground">{t('industrySolutions.noChallenges', { defaultValue: 'No specific challenges listed.' })}</li>}
                     </ul>
                   </div>
                 </div>
@@ -292,7 +297,7 @@ export default function IndustrySolutions() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-end">
                   <Button asChild>
                     <Link href={`/contact?subject=${activeIndustry.title} Solutions`}>
-                      Discuss Your Project
+                      {t('industrySolutions.discussProject', { defaultValue: 'Discuss Your Project' })}
                     </Link>
                   </Button>
                 </div>

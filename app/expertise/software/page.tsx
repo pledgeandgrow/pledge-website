@@ -1,51 +1,118 @@
+"use client";
+
 import React from "react";
-import { Metadata } from "next";
 import { 
   ExpertiseLayout, 
   ExpertiseFeatures, 
   ExpertiseTechnologies, 
   ExpertiseBenefits
 } from "@/components/pages/expertise";
-import { getExpertiseBySlug } from "@/data/expertise-data";
+import { useTranslations } from "@/hooks/useTranslations";
+import { TranslationLoader } from "@/components/ui/translation-loader";
 
-export const metadata: Metadata = {
-  title: "Software Development | Pledge & Grow",
-  description: "Custom software solutions tailored to your business needs. Our software development expertise helps you automate processes and improve efficiency.",
-};
+interface FeatureItem {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+interface TechnologyItem {
+  name: string;
+  logo?: string;
+  icon?: string;
+}
+
+interface BenefitItem {
+  title: string;
+  description: string;
+  icon: string;
+}
 
 export default function SoftwareExpertisePage() {
-  const expertise = getExpertiseBySlug('software');
-  
-  if (!expertise) {
-    return <div>Expertise not found</div>;
+  // Use translations for this expertise page
+  const { t, isLoading, translations } = useTranslations('software');
+
+  if (isLoading) {
+    return <TranslationLoader isLoading={isLoading}>
+      <div className="min-h-screen" />
+    </TranslationLoader>;
   }
+
+  // Extract data from translations
+  const features: FeatureItem[] = translations.features?.map((feature: { title: string; description: string; icon: string }) => ({
+    title: feature.title,
+    description: feature.description,
+    icon: feature.icon
+  })) || [];
+
+  const technologies: TechnologyItem[] = translations.technologies?.map((tech: { name: string; logo?: string; icon?: string }) => ({
+    name: tech.name,
+    logo: tech.logo,
+    icon: tech.icon
+  })) || [];
+
+  const benefits: BenefitItem[] = translations.benefits?.map((benefit: { title: string; description: string; icon: string }) => ({
+    title: benefit.title,
+    description: benefit.description,
+    icon: benefit.icon
+  })) || [];
+
+  // Basic expertise data for the layout
+  const expertise = {
+    slug: t('slug') || "software",
+    title: t('title') || "Software Development",
+    subtitle: t('subtitle') || "Custom software solutions tailored to your business needs",
+    description: t('description') || "We develop custom software applications that solve complex business challenges and streamline operations.",
+    heroImage: t('heroImage') || "/images/expertise/software-hero.jpg",
+    heroButton: t('heroButton') || "Start Your Software Project",
+    cta: {
+      title: t('cta.title') || "Ready to Build Your Custom Software?",
+      description: t('cta.description') || "Let's discuss your business challenges and create a solution that drives efficiency and growth.",
+      buttonText: t('cta.buttonText') || "Start Your Software Project",
+      buttonLink: t('cta.buttonLink') || "/contact"
+    }
+  };
+
+  // Section titles and subtitles from translations
+  const sectionTitles = {
+    features: {
+      title: t('sections.features.title') || "What We Offer",
+      subtitle: t('sections.features.subtitle') || "Software solutions tailored to your needs"
+    },
+    technologies: {
+      title: t('sections.technologies.title') || "Technologies & Tools",
+      subtitle: t('sections.technologies.subtitle') || "The best tools for your software solution"
+    },
+    benefits: {
+      title: t('sections.benefits.title') || "Benefits",
+      subtitle: t('sections.benefits.subtitle') || "How our software transforms your business"
+    }
+  };
 
   return (
     <ExpertiseLayout expertise={expertise}>
       {/* Features Section */}
       <ExpertiseFeatures 
-        features={expertise.features} 
-        title="Key Features"
-        subtitle="Everything you need for successful software solutions"
+        features={features}
+        title={sectionTitles.features.title}
+        subtitle={sectionTitles.features.subtitle}
       />
       
       {/* Technologies Section */}
-      {expertise.technologies && (
+      {technologies.length > 0 && (
         <ExpertiseTechnologies 
-          technologies={expertise.technologies}
-          title="Technologies We Use"
-          subtitle="Modern tools for robust software development"
+          technologies={technologies}
+          title={sectionTitles.technologies.title}
+          subtitle={sectionTitles.technologies.subtitle}
         />
       )}
       
       {/* Benefits Section */}
       <ExpertiseBenefits 
-        benefits={expertise.benefits}
-        title="Benefits of Custom Software"
-        subtitle="Why invest in tailored software solutions"
+        benefits={benefits}
+        title={sectionTitles.benefits.title}
+        subtitle={sectionTitles.benefits.subtitle}
       />
-      
-
     </ExpertiseLayout>
   );
 }

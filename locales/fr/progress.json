@@ -1,0 +1,69 @@
+{
+  "meta": {
+    "title": "Notre Progression | Pledge & Grow",
+    "description": "Explorez notre parcours, nos étapes clés et nos réalisations alors que nous continuons à grandir et à avoir un impact positif dans le paysage numérique."
+  },
+  "roadmap": {
+    "title": "Notre Feuille de Route",
+    "description": "Découvrez notre vision stratégique et nos prochaines étapes alors que nous continuons à innover et à élargir nos offres.",
+    "updatedQuarterly": "Mis à jour trimestriellement selon les tendances du secteur et les besoins des clients",
+    "items": {
+      "aiIntegration": {
+        "title": "Intégration Avancée d'IA",
+        "description": "Mise en œuvre de solutions d'IA pour l'analyse prédictive et l'automatisation",
+        "timeline": "T3 2025"
+      },
+      "blockchain": {
+        "title": "Solutions Blockchain pour Entreprises",
+        "description": "Infrastructure blockchain sécurisée et évolutive pour les entreprises",
+        "timeline": "T4 2025"
+      },
+      "globalCenters": {
+        "title": "Centres de Développement Mondiaux",
+        "description": "Support et capacités de développement 24/7 dans le monde entier",
+        "timeline": "T2 2026"
+      },
+      "security": {
+        "title": "Cadre de Sécurité Amélioré",
+        "description": "Protocoles de sécurité de nouvelle génération pour les applications d'entreprise",
+        "timeline": "T3 2026"
+      },
+      "integration": {
+        "title": "Plateforme d'Intégration Transparente",
+        "description": "Plateforme unifiée pour connecter divers systèmes d'entreprise",
+        "timeline": "T1 2027"
+      }
+    },
+    "navigation": {
+      "previous": "Précédent",
+      "next": "Suivant"
+    }
+  },
+  "futureVision": {
+    "title": "Notre Vision pour l'Avenir",
+    "description": "Nous construisons un avenir où la technologie permet aux entreprises d'accomplir davantage tout en maintenant la sécurité, la confidentialité et les normes éthiques.",
+    "pillars": {
+      "innovation": {
+        "title": "Innovation Continue",
+        "description": "Rester à la pointe des avancées technologiques pour fournir des solutions de pointe"
+      },
+      "sustainability": {
+        "title": "Durabilité Numérique",
+        "description": "Créer des solutions numériques écologiques qui minimisent l'impact environnemental"
+      },
+      "accessibility": {
+        "title": "Accessibilité Universelle",
+        "description": "Rendre la technologie accessible aux entreprises de toutes tailles et de tous secteurs"
+      },
+      "security": {
+        "title": "Sécurité Sans Compromis",
+        "description": "Prioriser la protection des données et la confidentialité dans toutes nos solutions"
+      }
+    }
+  },
+  "cta": {
+    "title": "Rejoignez-nous dans Notre Parcours",
+    "description": "Faites partie de notre histoire de croissance et aidez à façonner l'avenir de l'innovation numérique.",
+    "button": "Devenez Partenaire"
+  }
+}

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { ChevronRight } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface SitePlanSection {
   title: string;
@@ -14,255 +15,258 @@ interface SitePlanSection {
   }>;
 }
 
-export default function SitePlanList() {
+export default function SitemapList() {
+  const { t } = useTranslations('site-plan');
+  
+  // Build the sitemap data from translations
   const sitePlanData: SitePlanSection[] = [
     {
-      title: "Pledge & Grow",
+      title: t('sections.pledgeAndGrow.title'),
       links: [
         {
-          name: "Home",
+          name: t('sections.pledgeAndGrow.links.home.name'),
           path: "/",
-          description: "Our homepage with an overview of our services and mission",
+          description: t('sections.pledgeAndGrow.links.home.description'),
         },
         {
-          name: "Contact",
+          name: t('sections.pledgeAndGrow.links.contact.name'),
           path: "/contact",
-          description: "Get in touch with our team for inquiries and collaborations",
+          description: t('sections.pledgeAndGrow.links.contact.description'),
         },
         {
-          name: "Services",
+          name: t('sections.pledgeAndGrow.links.services.name'),
           path: "/services",
-          description: "Explore our comprehensive range of digital services",
+          description: t('sections.pledgeAndGrow.links.services.description'),
         },
         {
-          name: "Portfolio",
+          name: t('sections.pledgeAndGrow.links.portfolio.name'),
           path: "/portfolio",
-          description: "View our past projects and client success stories",
+          description: t('sections.pledgeAndGrow.links.portfolio.description'),
         },
         {
-          name: "Start my project",
+          name: t('sections.pledgeAndGrow.links.startProject.name'),
           path: "/start-project",
-          description: "Begin your digital journey with our project creation process",
+          description: t('sections.pledgeAndGrow.links.startProject.description'),
         },
       ],
     },
     {
-      title: "Company",
+      title: t('sections.company.title'),
       links: [
         {
-          name: "Identity",
+          name: t('sections.company.links.identity.name'),
           path: "/about",
-          description: "Learn about our company, mission, and values",
+          description: t('sections.company.links.identity.description'),
         },
         {
-          name: "Progress",
+          name: t('sections.company.links.progress.name'),
           path: "/progress",
-          description: "Track our company's growth and development milestones",
+          description: t('sections.company.links.progress.description'),
         },
         {
-          name: "International",
+          name: t('sections.company.links.international.name'),
           path: "/international",
-          description: "Our global presence and international services",
+          description: t('sections.company.links.international.description'),
         },
         {
-          name: "Ecosystem",
+          name: t('sections.company.links.ecosystem.name'),
           path: "/ecosysteme",
-          description: "Our digital ecosystem and collaborative approach",
+          description: t('sections.company.links.ecosystem.description'),
         },
         {
-          name: "Careers",
+          name: t('sections.company.links.careers.name'),
           path: "/careers",
-          description: "Join our team and explore career opportunities",
+          description: t('sections.company.links.careers.description'),
         },
         {
-          name: "Partners",
+          name: t('sections.company.links.partners.name'),
           path: "/partners",
-          description: "Our network of partners and collaboration opportunities",
+          description: t('sections.company.links.partners.description'),
         },
         {
-          name: "Ambassadors",
+          name: t('sections.company.links.ambassadors.name'),
           path: "/ambassadors",
-          description: "Our brand ambassadors and advocacy program",
+          description: t('sections.company.links.ambassadors.description'),
         },
         {
-          name: "Grants & Subsidies",
+          name: t('sections.company.links.grantsSubsidies.name'),
           path: "/grants-subsidies",
-          description: "Available funding opportunities for digital projects",
+          description: t('sections.company.links.grantsSubsidies.description'),
         },
         {
-          name: "Business Sectors",
+          name: t('sections.company.links.businessSectors.name'),
           path: "/business-sectors",
-          description: "Industries and sectors we serve with our digital solutions",
+          description: t('sections.company.links.businessSectors.description'),
         },
         {
-          name: "Membership",
+          name: t('sections.company.links.membership.name'),
           path: "/membership",
-          description: "Membership options and benefits for our community",
+          description: t('sections.company.links.membership.description'),
         },
         {
-          name: "Discord",
+          name: t('sections.company.links.discord.name'),
           path: "/discord",
-          description: "Join our Discord community for discussions and support",
+          description: t('sections.company.links.discord.description'),
         },
       ],
     },
     {
-      title: "Expertise",
+      title: t('sections.expertise.title'),
       links: [
         {
-          name: "Website",
+          name: t('sections.expertise.links.website.name'),
           path: "/expertise/website",
-          description: "Professional website development services",
+          description: t('sections.expertise.links.website.description'),
         },
         {
-          name: "SaaS",
+          name: t('sections.expertise.links.saas.name'),
           path: "/expertise/saas",
-          description: "Software as a Service development and solutions",
+          description: t('sections.expertise.links.saas.description'),
         },
         {
-          name: "Mobile Application",
+          name: t('sections.expertise.links.mobileApplication.name'),
           path: "/expertise/mobile-application",
-          description: "Mobile app development for iOS and Android",
+          description: t('sections.expertise.links.mobileApplication.description'),
         },
         {
-          name: "Software",
+          name: t('sections.expertise.links.software.name'),
           path: "/expertise/software",
-          description: "Custom software development and solutions",
+          description: t('sections.expertise.links.software.description'),
         },
         {
-          name: "Video Games",
+          name: t('sections.expertise.links.videoGames.name'),
           path: "/expertise/video-games",
-          description: "Game development and interactive experiences",
+          description: t('sections.expertise.links.videoGames.description'),
         },
         {
-          name: "E-commerce",
+          name: t('sections.expertise.links.ecommerce.name'),
           path: "/expertise/e-commerce",
-          description: "Online store development and optimization",
+          description: t('sections.expertise.links.ecommerce.description'),
         },
         {
-          name: "AI & Automation",
+          name: t('sections.expertise.links.aiAutomation.name'),
           path: "/expertise/ai-automation",
-          description: "Artificial intelligence and automation solutions",
+          description: t('sections.expertise.links.aiAutomation.description'),
         },
         {
-          name: "Blockchain",
+          name: t('sections.expertise.links.blockchain.name'),
           path: "/expertise/blockchain",
-          description: "Blockchain technology and cryptocurrency solutions",
+          description: t('sections.expertise.links.blockchain.description'),
         },
         {
-          name: "Cybersecurity",
+          name: t('sections.expertise.links.cybersecurity.name'),
           path: "/expertise/cybersecurity",
-          description: "Digital security and data protection services",
+          description: t('sections.expertise.links.cybersecurity.description'),
         },
         {
-          name: "Cloud / DevOps",
+          name: t('sections.expertise.links.cloudDevops.name'),
           path: "/expertise/cloud-devops",
-          description: "Cloud infrastructure and DevOps solutions",
+          description: t('sections.expertise.links.cloudDevops.description'),
         },
         {
-          name: "Documentation",
+          name: t('sections.expertise.links.documentation.name'),
           path: "/expertise/documentation",
-          description: "Comprehensive documentation and technical writing",
+          description: t('sections.expertise.links.documentation.description'),
         },
         {
-          name: "UX/UI Design",
+          name: t('sections.expertise.links.uxUiDesign.name'),
           path: "/expertise/design-ux-ui",
-          description: "User experience and interface design services",
+          description: t('sections.expertise.links.uxUiDesign.description'),
         },
         {
-          name: "SEO",
+          name: t('sections.expertise.links.seo.name'),
           path: "/expertise/seo",
-          description: "Search engine optimization and visibility solutions",
+          description: t('sections.expertise.links.seo.description'),
         },
         {
-          name: "Maintenance",
+          name: t('sections.expertise.links.maintenance.name'),
           path: "/expertise/maintenance",
-          description: "Ongoing maintenance and support services",
+          description: t('sections.expertise.links.maintenance.description'),
         },
         {
-          name: "Consulting / Training",
+          name: t('sections.expertise.links.consultingTraining.name'),
           path: "/expertise/consulting-training",
-          description: "Expert consulting and training services",
+          description: t('sections.expertise.links.consultingTraining.description'),
         },
       ],
     },
     {
-      title: "Enterprise",
+      title: t('sections.enterprise.title'),
       links: [
         {
-          name: "Impact",
+          name: t('sections.enterprise.links.impact.name'),
           path: "/impact",
-          description: "Our social and environmental impact initiatives",
+          description: t('sections.enterprise.links.impact.description'),
         },
         {
-          name: "Innovation",
+          name: t('sections.enterprise.links.innovation.name'),
           path: "/innovation",
-          description: "Our approach to innovation and cutting-edge technologies",
+          description: t('sections.enterprise.links.innovation.description'),
         },
         {
-          name: "Groupe",
+          name: t('sections.enterprise.links.groupe.name'),
           path: "/groupe",
-          description: "Information about our corporate group structure",
+          description: t('sections.enterprise.links.groupe.description'),
         },
         {
-          name: "Media",
+          name: t('sections.enterprise.links.media.name'),
           path: "/media",
-          description: "Press releases, media kit, and company news",
+          description: t('sections.enterprise.links.media.description'),
         },
       ],
     },
     {
-      title: "Resources",
+      title: t('sections.resources.title'),
       links: [
         {
-          name: "Blog",
+          name: t('sections.resources.links.blog.name'),
           path: "/blog",
-          description: "Articles, insights, and updates from our team",
+          description: t('sections.resources.links.blog.description'),
         },
         {
-          name: "Help Center",
+          name: t('sections.resources.links.helpCenter.name'),
           path: "/help-center",
-          description: "Support resources, FAQs, and contact options",
+          description: t('sections.resources.links.helpCenter.description'),
         },
         {
-          name: "References",
+          name: t('sections.resources.links.references.name'),
           path: "/references",
-          description: "Official references and listings for Pledge & Grow",
+          description: t('sections.resources.links.references.description'),
         },
         {
-          name: "Site Plan",
+          name: t('sections.resources.links.sitePlan.name'),
           path: "/site-plan",
-          description: "Complete overview of all pages on our website",
+          description: t('sections.resources.links.sitePlan.description'),
         },
       ],
     },
     {
-      title: "Legal",
+      title: t('sections.legal.title'),
       links: [
         {
-          name: "Terms of Service",
+          name: t('sections.legal.links.termsOfService.name'),
           path: "/legal/terms-conditions",
-          description: "Terms and conditions for using our services",
+          description: t('sections.legal.links.termsOfService.description'),
         },
         {
-          name: "Privacy Policy",
+          name: t('sections.legal.links.privacyPolicy.name'),
           path: "/legal/privacy-policy",
-          description: "Our privacy policy and data protection practices",
+          description: t('sections.legal.links.privacyPolicy.description'),
         },
         {
-          name: "Cookie Policy",
+          name: t('sections.legal.links.cookiePolicy.name'),
           path: "/legal/cookie-policy",
-          description: "Information about how we use cookies on our website",
+          description: t('sections.legal.links.cookiePolicy.description'),
         },
         {
-          name: "GDPR",
+          name: t('sections.legal.links.gdpr.name'),
           path: "/legal/gdpr",
-          description: "Our compliance with General Data Protection Regulation",
+          description: t('sections.legal.links.gdpr.description'),
         },
         {
-          name: "Legal Notice",
+          name: t('sections.legal.links.legalNotice.name'),
           path: "/legal/legal-notice",
-          description: "Legal information about our company and website",
+          description: t('sections.legal.links.legalNotice.description'),
         },
       ],
     },
@@ -279,10 +283,10 @@ export default function SitePlanList() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h1 className="text-3xl md:text-5xl font-bold mb-6">
-            Site Plan
+            {t('title')}
           </h1>
           <p className="text-lg text-muted-foreground">
-            A complete overview of all pages available on our website to help you navigate our digital presence.
+            {t('description')}
           </p>
         </motion.div>
 

@@ -1,0 +1,82 @@
+{
+  "id": "website",
+  "slug": "website",
+  "title": "Website Development",
+  "subtitle": "Create a powerful online presence with our custom website solutions",
+  "description": "We build responsive, high-performance websites that engage your audience and drive conversions. From simple landing pages to complex web applications, our expertise ensures your online presence stands out.",
+  "heroImage": "/images/expertise/website-hero.jpg",
+  "heroButton": "Start Your Web Project",
+  "category": "Creation",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive web solutions for your business"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "The best technologies for your website"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "Why invest in a professional website"
+    }
+  },
+  "features": [
+    {
+      "title": "Responsive Design",
+      "description": "Websites that look and function perfectly on all devices",
+      "icon": "device-mobile"
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "Fast-loading pages that keep visitors engaged",
+      "icon": "rocket"
+    },
+    {
+      "title": "SEO-Friendly",
+      "description": "Built with search engine optimization in mind",
+      "icon": "search"
+    },
+    {
+      "title": "Content Management",
+      "description": "Easy-to-use systems for updating your content",
+      "icon": "pencil"
+    }
+  ],
+  "technologies": [
+    { "name": "Next.js", "logo": "/images/tech/nextjs.svg" },
+    { "name": "React", "logo": "/images/tech/react.svg" },
+    { "name": "TypeScript", "logo": "/images/tech/typescript.svg" },
+    { "name": "Tailwind CSS", "logo": "/images/tech/tailwind.svg" },
+    { "name": "WordPress", "logo": "/images/tech/wordpress.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Increased Visibility",
+      "description": "Reach more potential customers with a professional online presence",
+      "icon": "eye"
+    },
+    {
+      "title": "Better User Experience",
+      "description": "Keep visitors engaged with intuitive navigation and design",
+      "icon": "heart"
+    },
+    {
+      "title": "Higher Conversion Rates",
+      "description": "Turn visitors into customers with strategic calls-to-action",
+      "icon": "chart-bar"
+    },
+    {
+      "title": "Brand Credibility",
+      "description": "Establish trust with a professional, polished website",
+      "icon": "badge-check"
+    }
+  ],
+  "relatedExpertise": ["ux-ui-design", "seo", "e-commerce"],
+  "cta": {
+    "title": "Ready to transform your online presence?",
+    "description": "Let's discuss how we can create a website that perfectly represents your brand and achieves your goals.",
+    "buttonText": "Start Your Website Project",
+    "buttonLink": "/digital-project?service=website"
+  }
+}

@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { Award, Users, Heart, Shield } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function Values() {
+  const { t } = useTranslations('about');
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -20,26 +22,41 @@ export default function Values() {
     // Cleanup
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
-  const values = [
+  
+  const getIconComponent = (key: string) => {
+    switch(key) {
+      case 'excellence': return <Award className="h-10 w-10 text-primary" />;
+      case 'culture': return <Users className="h-10 w-10 text-primary" />;
+      case 'loyalty': return <Heart className="h-10 w-10 text-primary" />;
+      case 'privacy': return <Shield className="h-10 w-10 text-primary" />;
+      default: return <Award className="h-10 w-10 text-primary" />;
+    }
+  };
+  
+  const valueItems = [
     {
-      icon: <Award className="h-10 w-10 text-primary" />,
-      title: "Excellence",
-      description: "We strive for the highest standards in everything we do, constantly pushing boundaries to deliver exceptional results for our clients."
+      key: 'excellence',
+      icon: getIconComponent('excellence'),
+      title: t('values.items.excellence.title') || "Excellence",
+      description: t('values.items.excellence.description') || "We strive for the highest standards in everything we do, constantly pushing boundaries to deliver exceptional results for our clients."
     },
     {
-      icon: <Users className="h-10 w-10 text-primary" />,
-      title: "Culture",
-      description: "We foster a diverse and inclusive environment that celebrates creativity, collaboration, and continuous growth for our team and partners."
+      key: 'culture',
+      icon: getIconComponent('culture'),
+      title: t('values.items.culture.title') || "Culture",
+      description: t('values.items.culture.description') || "We foster a diverse and inclusive environment that celebrates creativity, collaboration, and continuous growth for our team and partners."
     },
     {
-      icon: <Heart className="h-10 w-10 text-primary" />,
-      title: "Loyalty",
-      description: "We build lasting relationships based on trust, commitment, and mutual respect with our clients, team members, and stakeholders."
+      key: 'loyalty',
+      icon: getIconComponent('loyalty'),
+      title: t('values.items.loyalty.title') || "Loyalty",
+      description: t('values.items.loyalty.description') || "We build lasting relationships based on trust, commitment, and mutual respect with our clients, team members, and stakeholders."
     },
     {
-      icon: <Shield className="h-10 w-10 text-primary" />,
-      title: "Privacy",
-      description: "We are dedicated to protecting data confidentiality and respecting individual privacy rights in all our operations and solutions."
+      key: 'privacy',
+      icon: getIconComponent('privacy'),
+      title: t('values.items.privacy.title') || "Privacy",
+      description: t('values.items.privacy.description') || "We are dedicated to protecting data confidentiality and respecting individual privacy rights in all our operations and solutions."
     }
   ];
 
@@ -48,67 +65,53 @@ export default function Values() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto mb-12 text-center animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our Core Values
+            {t('values.title') || "Our Core Values"}
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl">
-            These principles guide our decisions, shape our culture, and define how we work with clients.
+            {t('values.description') || "These principles guide our decisions, shape our culture, and define how we work with clients."}
           </p>
         </div>
         
-        {/* Mobile Carousel View */}
-        {isMobile && (
-          <div className="mt-12">
-            <div className="overflow-x-auto pb-6">
-              <div className="flex space-x-4 w-max px-4">
-                {values.map((value, index) => (
-                  <div 
-                    key={index} 
-                    className="w-[85vw] max-w-[300px] flex-shrink-0 p-6 bg-card rounded-lg shadow-sm border border-border"
-                  >
-                    <div className="flex justify-center mb-4">
-                      <div className="p-3 rounded-full bg-primary/10">
-                        {value.icon}
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-center mb-3">{value.title}</h3>
-                    <p className="text-muted-foreground text-center">{value.description}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="flex justify-center mt-4">
-                <div className="flex space-x-2">
-                  {values.map((_, index) => (
-                    <div 
-                      key={index} 
-                      className={`h-2 w-2 rounded-full bg-primary/30`}
-                    />
-                  ))}
+        {/* Desktop Grid View */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          {valueItems.map((item, index: number) => (
+            <div key={item.key || index} className="bg-card hover:bg-card/80 transition-colors p-6 rounded-lg shadow-md border border-border">
+              <div className="flex items-start mb-4">
+                <div className="mr-4">
+                  {item.icon}
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.description}</p>
                 </div>
               </div>
             </div>
-          </div>
-        )}
+          ))}
+        </div>
         
-        {/* Desktop Grid View */}
-        {!isMobile && (
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
-            {values.map((value, index) => (
-              <div 
-                key={index} 
-                className="flex gap-6 p-6 bg-card rounded-lg shadow-sm border border-border animate-fade-in"
-                style={{ animationDelay: `${0.1 + index * 0.1}s` }}
-              >
-                <div className="flex-shrink-0">
-                  <div className="p-3 rounded-full bg-primary/10">
-                    {value.icon}
+        {/* Mobile view - carousel */}
+        {isMobile && (
+          <div className="relative mt-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 scrollbar-hide">
+              {valueItems.map((item, index: number) => (
+                <div 
+                  key={item.key || index}
+                  className="snap-center flex-shrink-0 w-full"
+                >
+                  <div className="bg-card hover:bg-card/80 transition-colors p-6 rounded-lg shadow-md border border-border">
+                    <div className="flex items-start mb-4">
+                      <div className="mr-4">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                        <p className="text-muted-foreground">{item.description}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold mb-2">{value.title}</h3>
-                  <p className="text-muted-foreground">{value.description}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         )}
       </div>

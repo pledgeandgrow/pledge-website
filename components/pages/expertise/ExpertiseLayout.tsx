@@ -28,7 +28,7 @@ export default function ExpertiseLayout({ expertise, children }: ExpertiseLayout
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src={expertise.heroImage}
+            src={expertise.heroImage || "/images/expertise/default-hero.jpg"}
             alt={expertise.title}
             fill
             className="object-cover opacity-20 dark:opacity-10"
@@ -54,8 +54,8 @@ export default function ExpertiseLayout({ expertise, children }: ExpertiseLayout
               {expertise.subtitle}
             </p>
             <Button asChild size="lg">
-              <Link href={expertise.cta.buttonLink}>
-                Start Your Project
+              <Link href={expertise.cta?.buttonLink || "/contact"}>
+                {expertise.heroButton || "Start Your Project"}
               </Link>
             </Button>
           </motion.div>

@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "title": "Carrières | Pledge & Grow",
+    "description": "Rejoignez notre équipe chez Pledge & Grow et faites partie d'une entreprise dynamique dédiée à la création de solutions numériques innovantes. Découvrez les postes ouverts et notre culture d'entreprise."
+  },
+  "breadcrumbs": {
+    "home": "Accueil",
+    "careers": "Carrières",
+    "backToPositions": "Retour à tous les postes"
+  },
+  "whyJoinUs": {
+    "title": "Pourquoi Rejoindre Pledge & Grow",
+    "description": "Nous sommes plus qu'un simple lieu de travail. Nous sommes une communauté de professionnels passionnés dédiés à la croissance, l'innovation et à faire la différence.",
+    "joinTeam": {
+      "title": "Rejoignez Notre Équipe",
+      "subtitle": "Faites partie de quelque chose d'extraordinaire"
+    },
+    "whatWeOffer": {
+      "title": "Ce Que Nous Offrons",
+      "description": "Chez Pledge & Grow, nous croyons en la création d'un environnement où le talent s'épanouit. Nos membres d'équipe bénéficient d'avantages compétitifs, d'arrangements de travail flexibles et d'opportunités de travailler sur des projets de pointe qui font une réelle différence."
+    },
+    "keyBenefits": "Avantages Clés",
+    "benefits": {
+      "benefit1": {
+        "title": "Environnement Collaboratif",
+        "description": "Rejoignez une équipe solidaire qui valorise la collaboration, le partage des connaissances et la croissance mutuelle."
+      },
+      "benefit2": {
+        "title": "Opportunités Mondiales",
+        "description": "Travaillez avec des clients et des équipes du monde entier, acquérant une expérience et une perspective internationales."
+      },
+      "benefit3": {
+        "title": "Évolution de Carrière",
+        "description": "Des parcours de carrière clairs et des opportunités d'avancement basées sur vos compétences et ambitions."
+      },
+      "innovation": {
+        "title": "Culture d'Innovation",
+        "description": "Travaillez avec des technologies de pointe et contribuez à des projets qui repoussent les limites du possible."
+      },
+      "growth": {
+        "title": "Croissance Professionnelle",
+        "description": "Opportunités d'apprentissage continu, programmes de mentorat et une trajectoire de carrière claire."
+      },
+      "balance": {
+        "title": "Équilibre Travail-Vie",
+        "description": "Modalités de travail flexibles, congés généreux et une attention particulière au bien-être et à la santé mentale."
+      },
+      "impact": {
+        "title": "Impact Significatif",
+        "description": "Contribuez à des projets qui résolvent des problèmes concrets et font une différence pour nos clients et nos communautés."
+      },
+      "diversity": {
+        "title": "Environnement Inclusif",
+        "description": "Un lieu de travail diversifié et inclusif où les différentes perspectives sont valorisées et célébrées."
+      },
+      "benefits": {
+        "title": "Avantages Complets",
+        "description": "Rémunération compétitive, avantages santé, plans de retraite et primes de performance."
+      }
+    }
+  },
+  "openPositions": {
+    "title": "Postes Ouverts",
+    "description": "Explorez nos offres d'emploi actuelles et trouvez le poste parfait correspondant à vos compétences et objectifs de carrière.",
+    "noPositions": "Aucun poste ne correspond à vos critères de recherche. Veuillez ajuster vos filtres.",
+    "filters": {
+      "search": "Rechercher des postes...",
+      "department": "Filtrer par département",
+      "locationType": "Filtrer par type d'emplacement",
+      "allDepartments": "Tous les Départements",
+      "allLocationTypes": "Tous les Types d'Emplacement"
+    },
+    "positionCard": {
+      "applyNow": "Postuler Maintenant",
+      "postedOn": "Publié",
+      "viewDetails": "Voir les Détails",
+      "remote": "Télétravail",
+      "hybrid": "Hybride",
+      "onsite": "Sur site",
+      "fulltime": "Temps plein",
+      "parttime": "Temps partiel",
+      "contract": "Contrat",
+      "internship": "Stage"
+    },
+    "departments": {
+      "engineering": "Ingénierie",
+      "design": "Design",
+      "marketing": "Marketing",
+      "sales": "Ventes",
+      "operations": "Opérations",
+      "customerSupport": "Support Client",
+      "executive": "Direction",
+      "it": "Informatique",
+      "development": "Développement"
+    }
+  },
+  "applicationProcess": {
+    "title": "Notre Processus de Candidature",
+    "description": "Nous avons conçu un processus de recrutement simple et transparent pour nous aider à trouver les meilleurs talents et vous donner une clarté à chaque étape.",
+    "steps": {
+      "step1": {
+        "title": "Soumission de Candidature",
+        "description": "Soumettez votre candidature via notre portail carrières avec votre CV, lettre de motivation et tout lien de portfolio pertinent."
+      },
+      "step2": {
+        "title": "Entretien Initial",
+        "description": "Notre équipe de recrutement examinera votre candidature et mènera un entretien téléphonique ou vidéo initial pour discuter de votre expérience et de vos aspirations."
+      },
+      "step3": {
+        "title": "Entretiens d'Équipe",
+        "description": "Rencontrez les membres potentiels de l'équipe et les responsables pour des discussions approfondies sur vos compétences, votre expérience et votre adéquation avec notre culture."
+      },
+      "step4": {
+        "title": "Évaluation & Décision",
+        "description": "Complétez toute évaluation technique pertinente ou étude de cas, après quoi nous prendrons une décision finale basée sur tous les retours d'entretien."
+      },
+      "step5": {
+        "title": "Offre & Intégration",
+        "description": "Si vous êtes sélectionné, vous recevrez une offre et, après acceptation, commencerez notre processus d'intégration complet pour vous préparer au succès."
+      }
+    }
+  },
+  "jobDetail": {
+    "overview": "Aperçu",
+    "responsibilities": "Responsabilités",
+    "requirements": "Exigences",
+    "benefits": "Avantages",
+    "applicationProcess": "Processus de Candidature",
+    "reportingTo": "Responsable Hiérarchique",
+    "department": "Département",
+    "requiredSkills": "Compétences Requises",
+    "salaryRange": "Fourchette de Salaire",
+    "applyNow": "Postuler Maintenant",
+    "startDate": "Date de Début"
+  },
+  "cta": {
+    "title": "Prêt à Rejoindre Notre Équipe ?",
+    "description": "Franchissez la prochaine étape de votre parcours professionnel. Explorez nos postes ouverts ou envoyez-nous votre CV pour de futures opportunités.",
+    "learnAboutUs": "En savoir plus sur nous",
+    "joinOurTeam": "Rejoindre notre équipe",
+    "noOpenings": "Vous ne voyez pas d'ouverture qui vous convient ? Envoyez votre CV à careers@pledgeandgrow.com et nous vous garderons à l'esprit pour de futures opportunités.",
+    "button": "Voir les Postes Ouverts"
+  },
+  "positions": {
+    "cso": {
+      "title": "Directeur Commercial",
+      "department": "Direction",
+      "location": "Paris, France",
+      "locationType": "Hybride",
+      "employmentType": "Temps plein",
+      "description": "Nous recherchons un Directeur Commercial expérimenté pour diriger notre stratégie de vente, stimuler la croissance des revenus et établir de solides relations clients sur tous les marchés.",
+      "overview": "En tant que Directeur Commercial chez Pledge & Grow, vous serez responsable du développement et de l'exécution de notre stratégie commerciale mondiale, de la constitution et de la direction d'équipes commerciales performantes, et de la stimulation d'une croissance durable des revenus. Vous travaillerez en étroite collaboration avec l'équipe de direction pour aligner les objectifs de vente sur nos objectifs commerciaux globaux et assurer une prestation constante d'expériences clients exceptionnelles.",
+      "responsibilities": [
+        "Développer et mettre en œuvre des stratégies commerciales complètes pour atteindre les objectifs de revenus et d'affaires",
+        "Constituer, diriger et encadrer une équipe commerciale performante dans plusieurs régions",
+        "Établir et maintenir des relations solides avec les clients clés et les partenaires stratégiques",
+        "Collaborer avec le marketing pour développer des supports et des campagnes de vente efficaces",
+        "Analyser les tendances du marché, les activités des concurrents et les performances de vente pour identifier les opportunités de croissance",
+        "Créer des prévisions et des rapports de vente précis pour la direction",
+        "Optimiser le processus de vente pour améliorer l'efficacité et l'efficience",
+        "Représenter l'entreprise lors d'événements et de conférences du secteur"
+      ],
+      "requirements": [
+        "Plus de 10 ans d'expérience progressive en leadership commercial, avec au moins 5 ans dans un rôle de direction",
+        "Historique prouvé de dépassement des objectifs de vente et de stimulation de la croissance de l'entreprise",
+        "Expérience dans les services numériques, la technologie ou le conseil",
+        "Solide compréhension des méthodologies et des meilleures pratiques de vente B2B",
+        "Excellentes compétences en leadership, communication et négociation",
+        "Pensée stratégique avec une approche de prise de décision basée sur les données",
+        "Diplôme universitaire en commerce, marketing ou domaine connexe; MBA préféré",
+        "Volonté de voyager selon les besoins (environ 25%)"
+      ],
+      "benefits": [
+        "Salaire de base compétitif plus primes basées sur la performance",
+        "Assurance santé, dentaire et vision complète",
+        "Plan de retraite avec contribution de l'entreprise",
+        "Congés payés généreux et arrangements de travail flexibles",
+        "Allocation pour le développement professionnel et la formation continue",
+        "Événements sponsorisés par l'entreprise et activités de team building",
+        "Bureau moderne dans le centre de Paris avec options de travail hybride"
+      ],
+      "applicationProcess": "Notre processus d'embauche pour ce poste comprend un entretien téléphonique initial, suivi de deux séries d'entretiens avec l'équipe de direction et les parties prenantes clés. Les candidats finalistes seront invités à présenter un plan stratégique de vente sur 90 jours.",
+      "salary": "120 000 € - 150 000 € par an plus primes de performance",
+      "skills": ["Leadership Commercial", "Planification Stratégique", "Gestion d'Équipe", "Développement Commercial", "Gestion de la Relation Client", "Analyse de Marché", "Négociation", "Systèmes CRM"],
+      "reportingTo": "PDG",
+      "startDate": "Immédiate"
+    },
+    "marketing-intern": {
+      "title": "Stagiaire en Marketing",
+      "department": "Marketing",
+      "location": "À distance",
+      "locationType": "À distance",
+      "employmentType": "Temps plein",
+      "description": "Rejoignez notre équipe marketing pour développer et mettre en œuvre des stratégies marketing internes qui renforcent notre identité de marque et notre culture d'entreprise.",
+      "overview": "En tant que Stagiaire en Marketing chez Pledge & Grow, vous travaillerez directement avec notre équipe Marketing pour soutenir diverses initiatives marketing, acquérir une expérience pratique en marketing digital, et contribuer à la croissance de notre marque. Ce poste offre une excellente opportunité d'apprendre et de développer des compétences marketing pratiques dans un environnement dynamique et solidaire.",
+      "responsibilities": [
+        "Aider à créer et planifier du contenu pour les plateformes de médias sociaux",
+        "Contribuer au développement et à la mise en œuvre de stratégies de communication interne",
+        "Soutenir la création de matériels marketing et de présentations",
+        "Mener des études de marché et des analyses de concurrents",
+        "Assister aux campagnes de marketing par e-mail et à la création de newsletters",
+        "Suivre et analyser les métriques marketing et la performance des campagnes",
+        "Participer à des sessions de brainstorming pour de nouvelles initiatives marketing",
+        "Soutenir l'équipe avec des tâches administratives liées aux activités marketing"
+      ],
+      "requirements": [
+        "Actuellement en cours d'études en Marketing, Communication, Commerce ou domaine connexe",
+        "Fort intérêt pour le marketing digital et le développement de marque",
+        "Excellentes compétences en communication écrite et verbale",
+        "Connaissance de base des plateformes de médias sociaux et des concepts de marketing digital",
+        "Créativité et volonté de contribuer avec des idées",
+        "Capacité à travailler de manière indépendante et en équipe",
+        "Maîtrise de base des outils de design (Canva, Adobe Creative Suite) est un plus",
+        "Organisé avec une bonne attention aux détails"
+      ],
+      "benefits": [
+        "Stage rémunéré avec des horaires de travail à distance flexibles",
+        "Mentorat de professionnels du marketing expérimentés",
+        "Expérience pratique avec de vrais projets et campagnes marketing",
+        "Opportunités de réseautage dans l'industrie",
+        "Possibilité d'emploi à temps plein après réussite du stage",
+        "Accès à des ressources d'apprentissage en ligne et à des formations",
+        "Retours réguliers et conseils de développement de carrière"
+      ],
+      "applicationProcess": "Notre processus de sélection comprend un examen de CV, un bref exercice marketing, et un entretien avec le Responsable Marketing et les membres de l'équipe. Nous visons à fournir une décision dans les deux semaines suivant la candidature.",
+      "salary": "1 200 € - 1 500 € d'indemnité mensuelle",
+      "skills": ["Marketing des Médias Sociaux", "Création de Contenu", "Étude de Marché", "Marketing par E-mail", "Analytique", "Communication", "Créativité", "Organisation"],
+      "reportingTo": "Responsable Marketing",
+      "startDate": "Flexible"
+    }
+  }
+}

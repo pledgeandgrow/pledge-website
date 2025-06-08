@@ -5,6 +5,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import AmbassadorCard from "./AmbassadorCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface Ambassador {
   id: string;
@@ -26,6 +27,7 @@ interface AmbassadorCarouselProps {
 }
 
 export default function AmbassadorCarousel({ ambassadors }: AmbassadorCarouselProps) {
+  const { t } = useTranslations('ambassadors');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
@@ -75,9 +77,9 @@ export default function AmbassadorCarousel({ ambassadors }: AmbassadorCarouselPr
   if (ambassadors.length === 0) {
     return (
       <div className="text-center py-12">
-        <h3 className="text-xl font-semibold mb-2 text-foreground">No ambassadors found</h3>
+        <h3 className="text-xl font-semibold mb-2 text-foreground">{t('ambassadorsList.noAmbassadors')}</h3>
         <p className="text-muted-foreground">
-          Try adjusting your filters to find ambassadors.
+          {t('ambassadorsList.tryAdjusting')}
         </p>
       </div>
     );

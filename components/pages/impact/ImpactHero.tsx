@@ -1,12 +1,15 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 // Button import removed as it was unused
 import { Heart } from "lucide-react";
 // Link import removed as it was unused
 import Image from "next/image";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function ImpactHero() {
+  const { t } = useTranslations('impact');
   return (
     <section className="relative py-20 md:py-32 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent z-0" />
@@ -22,16 +25,17 @@ export default function ImpactHero() {
           >
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6 shadow-sm">
               <Heart className="h-4 w-4" />
-              <span className="text-sm font-medium">Technology for Good</span>
+              <span className="text-sm font-medium">{t('hero.tagline')}</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-foreground">
-              Making a <span className="text-primary">Positive Impact</span> Through Technology
+              {t('hero.title').split('Positive Impact').map((part: string, i: number) => 
+                i === 0 ? part + ' ' : <React.Fragment key={i}><span className="text-primary">Positive Impact</span>{part}</React.Fragment>
+              )}
             </h1>
             
             <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed">
-              At Pledge & Grow, we believe in the power of technology to create positive change. 
-              We&apos;re committed to leveraging our expertise to support causes that make the world a better place.
+              {t('hero.description')}
             </p>
             
             {/* Buttons removed as requested */}
@@ -47,7 +51,7 @@ export default function ImpactHero() {
             
             <Image
               src="/images/impact/impact1.png"
-              alt="Pledge & Grow impact initiatives"
+              alt={t('hero.imageAlt')}
               fill
               className="object-cover transition-transform duration-500"
             />

@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "title": "Politique de Confidentialité | Pledge & Grow",
+    "description": "Découvrez comment Pledge & Grow collecte, utilise et protège vos informations personnelles."
+  },
+  "breadcrumbs": {
+    "home": "Accueil",
+    "legal": "Mentions légales",
+    "privacyPolicy": "Politique de Confidentialité"
+  },
+  "hero": {
+    "title": "Politique de Confidentialité",
+    "subtitle": "Dernière mise à jour : 7 juin 2025"
+  },
+  "sections": {
+    "introduction": {
+      "title": "Introduction",
+      "content": [
+        "Pledge & Grow ('nous', 'notre' ou 'nos') s'engage à protéger votre vie privée. Cette Politique de Confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous visitez notre site web pledgeandgrow.com, y compris tout autre formulaire de média, canal médiatique, site web mobile ou application mobile liés ou connectés à celui-ci (collectivement, le 'Site').",
+        "Veuillez lire attentivement cette Politique de Confidentialité. Si vous n'êtes pas d'accord avec les termes de cette Politique de Confidentialité, veuillez ne pas accéder au Site."
+      ]
+    },
+    "informationWeCollect": {
+      "title": "Informations que nous collectons",
+      "content": [
+        "Nous collectons des informations que vous nous fournissez directement ainsi que des informations que nous collectons automatiquement lorsque vous visitez le Site."
+      ],
+      "personalData": {
+        "title": "Données personnelles",
+        "content": [
+          "Les Données Personnelles sont des informations qui peuvent être utilisées pour vous identifier individuellement. Nous pouvons collecter les types de Données Personnelles suivants auprès de vous :",
+          "• Informations de contact (comme le nom, l'adresse e-mail, l'adresse postale et le numéro de téléphone)",
+          "• Informations de compte (comme le nom d'utilisateur et le mot de passe)",
+          "• Informations de facturation (comme les détails de la carte de crédit et l'adresse de facturation)",
+          "• Préférences et intérêts",
+          "• Toute autre information que vous choisissez de fournir"
+        ]
+      },
+      "automaticData": {
+        "title": "Informations collectées automatiquement",
+        "content": [
+          "Lorsque vous visitez le Site, nous collectons automatiquement certaines informations sur votre appareil et votre utilisation du Site, notamment :",
+          "• Informations sur l'appareil (comme votre adresse IP, le type de navigateur, le système d'exploitation)",
+          "• Détails d'utilisation (comme l'heure et la date de votre visite, les pages que vous avez visitées, le temps passé sur ces pages)",
+          "• Informations de localisation",
+          "• Informations collectées par le biais de cookies, de balises web et d'autres technologies de suivi"
+        ]
+      }
+    },
+    "howWeUseYourInformation": {
+      "title": "Comment nous utilisons vos informations",
+      "content": [
+        "Nous pouvons utiliser les informations que nous collectons auprès de vous à diverses fins, notamment pour :",
+        "• Fournir, maintenir et améliorer nos services",
+        "• Traiter et compléter les transactions",
+        "• Envoyer des informations administratives, telles que des mises à jour, des alertes de sécurité et des messages de support",
+        "• Répondre à vos commentaires, questions et demandes",
+        "• Communiquer avec vous au sujet des produits, services, offres, promotions et événements",
+        "• Surveiller et analyser les tendances, l'utilisation et les activités en rapport avec nos services",
+        "• Détecter, prévenir et résoudre les problèmes techniques",
+        "• Protéger contre, identifier et prévenir la fraude et d'autres activités illégales"
+      ]
+    },
+    "disclosureOfYourInformation": {
+      "title": "Comment nous partageons vos informations",
+      "content": [
+        "Nous pouvons partager vos informations dans les situations suivantes :",
+        "• Avec des prestataires de services qui effectuent des services pour notre compte",
+        "• Pour se conformer aux obligations légales",
+        "• Pour protéger et défendre nos droits et nos biens",
+        "• Avec votre consentement ou selon vos instructions",
+        "• Avec nos partenaires commerciaux, avec votre consentement",
+        "• Dans le cadre de, ou pendant les négociations de, toute fusion, vente d'actifs de l'entreprise, financement ou acquisition de tout ou partie de notre entreprise par une autre société"
+      ]
+    },
+    "dataRetention": {
+      "title": "Conservation des données",
+      "content": [
+        "Nous ne conserverons vos Données Personnelles que le temps nécessaire aux fins énoncées dans cette Politique de Confidentialité. Nous conserverons et utiliserons vos Données Personnelles dans la mesure nécessaire pour nous conformer à nos obligations légales, résoudre les litiges et faire respecter nos accords et politiques légaux."
+      ]
+    },
+    "dataProtectionRights": {
+      "title": "Comment nous protégeons vos informations",
+      "content": [
+        "Nous avons mis en œuvre des mesures de sécurité techniques et organisationnelles appropriées conçues pour protéger la sécurité de toute information personnelle que nous traitons. Cependant, malgré nos garanties et nos efforts pour sécuriser vos informations, aucune transmission électronique sur Internet ou technologie de stockage d'informations ne peut être garantie comme étant sécurisée à 100%."
+      ]
+    },
+    "doNotTrackSignals": {
+      "title": "Vos droits à la vie privée",
+      "content": [
+        "Selon votre emplacement, vous pouvez avoir certains droits concernant vos informations personnelles, tels que :",
+        "• Le droit d'accéder aux informations personnelles que nous détenons à votre sujet",
+        "• Le droit de demander que nous corrigions toute information personnelle inexacte",
+        "• Le droit de demander que nous supprimions vos informations personnelles",
+        "• Le droit de refuser les communications marketing",
+        "• Le droit de retirer votre consentement lorsque nous nous appuyons sur le consentement pour traiter vos informations"
+      ]
+    },
+    "childrenPrivacy": {
+      "title": "Confidentialité des enfants",
+      "content": [
+        "Notre Site n'est pas destiné aux enfants de moins de 16 ans. Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 16 ans. Si vous êtes un parent ou un tuteur et que vous savez que votre enfant nous a fourni des informations personnelles, veuillez nous contacter."
+      ]
+    },
+    "thirdPartyWebsites": {
+      "title": "Liens vers des sites web tiers",
+      "content": [
+        "Notre Site peut contenir des liens vers des sites web et applications tiers. Nous ne sommes pas responsables des pratiques de confidentialité ou du contenu de ces sites tiers. Nous vous encourageons à lire la politique de confidentialité de chaque site web que vous visitez."
+      ]
+    },
+    "cookiesAndTracking": {
+      "title": "Cookies et technologies de suivi",
+      "content": [
+        "Nous utilisons des cookies et des technologies de suivi similaires pour suivre l'activité sur notre Site et conserver certaines informations. Vous pouvez demander à votre navigateur de refuser tous les cookies ou d'indiquer quand un cookie est envoyé. Pour plus d'informations sur notre utilisation des cookies, veuillez consulter notre Politique de Cookies."
+      ]
+    },
+    "internationalTransfers": {
+      "title": "Transferts internationaux de données",
+      "content": [
+        "Vos informations peuvent être transférées et maintenues sur des ordinateurs situés en dehors de votre état, province, pays ou autre juridiction gouvernementale où les lois sur la protection des données peuvent différer de celles de votre juridiction. Si vous êtes situé en dehors de la France et choisissez de nous fournir des informations, veuillez noter que nous transférons les données en France et les y traitons."
+      ]
+    },
+    "changesToPrivacyPolicy": {
+      "title": "Modifications de cette politique de confidentialité",
+      "content": [
+        "Nous pouvons mettre à jour notre Politique de Confidentialité de temps à autre. Nous vous informerons de tout changement en publiant la nouvelle Politique de Confidentialité sur cette page et en mettant à jour la date de 'Dernière mise à jour' en haut de cette Politique de Confidentialité. Nous vous conseillons de consulter périodiquement cette Politique de Confidentialité pour tout changement."
+      ]
+    },
+    "contactUs": {
+      "title": "Contactez-nous",
+      "content": [
+        "Si vous avez des questions concernant cette Politique de Confidentialité, veuillez nous contacter à :"
+      ],
+      "address": [
+        "Pledge & Grow",
+        "123 rue de l'Innovation",
+        "75001 Paris, France",
+        "privacy@pledgeandgrow.com"
+      ]
+    }
+  }
+}

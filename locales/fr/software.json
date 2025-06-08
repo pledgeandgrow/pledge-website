@@ -1,0 +1,82 @@
+{
+  "id": "software",
+  "slug": "software",
+  "title": "Développement Logiciel",
+  "subtitle": "Solutions logicielles personnalisées adaptées aux besoins de votre entreprise",
+  "description": "Nous développons des applications logicielles personnalisées qui résolvent des défis commerciaux complexes et rationalisent les opérations. Notre expertise en développement logiciel combine l'excellence technique et la compréhension des affaires pour créer des solutions qui favorisent l'efficacité et la croissance.",
+  "heroImage": "/images/expertise/software-hero.jpg",
+  "heroButton": "Démarrer Votre Projet Logiciel",
+  "category": "Création",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Des solutions logicielles adaptées à vos besoins"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Les meilleurs outils pour votre solution logicielle"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Comment nos logiciels transforment votre entreprise"
+    }
+  },
+  "features": [
+    {
+      "title": "Applications Sur Mesure",
+      "description": "Logiciels faits sur mesure pour vos besoins spécifiques",
+      "icon": "code"
+    },
+    {
+      "title": "Services d'Intégration",
+      "description": "Connexions transparentes entre vos systèmes existants",
+      "icon": "git-merge"
+    },
+    {
+      "title": "Modernisation des Systèmes Hérités",
+      "description": "Mise à jour des systèmes obsolètes avec des technologies modernes",
+      "icon": "refresh-cw"
+    },
+    {
+      "title": "Solutions Entreprise",
+      "description": "Logiciels évolutifs pour des besoins organisationnels complexes",
+      "icon": "building"
+    }
+  ],
+  "technologies": [
+    { "name": "C++", "logo": "/images/tech/cpp.svg" },
+    { "name": "Python", "logo": "/images/tech/python.svg" },
+    { "name": "Java", "logo": "/images/tech/java.svg" },
+    { "name": "C#", "logo": "/images/tech/csharp.svg" },
+    { "name": "C", "logo": "/images/tech/c.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Efficacité Accrue",
+      "description": "Processus rationalisés qui économisent du temps et réduisent l'effort manuel",
+      "icon": "zap"
+    },
+    {
+      "title": "Avantage Concurrentiel",
+      "description": "Solutions uniques qui différencient votre entreprise",
+      "icon": "award"
+    },
+    {
+      "title": "Évolutivité",
+      "description": "Logiciels qui évoluent avec les besoins de votre entreprise",
+      "icon": "trending-up"
+    },
+    {
+      "title": "Insights Basés sur les Données",
+      "description": "Meilleure intelligence d'affaires pour une prise de décision éclairée",
+      "icon": "bar-chart"
+    }
+  ],
+  "relatedExpertise": ["ai-automation", "mobile-app", "saas"],
+  "cta": {
+    "title": "Prêt à transformer vos opérations avec un logiciel sur mesure?",
+    "description": "Discutons de la façon dont nous pouvons créer une solution logicielle qui répond parfaitement à vos besoins commerciaux.",
+    "buttonText": "Démarrer Votre Projet Logiciel",
+    "buttonLink": "/digital-project?service=software"
+  }
+}

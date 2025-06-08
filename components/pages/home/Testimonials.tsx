@@ -6,7 +6,13 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "@/hooks/useTranslations";
-import { portfolioProjects } from "@/data/portfolio-data";
+
+type Testimonial = {
+  name: string;
+  role: string;
+  quote: string;
+  rating: number;
+};
 
 export default function Testimonials() {
   const { t } = useTranslations("home");
@@ -14,20 +20,34 @@ export default function Testimonials() {
   // For desktop view, we'll show 3 cards at a time
   const [desktopStartIndex, setDesktopStartIndex] = useState(0);
   const cardsPerPage = 3;
-
+  
+  // Get testimonials from translation files
+  const testimonials = useMemo(() => {
+    try {
+      const items = t('testimonials.items', { returnObjects: true });
+      return Array.isArray(items) ? items as Testimonial[] : [];
+    } catch (error) {
+      console.error('Error loading testimonials:', error);
+      return [];
+    }
+  }, [t]);
+  
   const nextSlide = () => {
+    if (testimonials.length === 0) return;
     setCurrentIndex((prevIndex) => 
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
+    if (testimonials.length === 0) return;
     setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
   };
   
   const nextDesktopSlide = () => {
+    if (testimonials.length === 0) return;
     setDesktopStartIndex((prevIndex) => {
       const nextIndex = prevIndex + cardsPerPage;
       return nextIndex >= testimonials.length ? 0 : nextIndex;
@@ -35,28 +55,12 @@ export default function Testimonials() {
   };
 
   const prevDesktopSlide = () => {
+    if (testimonials.length === 0) return;
     setDesktopStartIndex((prevIndex) => {
       const nextIndex = prevIndex - cardsPerPage;
       return nextIndex < 0 ? Math.max(0, testimonials.length - cardsPerPage) : nextIndex;
     });
   };
-
-  // Extract testimonials from portfolio projects case studies
-  const testimonials = useMemo(() => {
-    return portfolioProjects
-      .filter(project => project.outcome?.testimonial) // Only projects with testimonials
-      .map(project => {
-        // Since we've filtered for projects with testimonials, we can safely assert non-null
-        const testimonial = project.outcome!.testimonial!;
-        return {
-          name: testimonial.author,
-          role: `${testimonial.position}, ${project.name}`,
-          quote: testimonial.quote,
-          rating: 5, // Assuming all case study testimonials are 5 stars
-          projectId: project.id // Store project ID for potential link to case study
-        };
-      });
-  }, []);
 
   const renderStars = (rating: number) => {
     return Array(5).fill(0).map((_, i) => (
@@ -130,34 +134,36 @@ export default function Testimonials() {
         
         {/* Mobile Carousel - 1 card at a time */}
         <div className="md:hidden relative max-w-sm mx-auto">
-          <div className="overflow-hidden relative min-h-[280px]">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentIndex}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.3 }}
-                className="p-6 bg-card border border-border rounded-lg shadow-sm"
-              >
-                <div className="flex items-center mb-3">
-                  {renderStars(testimonials[currentIndex].rating)}
-                </div>
-                <blockquote className="text-base italic mb-4">
-                  &quot;{testimonials[currentIndex].quote}&quot;
-                </blockquote>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                    {testimonials[currentIndex].name.charAt(0)}
+          {testimonials.length > 0 && (
+            <div className="min-h-[280px]">
+              <AnimatePresence mode="wait">
+                <motion.div 
+                  key={currentIndex}
+                  initial={{ opacity: 0, x: 100 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -100 }}
+                  transition={{ duration: 0.3 }}
+                  className="p-6 bg-card border border-border rounded-lg shadow-sm"
+                >
+                  <div className="flex items-center mb-3">
+                    {renderStars(testimonials[currentIndex]?.rating || 5)}
                   </div>
-                  <div className="ml-3">
-                    <h3 className="text-base font-medium">{testimonials[currentIndex].name}</h3>
-                    <p className="text-muted-foreground text-xs">{testimonials[currentIndex].role}</p>
+                  <blockquote className="text-base italic mb-4">
+                    &quot;{testimonials[currentIndex]?.quote || t('testimonials.defaultQuote')}&quot;
+                  </blockquote>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                      {testimonials[currentIndex]?.name?.charAt(0) || 'C'}
+                    </div>
+                    <div className="ml-3">
+                      <h3 className="text-base font-medium">{testimonials[currentIndex]?.name || t('testimonials.defaultName')}</h3>
+                      <p className="text-muted-foreground text-xs">{testimonials[currentIndex]?.role || t('testimonials.defaultRole')}</p>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          )}
           
           <div className="flex justify-center gap-4 mt-6">
             <button 

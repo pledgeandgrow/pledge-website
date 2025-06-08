@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Phone, Mail, Clock, User } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface Office {
   id: string;
@@ -29,6 +30,7 @@ interface Office {
 
 export default function GlobalMap() {
   const [isMobile, setIsMobile] = useState(false);
+  const { t } = useTranslations('international');
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -51,8 +53,8 @@ export default function GlobalMap() {
       country: "France",
       region: "Europe",
       address: "Mehdi BEREL",
-      phone: "+33 1 23 45 67 89",
-      email: "paris@pledgeandgrow.com",
+      phone: "+33 7 53 69 58 40",
+      email: "mehdi.berel@pledgeandgrow.com",
       teamSize: 45,
       timezone: "CET (UTC+1)",
       coordinates: { x: 48.5, y: 33 }
@@ -62,9 +64,9 @@ export default function GlobalMap() {
       city: "London",
       country: "United Kingdom",
       region: "Europe",
-      address: "Ilyas BEREL",
-      phone: "+44 20 7946 0958",
-      email: "london@pledgeandgrow.com",
+      address: "Louis Junqua-Salanne",
+      phone: "+44 7535 740594",
+      email: "louis.junqua-salanne@pledgeandgrow.com",
       teamSize: 38,
       timezone: "GMT (UTC+0)",
       coordinates: { x: 45, y: 29.5 }
@@ -75,8 +77,8 @@ export default function GlobalMap() {
       country: "United States",
       region: "North America",
       address: "Zachary GREEZ",
-      phone: "+1 212 736 3100",
-      email: "newyork@pledgeandgrow.com",
+      phone: "+44 7393 413579",
+      email: "zachary.greez@gmail.com",
       teamSize: 65,
       timezone: "EST (UTC-5)",
       coordinates: { x: 25, y: 35 }
@@ -87,8 +89,8 @@ export default function GlobalMap() {
       country: "Tunisia",
       region: "Africa",
       address: "Rami HADRI",
-      phone: "+216 71 123 456",
-      email: "tunis@pledgeandgrow.com",
+      phone: "+33 6 35 88 81 24",
+      email: "rami.hadri@pledgeandgrow.com",
       teamSize: 20,
       timezone: "CET (UTC+1)",
       coordinates: { x: 52, y: 40 }
@@ -99,8 +101,8 @@ export default function GlobalMap() {
       country: "United Arab Emirates",
       region: "Middle East",
       address: "Shihab BEREL",
-      phone: "+971 4 330 0000",
-      email: "dubai@pledgeandgrow.com",
+      phone: "+971 50 392 7710",
+      email: "shihab.berel@pledgeandgrow.com",
       teamSize: 25,
       timezone: "GST (UTC+4)",
       coordinates: { x: 60, y: 42 }
@@ -110,9 +112,9 @@ export default function GlobalMap() {
       city: "Casablanca",
       country: "Morocco",
       region: "Africa",
-      address: "Walid JOUIAD",
-      phone: "+212 522 123 456",
-      email: "morocco@pledgeandgrow.com",
+      address: "Zakaria HADRAOUI",
+      phone: "+212 691-407941",
+      email: "zakaria.hadraoui@pledgeandgrow.com",
       teamSize: 18,
       timezone: "WET (UTC+0)",
       coordinates: { x: 45, y: 42 }
@@ -134,12 +136,10 @@ export default function GlobalMap() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Our Contacts
+            {t('globalMap.title') || "Our Contacts"}
           </h2>
           <p className="text-lg text-muted-foreground">
-            With offices across major global hubs, we deliver localized expertise with a global perspective.
-            Our international presence allows us to serve clients in their time zone and language.
-            Here is the contacts for commercial purpose internationally.
+            {t('globalMap.description') || "Our contacts in those strategic regions collaborate with us and operate from distance in their region. If you want someone local or in your region, here they are."}
           </p>
         </motion.div>
 

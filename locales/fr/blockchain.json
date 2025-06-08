@@ -1,0 +1,82 @@
+{
+  "id": "blockchain",
+  "slug": "blockchain",
+  "title": "Solutions Blockchain",
+  "subtitle": "Construisez des applications sécurisées, transparentes et décentralisées",
+  "description": "Nous développons des solutions blockchain personnalisées qui améliorent la sécurité, la transparence et l'efficacité pour les entreprises. Des contrats intelligents aux applications décentralisées, notre expertise en blockchain vous aide à tirer parti de cette technologie transformative pour une réelle valeur commerciale.",
+  "heroImage": "/images/expertise/blockchain-hero.jpg",
+  "heroButton": "Démarrer Votre Projet Blockchain",
+  "category": "Innovation",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Solutions blockchain complètes pour votre entreprise"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Technologies et frameworks blockchain de pointe"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Comment la technologie blockchain transforme les entreprises"
+    }
+  },
+  "features": [
+    {
+      "title": "Contrats Intelligents",
+      "description": "Contrats auto-exécutables avec des termes directement écrits dans le code",
+      "icon": "document-check"
+    },
+    {
+      "title": "Applications Décentralisées",
+      "description": "Applications fonctionnant sur un réseau pair-à-pair d'ordinateurs",
+      "icon": "cube-transparent"
+    },
+    {
+      "title": "Tokenisation",
+      "description": "Conversion d'actifs réels en jetons numériques",
+      "icon": "currency-dollar"
+    },
+    {
+      "title": "Blockchains Privées",
+      "description": "Réseaux sécurisés et autorisés pour usage entreprise",
+      "icon": "lock-closed"
+    }
+  ],
+  "technologies": [
+    { "name": "Rust", "logo": "/images/tech/rust.svg" },
+    { "name": "Solidity", "logo": "/images/tech/solidity.svg" },
+    { "name": "Python", "logo": "/images/tech/python.svg" },
+    { "name": "Web3.js", "logo": "/images/tech/web3js.svg" },
+    { "name": "Hedera", "logo": "/images/tech/hedera.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Sécurité Renforcée",
+      "description": "Protection cryptographique contre la falsification et la fraude",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Transparence Accrue",
+      "description": "Registre immuable de toutes les transactions et modifications",
+      "icon": "eye"
+    },
+    {
+      "title": "Réduction des Coûts",
+      "description": "Élimination des intermédiaires et rationalisation des processus",
+      "icon": "banknotes"
+    },
+    {
+      "title": "Innovation Commerciale",
+      "description": "Permettre de nouveaux modèles d'affaires et flux de revenus",
+      "icon": "sparkles"
+    }
+  ],
+  "relatedExpertise": ["cybersecurity", "cloud-services", "ai-solutions"],
+  "cta": {
+    "title": "Prêt à explorer la blockchain pour votre entreprise?",
+    "description": "Discutons de la façon dont cette technologie transformative peut résoudre vos défis et créer de nouvelles opportunités.",
+    "buttonText": "Démarrer Votre Projet Blockchain",
+    "buttonLink": "/digital-project?service=blockchain"
+  }
+}

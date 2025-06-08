@@ -1,0 +1,82 @@
+{
+  "id": "cybersecurity",
+  "slug": "cybersecurity",
+  "title": "Cybersécurité",
+  "subtitle": "Protégez vos actifs numériques avec des solutions de sécurité complètes",
+  "description": "Nous aidons les entreprises à protéger leurs systèmes, données et utilisateurs contre les cybermenaces. Nos services de cybersécurité comprennent l'évaluation des vulnérabilités, les tests de pénétration, la conception d'architecture de sécurité et la surveillance continue pour garantir que vos actifs numériques restent protégés.",
+  "heroImage": "/images/expertise/cybersecurity-hero.jpg",
+  "heroButton": "Sécurisez Vos Actifs Numériques",
+  "category": "Infrastructure",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Services complets de cybersécurité"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Outils et plateformes de sécurité de pointe"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Comment la cybersécurité protège votre entreprise"
+    }
+  },
+  "features": [
+    {
+      "title": "Évaluation de Sécurité",
+      "description": "Identifiez les vulnérabilités et les lacunes de sécurité dans vos systèmes",
+      "icon": "magnifying-glass"
+    },
+    {
+      "title": "Tests de Pénétration",
+      "description": "Simulez des attaques réelles pour tester vos défenses",
+      "icon": "shield-exclamation"
+    },
+    {
+      "title": "Architecture de Sécurité",
+      "description": "Concevez des cadres de sécurité robustes pour vos applications",
+      "icon": "lock-closed"
+    },
+    {
+      "title": "Conformité & Gouvernance",
+      "description": "Respectez les normes industrielles et les exigences réglementaires",
+      "icon": "clipboard-document-check"
+    }
+  ],
+  "technologies": [
+    { "name": "OWASP", "logo": "/images/tech/owasp.svg" },
+    { "name": "Nessus", "logo": "/images/tech/nessus.svg" },
+    { "name": "Metasploit", "logo": "/images/tech/metasploit.svg" },
+    { "name": "Wireshark", "logo": "/images/tech/wireshark.svg" },
+    { "name": "Snort", "logo": "/images/tech/snort.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Réduction des Risques",
+      "description": "Minimisez la probabilité et l'impact des violations de sécurité",
+      "icon": "arrow-trending-down"
+    },
+    {
+      "title": "Conformité Réglementaire",
+      "description": "Respectez les exigences de sécurité spécifiques à l'industrie",
+      "icon": "check-badge"
+    },
+    {
+      "title": "Confiance des Clients",
+      "description": "Inspirez confiance en démontrant votre engagement en matière de sécurité",
+      "icon": "heart"
+    },
+    {
+      "title": "Continuité des Activités",
+      "description": "Assurez la poursuite des opérations même pendant les incidents de sécurité",
+      "icon": "arrow-path"
+    }
+  ],
+  "relatedExpertise": ["cloud-services", "blockchain", "maintenance"],
+  "cta": {
+    "title": "Prêt à renforcer votre posture de sécurité?",
+    "description": "Construisons des défenses robustes pour protéger votre entreprise contre les cybermenaces en évolution.",
+    "buttonText": "Commencer Votre Évaluation de Sécurité",
+    "buttonLink": "/digital-project?service=cybersecurity"
+  }
+}

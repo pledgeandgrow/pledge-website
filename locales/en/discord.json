@@ -6,104 +6,102 @@
   "hero": {
     "title": "Join Our Discord Community",
     "description": "Connect with like-minded professionals, get real-time support, and stay updated on the latest Pledge & Grow events and resources.",
-    "joinButton": "Join Discord Server",
+    "joinButton": "Join Discord",
+    "learnMoreButton": "Learn More",
+    "imageAlt": "Pledge & Grow Discord Community",
     "memberCount": "{{count}}+ members and growing",
     "activeNow": "{{count}}+ active now"
   },
   "benefits": {
-    "title": "Community Benefits",
-    "description": "Our Discord server offers a range of benefits designed to support your professional growth and digital transformation journey.",
+    "title": "Why Join Our Discord",
+    "description": "Our Discord server is more than just a chat platform—it's a vibrant community where you can learn, connect, and grow with fellow professionals.",
     "items": {
+      "realTimeSupport": {
+        "title": "Real-time Support",
+        "description": "Get immediate help from our team and community members whenever you need it."
+      },
       "networking": {
         "title": "Networking Opportunities",
-        "description": "Connect with professionals, experts, and decision-makers from various industries and regions."
+        "description": "Connect with industry professionals, potential partners, and like-minded individuals."
       },
-      "support": {
-        "title": "Real-time Support",
-        "description": "Get quick answers to your questions and technical support from our team and community members."
+      "liveEvents": {
+        "title": "Live Events",
+        "description": "Participate in AMAs, webinars, and workshops hosted directly in our Discord server."
       },
-      "resources": {
+      "voiceChannels": {
+        "title": "Voice Channels",
+        "description": "Join voice discussions, collaborative sessions, and community meetings."
+      },
+      "exclusiveResources": {
         "title": "Exclusive Resources",
-        "description": "Access guides, templates, case studies, and other resources shared exclusively with our community."
+        "description": "Access guides, tutorials, and resources shared only with our Discord community."
       },
-      "events": {
-        "title": "Virtual Events",
-        "description": "Participate in webinars, workshops, AMAs, and other virtual events hosted on our server."
+      "earlyUpdates": {
+        "title": "Early Updates",
+        "description": "Be the first to know about new features, services, and company announcements."
       },
-      "collaboration": {
-        "title": "Collaboration Opportunities",
-        "description": "Find potential partners, clients, or collaborators for your projects and initiatives."
+      "globalCommunity": {
+        "title": "Global Community",
+        "description": "Join a diverse community of professionals from around the world."
       },
-      "insights": {
-        "title": "Industry Insights",
-        "description": "Stay updated on the latest trends, news, and developments in digital transformation and technology."
+      "safeEnvironment": {
+        "title": "Safe Environment",
+        "description": "Enjoy a moderated space that promotes respectful and productive discussions."
       }
     }
   },
   "channels": {
-    "title": "Server Channels",
-    "description": "Our Discord server is organized into several channels to help you find the information and connections you need.",
+    "title": "Discord Channels",
+    "description": "Our server is organized into different channels to help you find the information and support you need.",
     "categories": {
       "welcome": {
-        "title": "Welcome & Information",
-        "description": "Get started with our community guidelines, introductions, and announcements."
+        "title": "Welcome & Announcements",
+        "description": "Get started with our community and stay updated on important announcements."
       },
       "general": {
         "title": "General Discussion",
-        "description": "Engage in conversations about digital transformation, business growth, and industry trends."
+        "description": "Chat about industry topics, share ideas, and connect with other members."
       },
       "support": {
-        "title": "Technical Support",
-        "description": "Get help with technical questions, implementation challenges, and troubleshooting."
+        "title": "Support & Help",
+        "description": "Get assistance with technical issues, product questions, and more."
       },
       "resources": {
         "title": "Resources & Learning",
-        "description": "Access educational content, guides, case studies, and best practices."
+        "description": "Access educational content, guides, and learning materials."
       },
       "events": {
         "title": "Events & Webinars",
-        "description": "Stay updated on upcoming events, webinars, and community activities."
+        "description": "Information about upcoming events, webinars, and community activities."
+      }
+    }
+  },
+  "guidelines": {
+    "title": "Community Guidelines",
+    "description": "To ensure a positive experience for all members, we ask everyone to follow these guidelines:",
+    "rules": {
+      "respect": {
+        "title": "Be Respectful",
+        "description": "Treat all members with respect and courtesy. Harassment and discrimination are not tolerated."
       },
-      "networking": {
-        "title": "Networking & Collaboration",
-        "description": "Connect with other members, share opportunities, and find potential collaborators."
+      "constructive": {
+        "title": "Be Constructive",
+        "description": "Provide helpful feedback and contribute positively to discussions."
+      },
+      "ontopic": {
+        "title": "Stay On Topic",
+        "description": "Use channels for their intended purpose to keep discussions organized."
+      },
+      "privacy": {
+        "title": "Respect Privacy",
+        "description": "Do not share personal information about yourself or others without consent."
       }
     }
   },
   "cta": {
     "title": "Ready to Join Our Community?",
-    "description": "Join our Discord server today and become part of a growing community of professionals dedicated to digital innovation and growth.",
-    "button": "Join Discord Server",
-    "alternativeText": "You can also access our Discord server via the link in our website footer or by searching for 'Pledge & Grow' on Discord."
-  },
-  "rules": {
-    "title": "Community Guidelines",
-    "description": "To ensure a positive and productive experience for all members, please follow these guidelines:",
-    "items": {
-      "respect": {
-        "title": "Be Respectful",
-        "description": "Treat all community members with respect and courtesy."
-      },
-      "ontopic": {
-        "title": "Stay On Topic",
-        "description": "Keep discussions relevant to the channel topics and purpose."
-      },
-      "nospam": {
-        "title": "No Spam or Self-Promotion",
-        "description": "Avoid excessive self-promotion, advertising, or spamming."
-      },
-      "privacy": {
-        "title": "Respect Privacy",
-        "description": "Do not share personal information of others without consent."
-      },
-      "constructive": {
-        "title": "Be Constructive",
-        "description": "Provide constructive feedback and contribute positively to discussions."
-      },
-      "compliance": {
-        "title": "Follow Discord ToS",
-        "description": "Adhere to Discord's Terms of Service and Community Guidelines."
-      }
-    }
+    "description": "Connect with professionals, get support, and stay updated on the latest developments. Our Discord community is waiting for you!",
+    "joinButton": "Join Discord",
+    "contactButton": "Contact Us"
   }
 }

@@ -1,0 +1,196 @@
+{
+  "meta": {
+    "title": "Relations Investisseurs | Pledge & Grow",
+    "description": "Découvrez les opportunités d'investissement avec Pledge & Grow. Informez-vous sur notre performance financière, notre trajectoire de croissance et notre vision stratégique."
+  },
+  "companyOverview": {
+    "title": "Aperçu de l'Entreprise",
+    "description": "Pledge & Grow est une entreprise d'innovation numérique axée sur l'aide aux entreprises à se transformer et à se développer grâce à des solutions technologiques et des conseils stratégiques.",
+    "keyMetrics": {
+      "title": "Indicateurs Clés",
+      "founded": "Fondée",
+      "foundedValue": "2018",
+      "employees": "Personnel",
+      "employeesValue": "10",
+      "clients": "Clients",
+      "clientsValue": "20",
+      "annualGrowth": "Croissance Annuelle",
+      "annualGrowthValue": "35%",
+      "countries": "Pays",
+      "countriesValue": "5+"
+    },
+    "highlights": {
+      "consistentGrowth": {
+        "title": "Croissance Constante",
+        "description": "Croissance du chiffre d'affaires de 35% d'une année sur l'autre depuis notre fondation"
+      },
+      "globalTeam": {
+        "title": "Équipe Mondiale",
+        "description": "Plus de 10 professionnels talentueux répartis dans 5 pays"
+      },
+      "marketReach": {
+        "title": "Portée du Marché",
+        "description": "Service aux clients dans plus de 5 pays à travers le monde"
+      },
+      "localRecognition": {
+        "title": "Reconnaissance Locale",
+        "description": "Reconnu localement en France et augmentant progressivement notre portée"
+      }
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Simplifier la transformation numérique pour les entreprises de toutes tailles, leur permettant de croître, d'innover et de réussir dans un monde de plus en plus numérique."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Devenir le partenaire leader de la transformation numérique pour les entreprises à travers l'Europe, reconnu pour nos solutions innovantes, notre service exceptionnel et notre impact mesurable."
+    }
+  },
+  "investorsPhase": {
+    "comingSoon": "À Venir",
+    "title": "Phases d'Investissement",
+    "description": "Notre plan d'investissement stratégique est structuré en trois phases distinctes, chacune offrant des opportunités uniques aux investisseurs de participer à notre parcours de croissance.",
+    "phases": {
+      "seed": {
+        "title": "SEED",
+        "status": "active",
+        "description": "Tour de financement initial pour le développement en phase précoce et la validation du marché.",
+        "details": [
+          "5 investisseurs providentiels",
+          "100K€ d'investissement par investisseur",
+          "1% d'actions non diluables par investisseur",
+          "Investissement avec garantie",
+          "Disponibilité limitée"
+        ],
+        "cta": {
+          "text": "Se renseigner sur l'investissement Seed",
+          "link": "/contact?subject=Investissement%20Seed"
+        }
+      },
+      "grow": {
+        "title": "GROW",
+        "status": "coming-soon",
+        "description": "Deuxième phase de financement axée sur le développement des opérations et l'expansion du marché.",
+        "details": [
+          "Prévu pour 2030"
+        ]
+      },
+      "pledge": {
+        "title": "PLEDGE",
+        "status": "coming-soon",
+        "description": "Phase d'investissement finale pour une entreprise établie avec un succès prouvé sur le marché.",
+        "details": [
+          "Prévu pour 2035"
+        ]
+      }
+    }
+  },
+  "investmentOpportunities": {
+    "title": "Opportunités Futures",
+    "description": "Découvrez les opportunités actuelles et à venir avec Pledge & Grow. Nous offrons diverses façons de participer à notre parcours de croissance et d'innovation.",
+    "opportunities": {
+      "events": {
+        "title": "Pledge & Events",
+        "status": "Actif",
+        "description": "Agence de gestion d'événements qui transforme la façon dont les entreprises planifient et exécutent des événements corporatifs.",
+        "details": [
+          "Gestion d'événements d'entreprise premium",
+          "Organisation de conférences internationales",
+          "Plateformes événementielles numériques et analytiques",
+          "Solutions événementielles durables"
+        ]
+      },
+      "cloud": {
+        "title": "Pledge & Cloud",
+        "status": "À Venir",
+        "description": "Solutions d'infrastructure cloud et d'hébergement avec une architecture évolutive pour les entreprises de toutes tailles.",
+        "details": [
+          "Infrastructure cloud évolutive",
+          "Services d'hébergement gérés",
+          "Solutions cloud pour entreprises"
+        ]
+      },
+      "properties": {
+        "title": "Pledge & Properties",
+        "status": "À Venir",
+        "description": "Développement immobilier et gestion de propriétés avec des technologies innovantes de bâtiments intelligents.",
+        "details": [
+          "Technologies de bâtiments intelligents",
+          "Développement immobilier durable",
+          "Espaces de vie innovants"
+        ]
+      },
+      "give": {
+        "title": "Pledge & Give",
+        "status": "À Venir",
+        "description": "Fondation dédiée au soutien des orphelins et à la fourniture de soins essentiels et d'opportunités.",
+        "details": [
+          "Programmes de soutien aux orphelins",
+          "Initiatives éducatives",
+          "Santé et bien-être"
+        ]
+      }
+    },
+    "growthStrategy": {
+      "title": "Stratégie de Croissance",
+      "description": "Notre stratégie de croissance complète se concentre sur trois piliers clés :",
+      "pillars": {
+        "expansion": {
+          "title": "Expansion Géographique",
+          "description": "Établir une forte présence sur les marchés européens clés grâce à des partenariats stratégiques et des équipes locales."
+        },
+        "productDevelopment": {
+          "title": "Développement de Produits",
+          "description": "Améliorer notre plateforme de transformation numérique avec des capacités d'IA et des solutions spécifiques à l'industrie."
+        },
+        "marketPenetration": {
+          "title": "Pénétration du Marché",
+          "description": "Approfondir notre présence sur les marchés existants grâce à une offre de services élargie et un marketing ciblé."
+        }
+      }
+    },
+    "financialProjections": {
+      "title": "Projections Financières",
+      "description": "Nos projections financières reflètent nos plans de croissance ambitieux et notre forte position sur le marché.",
+      "disclaimer": "Note : Ces projections sont basées sur les conditions actuelles du marché et la performance de l'entreprise. Les résultats réels peuvent varier.",
+      "metrics": {
+        "revenue": {
+          "title": "Croissance des Revenus",
+          "description": "Croissance projetée des revenus de 40% d'une année sur l'autre pour les trois prochaines années."
+        },
+        "profitability": {
+          "title": "Rentabilité",
+          "description": "Devrait atteindre un EBITDA positif d'ici le T4 2025 avec une marge de 15% d'ici 2027."
+        },
+        "marketShare": {
+          "title": "Part de Marché",
+          "description": "Visant 8% de part de marché dans nos segments principaux d'ici 2027."
+        }
+      }
+    },
+    "exitStrategy": {
+      "title": "Stratégie de Sortie",
+      "description": "Nous avons identifié plusieurs voies de sortie potentielles pour nos investisseurs :",
+      "options": {
+        "acquisition": {
+          "title": "Acquisition Stratégique",
+          "description": "Acquisition potentielle par des entreprises technologiques ou de conseil plus importantes cherchant à améliorer leurs capacités numériques."
+        },
+        "ipo": {
+          "title": "Introduction en Bourse",
+          "description": "Introduction en bourse potentielle sur les marchés européens dans les 5 à 7 ans, sous réserve des conditions du marché."
+        },
+        "privateEquity": {
+          "title": "Investissement en Capital-Investissement",
+          "description": "Vente secondaire à des investisseurs en capital-investissement pour une croissance continue et une sortie plus importante à terme."
+        }
+      }
+    },
+    "cta": {
+      "title": "Intéressé par l'Investissement ?",
+      "description": "Contactez notre équipe de relations avec les investisseurs pour en savoir plus sur les opportunités d'investissement actuelles et pour demander notre dossier d'investisseur détaillé.",
+      "button": "Demander des Informations pour Investisseurs",
+      "contactInfo": "Pour les demandes des investisseurs, contactez investors@pledgeandgrow.com"
+    }
+  }
+}

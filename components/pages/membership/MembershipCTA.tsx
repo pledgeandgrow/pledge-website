@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function MembershipCTA() {
+  const { t } = useTranslations("membership");
+  
   return (
     <section className="py-16 md:py-24 bg-primary/5">
       <div className="container mx-auto px-4">
@@ -17,20 +19,29 @@ export default function MembershipCTA() {
           className="text-center max-w-3xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Join Our Community?
+            {t('cta.title')}
           </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Take the next step in your professional journey. Join our membership program today and unlock a world of resources, support, and opportunities.
+          <p className="text-lg text-muted-foreground mb-10">
+            {t('cta.description')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="font-medium">
-              <Link href="/careers" className="flex items-center gap-2">
-                Get a job <ArrowRight size={16} />
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button 
+              asChild 
+              size="lg"
+              className="px-8"
+            >
+              <Link href="/contact?subject=Premium Membership Application">
+                {t('cta.applyButton')}
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="font-medium">
+            <Button 
+              asChild 
+              variant="outline" 
+              size="lg"
+              className="px-8"
+            >
               <Link href="/">
-                Go back home
+                {t('cta.homeButton')}
               </Link>
             </Button>
           </div>

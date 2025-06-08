@@ -1,0 +1,143 @@
+{
+  "meta": {
+    "title": "Nos Ambassadeurs | Pledge & Grow",
+    "description": "Rencontrez nos ambassadeurs mondiaux qui représentent Pledge & Grow et aident à diffuser notre mission dans le monde entier."
+  },
+  "hero": {
+    "title": "Nos Ambassadeurs Mondiaux",
+    "description": "Rencontrez les personnes passionnées qui représentent Pledge & Grow dans le monde entier et nous aident à étendre notre mission et notre impact.",
+    "subtitle": "Représentant nos valeurs et notre vision à travers le monde"
+  },
+  "ambassadorsList": {
+    "title": "Rencontrez Nos Ambassadeurs",
+    "description": "Nos ambassadeurs viennent de milieux et d'industries diverses, unis par leur passion pour l'innovation numérique et la croissance.",
+    "regions": {
+      "title": "Ambassadeurs par Région",
+      "all": "Toutes les Régions",
+      "global": "Global",
+      "community": "Communauté",
+      "europe": "Europe",
+      "northamerica": "Amérique du Nord",
+      "asia": "Asie",
+      "africa": "Afrique",
+      "southamerica": "Amérique du Sud",
+      "oceania": "Océanie"
+    },
+    "ambassador": {
+      "location": "Localisation",
+      "expertise": "Expertise",
+      "since": "Ambassadeur depuis",
+      "connect": "Se connecter",
+      "viewProfile": "Voir le Profil",
+      "role": "Rôle",
+      "globalRole": "Ambassadeur Global",
+      "globalExample": "SHARKA (France) - Notre représentant officiel de la marque mondiale",
+      "communityRole": "Ambassadeur Communautaire",
+      "communityExample": "Aucun actuellement - Candidatures ouvertes pour les défenseurs passionnés de la communauté"
+    },
+    "featured": "En vedette",
+    "tryAdjusting": "Essayez d'ajuster vos filtres pour trouver des ambassadeurs.",
+    "ambassadorBios": {
+      "sharka": "SHARKA nous aide à promouvoir notre marque spécifiquement pour la France et la communauté française. Avec une perspective unique et une présence engageante, SHARKA aide à communiquer nos valeurs et notre mission à l'audience francophone."
+    },
+    "countries": {
+      "france": "France",
+      "usa": "États-Unis",
+      "uk": "Royaume-Uni",
+      "canada": "Canada",
+      "australia": "Australie",
+      "germany": "Allemagne",
+      "japan": "Japon"
+    },
+    "noAmbassadors": "Aucun ambassadeur trouvé pour cette région pour le moment.",
+    "viewAll": "Voir Tous les Ambassadeurs"
+  },
+  "becomeAmbassador": {
+    "title": "Rejoignez Notre Communauté",
+    "description": "Rejoignez notre communauté mondiale d'ambassadeurs et aidez-nous à diffuser notre mission. En tant qu'ambassadeur, vous représenterez Pledge & Grow dans votre région et vous connecterez avec des professionnels partageant les mêmes idées.",
+    "applyButton": "Postuler pour Devenir Ambassadeur",
+    "benefits": {
+      "title": "Avantages des Ambassadeurs",
+      "globalNetwork": {
+        "title": "Réseau Mondial",
+        "description": "Connectez-vous avec une communauté diversifiée d'enthousiastes et de professionnels de la technologie du monde entier."
+      },
+      "exclusiveBenefits": {
+        "title": "Avantages Exclusifs",
+        "description": "Accédez à des ressources exclusives, des lancements anticipés de produits et des événements spéciaux réservés aux ambassadeurs."
+      },
+      "communityImpact": {
+        "title": "Impact Communautaire",
+        "description": "Faites une différence dans votre communauté technologique locale en partageant des connaissances et en favorisant l'innovation."
+      },
+      "amplifyVoice": {
+        "title": "Amplifiez Votre Voix",
+        "description": "Renforcez votre marque personnelle et établissez-vous comme un leader d'opinion dans votre domaine."
+      },
+      "networkAccess": {
+        "title": "Accès à un Réseau Exclusif",
+        "description": "Connectez-vous avec des leaders de l'industrie, des innovateurs et des décideurs dans notre communauté mondiale."
+      },
+      "professionalGrowth": {
+        "title": "Croissance Professionnelle",
+        "description": "Améliorez votre marque personnelle et votre visibilité en tant que leader d'opinion dans l'innovation numérique."
+      },
+      "earlyAccess": {
+        "title": "Accès Anticipé",
+        "description": "Soyez les premiers à découvrir et à tester de nouvelles technologies, services et initiatives."
+      },
+      "recognition": {
+        "title": "Reconnaissance et Récompenses",
+        "description": "Recevez une reconnaissance pour vos contributions et gagnez des récompenses basées sur votre impact."
+      }
+    },
+    "responsibilities": {
+      "title": "Responsabilités des Ambassadeurs",
+      "items": {
+        "represent": {
+          "title": "Représenter Pledge & Grow",
+          "description": "Incarner nos valeurs et notre vision dans vos activités professionnelles et vos communications."
+        },
+        "promote": {
+          "title": "Promouvoir Notre Mission",
+          "description": "Partagez notre contenu, nos événements et nos initiatives avec votre réseau et votre communauté."
+        },
+        "connect": {
+          "title": "Connecter et Référer",
+          "description": "Présentez des clients potentiels, des partenaires et des collaborateurs à notre équipe."
+        },
+        "feedback": {
+          "title": "Fournir des Retours",
+          "description": "Partagez des idées de votre région et de votre industrie pour nous aider à nous améliorer et à nous adapter."
+        }
+      }
+    },
+    "application": {
+      "title": "Processus de Candidature",
+      "steps": {
+        "submit": {
+          "title": "Soumettre une Candidature",
+          "description": "Complétez notre formulaire de candidature d'ambassadeur avec vos informations professionnelles."
+        },
+        "interview": {
+          "title": "Entretien",
+          "description": "Participez à un entretien virtuel avec notre équipe du programme d'ambassadeurs."
+        },
+        "onboarding": {
+          "title": "Intégration",
+          "description": "Complétez notre programme d'intégration pour ambassadeurs afin de vous familiariser avec nos offres et notre approche."
+        },
+        "activation": {
+          "title": "Activation",
+          "description": "Recevez vos identifiants officiels d'ambassadeur et commencez à représenter Pledge & Grow."
+        }
+      }
+    },
+    "cta": {
+      "title": "Prêt à Représenter Pledge & Grow ?",
+      "description": "Postulez maintenant pour devenir un ambassadeur officiel et rejoindre notre communauté mondiale d'innovateurs numériques.",
+      "button": "Postuler pour Devenir Ambassadeur",
+      "contactInfo": "Pour toute question concernant notre programme d'ambassadeurs, contactez ambassadors@pledgeandgrow.com"
+    }
+  }
+}

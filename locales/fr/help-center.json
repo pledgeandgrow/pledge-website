@@ -1,0 +1,155 @@
+{
+  "faqs": {
+    "title": "Questions Fréquemment Posées",
+    "description": "Trouvez des réponses rapides aux questions courantes sur nos services, processus et politiques.",
+    "searchPlaceholder": "Rechercher des questions...",
+    "noResults": "Aucun résultat trouvé pour votre recherche.",
+    "clearSearch": "Effacer la recherche",
+    "stillHaveQuestions": {
+      "title": "Vous avez encore des questions ?",
+      "description": "Si vous n'avez pas trouvé la réponse que vous cherchiez, notre équipe de support est là pour vous aider.",
+      "contactButton": "Contacter le support"
+    },
+    "categories": {
+      "all": "Toutes les questions",
+      "services": "Nos services",
+      "projects": "Projets et processus",
+      "technical": "Support technique",
+      "billing": "Facturation et paiements"
+    },
+    "questions": [
+      {
+        "id": "service-offerings",
+        "question": "Quels services Pledge & Grow propose-t-il ?",
+        "answer": "Pledge & Grow propose une gamme complète de services numériques, notamment le développement d'applications web et mobiles, la conception UI/UX, le conseil en stratégie numérique, les solutions e-commerce, les systèmes de gestion de contenu, le développement de logiciels sur mesure, ainsi que la maintenance et le support continus. Nous travaillons avec des entreprises de toutes tailles pour créer des solutions numériques adaptées à leurs besoins et objectifs spécifiques.",
+        "category": "services"
+      },
+      {
+        "id": "service-timeline",
+        "question": "Combien de temps faut-il généralement pour réaliser un projet ?",
+        "answer": "Les délais des projets varient en fonction de l'étendue, de la complexité et des exigences spécifiques. Un site web simple peut prendre 4 à 6 semaines, tandis qu'une application web complexe ou une application mobile pourrait prendre 3 à 6 mois. Lors de notre consultation initiale, nous vous fournirons un calendrier détaillé basé sur les spécifications de votre projet. Nous sommes fiers de notre communication transparente tout au long du processus et vous tiendrons informé de l'avancement et de tout ajustement nécessaire du calendrier.",
+        "category": "services"
+      },
+      {
+        "id": "service-cost",
+        "question": "Combien coûtent vos services ?",
+        "answer": "Nos tarifs sont personnalisés en fonction des exigences spécifiques de chaque projet. Les facteurs qui influencent le coût comprennent la complexité du projet, les fonctionnalités nécessaires, les exigences de conception, le calendrier et les besoins de support continu. Nous proposons des modèles d'engagement flexibles, y compris des projets à prix fixe, des arrangements de rétention et une facturation au temps et aux matériaux. Nous sommes heureux de fournir un devis détaillé après avoir compris les exigences de votre projet lors d'une consultation initiale.",
+        "category": "services"
+      },
+      {
+        "id": "project-process",
+        "question": "Quel est votre processus de développement de projet ?",
+        "answer": "Notre processus de développement suit ces phases clés : 1) Découverte et planification - Nous recueillons les exigences, effectuons des recherches et créons une feuille de route du projet. 2) Conception - Nous développons des wireframes, des maquettes et des prototypes pour approbation. 3) Développement - Nos ingénieurs construisent la solution selon les spécifications. 4) Tests et AQ - Nous effectuons des tests approfondis pour assurer la qualité et la performance. 5) Déploiement - Nous lançons votre solution sur les plateformes appropriées. 6) Support post-lancement - Nous fournissons une maintenance et un support continus selon les besoins. Tout au long de ce processus, nous maintenons une communication régulière et vous impliquons dans les points de décision clés.",
+        "category": "projects"
+      },
+      {
+        "id": "project-communication",
+        "question": "Comment communiquerons-nous pendant le projet ?",
+        "answer": "Nous croyons en une communication transparente et régulière. Un chef de projet dédié vous sera assigné et sera votre principal point de contact. Nous utilisons une combinaison d'outils, notamment des logiciels de gestion de projet, des appels vidéo réguliers, des mises à jour par e-mail et des plateformes collaboratives comme Slack pour la communication quotidienne. Nous planifions des réunions hebdomadaires d'avancement et fournissons des rapports détaillés aux étapes clés. Notre objectif est de vous tenir informé et impliqué tout au long du processus.",
+        "category": "projects"
+      },
+      {
+        "id": "project-changes",
+        "question": "Que se passe-t-il si je veux apporter des modifications pendant le projet ?",
+        "answer": "Nous comprenons que les exigences peuvent évoluer au cours d'un projet. Nous avons un processus structuré de demande de changement pour gérer les modifications de la portée initiale. Votre chef de projet documentera les changements demandés, évaluera l'impact sur le calendrier et le budget, et vous fournira des options avant de procéder. Pour les changements mineurs, nous essayons de les intégrer dans la portée existante, tandis que des changements plus importants peuvent nécessiter des ajustements du calendrier ou du budget du projet. Nous sommes flexibles et travaillerons avec vous pour trouver la meilleure solution.",
+        "category": "projects"
+      },
+      {
+        "id": "technical-hosting",
+        "question": "Proposez-vous des services d'hébergement ?",
+        "answer": "Oui, nous proposons des solutions d'hébergement adaptées aux besoins de votre projet. Nous pouvons configurer et gérer l'hébergement sur les principales plateformes cloud comme AWS, Google Cloud ou Microsoft Azure. Nos services d'hébergement comprennent la configuration du serveur, la mise en place de la sécurité, l'optimisation des performances, les sauvegardes régulières et la surveillance continue. Si vous préférez utiliser votre propre fournisseur d'hébergement, nous sommes heureux de déployer votre projet là-bas et de vous fournir des conseils sur la configuration optimale. Nous pouvons discuter des options d'hébergement et des recommandations pendant notre phase de planification du projet.",
+        "category": "technical"
+      },
+      {
+        "id": "technical-maintenance",
+        "question": "Quel type de support et de maintenance proposez-vous après le lancement ?",
+        "answer": "Nous proposons plusieurs options de support et de maintenance post-lancement pour garantir que votre produit numérique continue de fonctionner de manière optimale. Notre support standard comprend la correction des bugs, les mises à jour de sécurité et les ajustements mineurs pendant 30 jours après le lancement. Pour les besoins continus, nous proposons des forfaits de maintenance qui peuvent inclure des mises à jour régulières, la surveillance des performances, les correctifs de sécurité, les mises à jour de contenu, les améliorations de fonctionnalités et le support technique. Nous pouvons personnaliser un plan de maintenance en fonction de vos besoins spécifiques et de votre budget.",
+        "category": "technical"
+      },
+      {
+        "id": "technical-compatibility",
+        "question": "Mon site web/application fonctionnera-t-il sur tous les appareils et navigateurs ?",
+        "answer": "Oui, nous concevons et développons en faisant de la compatibilité multiplateforme une priorité. Nos sites web sont responsifs et s'adaptent à différentes tailles d'écran, du bureau aux appareils mobiles. Nous testons sur tous les principaux navigateurs (Chrome, Firefox, Safari, Edge) et assurons la compatibilité avec les versions récentes. Pour les applications mobiles, nous pouvons développer des applications natives pour iOS et Android ou des solutions multiplateformes selon vos besoins. Pendant la phase de planification, nous discuterons des plateformes et navigateurs cibles pour répondre à vos besoins spécifiques de compatibilité.",
+        "category": "technical"
+      },
+      {
+        "id": "billing-payment",
+        "question": "Quelles sont vos conditions de paiement ?",
+        "answer": "Notre calendrier de paiement standard comprend généralement un acompte initial (généralement 30 à 50% du total du projet) pour commencer le travail, suivi de paiements par étapes tout au long du projet, et un paiement final à l'achèvement. Pour les projets plus importants, nous pouvons créer un calendrier de paiement personnalisé aligné sur les principales étapes. Nous acceptons diverses méthodes de paiement, y compris les virements bancaires, les cartes de crédit et, dans certains cas, les plans de paiement échelonné. Toutes les conditions de paiement sont clairement décrites dans notre proposition de projet et notre contrat.",
+        "category": "billing"
+      },
+      {
+        "id": "billing-refund",
+        "question": "Quelle est votre politique de remboursement ?",
+        "answer": "Notre politique de remboursement est conçue pour être équitable pour toutes les parties. Si vous devez annuler un projet après le début des travaux, le paiement pour le travail terminé n'est pas remboursable. Pour le solde restant, nous pouvons offrir un remboursement partiel en fonction de l'étape du projet et des ressources déjà allouées. Si nous ne parvenons pas à livrer conformément aux spécifications convenues et ne pouvons pas rectifier les problèmes, nous travaillerons avec vous sur un remboursement ou une compensation appropriée. Les conditions spécifiques de remboursement sont incluses dans notre accord de service, que nous examinerons ensemble avant le début du projet.",
+        "category": "billing"
+      },
+      {
+        "id": "billing-additional",
+        "question": "Y a-t-il des coûts supplémentaires dont je devrais être conscient ?",
+        "answer": "Nos devis de projet incluent tous les coûts de développement et de conception, mais il peut y avoir des dépenses supplémentaires en fonction des exigences de votre projet. Celles-ci pourraient inclure des services ou outils tiers (par exemple, passerelles de paiement, abonnements API, plugins premium), photographies de stock ou illustrations personnalisées, enregistrement de domaine, frais d'hébergement, certificats SSL et maintenance continue. Nous identifions clairement ces coûts supplémentaires potentiels dans nos propositions afin que vous puissiez budgétiser en conséquence. Nous nous engageons à la transparence et ne vous surprendrons pas avec des frais inattendus.",
+        "category": "billing"
+      }
+    ]
+  },
+  "contactSupport": {
+    "title": "Contacter le support",
+    "description": "Besoin d'aide pour quelque chose ? Notre équipe de support est là pour vous aider.",
+    "quickContactOptions": "Options de contact rapide",
+    "contactMethods": {
+      "technicalSupport": "Support technique",
+      "emailSupport": "Support par e-mail",
+      "liveChat": "Chat en direct",
+      "callButton": "Appeler",
+      "emailButton": "E-mail",
+      "chatButton": "Chat"
+    },
+    "form": {
+      "ticketTitle": "Soumettre un ticket",
+      "ticketDescription": "Remplissez le formulaire ci-dessous et nous vous répondrons dès que possible.",
+      "nameLabel": "Votre nom",
+      "namePlaceholder": "Jean Dupont",
+      "emailLabel": "Adresse e-mail",
+      "emailPlaceholder": "jean@exemple.com",
+      "subjectLabel": "Sujet",
+      "subjectPlaceholder": "Comment pouvons-nous vous aider ?",
+      "categoryLabel": "Catégorie",
+      "categoryPlaceholder": "Sélectionnez une catégorie",
+      "messageLabel": "Votre message",
+      "messagePlaceholder": "Veuillez décrire votre problème ou question en détail...",
+      "submitButton": "Soumettre le ticket",
+      "successTitle": "Message envoyé !",
+      "successMessage": "Merci de nous avoir contactés. Nous avons reçu votre message et vous répondrons sous peu."
+    },
+    "categories": {
+      "general": "Demande générale",
+      "technical": "Support technique",
+      "billing": "Question de facturation",
+      "feedback": "Commentaires",
+      "other": "Autre"
+    },
+    "otherWays": {
+      "title": "Autres façons de nous joindre",
+      "description": "Choisissez la méthode de contact qui vous convient le mieux.",
+      "liveChat": {
+        "title": "Support par chat en direct",
+        "description": "Chattez avec notre équipe de support en temps réel via WhatsApp Business pour une assistance immédiate avec n'importe quelle question.",
+        "button": "Chatter sur WhatsApp"
+      },
+      "phone": {
+        "title": "Support technique",
+        "description": "Appelez notre équipe de support technique directement pour les questions urgentes ou les problèmes techniques complexes."
+      },
+      "email": {
+        "title": "Support par e-mail",
+        "description": "Envoyez-nous un e-mail directement pour les demandes non urgentes."
+      },
+      "hours": {
+        "title": "Heures de support",
+        "weekdays": "Lundi - Vendredi : 9h00 - 18h00 CET",
+        "saturday": "Samedi : 10h00 - 14h00 CET",
+        "sunday": "Dimanche : Fermé"
+      }
+    }
+  }
+}

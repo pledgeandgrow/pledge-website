@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "title": "Écosystème | Pledge & Grow",
+    "description": "Découvrez les avantages de faire partie de l'écosystème Pledge & Grow, y compris l'accès à nos sociétés du groupe, nos projets d'innovation et nos partenaires exclusifs avec des remises importantes."
+  },
+  "hero": {
+    "title": "Notre Écosystème",
+    "subtitle": "Croissance Collaborative",
+    "description": "Rejoignez un réseau dynamique d'innovateurs, de partenaires et de clients qui travaillent ensemble pour créer des expériences numériques exceptionnelles et stimuler la croissance des entreprises.",
+    "cta": {
+      "primary": "Devenir Client",
+      "secondary": "Nos Services"
+    },
+    "features": {
+      "partners": "Réseau de Partenaires",
+      "discounts": "Remises Spéciales",
+      "innovation": "Projets d'Innovation"
+    }
+  },
+  "advantages": {
+    "title": "Avantages de Notre Écosystème",
+    "subtitle": "Pourquoi Rejoindre Notre Réseau",
+    "description": "En tant que client de Pledge & Grow, vous bénéficiez d'une multitude d'avantages qui aident votre entreprise à se développer et à prospérer.",
+    "items": {
+      "exclusiveDiscounts": {
+        "title": "Remises Exclusives",
+        "description": "Bénéficiez de réductions importantes sur les services de nos entreprises partenaires, vous aidant à économiser sur les besoins essentiels de votre entreprise."
+      },
+      "priorityAccess": {
+        "title": "Accès Prioritaire",
+        "description": "Obtenez un accès prioritaire aux nouvelles fonctionnalités, services et projets d'innovation avant qu'ils ne soient disponibles pour le grand public."
+      },
+      "groupResources": {
+        "title": "Ressources du Groupe",
+        "description": "Tirez parti de l'expertise combinée et des ressources de toutes les entreprises du groupe Pledge & Grow pour vos projets."
+      },
+      "strategicPartnerships": {
+        "title": "Partenariats Stratégiques",
+        "description": "Connectez-vous avec notre réseau de partenaires de confiance pour étendre vos opportunités commerciales et votre portée."
+      },
+      "enhancedSupport": {
+        "title": "Support Amélioré",
+        "description": "Bénéficiez d'un support dédié et d'heures de service étendues exclusivement disponibles pour les membres de l'écosystème."
+      },
+      "earlyInnovation": {
+        "title": "Accès Anticipé à l'Innovation",
+        "description": "Soyez parmi les premiers à tester et à mettre en œuvre des solutions de pointe issues de nos projets d'innovation internes."
+      },
+      "collaboration": {
+        "title": "Innovation Collaborative",
+        "description": "Accès aux connaissances, ressources et expertises partagées à travers notre réseau de partenaires"
+      },
+      "trustedPartners": {
+        "title": "Partenaires de Confiance",
+        "description": "Travaillez avec des partenaires pré-vérifiés qui répondent à nos normes de qualité élevées"
+      },
+      "expandedNetwork": {
+        "title": "Réseau Élargi",
+        "description": "Connectez-vous à un écosystème plus large d'entreprises et de clients potentiels"
+      }
+    }
+  },
+  "partners": {
+    "title": "Notre Réseau de Partenaires",
+    "subtitle": "Partenariats Exclusifs",
+    "description": "Nous avons établi des partenariats stratégiques avec des leaders de l'industrie pour améliorer nos offres de services et fournir des solutions complètes.",
+    "clientBenefit": "En tant que client de Pledge & Grow, vous bénéficiez d'un accès exclusif à notre réseau de partenaires de confiance, chacun offrant des remises et des avantages spéciaux, y compris une réduction minimum de 5% sur tous les services partenaires.",
+    "categories": {
+      "title": "Catégories de Partenaires",
+      "technology": {
+        "title": "Partenaires Technologiques",
+        "description": "Fournisseurs de technologies de pointe qui complètent nos capacités de développement"
+      },
+      "technologie": {
+        "title": "Partenaires Technologiques",
+        "description": "Fournisseurs de technologies de pointe qui complètent nos capacités de développement"
+      },
+      "service": {
+        "title": "Partenaires de Services",
+        "description": "Prestataires de services spécialisés qui étendent nos capacités"
+      },
+      "industry": {
+        "title": "Partenaires Industriels",
+        "description": "Partenaires sectoriels avec une expertise approfondie du domaine"
+      },
+      "innovation": {
+        "title": "Partenaires d'Innovation",
+        "description": "Institutions de recherche et centres d'innovation collaborant sur des projets de pointe"
+      },
+      "marketing": {
+        "title": "Partenaires Marketing",
+        "description": "Spécialistes du marketing et de la création de contenu pour amplifier votre marque"
+      },
+      "community": {
+        "title": "Partenaires Communautaires",
+        "description": "Spécialistes de la création et de la gestion de communautés"
+      },
+      "communauté": {
+        "title": "Partenaires Communautaires",
+        "description": "Spécialistes de la création et de la gestion de communautés"
+      }
+    },
+    "benefits": {
+      "title": "Avantages Partenaires",
+      "discounts": "5% de réduction sur tous les services partenaires",
+      "integration": "Intégration transparente",
+      "support": "Support prioritaire",
+      "billing": "Facturation consolidée"
+    },
+    "becomePartner": "Devenir Partenaire"
+  },
+  "showcase": {
+    "title": "Notre Écosystème en Croissance",
+    "subtitle": "Réseau de Partenaires",
+    "description": "Explorez notre réseau de plus de 60 partenaires offrant des avantages exclusifs aux clients de Pledge & Grow. ",
+    "viewAllCases": "Voir Tous les Partenaires",
+    "moreCategories": "+5 catégories supplémentaires",
+    "mobileInstructions": "Pincez pour zoomer, touchez les partenaires pour plus de détails",
+    "availableSlots": "+ {{count}} emplacements de partenaires disponibles",
+    "partnerCategory": "Partenaire {{category}}",
+    "partners": {
+      "taskmate": {
+        "name": "TaskMate",
+        "description": "Plateforme d'automatisation des processus et de développement d'agents alimentée par l'IA pour l'efficacité des entreprises.",
+        "discount": "5% de réduction sur toutes les fonctionnalités premium",
+        "category": "Technologie",
+        "benefits": [
+          "Accès aux fonctionnalités premium d'automatisation IA",
+          "Support client prioritaire",
+          "Modèles de flux de travail personnalisés",
+          "Tableau de bord d'analyse avancé"
+        ],
+        "useCases": [
+          "Automatiser les processus d'entreprise répétitifs",
+          "Créer des flux de travail de service client alimentés par l'IA",
+          "Construire des agents personnalisés pour des besoins spécifiques",
+          "Intégrer avec les outils d'entreprise existants"
+        ]
+      },
+      "sharka": {
+        "name": "Sharka UGC",
+        "description": "Plateforme de création de contenu généré par les utilisateurs qui aide les entreprises à générer du contenu authentique à grande échelle.",
+        "discount": "5% de réduction sur tous les forfaits UGC",
+        "category": "Marketing",
+        "benefits": [
+          "Gestionnaire de contenu UGC dédié",
+          "Sessions stratégiques mensuelles",
+          "Analyses de performance de contenu",
+          "Accès exclusif au réseau de créateurs"
+        ],
+        "useCases": [
+          "Générer des témoignages et avis authentiques d'utilisateurs",
+          "Créer du contenu pour les médias sociaux à grande échelle",
+          "Construire une bibliothèque de démonstrations de produits générées par les utilisateurs",
+          "Développer des programmes de promotion de marque"
+        ]
+      },
+      "cordunite": {
+        "name": "CordUnite",
+        "description": "Agence professionnelle de création et de gestion de communautés Discord.",
+        "discount": "5% de réduction sur les forfaits de configuration de communauté",
+        "category": "Communauté",
+        "benefits": [
+          "Configuration personnalisée de serveur Discord",
+          "Formation d'équipe de modération",
+          "Stratégies de croissance communautaire",
+          "Tableau de bord d'analyse d'engagement"
+        ],
+        "useCases": [
+          "Créer des plateformes communautaires engagées pour votre produit",
+          "Créer des canaux de support spécialisés",
+          "Développer des systèmes de feedback communautaires",
+          "Organiser des événements virtuels et des ateliers"
+        ]
+      }
+    }
+  },
+  "modal": {
+    "tabs": {
+      "overview": "Aperçu",
+      "benefits": "Avantages",
+      "usecases": "Cas d'Utilisation"
+    },
+    "clientBenefit": "Avantage Client Exclusif",
+    "whyPledge": "Pourquoi Passer Par Pledge & Grow ?",
+    "advantages": {
+      "discounts": "Remises pré-négociées",
+      "integration": "Intégration transparente",
+      "support": "Support prioritaire",
+      "billing": "Facturation consolidée",
+      "discountsDetail": "Remises pré-négociées non disponibles ailleurs",
+      "integrationDetail": "Intégration transparente avec d'autres services de l'écosystème",
+      "supportDetail": "Support prioritaire via nos gestionnaires de compte dédiés",
+      "billingDetail": "Facturation consolidée et gestion simplifiée"
+    },
+    "cta": {
+      "contact": "Contactez-Nous",
+      "learnMore": "En Savoir Plus"
+    }
+  },
+  "collaboration": {
+    "title": "Rejoignez Notre Écosystème",
+    "subtitle": "Aujourd'hui",
+    "description": "Devenir client de Pledge & Grow est votre passerelle vers des avantages exclusifs, des ressources et des opportunités qui accéléreront la croissance de votre entreprise.",
+    "diagram": {
+      "client": "Client",
+      "groupCompanies": "Entreprises du Groupe",
+      "partners": "Partenaires",
+      "discounts": "Réductions",
+      "innovation": "Innovation"
+    },
+    "options": {
+      "partner": {
+        "title": "Devenir Partenaire",
+        "description": "Rejoignez notre réseau de partenaires stratégiques et développez votre entreprise"
+      },
+      "client": {
+        "title": "Devenir Client",
+        "description": "Accédez à notre gamme complète de services et à notre réseau de partenaires"
+      },
+      "investor": {
+        "title": "Devenir Investisseur",
+        "description": "Explorez les opportunités d'investissement dans notre écosystème"
+      }
+    },
+    "benefits": {
+      "title": "Avantages de Rejoindre",
+      "titles": {
+        "exclusiveDiscounts": "Réductions Exclusives",
+        "prioritySupport": "Support Prioritaire",
+        "businessGrowth": "Croissance d'Entreprise",
+        "innovationAccess": "Accès à l'Innovation"
+      },
+      "items": {
+        "exclusiveDiscounts": "Jusqu'à 30% de réduction sur les services de nos entreprises du groupe et partenaires",
+        "prioritySupport": "Gestionnaire de compte dédié et temps de réponse plus rapides",
+        "businessGrowth": "Accès aux événements de réseautage et aux opportunités de développement commercial",
+        "innovationAccess": "Accès anticipé aux fonctionnalités bêta et aux projets d'innovation"
+      }
+    },
+    "steps": [
+      "Planifiez une consultation avec notre équipe",
+      "Discutez de vos besoins et objectifs commerciaux",
+      "Recevez un plan d'accès à l'écosystème personnalisé",
+      "Devenez client et débloquez tous les avantages de l'écosystème"
+    ],
+    "contactCta": "Contactez-Nous pour En Savoir Plus"
+  },
+  "approach": {
+    "title": "Notre Approche d'Écosystème",
+    "subtitle": "Comment Nous Travaillons Ensemble",
+    "description": "Notre écosystème est construit sur des principes de collaboration, de bénéfice mutuel et de succès partagé.",
+    "pillars": {
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Travailler ensemble pour créer de meilleures solutions"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Évoluer et améliorer constamment nos offres"
+      },
+      "quality": {
+        "title": "Qualité",
+        "description": "Maintenir des standards élevés chez tous nos partenaires"
+      },
+      "value": {
+        "title": "Valeur",
+        "description": "Offrir une valeur exceptionnelle à toutes les parties prenantes"
+      }
+    }
+  },
+  "values": {
+    "title": "Valeurs de l'Écosystème",
+    "subtitle": "Ce Que Nous Défendons",
+    "description": "Notre écosystème est guidé par un ensemble de valeurs fondamentales qui façonnent notre façon de travailler ensemble.",
+    "items": {
+      "transparency": {
+        "title": "Transparence",
+        "description": "Communication ouverte et honnête en tout temps"
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Travailler ensemble pour atteindre des objectifs communs"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Adopter de nouvelles idées et approches"
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Viser la plus haute qualité dans tout ce que nous faisons"
+      }
+    }
+  }
+}

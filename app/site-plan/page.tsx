@@ -7,7 +7,15 @@ export const metadata: Metadata = {
   title: 'Site Plan | Pledge & Grow',
   description: 'Complete overview of all pages available on the Pledge & Grow website to help you navigate our digital presence.',
   keywords: 'site plan, website map, navigation, Pledge & Grow pages, digital agency site plan',
-};
+  openGraph: {
+    title: 'Site Plan | Pledge & Grow',
+    description: 'Complete overview of all pages available on the Pledge & Grow website to help you navigate our digital presence.',
+    url: 'https://pledgeandgrow.com/site-plan',
+    siteName: 'Pledge & Grow',
+    locale: 'en_US',
+    type: 'website',
+  },
+}
 
 export default function SitePlanPage() {
   return (

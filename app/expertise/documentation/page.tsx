@@ -1,51 +1,116 @@
+"use client";
+
 import React from "react";
-import { Metadata } from "next";
 import { 
   ExpertiseLayout, 
   ExpertiseFeatures, 
   ExpertiseTechnologies, 
   ExpertiseBenefits
 } from "@/components/pages/expertise";
-import { getExpertiseBySlug } from "@/data/expertise-data";
+import { useTranslations } from "@/hooks/useTranslations";
+import { TranslationLoader } from "@/components/ui/translation-loader";
 
-export const metadata: Metadata = {
-  title: "Technical Documentation | Pledge & Grow",
-  description: "Create comprehensive, clear technical documentation for your products and services. Our documentation expertise helps you communicate effectively with users and developers.",
-};
+interface FeatureItem {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+interface TechnologyItem {
+  name: string;
+  logo?: string;
+  icon?: string;
+}
+
+interface BenefitItem {
+  title: string;
+  description: string;
+  icon: string;
+}
 
 export default function DocumentationExpertisePage() {
-  const expertise = getExpertiseBySlug('documentation');
-  
-  if (!expertise) {
-    return <div>Expertise not found</div>;
+  // Use translations for this expertise page
+  const { t, isLoading, translations } = useTranslations('documentation');
+
+  if (isLoading) {
+    return <TranslationLoader isLoading={isLoading}>
+      <div className="min-h-screen" />
+    </TranslationLoader>;
   }
+
+  // Extract data from translations
+  const features: FeatureItem[] = translations.features?.map((feature: { title: string; description: string; icon: string }) => ({
+    title: feature.title,
+    description: feature.description,
+    icon: feature.icon
+  })) || [];
+
+  const technologies: TechnologyItem[] = translations.technologies?.map((tech: { name: string; logo?: string; icon?: string }) => ({
+    name: tech.name,
+    logo: tech.logo,
+    icon: tech.icon
+  })) || [];
+
+  const benefits: BenefitItem[] = translations.benefits?.map((benefit: { title: string; description: string; icon: string }) => ({
+    title: benefit.title,
+    description: benefit.description,
+    icon: benefit.icon
+  })) || [];
+
+  // Basic expertise data for the layout
+  const expertise = {
+    slug: t('slug') || "documentation",
+    title: t('title') || "Technical Documentation",
+    subtitle: t('subtitle') || "Clear, comprehensive documentation for your products",
+    description: t('description') || "We create user-friendly technical documentation that improves product adoption, reduces support costs, and enhances user experience.",
+    heroImage: t('heroImage') || "/images/expertise/documentation-hero.jpg",
+    heroButton: t('heroButton') || "Start Your Documentation Project",
+    cta: {
+      title: t('cta.title') || "Ready to improve your documentation?",
+      description: t('cta.description') || "Let's discuss how we can create clear, effective documentation that enhances your product experience.",
+      buttonText: t('cta.buttonText') || "Start Your Documentation Project",
+      buttonLink: t('cta.buttonLink') || "/contact"
+    }
+  };
+
+  // Section titles and subtitles from translations
+  const sectionTitles = {
+    features: {
+      title: t('sections.features.title') || "What We Offer",
+      subtitle: t('sections.features.subtitle') || "Clear, comprehensive, and user-friendly documentation"
+    },
+    technologies: {
+      title: t('sections.technologies.title') || "Technologies & Tools",
+      subtitle: t('sections.technologies.subtitle') || "Modern solutions for effective technical writing"
+    },
+    benefits: {
+      title: t('sections.benefits.title') || "Benefits",
+      subtitle: t('sections.benefits.subtitle') || "Why quality documentation matters"
+    }
+  };
 
   return (
     <ExpertiseLayout expertise={expertise}>
       {/* Features Section */}
       <ExpertiseFeatures 
-        features={expertise.features} 
-        title="What We Offer"
-        subtitle="Clear, comprehensive, and user-friendly documentation"
+        features={features}
+        title={sectionTitles.features.title}
+        subtitle={sectionTitles.features.subtitle}
       />
       
       {/* Technologies Section */}
-      {expertise.technologies && (
-        <ExpertiseTechnologies 
-          technologies={expertise.technologies}
-          title="Technologies & Tools"
-          subtitle="Modern solutions for effective technical writing"
-        />
-      )}
+      <ExpertiseTechnologies 
+        technologies={technologies}
+        title={sectionTitles.technologies.title}
+        subtitle={sectionTitles.technologies.subtitle}
+      />
       
       {/* Benefits Section */}
       <ExpertiseBenefits 
-        benefits={expertise.benefits}
-        title="Benefits"
-        subtitle="Why quality documentation matters"
+        benefits={benefits}
+        title={sectionTitles.benefits.title}
+        subtitle={sectionTitles.benefits.subtitle}
       />
-      
-
     </ExpertiseLayout>
   );
 }

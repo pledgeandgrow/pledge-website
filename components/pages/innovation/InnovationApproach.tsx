@@ -12,6 +12,7 @@ import {
   Share2, 
   Zap 
 } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface ApproachItem {
   icon: React.ReactNode;
@@ -20,6 +21,7 @@ interface ApproachItem {
 }
 
 export default function InnovationApproach() {
+  const { t } = useTranslations('innovation');
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -36,38 +38,47 @@ export default function InnovationApproach() {
     // Cleanup
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
-  const approachItems: ApproachItem[] = [
-    {
-      icon: <Lightbulb className="h-10 w-10 text-primary" />,
-      title: "Continuous Learning",
-      description: "Our team dedicates time each week to learning new technologies, frameworks, and methodologies through structured learning programs and self-directed exploration."
-    },
-    {
-      icon: <Users className="h-10 w-10 text-primary" />,
-      title: "Cross-Functional Collaboration",
-      description: "We foster collaboration between different disciplines, bringing together designers, developers, and business strategists to create innovative solutions from diverse perspectives."
-    },
-    {
-      icon: <BookOpen className="h-10 w-10 text-primary" />,
-      title: "Research & Development",
-      description: "We invest in dedicated R&D initiatives to explore emerging technologies like AI, blockchain, and extended reality before implementing them in client projects."
-    },
-    {
-      icon: <Code className="h-10 w-10 text-primary" />,
-      title: "Rapid Prototyping",
-      description: "We embrace rapid prototyping and MVP development to quickly test ideas, gather feedback, and iterate on solutions before full-scale implementation."
-    },
-    {
-      icon: <Share2 className="h-10 w-10 text-primary" />,
-      title: "Open Source Contribution",
-      description: "We actively contribute to open source projects, sharing our expertise with the global developer community while staying connected to cutting-edge developments."
-    },
-    {
-      icon: <Zap className="h-10 w-10 text-primary" />,
-      title: "Innovation Sprints",
-      description: "Regular innovation sprints allow our team to step away from client work and focus on creative problem-solving, exploring new ideas without constraints."
-    }
-  ];
+  
+  // Get the approach items from translations
+  interface ApproachData {
+    pillars?: Array<{
+      title?: string;
+      description?: string;
+    }>;
+  }
+  
+  const approachData = t('approach') as ApproachData;
+  const pillarsData = approachData?.pillars || [];
+  
+  // Map icons to the pillars
+  const iconMap: Record<number, React.ReactNode> = {
+    0: <Lightbulb className="h-10 w-10 text-primary" />,
+    1: <Users className="h-10 w-10 text-primary" />,
+    2: <BookOpen className="h-10 w-10 text-primary" />,
+    3: <Code className="h-10 w-10 text-primary" />,
+    4: <Share2 className="h-10 w-10 text-primary" />,
+    5: <Zap className="h-10 w-10 text-primary" />
+  };
+  
+  // Create approach items from translations
+  const approachItems: ApproachItem[] = Array.isArray(pillarsData) ? 
+    pillarsData.map((pillar, index) => ({
+      icon: iconMap[index] || <Lightbulb className="h-10 w-10 text-primary" />,
+      title: pillar.title || '',
+      description: pillar.description || ''
+    })) : [
+      // Fallback items if translations fail
+      {
+        icon: <Lightbulb className="h-10 w-10 text-primary" />,
+        title: "Continuous Learning",
+        description: "Our team dedicates time each week to learning new technologies, frameworks, and methodologies through structured learning programs and self-directed exploration."
+      },
+      {
+        icon: <Users className="h-10 w-10 text-primary" />,
+        title: "Cross-Functional Collaboration",
+        description: "We foster collaboration between different disciplines, bringing together designers, developers, and business strategists to create innovative solutions from diverse perspectives."
+      }
+    ];
 
   return (
     <section className="py-16 md:py-24">
@@ -79,16 +90,15 @@ export default function InnovationApproach() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold tracking-tight mb-4">Our Approach to Innovation</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">{t('approach.title')}</h2>
 
             <p className="text-lg text-muted-foreground mb-6">
-              Our commitment to innovation enables us to anticipate industry trends, solve complex problems 
-              with creative solutions, and continuously improve our service offerings to meet evolving digital needs.
+              {t('approach.description')}
             </p>
             <div className="relative h-80 w-full rounded-2xl overflow-hidden mt-8 lg:hidden shadow-lg border border-border">
               <Image
                 src="/images/innovation/innovation.png"
-                alt="Innovation at Pledge & Grow"
+                alt={t('approach.title')}
                 fill
                 className="object-cover"
                 priority
@@ -107,7 +117,7 @@ export default function InnovationApproach() {
             <div className="relative h-[500px] w-full rounded-2xl overflow-hidden shadow-lg border border-border">
               <Image
                 src="/images/innovation/innovation.png"
-                alt="Innovation at Pledge & Grow"
+                alt={t('approach.title')}
                 fill
                 className="object-cover"
                 priority

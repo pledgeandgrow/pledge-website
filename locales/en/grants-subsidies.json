@@ -57,34 +57,72 @@
   "availableGrants": {
     "title": "Available Funding Programs",
     "description": "We specialize in helping businesses access these key funding opportunities for digital transformation and innovation projects.",
+    "categories": {
+      "digital": "Digital Transformation",
+      "innovation": "Innovation",
+      "sustainability": "Sustainability",
+      "growth": "Business Growth",
+      "research": "Research & Development"
+    },
+    "tabs": {
+      "all": "All Grants",
+      "upcoming": "Upcoming Deadlines",
+      "featured": "Featured"
+    },
+    "filterByCategory": "Filter by category",
+    "clearFilters": "Clear filters",
+    "resetFilters": "Reset filters",
+    "noResults": "No grants found matching your criteria.",
+    "disclaimerTitle": "Note",
     "programs": {
-      "digitalTransformation": {
-        "title": "Digital Transformation Grants",
-        "description": "Funding for businesses implementing new digital technologies to improve operations and competitiveness.",
-        "eligibility": "SMEs and mid-sized companies",
-        "fundingAmount": "€10,000 - €200,000",
+      "cir": {
+        "title": "Research Tax Credit (CIR)",
+        "description": "A tax incentive allowing companies to benefit from a tax credit on research and development (R&D) expenses. It can cover up to 30% of eligible expenses, representing significant financial support for your innovative projects.",
+        "eligibility": "All companies with eligible R&D expenses",
+        "fundingAmount": "Up to 30% of eligible expenses",
+        "applicationPeriod": "Annual"
+      },
+      "bpifrance": {
+        "title": "Bpifrance Support",
+        "description": "Bpifrance offers a variety of financing and support for companies of all sizes, including innovation loans to finance innovative projects at all stages of development, and innovation grants and repayable advances for research, development and innovation projects.",
+        "eligibility": "SMEs, mid-sized companies, startups",
+        "fundingAmount": "Variable depending on the program",
         "applicationPeriod": "Ongoing"
       },
-      "researchDevelopment": {
-        "title": "R&D Tax Credits",
-        "description": "Tax incentives for companies investing in innovative research and development activities.",
-        "eligibility": "Companies with R&D activities",
-        "fundingAmount": "Up to 30% of eligible expenses",
-        "applicationPeriod": "Annual tax filing"
+      "fsn": {
+        "title": "Digital Society Fund (FSN)",
+        "description": "The FSN finances projects aimed at developing digital infrastructure and innovative digital services. Companies can obtain grants or loans for projects meeting these criteria.",
+        "eligibility": "Companies developing digital infrastructure or services",
+        "fundingAmount": "Variable depending on the project",
+        "applicationPeriod": "Based on calls for projects"
       },
-      "innovationVouchers": {
-        "title": "Innovation Vouchers",
-        "description": "Small grants to help businesses access expertise from research institutions and innovation centers.",
-        "eligibility": "SMEs and startups",
-        "fundingAmount": "€5,000 - €15,000",
-        "applicationPeriod": "Quarterly calls"
+      "regional": {
+        "title": "Regional Subsidies",
+        "description": "French regions also offer subsidies to support IT and digital projects. Eligibility criteria and amounts vary by region, but these subsidies can provide valuable assistance.",
+        "eligibility": "Companies based in the relevant region",
+        "fundingAmount": "Variable by region",
+        "applicationPeriod": "Variable by region"
       },
-      "greenTech": {
-        "title": "Green Technology Grants",
-        "description": "Funding for projects that incorporate sustainable and environmentally friendly technologies.",
-        "eligibility": "All business sizes",
-        "fundingAmount": "€20,000 - €500,000",
-        "applicationPeriod": "Biannual calls"
+      "horizonEurope": {
+        "title": "Horizon Europe Program",
+        "description": "Horizon Europe is the European Union's framework program for research and innovation. It offers funding for research and innovation projects in various fields including IT (information technology) and ICT (communication).",
+        "eligibility": "Companies of all sizes, universities, research centers, international consortia",
+        "fundingAmount": "Variable depending on the call for projects",
+        "applicationPeriod": "Multiple dates depending on calls"
+      },
+      "digitalTransition": {
+        "title": "Digital Transition Support",
+        "description": "Various forms of support are available to assist SMEs in their digital transition, such as France Num Vouchers (a fixed grant to finance expenses related to companies' digital transformation) and digital diagnostics (support for conducting audits and assessments of your digital needs).",
+        "eligibility": "Very small businesses, SMEs",
+        "fundingAmount": "Up to €500 for France Num Vouchers",
+        "applicationPeriod": "Variable depending on the program"
+      },
+      "privateFunding": {
+        "title": "Bank Loans and Private Financing",
+        "description": "In addition to public aid, companies can also turn to bank loans and private financing to support their IT projects. Many banks and financial institutions offer financing solutions tailored to the needs of technology companies.",
+        "eligibility": "Variable criteria depending on institutions",
+        "fundingAmount": "Variable depending on the institution and project",
+        "applicationPeriod": "Ongoing"
       }
     },
     "disclaimer": "Funding availability and eligibility criteria may change. Contact us for the most current information."
@@ -93,6 +131,7 @@
     "title": "Ready to Explore Funding Options?",
     "description": "Our experts can help you identify and secure the right grants and subsidies for your digital projects.",
     "button": "Schedule a Consultation",
+    "homeButton": "Go back home",
     "contactInfo": "Or contact us directly at funding@pledgeandgrow.com"
   }
 }

@@ -1,0 +1,82 @@
+{
+  "id": "maintenance",
+  "slug": "maintenance",
+  "title": "Application Maintenance",
+  "subtitle": "Keep your digital products secure, stable, and up-to-date",
+  "description": "We provide comprehensive maintenance services to ensure your applications remain secure, performant, and aligned with evolving business needs. Our proactive approach to maintenance helps prevent issues, extend product lifespan, and maximize your technology investment.",
+  "heroImage": "/images/expertise/maintenance-hero.jpg",
+  "heroButton": "Discuss Maintenance Options",
+  "category": "Complementary",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive maintenance services"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "Tools we use for effective maintenance"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How maintenance services protect your investment"
+    }
+  },
+  "features": [
+    {
+      "title": "Security Updates",
+      "description": "Regular patches and updates to protect against vulnerabilities",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Performance Optimization",
+      "description": "Continuous improvements to ensure optimal speed and reliability",
+      "icon": "bolt"
+    },
+    {
+      "title": "Bug Fixes",
+      "description": "Prompt resolution of issues affecting functionality",
+      "icon": "bug-ant"
+    },
+    {
+      "title": "Feature Enhancements",
+      "description": "Incremental improvements to meet evolving requirements",
+      "icon": "sparkles"
+    }
+  ],
+  "technologies": [
+    { "name": "Git", "logo": "/images/tech/git.svg" },
+    { "name": "Jenkins", "logo": "/images/tech/jenkins.svg" },
+    { "name": "Docker", "logo": "/images/tech/docker.svg" },
+    { "name": "New Relic", "logo": "/images/tech/newrelic.svg" },
+    { "name": "Sentry", "logo": "/images/tech/sentry.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Reduced Downtime",
+      "description": "Minimize disruptions with proactive maintenance",
+      "icon": "clock"
+    },
+    {
+      "title": "Enhanced Security",
+      "description": "Stay protected against evolving cyber threats",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Extended Lifespan",
+      "description": "Maximize the longevity of your digital investments",
+      "icon": "calendar"
+    },
+    {
+      "title": "Predictable Costs",
+      "description": "Avoid expensive emergency fixes with planned maintenance",
+      "icon": "currency-dollar"
+    }
+  ],
+  "relatedExpertise": ["cybersecurity", "cloud-services", "consulting-training"],
+  "cta": {
+    "title": "Ready to ensure your application's long-term success?",
+    "description": "Let's create a maintenance plan that keeps your digital products secure, stable, and aligned with your business goals.",
+    "buttonText": "Discuss Maintenance Options",
+    "buttonLink": "/digital-project?service=maintenance"
+  }
+}

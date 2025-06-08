@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface InvestmentPhase {
   id: string;
@@ -22,6 +23,7 @@ interface InvestmentPhase {
 }
 
 export default function InvestorsPhase() {
+  const { t } = useTranslations('investors');
   const [isMobile, setIsMobile] = useState(false);
   
   // Check if on mobile device
@@ -34,49 +36,33 @@ export default function InvestorsPhase() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+  
+  // Get phases data from translations
   const phases: InvestmentPhase[] = [
     {
       id: "seed",
-      title: "SEED",
-      status: "active",
-      description: "Initial funding round for early-stage development and market validation.",
-      details: [
-        "5 angel investors",
-        "€100K investment per investor",
-        "1% non-dilutable equity per investor",
-        "Investment with guarantee",
-        "Limited availability"
-      ],
+      title: t('investorsPhase.phases.seed.title'),
+      status: t('investorsPhase.phases.seed.status') as "active" | "coming-soon",
+      description: t('investorsPhase.phases.seed.description'),
+      details: t('investorsPhase.phases.seed.details', { returnObjects: true }) as string[],
       cta: {
-        text: "Inquire About Seed Investment",
-        link: "/contact?subject=Seed%20Investment"
+        text: t('investorsPhase.phases.seed.cta.text'),
+        link: t('investorsPhase.phases.seed.cta.link')
       }
     },
     {
       id: "grow",
-      title: "GROW",
-      status: "coming-soon",
-      description: "Second funding phase focused on scaling operations and market expansion.",
-      details: [
-        "Series A funding round",
-        "Strategic investors welcome",
-        "Focused on business scaling",
-        "Enhanced growth opportunities",
-        "Projected for Q3 2025"
-      ]
+      title: t('investorsPhase.phases.grow.title'),
+      status: t('investorsPhase.phases.grow.status') as "active" | "coming-soon",
+      description: t('investorsPhase.phases.grow.description'),
+      details: t('investorsPhase.phases.grow.details', { returnObjects: true }) as string[]
     },
     {
       id: "pledge",
-      title: "PLEDGE",
-      status: "coming-soon",
-      description: "Final investment phase for established business with proven market success.",
-      details: [
-        "Series B funding round",
-        "Institutional investors focus",
-        "International expansion funding",
-        "Strategic acquisitions",
-        "Projected for Q2 2026"
-      ]
+      title: t('investorsPhase.phases.pledge.title'),
+      status: t('investorsPhase.phases.pledge.status') as "active" | "coming-soon",
+      description: t('investorsPhase.phases.pledge.description'),
+      details: t('investorsPhase.phases.pledge.details', { returnObjects: true }) as string[]
     }
   ];
 
@@ -91,11 +77,10 @@ export default function InvestorsPhase() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Investment Phases
+            {t('investorsPhase.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our strategic investment plan is structured in three distinct phases,
-            each offering unique opportunities for investors to participate in our growth journey.
+            {t('investorsPhase.description')}
           </p>
         </motion.div>
 
@@ -112,12 +97,12 @@ export default function InvestorsPhase() {
                           {phase.status === "active" ? (
                             <>
                               <CheckCircle className="h-3.5 w-3.5 mr-1" />
-                              Active
+                              {t('common.active')}
                             </>
                           ) : (
                             <>
                               <Clock className="h-3.5 w-3.5 mr-1" />
-                              Coming Soon
+                              {t('investorsPhase.comingSoon')}
                             </>
                           )}
                         </Badge>
@@ -128,12 +113,17 @@ export default function InvestorsPhase() {
                     </CardHeader>
                     <CardContent className="flex-grow">
                       <ul className="space-y-2">
-                        {phase.details.map((detail, i) => (
-                          <li key={i} className="flex items-start">
+                        {Array.isArray(phase.details) ? phase.details.map((detail, idx) => (
+                          <li key={idx} className="flex items-start">
                             <CheckCircle className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
                             <span>{detail}</span>
                           </li>
-                        ))}
+                        )) : (
+                          <li className="flex items-start">
+                            <CheckCircle className="h-5 w-5 text-primary mr-2 flex-shrink-0 mt-0.5" />
+                            <span>{phase.details ? (phase.details as unknown as string) : ''}</span>
+                          </li>
+                        )}
                       </ul>
                     </CardContent>
                     {phase.cta && (
@@ -166,7 +156,7 @@ export default function InvestorsPhase() {
                     <div className="absolute top-0 right-0 bg-muted-foreground/10 px-3 py-1 rounded-bl-lg">
                       <Badge variant="outline" className="flex items-center gap-1">
                         <Clock className="h-3 w-3" />
-                        <span className="text-xs">Coming Soon</span>
+                        <span className="text-xs">{t('investorsPhase.comingSoon')}</span>
                       </Badge>
                     </div>
                   )}
@@ -180,12 +170,17 @@ export default function InvestorsPhase() {
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <ul className="space-y-3">
-                      {phase.details.map((detail, i) => (
+                      {Array.isArray(phase.details) ? phase.details.map((detail, i) => (
                         <li key={i} className="flex items-start">
                           <CheckCircle className="h-4 w-4 text-primary mr-2 mt-1 flex-shrink-0" />
                           <span className="text-sm">{detail}</span>
                         </li>
-                      ))}
+                      )) : (
+                        <li className="flex items-start">
+                          <CheckCircle className="h-4 w-4 text-primary mr-2 mt-1 flex-shrink-0" />
+                          <span className="text-sm">{phase.details ? (phase.details as unknown as string) : ''}</span>
+                        </li>
+                      )}
                     </ul>
                   </CardContent>
                   <CardFooter>
@@ -198,7 +193,7 @@ export default function InvestorsPhase() {
                       </Button>
                     ) : (
                       <Button variant="outline" disabled className="w-full opacity-70">
-                        Coming Soon
+                        {t('investorsPhase.comingSoon')}
                       </Button>
                     )}
                   </CardFooter>

@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "@/hooks/useTranslations";
 import {
   Form,
   FormControl,
@@ -40,6 +41,7 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
+  const { t } = useTranslations('contact');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const searchParams = useSearchParams();
@@ -195,9 +197,9 @@ export default function ContactForm() {
           <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100 dark:bg-green-900">
             <CheckCircle className="h-6 w-6 text-green-600 dark:text-green-300" />
           </div>
-          <h2 className="mt-4 text-2xl font-bold">Thank you!</h2>
+          <h2 className="mt-4 text-2xl font-bold">{t('form.successMessage', { defaultValue: 'Thank you!' })}</h2>
           <p className="mt-2 text-muted-foreground">
-            Your message has been received. We&apos;ll get back to you as soon as possible.
+            {t('form.successDescription', { defaultValue: 'Your message has been received. We\'ll get back to you as soon as possible.' })}
           </p>
           <Button 
             onClick={() => {
@@ -207,7 +209,7 @@ export default function ContactForm() {
             }}
             className="mt-6"
           >
-            Send another message
+            {t('form.sendAnother', { defaultValue: 'Send another message' })}
           </Button>
         </div>
       </div>
@@ -216,7 +218,8 @@ export default function ContactForm() {
 
   return (
     <div className="bg-card border border-border rounded-lg p-8 shadow-sm animate-fade-in">
-      <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+      <h2 className="text-2xl font-bold mb-6">{t('form.title', { defaultValue: 'Get in Touch' })}</h2>
+      <p className="text-muted-foreground mb-6">{t('form.description', { defaultValue: 'Fill out the form below and we\'ll get back to you as soon as possible.' })}</p>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -225,9 +228,9 @@ export default function ContactForm() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>{t('form.nameLabel', { defaultValue: 'Your Name' })}</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your name" {...field} />
+                    <Input placeholder={t('form.namePlaceholder', { defaultValue: 'Enter your full name' })} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -238,9 +241,9 @@ export default function ContactForm() {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>{t('form.emailLabel', { defaultValue: 'Email Address' })}</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your email" {...field} />
+                    <Input placeholder={t('form.emailPlaceholder', { defaultValue: 'Enter your email address' })} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -254,9 +257,9 @@ export default function ContactForm() {
               name="company"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Company (Optional)</FormLabel>
+                  <FormLabel>{t('form.companyLabel', { defaultValue: 'Company (Optional)' })}</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your company" {...field} />
+                    <Input placeholder={t('form.companyPlaceholder', { defaultValue: 'Enter your company name' })} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -267,9 +270,9 @@ export default function ContactForm() {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone (Optional)</FormLabel>
+                  <FormLabel>{t('form.phoneLabel', { defaultValue: 'Phone Number (Optional)' })}</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your phone number" {...field} />
+                    <Input placeholder={t('form.phonePlaceholder', { defaultValue: 'Enter your phone number' })} {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -282,11 +285,11 @@ export default function ContactForm() {
             name="subject"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Subject</FormLabel>
+                <FormLabel>{t('form.subjectLabel', { defaultValue: 'Subject' })}</FormLabel>
                 <Select onValueChange={field.onChange} value={field.value || initialSubject}>
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select a subject" />
+                      <SelectValue placeholder={t('form.subjectPlaceholder', { defaultValue: 'What is this regarding?' })} />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent>
@@ -323,10 +326,10 @@ export default function ContactForm() {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
+                <FormLabel>{t('form.messageLabel', { defaultValue: 'Your Message' })}</FormLabel>
                 <FormControl>
                   <Textarea 
-                    placeholder="How can we help you?" 
+                    placeholder={t('form.messagePlaceholder', { defaultValue: 'Tell us about your project or inquiry' })} 
                     className="min-h-[120px]" 
                     {...field} 
                   />
@@ -337,7 +340,7 @@ export default function ContactForm() {
           />
           
           <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? "Sending..." : "Send Message"}
+            {isSubmitting ? t('form.sending', { defaultValue: 'Sending...' }) : t('form.submitButton', { defaultValue: 'Send Message' })}
           </Button>
         </form>
       </Form>

@@ -7,114 +7,78 @@
     "title": "Our Media Presence",
     "description": "Discover Pledge & Grow's appearances across various media platforms, from social networks to TV shows, podcasts, and digital publications."
   },
-  "pressReleases": {
-    "title": "Press Releases",
-    "description": "Stay up-to-date with the latest announcements and news from Pledge & Grow.",
-    "viewAll": "View All Press Releases",
-    "featured": [
-      {
-        "date": "June 15, 2023",
-        "title": "Pledge & Grow Announces New Sustainability Initiative",
-        "excerpt": "Pledge & Grow today announced a new sustainability initiative aimed at reducing carbon emissions across all client projects.",
-        "link": "Read More"
-      },
-      {
-        "date": "May 3, 2023",
-        "title": "Pledge & Grow Partners with Tech for Good Foundation",
-        "excerpt": "Pledge & Grow has formed a strategic partnership with the Tech for Good Foundation to expand digital literacy programs.",
-        "link": "Read More"
-      },
-      {
-        "date": "April 18, 2023",
-        "title": "Pledge & Grow Launches New Developer Training Program",
-        "excerpt": "Pledge & Grow today announced the launch of a new developer training program focused on sustainable coding practices.",
-        "link": "Read More"
-      }
-    ]
-  },
-  "mediaKit": {
-    "title": "Media Kit",
-    "description": "Download official logos, brand guidelines, executive bios, and other resources for media coverage.",
-    "resources": [
-      {
-        "title": "Brand Logos",
-        "description": "Download our official logos in various formats and resolutions.",
-        "button": "Download Logos"
-      },
-      {
-        "title": "Brand Guidelines",
-        "description": "Access our comprehensive brand guidelines for proper usage of our visual identity.",
-        "button": "View Guidelines"
-      },
-      {
-        "title": "Executive Photos",
-        "description": "High-resolution photos of our executive team for media use.",
-        "button": "Download Photos"
-      },
-      {
-        "title": "Company Fact Sheet",
-        "description": "Key facts and figures about Pledge & Grow's history, mission, and impact.",
-        "button": "Download Fact Sheet"
-      }
-    ]
-  },
-  "mediaContacts": {
-    "title": "Media Contacts",
-    "description": "Get in touch with our media relations team for interview requests, press inquiries, and more.",
-    "contacts": [
-      {
-        "title": "Press Inquiries",
-        "name": "Sarah Johnson",
-        "position": "Media Relations Manager",
-        "email": "press@pledgeandgrow.com",
-        "phone": "+1 (555) 123-4567"
-      },
-      {
-        "title": "Interview Requests",
-        "name": "Michael Chen",
-        "position": "Communications Director",
-        "email": "interviews@pledgeandgrow.com",
-        "phone": "+1 (555) 987-6543"
-      }
-    ]
+  "pressKit": {
+    "title": "Press Kit",
+    "description": "Download our official press kit containing logos, brand guidelines, executive bios, and high-resolution images.",
+    "downloadButton": "Download Press Kit",
+    "logoInfo": "Our logo is available in both black and white versions. The black logo is for light backgrounds, while the white logo is for dark backgrounds."
   },
   "socialMedia": {
-    "title": "Follow Us",
-    "description": "Connect with us on social media for the latest updates, behind-the-scenes content, and community engagement.",
+    "title": "Connect With Us",
+    "description": "Follow us on social media to stay updated on our latest projects, events, and initiatives. Join our growing community of tech enthusiasts and change-makers.",
+    "followButton": "Follow Us",
     "platforms": [
       {
         "platform": "Instagram",
         "username": "pledgeandgrow",
         "url": "https://instagram.com/pledgeandgrow",
         "followers": "12.5K",
-        "description": "Follow us for inspiring stories, behind-the-scenes content, and updates on our latest projects and initiatives."
+        "description": "Follow us for inspiring stories, behind-the-scenes content, and updates on our latest projects and initiatives.",
+        "bgColor": "bg-gradient-to-r from-purple-500 to-pink-500"
       },
       {
         "platform": "Facebook",
         "username": "pledgeandgrow",
         "url": "https://facebook.com/pledgeandgrow",
         "followers": "8.3K",
-        "description": "Join our community to stay updated on events, announcements, and engaging discussions about technology for good."
+        "description": "Join our community to stay updated on events, announcements, and engaging discussions about technology for good.",
+        "bgColor": "bg-blue-600"
       },
       {
         "platform": "TikTok",
         "username": "pledgeandgrow",
         "url": "https://tiktok.com/@pledgeandgrowfr",
         "followers": "15.2K",
-        "description": "Watch our short-form videos showcasing tech tips, innovation highlights, and fun moments from our team."
+        "description": "Watch our short-form videos showcasing tech tips, innovation highlights, and fun moments from our team.",
+        "bgColor": "bg-black"
       },
       {
         "platform": "LinkedIn",
         "username": "pledge-and-grow",
         "url": "https://linkedin.com/company/pledge-and-grow",
         "followers": "5.7K",
-        "description": "Connect with us professionally for industry insights, career opportunities, and business partnership discussions."
+        "description": "Connect with us professionally for industry insights, career opportunities, and business partnership discussions.",
+        "bgColor": "bg-blue-700"
+      },
+      {
+        "platform": "YouTube",
+        "username": "PledgeAndGrowOfficial",
+        "url": "https://www.youtube.com/@pledgeandgrow",
+        "followers": "7.1K",
+        "description": "Subscribe to our channel for in-depth tutorials, webinars, event recordings, and impact stories from our projects.",
+        "bgColor": "bg-red-600"
+      },
+      {
+        "platform": "X",
+        "username": "pledgeandgrow",
+        "url": "https://x.com/PledgeandGrow",
+        "followers": "9.3K",
+        "description": "Follow us for the latest tech news, industry insights, and quick updates about our projects and initiatives.",
+        "bgColor": "bg-black"
+      },
+      {
+        "platform": "Discord",
+        "username": "pledgeandgrow",
+        "url": "https://discord.gg/Ud22W3Gp",
+        "followers": "3.8K",
+        "description": "Join our community to connect with like-minded professionals, participate in discussions, and get real-time support.",
+        "bgColor": "bg-indigo-600"
       }
     ]
   },
   "cta": {
-    "title": "Need More Information?",
-    "description": "Our media relations team is ready to assist you with any additional information or resources you may need.",
-    "button": "Contact Media Relations"
+    "title": "Connect With Us",
+    "description": "Interested in featuring Pledge & Grow in your publication, podcast, or show? Our team of experts is available for interviews, speaking engagements, and media opportunities.",
+    "button": "Media Inquiries"
   }
 }

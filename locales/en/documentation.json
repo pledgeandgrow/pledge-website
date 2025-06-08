@@ -1,0 +1,82 @@
+{
+  "id": "documentation",
+  "slug": "documentation",
+  "title": "Technical Documentation",
+  "subtitle": "Clear, comprehensive documentation for your digital products",
+  "description": "We create high-quality technical documentation that helps users understand and effectively use your products. From user guides and API documentation to system architecture diagrams, our documentation services ensure your technology is accessible and usable.",
+  "heroImage": "/images/expertise/documentation-hero.jpg",
+  "heroButton": "Start Your Documentation Project",
+  "category": "Complementary",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive documentation solutions"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "Modern tools for effective documentation"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How quality documentation improves your product"
+    }
+  },
+  "features": [
+    {
+      "title": "User Guides",
+      "description": "Clear instructions for end users of all technical levels",
+      "icon": "book-open"
+    },
+    {
+      "title": "API Documentation",
+      "description": "Comprehensive references for developers integrating with your APIs",
+      "icon": "code-bracket"
+    },
+    {
+      "title": "System Architecture",
+      "description": "Detailed diagrams and explanations of system components",
+      "icon": "rectangle-stack"
+    },
+    {
+      "title": "Knowledge Bases",
+      "description": "Searchable repositories of product information and FAQs",
+      "icon": "academic-cap"
+    }
+  ],
+  "technologies": [
+    { "name": "Notion", "logo": "/images/tech/notion.svg" },
+    { "name": "OneDrive", "logo": "/images/tech/onedrive.svg" },
+    { "name": "GitBook", "logo": "/images/tech/gitbook.svg" },
+    { "name": "Docusaurus", "logo": "/images/tech/docusaurus.svg" },
+    { "name": "Draw.io", "logo": "/images/tech/drawio.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Reduced Support Costs",
+      "description": "Decrease support tickets with self-service documentation",
+      "icon": "currency-dollar"
+    },
+    {
+      "title": "Faster User Onboarding",
+      "description": "Help users get started quickly and effectively",
+      "icon": "rocket"
+    },
+    {
+      "title": "Improved Developer Experience",
+      "description": "Make it easier for developers to integrate with your products",
+      "icon": "code"
+    },
+    {
+      "title": "Knowledge Preservation",
+      "description": "Capture and maintain critical technical information",
+      "icon": "archive-box"
+    }
+  ],
+  "relatedExpertise": ["consulting-training", "maintenance", "saas"],
+  "cta": {
+    "title": "Ready to improve your technical documentation?",
+    "description": "Let's create clear, comprehensive documentation that enhances user experience and reduces support costs.",
+    "buttonText": "Start Your Documentation Project",
+    "buttonLink": "/digital-project?service=documentation"
+  }
+}

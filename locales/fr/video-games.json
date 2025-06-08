@@ -1,0 +1,84 @@
+{
+  "id": "video-games",
+  "slug": "video-games",
+  "title": "Développement de Jeux Vidéo",
+  "subtitle": "Créez des expériences de jeu immersives et engageantes sur toutes les plateformes",
+  "description": "Nous développons des jeux vidéo captivants pour diverses plateformes, du mobile à la console et au PC. Notre expertise en développement de jeux combine une narration créative, des visuels époustouflants et des mécaniques de gameplay engageantes pour créer des expériences de jeu mémorables.",
+  "heroImage": "/images/expertise/video-games-hero.jpg",
+  "heroButton": "Démarrer Votre Projet de Jeu",
+  "category": "Creation",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Services complets de développement de jeux"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Moteurs de jeu et outils de pointe"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Comment les jeux peuvent engager votre audience"
+    }
+  },
+  "features": [
+    {
+      "title": "Conception de Jeu",
+      "description": "Documents de conception de jeu complets et mécaniques",
+      "icon": "gamepad-2"
+    },
+    {
+      "title": "Développement 2D/3D",
+      "description": "Graphismes et animations de haute qualité pour tous les styles",
+      "icon": "cube"
+    },
+    {
+      "title": "Multiplateforme",
+      "description": "Jeux qui fonctionnent parfaitement sur plusieurs appareils",
+      "icon": "monitor-smartphone"
+    },
+    {
+      "title": "Intégration Multijoueur",
+      "description": "Expériences multijoueurs en temps réel avec un réseau robuste",
+      "icon": "users"
+    }
+  ],
+  "technologies": [
+    { "name": "Unity", "logo": "/images/tech/unity.svg" },
+    { "name": "Unreal Engine", "logo": "/images/tech/unreal.svg" },
+    { "name": "Godot", "logo": "/images/tech/godot.svg" },
+    { "name": "Blender", "logo": "/images/tech/blender.svg" },
+    { "name": "Lua", "logo": "/images/tech/lua.svg" },
+    { "name": "C#", "logo": "/images/tech/csharp.svg" },
+    { "name": "Java", "logo": "/images/tech/java.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Expérience Utilisateur Engageante",
+      "description": "Gameplay captivant qui incite les joueurs à revenir",
+      "icon": "heart"
+    },
+    {
+      "title": "Opportunités de Monétisation",
+      "description": "Multiples sources de revenus via des achats intégrés ou des modèles premium",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Notoriété de la Marque",
+      "description": "Visibilité et engagement accrus avec votre marque",
+      "icon": "badge"
+    },
+    {
+      "title": "Construction de Communauté",
+      "description": "Créez des communautés fidèles autour de vos expériences de jeu",
+      "icon": "users-round"
+    }
+  ],
+  "relatedExpertise": ["mobile-app", "ux-ui-design", "cloud-devops"],
+  "cta": {
+    "title": "Prêt à Créer Votre Jeu?",
+    "description": "Discutons de votre concept de jeu et donnons-lui vie avec notre équipe de développement experte.",
+    "buttonText": "Démarrer Votre Projet de Jeu",
+    "buttonLink": "/contact"
+  }
+}

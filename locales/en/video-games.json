@@ -1,0 +1,84 @@
+{
+  "id": "video-games",
+  "slug": "video-games",
+  "title": "Video Game Development",
+  "subtitle": "Create engaging, immersive gaming experiences across platforms",
+  "description": "We develop captivating video games for various platforms, from mobile to console and PC. Our game development expertise combines creative storytelling, stunning visuals, and engaging gameplay mechanics to create memorable gaming experiences.",
+  "heroImage": "/images/expertise/video-games-hero.jpg",
+  "heroButton": "Start Your Game Project",
+  "category": "Creation",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive game development services"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "Industry-leading game engines and tools"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How games can engage your audience"
+    }
+  },
+  "features": [
+    {
+      "title": "Game Design",
+      "description": "Comprehensive game design documents and mechanics",
+      "icon": "gamepad-2"
+    },
+    {
+      "title": "2D/3D Development",
+      "description": "High-quality graphics and animations for any style",
+      "icon": "cube"
+    },
+    {
+      "title": "Cross-Platform",
+      "description": "Games that work seamlessly across multiple devices",
+      "icon": "monitor-smartphone"
+    },
+    {
+      "title": "Multiplayer Integration",
+      "description": "Real-time multiplayer experiences with robust networking",
+      "icon": "users"
+    }
+  ],
+  "technologies": [
+    { "name": "Unity", "logo": "/images/tech/unity.svg" },
+    { "name": "Unreal Engine", "logo": "/images/tech/unreal.svg" },
+    { "name": "Godot", "logo": "/images/tech/godot.svg" },
+    { "name": "Blender", "logo": "/images/tech/blender.svg" },
+    { "name": "Lua", "logo": "/images/tech/lua.svg" },
+    { "name": "C#", "logo": "/images/tech/csharp.svg" },
+    { "name": "Java", "logo": "/images/tech/java.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Engaging User Experience",
+      "description": "Captivating gameplay that keeps players coming back",
+      "icon": "heart"
+    },
+    {
+      "title": "Monetization Opportunities",
+      "description": "Multiple revenue streams through in-app purchases or premium models",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Brand Awareness",
+      "description": "Increased visibility and engagement with your brand",
+      "icon": "badge"
+    },
+    {
+      "title": "Community Building",
+      "description": "Create loyal communities around your gaming experiences",
+      "icon": "users-round"
+    }
+  ],
+  "relatedExpertise": ["mobile-app", "ux-ui-design", "cloud-devops"],
+  "cta": {
+    "title": "Ready to Create Your Game?",
+    "description": "Let's discuss your game concept and bring it to life with our expert development team.",
+    "buttonText": "Start Your Game Project",
+    "buttonLink": "/contact"
+  }
+}

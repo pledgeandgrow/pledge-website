@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "title": "Nos Partenaires | Pledge & Grow",
+    "description": "Découvrez nos partenariats stratégiques et collaborations qui nous permettent de fournir des solutions et services numériques exceptionnels."
+  },
+  "partnersList": {
+    "title": "Nos Partenaires Stratégiques",
+    "description": "Nous collaborons avec des leaders de l'industrie et des entreprises innovantes pour améliorer nos offres de services et fournir des solutions complètes à nos clients.",
+    "networkTitle": "Notre Réseau de Partenaires",
+    "networkDescription": "Nous collaborons avec une gamme diversifiée de partenaires dans différentes catégories pour offrir une valeur exceptionnelle à nos clients.",
+    "partnerData": [
+      {
+        "id": "1",
+        "name": "Acme Corporation",
+        "logo": "/images/partners/acme.svg",
+        "category": "Standard",
+        "description": "Client de longue date avec des conditions contractuelles préférentielles. Nous soutenons leur parcours de transformation numérique depuis plus de 5 ans.",
+        "website": "https://example.com/acme",
+        "featured": true,
+        "partnerType": "standard"
+      },
+      {
+        "id": "2",
+        "name": "Global Enterprises",
+        "logo": "/images/partners/global.svg",
+        "category": "Standard",
+        "description": "Relation client stratégique avec des accords de service personnalisés et des canaux de support dédiés.",
+        "website": "https://example.com/global",
+        "partnerType": "standard"
+      },
+      {
+        "id": "3",
+        "name": "Pepite France",
+        "logo": "/images/partners/pepite.svg",
+        "category": "Culture",
+        "description": "Réseau national soutenant l'entrepreneuriat étudiant en France. Nous collaborons sur des programmes d'innovation et de mentorat pour les jeunes entrepreneurs.",
+        "website": "https://www.pepite-france.fr",
+        "featured": true,
+        "partnerType": "culture"
+      },
+      {
+        "id": "5",
+        "name": "AWS",
+        "logo": "/images/partners/aws.svg",
+        "category": "Technology",
+        "description": "Fournisseur d'infrastructure cloud alimentant nos solutions d'hébergement évolutives, fiables et sécurisées pour les clients entreprises.",
+        "website": "https://aws.amazon.com",
+        "featured": true,
+        "partnerType": "technology"
+      },
+      {
+        "id": "6",
+        "name": "Vercel",
+        "logo": "/images/partners/vercel.svg",
+        "category": "Technology",
+        "description": "Plateforme cloud frontend nous permettant de fournir des expériences web rapides et fiables avec des flux de déploiement transparents.",
+        "website": "https://vercel.com",
+        "partnerType": "technology"
+      },
+      {
+        "id": "7",
+        "name": "OVH",
+        "logo": "/images/partners/ovh.svg",
+        "category": "Technology",
+        "description": "Fournisseur cloud européen que nous recommandons aux clients ayant des exigences spécifiques en matière de souveraineté des données et d'hébergement régional.",
+        "website": "https://ovh.com",
+        "partnerType": "technology"
+      },
+      {
+        "id": "8",
+        "name": "Atlassian (JIRA)",
+        "logo": "/images/partners/atlassian.svg",
+        "category": "Technology",
+        "description": "Outils de gestion de projet et de collaboration qui alimentent nos flux de développement et nos processus de communication client.",
+        "website": "https://atlassian.com",
+        "partnerType": "technology"
+      },
+      {
+        "id": "9",
+        "name": "ERB BTP",
+        "logo": "/images/partners/erb-btp.svg",
+        "category": "Exclusive",
+        "description": "Partenaire de construction premium offrant des tarifs spéciaux sur les services de construction pour les clients référés via notre réseau.",
+        "website": "https://erb-btp.com",
+        "featured": true,
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "10",
+        "name": "Cabinet ECD",
+        "logo": "/images/partners/ecd.svg",
+        "category": "Exclusive",
+        "description": "Partenaire de conseil exclusif fournissant des services de conseil aux entreprises à prix réduit pour nos clients entreprises.",
+        "website": "https://example.com/ecd",
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "11",
+        "name": "Taskmate",
+        "logo": "/images/partners/taskmate.svg",
+        "category": "Exclusive",
+        "description": "Fournisseur de solutions de gestion de tâches premium offrant des forfaits d'abonnement spéciaux pour nos clients.",
+        "website": "https://taskmate-ia.vercel.app/",
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "12",
+        "name": "CordUnite",
+        "logo": "/images/partners/cordunite.svg",
+        "category": "Exclusive",
+        "description": "Plateforme de communication exclusive avec des tarifs préférentiels pour les entreprises de notre réseau de partenaires.",
+        "website": "https://example.com/cordunite",
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "13",
+        "name": "N&I Personal Shopper",
+        "logo": "/images/partners/ni-shopper.svg",
+        "category": "Exclusive",
+        "description": "Service de shopping personnel de luxe offrant des forfaits VIP pour nos clients entreprises et leurs dirigeants.",
+        "website": "https://example.com/ni-shopper",
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "14",
+        "name": "Dualink",
+        "logo": "/images/partners/dualink.svg",
+        "category": "Exclusive",
+        "description": "Spécialistes de l'expansion sur deux marchés fournissant des services de conseil à prix réduit pour nos clients internationaux.",
+        "website": "https://example.com/dualink",
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "15",
+        "name": "Chronos Corp.",
+        "logo": "/images/partners/chronos.svg",
+        "category": "Exclusive",
+        "description": "Fournisseur de solutions de gestion du temps et de productivité avec des offres exclusives pour les membres de notre réseau d'affaires.",
+        "website": "https://example.com/chronos",
+        "partnerType": "exclusive"
+      }
+    ],
+    "categories": {
+      "title": "Catégories de Partenaires",
+      "Exclusive": "Exclusif",
+      "Culture": "Culture",
+      "Technology": "Technologie",
+      "technology": {
+        "title": "Partenaires Technologiques",
+        "description": "Des fournisseurs de technologies de premier plan qui complètent nos capacités de développement et améliorent nos offres techniques."
+      },
+      "service": {
+        "title": "Partenaires de Services",
+        "description": "Des fournisseurs de services spécialisés qui étendent nos capacités et nous aident à fournir des solutions complètes."
+      },
+      "industry": {
+        "title": "Partenaires Industriels",
+        "description": "Des partenaires sectoriels avec une expertise approfondie qui nous aident à mieux servir les clients dans des industries spécialisées."
+      },
+      "innovation": {
+        "title": "Partenaires d'Innovation",
+        "description": "Institutions de recherche et centres d'innovation collaborant avec nous sur des projets et initiatives de pointe."
+      }
+    },
+    "partners": {
+      "viewAll": "Voir Tous les Partenaires",
+      "filterBy": "Filtrer par catégorie"
+    },
+    "heading": "Notre Réseau de Partenaires",
+    "subheading": "Nous collaborons avec une gamme diversifiée de partenaires dans différentes catégories pour offrir une valeur exceptionnelle à nos clients.",
+    "categoryTitle": "Partenaires {{category}}",
+    "noPartnersFound": "Aucun partenaire trouvé dans cette catégorie.",
+    "typeDescriptions": {
+      "standard": "Clients fidèles avec des conditions contractuelles préférentielles",
+      "culture": "Fondations, écoles, associations et organisations communautaires",
+      "technology": "Plateformes et outils que nous utilisons et recommandons pour nos projets de développement",
+      "exclusive": "Partenaires premium dans notre réseau exclusif offrant des tarifs spéciaux et des promotions"
+    },
+    "partnerCard": {
+      "learnMore": "En Savoir Plus",
+      "visitWebsite": "Visiter le Site Web",
+      "since": "Partenaire depuis"
+    }
+  },
+  "becomePartner": {
+    "heading": "Devenez Notre Partenaire",
+    "subheading": "Rejoignez notre écosystème de partenaires et collaborez sur des solutions innovantes. Nous sommes toujours à la recherche de partenariats stratégiques qui créent de la valeur pour nos clients.",
+    "contactButton": "Contactez-nous à propos d'un partenariat",
+    "partnerTypes": {
+      "strategic": {
+        "title": "Alliances Stratégiques",
+        "description": "Formez des partenariats stratégiques pour étendre votre portée sur le marché et créer ensemble des solutions innovantes."
+      },
+      "technology": {
+        "title": "Partenaires Technologiques",
+        "description": "Intégrez votre technologie à nos solutions pour offrir une valeur ajoutée à nos clients."
+      },
+      "solution": {
+        "title": "Partenaires de Solutions",
+        "description": "Collaborez sur des solutions complètes qui répondent aux défis commerciaux complexes."
+      },
+      "channel": {
+        "title": "Partenaires de Distribution",
+        "description": "Revendez ou recommandez nos solutions à vos clients et gagnez des commissions compétitives."
+      }
+    },
+    "benefits": {
+      "title": "Avantages du Partenariat",
+      "marketAccess": {
+        "title": "Accès au Marché",
+        "description": "Atteignez de nouveaux clients et marchés grâce à notre base de clients établie et nos canaux de marketing."
+      },
+      "technicalCollaboration": {
+        "title": "Collaboration Technique",
+        "description": "Travaillez avec notre équipe d'experts sur des solutions conjointes et des projets innovants."
+      },
+      "coMarketing": {
+        "title": "Opportunités de Co-Marketing",
+        "description": "Bénéficiez d'initiatives marketing conjointes, d'études de cas et d'activités promotionnelles."
+      },
+      "revenueGrowth": {
+        "title": "Croissance des Revenus",
+        "description": "Créez de nouveaux flux de revenus grâce aux références, à la revente et aux offres conjointes."
+      }
+    },
+    "process": {
+      "title": "Processus de Partenariat",
+      "steps": {
+        "application": {
+          "title": "Candidature",
+          "description": "Soumettez votre demande de partenariat via notre formulaire en ligne."
+        },
+        "evaluation": {
+          "title": "Évaluation",
+          "description": "Notre équipe de partenariat examinera votre candidature et évaluera l'alignement."
+        },
+        "discussion": {
+          "title": "Discussion",
+          "description": "Nous programmerons une réunion pour discuter des opportunités et des conditions du partenariat."
+        },
+        "agreement": {
+          "title": "Accord",
+          "description": "Formalisez le partenariat avec un accord clair décrivant les attentes."
+        },
+        "onboarding": {
+          "title": "Intégration",
+          "description": "Complétez notre processus d'intégration des partenaires pour assurer un démarrage réussi."
+        }
+      }
+    },
+    "cta": {
+      "title": "Prêt à Devenir Partenaire?",
+      "description": "Faites le premier pas vers un partenariat mutuellement bénéfique qui favorise la croissance et l'innovation.",
+      "button": "Postulez Maintenant",
+      "contactInfo": "Pour les demandes de partenariat, contactez partners@pledgeandgrow.com"
+    }
+  }
+}

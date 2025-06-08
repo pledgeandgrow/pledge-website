@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function GroupeOverview() {
+  const { t } = useTranslations('groupe');
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -23,20 +25,20 @@ export default function GroupeOverview() {
   
   const overviewItems = [
     {
-      title: "Our Vision",
-      description: "To create an ecosystem where innovative companies can thrive together, sharing resources, knowledge, and opportunities to deliver exceptional value to clients across various industries and markets."
+      title: t('overview.items.0.title'),
+      description: t('overview.items.0.description')
     },
     {
-      title: "Our Approach",
-      description: "We foster collaboration between our companies, encouraging cross-pollination of ideas and expertise. This synergistic approach allows us to tackle complex challenges and deliver comprehensive solutions that drive meaningful results."
+      title: t('overview.items.1.title'),
+      description: t('overview.items.1.description')
     },
     {
-      title: "Strategic Investments",
-      description: "We strategically invest in promising ventures that align with our values and vision. By providing capital, mentorship, and access to our network, we help these companies scale and succeed in competitive markets."
+      title: t('overview.items.2.title'),
+      description: t('overview.items.2.description')
     },
     {
-      title: "Global Presence",
-      description: "With operations across multiple countries, our group leverages global perspectives while maintaining deep local expertise. This international footprint enables us to serve clients worldwide with culturally relevant solutions."
+      title: t('overview.items.3.title'),
+      description: t('overview.items.3.description')
     }
   ];
   return (
@@ -50,10 +52,9 @@ export default function GroupeOverview() {
           className="max-w-4xl mx-auto"
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">Our Group Ecosystem</h2>
+            <h2 className="text-3xl font-bold tracking-tight mb-4">{t('overview.title')}</h2>
             <p className="text-lg text-muted-foreground">
-              The Pledge & Grow Group brings together specialized companies that share a common vision of innovation, 
-              quality, and sustainable growth. Each entity contributes unique expertise to our collective mission.
+              {t('overview.description')}
             </p>
           </div>
           

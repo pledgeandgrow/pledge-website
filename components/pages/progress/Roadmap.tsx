@@ -14,6 +14,7 @@ import {
   Shield
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface RoadmapItem {
   title: string;
@@ -22,48 +23,51 @@ interface RoadmapItem {
   icon: React.ReactNode;
 }
 
-const roadmapItems: RoadmapItem[] = [
+const getItems = (t: (key: string) => string): RoadmapItem[] => [
   {
-    title: "Advanced AI Integration",
-    description: "Implementing AI solutions for predictive analytics and automation",
-    timeline: "Q3 2025",
+    title: t('roadmap.items.aiIntegration.title') || "Advanced AI Integration",
+    description: t('roadmap.items.aiIntegration.description') || "Implementing AI solutions for predictive analytics and automation",
+    timeline: t('roadmap.items.aiIntegration.timeline') || "Q3 2025",
     icon: <Cpu className="h-5 w-5" />
   },
   {
-    title: "Enterprise Blockchain Solutions",
-    description: "Secure, scalable blockchain infrastructure for businesses",
-    timeline: "Q4 2025",
+    title: t('roadmap.items.blockchain.title') || "Enterprise Blockchain Solutions",
+    description: t('roadmap.items.blockchain.description') || "Secure, scalable blockchain infrastructure for businesses",
+    timeline: t('roadmap.items.blockchain.timeline') || "Q4 2025",
     icon: <Database className="h-5 w-5" />
   },
   {
-    title: "Global Development Centers",
-    description: "24/7 support and development capabilities worldwide",
-    timeline: "Q2 2026",
+    title: t('roadmap.items.globalCenters.title') || "Global Development Centers",
+    description: t('roadmap.items.globalCenters.description') || "24/7 support and development capabilities worldwide",
+    timeline: t('roadmap.items.globalCenters.timeline') || "Q2 2026",
     icon: <Globe className="h-5 w-5" />
   },
   {
-    title: "Enhanced Security Framework",
-    description: "Comprehensive security to protect client applications",
-    timeline: "Q3 2026",
+    title: t('roadmap.items.security.title') || "Enhanced Security Framework",
+    description: t('roadmap.items.security.description') || "Comprehensive security to protect client applications",
+    timeline: t('roadmap.items.security.timeline') || "Q3 2026",
     icon: <Shield className="h-5 w-5" />
   },
   {
-    title: "Unified Cross-Platform Development",
-    description: "Efficient creation of applications across all platforms",
-    timeline: "Q4 2026",
+    title: t('roadmap.items.integration.title') || "Unified Cross-Platform Development",
+    description: t('roadmap.items.integration.description') || "Seamless integration platform for connecting diverse business systems",
+    timeline: t('roadmap.items.integration.timeline') || "Q1 2027",
     icon: <Layers className="h-5 w-5" />
   },
   {
-    title: "Anonymity & Proprietary Tools",
-    description: "Our own suite of privacy-focused development tools",
-    timeline: "Q1 2027",
+    title: t('roadmap.items.anonymity.title') || "Anonymity & Proprietary Tools",
+    description: t('roadmap.items.anonymity.description') || "Our own suite of privacy-focused development tools",
+    timeline: t('roadmap.items.anonymity.timeline') || "Q1 2027",
     icon: <Shield className="h-5 w-5" />
   }
 ];
 
 export default function Roadmap() {
+  const { t } = useTranslations('progress');
   const [currentIndex, setCurrentIndex] = useState(0);
   // Mobile detection is handled by CSS media queries instead
+  
+  const roadmapItems = getItems(t);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
@@ -88,7 +92,7 @@ export default function Roadmap() {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            Our Technology Roadmap
+            {t('roadmap.title') || "Our Technology Roadmap"}
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -97,7 +101,7 @@ export default function Roadmap() {
             viewport={{ once: true }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Our strategic vision for delivering greater value to clients
+            {t('roadmap.description') || "Our strategic vision for delivering greater value to clients"}
           </motion.p>
         </div>
         
@@ -162,8 +166,8 @@ export default function Roadmap() {
             <div className="flex justify-center gap-4 mt-4">
               <button 
                 onClick={prevSlide}
-                className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
-                aria-label="Previous slide"
+                className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+                aria-label={t('roadmap.navigation.previous') || "Previous slide"}
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
@@ -195,7 +199,7 @@ export default function Roadmap() {
           <div className="mt-8 flex items-center justify-center">
             <div className="inline-flex items-center px-4 py-2 bg-muted rounded-full text-sm">
               <Check className="h-4 w-4 mr-2 text-primary" />
-              <span>Updated quarterly based on industry trends and client needs</span>
+              <span>{t('roadmap.updatedQuarterly') || "Updated quarterly based on industry trends and client needs"}</span>
             </div>
           </div>
         </div>

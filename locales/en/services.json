@@ -1,0 +1,162 @@
+{
+  "hero": {
+    "title": "Our Services & Solutions",
+    "description": "Comprehensive digital solutions tailored to your business needs, from web and mobile development to cloud hosting and VIP services.",
+    "startButton": "Start Your Project",
+    "contactButton": "Contact Our Team"
+  },
+  "tabbed": {
+    "loading": "Loading service details...",
+    "tabs": {
+      "creation": "Creation",
+      "integration": "Integration",
+      "complementary": "Complementary"
+    }
+  },
+  "creation": {
+    "title": "Creation",
+    "description": "We design and develop digital products that help businesses grow and succeed in the digital landscape.",
+    "services": {
+      "website": {
+        "title": "Website",
+        "description": "Professional websites for businesses and organizations with responsive design."
+      },
+      "saas": {
+        "title": "SaaS",
+        "description": "Custom Software as a Service solutions with multi-tenant architecture."
+      },
+      "mobile-app": {
+        "title": "Mobile",
+        "description": "Native and cross-platform mobile applications for iOS and Android."
+      },
+      "software": {
+        "title": "Software",
+        "description": "Custom software to meet the specific needs of your business."
+      },
+      "video-games": {
+        "title": "Video Games",
+        "description": "Engaging video games for multiple platforms with immersive experiences."
+      }
+    }
+  },
+  "integration": {
+    "title": "Integration",
+    "description": "We integrate powerful technologies into your existing systems to enhance functionality and performance.",
+    "services": {
+      "e-commerce": {
+        "title": "E-commerce",
+        "description": "Complete online store solutions with payment processing and inventory management."
+      },
+      "ai-automation": {
+        "title": "AI & Automation",
+        "description": "Intelligent solutions leveraging AI and automation to optimize business processes."
+      },
+      "cybersecurity": {
+        "title": "Cybersecurity",
+        "description": "Comprehensive security solutions to protect your digital assets and data."
+      },
+      "cloud-devops": {
+        "title": "Cloud & DevOps",
+        "description": "Scalable cloud solutions and DevOps practices to optimize your infrastructure and deployments."
+      },
+      "blockchain": {
+        "title": "Blockchain",
+        "description": "Secure and transparent blockchain applications for various industries and use cases."
+      }
+    }
+  },
+  "complementary": {
+    "title": "Complementary",
+    "description": "Additional services to complement your digital projects and enhance their value.",
+    "services": {
+      "documentation": {
+        "title": "Documentation",
+        "description": "Comprehensive documentation services for your digital products and technical systems."
+      },
+      "ux-ui-design": {
+        "title": "UX/UI Design",
+        "description": "User-centered design services that create intuitive digital experiences."
+      },
+      "seo": {
+        "title": "SEO",
+        "description": "Search engine optimization services to improve your online visibility."
+      },
+      "maintenance": {
+        "title": "Maintenance",
+        "description": "Maintenance services to ensure the proper functioning and security of your digital solutions."
+      },
+      "consulting-training": {
+        "title": "Consulting",
+        "description": "Consulting and training services to help your team master digital technologies."
+      }
+    }
+  },
+  "serviceModal": {
+    "specifications": {
+      "title": "Specifications",
+      "type": "Service Type",
+      "clients": "Ideal Clients",
+      "sectors": "Target Sectors",
+      "recommendedFor": "Recommended For"
+    },
+    "technology": {
+      "title": "Technology",
+      "programs": "Programs",
+      "technologies": "Technologies",
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "libraries": "Libraries"
+    },
+    "conditions": {
+      "title": "Conditions",
+      "requirements": "Requirements",
+      "deliverables": "Deliverables",
+      "timeline": "Timeline",
+      "support": "Support"
+    },
+    "close": "Close"
+  },
+  "vip": {
+    "title": "Client VIP Experience",
+    "description": "Join our exclusive VIP program for premium service, priority support, and enhanced benefits tailored to your business needs.",
+    "card": {
+      "title": "VIP Membership Benefits",
+      "subtitle": "Exclusive advantages for our most valued clients",
+      "applyButton": "Apply for VIP Membership"
+    },
+    "benefits": {
+      "priority": {
+        "title": "Priority Support",
+        "description": "Get immediate attention with our dedicated VIP support line and guaranteed response times within 2 hours."
+      },
+      "dedicated": {
+        "title": "Dedicated Account Manager",
+        "description": "Work with a dedicated account manager who understands your business and can coordinate all your needs."
+      },
+      "expedited": {
+        "title": "Expedited Delivery",
+        "description": "Your projects are prioritized in our workflow, ensuring faster turnaround times without compromising quality."
+      },
+      "enhanced": {
+        "title": "Enhanced Security",
+        "description": "Benefit from advanced security measures, regular security audits, and proactive monitoring for your digital assets."
+      }
+    },
+    "elevate": {
+      "title": "Elevate Your Experience",
+      "description": "Our VIP program is designed for clients who demand the highest level of service and attention. As a VIP client, you'll enjoy a range of exclusive benefits that enhance your experience and ensure your projects receive the priority they deserve."
+    },
+    "includes": {
+      "title": "VIP Membership Includes:",
+      "items": {
+        "strategy": "Quarterly strategy sessions with our senior team",
+        "beta": "Exclusive access to beta features and new services",
+        "pricing": "Preferential pricing on all services and packages",
+        "support": "Extended support hours including weekends",
+        "audit": "Complimentary annual security and performance audit"
+      }
+    },
+    "disclaimer": "VIP membership is available by application and is subject to approval. Contact us to discuss your eligibility and how we can tailor our VIP services to your specific needs.",
+    "contactButton": "Contact Us for VIP Access"
+  }
+}

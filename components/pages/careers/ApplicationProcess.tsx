@@ -8,6 +8,7 @@ import {
   CheckCircle, 
   Briefcase 
 } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface ProcessStep {
   icon: React.ReactNode;
@@ -16,31 +17,33 @@ interface ProcessStep {
 }
 
 export default function ApplicationProcess() {
+  const { t } = useTranslations('careers');
+  
   const steps: ProcessStep[] = [
     {
       icon: <FileText className="h-8 w-8 text-primary" />,
-      title: "Application Submission",
-      description: "Submit your application through our careers portal with your resume, cover letter, and any relevant portfolio links."
+      title: t('applicationProcess.steps.step1.title', { fallback: 'Application Submission' }),
+      description: t('applicationProcess.steps.step1.description', { fallback: 'Submit your application through our careers portal with your resume, cover letter, and any relevant portfolio links.' })
     },
     {
       icon: <MessageSquare className="h-8 w-8 text-primary" />,
-      title: "Initial Screening",
-      description: "Our recruitment team will review your application and conduct an initial phone or video screening to discuss your experience and aspirations."
+      title: t('applicationProcess.steps.step2.title', { fallback: 'Initial Screening' }),
+      description: t('applicationProcess.steps.step2.description', { fallback: 'Our recruitment team will review your application and conduct an initial phone or video screening to discuss your experience and aspirations.' })
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
-      title: "Team Interviews",
-      description: "Meet with potential team members and managers for in-depth discussions about your skills, experience, and fit with our culture."
+      title: t('applicationProcess.steps.step3.title', { fallback: 'Team Interviews' }),
+      description: t('applicationProcess.steps.step3.description', { fallback: 'Meet with potential team members and managers for in-depth discussions about your skills, experience, and fit with our culture.' })
     },
     {
       icon: <CheckCircle className="h-8 w-8 text-primary" />,
-      title: "Assessment & Decision",
-      description: "Complete any relevant technical assessments or case studies, after which we'll make a final decision based on all interview feedback."
+      title: t('applicationProcess.steps.step4.title', { fallback: 'Assessment & Decision' }),
+      description: t('applicationProcess.steps.step4.description', { fallback: "Complete any relevant technical assessments or case studies, after which we'll make a final decision based on all interview feedback." })
     },
     {
       icon: <Briefcase className="h-8 w-8 text-primary" />,
-      title: "Offer & Onboarding",
-      description: "If selected, you'll receive an offer and, upon acceptance, begin our comprehensive onboarding process to set you up for success."
+      title: t('applicationProcess.steps.step5.title', { fallback: 'Offer & Onboarding' }),
+      description: t('applicationProcess.steps.step5.description', { fallback: "If selected, you'll receive an offer and, upon acceptance, begin our comprehensive onboarding process to set you up for success." })
     }
   ];
 
@@ -55,10 +58,10 @@ export default function ApplicationProcess() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Our Application Process
+            {t('applicationProcess.title', { fallback: 'Our Application Process' })}
           </h2>
           <p className="text-lg text-muted-foreground">
-            We&apos;ve designed a straightforward and transparent hiring process to help us find the right talent and give you clarity every step of the way.
+            {t('applicationProcess.description', { fallback: "We've designed a straightforward and transparent hiring process to help us find the right talent and give you clarity every step of the way." })}
           </p>
         </motion.div>
 

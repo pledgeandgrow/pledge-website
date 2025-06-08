@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface PartnerCategoriesProps {
   categories: string[];
@@ -13,6 +14,8 @@ export default function PartnerCategories({
   activeCategory, 
   setActiveCategory 
 }: PartnerCategoriesProps) {
+  const { t } = useTranslations('partners');
+  
   return (
     <div className="mb-10">
       <div className="flex flex-wrap justify-center gap-2 md:gap-4">
@@ -24,7 +27,7 @@ export default function PartnerCategories({
             className="rounded-full"
             onClick={() => setActiveCategory("Exclusive")}
           >
-            Exclusive
+            {t(`partnersList.categories.Exclusive`) || "Exclusive"}
           </Button>
         )}
         
@@ -36,7 +39,7 @@ export default function PartnerCategories({
             className="rounded-full"
             onClick={() => setActiveCategory(category)}
           >
-            {category}
+            {t(`partnersList.categories.${category}`) || category}
           </Button>
         ))}
       </div>

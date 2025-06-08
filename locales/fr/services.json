@@ -1,0 +1,162 @@
+{
+  "hero": {
+    "title": "Nos Services & Solutions",
+    "description": "Des solutions numériques complètes adaptées aux besoins de votre entreprise, du développement web et mobile à l'hébergement cloud et aux services VIP.",
+    "startButton": "Démarrer Votre Projet",
+    "contactButton": "Contacter Notre Équipe"
+  },
+  "tabbed": {
+    "loading": "Chargement des détails du service...",
+    "tabs": {
+      "creation": "Création",
+      "integration": "Intégration",
+      "complementary": "Complémentaire"
+    }
+  },
+  "creation": {
+    "title": "Création",
+    "description": "Nous concevons et développons des produits numériques qui aident les entreprises à se développer et à réussir dans le paysage numérique.",
+    "services": {
+      "website": {
+        "title": "Site Web",
+        "description": "Sites web professionnels pour entreprises et organisations avec design responsive."
+      },
+      "saas": {
+        "title": "SaaS",
+        "description": "Solutions logicielles personnalisées en tant que service avec architecture multi-locataires."
+      },
+      "mobile-app": {
+        "title": "Mobile",
+        "description": "Applications mobiles natives et multiplateformes pour iOS et Android."
+      },
+      "software": {
+        "title": "Logiciel",
+        "description": "Logiciels personnalisés pour répondre aux besoins spécifiques de votre entreprise."
+      },
+      "video-games": {
+        "title": "Jeux Vidéo",
+        "description": "Jeux vidéo captivants pour plusieurs plateformes avec des expériences immersives."
+      }
+    }
+  },
+  "integration": {
+    "title": "Intégration",
+    "description": "Nous intégrons des technologies puissantes dans vos systèmes existants pour améliorer les fonctionnalités et les performances.",
+    "services": {
+      "e-commerce": {
+        "title": "E-commerce",
+        "description": "Solutions complètes de boutique en ligne avec traitement des paiements et gestion des stocks."
+      },
+      "ai-automation": {
+        "title": "IA & Automatisation",
+        "description": "Solutions intelligentes utilisant l'IA et l'automatisation pour optimiser les processus d'entreprise."
+      },
+      "cybersecurity": {
+        "title": "Cybersécurité",
+        "description": "Solutions de sécurité complètes pour protéger vos actifs numériques et vos données."
+      },
+      "cloud-devops": {
+        "title": "Cloud & DevOps",
+        "description": "Solutions cloud évolutives et pratiques DevOps pour optimiser votre infrastructure et vos déploiements."
+      },
+      "blockchain": {
+        "title": "Blockchain",
+        "description": "Applications blockchain sécurisées et transparentes pour diverses industries et cas d'utilisation."
+      }
+    }
+  },
+  "complementary": {
+    "title": "Complémentaire",
+    "description": "Services additionnels pour compléter vos projets numériques et améliorer leur valeur.",
+    "services": {
+      "documentation": {
+        "title": "Documentation",
+        "description": "Services de documentation complets pour vos produits numériques et systèmes techniques."
+      },
+      "ux-ui-design": {
+        "title": "UX/UI Design",
+        "description": "Services de conception centrés sur l'utilisateur qui créent des expériences numériques intuitives."
+      },
+      "seo": {
+        "title": "SEO",
+        "description": "Services d'optimisation pour les moteurs de recherche pour améliorer votre visibilité en ligne."
+      },
+      "maintenance": {
+        "title": "Maintenance",
+        "description": "Services de maintenance pour assurer le bon fonctionnement et la sécurité de vos solutions numériques."
+      },
+      "consulting-training": {
+        "title": "Conseil",
+        "description": "Services de conseil et de formation pour aider votre équipe à maîtriser les technologies numériques."
+      }
+    }
+  },
+  "serviceModal": {
+    "specifications": {
+      "title": "Spécifications",
+      "type": "Type de Service",
+      "clients": "Clients Idéaux",
+      "sectors": "Secteurs Cibles",
+      "recommendedFor": "Recommandé Pour"
+    },
+    "technology": {
+      "title": "Technologie",
+      "programs": "Programmes",
+      "technologies": "Technologies",
+      "languages": "Langages",
+      "frameworks": "Frameworks",
+      "libraries": "Bibliothèques"
+    },
+    "conditions": {
+      "title": "Conditions",
+      "requirements": "Prérequis",
+      "deliverables": "Livrables",
+      "timeline": "Calendrier",
+      "support": "Support"
+    },
+    "close": "Fermer"
+  },
+  "vip": {
+    "title": "Expérience Client VIP",
+    "description": "Rejoignez notre programme VIP exclusif pour un service premium, un support prioritaire et des avantages améliorés adaptés aux besoins de votre entreprise.",
+    "card": {
+      "title": "Avantages de l'Adhésion VIP",
+      "subtitle": "Avantages exclusifs pour nos clients les plus précieux",
+      "applyButton": "Demander l'Adhésion VIP"
+    },
+    "benefits": {
+      "priority": {
+        "title": "Support Prioritaire",
+        "description": "Bénéficiez d'une attention immédiate avec notre ligne de support VIP dédiée et des temps de réponse garantis en moins de 2 heures."
+      },
+      "dedicated": {
+        "title": "Gestionnaire de Compte Dédié",
+        "description": "Travaillez avec un gestionnaire de compte dédié qui comprend votre entreprise et peut coordonner tous vos besoins."
+      },
+      "expedited": {
+        "title": "Livraison Accélérée",
+        "description": "Vos projets sont priorisés dans notre flux de travail, garantissant des délais d'exécution plus rapides sans compromettre la qualité."
+      },
+      "enhanced": {
+        "title": "Sécurité Renforcée",
+        "description": "Bénéficiez de mesures de sécurité avancées, d'audits de sécurité réguliers et d'une surveillance proactive de vos actifs numériques."
+      }
+    },
+    "elevate": {
+      "title": "Élevez Votre Expérience",
+      "description": "Notre programme VIP est conçu pour les clients qui exigent le plus haut niveau de service et d'attention. En tant que client VIP, vous bénéficierez d'une gamme d'avantages exclusifs qui améliorent votre expérience et garantissent que vos projets reçoivent la priorité qu'ils méritent."
+    },
+    "includes": {
+      "title": "L'Adhésion VIP Comprend :",
+      "items": {
+        "strategy": "Sessions stratégiques trimestrielles avec notre équipe senior",
+        "beta": "Accès exclusif aux fonctionnalités bêta et aux nouveaux services",
+        "pricing": "Tarification préférentielle sur tous les services et forfaits",
+        "support": "Heures de support étendues, y compris les week-ends",
+        "audit": "Audit annuel gratuit de sécurité et de performance"
+      }
+    },
+    "disclaimer": "L'adhésion VIP est disponible sur demande et est soumise à approbation. Contactez-nous pour discuter de votre éligibilité et de la façon dont nous pouvons adapter nos services VIP à vos besoins spécifiques.",
+    "contactButton": "Contactez-nous pour l'Accès VIP"
+  }
+}

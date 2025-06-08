@@ -5,8 +5,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, MessageSquare } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function DiscordHero() {
+  const { t } = useTranslations("discord");
+  
   return (
     <section className="relative bg-gradient-to-b from-primary/10 to-background py-20 md:py-32 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -18,20 +21,20 @@ export default function DiscordHero() {
             className="text-center md:text-left"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Join Our Discord Community
+              {t("hero.title")}
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-lg mx-auto md:mx-0">
-              Connect with like-minded professionals, get real-time support, and stay updated on the latest Pledge & Grow events and resources.
+              {t("hero.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Button asChild size="lg" className="font-medium">
                 <Link href="https://discord.gg/pledgeandgrow" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <MessageSquare className="h-5 w-5" /> Join Discord
+                  <MessageSquare className="h-5 w-5" /> {t("hero.joinButton")}
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="font-medium">
                 <Link href="#discord-benefits" className="flex items-center gap-2">
-                  Learn More <ArrowRight className="h-4 w-4" />
+                  {t("hero.learnMoreButton")} <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
             </div>
@@ -45,7 +48,7 @@ export default function DiscordHero() {
             <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-lg border border-border">
               <Image
                 src="/images/discord/discord.png"
-                alt="Pledge & Grow Discord Community"
+                alt={t("hero.imageAlt")}
                 fill
                 className="object-cover"
                 priority

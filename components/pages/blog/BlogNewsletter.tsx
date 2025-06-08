@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { Mail } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function BlogNewsletter() {
+  const { t } = useTranslations('blog');
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -16,7 +18,7 @@ export default function BlogNewsletter() {
     e.preventDefault();
     
     if (!email) {
-      setError("Please enter your email address");
+      setError(t('newsletter.error'));
       return;
     }
 
@@ -32,7 +34,7 @@ export default function BlogNewsletter() {
     } catch (error) {
       // Log error but don't use the variable
       console.error(error);
-      setError("An error occurred. Please try again.");
+      setError(t('newsletter.error'));
     } finally {
       setIsSubmitting(false);
     }
@@ -51,27 +53,27 @@ export default function BlogNewsletter() {
           <div className="bg-primary/10 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
             <Mail className="h-8 w-8 text-primary" />
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Stay Updated</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('newsletter.title')}</h2>
           <p className="text-muted-foreground text-center mb-8 max-w-xl mx-auto">
-            Stay up to date with the latest insights, news, and updates from Pledge & Grow. We&apos;ll send you our best content, no spam!
+            {t('newsletter.description')}
           </p>
           
           {isSuccess ? (
             <div className="bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300 p-4 rounded-lg mb-6">
-              <p>Thank you for subscribing! You&apos;ll receive our next newsletter soon.</p>
+              <p>{t('newsletter.success')}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <Input
                 type="email"
-                placeholder="Your email address"
+                placeholder={t('newsletter.placeholder')}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-grow"
                 aria-label="Email address"
               />
               <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Subscribing..." : "Subscribe"}
+                {isSubmitting ? t('newsletter.subscribing', { defaultValue: 'Subscribing...' }) : t('newsletter.button')}
               </Button>
             </form>
           )}
@@ -81,7 +83,7 @@ export default function BlogNewsletter() {
           )}
           
           <p className="mt-4 text-sm text-muted-foreground">
-            We respect your privacy. Unsubscribe at any time.
+            {t('newsletter.privacyNotice', { defaultValue: 'We respect your privacy. Unsubscribe at any time.' })}
           </p>
         </motion.div>
       </div>

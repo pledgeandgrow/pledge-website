@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FormProvider } from "react-hook-form";
 import { useAnalytics } from "@/hooks/useAnalytics";
 import { EventCategory, EventAction } from "@/lib/analytics";
+import { useTranslations } from "@/hooks/useTranslations";
 
 // UI Components
 import { Button } from "@/components/ui/button";
@@ -47,92 +48,103 @@ import {
   CreditCard
 } from "lucide-react";
 
-// Form Validation Schemas
-export const projectTypeSchema = z.object({
+// Define type for translation function
+type TranslationFunction = (key: string, params?: Record<string, unknown>) => string;
+
+// Form Validation Schemas - using function to access translations
+export const getProjectTypeSchema = (t: TranslationFunction) => z.object({
   projectType: z.string().min(1, {
-    message: "Please select a project type.",
+    message: t('form.projectType.validation.required'),
   }),
 });
 
-export const projectDetailsSchema = z.object({
+export const getProjectDetailsSchema = (t: TranslationFunction) => z.object({
   projectName: z.string().min(2, {
-    message: "Project name must be at least 2 characters.",
+    message: t('form.projectDetails.projectName.validation.minLength'),
   }),
   projectDescription: z.string().min(10, {
-    message: "Project description must be at least 10 characters.",
+    message: t('form.projectDetails.projectDescription.validation.minLength'),
   }),
   targetAudience: z.string().min(5, {
-    message: "Target audience must be at least 5 characters.",
+    message: t('form.projectDetails.targetAudience.validation.minLength'),
   }),
 });
 
-export const timelineSchema = z.object({
+export const getTimelineSchema = (t: TranslationFunction) => z.object({
   startDate: z.string().min(1, {
-    message: "Please select a start date.",
+    message: t('form.timeline.startDate.validation.required'),
   }),
   deadline: z.string().optional(),
   flexibility: z.enum(["strict", "moderate", "flexible"]),
 });
 
-export const budgetSchema = z.object({
+export const getBudgetSchema = (t: TranslationFunction) => z.object({
   budgetRange: z.string().min(1, {
-    message: "Please select a budget range.",
+    message: t('form.budget.budgetRange.validation.required'),
   }),
   budgetAmount: z.coerce.number().min(0, {
-    message: "Budget amount must be a positive number."
+    message: t('form.budget.budgetAmount.validation.positive')
   }).optional(),
   paymentPreference: z.enum(["milestone", "monthly", "completion"], {
-    required_error: "Please select a payment preference.",
+    required_error: t('form.budget.paymentPreference.validation.required'),
   }),
 });
 
-export const contactSchema = z.object({
+export const getContactSchema = (t: TranslationFunction) => z.object({
   name: z.string().min(2, {
-    message: "Name must be at least 2 characters.",
+    message: t('form.contact.name.validation.minLength'),
   }),
   email: z.string().email({
-    message: "Please enter a valid email address.",
+    message: t('form.contact.email.validation.format'),
   }),
   company: z.string().optional(),
   phone: z.string().optional(),
 });
 
-// Define the steps
-const formSteps = [
+// Define the form step interface
+interface FormStep {
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+// Define the steps function that uses translations
+const getFormSteps = (t: TranslationFunction): FormStep[] => [
   { 
     id: "project-type", 
-    title: "Project Type", 
-    description: "Select the type of project you want to create",
+    title: t('form.steps.0.title'), 
+    description: t('form.steps.0.description'),
     icon: <Briefcase className="h-5 w-5" />
   },
   { 
     id: "project-details", 
-    title: "Project Details", 
-    description: "Tell us more about your project",
+    title: t('form.steps.1.title'), 
+    description: t('form.steps.1.description'),
     icon: <Target className="h-5 w-5" />
   },
   { 
     id: "timeline", 
-    title: "Timeline", 
-    description: "When do you need your project completed?",
+    title: t('form.steps.2.title'), 
+    description: t('form.steps.2.description'),
     icon: <Clock className="h-5 w-5" />
   },
   { 
     id: "budget", 
-    title: "Budget", 
-    description: "What's your budget for this project?",
+    title: t('form.steps.3.title'), 
+    description: t('form.steps.3.description'),
     icon: <CreditCard className="h-5 w-5" />
   },
   { 
     id: "contact", 
-    title: "Contact Information", 
-    description: "How can we reach you?",
+    title: t('form.steps.4.title'), 
+    description: t('form.steps.4.description'),
     icon: <Users className="h-5 w-5" />
   },
   { 
     id: "summary", 
-    title: "Summary", 
-    description: "Review your project details",
+    title: t('form.steps.5.title'), 
+    description: t('form.steps.5.description'),
     icon: <Check className="h-5 w-5" />
   }
 ];
@@ -156,9 +168,11 @@ interface FormData {
 }
 
 export default function ProjectForm() {
+  const { t } = useTranslations('digital-project');
   const [currentStep, setCurrentStep] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const { trackEvent, trackFormSubmission } = useAnalytics();
+  const formSteps = getFormSteps(t);
   const [formData, setFormData] = useState<FormData>({
     // Initial form data state using the FormData interface
     projectType: "",
@@ -194,6 +208,13 @@ export default function ProjectForm() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
   
+  // Create schema instances with translations
+  const projectTypeSchema = getProjectTypeSchema(t);
+  const projectDetailsSchema = getProjectDetailsSchema(t);
+  const timelineSchema = getTimelineSchema(t);
+  const budgetSchema = getBudgetSchema(t);
+  const contactSchema = getContactSchema(t);
+
   // Create form instances for each step
   const projectTypeForm = useForm<z.infer<typeof projectTypeSchema>>({
     resolver: zodResolver(projectTypeSchema),
@@ -201,7 +222,7 @@ export default function ProjectForm() {
       projectType: formData.projectType,
     },
   });
-  
+
   const projectDetailsForm = useForm<z.infer<typeof projectDetailsSchema>>({
     resolver: zodResolver(projectDetailsSchema),
     defaultValues: {
@@ -210,24 +231,25 @@ export default function ProjectForm() {
       targetAudience: formData.targetAudience,
     },
   });
-  
+
   const timelineForm = useForm<z.infer<typeof timelineSchema>>({
     resolver: zodResolver(timelineSchema),
     defaultValues: {
       startDate: formData.startDate,
       deadline: formData.deadline,
-      flexibility: formData.flexibility as "strict" | "moderate" | "flexible",
+      flexibility: formData.flexibility,
     },
   });
-  
+
   const budgetForm = useForm<z.infer<typeof budgetSchema>>({
     resolver: zodResolver(budgetSchema),
     defaultValues: {
       budgetRange: formData.budgetRange,
-      paymentPreference: formData.paymentPreference as "milestone" | "monthly" | "completion",
+      budgetAmount: formData.budgetAmount,
+      paymentPreference: formData.paymentPreference,
     },
   });
-  
+
   const contactForm = useForm<z.infer<typeof contactSchema>>({
     resolver: zodResolver(contactSchema),
     defaultValues: {
@@ -393,16 +415,16 @@ export default function ProjectForm() {
         // Track successful submission
         trackFormSubmission('project_form', true);
         toast({
-          title: 'Project Submitted',
-          description: 'Your project details have been received and sent to our team.',
+          title: t('form.toast.success.title'),
+          description: t('form.toast.success.description'),
           variant: 'default',
         });
       } else {
         // Track failed submission
         trackFormSubmission('project_form', false, 'API returned error');
         toast({
-          title: 'Submission Error',
-          description: 'There was an issue submitting your project. Please try again.',
+          title: t('form.toast.error.title'),
+          description: t('form.toast.error.description'),
           variant: 'destructive',
         });
       }
@@ -411,8 +433,8 @@ export default function ProjectForm() {
       // Track error
       trackFormSubmission('project_form', false, (error as Error).message || 'Unknown error');
       toast({
-        title: 'Submission Error',
-        description: 'An unexpected error occurred. Please try again.',
+        title: t('form.toast.error.title'),
+        description: t('form.toast.error.unexpectedDescription'),
         variant: 'destructive',
       });
     } finally {
@@ -427,9 +449,9 @@ export default function ProjectForm() {
     <section id="project-form" className="py-10 md:py-16 bg-background dark:bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3 md:mb-4">Start Your Project</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3 md:mb-4">{t('form.heading')}</h2>
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-            Fill out this form to help us understand your project needs and provide you with an accurate estimate.
+            {t('form.description')}
           </p>
         </div>
 
@@ -444,7 +466,7 @@ export default function ProjectForm() {
                   <span className="text-xs ml-1">{formSteps[currentStep].title}</span>
                 </div>
                 <span className="text-xs text-muted-foreground">
-                  Step {currentStep + 1} of {formSteps.length}
+                  {t('form.progress', { current: currentStep + 1, total: formSteps.length })}
                 </span>
               </div>
             ) : (
@@ -489,18 +511,18 @@ export default function ProjectForm() {
                           name="projectType"
                           render={({ field }) => (
                             <FormItem>
-                              <FormLabel className="text-sm md:text-base">Project Type</FormLabel>
+                              <FormLabel className="text-sm md:text-base">{t('form.projectType.label')}</FormLabel>
                               <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
                                   <SelectTrigger>
-                                    <SelectValue placeholder="Select a project type" />
+                                    <SelectValue placeholder={t('form.projectType.placeholder')} />
                                   </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
-                                  <SelectItem value="web">Web Development</SelectItem>
-                                  <SelectItem value="mobile">Mobile App</SelectItem>
-                                  <SelectItem value="design">Design Project</SelectItem>
-                                  <SelectItem value="consulting">Consulting</SelectItem>
+                                  <SelectItem value="web">{t('form.projectType.options.web')}</SelectItem>
+                                  <SelectItem value="mobile">{t('form.projectType.options.mobile')}</SelectItem>
+                                  <SelectItem value="design">{t('form.projectType.options.design')}</SelectItem>
+                                  <SelectItem value="consulting">{t('form.projectType.options.consulting')}</SelectItem>
                                 </SelectContent>
                               </Select>
                               <FormMessage />
@@ -520,9 +542,9 @@ export default function ProjectForm() {
                             name="projectName"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-sm md:text-base">Project Name</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.projectDetails.projectName.label')}</FormLabel>
                                 <FormControl>
-                                  <Input placeholder="Enter project name" {...field} />
+                                  <Input placeholder={t('form.projectDetails.projectName.placeholder')} {...field} />
                                 </FormControl>
                                 <FormMessage />
                               </FormItem>
@@ -533,9 +555,9 @@ export default function ProjectForm() {
                             name="projectDescription"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-sm md:text-base">Project Description</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.projectDetails.projectDescription.label')}</FormLabel>
                                 <FormControl>
-                                  <Textarea placeholder="Describe your project in detail" {...field} />
+                                  <Textarea placeholder={t('form.projectDetails.projectDescription.placeholder')} {...field} />
                                 </FormControl>
                                 <FormMessage />
                               </FormItem>
@@ -546,9 +568,9 @@ export default function ProjectForm() {
                             name="targetAudience"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-sm md:text-base">Target Audience</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.projectDetails.targetAudience.label')}</FormLabel>
                                 <FormControl>
-                                  <Input placeholder="Who is this project for?" {...field} />
+                                  <Input placeholder={t('form.projectDetails.targetAudience.placeholder')} {...field} />
                                 </FormControl>
                                 <FormMessage />
                               </FormItem>
@@ -569,7 +591,7 @@ export default function ProjectForm() {
                             name="startDate"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-sm md:text-base">Start Date</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.timeline.startDate.label')}</FormLabel>
                                 <FormControl>
                                   <Input type="date" {...field} className="w-full" />
                                 </FormControl>
@@ -582,7 +604,7 @@ export default function ProjectForm() {
                             name="deadline"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-sm md:text-base">Deadline (Optional)</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.timeline.deadline.label')}</FormLabel>
                                 <FormControl>
                                   <Input type="date" {...field} className="w-full" />
                                 </FormControl>
@@ -595,7 +617,7 @@ export default function ProjectForm() {
                             name="flexibility"
                             render={({ field }) => (
                               <FormItem className="space-y-3">
-                                <FormLabel className="text-sm md:text-base">Timeline Flexibility</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.timeline.flexibility.label')}</FormLabel>
                                 <FormControl>
                                   <RadioGroup
                                     onValueChange={field.onChange}
@@ -607,7 +629,7 @@ export default function ProjectForm() {
                                         <RadioGroupItem value="strict" />
                                       </FormControl>
                                       <FormLabel className="font-normal">
-                                        Strict - Must be completed by deadline
+                                        {t('form.timeline.flexibility.options.strict')}
                                       </FormLabel>
                                     </FormItem>
                                     <FormItem className="flex items-center space-x-3 space-y-0">
@@ -615,7 +637,7 @@ export default function ProjectForm() {
                                         <RadioGroupItem value="moderate" />
                                       </FormControl>
                                       <FormLabel className="font-normal">
-                                        Moderate - Some flexibility allowed
+                                        {t('form.timeline.flexibility.options.moderate')}
                                       </FormLabel>
                                     </FormItem>
                                     <FormItem className="flex items-center space-x-3 space-y-0">
@@ -623,7 +645,7 @@ export default function ProjectForm() {
                                         <RadioGroupItem value="flexible" />
                                       </FormControl>
                                       <FormLabel className="font-normal">
-                                        Flexible - Open to adjusting timeline
+                                        {t('form.timeline.flexibility.options.flexible')}
                                       </FormLabel>
                                     </FormItem>
                                   </RadioGroup>
@@ -647,18 +669,18 @@ export default function ProjectForm() {
                             name="budgetRange"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-sm md:text-base">Budget Range</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.budget.budgetRange.label')}</FormLabel>
                                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                                   <FormControl>
                                     <SelectTrigger>
-                                      <SelectValue placeholder="Select budget range" />
+                                      <SelectValue placeholder={t('form.budget.budgetRange.placeholder')} />
                                     </SelectTrigger>
                                   </FormControl>
                                   <SelectContent>
-                                    <SelectItem value="0-1000">$0 - $1,000</SelectItem>
-                                    <SelectItem value="1000-5000">$1,000 - $5,000</SelectItem>
-                                    <SelectItem value="5000-10000">$5,000 - $10,000</SelectItem>
-                                    <SelectItem value="10000+">$10,000+</SelectItem>
+                                    <SelectItem value="0-1000">{t('form.budget.budgetRange.options.small')}</SelectItem>
+                                    <SelectItem value="1000-5000">{t('form.budget.budgetRange.options.medium')}</SelectItem>
+                                    <SelectItem value="5000-10000">{t('form.budget.budgetRange.options.large')}</SelectItem>
+                                    <SelectItem value="10000+">{t('form.budget.budgetRange.options.enterprise')}</SelectItem>
                                   </SelectContent>
                                 </Select>
                                 <FormMessage />
@@ -671,11 +693,11 @@ export default function ProjectForm() {
                             name="budgetAmount"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-sm md:text-base">Specific Budget Amount (Optional)</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.budget.budgetAmount.label')}</FormLabel>
                                 <FormControl>
                                   <Input 
                                     type="number" 
-                                    placeholder="Enter your exact budget" 
+                                    placeholder={t('form.budget.budgetAmount.placeholder')} 
                                     {...field} 
                                     min="0" 
                                     step="100" 
@@ -691,7 +713,7 @@ export default function ProjectForm() {
                             name="paymentPreference"
                             render={({ field }) => (
                               <FormItem className="space-y-3">
-                                <FormLabel className="text-sm md:text-base">Payment Preference</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.budget.paymentPreference.label')}</FormLabel>
                                 <FormControl>
                                   <RadioGroup
                                     onValueChange={field.onChange}
@@ -703,7 +725,7 @@ export default function ProjectForm() {
                                         <RadioGroupItem value="milestone" />
                                       </FormControl>
                                       <FormLabel className="font-normal">
-                                        Milestone - Payment upon completing specific project stages
+                                        {t('form.budget.paymentPreference.options.milestone')}
                                       </FormLabel>
                                     </FormItem>
                                     <FormItem className="flex items-center space-x-3 space-y-0">
@@ -711,7 +733,7 @@ export default function ProjectForm() {
                                         <RadioGroupItem value="monthly" />
                                       </FormControl>
                                       <FormLabel className="font-normal">
-                                        Monthly - Consistent monthly payments
+                                        {t('form.budget.paymentPreference.options.monthly')}
                                       </FormLabel>
                                     </FormItem>
                                     <FormItem className="flex items-center space-x-3 space-y-0">
@@ -719,7 +741,7 @@ export default function ProjectForm() {
                                         <RadioGroupItem value="completion" />
                                       </FormControl>
                                       <FormLabel className="font-normal">
-                                        Completion - Full payment upon project completion
+                                        {t('form.budget.paymentPreference.options.completion')}
                                       </FormLabel>
                                     </FormItem>
                                   </RadioGroup>
@@ -742,9 +764,9 @@ export default function ProjectForm() {
                             name="name"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-sm md:text-base">Full Name</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.contact.name.label')}</FormLabel>
                                 <FormControl>
-                                  <Input placeholder="Enter your full name" {...field} />
+                                  <Input placeholder={t('form.contact.name.placeholder')} {...field} />
                                 </FormControl>
                                 <FormMessage />
                               </FormItem>
@@ -756,11 +778,11 @@ export default function ProjectForm() {
                             name="email"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-sm md:text-base">Email Address</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.contact.email.label')}</FormLabel>
                                 <FormControl>
                                   <Input 
                                     type="email" 
-                                    placeholder="Enter your email address" 
+                                    placeholder={t('form.contact.email.placeholder')} 
                                     {...field} 
                                   />
                                 </FormControl>
@@ -774,10 +796,10 @@ export default function ProjectForm() {
                             name="company"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-sm md:text-base">Company (Optional)</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.contact.company.label')}</FormLabel>
                                 <FormControl>
                                   <Input 
-                                    placeholder="Enter your company name" 
+                                    placeholder={t('form.contact.company.placeholder')} 
                                     {...field} 
                                   />
                                 </FormControl>
@@ -791,11 +813,11 @@ export default function ProjectForm() {
                             name="phone"
                             render={({ field }) => (
                               <FormItem>
-                                <FormLabel className="text-sm md:text-base">Phone Number (Optional)</FormLabel>
+                                <FormLabel className="text-sm md:text-base">{t('form.contact.phone.label')}</FormLabel>
                                 <FormControl>
                                   <Input 
                                     type="tel" 
-                                    placeholder="Enter your phone number" 
+                                    placeholder={t('form.contact.phone.placeholder')} 
                                     {...field} 
                                   />
                                 </FormControl>
@@ -811,109 +833,109 @@ export default function ProjectForm() {
                   {currentStep === 5 && (
   <div className="space-y-6">
     <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-      <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white">Project Information</h3>
+      <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white">{t('form.summary.projectInformation.title')}</h3>
       <div className="space-y-4">
         <div>
-          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Project Type</h4>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.projectInformation.projectType')}</h4>
           <p className="text-base font-medium text-gray-900 dark:text-white">
-            {formData.projectType === 'web' ? 'Web Development' : 
-             formData.projectType === 'mobile' ? 'Mobile App' : 
-             formData.projectType === 'design' ? 'Design Project' : 
-             formData.projectType === 'consulting' ? 'Consulting' : 
-             formData.projectType || 'Not specified'}
+            {formData.projectType === 'web' ? t('form.projectType.options.web') : 
+             formData.projectType === 'mobile' ? t('form.projectType.options.mobile') : 
+             formData.projectType === 'design' ? t('form.projectType.options.design') : 
+             formData.projectType === 'consulting' ? t('form.projectType.options.consulting') : 
+             formData.projectType || t('form.summary.notSpecified')}
           </p>
         </div>
         <div>
-          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Project Name</h4>
-          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.projectName || 'Not specified'}</p>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.projectInformation.projectName')}</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.projectName || t('form.summary.notSpecified')}</p>
         </div>
         <div>
-          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Project Description</h4>
-          <p className="text-base text-gray-900 dark:text-white">{formData.projectDescription || 'Not specified'}</p>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.projectInformation.projectDescription')}</h4>
+          <p className="text-base text-gray-900 dark:text-white">{formData.projectDescription || t('form.summary.notSpecified')}</p>
         </div>
         <div>
-          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Target Audience</h4>
-          <p className="text-base text-gray-900 dark:text-white">{formData.targetAudience || 'Not specified'}</p>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.projectInformation.targetAudience')}</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.targetAudience || t('form.summary.notSpecified')}</p>
         </div>
       </div>
     </div>
 
     <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-      <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white">Timeline</h3>
+      <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white">{t('form.summary.timeline.title')}</h3>
       <div className="space-y-4">
         <div>
-          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Start Date</h4>
-          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.startDate || 'Not specified'}</p>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.timeline.startDate')}</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.startDate || t('form.summary.notSpecified')}</p>
         </div>
         {formData.deadline && (
           <div>
-            <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Deadline</h4>
+            <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.timeline.deadline')}</h4>
             <p className="text-base font-medium text-gray-900 dark:text-white">{formData.deadline}</p>
           </div>
         )}
         <div>
-          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Flexibility</h4>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.timeline.flexibility')}</h4>
           <p className="text-base font-medium text-gray-900 dark:text-white">
-            {formData.flexibility === 'strict' ? 'Strict - Must be completed by deadline' :
-             formData.flexibility === 'moderate' ? 'Moderate - Some flexibility allowed' :
-             formData.flexibility === 'flexible' ? 'Flexible - Open to adjusting timeline' :
-             formData.flexibility || 'Not specified'}
+            {formData.flexibility === 'strict' ? t('form.timeline.flexibility.options.strict') :
+             formData.flexibility === 'moderate' ? t('form.timeline.flexibility.options.moderate') :
+             formData.flexibility === 'flexible' ? t('form.timeline.flexibility.options.flexible') :
+             formData.flexibility || t('form.summary.notSpecified')}
           </p>
         </div>
       </div>
     </div>
 
     <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-      <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white">Budget</h3>
+      <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white">{t('form.summary.budget.title')}</h3>
       <div className="space-y-4">
         <div>
-          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Budget Range</h4>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.budget.budgetRange')}</h4>
           <p className="text-base font-medium text-gray-900 dark:text-white">
-            {formData.budgetRange === '0-1000' ? '$0 - $1,000' :
-             formData.budgetRange === '1000-5000' ? '$1,000 - $5,000' :
-             formData.budgetRange === '5000-10000' ? '$5,000 - $10,000' :
-             formData.budgetRange === '10000+' ? '$10,000+' :
-             formData.budgetRange || 'Not specified'}
+            {formData.budgetRange === '0-1000' ? t('form.budget.budgetRange.options.small') :
+             formData.budgetRange === '1000-5000' ? t('form.budget.budgetRange.options.medium') :
+             formData.budgetRange === '5000-10000' ? t('form.budget.budgetRange.options.large') :
+             formData.budgetRange === '10000+' ? t('form.budget.budgetRange.options.enterprise') :
+             formData.budgetRange || t('form.summary.notSpecified')}
           </p>
         </div>
         {formData.budgetAmount && (
           <div>
-            <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Specific Budget Amount</h4>
+            <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.budget.budgetAmount')}</h4>
             <p className="text-base font-medium text-gray-900 dark:text-white">${formData.budgetAmount}</p>
           </div>
         )}
         <div>
-          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Payment Preference</h4>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.budget.paymentPreference')}</h4>
           <p className="text-base font-medium text-gray-900 dark:text-white">
-            {formData.paymentPreference === 'milestone' ? 'Milestone - Payment upon completing specific project stages' :
-             formData.paymentPreference === 'monthly' ? 'Monthly - Consistent monthly payments' :
-             formData.paymentPreference === 'completion' ? 'Completion - Full payment upon project completion' :
-             formData.paymentPreference || 'Not specified'}
+            {formData.paymentPreference === 'milestone' ? t('form.budget.paymentPreference.options.milestone') :
+             formData.paymentPreference === 'monthly' ? t('form.budget.paymentPreference.options.monthly') :
+             formData.paymentPreference === 'completion' ? t('form.budget.paymentPreference.options.completion') :
+             formData.paymentPreference || t('form.summary.notSpecified')}
           </p>
         </div>
       </div>
     </div>
 
     <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-      <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white">Contact Information</h3>
+      <h3 className="text-lg font-medium mb-4 text-gray-900 dark:text-white">{t('form.summary.contactInformation.title')}</h3>
       <div className="space-y-4">
         <div>
-          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Name</h4>
-          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.name || 'Not specified'}</p>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.contactInformation.name')}</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.name || t('form.summary.notSpecified')}</p>
         </div>
         <div>
-          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</h4>
-          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.email || 'Not specified'}</p>
+          <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.contactInformation.email')}</h4>
+          <p className="text-base font-medium text-gray-900 dark:text-white">{formData.email || t('form.summary.notSpecified')}</p>
         </div>
         {formData.company && (
           <div>
-            <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Company</h4>
+            <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.contactInformation.company')}</h4>
             <p className="text-base font-medium text-gray-900 dark:text-white">{formData.company}</p>
           </div>
         )}
         {formData.phone && (
           <div>
-            <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Phone</h4>
+            <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">{t('form.summary.contactInformation.phone')}</h4>
             <p className="text-base font-medium text-gray-900 dark:text-white">{formData.phone}</p>
           </div>
         )}
@@ -936,7 +958,7 @@ export default function ProjectForm() {
                   className={isMobile ? "text-sm py-2 h-9" : ""}
                   size={isMobile ? "sm" : "default"}
                 >
-                  <ArrowLeft className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4" /> {isMobile ? "Back" : "Previous"}
+                  <ArrowLeft className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4" /> {isMobile ? t('form.buttons.back') : t('form.buttons.previous')}
                 </Button>
               )}
 
@@ -952,7 +974,7 @@ export default function ProjectForm() {
                   className={`${currentStep > 0 ? "ml-auto" : "w-full md:w-auto"} ${isMobile ? "text-sm py-2 h-9" : ""}`}
                   size={isMobile ? "sm" : "default"}
                 >
-                  Next <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
+                  {t('form.buttons.next')} <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
                 </Button>
               ) : (
                 <Button 
@@ -967,12 +989,12 @@ export default function ProjectForm() {
                   {isSubmitting ? (
                     <>
                       <Loader2 className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4 animate-spin" />
-                      {isMobile ? "Sending..." : "Submitting..."}
+                      {isMobile ? t('form.buttons.sending') : t('form.buttons.submitting')}
                     </>
                   ) : (
                     <>
                       <Send className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4" />
-                      {isMobile ? "Submit" : "Submit Project"}
+                      {isMobile ? t('form.buttons.submit') : t('form.buttons.submitProject')}
                     </>
                   )}
                 </Button>

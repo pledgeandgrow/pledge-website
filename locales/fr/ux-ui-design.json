@@ -1,0 +1,82 @@
+{
+  "id": "ux-ui-design",
+  "slug": "ux-ui-design",
+  "title": "Design UX/UI",
+  "subtitle": "Créez des expériences numériques intuitives et engageantes que les utilisateurs adorent",
+  "description": "Nous concevons des expériences numériques centrées sur l'utilisateur qui équilibrent l'attrait esthétique et l'utilisabilité fonctionnelle. Notre processus de conception UX/UI se concentre sur la compréhension des besoins des utilisateurs et des objectifs commerciaux pour créer des interfaces à la fois belles et efficaces.",
+  "heroImage": "/images/expertise/ux-ui-design-hero.jpg",
+  "heroButton": "Démarrer Votre Projet de Design",
+  "category": "Complementary",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Services complets de conception UX/UI"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Outils et plateformes de conception de pointe"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Comment un excellent design transforme l'expérience utilisateur"
+    }
+  },
+  "features": [
+    {
+      "title": "Recherche Utilisateur",
+      "description": "Compréhension approfondie des besoins et comportements de vos utilisateurs",
+      "icon": "users"
+    },
+    {
+      "title": "Architecture de l'Information",
+      "description": "Organisation logique du contenu et des fonctionnalités",
+      "icon": "template"
+    },
+    {
+      "title": "Wireframing & Prototypage",
+      "description": "Modèles interactifs pour tester et affiner les concepts",
+      "icon": "layout"
+    },
+    {
+      "title": "Design Visuel",
+      "description": "Visuels impressionnants qui renforcent l'identité de votre marque",
+      "icon": "palette"
+    }
+  ],
+  "technologies": [
+    { "name": "Figma", "logo": "/images/tech/figma.svg" },
+    { "name": "Adobe XD", "logo": "/images/tech/adobe-xd.svg" },
+    { "name": "Sketch", "logo": "/images/tech/sketch.svg" },
+    { "name": "InVision", "logo": "/images/tech/invision.svg" },
+    { "name": "Framer", "logo": "/images/tech/framer.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Satisfaction Utilisateur Accrue",
+      "description": "Interfaces que les utilisateurs trouvent intuitives et agréables à utiliser",
+      "icon": "heart"
+    },
+    {
+      "title": "Taux de Conversion Plus Élevés",
+      "description": "Designs qui guident les utilisateurs vers les actions souhaitées",
+      "icon": "trending-up"
+    },
+    {
+      "title": "Réduction des Coûts de Développement",
+      "description": "Identification et correction des problèmes avant le début du développement",
+      "icon": "currency-dollar"
+    },
+    {
+      "title": "Cohérence de la Marque",
+      "description": "Langage visuel cohérent sur tous les points de contact numériques",
+      "icon": "check-badge"
+    }
+  ],
+  "relatedExpertise": ["website", "mobile-app", "e-commerce"],
+  "cta": {
+    "title": "Prêt à transformer votre expérience numérique?",
+    "description": "Créons des interfaces intuitives et engageantes que vos utilisateurs adoreront.",
+    "buttonText": "Démarrer Votre Projet de Design",
+    "buttonLink": "/digital-project?service=ux-ui-design"
+  }
+}

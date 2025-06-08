@@ -1,0 +1,82 @@
+{
+  "id": "seo",
+  "slug": "seo",
+  "title": "Search Engine Optimization",
+  "subtitle": "Improve visibility and drive organic traffic to your website",
+  "description": "We help businesses improve their search engine rankings to attract more qualified visitors. Our comprehensive SEO approach combines technical optimization, content strategy, and link building to deliver sustainable organic growth.",
+  "heroImage": "/images/expertise/seo-hero.jpg",
+  "heroButton": "Start Your SEO Project",
+  "category": "Complementary",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive SEO services for your business"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "Industry-leading SEO tools and platforms"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How SEO drives sustainable growth"
+    }
+  },
+  "features": [
+    {
+      "title": "Technical SEO",
+      "description": "Optimizing site structure, speed, and accessibility",
+      "icon": "code"
+    },
+    {
+      "title": "On-Page Optimization",
+      "description": "Enhancing content and metadata for better rankings",
+      "icon": "document-text"
+    },
+    {
+      "title": "Content Strategy",
+      "description": "Creating valuable content that ranks and converts",
+      "icon": "pencil-square"
+    },
+    {
+      "title": "Link Building",
+      "description": "Earning quality backlinks to boost authority",
+      "icon": "link"
+    }
+  ],
+  "technologies": [
+    { "name": "Google Search Console", "logo": "/images/tech/google-search-console.svg" },
+    { "name": "SEMrush", "logo": "/images/tech/semrush.svg" },
+    { "name": "Ahrefs", "logo": "/images/tech/ahrefs.svg" },
+    { "name": "Screaming Frog", "logo": "/images/tech/screaming-frog.svg" },
+    { "name": "Google Analytics", "logo": "/images/tech/google-analytics.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Increased Organic Traffic",
+      "description": "Attract more visitors without paying for each click",
+      "icon": "users"
+    },
+    {
+      "title": "Better Quality Leads",
+      "description": "Connect with users actively searching for your solutions",
+      "icon": "user-plus"
+    },
+    {
+      "title": "Long-Term Results",
+      "description": "Build sustainable traffic that continues to grow over time",
+      "icon": "arrow-trending-up"
+    },
+    {
+      "title": "Enhanced Brand Credibility",
+      "description": "Gain trust through higher search rankings and visibility",
+      "icon": "badge-check"
+    }
+  ],
+  "relatedExpertise": ["digital-marketing", "website", "content-strategy"],
+  "cta": {
+    "title": "Ready to climb the search rankings?",
+    "description": "Let's create an SEO strategy that drives sustainable organic growth for your business.",
+    "buttonText": "Start Your SEO Project",
+    "buttonLink": "/digital-project?service=seo"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "title": "Politique de Cookies | Pledge & Grow",
+    "description": "Découvrez comment Pledge & Grow utilise les cookies et technologies similaires sur notre site web."
+  },
+  "breadcrumbs": {
+    "home": "Accueil",
+    "legal": "Mentions légales",
+    "cookiePolicy": "Politique de Cookies"
+  },
+  "hero": {
+    "title": "Politique de Cookies",
+    "subtitle": "Dernière mise à jour : 7 juin 2025"
+  },
+  "sections": {
+    "introduction": {
+      "title": "Introduction",
+      "content": [
+        "Cette Politique de Cookies explique comment Pledge & Grow ('nous', 'notre', ou 'nos') utilise les cookies et technologies similaires pour vous reconnaître lorsque vous visitez notre site web à pledgeandgrow.com ('Site Web'). Elle explique ce que sont ces technologies et pourquoi nous les utilisons, ainsi que vos droits pour contrôler notre utilisation de celles-ci.",
+        "Dans certains cas, nous pouvons utiliser des cookies pour collecter des informations personnelles, ou qui deviennent des informations personnelles si nous les combinons avec d'autres informations."
+      ]
+    },
+    "whatAreCookies": {
+      "title": "Que sont les cookies ?",
+      "content": [
+        "Les cookies sont de petits fichiers de données qui sont placés sur votre ordinateur ou appareil mobile lorsque vous visitez un site web. Les cookies sont largement utilisés par les propriétaires de sites web afin de faire fonctionner leurs sites web, ou de les faire fonctionner plus efficacement, ainsi que pour fournir des informations de reporting.",
+        "Les cookies définis par le propriétaire du site web (dans ce cas, Pledge & Grow) sont appelés 'cookies de première partie'. Les cookies définis par des parties autres que le propriétaire du site web sont appelés 'cookies tiers'. Les cookies tiers permettent à des fonctionnalités ou fonctions tierces d'être fournies sur ou à travers le site web (par exemple, comme la publicité, le contenu interactif et l'analyse). Les parties qui définissent ces cookies tiers peuvent reconnaître votre ordinateur à la fois lorsqu'il visite le site web en question et également lorsqu'il visite certains autres sites web."
+      ]
+    },
+    "whyWeUseCookies": {
+      "title": "Pourquoi utilisons-nous des cookies ?",
+      "content": [
+        "Nous utilisons des cookies de première et tierce partie pour plusieurs raisons. Certains cookies sont nécessaires pour des raisons techniques afin que notre Site Web fonctionne, et nous les appelons cookies 'essentiels' ou 'strictement nécessaires'. D'autres cookies nous permettent également de suivre et cibler les intérêts de nos utilisateurs pour améliorer l'expérience sur nos Propriétés en Ligne. Des tiers servent des cookies via notre Site Web à des fins de publicité, d'analyse et à d'autres fins. Ceci est décrit plus en détail ci-dessous."
+      ]
+    },
+    "typesOfCookies": {
+      "title": "Types de cookies que nous utilisons",
+      "content": [
+        "Les types spécifiques de cookies de première et tierce partie servis via notre Site Web et les finalités qu'ils remplissent sont décrits ci-dessous :"
+      ],
+      "cookieTypes": {
+        "essential": {
+          "title": "Cookies essentiels du site web",
+          "description": "Ces cookies sont strictement nécessaires pour vous fournir les services disponibles via notre Site Web et pour utiliser certaines de ses fonctionnalités, comme l'accès aux zones sécurisées."
+        },
+        "analytics": {
+          "title": "Cookies d'analyse et de performance",
+          "description": "Ces cookies sont utilisés pour collecter des informations sur le trafic vers notre Site Web et sur la façon dont les utilisateurs utilisent notre Site Web. Les informations recueillies n'identifient aucun visiteur individuel. Les informations sont agrégées et anonymes. Elles comprennent le nombre de visiteurs sur notre Site Web, les sites web qui les ont dirigés vers notre Site Web, les pages qu'ils ont visitées sur notre Site Web, à quelle heure de la journée ils ont visité notre Site Web, s'ils ont déjà visité notre Site Web auparavant, et d'autres informations similaires."
+        },
+        "functionality": {
+          "title": "Cookies de fonctionnalité",
+          "description": "Ces cookies permettent à notre Site Web de se souvenir des choix que vous faites lorsque vous utilisez notre Site Web, comme se souvenir de vos préférences de langue, se souvenir de vos informations de connexion, et se souvenir des modifications que vous apportez à d'autres parties de notre Site Web que vous pouvez personnaliser."
+        },
+        "advertising": {
+          "title": "Cookies publicitaires",
+          "description": "Ces cookies sont utilisés pour rendre les messages publicitaires plus pertinents pour vous. Ils remplissent des fonctions comme empêcher la même annonce de réapparaître continuellement, s'assurer que les annonces sont correctement affichées pour les annonceurs, et dans certains cas, sélectionner des publicités qui sont basées sur vos intérêts."
+        },
+        "social": {
+          "title": "Cookies de médias sociaux",
+          "description": "Ces cookies sont utilisés pour vous permettre de partager des pages et du contenu que vous trouvez intéressants sur notre Site Web par le biais de réseaux sociaux tiers et d'autres sites web. Ces cookies peuvent également être utilisés à des fins publicitaires."
+        }
+      }
+    },
+    "controllingCookies": {
+      "title": "Comment pouvez-vous contrôler les cookies ?",
+      "content": [
+        "Vous avez le droit de décider d'accepter ou de rejeter les cookies. Vous pouvez exercer vos droits relatifs aux cookies en définissant vos préférences dans le Gestionnaire de Consentement des Cookies. Le Gestionnaire de Consentement des Cookies vous permet de sélectionner les catégories de cookies que vous acceptez ou rejetez. Les cookies essentiels ne peuvent pas être rejetés car ils sont strictement nécessaires pour vous fournir des services.",
+        "Le Gestionnaire de Consentement des Cookies peut être trouvé dans la bannière de notification et sur notre site web. Si vous choisissez de rejeter les cookies, vous pouvez toujours utiliser notre site web bien que votre accès à certaines fonctionnalités et zones de notre site web puisse être restreint. Vous pouvez également définir ou modifier les contrôles de votre navigateur web pour accepter ou refuser les cookies."
+      ],
+      "browserControls": {
+        "title": "Contrôles du navigateur",
+        "content": "Les navigateurs web les plus populaires fournissent des paramètres qui vous permettent de contrôler ou de rejeter les cookies ou d'être alerté lorsqu'un cookie est placé sur votre ordinateur. Pour gérer les cookies, la plupart des navigateurs vous permettent soit d'accepter ou de rejeter tous les cookies, d'accepter uniquement certains types de cookies, ou de vous demander chaque fois qu'un site souhaite enregistrer un cookie.",
+        "links": "Vous pouvez également gérer les cookies dans votre navigateur web. Pour plus d'informations, veuillez visiter les liens suivants :"
+      }
+    },
+    "updates": {
+      "title": "Mises à jour de cette Politique de Cookies",
+      "content": [
+        "Nous pouvons mettre à jour cette Politique de Cookies de temps à autre afin de refléter, par exemple, des changements aux cookies que nous utilisons ou pour d'autres raisons opérationnelles, légales ou réglementaires. Veuillez donc revisiter régulièrement cette Politique de Cookies pour rester informé sur notre utilisation des cookies et des technologies connexes.",
+        "La date en haut de cette Politique de Cookies indique quand elle a été mise à jour pour la dernière fois."
+      ]
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "content": [
+        "Si vous avez des questions sur notre utilisation des cookies ou d'autres technologies, veuillez nous envoyer un email à privacy@pledgeandgrow.com ou par courrier à :"
+      ],
+      "address": [
+        "Pledge & Grow",
+        "123 rue de l'Innovation",
+        "75001 Paris",
+        "France"
+      ]
+    }
+  }
+}

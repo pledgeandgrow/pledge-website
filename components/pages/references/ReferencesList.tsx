@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Building, Award, Newspaper, Globe } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface Reference {
   id: string;
@@ -17,75 +18,77 @@ interface Reference {
 }
 
 export default function ReferencesList() {
+  const { t } = useTranslations("references");
+  
   const references: Reference[] = [
     // Legal Listings
     {
       id: "hoodspot",
-      name: "01. Hoodspot",
+      name: t('references.hoodspot.name'),
       url: "https://hoodspot.fr/programmeur-informatique/pledge-and-grow-93157766200014/",
-      description: "Business analytics platform with detailed information about Pledge & Grow.",
+      description: t('references.hoodspot.description'),
       category: "legal",
-      date: "Updated annually"
+      date: t('dates.updatedAnnually')
     },
     {
       id: "figaro-entreprise",
-      name: "02. Figaro Entreprise",
+      name: t('references.figaro.name'),
       url: "https://entreprises.lefigaro.fr/pledge-and-grow-77/entreprise-931577662",
-      description: "Business section of Le Figaro newspaper featuring company profiles including Pledge & Grow.",
+      description: t('references.figaro.description'),
       category: "press",
-      date: "Updated quarterly"
+      date: t('dates.updatedQuarterly')
     },
     {
       id: "data-gouv",
-      name: "03. Data Gouv",
+      name: t('references.dataGouv.name'),
       url: "https://annuaire-entreprises.data.gouv.fr/entreprise/pledge-and-grow-931577662",
-      description: "French government open data platform with official business information about Pledge & Grow.",
+      description: t('references.dataGouv.description'),
       category: "legal",
-      date: "Updated quarterly"
+      date: t('dates.updatedQuarterly')
     },
     {
       id: "societe",
-      name: "04. Société",
+      name: t('references.societe.name'),
       url: "https://www.societe.com/societe/pledge-and-grow-931577662.html",
-      description: "French company information database with legal and financial details about Pledge & Grow.",
+      description: t('references.societe.description'),
       category: "legal",
-      date: "Updated quarterly"
+      date: t('dates.updatedQuarterly')
     },
     
     // Business Directories
     {
       id: "pages-jaunes",
-      name: "05. Pages Jaunes",
+      name: t('references.pagesJaunes.name'),
       url: "https://www.pagesjaunes.fr/pros/63262977",
-      description: "French business directory with Pledge & Grow's contact information and services.",
+      description: t('references.pagesJaunes.description'),
       category: "directory",
-      date: "Updated 2024"
+      date: t('dates.updated2024')
     },
     {
       id: "legaliste",
-      name: "06. Le Légaliste",
+      name: t('references.legaliste.name'),
       url: "https://www.lelegaliste.fr/annonce/constitution/societe-par-actions-simplifiees-sas/1637931",
-      description: "Legal business information platform with company registration details for Pledge & Grow.",
+      description: t('references.legaliste.description'),
       category: "legal",
-      date: "Updated 2024"
+      date: t('dates.updated2024')
     },
     {
       id: "greffe",
-      name: "07. Greffe",
+      name: t('references.greffe.name'),
       url: "https://www.greffe.io/fr/entreprise/pledge-and-grow-931577662",
-      description: "Official commercial court registry with legal documentation for Pledge & Grow.",
+      description: t('references.greffe.description'),
       category: "legal",
-      date: "Updated 2024"
+      date: t('dates.updated2024')
     },
     
     // Partner Platforms
     {
       id: "sortlist",
-      name: "08. Sortlist",
+      name: t('references.sortlist.name'),
       url: "https://www.sortlist.fr/agency/pledge-and-grow",
-      description: "Agency matching platform featuring Pledge & Grow's services and portfolio.",
+      description: t('references.sortlist.description'),
       category: "partner",
-      date: "Updated 2024"
+      date: t('dates.updated2024')
     }
   ];
 
@@ -107,13 +110,13 @@ export default function ReferencesList() {
   const getCategoryLabel = (category: string) => {
     switch (category) {
       case "legal":
-        return "Legal Listing";
+        return t('categories.legal');
       case "press":
-        return "Press Mention";
+        return t('categories.press');
       case "directory":
-        return "Business Directory";
+        return t('categories.directory');
       case "partner":
-        return "Partner Platform";
+        return t('categories.partner');
       default:
         return category;
     }
@@ -144,9 +147,9 @@ export default function ReferencesList() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-4">References & Listings</h2>
+          <h2 className="text-3xl font-bold tracking-tight mb-4">{t('title')}</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Websites, directories, and publications that feature or mention Pledge & Grow.
+            {t('description')}
           </p>
         </motion.div>
 
@@ -182,7 +185,7 @@ export default function ReferencesList() {
                 <CardFooter>
                   <Button variant="outline" asChild className="w-full">
                     <Link href={reference.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-                      Visit {getCategoryIcon(reference.category)} <ExternalLink className="h-4 w-4 ml-1" />
+                      {t('visitButton')} {getCategoryIcon(reference.category)} <ExternalLink className="h-4 w-4 ml-1" />
                     </Link>
                   </Button>
                 </CardFooter>
@@ -199,11 +202,11 @@ export default function ReferencesList() {
           className="text-center mt-12"
         >
           <p className="text-muted-foreground mb-6">
-            If you would like to feature Pledge & Grow on your platform or publication, please contact us.
+            {t('contactText')}
           </p>
           <Button asChild>
             <Link href="/contact?subject=Reference Request">
-              Contact for Media Inquiries
+              {t('contactButton')}
             </Link>
           </Button>
         </motion.div>

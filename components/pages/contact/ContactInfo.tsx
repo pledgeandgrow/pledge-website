@@ -2,8 +2,10 @@ import { Mail, Phone, MapPin, Clock, Instagram, Facebook, Youtube, MessageCircle
 import { FaTiktok } from "react-icons/fa";
 import { FaXTwitter, FaDiscord } from "react-icons/fa6";
 import Link from "next/link";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function ContactInfo() {
+  const { t } = useTranslations('contact');
   // Support contact information
   const supportContacts = [
     {
@@ -37,12 +39,14 @@ export default function ContactInfo() {
     {
       icon: <MapPin className="h-5 w-5 text-primary" />,
       title: "Address",
+      translationKey: "info.addressText",
       value: "16 Rue Théroigne de Méricourt, 75013 Paris",
       link: "https://maps.google.com/?q=16+Rue+Th%C3%A9roigne+de+M%C3%A9ricourt,+75013+Paris,+France"
     },
     {
       icon: <Clock className="h-5 w-5 text-primary" />,
       title: "Business Hours",
+      translationKey: "info.businessHours",
       value: "Monday - Friday: 9am - 6pm",
       link: null
     }
@@ -90,12 +94,12 @@ export default function ContactInfo() {
   return (
     <div className="space-y-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
       <div className="bg-card border border-border rounded-lg p-8 shadow-sm">
-        <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+        <h2 className="text-2xl font-bold mb-6">{t('info.title', { defaultValue: 'Contact Information' })}</h2>
         
         <div className="space-y-8">
           {/* Support Section */}
           <div className="space-y-3">
-            <h3 className="text-xl font-semibold">Support</h3>
+            <h3 className="text-xl font-semibold">{t('info.supportTitle', { defaultValue: 'Support' })}</h3>
             <div className="space-y-3">
               {supportContacts.map((item, index) => (
                 <div key={index} className="flex items-center">
@@ -117,7 +121,7 @@ export default function ContactInfo() {
           
           {/* Commercial Section */}
           <div className="space-y-3">
-            <h3 className="text-xl font-semibold">Commercial</h3>
+            <h3 className="text-xl font-semibold">{t('info.commercialTitle', { defaultValue: 'Commercial' })}</h3>
             <div className="space-y-3">
               {commercialContacts.map((item, index) => (
                 <div key={index} className="flex items-center">
@@ -143,16 +147,16 @@ export default function ContactInfo() {
               <div key={index} className="flex items-start">
                 <div className="flex-shrink-0 mt-1">{item.icon}</div>
                 <div className="ml-4">
-                  <h3 className="font-medium">{item.title}</h3>
+                  <h3 className="font-medium">{t(`info.${item.title === 'Address' ? 'address' : 'businesshours'}Label`, { defaultValue: item.title })}</h3>
                   {item.link ? (
                     <Link 
                       href={item.link} 
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      {item.value}
+                      {t(item.translationKey, { defaultValue: item.value })}
                     </Link>
                   ) : (
-                    <p className="text-muted-foreground">{item.value}</p>
+                    <p className="text-muted-foreground">{t(item.translationKey, { defaultValue: item.value })}</p>
                   )}
                 </div>
               </div>
@@ -162,7 +166,7 @@ export default function ContactInfo() {
       </div>
 
       <div className="bg-card border border-border rounded-lg p-8 shadow-sm">
-        <h2 className="text-2xl font-bold mb-6">Follow Us</h2>
+        <h2 className="text-2xl font-bold mb-6">{t('info.socialTitle', { defaultValue: 'Follow Us' })}</h2>
         <div className="flex flex-wrap gap-4">
           {socialLinks.map((social, index) => (
             <Link 

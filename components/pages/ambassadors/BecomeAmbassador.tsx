@@ -6,8 +6,10 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Globe, Award, Users, Megaphone } from "lucide-react";
 import BenefitsCarousel from "./BenefitsCarousel";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function BecomeAmbassador() {
+  const { t } = useTranslations('ambassadors');
   const [isMobile, setIsMobile] = useState(false);
   
   // Check if screen is mobile size
@@ -36,11 +38,10 @@ export default function BecomeAmbassador() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">
-              Join Our Community
+              {t('becomeAmbassador.title')}
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join our global community of ambassadors and help us spread our mission. 
-              As an ambassador, you&apos;ll represent Pledge & Grow in your region and connect with like-minded professionals.
+              {t('becomeAmbassador.description')}
             </p>
           </motion.div>
         </div>
@@ -61,9 +62,9 @@ export default function BecomeAmbassador() {
               <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <Globe className="text-primary h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Global Network</h3>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">{t('becomeAmbassador.benefits.globalNetwork.title')}</h3>
               <p className="text-muted-foreground">
-                Connect with a diverse community of technology enthusiasts and professionals from around the world.
+                {t('becomeAmbassador.benefits.globalNetwork.description')}
               </p>
             </motion.div>
 
@@ -77,9 +78,9 @@ export default function BecomeAmbassador() {
               <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <Award className="text-primary h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Exclusive Benefits</h3>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">{t('becomeAmbassador.benefits.exclusiveBenefits.title')}</h3>
               <p className="text-muted-foreground">
-                Gain access to exclusive resources, early product releases, and special ambassador-only events.
+                {t('becomeAmbassador.benefits.exclusiveBenefits.description')}
               </p>
             </motion.div>
 
@@ -93,9 +94,9 @@ export default function BecomeAmbassador() {
               <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <Users className="text-primary h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Community Impact</h3>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">{t('becomeAmbassador.benefits.communityImpact.title')}</h3>
               <p className="text-muted-foreground">
-                Make a difference in your local tech community by sharing knowledge and fostering innovation.
+                {t('becomeAmbassador.benefits.communityImpact.description')}
               </p>
             </motion.div>
 
@@ -109,9 +110,9 @@ export default function BecomeAmbassador() {
               <div className="bg-primary/10 p-3 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                 <Megaphone className="text-primary h-6 w-6" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">Amplify Your Voice</h3>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">{t('becomeAmbassador.benefits.amplifyYourVoice.title')}</h3>
               <p className="text-muted-foreground">
-                Enhance your personal brand and establish yourself as a thought leader in your field.
+                {t('becomeAmbassador.benefits.amplifyYourVoice.description')}
               </p>
             </motion.div>
           </div>
@@ -120,7 +121,7 @@ export default function BecomeAmbassador() {
         <div className="text-center">
           <Button asChild size="lg" className="font-medium">
             <Link href="/contact?subject=Ambassador Program Inquiry">
-              Apply to Become an Ambassador
+              {t('becomeAmbassador.applyButton')}
             </Link>
           </Button>
         </div>

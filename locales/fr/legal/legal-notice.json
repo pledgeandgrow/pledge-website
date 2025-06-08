@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Mentions Légales | Pledge & Grow",
+    "description": "Informations légales concernant Pledge & Grow, y compris les détails de l'entreprise, la propriété et les coordonnées."
+  },
+  "breadcrumbs": {
+    "home": "Accueil",
+    "legal": "Mentions légales",
+    "legalNotice": "Mentions Légales"
+  },
+  "hero": {
+    "title": "Mentions Légales",
+    "subtitle": "Dernière mise à jour : 7 juin 2025"
+  },
+  "sections": {
+    "editorIdentification": {
+      "title": "Identification de l'éditeur et de l'hébergeur du site",
+      "content": [
+        "Éditeur et Propriétaire :",
+        "Raison sociale : PLEDGE AND GROW",
+        "Siège Social : 4Bis Rue Alfred Nobel – Champs-sur-Marne – France",
+        "SIREN : 931577662",
+        "N° TVA Intracommunautaire : FR38931577662",
+        "Code NAF : 62.01Z - Programmation informatique",
+        "Téléphone : +33 7 53 69 58 40",
+        "Site Web : pledgeandgrow.com",
+        "Mail : contact@pledgeandgrow.com"
+      ]
+    },
+    "hostingProvider": {
+      "title": "Hébergeurs",
+      "content": [
+        "Vercel Inc",
+        "440 N Barranca Ave #4133",
+        "Covina, CA 91723",
+        "Mail : privacy@vercel.com",
+        "Pour les utilisateurs de l'EEE, du Royaume-Uni et de Californie, Vercel peut collecter vos données personnelles en tant que « contrôleur de données » lorsqu'il détermine les moyens et objectifs du traitement (ex. : données des visiteurs, participants à des événements, ou clients). En tant que « processeur de données » ou « fournisseur de services », Vercel traite les données pour le compte de ses clients qui utilisent ses services d'hébergement ou ses outils d'analyse. Plus d'informations sont disponibles sur : Vercel.com"
+      ]
+    },
+    "siteAccess": {
+      "title": "Accès au site",
+      "content": [
+        "Le site est accessible par tout endroit, 7j/7, 24h/24 sauf cas de force majeure, interruption programmée ou non et pouvant découler d'une nécessité de maintenance. En cas de modification, interruption ou suspension des services le site pledgeandgrow.com ne saurait être tenu responsable."
+      ]
+    },
+    "dataCollection": {
+      "title": "Collecte de données",
+      "content": [
+        "L'Utilisateur est informé que lors de ses visites sur le site, un cookie peut s'installer automatiquement sur son logiciel de navigation. En naviguant sur le site, il choisit de les accepter ou non. Un cookie est un élément qui ne permet pas d'identifier l'Utilisateur mais sert à enregistrer des informations relatives à la navigation de celui-ci sur le site Internet. L'Utilisateur pourra désactiver ce cookie par l'intermédiaire des paramètres figurant au sein de son logiciel de navigation."
+      ]
+    }
+
+  }
+}

@@ -7,9 +7,11 @@ import Link from "next/link";
 import { ArrowRight, BadgePercent, Users, Briefcase, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function EcosystemeCollaboration() {
   const [isMobile, setIsMobile] = useState(false);
+  const { t, isLoading } = useTranslations('ecosystem');
   
   // Check if on mobile device
   useEffect(() => {
@@ -21,35 +23,25 @@ export default function EcosystemeCollaboration() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-  const clientBenefits = [
-    {
-      title: "Exclusive Discounts",
-      description: "Up to 30% off on services from our group companies and partners",
-      icon: <BadgePercent className="w-10 h-10 text-green-700 dark:text-green-400" />
-    },
-    {
-      title: "Priority Support",
-      description: "Dedicated account manager and faster response times",
-      icon: <Users className="w-10 h-10 text-green-500 dark:text-green-400" />
-    },
-    {
-      title: "Business Growth",
-      description: "Access to networking events and business development opportunities",
-      icon: <Briefcase className="w-10 h-10 text-green-500 dark:text-green-400" />
-    },
-    {
-      title: "Innovation Access",
-      description: "Early access to beta features and innovation projects",
-      icon: <Sparkles className="w-10 h-10 text-green-500 dark:text-green-400" />
-    }
-  ];
+  
+  // Map of benefit keys to their corresponding icons
+  const benefitIcons: Record<string, React.ReactNode> = {
+    exclusiveDiscounts: <BadgePercent className="w-10 h-10 text-green-700 dark:text-green-400" />,
+    prioritySupport: <Users className="w-10 h-10 text-green-500 dark:text-green-400" />,
+    businessGrowth: <Briefcase className="w-10 h-10 text-green-500 dark:text-green-400" />,
+    innovationAccess: <Sparkles className="w-10 h-10 text-green-500 dark:text-green-400" />
+  };
+  
+  // Get client benefits from translations
+  const clientBenefits = isLoading ? [] : Object.entries(t('collaboration.benefits.items', { returnObjects: true }) || {}).map(([key, value]) => ({
+    key,
+    title: t(`collaboration.benefits.titles.${key}`, { fallback: key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1') }),
+    description: value as string,
+    icon: benefitIcons[key] || <Briefcase className="w-10 h-10 text-green-500 dark:text-green-400" />
+  }));
 
-  const steps = [
-    "Schedule a consultation with our team",
-    "Discuss your business needs and goals",
-    "Receive a tailored ecosystem access plan",
-    "Become a client and unlock all ecosystem benefits"
-  ];
+  // Get steps from translations
+  const steps = isLoading ? [] : t('collaboration.steps', { returnObjects: true }) as string[];
 
   return (
     <section className="py-20 bg-white dark:bg-gray-950">
@@ -62,10 +54,10 @@ export default function EcosystemeCollaboration() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Join Our <span className="text-green-600 dark:text-green-400">Ecosystem</span> Today
+            {t('collaboration.title')} <span className="text-green-600 dark:text-green-400">{t('collaboration.subtitle')}</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Becoming a Pledge & Grow client is your gateway to exclusive benefits, resources, and opportunities that will accelerate your business growth.
+            {t('collaboration.description')}
           </p>
         </motion.div>
 
@@ -126,7 +118,7 @@ export default function EcosystemeCollaboration() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
-              How to Join Our Ecosystem
+              {t('collaboration.benefits.title')}
             </h3>
             
             <ul className="space-y-6 mb-8">
@@ -151,7 +143,7 @@ export default function EcosystemeCollaboration() {
             
             <Button asChild size="lg" className="gap-2">
               <Link href="/contact">
-                Start Your Journey Now
+                {t('collaboration.contactCta')}
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
@@ -172,23 +164,23 @@ export default function EcosystemeCollaboration() {
                     <g fill="none" stroke="currentColor" className="text-green-600 dark:text-green-400">
                       {/* Central Client Node */}
                       <circle cx="200" cy="150" r="40" className="fill-green-100 dark:fill-green-900/30" strokeWidth="2" />
-                      <text x="200" y="155" textAnchor="middle" className="fill-current text-sm font-medium">Client</text>
+                      <text x="200" y="155" textAnchor="middle" className="fill-current text-sm font-medium">{t('collaboration.diagram.client')}</text>
                       
                       {/* Benefit Nodes */}
                       <circle cx="120" cy="80" r="30" className="fill-green-50 dark:fill-green-900/20" strokeWidth="1.5" />
-                      <text x="120" y="85" textAnchor="middle" className="fill-current text-xs">Group Companies</text>
+                      <text x="120" y="85" textAnchor="middle" className="fill-current text-xs">{t('collaboration.diagram.groupCompanies')}</text>
                       <line x1="200" y1="150" x2="120" y2="80" strokeWidth="1.5" />
                       
                       <circle cx="280" cy="80" r="30" className="fill-green-50 dark:fill-green-900/20" strokeWidth="1.5" />
-                      <text x="280" y="85" textAnchor="middle" className="fill-current text-xs">Partners</text>
+                      <text x="280" y="85" textAnchor="middle" className="fill-current text-xs">{t('collaboration.diagram.partners')}</text>
                       <line x1="200" y1="150" x2="280" y2="80" strokeWidth="1.5" />
                       
                       <circle cx="120" cy="220" r="30" className="fill-green-50 dark:fill-green-900/20" strokeWidth="1.5" />
-                      <text x="120" y="225" textAnchor="middle" className="fill-current text-xs">Discounts</text>
+                      <text x="120" y="225" textAnchor="middle" className="fill-current text-xs">{t('collaboration.diagram.discounts')}</text>
                       <line x1="200" y1="150" x2="120" y2="220" strokeWidth="1.5" />
                       
                       <circle cx="280" cy="220" r="30" className="fill-green-50 dark:fill-green-900/20" strokeWidth="1.5" />
-                      <text x="280" y="225" textAnchor="middle" className="fill-current text-xs">Innovation</text>
+                      <text x="280" y="225" textAnchor="middle" className="fill-current text-xs">{t('collaboration.diagram.innovation')}</text>
                       <line x1="200" y1="150" x2="280" y2="220" strokeWidth="1.5" />
                       
                       {/* Connecting lines between benefits */}

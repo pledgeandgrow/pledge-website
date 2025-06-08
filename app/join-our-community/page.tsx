@@ -7,6 +7,7 @@ import {
   DiscordCTA
 } from "@/components/pages/discord";
 
+// Static metadata for SEO
 export const metadata: Metadata = {
   title: "Discord Community | Pledge & Grow",
   description: "Join our Discord community to connect with like-minded professionals, get real-time support, and stay updated on the latest Pledge & Grow events and resources.",
@@ -26,8 +27,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-};
+}
 
+// The page component doesn't need to use translations directly since
+// the child components are already using translations
 export default function DiscordPage() {
   return (
     <div className="flex flex-col min-h-screen">

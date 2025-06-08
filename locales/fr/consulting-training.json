@@ -1,0 +1,82 @@
+{
+  "id": "consulting-training",
+  "slug": "consulting-training",
+  "title": "Conseil & Formation",
+  "subtitle": "Conseils d'experts et transfert de connaissances pour la transformation numérique",
+  "description": "Nous fournissons des conseils stratégiques et des formations personnalisées pour aider les organisations à développer leurs capacités internes et à naviguer dans la transformation numérique. Nos experts partagent des connaissances, des meilleures pratiques et des conseils pratiques pour autonomiser votre équipe et assurer un succès durable.",
+  "heroImage": "/images/expertise/consulting-training-hero.jpg",
+  "heroButton": "Explorer Nos Services",
+  "category": "Support",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Solutions complètes de conseil et de formation"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Plateformes et outils que nous utilisons pour un transfert efficace des connaissances"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Comment nos services de conseil et de formation renforcent votre équipe"
+    }
+  },
+  "features": [
+    {
+      "title": "Conseil Technique",
+      "description": "Conseils d'experts sur la sélection et l'implémentation de technologies",
+      "icon": "light-bulb"
+    },
+    {
+      "title": "Stratégie Numérique",
+      "description": "Feuilles de route pour une transformation numérique réussie",
+      "icon": "map"
+    },
+    {
+      "title": "Formation des Développeurs",
+      "description": "Ateliers techniques pratiques pour votre équipe de développement",
+      "icon": "code"
+    },
+    {
+      "title": "Coaching de Leadership",
+      "description": "Conseils pour les dirigeants menant des initiatives numériques",
+      "icon": "user-group"
+    }
+  ],
+  "technologies": [
+    { "name": "Jira", "logo": "/images/tech/jira.svg" },
+    { "name": "Google Suite", "logo": "/images/tech/google-suite.svg" },
+    { "name": "Discord", "logo": "/images/tech/discord.svg" },
+    { "name": "WhatsApp", "logo": "/images/tech/whatsapp.svg" },
+    { "name": "Microsoft Suite", "logo": "/images/tech/microsoft-suite.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Capacités d'Équipe Améliorées",
+      "description": "Développez l'expertise interne et réduisez la dépendance aux ressources externes",
+      "icon": "user-plus"
+    },
+    {
+      "title": "Innovation Accélérée",
+      "description": "Implémentez plus rapidement de nouvelles technologies et méthodologies",
+      "icon": "rocket"
+    },
+    {
+      "title": "Réduction des Risques",
+      "description": "Évitez les pièges courants grâce aux conseils d'experts",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Conservation des Connaissances",
+      "description": "Assurez-vous que les compétences et informations critiques restent au sein de votre organisation",
+      "icon": "brain"
+    }
+  ],
+  "relatedExpertise": ["documentation", "maintenance", "website"],
+  "cta": {
+    "title": "Prêt à développer les capacités de votre équipe?",
+    "description": "Discutons de la façon dont nos services de conseil et de formation peuvent aider votre organisation à prospérer dans le paysage numérique.",
+    "buttonText": "Explorer le Conseil & la Formation",
+    "buttonLink": "/digital-project?service=consulting-training"
+  }
+}

@@ -137,7 +137,7 @@ export default function LegalPageLayout({
               
               <div className="flex items-center mb-8 text-sm text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-800 pb-6">
                 <Shield className="h-4 w-4 mr-2" />
-                <span>Last updated: {lastUpdated}</span>
+                <span>{lastUpdated}</span>
               </div>
               
               <div className="prose prose-gray dark:prose-invert max-w-none">

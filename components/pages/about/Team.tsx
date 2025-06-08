@@ -3,147 +3,163 @@
 import { useState, useEffect } from "react";
 import { Github, Linkedin, Twitter, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "@/hooks/useTranslations";
 // Button import removed as it was unused
 
 export default function Team() {
+  const { t } = useTranslations('about');
   const [activeIndex, setActiveIndex] = useState(0);
   const [autoplay, setAutoplay] = useState(true);
   const [activeCategory, setActiveCategory] = useState("board");
 
+  // Utiliser les traductions pour les membres du conseil d'administration
   const boardMembers = [
     {
-      name: "Mehdi BEREL",
-      role: "Chairman",
-      companyRole: "Chief Executive Officer",
-      bio: "With extensive experience in business leadership, Mehdi drives the strategic vision and growth of our company.",
+      id: 'mehdi',
+      name: t('team.board.mehdi.name') || "Mehdi BEREL",
+      role: t('team.board.mehdi.role') || "Chairman",
+      companyRole: t('team.board.mehdi.companyRole') || "Chief Executive Officer",
+      bio: t('team.board.mehdi.bio') || "With extensive experience in business leadership, Mehdi drives the strategic vision and growth of our company.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: t('team.board.mehdi.social.linkedin') || "#",
+        twitter: t('team.board.mehdi.social.twitter') || "#",
+        github: t('team.board.mehdi.social.github') || "#"
       }
     },
     {
-      name: "Shihab BEREL",
-      role: "Chairman",
-      companyRole: "Chief Technology Officer",
-      bio: "Shihab brings innovative thinking and technical expertise to our leadership team, focusing on product development.",
+      id: 'shihab',
+      name: t('team.board.shihab.name') || "Shihab BEREL",
+      role: t('team.board.shihab.role') || "Chairman",
+      companyRole: t('team.board.shihab.companyRole') || "Chief Technology Officer",
+      bio: t('team.board.shihab.bio') || "Shihab brings innovative thinking and technical expertise to our leadership team, focusing on product development.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: t('team.board.shihab.social.linkedin') || "#",
+        twitter: t('team.board.shihab.social.twitter') || "#",
+        github: t('team.board.shihab.social.github') || "#"
       }
     },
     {
-      name: "Ilyas BEREL",
-      role: "Chairman",
-      companyRole: "Chief Financial Officer",
-      bio: "Ilyas oversees operations and client relationships, ensuring we deliver exceptional value and service.",
+      id: 'ilyas',
+      name: t('team.board.ilyas.name') || "Ilyas BEREL",
+      role: t('team.board.ilyas.role') || "Chairman",
+      companyRole: t('team.board.ilyas.companyRole') || "Chief Financial Officer",
+      bio: t('team.board.ilyas.bio') || "Ilyas oversees operations and client relationships, ensuring we deliver exceptional value and service.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: t('team.board.ilyas.social.linkedin') || "#",
+        twitter: t('team.board.ilyas.social.twitter') || "#",
+        github: t('team.board.ilyas.social.github') || "#"
       }
     },
     {
-      name: "Noah PLA",
-      role: "Board Member",
-      companyRole: "Chief Operating Officer",
-      bio: "Noah contributes strategic insights and industry expertise to guide our company's direction and growth.",
+      id: 'noah',
+      name: t('team.board.noah.name') || "Noah PLA",
+      role: t('team.board.noah.role') || "Board Member",
+      companyRole: t('team.board.noah.companyRole') || "Chief Operating Officer",
+      bio: t('team.board.noah.bio') || "Noah contributes strategic insights and industry expertise to guide our company's direction and growth.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: t('team.board.noah.social.linkedin') || "#",
+        twitter: t('team.board.noah.social.twitter') || "#",
+        github: t('team.board.noah.social.github') || "#"
       }
     },
     {
-      name: "Maxime NEAU",
-      role: "Board Member",
-      companyRole: "Ambassador",
-      bio: "Maxime brings financial acumen and business development expertise to our board of directors.",
+      id: 'maxime',
+      name: t('team.board.maxime.name') || "Maxime NEAU",
+      role: t('team.board.maxime.role') || "Board Member",
+      companyRole: t('team.board.maxime.companyRole') || "Ambassador",
+      bio: t('team.board.maxime.bio') || "Maxime brings financial acumen and business development expertise to our board of directors.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: t('team.board.maxime.social.linkedin') || "#",
+        twitter: t('team.board.maxime.social.twitter') || "#",
+        github: t('team.board.maxime.social.github') || "#"
       }
     },
     {
-      name: "Zakaria HADRAOUI",
-      role: "Board Member",
-      companyRole: "Chief Information Officer",
-      bio: "Zakaria's technical background and innovation mindset help shape our product strategy and development.",
+      id: 'zakaria',
+      name: t('team.board.zakaria.name') || "Zakaria HADRAOUI",
+      role: t('team.board.zakaria.role') || "Board Member",
+      companyRole: t('team.board.zakaria.companyRole') || "Chief Information Officer",
+      bio: t('team.board.zakaria.bio') || "Zakaria's technical background and innovation mindset help shape our product strategy and development.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: t('team.board.zakaria.social.linkedin') || "#",
+        twitter: t('team.board.zakaria.social.twitter') || "#",
+        github: t('team.board.zakaria.social.github') || "#"
       }
     },
     {
-      name: "Mazen ISMAIL",
-      role: "Board Member",
-      companyRole: "Chief Blockchain Officer",
-      bio: "Mazen's international business experience helps guide our global expansion and partnerships.",
+      id: 'mazen',
+      name: t('team.board.mazen.name') || "Mazen ISMAIL",
+      role: t('team.board.mazen.role') || "Board Member",
+      companyRole: t('team.board.mazen.companyRole') || "Chief Blockchain Officer",
+      bio: t('team.board.mazen.bio') || "Mazen's international business experience helps guide our global expansion and partnerships.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: t('team.board.mazen.social.linkedin') || "#",
+        twitter: t('team.board.mazen.social.twitter') || "#",
+        github: t('team.board.mazen.social.github') || "#"
       }
     }
   ];
 
+  // Utiliser les traductions pour les membres du personnel
   const staffMembers = [
     {
-      name: "Louis JUNQUA",
-      role: "Staff Member",
-      companyRole: "Chargé commercial",
-      bio: "Louis manages our commercial relationships and helps clients find the perfect solutions for their needs.",
+      id: 'louis',
+      name: t('team.staff.louis.name') || "Louis JUNQUA",
+      role: t('team.staff.louis.role') || "Staff Member",
+      companyRole: t('team.staff.louis.companyRole') || "Chargé commercial",
+      bio: t('team.staff.louis.bio') || "Louis manages our commercial relationships and helps clients find the perfect solutions for their needs.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: t('team.staff.louis.social.linkedin') || "#",
+        twitter: t('team.staff.louis.social.twitter') || "#",
+        github: t('team.staff.louis.social.github') || "#"
       }
     },
     {
-      name: "Lyna",
-      role: "Staff Member",
-      companyRole: "Chargé de communication",
-      bio: "Lyna oversees our communication strategy, ensuring our message reaches the right audience effectively.",
+      id: 'lyna',
+      name: t('team.staff.lyna.name') || "Lyna",
+      role: t('team.staff.lyna.role') || "Staff Member",
+      companyRole: t('team.staff.lyna.companyRole') || "Chargé de communication",
+      bio: t('team.staff.lyna.bio') || "Lyna oversees our communication strategy, ensuring our message reaches the right audience effectively.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: t('team.staff.lyna.social.linkedin') || "#",
+        twitter: t('team.staff.lyna.social.twitter') || "#",
+        github: t('team.staff.lyna.social.github') || "#"
       }
     },
     {
-      name: "Mehdi OUALI",
-      role: "Staff Member",
-      companyRole: "Chargé de réseaux sociaux",
-      bio: "Mehdi manages our social media presence, creating engaging content that connects with our community.",
+      id: 'mehdi_ouali',
+      name: t('team.staff.mehdi_ouali.name') || "Mehdi OUALI",
+      role: t('team.staff.mehdi_ouali.role') || "Staff Member",
+      companyRole: t('team.staff.mehdi_ouali.companyRole') || "Chargé de réseaux sociaux",
+      bio: t('team.staff.mehdi_ouali.bio') || "Mehdi manages our social media presence, creating engaging content that connects with our community.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: t('team.staff.mehdi_ouali.social.linkedin') || "#",
+        twitter: t('team.staff.mehdi_ouali.social.twitter') || "#",
+        github: t('team.staff.mehdi_ouali.social.github') || "#"
       }
     },
     {
-      name: "Brandon MERYEL",
-      role: "Staff Member",
-      companyRole: "Modérateur Discord",
-      bio: "Brandon maintains our Discord community, ensuring a positive and supportive environment for all members.",
+      id: 'brandon',
+      name: t('team.staff.brandon.name') || "Brandon MERYEL",
+      role: t('team.staff.brandon.role') || "Staff Member",
+      companyRole: t('team.staff.brandon.companyRole') || "Modérateur Discord",
+      bio: t('team.staff.brandon.bio') || "Brandon maintains our Discord community, ensuring a positive and supportive environment for all members.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: t('team.staff.brandon.social.linkedin') || "#",
+        twitter: t('team.staff.brandon.social.twitter') || "#",
+        github: t('team.staff.brandon.social.github') || "#"
       }
     },
     {
-      name: "Rayane BEDRANI",
-      role: "Staff Member",
-      companyRole: "Business Développeur",
-      bio: "Rayane identifies and pursues new business opportunities, helping our company grow and expand into new markets.",
+      id: 'rayane',
+      name: t('team.staff.rayane.name') || "Rayane BEDRANI",
+      role: t('team.staff.rayane.role') || "Staff Member",
+      companyRole: t('team.staff.rayane.companyRole') || "Business Développeur",
+      bio: t('team.staff.rayane.bio') || "Rayane identifies and pursues new business opportunities, helping our company grow and expand into new markets.",
       social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
+        linkedin: t('team.staff.rayane.social.linkedin') || "#",
+        twitter: t('team.staff.rayane.social.twitter') || "#",
+        github: t('team.staff.rayane.social.github') || "#"
       }
     }
   ];
@@ -186,10 +202,10 @@ export default function Team() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto mb-8 text-center animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our Team
+            {t('team.title') || "Our Team"}
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl">
-            Meet the talented individuals behind our success.
+            {t('team.description') || "Meet the talented individuals behind our success."}
           </p>
         </div>
 
@@ -204,7 +220,7 @@ export default function Team() {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              Board Members
+              {t('team.categories.board') || "Board Members"}
             </button>
             <button
               onClick={() => switchCategory("staff")}
@@ -214,7 +230,7 @@ export default function Team() {
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
-              Staff
+              {t('team.categories.staff') || "Staff"}
             </button>
           </div>
         </div>

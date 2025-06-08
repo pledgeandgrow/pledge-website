@@ -1,0 +1,82 @@
+{
+  "id": "ai-solutions",
+  "slug": "ai-solutions",
+  "title": "Solutions d'IA",
+  "subtitle": "Transformez votre entreprise avec l'automatisation intelligente et les insights",
+  "description": "Tirez parti de l'intelligence artificielle et de l'automatisation pour transformer vos processus d'entreprise.",
+  "heroImage": "/images/expertise/ai-solutions-hero.jpg",
+  "heroButton": "Démarrer Votre Projet d'IA",
+  "category": "Innovation",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Capacités transformatives d'IA et d'automatisation"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Outils de pointe pour des solutions intelligentes"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Comment la technologie intelligente transforme les entreprises"
+    }
+  },
+  "features": [
+    {
+      "title": "Modèles d'Apprentissage Automatique",
+      "description": "Algorithmes personnalisés qui apprennent de vos données",
+      "icon": "cpu"
+    },
+    {
+      "title": "Traitement du Langage Naturel",
+      "description": "Systèmes qui comprennent et génèrent le langage humain",
+      "icon": "chat-bubble-left-right"
+    },
+    {
+      "title": "Vision par Ordinateur",
+      "description": "Applications qui peuvent analyser et interpréter l'information visuelle",
+      "icon": "eye"
+    },
+    {
+      "title": "Analyse Prédictive",
+      "description": "Outils de prévision qui anticipent les tendances futures",
+      "icon": "chart-bar"
+    }
+  ],
+  "technologies": [
+    { "name": "TensorFlow", "logo": "/images/tech/tensorflow.svg" },
+    { "name": "PyTorch", "logo": "/images/tech/pytorch.svg" },
+    { "name": "OpenAI", "logo": "/images/tech/openai.svg" },
+    { "name": "Claude Mistral", "logo": "/images/tech/claude.svg" },
+    { "name": "LLama", "logo": "/images/tech/llama.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Efficacité Améliorée",
+      "description": "Automatisez les tâches répétitives et rationalisez les opérations",
+      "icon": "clock"
+    },
+    {
+      "title": "Insights Basés sur les Données",
+      "description": "Découvrez des modèles et des opportunités cachés dans vos données",
+      "icon": "light-bulb"
+    },
+    {
+      "title": "Expériences Personnalisées",
+      "description": "Offrez des interactions sur mesure pour les clients et les utilisateurs",
+      "icon": "user-circle"
+    },
+    {
+      "title": "Avantage Concurrentiel",
+      "description": "Restez en avance avec des capacités innovantes alimentées par l'IA",
+      "icon": "trophy"
+    }
+  ],
+  "relatedExpertise": ["cloud-services", "data-analytics", "saas"],
+  "cta": {
+    "title": "Prêt à exploiter la puissance de l'IA?",
+    "description": "Explorons comment l'intelligence artificielle peut résoudre des défis et créer des opportunités pour votre entreprise.",
+    "buttonText": "Démarrer Votre Projet d'IA",
+    "buttonLink": "/digital-project?service=ai-solutions"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "cloud-services",
+  "slug": "cloud-services",
+  "title": "Cloud Services",
+  "subtitle": "Scale your business with secure, flexible cloud infrastructure",
+  "description": "We help businesses migrate to the cloud and build scalable, resilient infrastructure. Our cloud solutions optimize performance, enhance security, and reduce operational costs while providing the flexibility to adapt to changing business needs.",
+  "heroImage": "/images/expertise/cloud-services-hero.jpg",
+  "heroButton": "Start Your Cloud Project",
+  "category": "Infrastructure",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive cloud and DevOps solutions"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "Industry-leading cloud platforms and tools"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How cloud services transform your infrastructure"
+    }
+  },
+  "features": [
+    {
+      "title": "Cloud Migration",
+      "description": "Seamless transition from on-premises to cloud environments",
+      "icon": "arrow-up-on-square"
+    },
+    {
+      "title": "Infrastructure as Code",
+      "description": "Automated, consistent deployment of cloud resources",
+      "icon": "code"
+    },
+    {
+      "title": "Serverless Architecture",
+      "description": "Event-driven applications that scale automatically",
+      "icon": "server"
+    },
+    {
+      "title": "DevOps Integration",
+      "description": "Streamlined development and operations workflows",
+      "icon": "arrow-path"
+    }
+  ],
+  "technologies": [
+    { "name": "AWS", "logo": "/images/tech/aws.svg" },
+    { "name": "Microsoft Azure", "logo": "/images/tech/azure.svg" },
+    { "name": "Google Cloud", "logo": "/images/tech/google-cloud.svg" },
+    { "name": "Kubernetes", "logo": "/images/tech/kubernetes.svg" },
+    { "name": "Terraform", "logo": "/images/tech/terraform.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Scalability",
+      "description": "Easily adjust resources to match changing business demands",
+      "icon": "arrows-pointing-out"
+    },
+    {
+      "title": "Cost Optimization",
+      "description": "Pay only for what you use with reduced capital expenditure",
+      "icon": "currency-dollar"
+    },
+    {
+      "title": "Enhanced Security",
+      "description": "Implement robust security measures and compliance controls",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Business Continuity",
+      "description": "Improve reliability with redundancy and disaster recovery",
+      "icon": "arrow-path"
+    }
+  ],
+  "relatedExpertise": ["ai-solutions", "saas", "website"],
+  "cta": {
+    "title": "Ready to transform your infrastructure?",
+    "description": "Let's build a cloud solution that gives your business the agility and scalability it needs to thrive.",
+    "buttonText": "Start Your Cloud Project",
+    "buttonLink": "/digital-project?service=cloud-services"
+  }
+}

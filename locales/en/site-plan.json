@@ -1,0 +1,212 @@
+{
+  "title": "Site Plan",
+  "description": "A complete overview of all pages available on our website to help you navigate our digital presence.",
+  "sections": {
+    "pledgeAndGrow": {
+      "title": "Pledge & Grow",
+      "links": {
+        "home": {
+          "name": "Home",
+          "description": "Our homepage with an overview of our services and mission"
+        },
+        "contact": {
+          "name": "Contact",
+          "description": "Get in touch with our team for inquiries and collaborations"
+        },
+        "services": {
+          "name": "Services",
+          "description": "Explore our comprehensive range of digital services"
+        },
+        "portfolio": {
+          "name": "Portfolio",
+          "description": "View our past projects and client success stories"
+        },
+        "startProject": {
+          "name": "Start my project",
+          "description": "Begin your digital journey with our project creation process"
+        }
+      }
+    },
+    "company": {
+      "title": "Company",
+      "links": {
+        "identity": {
+          "name": "Identity",
+          "description": "Learn about our company, mission, and values"
+        },
+        "progress": {
+          "name": "Progress",
+          "description": "Track our company's growth and development milestones"
+        },
+        "international": {
+          "name": "International",
+          "description": "Our global presence and international services"
+        },
+        "ecosystem": {
+          "name": "Ecosystem",
+          "description": "Our digital ecosystem and collaborative approach"
+        },
+        "careers": {
+          "name": "Careers",
+          "description": "Join our team and explore career opportunities"
+        },
+        "partners": {
+          "name": "Partners",
+          "description": "Our network of partners and collaboration opportunities"
+        },
+        "ambassadors": {
+          "name": "Ambassadors",
+          "description": "Our brand ambassadors and advocacy program"
+        },
+        "grantsSubsidies": {
+          "name": "Grants & Subsidies",
+          "description": "Available funding opportunities for digital projects"
+        },
+        "businessSectors": {
+          "name": "Business Sectors",
+          "description": "Industries and sectors we serve with our digital solutions"
+        },
+        "membership": {
+          "name": "Membership",
+          "description": "Membership options and benefits for our community"
+        },
+        "discord": {
+          "name": "Discord",
+          "description": "Join our Discord community for discussions and support"
+        }
+      }
+    },
+    "expertise": {
+      "title": "Expertise",
+      "links": {
+        "website": {
+          "name": "Website",
+          "description": "Professional website development services"
+        },
+        "saas": {
+          "name": "SaaS",
+          "description": "Software as a Service development and solutions"
+        },
+        "mobileApplication": {
+          "name": "Mobile Application",
+          "description": "Mobile app development for iOS and Android"
+        },
+        "software": {
+          "name": "Software",
+          "description": "Custom software development and solutions"
+        },
+        "videoGames": {
+          "name": "Video Games",
+          "description": "Game development and interactive experiences"
+        },
+        "ecommerce": {
+          "name": "E-commerce",
+          "description": "Online store development and optimization"
+        },
+        "aiAutomation": {
+          "name": "AI & Automation",
+          "description": "Artificial intelligence and automation solutions"
+        },
+        "blockchain": {
+          "name": "Blockchain",
+          "description": "Blockchain technology and cryptocurrency solutions"
+        },
+        "cybersecurity": {
+          "name": "Cybersecurity",
+          "description": "Digital security and data protection services"
+        },
+        "cloudDevops": {
+          "name": "Cloud / DevOps",
+          "description": "Cloud infrastructure and DevOps solutions"
+        },
+        "documentation": {
+          "name": "Documentation",
+          "description": "Comprehensive documentation and technical writing"
+        },
+        "uxUiDesign": {
+          "name": "UX/UI Design",
+          "description": "User experience and interface design services"
+        },
+        "seo": {
+          "name": "SEO",
+          "description": "Search engine optimization and visibility solutions"
+        },
+        "maintenance": {
+          "name": "Maintenance",
+          "description": "Ongoing maintenance and support services"
+        },
+        "consultingTraining": {
+          "name": "Consulting / Training",
+          "description": "Expert consulting and training services"
+        }
+      }
+    },
+    "enterprise": {
+      "title": "Enterprise",
+      "links": {
+        "impact": {
+          "name": "Impact",
+          "description": "Our social and environmental impact initiatives"
+        },
+        "innovation": {
+          "name": "Innovation",
+          "description": "Our approach to innovation and cutting-edge technologies"
+        },
+        "groupe": {
+          "name": "Groupe",
+          "description": "Information about our corporate group structure"
+        },
+        "media": {
+          "name": "Media",
+          "description": "Press releases, media kit, and company news"
+        }
+      }
+    },
+    "resources": {
+      "title": "Resources",
+      "links": {
+        "blog": {
+          "name": "Blog",
+          "description": "Articles, insights, and updates from our team"
+        },
+        "helpCenter": {
+          "name": "Help Center",
+          "description": "Support resources, FAQs, and contact options"
+        },
+        "references": {
+          "name": "References",
+          "description": "Official references and listings for Pledge & Grow"
+        },
+        "sitePlan": {
+          "name": "Site Plan",
+          "description": "Complete overview of all pages on our website"
+        }
+      }
+    },
+    "legal": {
+      "title": "Legal",
+      "links": {
+        "termsOfService": {
+          "name": "Terms of Service",
+          "description": "Terms and conditions for using our services"
+        },
+        "privacyPolicy": {
+          "name": "Privacy Policy",
+          "description": "Our privacy policy and data protection practices"
+        },
+        "cookiePolicy": {
+          "name": "Cookie Policy",
+          "description": "Information about how we use cookies on our website"
+        },
+        "gdpr": {
+          "name": "GDPR",
+          "description": "Our compliance with General Data Protection Regulation"
+        },
+        "legalNotice": {
+          "name": "Legal Notice",
+          "description": "Legal information about our company and website"
+        }
+      }
+    }
+  }
+}

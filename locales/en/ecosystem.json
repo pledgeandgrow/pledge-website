@@ -5,36 +5,73 @@
   },
   "hero": {
     "title": "Our Ecosystem",
+    "subtitle": "Collaborative Growth",
     "description": "Join a thriving network of innovators, partners, and clients working together to create exceptional digital experiences and drive business growth.",
-    "cta": "Explore Our Ecosystem"
+    "cta": {
+      "primary": "Become a Client",
+      "secondary": "Our Services"
+    },
+    "features": {
+      "partners": "Partner Network",
+      "discounts": "Special Discounts",
+      "innovation": "Innovation Projects"
+    }
   },
   "advantages": {
-    "title": "Ecosystem Advantages",
-    "description": "Being part of our ecosystem offers numerous benefits that help accelerate your digital transformation journey.",
+    "title": "Benefits of Our Ecosystem",
+    "subtitle": "Why Join Our Network",
+    "description": "As a client of Pledge & Grow, you gain access to a wealth of advantages that help your business grow and thrive.",
     "items": {
+      "exclusiveDiscounts": {
+        "title": "Exclusive Discounts",
+        "description": "Receive significant reductions on services from our partner companies, helping you save on essential business needs."
+      },
+      "priorityAccess": {
+        "title": "Priority Access",
+        "description": "Get priority access to new features, services, and innovation projects before they're available to the general public."
+      },
+      "groupResources": {
+        "title": "Group Resources",
+        "description": "Leverage the combined expertise and resources of all Pledge & Grow group companies for your projects."
+      },
+      "strategicPartnerships": {
+        "title": "Strategic Partnerships",
+        "description": "Connect with our network of trusted partners to expand your business opportunities and reach."
+      },
+      "enhancedSupport": {
+        "title": "Enhanced Support",
+        "description": "Benefit from dedicated support and extended service hours exclusively available to ecosystem members."
+      },
+      "earlyInnovation": {
+        "title": "Early Innovation Access",
+        "description": "Be among the first to test and implement cutting-edge solutions from our internal innovation projects."
+      },
       "collaboration": {
         "title": "Collaborative Innovation",
         "description": "Access to shared knowledge, resources, and expertise across our partner network"
       },
-      "exclusiveAccess": {
-        "title": "Exclusive Access",
-        "description": "Priority access to new technologies, beta features, and innovation projects"
+      "trustedPartners": {
+        "title": "Trusted Partners",
+        "description": "Work with pre-vetted partners that meet our high quality standards"
       },
-      "preferentialRates": {
-        "title": "Preferential Rates",
-        "description": "Special pricing and discounts on services from Pledge & Grow and partner companies"
-      },
-      "growthOpportunities": {
-        "title": "Growth Opportunities",
-        "description": "Connections to potential clients, investors, and strategic partners"
+      "expandedNetwork": {
+        "title": "Expanded Network",
+        "description": "Connect with a broader ecosystem of businesses and potential clients"
       }
     }
   },
   "partners": {
     "title": "Our Partner Network",
+    "subtitle": "Exclusive Partnerships",
     "description": "We've built strategic partnerships with industry leaders to enhance our service offerings and provide comprehensive solutions.",
+    "clientBenefit": "As a Pledge & Grow client, you gain exclusive access to our network of trusted partners, each offering special discounts and benefits, including a minimum 5% reduction on all partner services.",
     "categories": {
+      "title": "Partner Categories",
       "technology": {
+        "title": "Technology Partners",
+        "description": "Leading technology providers that complement our development capabilities"
+      },
+      "technologie": {
         "title": "Technology Partners",
         "description": "Leading technology providers that complement our development capabilities"
       },
@@ -49,18 +86,122 @@
       "innovation": {
         "title": "Innovation Partners",
         "description": "Research institutions and innovation hubs collaborating on cutting-edge projects"
+      },
+      "marketing": {
+        "title": "Marketing Partners",
+        "description": "Marketing and content creation specialists to amplify your brand"
+      },
+      "community": {
+        "title": "Community Partners",
+        "description": "Community building and management specialists"
+      },
+      "communauté": {
+        "title": "Community Partners",
+        "description": "Community building and management specialists"
       }
+    },
+    "benefits": {
+      "title": "Partner Benefits",
+      "discounts": "5% discount on all partner services",
+      "integration": "Seamless integration",
+      "support": "Priority support",
+      "billing": "Consolidated billing"
     },
     "becomePartner": "Become a Partner"
   },
   "showcase": {
-    "title": "Ecosystem Success Stories",
-    "description": "Discover how collaboration within our ecosystem has led to remarkable outcomes for our partners and clients.",
-    "viewAllCases": "View All Case Studies"
+    "title": "Our Growing Ecosystem",
+    "subtitle": "Partner Network",
+    "description": "Explore our network of 60+ partners offering exclusive benefits to Pledge & Grow clients. ",
+    "viewAllCases": "View All Partners",
+    "moreCategories": "+5 more categories",
+    "mobileInstructions": "Pinch to zoom, tap partners to view details",
+    "availableSlots": "+ {{count}} more partner slots available",
+    "partnerCategory": "{{category}} Partner",
+    "partners": {
+      "taskmate": {
+        "name": "TaskMate",
+        "description": "AI-powered process automation and agent development platform for business efficiency.",
+        "discount": "5% discount on all premium features",
+        "category": "Technology",
+        "benefits": [
+          "Access to premium AI automation features",
+          "Priority customer support",
+          "Custom workflow templates",
+          "Advanced analytics dashboard"
+        ],
+        "useCases": [
+          "Automate repetitive business processes",
+          "Create AI-powered customer service workflows",
+          "Build custom agents for specific business needs",
+          "Integrate with existing business tools"
+        ]
+      },
+      "sharka": {
+        "name": "Sharka UGC",
+        "description": "UGC creation platform that helps businesses generate authentic user content at scale.",
+        "discount": "5% discount on all UGC packages",
+        "category": "Marketing",
+        "benefits": [
+          "Dedicated UGC content manager",
+          "Monthly strategy sessions",
+          "Content performance analytics",
+          "Exclusive creator network access"
+        ],
+        "useCases": [
+          "Generate authentic user testimonials and reviews",
+          "Create social media content at scale",
+          "Build a library of user-generated product demonstrations",
+          "Develop brand advocacy programs"
+        ]
+      },
+      "cordunite": {
+        "name": "CordUnite",
+        "description": "Professional Discord community creation and management agency.",
+        "discount": "5% discount on community setup packages",
+        "category": "Community",
+        "benefits": [
+          "Custom Discord server setup",
+          "Moderation team training",
+          "Community growth strategies",
+          "Engagement analytics dashboard"
+        ],
+        "useCases": [
+          "Build engaged community platforms for your product",
+          "Create specialized support channels",
+          "Develop community-driven feedback systems",
+          "Host virtual events and workshops"
+        ]
+      }
+    }
+  },
+  "modal": {
+    "tabs": {
+      "overview": "Overview",
+      "benefits": "Benefits",
+      "usecases": "Use Cases"
+    },
+    "clientBenefit": "Exclusive Client Benefit",
+    "whyPledge": "Why Through Pledge & Grow?",
+    "advantages": {
+      "discounts": "Pre-negotiated discounts",
+      "integration": "Seamless integration",
+      "support": "Priority support",
+      "billing": "Consolidated billing",
+      "discountsDetail": "Pre-negotiated discounts not available elsewhere",
+      "integrationDetail": "Seamless integration with other ecosystem services",
+      "supportDetail": "Priority support through our dedicated account managers",
+      "billingDetail": "Consolidated billing and simplified management"
+    },
+    "cta": {
+      "contact": "Contact Us",
+      "learnMore": "Learn More"
+    }
   },
   "collaboration": {
-    "title": "Join Our Ecosystem",
-    "description": "Whether you're a technology provider, service company, or potential client, there's a place for you in our ecosystem.",
+    "title": "Join Our Ecosystem Today",
+    "subtitle": "Grow Together",
+    "description": "Becoming a Pledge & Grow client is your gateway to exclusive benefits, resources, and opportunities that will accelerate your business growth.",
     "options": {
       "partner": {
         "title": "Become a Partner",
@@ -75,6 +216,73 @@
         "description": "Explore investment opportunities in our ecosystem"
       }
     },
+    "benefits": {
+      "title": "Benefits of Joining",
+      "titles": {
+        "exclusiveDiscounts": "Exclusive Discounts",
+        "prioritySupport": "Priority Support",
+        "businessGrowth": "Business Growth",
+        "innovationAccess": "Innovation Access"
+      },
+      "items": {
+        "exclusiveDiscounts": "Up to 30% off on services from our group companies and partners",
+        "prioritySupport": "Dedicated account manager and faster response times",
+        "businessGrowth": "Access to networking events and business development opportunities",
+        "innovationAccess": "Early access to beta features and innovation projects"
+      }
+    },
+    "steps": [
+      "Schedule a consultation with our team",
+      "Discuss your business needs and goals",
+      "Receive a tailored ecosystem access plan",
+      "Become a client and unlock all ecosystem benefits"
+    ],
     "contactCta": "Contact Us to Learn More"
+  },
+  "approach": {
+    "title": "Our Ecosystem Approach",
+    "subtitle": "How We Work Together",
+    "description": "Our ecosystem is built on principles of collaboration, mutual benefit, and shared success.",
+    "pillars": {
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Working together to create better solutions"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Constantly evolving and improving our offerings"
+      },
+      "quality": {
+        "title": "Quality",
+        "description": "Maintaining high standards across all partners"
+      },
+      "value": {
+        "title": "Value",
+        "description": "Delivering exceptional value to all stakeholders"
+      }
+    }
+  },
+  "values": {
+    "title": "Ecosystem Values",
+    "subtitle": "What We Stand For",
+    "description": "Our ecosystem is guided by a set of core values that shape how we work together.",
+    "items": {
+      "transparency": {
+        "title": "Transparency",
+        "description": "Open and honest communication at all times"
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Working together to achieve common goals"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Embracing new ideas and approaches"
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Striving for the highest quality in everything we do"
+      }
+    }
   }
 }

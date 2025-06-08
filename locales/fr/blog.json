@@ -1,0 +1,31 @@
+{
+  "pageTitle": "Blog",
+  "pageDescription": "Dernières nouvelles, idées et mises à jour de Pledge & Grow",
+  "searchPlaceholder": "Rechercher des articles...",
+  "filterByCategory": "Filtrer par catégorie",
+  "category": "Catégorie",
+  "allCategories": "Toutes les catégories",
+  "readTime": "{{time}} min de lecture",
+  "readMore": "Lire plus",
+  "relatedArticles": "Articles connexes",
+  "clearFilters": "Effacer les filtres",
+  "newsletter": {
+    "title": "Abonnez-vous à notre newsletter",
+    "description": "Recevez les dernières nouvelles et mises à jour de Pledge & Grow directement dans votre boîte de réception.",
+    "placeholder": "Entrez votre email",
+    "button": "S'abonner",
+    "success": "Merci de vous être abonné!",
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "privacyNotice": "Nous respectons votre vie privée. Désabonnez-vous à tout moment."
+  },
+  "noPosts": "Aucun article trouvé",
+  "loadMore": "Charger plus d'articles",
+  "backToBlog": "Retour au Blog",
+  "publishedOn": "Publié le",
+  "author": "Auteur",
+  "tags": "Tags",
+  "share": "Partager cet article",
+  "shareOn": "Partager sur {{platform}}",
+  "articleNotFound": "Article Non Trouvé",
+  "articleNotFoundDesc": "L'article que vous recherchez n'existe pas ou a été supprimé."
+}

@@ -1,0 +1,122 @@
+{
+  "meta": {
+    "title": "Conformité RGPD | Pledge & Grow",
+    "description": "Découvrez la conformité de Pledge & Grow au Règlement Général sur la Protection des Données (RGPD) et comment nous protégeons vos données personnelles."
+  },
+  "breadcrumbs": {
+    "home": "Accueil",
+    "legal": "Mentions légales",
+    "gdpr": "Conformité RGPD"
+  },
+  "hero": {
+    "title": "Conformité RGPD",
+    "subtitle": "Dernière mise à jour : 7 juin 2025"
+  },
+  "sections": {
+    "introduction": {
+      "title": "Introduction",
+      "content": [
+        "Chez Pledge & Grow, nous nous engageons à protéger la confidentialité et la sécurité de vos données personnelles. Cette Déclaration de Conformité au RGPD explique comment nous collectons, utilisons et protégeons vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).",
+        "Le RGPD est un règlement de l'UE sur la protection des données et la vie privée de toutes les personnes au sein de l'Union européenne et de l'Espace économique européen. Il traite également de l'exportation de données personnelles en dehors des zones UE et EEE."
+      ]
+    },
+    "dataController": {
+      "title": "Responsable du traitement",
+      "content": [
+        "Pledge & Grow, situé au 123 rue de l'Innovation, 75001 Paris, France, est le responsable du traitement de vos données personnelles. Cela signifie que nous déterminons les finalités et les moyens du traitement des données personnelles."
+      ]
+    },
+    "dataProtectionOfficer": {
+      "title": "Délégué à la protection des données",
+      "content": [
+        "Nous avons nommé un Délégué à la Protection des Données (DPD) qui est responsable de superviser les questions relatives à cette notice de confidentialité. Si vous avez des questions concernant cette notice de confidentialité, y compris toute demande d'exercice de vos droits légaux, veuillez contacter le DPD en utilisant les coordonnées indiquées ci-dessous :",
+        "Adresse e-mail : dpo@pledgeandgrow.com",
+        "Adresse postale : Délégué à la Protection des Données, Pledge & Grow, 123 rue de l'Innovation, 75001 Paris, France"
+      ]
+    },
+    "dataProcessingPrinciples": {
+      "title": "Principes de traitement des données",
+      "content": [
+        "Nous adhérons aux principes énoncés dans le RGPD lors du traitement de vos données personnelles, qui exige que les données personnelles soient :",
+        "• Traitées de manière licite, loyale et transparente",
+        "• Collectées pour des finalités déterminées, explicites et légitimes",
+        "• Adéquates, pertinentes et limitées à ce qui est nécessaire",
+        "• Exactes et tenues à jour",
+        "• Conservées sous une forme permettant l'identification des personnes concernées pendant une durée n'excédant pas celle nécessaire",
+        "• Traitées de façon à garantir une sécurité appropriée"
+      ]
+    },
+    "lawfulBasis": {
+      "title": "Base légale du traitement",
+      "content": [
+        "Nous ne traiterons vos données personnelles que lorsque la loi nous y autorise. Le plus souvent, nous utiliserons vos données personnelles dans les circonstances suivantes :",
+        "• Lorsque nous devons exécuter le contrat que nous sommes sur le point de conclure ou avons conclu avec vous",
+        "• Lorsque cela est nécessaire pour nos intérêts légitimes (ou ceux d'un tiers) et que vos intérêts et droits fondamentaux ne prévalent pas sur ces intérêts",
+        "• Lorsque nous devons nous conformer à une obligation légale ou réglementaire",
+        "• Lorsque vous avez donné votre consentement au traitement de vos données personnelles pour une ou plusieurs finalités spécifiques"
+      ]
+    },
+    "dataSubjectRights": {
+      "title": "Vos droits en vertu du RGPD",
+      "content": [
+        "En vertu du RGPD, vous disposez des droits suivants :",
+        "• Droit d'accès - Vous avez le droit de demander des copies de vos données personnelles",
+        "• Droit de rectification - Vous avez le droit de demander que nous corrigions toute information que vous estimez inexacte ou que nous complétions toute information que vous estimez incomplète",
+        "• Droit à l'effacement - Vous avez le droit de demander que nous effacions vos données personnelles, sous certaines conditions",
+        "• Droit à la limitation du traitement - Vous avez le droit de demander que nous limitions le traitement de vos données personnelles, sous certaines conditions",
+        "• Droit d'opposition au traitement - Vous avez le droit de vous opposer à notre traitement de vos données personnelles, sous certaines conditions",
+        "• Droit à la portabilité des données - Vous avez le droit de demander que nous transférions les données que nous avons collectées à une autre organisation, ou directement à vous, sous certaines conditions"
+      ]
+    },
+    "exercisingRights": {
+      "title": "Comment exercer vos droits",
+      "content": [
+        "Si vous souhaitez exercer l'un des droits énoncés ci-dessus, veuillez contacter notre Délégué à la Protection des Données. Vous n'aurez pas à payer de frais pour accéder à vos données personnelles (ou pour exercer l'un quelconque des autres droits). Cependant, nous pouvons facturer des frais raisonnables si votre demande est manifestement infondée, répétitive ou excessive. Alternativement, nous pouvons refuser de donner suite à votre demande dans ces circonstances.",
+        "Nous pouvons avoir besoin de vous demander des informations spécifiques pour nous aider à confirmer votre identité et garantir votre droit d'accès à vos données personnelles (ou d'exercer l'un de vos autres droits). Il s'agit d'une mesure de sécurité pour garantir que les données personnelles ne sont pas divulguées à une personne qui n'a pas le droit de les recevoir."
+      ]
+    },
+    "dataRetention": {
+      "title": "Conservation des données",
+      "content": [
+        "Nous ne conserverons vos données personnelles que le temps nécessaire à la réalisation des finalités pour lesquelles nous les avons collectées, y compris pour satisfaire à toute exigence légale, comptable ou de déclaration.",
+        "Pour déterminer la période de conservation appropriée pour les données personnelles, nous prenons en compte la quantité, la nature et la sensibilité des données personnelles, le risque potentiel de préjudice résultant d'une utilisation ou d'une divulgation non autorisée de vos données personnelles, les finalités pour lesquelles nous traitons vos données personnelles et si nous pouvons atteindre ces finalités par d'autres moyens, ainsi que les exigences légales applicables."
+      ]
+    },
+    "internationalTransfers": {
+      "title": "Transferts internationaux",
+      "content": [
+        "Nous pouvons transférer vos données personnelles vers des pays en dehors de l'Espace économique européen (EEE). Chaque fois que nous transférons vos données personnelles hors de l'EEE, nous veillons à ce qu'un degré de protection similaire leur soit accordé en veillant à ce qu'au moins l'une des garanties suivantes soit mise en œuvre :",
+        "• Nous ne transférerons vos données personnelles que vers des pays qui ont été jugés comme assurant un niveau de protection adéquat des données personnelles par la Commission européenne",
+        "• Lorsque nous utilisons certains prestataires de services, nous pouvons utiliser des contrats spécifiques approuvés par la Commission européenne qui confèrent aux données personnelles la même protection qu'elles ont en Europe",
+        "• Lorsque nous utilisons des fournisseurs basés aux États-Unis, nous pouvons leur transférer des données s'ils font partie du Privacy Shield, qui exige qu'ils fournissent une protection similaire aux données personnelles partagées entre l'Europe et les États-Unis"
+      ]
+    },
+    "dataSecurityMeasures": {
+      "title": "Mesures de sécurité des données",
+      "content": [
+        "Nous avons mis en place des mesures de sécurité appropriées pour empêcher que vos données personnelles ne soient accidentellement perdues, utilisées ou consultées de manière non autorisée, modifiées ou divulguées. De plus, nous limitons l'accès à vos données personnelles aux employés, agents, contractants et autres tiers qui ont un besoin professionnel de les connaître.",
+        "Nous avons mis en place des procédures pour faire face à toute violation présumée de données personnelles et nous vous informerons, ainsi que tout organisme de réglementation compétent, d'une violation lorsque nous sommes légalement tenus de le faire."
+      ]
+    },
+    "updates": {
+      "title": "Mises à jour de cette déclaration",
+      "content": [
+        "Nous pouvons mettre à jour cette Déclaration de Conformité au RGPD de temps à autre. La version mise à jour sera indiquée par une date de 'Dernière mise à jour' actualisée et la version mise à jour sera effective dès qu'elle sera accessible.",
+        "Nous vous encourageons à consulter régulièrement cette Déclaration de Conformité au RGPD pour être informé de la façon dont nous protégeons vos informations."
+      ]
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "content": [
+        "Si vous avez des questions concernant cette Déclaration de Conformité au RGPD, veuillez contacter notre Délégué à la Protection des Données à dpo@pledgeandgrow.com ou par courrier à :"
+      ],
+      "address": [
+        "Délégué à la Protection des Données",
+        "Pledge & Grow",
+        "123 rue de l'Innovation",
+        "75001 Paris",
+        "France"
+      ]
+    }
+  }
+}

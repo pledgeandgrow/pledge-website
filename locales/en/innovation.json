@@ -36,43 +36,43 @@
   "technologyRadar": {
     "title": "Technology Radar",
     "description": "Our technology radar helps us track and evaluate emerging technologies for potential adoption.",
-    "categories": [
-      {
-        "id": "all",
+    "categories": {
+      "all": {
         "name": "All Technologies",
         "description": "Our complete technology radar across all categories"
       },
-      {
-        "id": "frontend",
+      "frontend": {
         "name": "Frontend",
         "description": "Technologies for building modern, responsive user interfaces"
       },
-      {
-        "id": "backend",
+      "backend": {
         "name": "Backend",
         "description": "Server-side technologies for robust application development"
       },
-      {
-        "id": "mobile",
+      "mobile": {
         "name": "Mobile",
         "description": "Technologies for iOS, Android, and cross-platform development"
       },
-      {
-        "id": "data",
+      "data": {
         "name": "Data & AI",
         "description": "Tools and frameworks for data processing and artificial intelligence"
       },
-      {
-        "id": "devops",
+      "devops": {
         "name": "DevOps & Cloud",
         "description": "Technologies for deployment, infrastructure, and operations"
       }
-    ],
+    },
     "status": {
+      "adopt": "Adopt",
+      "trial": "Trial",
+      "assess": "Assess",
+      "hold": "Hold"
+    },
+    "statusDescriptions": {
       "adopt": "Technologies we use in production and recommend for widespread use",
       "trial": "Technologies we're actively using in projects and evaluating for broader adoption",
       "assess": "Technologies we're exploring and experimenting with in controlled environments",
-      "hold": "Technologies we're avoiding or phasing out due to limitations or better alternatives"
+      "hold": "Technologies we're either phasing out or not recommending for new projects"
     }
   }
 }

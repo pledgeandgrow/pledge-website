@@ -1,0 +1,52 @@
+{
+  "title": "Références & Annuaires",
+  "description": "Sites web, annuaires et publications qui mentionnent ou présentent Pledge & Grow.",
+  "categories": {
+    "legal": "Référence Légale",
+    "press": "Mention Presse",
+    "directory": "Annuaire Professionnel",
+    "partner": "Plateforme Partenaire"
+  },
+  "references": {
+    "hoodspot": {
+      "name": "01. Hoodspot",
+      "description": "Plateforme d'analyse d'entreprise avec des informations détaillées sur Pledge & Grow."
+    },
+    "figaro": {
+      "name": "02. Figaro Entreprise",
+      "description": "Section entreprise du journal Le Figaro présentant des profils d'entreprises, dont Pledge & Grow."
+    },
+    "dataGouv": {
+      "name": "03. Data Gouv",
+      "description": "Plateforme de données ouvertes du gouvernement français avec des informations officielles sur Pledge & Grow."
+    },
+    "societe": {
+      "name": "04. Société",
+      "description": "Base de données d'entreprises françaises avec des détails juridiques et financiers sur Pledge & Grow."
+    },
+    "pagesJaunes": {
+      "name": "05. Pages Jaunes",
+      "description": "Annuaire professionnel français avec les coordonnées et services de Pledge & Grow."
+    },
+    "legaliste": {
+      "name": "06. Le Légaliste",
+      "description": "Plateforme d'information juridique avec les détails d'enregistrement de Pledge & Grow."
+    },
+    "greffe": {
+      "name": "07. Greffe",
+      "description": "Registre officiel du tribunal de commerce avec la documentation juridique de Pledge & Grow."
+    },
+    "sortlist": {
+      "name": "08. Sortlist",
+      "description": "Plateforme de mise en relation présentant les services et le portfolio de Pledge & Grow."
+    }
+  },
+  "visitButton": "Visiter",
+  "contactText": "Si vous souhaitez présenter Pledge & Grow sur votre plateforme ou publication, veuillez nous contacter.",
+  "contactButton": "Contact pour Relations Médias",
+  "dates": {
+    "updatedAnnually": "Mis à jour annuellement",
+    "updatedQuarterly": "Mis à jour trimestriellement",
+    "updated2024": "Mis à jour en 2024"
+  }
+}

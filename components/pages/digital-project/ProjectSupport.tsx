@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Button } from "@/components/ui/button";
 import * as SiIcons from "react-icons/si";
+import { useTranslations } from "@/hooks/useTranslations";
 
 // Interface for technology items
 interface Technology {
@@ -73,7 +74,19 @@ const technologies: Technology[] = [
   { name: "Netlify", icon: "SiNetlify", category: "cloud", color: "text-teal-500" },
 ];
 
+const getCategories = (t: (key: string) => string) => [
+  { id: "all", name: t('support.categories.all') },
+  { id: "frontend", name: t('support.categories.frontend') },
+  { id: "backend", name: t('support.categories.backend') },
+  { id: "mobile", name: t('support.categories.mobile') },
+  { id: "database", name: t('support.categories.database') },
+  { id: "cms", name: t('support.categories.cms') },
+  { id: "cloud", name: t('support.categories.cloud') },
+];
+
 export default function ProjectSupport() {
+  const { t } = useTranslations('digital-project');
+  const categories = getCategories(t);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredTechnologies, setFilteredTechnologies] = useState(technologies);
   const [activeCategory, setActiveCategory] = useState("all");
@@ -96,16 +109,6 @@ export default function ProjectSupport() {
     // Cleanup
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
-
-  const categories = [
-    { id: "all", name: "All Technologies" },
-    { id: "frontend", name: "Frontend" },
-    { id: "backend", name: "Backend" },
-    { id: "mobile", name: "Mobile" },
-    { id: "database", name: "Databases" },
-    { id: "cms", name: "CMS & E-commerce" },
-    { id: "cloud", name: "Cloud & DevOps" },
-  ];
 
   // Filter technologies based on search query and active category
   useEffect(() => {
@@ -172,10 +175,10 @@ export default function ProjectSupport() {
           className="text-center max-w-3xl mx-auto mb-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Technologies We Support
+            {t('support.title')}
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            We work with a wide range of technologies to deliver the best solutions for your digital project.
+            {t('support.description')}
           </p>
 
           {/* Search input */}
@@ -185,7 +188,7 @@ export default function ProjectSupport() {
             </div>
             <Input
               type="text"
-              placeholder="Search technologies..."
+              placeholder={t('support.searchPlaceholder')}
               className={cn(
                 "pl-10 pr-4 py-2 w-full transition-all duration-300",
                 isSearchFocused ? "ring-2 ring-primary" : ""
@@ -226,7 +229,7 @@ export default function ProjectSupport() {
               {isMobile && filteredTechnologies.length > 4 && (
                 <div className="flex justify-between items-center mb-4">
                   <div className="text-sm font-medium">
-                    Page {currentPage + 1} of {totalPages}
+                    {t('support.pagination.page')} {currentPage + 1} {t('support.pagination.of')} {totalPages}
                   </div>
                   <div className="flex gap-2">
                     <Button 
@@ -297,7 +300,7 @@ export default function ProjectSupport() {
                     })
                   ) : (
                     <div className="col-span-full py-12 text-center">
-                      <p className="text-muted-foreground">No technologies found matching your search.</p>
+                      <p className="text-muted-foreground">{t('support.noResults')}</p>
                     </div>
                   )}
                 </motion.div>

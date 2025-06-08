@@ -1,0 +1,82 @@
+{
+  "id": "ai-solutions",
+  "slug": "ai-solutions",
+  "title": "AI Solutions",
+  "subtitle": "Transform your business with intelligent automation and insights",
+  "description": "We develop custom artificial intelligence solutions that help businesses automate processes, gain deeper insights, and create more personalized customer experiences. Our AI implementations are practical, ethical, and designed to deliver measurable business value.",
+  "heroImage": "/images/expertise/ai-solutions-hero.jpg",
+  "heroButton": "Start Your AI Project",
+  "category": "Innovation",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Transformative AI & automation capabilities"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "Cutting-edge tools for intelligent solutions"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How intelligent technology transforms business"
+    }
+  },
+  "features": [
+    {
+      "title": "Machine Learning Models",
+      "description": "Custom algorithms that learn from your data",
+      "icon": "cpu"
+    },
+    {
+      "title": "Natural Language Processing",
+      "description": "Systems that understand and generate human language",
+      "icon": "chat-bubble-left-right"
+    },
+    {
+      "title": "Computer Vision",
+      "description": "Applications that can analyze and interpret visual information",
+      "icon": "eye"
+    },
+    {
+      "title": "Predictive Analytics",
+      "description": "Forecasting tools that anticipate future trends",
+      "icon": "chart-bar"
+    }
+  ],
+  "technologies": [
+    { "name": "TensorFlow", "logo": "/images/tech/tensorflow.svg" },
+    { "name": "PyTorch", "logo": "/images/tech/pytorch.svg" },
+    { "name": "OpenAI", "logo": "/images/tech/openai.svg" },
+    { "name": "Claude Mistral", "logo": "/images/tech/claude.svg" },
+    { "name": "LLama", "logo": "/images/tech/llama.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Enhanced Efficiency",
+      "description": "Automate repetitive tasks and streamline operations",
+      "icon": "clock"
+    },
+    {
+      "title": "Data-Driven Insights",
+      "description": "Uncover patterns and opportunities hidden in your data",
+      "icon": "light-bulb"
+    },
+    {
+      "title": "Personalized Experiences",
+      "description": "Deliver tailored interactions for customers and users",
+      "icon": "user-circle"
+    },
+    {
+      "title": "Competitive Advantage",
+      "description": "Stay ahead with innovative AI-powered capabilities",
+      "icon": "trophy"
+    }
+  ],
+  "relatedExpertise": ["cloud-services", "data-analytics", "saas"],
+  "cta": {
+    "title": "Ready to harness the power of AI?",
+    "description": "Let's explore how artificial intelligence can solve challenges and create opportunities for your business.",
+    "buttonText": "Start Your AI Project",
+    "buttonLink": "/digital-project?service=ai-solutions"
+  }
+}

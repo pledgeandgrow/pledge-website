@@ -6,9 +6,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function Faq() {
-  const faqs = [
+  const { t } = useTranslations('contact');
+  
+  // Use t function with returnObjects to get the FAQ array from translations
+  const faqs = t('faq.questions', { 
+    returnObjects: true, 
+    defaultValue: [
     {
       question: "What services does Pledge offer?",
       answer: "We offer a comprehensive range of digital services including web development, mobile app development, UI/UX design, backend development, custom software solutions, and analytics & optimization services. Each service is tailored to meet the specific needs of our clients."
@@ -29,23 +35,26 @@ export default function Faq() {
       question: "How do you handle project management and communication?",
       answer: "We use an agile project management approach with regular check-ins and updates. Communication is maintained through your preferred channels (email, Slack, etc.), and you'll have access to a dedicated project manager throughout the development process."
     }
-  ];
+  ]});
+  
+  // If faqs is not an array (e.g., translation is missing), use default values
+  const faqItems = Array.isArray(faqs) ? faqs : [];
 
   return (
     <section className="bg-background text-foreground py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto mb-12 text-center animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Frequently Asked Questions
+            {t('faq.title', { defaultValue: 'Frequently Asked Questions' })}
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl">
-            Find answers to common questions about our services and process.
+            {t('faq.description', { defaultValue: 'Find answers to common questions about our services and process.' })}
           </p>
         </div>
         
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="animate-fade-in">
-            {faqs.map((faq, index) => (
+            {faqItems.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger className="text-left font-medium">
                   {faq.question}

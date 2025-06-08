@@ -49,7 +49,7 @@ export function CookieConsent({
         <div className="flex-1">
           <h3 className="text-lg font-medium mb-1">Cookie Consent</h3>
           <p className="text-sm text-muted-foreground">
-            We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. 
+            We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking &quot;Accept All&quot;, you consent to our use of cookies. 
             <a href={privacyPolicyUrl} className="underline ml-1 hover:text-primary">
               Read our Privacy Policy
             </a>

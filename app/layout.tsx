@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
+import { Providers } from "@/components/theme/Providers";
+import "@/utils/i18n-client";
 import { AnalyticsProvider } from "@/components/analytics";
 import ClientCookieConsent from "@/components/shared/ClientCookieConsent";
 
@@ -81,14 +82,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={inter.variable}>
       <body className="font-sans" suppressHydrationWarning>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <Providers>
           <AnalyticsProvider measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}>
             <div className="flex min-h-screen flex-col bg-background text-foreground">
               {children}
               <ClientCookieConsent />
             </div>
           </AnalyticsProvider>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

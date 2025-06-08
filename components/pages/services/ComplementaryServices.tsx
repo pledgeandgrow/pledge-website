@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import { useTranslations } from "@/hooks/useTranslations";
 
 import { FileText, Palette, Search, Wrench, GraduationCap } from "lucide-react";
 import { ServiceModal, ServiceSpecifications, ServiceTechnology, ServiceConditions } from "@/components/ui/service-modal";
@@ -230,6 +231,7 @@ export default function ComplementaryServices() {
   const [isInView, setIsInView] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslations('services');
 
   // Use IntersectionObserver to trigger animations when section is in view
   useEffect(() => {
@@ -265,9 +267,9 @@ export default function ComplementaryServices() {
     <section className="py-16 bg-background dark:bg-background" ref={sectionRef}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Complementary Services</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-4">{t('complementary.title')}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            We offer a range of complementary services to maximize the value and performance of your digital solutions.
+            {t('complementary.description')}
           </p>
         </div>
         
@@ -286,7 +288,7 @@ export default function ComplementaryServices() {
                     <div className="bg-primary/10 p-4 rounded-full w-fit mx-auto mb-4">
                       {service.icon}
                     </div>
-                    <CardTitle className="text-center">{service.title}</CardTitle>
+                    <CardTitle className="text-center">{t(`complementary.services.${service.id}.title`)}</CardTitle>
                   </CardHeader>
                 </Card>
               </div>
@@ -308,7 +310,7 @@ export default function ComplementaryServices() {
                   <div className="bg-primary/10 p-4 rounded-full w-fit mx-auto mb-4">
                     {service.icon}
                   </div>
-                  <CardTitle className="text-center">{service.title}</CardTitle>
+                  <CardTitle className="text-center">{t(`complementary.services.${service.id}.title`)}</CardTitle>
                 </CardHeader>
               </Card>
             </div>
@@ -320,7 +322,7 @@ export default function ComplementaryServices() {
         <ServiceModal
           isOpen={isModalOpen}
           onClose={closeModal}
-          title={selectedService.title}
+          title={t(`complementary.services.${selectedService.id}.title`)}
           specifications={selectedService.specifications}
           technology={selectedService.technology}
           conditions={selectedService.conditions}

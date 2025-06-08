@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import { ClientModal, ClientProject } from "@/components/ui/client-modal";
-import { portfolioProjects } from "@/data/portfolio-data";
+import { useProjects } from "@/data/portfolio-data-i18n";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export default function CaseStudiesSlider() {
@@ -15,8 +15,8 @@ export default function CaseStudiesSlider() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Get all case studies from the portfolio data
-  const caseStudies = portfolioProjects;
+  // Get all case studies from the portfolio data using the i18n hook
+  const caseStudies = useProjects();
   
   // Update based on screen size
   useEffect(() => {

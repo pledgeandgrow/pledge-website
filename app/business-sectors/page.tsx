@@ -8,12 +8,15 @@ import {
   SectorsCTA
 } from "@/components/pages/business-sectors";
 
+// Import translations for metadata
+import enTranslations from '@/locales/en/business-sectors.json';
+
 export const metadata: Metadata = {
-  title: "Business Sectors | Pledge & Grow",
-  description: "Tailored digital solutions for diverse industries, designed to address your sector-specific challenges and opportunities.",
+  title: enTranslations.meta.title,
+  description: enTranslations.meta.description,
   openGraph: {
-    title: "Business Sectors | Pledge & Grow",
-    description: "Tailored digital solutions for diverse industries, designed to address your sector-specific challenges and opportunities.",
+    title: enTranslations.meta.title,
+    description: enTranslations.meta.description,
     url: "/business-sectors",
     siteName: "Pledge & Grow",
     images: [

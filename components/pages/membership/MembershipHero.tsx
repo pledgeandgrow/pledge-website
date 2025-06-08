@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-// Button import removed as it was unused
-// Link import removed as it was unused
 import Image from "next/image";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function MembershipHero() {
+  const { t } = useTranslations("membership");
+  
   return (
     <section className="relative bg-gradient-to-b from-primary/10 to-background py-20 md:py-32 overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
@@ -17,10 +18,10 @@ export default function MembershipHero() {
             className="text-center lg:text-left"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary">
-              Premium Membership
+              {t('hero.title')}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-3xl mx-auto lg:mx-0">
-              Our exclusive membership program is designed for businesses and professionals who require dedicated support and premium services for their digital transformation journey.
+              {t('hero.description')}
             </p>
             
             <div className="grid grid-cols-1 gap-8 mb-10 text-left">
@@ -30,7 +31,7 @@ export default function MembershipHero() {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="bg-card p-6 rounded-lg shadow-sm border border-border max-w-2xl mx-auto lg:mx-0"
               >
-                <h3 className="text-xl font-bold mb-4">Ideal For</h3>
+                <h3 className="text-xl font-bold mb-4">{t('hero.idealFor')}</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <div className="bg-primary/10 p-1 rounded-full mr-3 mt-1">
@@ -38,7 +39,7 @@ export default function MembershipHero() {
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </div>
-                    <span><strong>Enterprise Organizations</strong> seeking dedicated technical support and priority service</span>
+                    <span><strong>{t('hero.enterpriseOrg')}</strong> {t('hero.enterpriseDesc')}</span>
                   </li>
                   <li className="flex items-start">
                     <div className="bg-primary/10 p-1 rounded-full mr-3 mt-1">
@@ -46,7 +47,7 @@ export default function MembershipHero() {
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </div>
-                    <span><strong>Growing Businesses</strong> that need reliable, consistent technical maintenance</span>
+                    <span><strong>{t('hero.growingBusiness')}</strong> {t('hero.growingDesc')}</span>
                   </li>
                   <li className="flex items-start">
                     <div className="bg-primary/10 p-1 rounded-full mr-3 mt-1">
@@ -54,7 +55,7 @@ export default function MembershipHero() {
                         <polyline points="20 6 9 17 4 12"></polyline>
                       </svg>
                     </div>
-                    <span><strong>Digital-First Companies</strong> that require immediate response to technical issues</span>
+                    <span><strong>{t('hero.digitalFirst')}</strong> {t('hero.digitalDesc')}</span>
                   </li>
                 </ul>
               </motion.div>
@@ -72,7 +73,7 @@ export default function MembershipHero() {
             <div className="relative w-full h-[500px] rounded-xl overflow-hidden shadow-xl">
               <Image 
                 src="/images/membership/membership.png" 
-                alt="Premium Membership Benefits" 
+                alt={t('hero.imageAlt')} 
                 fill 
                 className="object-cover"
                 priority

@@ -38,7 +38,7 @@ export default function CompanyTree() {
         },
         {
           id: 'chairman3',
-          name: 'Ilyas BEREL',
+          name: 'Louis Junqua-Salanne',
           title: 'Chairman',
           role: 'Chief Financial Officer',
           children: []

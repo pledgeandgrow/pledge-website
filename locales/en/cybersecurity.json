@@ -1,0 +1,83 @@
+{
+  "id": "cybersecurity",
+  "slug": "cybersecurity",
+  "title": "Cybersecurity",
+  "subtitle": "Protect your digital assets with comprehensive security solutions",
+  "description": "We help businesses safeguard their systems, data, and users from cyber threats. Our cybersecurity services include vulnerability assessment, penetration testing, security architecture design, and ongoing monitoring to ensure your digital assets remain protected.",
+  "heroImage": "/images/expertise/cybersecurity-hero.jpg",
+  "heroButton": "Secure Your Digital Assets",
+  "category": "Infrastructure",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive cybersecurity services"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "Industry-leading security tools and platforms"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How cybersecurity protects your business"
+    }
+  },
+  "features": [
+    {
+      "title": "Security Assessment",
+      "description": "Identify vulnerabilities and security gaps in your systems",
+      "icon": "magnifying-glass"
+    },
+    {
+      "title": "Penetration Testing",
+      "description": "Simulate real-world attacks to test your defenses",
+      "icon": "shield-exclamation"
+    },
+    {
+      "title": "Security Architecture",
+      "description": "Design robust security frameworks for your applications",
+      "icon": "lock-closed"
+    },
+    {
+      "title": "Compliance & Governance",
+      "description": "Meet industry standards and regulatory requirements",
+      "icon": "clipboard-document-check"
+    }
+  ],
+  "technologies": [
+    { "name": "OWASP", "logo": "/images/tech/owasp.svg" },
+    { "name": "Nessus", "logo": "/images/tech/nessus.svg" },
+    { "name": "Metasploit", "logo": "/images/tech/metasploit.svg" },
+    { "name": "Wireshark", "logo": "/images/tech/wireshark.svg" },
+    { "name": "Snort", "logo": "/images/tech/snort.svg" }
+  ],
+
+  "benefits": [
+    {
+      "title": "Risk Reduction",
+      "description": "Minimize the likelihood and impact of security breaches",
+      "icon": "arrow-trending-down"
+    },
+    {
+      "title": "Regulatory Compliance",
+      "description": "Meet industry-specific security requirements",
+      "icon": "check-badge"
+    },
+    {
+      "title": "Customer Trust",
+      "description": "Build confidence by demonstrating security commitment",
+      "icon": "heart"
+    },
+    {
+      "title": "Business Continuity",
+      "description": "Ensure operations continue even during security incidents",
+      "icon": "arrow-path"
+    }
+  ],
+  "relatedExpertise": ["cloud-services", "blockchain", "maintenance"],
+  "cta": {
+    "title": "Ready to strengthen your security posture?",
+    "description": "Let's build robust defenses to protect your business from evolving cyber threats.",
+    "buttonText": "Start Your Security Assessment",
+    "buttonLink": "/digital-project?service=cybersecurity"
+  }
+}

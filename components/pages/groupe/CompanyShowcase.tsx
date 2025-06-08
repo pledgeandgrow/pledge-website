@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
-import { ExternalLink, MapPin, Users, Calendar } from "lucide-react";
+import { ExternalLink, MapPin, Calendar } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface Company {
   id: string;
@@ -17,13 +18,11 @@ interface Company {
   longDescription: string;
   founded: string;
   location: string;
-  team: string;
   website: string;
-  services: string[];
-  achievements: string[];
 }
 
 export default function CompanyShowcase() {
+  const { t } = useTranslations('groupe');
   const [selectedCompany, setSelectedCompany] = useState<Company | null>(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -42,83 +41,81 @@ export default function CompanyShowcase() {
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
   
-  const companies: Company[] = [
-    {
-      id: "pledge-and-grow",
-      name: "Pledge & Grow",
-      logo: "/images/groupe/logo-pledge.png",
-      category: "Digital Services",
-      description: "Digital transformation consultancy specializing in web development, mobile applications, and digital strategy.",
-      longDescription: "Pledge & Grow is the flagship company of our group, offering comprehensive digital transformation services to businesses across various sectors. Our team of experts combines technical expertise with strategic thinking to help organizations leverage technology for sustainable growth. From custom software development to digital marketing strategies, we provide end-to-end solutions tailored to each client's unique needs.",
-      founded: "2022",
-      location: "Paris, France",
-      team: "45+ professionals",
-      website: "https://pledgeandgrow.com",
-      services: [
-        "Custom Web Development",
-        "Mobile App Development",
-        "Digital Strategy Consulting",
-        "UX/UI Design",
-        "E-commerce Solutions"
-      ],
-      achievements: [
-        "Delivered 100+ successful digital projects",
-        "Recognized as a top digital agency in France",
-        "Achieved 98% client satisfaction rate",
-        "Partnered with leading technology providers"
-      ]
-    },
-    {
-      id: "taskmate",
-      name: "Taskmate",
-      logo: "/images/groupe/logo-fintech.png",
-      category: "Automation Services",
-      description: "Advanced automation solutions to streamline business processes and increase operational efficiency.",
-      longDescription: "Taskmate specializes in developing intelligent automation solutions that help businesses streamline their operations and reduce manual workload. Our team combines expertise in process optimization, AI, and workflow automation to create custom solutions that address complex business challenges and drive productivity improvements across various industries.",
-      founded: "2025",
-      location: "Paris, France",
-      team: "30+ specialists",
-      website: "https://taskmate-ia.vercel.app/",
-      services: [
-        "Workflow Automation",
-        "Business Process Optimization",
-        "AI-Powered Task Management",
-        "Custom Automation Solutions",
-        "Robotic Process Automation (RPA)"
-      ],
-      achievements: [
-        "Reduced manual workload by 75% for clients",
-        "Implemented solutions in 20+ industries",
-        "Received innovation award in automation sector",
-        "Improved operational efficiency by 40%"
-      ]
-    },
-    {
-      id: "verdalize",
-      name: "Verdalize",
-      logo: "/images/groupe/logo-greentech.png",
-      category: "Financial Technology",
-      description: "Innovative financial technology solutions for banks, insurance companies, and financial service providers.",
-      longDescription: "Verdalize develops cutting-edge financial technology products that help traditional financial institutions modernize their operations and improve customer experiences. Our team combines deep financial industry knowledge with technical expertise to create secure, compliant, and user-friendly solutions that address the evolving needs of the financial sector.",
-      founded: "2025",
-      location: "London, UK",
-      team: "25+ environmental experts",
-      website: "https://greentechinnovations.com",
-      services: [
-        "Digital Banking Platforms",
-        "Payment Processing Solutions",
-        "Wealth Management Software",
-        "Regulatory Compliance Tools",
-        "Financial Data Analytics"
-      ],
-      achievements: [
-        "Processed over €2 billion in transactions",
-        "Reduced operational costs by 30% for clients",
-        "Received innovation award in fintech sector",
-        "Expanded to 5 European markets"
-      ]
-    }
-  ];
+  // Get the company data from translations
+  // Looking at the structure in groupe.json, we can see companies.items is an array
+  interface CompaniesTranslation {
+    items?: Array<{
+      id?: string;
+      name?: string;
+      logo?: string;
+      category?: string;
+      description?: string;
+      longDescription?: string;
+      founded?: string;
+      location?: string;
+      website?: string;
+      employees?: string;
+    }>;
+  }
+  
+  const translations = t('companies') as CompaniesTranslation;
+  const companiesData = translations?.items || [];
+  
+  // Add logging to help debug translation issues
+  console.log('Companies translation data:', companiesData);
+  
+  // Map the translation data to our Company interface
+  const companies: Company[] = Array.isArray(companiesData) ? companiesData.map((item) => ({
+    id: item.id || '',
+    name: item.name || '',
+    logo: item.logo || '',
+    category: item.category || '',
+    description: item.description || '',
+    longDescription: item.longDescription || '',
+    founded: item.founded || '',
+    location: item.location || '',
+    website: item.website || ''
+  })) : [];
+  
+  // If we still don't have companies, add fallback data
+  if (companies.length === 0) {
+    console.log('Using fallback company data');
+    companies.push(
+      {
+        id: "pledge-and-grow",
+        name: "Pledge & Grow",
+        logo: "/images/groupe/logo-pledge.png",
+        category: t('companies.filters.digital') || "Digital Services",
+        description: t('companies.items.0.description') || "Digital transformation consultancy specializing in web development, mobile applications, and digital strategy.",
+        longDescription: t('companies.items.0.longDescription') || "Pledge & Grow is the flagship company of our group, offering comprehensive digital transformation services to businesses across various sectors.",
+        founded: "2022",
+        location: "Paris, France",
+        website: "https://pledgeandgrow.com"
+      },
+      {
+        id: "taskmate",
+        name: "Taskmate",
+        logo: "/images/groupe/logo-fintech.png",
+        category: t('companies.filters.automation') || "Automation Services",
+        description: t('companies.items.1.description') || "Advanced automation solutions to streamline business processes and increase operational efficiency.",
+        longDescription: t('companies.items.1.longDescription') || "Taskmate specializes in developing intelligent automation solutions that help businesses streamline their operations.",
+        founded: "2025",
+        location: "Paris, France",
+        website: "https://taskmate-ia.vercel.app/"
+      },
+      {
+        id: "verdalize",
+        name: "Verdalize",
+        logo: "/images/groupe/logo-greentech.png",
+        category: t('companies.filters.fintech') || "Financial Technology",
+        description: t('companies.items.2.description') || "Innovative financial technology solutions for banks, insurance companies, and financial service providers.",
+        longDescription: t('companies.items.2.longDescription') || "Verdalize develops cutting-edge financial technology products that help traditional financial institutions modernize their operations.",
+        founded: "2025",
+        location: "London, UK",
+        website: "https://greentechinnovations.com"
+      }
+    );
+  }
 
   // No categories needed as tabs have been removed
 
@@ -132,9 +129,9 @@ export default function CompanyShowcase() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Our Companies</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Discover the diverse companies that make up the Pledge & Grow Group, each contributing unique expertise to our collective mission.
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('companies.title')}</h2>
+          <p className="text-muted-foreground max-w-3xl mx-auto">
+            {t('companies.description')}
           </p>
         </motion.div>
 
@@ -161,11 +158,11 @@ export default function CompanyShowcase() {
                         <div className="flex flex-col gap-2 text-sm text-muted-foreground">
                           <div className="flex items-center gap-2">
                             <Calendar className="h-4 w-4 text-primary" />
-                            <span>Founded: {company.founded}</span>
+                            <span>{t('companies.company.founded')}: {company.founded}</span>
                           </div>
                           <div className="flex items-center gap-2">
                             <MapPin className="h-4 w-4 text-primary" />
-                            <span>{company.location}</span>
+                            <span>{t('companies.company.location')}: {company.location}</span>
                           </div>
 
                         </div>
@@ -177,7 +174,7 @@ export default function CompanyShowcase() {
                               variant="ghost" 
                               onClick={() => setSelectedCompany(company)}
                             >
-                              Learn More
+                              {t('companies.company.learnMore')}
                             </Button>
                           </DialogTrigger>
                           <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -194,66 +191,35 @@ export default function CompanyShowcase() {
                                 
                                 <div className="mt-6 space-y-6">
                                   <div>
-                                    <h3 className="text-lg font-semibold mb-2">About</h3>
+                                    <h3 className="text-lg font-semibold mb-2">{t('companies.company.about')}</h3>
                                     <p className="text-muted-foreground">
                                       {selectedCompany.longDescription}
                                     </p>
                                   </div>
                                   
-                                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
                                     <div className="flex flex-col gap-1">
-                                      <span className="text-sm text-muted-foreground">Founded</span>
+                                      <span className="text-sm text-muted-foreground">{t('companies.company.founded')}</span>
                                       <span className="font-medium flex items-center gap-2">
                                         <Calendar className="h-4 w-4 text-primary" />
                                         {selectedCompany.founded}
                                       </span>
                                     </div>
                                     <div className="flex flex-col gap-1">
-                                      <span className="text-sm text-muted-foreground">Location</span>
+                                      <span className="text-sm text-muted-foreground">{t('companies.company.location')}</span>
                                       <span className="font-medium flex items-center gap-2">
                                         <MapPin className="h-4 w-4 text-primary" />
                                         {selectedCompany.location}
                                       </span>
                                     </div>
-                                    <div className="flex flex-col gap-1">
-                                      <span className="text-sm text-muted-foreground">Team</span>
-                                      <span className="font-medium flex items-center gap-2">
-                                        <Users className="h-4 w-4 text-primary" />
-                                        {selectedCompany.team}
-                                      </span>
-                                    </div>
                                   </div>
                                   
-                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                      <h3 className="text-lg font-semibold mb-3">Services & Solutions</h3>
-                                      <ul className="space-y-2">
-                                        {selectedCompany.services.map((service, index) => (
-                                          <li key={index} className="flex items-start gap-2">
-                                            <span className="text-primary mt-1">•</span>
-                                            <span>{service}</span>
-                                          </li>
-                                        ))}
-                                      </ul>
-                                    </div>
-                                    
-                                    <div>
-                                      <h3 className="text-lg font-semibold mb-3">Key Achievements</h3>
-                                      <ul className="space-y-2">
-                                        {selectedCompany.achievements.map((achievement, index) => (
-                                          <li key={index} className="flex items-start gap-2">
-                                            <span className="text-primary mt-1">•</span>
-                                            <span>{achievement}</span>
-                                          </li>
-                                        ))}
-                                      </ul>
-                                    </div>
-                                  </div>
+                                  {/* Services & Achievements sections removed as requested */}
                                   
                                   <div className="pt-4">
                                     <Button asChild className="w-full sm:w-auto">
                                       <Link href={selectedCompany.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                                        Visit Website <ExternalLink className="h-4 w-4" />
+                                        {t('companies.company.visitWebsite')} <ExternalLink className="h-4 w-4" />
                                       </Link>
                                     </Button>
                                   </div>
@@ -313,7 +279,7 @@ export default function CompanyShowcase() {
                     <div className="flex flex-col gap-2 text-sm text-muted-foreground">
                       <div className="flex items-center gap-2">
                         <Calendar className="h-4 w-4 text-primary" />
-                        <span>Founded: {company.founded}</span>
+                        <span>{t('companies.company.founded')}: {company.founded}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <MapPin className="h-4 w-4 text-primary" />
@@ -329,7 +295,7 @@ export default function CompanyShowcase() {
                           variant="ghost" 
                           onClick={() => setSelectedCompany(company)}
                         >
-                          Learn More
+                          {t('companies.company.learnMore')}
                         </Button>
                       </DialogTrigger>
                       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -346,7 +312,7 @@ export default function CompanyShowcase() {
                             
                             <div className="mt-6 space-y-6">
                               <div>
-                                <h3 className="text-lg font-semibold mb-2">About</h3>
+                                <h3 className="text-lg font-semibold mb-2">{t('companies.company.about')}</h3>
                                 <p className="text-muted-foreground">
                                   {selectedCompany.longDescription}
                                 </p>
@@ -354,14 +320,14 @@ export default function CompanyShowcase() {
                               
                               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-4">
                                 <div className="flex flex-col gap-1">
-                                  <span className="text-sm text-muted-foreground">Founded</span>
+                                  <span className="text-sm text-muted-foreground">{t('companies.company.founded')}</span>
                                   <span className="font-medium flex items-center gap-2">
                                     <Calendar className="h-4 w-4 text-primary" />
                                     {selectedCompany.founded}
                                   </span>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                  <span className="text-sm text-muted-foreground">Location</span>
+                                  <span className="text-sm text-muted-foreground">{t('companies.company.location')}</span>
                                   <span className="font-medium flex items-center gap-2">
                                     <MapPin className="h-4 w-4 text-primary" />
                                     {selectedCompany.location}
@@ -370,36 +336,12 @@ export default function CompanyShowcase() {
 
                               </div>
                               
-                              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div>
-                                  <h3 className="text-lg font-semibold mb-3">Services & Solutions</h3>
-                                  <ul className="space-y-2">
-                                    {selectedCompany.services.map((service, index) => (
-                                      <li key={index} className="flex items-start gap-2">
-                                        <span className="text-primary mt-1">•</span>
-                                        <span>{service}</span>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                                
-                                <div>
-                                  <h3 className="text-lg font-semibold mb-3">Key Achievements</h3>
-                                  <ul className="space-y-2">
-                                    {selectedCompany.achievements.map((achievement, index) => (
-                                      <li key={index} className="flex items-start gap-2">
-                                        <span className="text-primary mt-1">•</span>
-                                        <span>{achievement}</span>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              </div>
+                              {/* Services and Achievements sections removed */}
                               
                               <div className="pt-4">
                                 <Button asChild className="w-full sm:w-auto">
                                   <Link href={selectedCompany.website} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                                    Visit Website <ExternalLink className="h-4 w-4" />
+                                    {t('companies.company.visitWebsite')} <ExternalLink className="h-4 w-4" />
                                   </Link>
                                 </Button>
                               </div>

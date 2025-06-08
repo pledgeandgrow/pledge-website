@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Crown, Clock, Shield, HeartHandshake, Zap, ArrowRight } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface VipBenefit {
   id: string;
@@ -42,6 +43,7 @@ const vipBenefits: VipBenefit[] = [
 
 export default function VipServices() {
   const [isInView, setIsInView] = useState(false);
+  const { t } = useTranslations('services');
   
   useEffect(() => {
     // Simple intersection observer to trigger animations when component is in view
@@ -84,13 +86,13 @@ export default function VipServices() {
           <h2 
             className={`text-3xl font-bold text-foreground mb-4 text-center transition-all duration-500 delay-100 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            Client VIP Experience
+            {t('vip.title')}
           </h2>
           
           <p 
             className={`text-muted-foreground max-w-2xl mx-auto text-center transition-all duration-500 delay-200 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            Join our exclusive VIP program for premium service, priority support, and enhanced benefits tailored to your business needs.
+            {t('vip.description')}
           </p>
         </div>
         
@@ -103,10 +105,10 @@ export default function VipServices() {
               <CardHeader className="bg-primary/5 border-b border-primary/20">
                 <CardTitle className="flex items-center">
                   <Crown className="h-5 w-5 text-primary mr-2" />
-                  VIP Membership Benefits
+                  {t('vip.card.title')}
                 </CardTitle>
                 <CardDescription>
-                  Exclusive advantages for our most valued clients
+                  {t('vip.card.subtitle')}
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
@@ -117,8 +119,8 @@ export default function VipServices() {
                         {benefit.icon}
                       </div>
                       <div>
-                        <h4 className="font-medium text-foreground mb-1">{benefit.title}</h4>
-                        <p className="text-sm text-muted-foreground">{benefit.description}</p>
+                        <h4 className="font-medium text-foreground mb-1">{t(`vip.benefits.${benefit.id}.title`)}</h4>
+                        <p className="text-sm text-muted-foreground">{t(`vip.benefits.${benefit.id}.description`)}</p>
                       </div>
                     </div>
                   ))}
@@ -127,7 +129,7 @@ export default function VipServices() {
               <CardFooter className="border-t border-primary/20 pt-6">
                 <Button asChild className="w-full">
                   <Link href="/contact?subject=VIP%20Membership">
-                    Apply for VIP Membership
+                    {t('vip.card.applyButton')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -139,40 +141,40 @@ export default function VipServices() {
             className={`flex flex-col justify-center ${isInView ? 'animate-fadeIn' : 'opacity-0'}`}
             style={{ animationDelay: '200ms' }}
           >
-            <h3 className="text-2xl font-bold text-foreground mb-6">Elevate Your Experience</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-6">{t('vip.elevate.title')}</h3>
             
             <p className="text-muted-foreground mb-6">
-              Our VIP program is designed for clients who demand the highest level of service and attention. As a VIP client, you&apos;ll enjoy a range of exclusive benefits that enhance your experience and ensure your projects receive the priority they deserve.
+              {t('vip.elevate.description')}
             </p>
             
             <div className="bg-card rounded-lg p-6 border border-border mb-6">
-              <h4 className="font-bold text-foreground mb-3">VIP Membership Includes:</h4>
+              <h4 className="font-bold text-foreground mb-3">{t('vip.includes.title')}</h4>
               <ul className="space-y-2">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span className="text-muted-foreground">Quarterly strategy sessions with our senior team</span>
+                  <span className="text-muted-foreground">{t('vip.includes.items.strategy')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span className="text-muted-foreground">Exclusive access to beta features and new services</span>
+                  <span className="text-muted-foreground">{t('vip.includes.items.beta')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span className="text-muted-foreground">Preferential pricing on all services and packages</span>
+                  <span className="text-muted-foreground">{t('vip.includes.items.pricing')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span className="text-muted-foreground">Extended support hours including weekends</span>
+                  <span className="text-muted-foreground">{t('vip.includes.items.support')}</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span className="text-muted-foreground">Complimentary annual security and performance audit</span>
+                  <span className="text-muted-foreground">{t('vip.includes.items.audit')}</span>
                 </li>
               </ul>
             </div>
             
             <p className="text-sm text-muted-foreground italic">
-              VIP membership is available by application and is subject to approval. Contact us to discuss your eligibility and how we can tailor our VIP services to your specific needs.
+              {t('vip.disclaimer')}
             </p>
           </div>
         </div>
@@ -182,7 +184,7 @@ export default function VipServices() {
         >
           <Button size="lg" asChild>
             <Link href="/contact">
-              Contact Us for VIP Access
+              {t('vip.contactButton')}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>

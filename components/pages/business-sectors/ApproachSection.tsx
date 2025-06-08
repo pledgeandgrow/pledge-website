@@ -9,6 +9,7 @@ import {
   BarChart, 
   Shield 
 } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 // Carousel imports removed as they were unused
 
 interface ApproachStep {
@@ -18,6 +19,7 @@ interface ApproachStep {
 }
 
 export default function ApproachSection() {
+  const { t } = useTranslations('business-sectors');
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -34,31 +36,39 @@ export default function ApproachSection() {
     // Cleanup
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
+  const stepIcons = {
+    research: <Search className="h-10 w-10 text-primary" />,
+    assessment: <Lightbulb className="h-10 w-10 text-primary" />,
+    customization: <Settings className="h-10 w-10 text-primary" />,
+    implementation: <BarChart className="h-10 w-10 text-primary" />,
+    optimization: <Shield className="h-10 w-10 text-primary" />
+  };
+  
   const steps: ApproachStep[] = [
     {
-      icon: <Search className="h-10 w-10 text-primary" />,
-      title: "Industry Analysis",
-      description: "We begin by thoroughly understanding your industry's specific challenges, regulatory requirements, and competitive landscape."
+      icon: stepIcons.research,
+      title: t('approach.steps.research.title'),
+      description: t('approach.steps.research.description')
     },
     {
-      icon: <Lightbulb className="h-10 w-10 text-primary" />,
-      title: "Tailored Strategy",
-      description: "We develop a customized digital strategy that addresses your sector-specific needs and aligns with your business objectives."
+      icon: stepIcons.assessment,
+      title: t('approach.steps.assessment.title'),
+      description: t('approach.steps.assessment.description')
     },
     {
-      icon: <Settings className="h-10 w-10 text-primary" />,
-      title: "Specialized Implementation",
-      description: "Our industry experts work alongside our technical teams to implement solutions that incorporate sector best practices."
+      icon: stepIcons.customization,
+      title: t('approach.steps.customization.title'),
+      description: t('approach.steps.customization.description')
     },
     {
-      icon: <BarChart className="h-10 w-10 text-primary" />,
-      title: "Industry Benchmarking",
-      description: "We measure performance against industry standards and continuously optimize to ensure your competitive advantage."
+      icon: stepIcons.implementation,
+      title: t('approach.steps.implementation.title'),
+      description: t('approach.steps.implementation.description')
     },
     {
-      icon: <Shield className="h-10 w-10 text-primary" />,
-      title: "Compliance & Security",
-      description: "We ensure all solutions adhere to industry-specific regulations and security requirements, protecting your business and customers."
+      icon: stepIcons.optimization,
+      title: t('approach.steps.optimization.title'),
+      description: t('approach.steps.optimization.description')
     }
   ];
 
@@ -73,10 +83,10 @@ export default function ApproachSection() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Our Industry-Focused Approach
+            {t('approach.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            We follow a structured methodology that combines industry expertise with technical excellence to deliver solutions that truly address your sector-specific needs.
+            {t('approach.description')}
           </p>
         </motion.div>
 

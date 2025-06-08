@@ -6,7 +6,6 @@ import {
   Advantages, 
   Services, 
   CaseStudies, 
-  Team, 
   Testimonials, 
   Cta 
 } from "@/components/pages/home";

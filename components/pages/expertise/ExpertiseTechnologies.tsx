@@ -175,7 +175,7 @@ const getTechIcon = (techName: string) => {
 export default function ExpertiseTechnologies({ 
   technologies, 
   title = "Technologies We Use", 
-  subtitle = "Modern tools for modern solutions" 
+  subtitle = "Modern tools for modern solutions"
 }: ExpertiseTechnologiesProps) {
   return (
     <section className="py-16 bg-muted/30">
@@ -187,8 +187,12 @@ export default function ExpertiseTechnologies({
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">{title}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              {title}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {subtitle}
+            </p>
           </motion.div>
         </div>
         
@@ -205,7 +209,9 @@ export default function ExpertiseTechnologies({
               <div className="h-16 w-16 mb-3 bg-primary/10 rounded-full flex items-center justify-center">
                 {getTechIcon(tech.name)}
               </div>
-              <h3 className="text-lg font-medium text-foreground">{tech.name}</h3>
+              <h3 className="text-lg font-medium text-foreground">
+                {tech.name}
+              </h3>
               {tech.description && (
                 <p className="text-sm text-muted-foreground text-center mt-1 max-w-[200px]">
                   {tech.description}

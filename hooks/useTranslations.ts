@@ -59,7 +59,7 @@ export function useTranslations(namespace: string = 'common') {
   
   // Load translations
   useEffect(() => {
-    let isMounted = true;
+    const isMounted = true;
     setIsLoading(true);
     
     async function loadTranslations() {
@@ -132,13 +132,16 @@ export function useTranslations(namespace: string = 'common') {
    * Get a translation by key with optional interpolation
    * @param key - The translation key (supports dot notation for nested keys)
    * @param params - Optional parameters for interpolation
-   * @returns The translated string or the key if translation not found
+   * @returns The translated string, array, or the key if translation not found
    */
-  const t = (key: string, params?: Record<string, string>): string => {
+  const t = (key: string, params?: Record<string, any>): any => {
     // If translations are still loading, return the key
     if (isLoading) {
       return key;
     }
+    
+    // Special case for returnObjects parameter
+    const returnObjects = params?.returnObjects === true;
     
     // Split the key by dots to support nested keys
     const keys = key.split('.');
@@ -153,16 +156,24 @@ export function useTranslations(namespace: string = 'common') {
       }
     }
 
-    // If the value is not a string, return the key
-    if (typeof value !== 'string') {
-      console.warn(`Translation value for key ${key} is not a string:`, value);
+    // If returnObjects is true, return the value as is (could be array or object)
+    if (returnObjects) {
+      return value;
+    }
+    
+    // If the value is not a string and we're not returning objects, log a warning
+    if (typeof value !== 'string' && !Array.isArray(value)) {
+      console.warn(`Translation value for key ${key} is not a string or array:`, value);
       return key;
     }
 
-    // Replace parameters in the translation string if provided
-    if (params) {
+    // If it's a string and we have parameters, replace them
+    if (typeof value === 'string' && params) {
       return Object.entries(params).reduce((acc, [paramKey, paramValue]) => {
-        return acc.replace(new RegExp(`{{${paramKey}}}`, 'g'), paramValue);
+        if (paramKey !== 'returnObjects') { // Skip the returnObjects parameter
+          return acc.replace(new RegExp(`{{${paramKey}}}`, 'g'), paramValue);
+        }
+        return acc;
       }, value);
     }
 

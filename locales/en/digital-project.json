@@ -1,0 +1,354 @@
+{
+  "hero": {
+    "title": "Start Your Digital Project Ultra Fast!",
+    "description": "We help you bring your digital vision to life with our expertise in web, mobile, and software development.",
+    "startButton": "Start My Project Now",
+    "contactButton": "Contact Our Team"
+  },
+  "process": {
+    "title": "Our Development Process",
+    "description": "We follow a proven 5-step process to ensure your project is delivered on time, within budget, and exceeds your expectations.",
+    "steps": [
+      {
+        "title": "Discovery & Planning",
+        "description": "We start by understanding your business goals, target audience, and project requirements. This phase includes detailed discussions, research, and creating a comprehensive project roadmap."
+      },
+      {
+        "title": "Design & Development",
+        "description": "Our team creates wireframes, designs, and prototypes before moving to development. We follow industry best practices and use the latest technologies to build robust, scalable solutions."
+      },
+      {
+        "title": "Testing & Quality Assurance",
+        "description": "We conduct thorough testing across different devices and platforms to ensure your project is bug-free, secure, and performs optimally under various conditions."
+      },
+      {
+        "title": "Deployment & Launch",
+        "description": "Once approved, we deploy your project to production environments, ensuring a smooth transition. We handle all technical aspects of the launch process to minimize downtime."
+      },
+      {
+        "title": "Ongoing Support & Optimization",
+        "description": "Our relationship doesn't end at launch. We provide ongoing maintenance, support, and continuous improvements to keep your digital solution running smoothly and effectively."
+      }
+    ],
+    "navigation": {
+      "previous": "Previous",
+      "next": "Next",
+      "step": "Step",
+      "of": "of"
+    }
+  },
+  "requirements": {
+    "title": "Our Collaboration Requirements",
+    "description": "For a successful partnership, we've established these key requirements to ensure smooth collaboration and exceptional results.",
+    "collaborationRequirements": [
+      {
+        "title": "Clear Project Goals",
+        "description": "Provide a clear description of your project goals, target audience, and expected outcomes. The more specific you are, the better we can tailor our solutions to your needs."
+      },
+      {
+        "title": "Realistic Timeline",
+        "description": "Understand that quality digital projects take time. We work efficiently but won't compromise on quality. Typical projects take 2-6 months depending on complexity."
+      },
+      {
+        "title": "Appropriate Budget",
+        "description": "Have a realistic budget that aligns with your project scope. Quality development requires investment. We'll help you prioritize features to match your budget constraints."
+      },
+      {
+        "title": "Timely Feedback",
+        "description": "Commit to providing timely feedback during the development process. This ensures we stay on track and can make adjustments quickly without delaying the project."
+      },
+      {
+        "title": "Content Preparation",
+        "description": "Be prepared to provide necessary content (text, images, videos) in a timely manner. Content delays are a common cause of project timeline extensions."
+      },
+      {
+        "title": "Designated Decision Maker",
+        "description": "Assign a primary point of contact who has authority to make decisions. Too many stakeholders without clear leadership can lead to confusion and delays."
+      }
+    ],
+    "clientProvisions": {
+      "title": "What You Should Provide",
+      "description": "To ensure a faster and more efficient development process, please prepare the following materials before we begin:",
+      "categories": [
+        {
+          "title": "Brand Assets",
+          "items": [
+            "Logo files in vector format (SVG, AI, EPS)",
+            "Brand color palette with hex codes",
+            "Typography information (font names, weights)",
+            "Brand guidelines if available"
+          ]
+        },
+        {
+          "title": "Content Materials",
+          "items": [
+            "Text content for all pages",
+            "High-quality images (minimum 1920px width)",
+            "Videos in MP4 format (if applicable)",
+            "Documents for download (if applicable)"
+          ]
+        },
+        {
+          "title": "Technical Access",
+          "items": [
+            "Domain registrar access (or ability to update DNS)",
+            "Hosting account credentials (if using existing hosting)",
+            "Third-party service credentials (analytics, marketing tools, etc.)",
+            "Existing database backups (for migrations)"
+          ]
+        },
+        {
+          "title": "Legal Requirements",
+          "items": [
+            "Privacy policy content",
+            "Terms of service content",
+            "Cookie policy content",
+            "GDPR compliance requirements"
+          ]
+        }
+      ],
+      "navigation": {
+        "previous": "Previous",
+        "next": "Next",
+        "of": "of"
+      }
+    }
+  },
+  "support": {
+    "title": "Technologies We Support",
+    "description": "We work with a wide range of technologies to deliver the best solutions for your digital project.",
+    "searchPlaceholder": "Search technologies...",
+    "categories": {
+      "all": "All Technologies",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "database": "Databases",
+      "cms": "CMS & E-commerce",
+      "cloud": "Cloud & DevOps"
+    },
+    "noTechnologiesFound": "No technologies found matching your search.",
+    "navigation": {
+      "page": "Page",
+      "of": "of"
+    }
+  },
+  "form": {
+    "heading": "Start Your Project",
+    "description": "Fill out this form to help us understand your project needs and provide you with an accurate estimate.",
+    "progress": "{{current}} of {{total}}",
+    "buttons": {
+      "previous": "Previous",
+      "back": "Back",
+      "next": "Next",
+      "submit": "Submit",
+      "submitProject": "Submit Project",
+      "sending": "Sending...",
+      "submitting": "Submitting..."
+    },
+    "toast": {
+      "success": {
+        "title": "Project Submitted",
+        "description": "Your project details have been received and sent to our team."
+      },
+      "error": {
+        "title": "Submission Error",
+        "description": "There was an issue submitting your project. Please try again.",
+        "unexpectedDescription": "An unexpected error occurred. Please try again."
+      }
+    },
+    "navigation": {
+      "previous": "Previous",
+      "back": "Back",
+      "next": "Next",
+      "submit": "Submit Project",
+      "submitShort": "Submit",
+      "step": "Step",
+      "of": "of"
+    },
+    "steps": [
+      {
+        "id": "project-type",
+        "title": "Project Type",
+        "description": "Select the type of project you want to create"
+      },
+      {
+        "id": "project-details",
+        "title": "Project Details",
+        "description": "Tell us more about your project"
+      },
+      {
+        "id": "timeline",
+        "title": "Timeline",
+        "description": "When do you need your project completed?"
+      },
+      {
+        "id": "budget",
+        "title": "Budget",
+        "description": "What's your budget for this project?"
+      },
+      {
+        "id": "contact",
+        "title": "Contact Information",
+        "description": "How can we reach you?"
+      },
+      {
+        "id": "summary",
+        "title": "Summary",
+        "description": "Review your project details"
+      }
+    ],
+    "projectType": {
+      "label": "Project Type",
+      "placeholder": "Select a project type",
+      "options": {
+        "web": "Web Development",
+        "mobile": "Mobile App",
+        "design": "Design Project",
+        "consulting": "Consulting"
+      },
+      "validation": {
+        "required": "Please select a project type."
+      }
+    },
+    "projectDetails": {
+      "projectName": {
+        "label": "Project Name",
+        "placeholder": "Enter project name",
+        "validation": {
+          "minLength": "Project name must be at least 2 characters."
+        }
+      },
+      "projectDescription": {
+        "label": "Project Description",
+        "placeholder": "Describe your project in detail",
+        "validation": {
+          "minLength": "Project description must be at least 10 characters."
+        }
+      },
+      "targetAudience": {
+        "label": "Target Audience",
+        "placeholder": "Who is this project for?",
+        "validation": {
+          "minLength": "Target audience must be at least 5 characters."
+        }
+      }
+    },
+    "timeline": {
+      "startDate": {
+        "label": "Start Date",
+        "validation": {
+          "required": "Please select a start date."
+        }
+      },
+      "deadline": {
+        "label": "Deadline (Optional)"
+      },
+      "flexibility": {
+        "label": "Timeline Flexibility",
+        "options": {
+          "strict": "Strict - Must be completed by deadline",
+          "moderate": "Moderate - Some flexibility allowed",
+          "flexible": "Flexible - Open to adjusting timeline"
+        }
+      }
+    },
+    "budget": {
+      "budgetRange": {
+        "label": "Budget Range",
+        "placeholder": "Select budget range",
+        "options": {
+          "0-1000": "$0 - $1,000",
+          "1000-5000": "$1,000 - $5,000",
+          "5000-10000": "$5,000 - $10,000",
+          "10000+": "$10,000+",
+          "small": "$0 - $1,000",
+          "medium": "$1,000 - $5,000",
+          "large": "$5,000 - $10,000",
+          "enterprise": "$10,000+"
+        },
+        "validation": {
+          "required": "Please select a budget range."
+        }
+      },
+      "budgetAmount": {
+        "label": "Specific Budget Amount (Optional)",
+        "placeholder": "Enter your exact budget",
+        "validation": {
+          "positive": "Budget amount must be a positive number."
+        }
+      },
+      "paymentPreference": {
+        "label": "Payment Preference",
+        "options": {
+          "milestone": "Milestone - Payment upon completing specific project stages",
+          "monthly": "Monthly - Consistent monthly payments",
+          "completion": "Completion - Full payment upon project completion"
+        },
+        "validation": {
+          "required": "Please select a payment preference."
+        }
+      }
+    },
+    "contact": {
+      "name": {
+        "label": "Full Name",
+        "placeholder": "Enter your full name",
+        "validation": {
+          "minLength": "Name must be at least 2 characters."
+        }
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "Enter your email address",
+        "validation": {
+          "format": "Please enter a valid email address."
+        }
+      },
+      "company": {
+        "label": "Company (Optional)",
+        "placeholder": "Enter your company name"
+      },
+      "phone": {
+        "label": "Phone Number (Optional)",
+        "placeholder": "Enter your phone number"
+      }
+    },
+    "summary": {
+      "notSpecified": "Not specified",
+      "projectInformation": {
+        "title": "Project Information",
+        "projectType": "Project Type",
+        "projectName": "Project Name",
+        "projectDescription": "Project Description",
+        "targetAudience": "Target Audience"
+      },
+      "timeline": {
+        "title": "Timeline",
+        "startDate": "Start Date",
+        "deadline": "Deadline",
+        "flexibility": "Flexibility"
+      },
+      "budget": {
+        "title": "Budget",
+        "budgetRange": "Budget Range",
+        "budgetAmount": "Specific Budget Amount",
+        "paymentPreference": "Payment Preference"
+      },
+      "contactInformation": {
+        "title": "Contact Information",
+        "name": "Name",
+        "email": "Email",
+        "company": "Company",
+        "phone": "Phone"
+      }
+    },
+    "submission": {
+      "sending": "Submitting...",
+      "sendingMobile": "Sending...",
+      "errorTitle": "Submission Error",
+      "errorDescription": "There was an issue submitting your project. Please try again.",
+      "unexpectedErrorDescription": "An unexpected error occurred. Please try again."
+    }
+  }
+}

@@ -10,8 +10,10 @@ import {
   Award 
 } from "lucide-react";
 import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function CompanyOverview() {
+  const { t } = useTranslations('investors');
   const [isMobile, setIsMobile] = useState(false);
   
   // Check if on mobile device
@@ -24,26 +26,28 @@ export default function CompanyOverview() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+  
+  // Get highlights from translations
   const highlights = [
     {
       icon: <TrendingUp className="h-6 w-6 text-primary" />,
-      title: "Consistent Growth",
-      description: "35% year-over-year revenue growth since our founding"
+      title: t('companyOverview.highlights.consistentGrowth.title'),
+      description: t('companyOverview.highlights.consistentGrowth.description')
     },
     {
       icon: <Users className="h-6 w-6 text-primary" />,
-      title: "Global Team",
-      description: "200+ talented professionals across 15 countries"
+      title: t('companyOverview.highlights.globalTeam.title'),
+      description: t('companyOverview.highlights.globalTeam.description')
     },
     {
       icon: <Globe className="h-6 w-6 text-primary" />,
-      title: "Market Reach",
-      description: "Serving clients in over 30 countries worldwide"
+      title: t('companyOverview.highlights.marketReach.title'),
+      description: t('companyOverview.highlights.marketReach.description')
     },
     {
       icon: <Award className="h-6 w-6 text-primary" />,
-      title: "Industry Recognition",
-      description: "Multiple awards for innovation and excellence"
+      title: t('companyOverview.highlights.localRecognition.title'),
+      description: t('companyOverview.highlights.localRecognition.description')
     }
   ];
 
@@ -58,16 +62,16 @@ export default function CompanyOverview() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Company Overview
+              {t('companyOverview.title')}
             </h2>
             <p className="text-lg text-muted-foreground mb-6">
-              Pledge & Grow is a leading technology company specializing in digital transformation, web and mobile development, cloud solutions, and innovative software products.
+              {t('companyOverview.description')}
             </p>
             <p className="text-lg text-muted-foreground mb-6">
-              Founded in 2020, we&apos;ve rapidly expanded our operations globally, serving clients ranging from startups to Fortune 500 companies. Our mission is to empower businesses with cutting-edge technology solutions that drive growth and innovation.
+              {t('companyOverview.mission.description')}
             </p>
             <p className="text-lg text-muted-foreground">
-              With a focus on quality, innovation, and client satisfaction, we&apos;ve established ourselves as a trusted partner for businesses looking to thrive in the digital age.
+              {t('companyOverview.vision.description')}
             </p>
           </motion.div>
           

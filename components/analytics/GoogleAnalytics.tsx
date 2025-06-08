@@ -7,8 +7,8 @@ import { useEffect, Suspense } from "react";
 // Add type declarations for Google Analytics
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer: Array<Record<string, unknown>>;
+    gtag: (...args: Array<string | Record<string, unknown> | boolean>) => void;
   }
 }
 

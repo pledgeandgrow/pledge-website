@@ -12,48 +12,70 @@ import {
   MessageSquare, 
   Lightbulb 
 } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function MembershipBenefits() {
+  const { t } = useTranslations("membership");
+  
+  const benefitIcons = {
+    exclusiveResources: <BookOpen className="h-6 w-6 text-primary" />,
+    communityAccess: <Users className="h-6 w-6 text-primary" />,
+    priorityEvents: <Calendar className="h-6 w-6 text-primary" />,
+    certificationPathways: <Award className="h-6 w-6 text-primary" />,
+    codeRepository: <Code className="h-6 w-6 text-primary" />,
+    documentationAccess: <FileText className="h-6 w-6 text-primary" />,
+    prioritySupport: <MessageSquare className="h-6 w-6 text-primary" />,
+    innovationInsights: <Lightbulb className="h-6 w-6 text-primary" />
+  };
+  
   const benefits = [
     {
-      title: "Exclusive Resources",
-      description: "Access our library of premium guides, templates, and tools to accelerate your projects.",
-      icon: <BookOpen className="h-6 w-6 text-primary" />
+      key: "exclusiveResources",
+      title: t('benefits.items.exclusiveResources.title'),
+      description: t('benefits.items.exclusiveResources.description'),
+      icon: benefitIcons.exclusiveResources
     },
     {
-      title: "Community Access",
-      description: "Connect with like-minded professionals and industry experts in our private community.",
-      icon: <Users className="h-6 w-6 text-primary" />
+      key: "communityAccess",
+      title: t('benefits.items.communityAccess.title'),
+      description: t('benefits.items.communityAccess.description'),
+      icon: benefitIcons.communityAccess
     },
     {
-      title: "Priority Events",
-      description: "Early access and reserved spots at our workshops, webinars, and conferences.",
-      icon: <Calendar className="h-6 w-6 text-primary" />
+      key: "priorityEvents",
+      title: t('benefits.items.priorityEvents.title'),
+      description: t('benefits.items.priorityEvents.description'),
+      icon: benefitIcons.priorityEvents
     },
     {
-      title: "Certification Pathways",
-      description: "Exclusive certification programs to validate your expertise and enhance your credentials.",
-      icon: <Award className="h-6 w-6 text-primary" />
+      key: "certificationPathways",
+      title: t('benefits.items.certificationPathways.title'),
+      description: t('benefits.items.certificationPathways.description'),
+      icon: benefitIcons.certificationPathways
     },
     {
-      title: "Code Repository",
-      description: "Access to our curated code libraries, components, and development resources.",
-      icon: <Code className="h-6 w-6 text-primary" />
+      key: "codeRepository",
+      title: t('benefits.items.codeRepository.title'),
+      description: t('benefits.items.codeRepository.description'),
+      icon: benefitIcons.codeRepository
     },
     {
-      title: "Documentation Access",
-      description: "Comprehensive documentation and best practices for implementing our solutions.",
-      icon: <FileText className="h-6 w-6 text-primary" />
+      key: "documentationAccess",
+      title: t('benefits.items.documentationAccess.title'),
+      description: t('benefits.items.documentationAccess.description'),
+      icon: benefitIcons.documentationAccess
     },
     {
-      title: "Priority Support",
-      description: "Dedicated support channels with faster response times for your technical questions.",
-      icon: <MessageSquare className="h-6 w-6 text-primary" />
+      key: "prioritySupport",
+      title: t('benefits.items.prioritySupport.title'),
+      description: t('benefits.items.prioritySupport.description'),
+      icon: benefitIcons.prioritySupport
     },
     {
-      title: "Innovation Insights",
-      description: "Early access to research papers, technology trends, and innovation briefings.",
-      icon: <Lightbulb className="h-6 w-6 text-primary" />
+      key: "innovationInsights",
+      title: t('benefits.items.innovationInsights.title'),
+      description: t('benefits.items.innovationInsights.description'),
+      icon: benefitIcons.innovationInsights
     }
   ];
 
@@ -68,10 +90,10 @@ export default function MembershipBenefits() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Membership Benefits
+            {t('benefits.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Our membership program offers a wide range of exclusive benefits designed to support your professional growth and business success.
+            {t('benefits.description')}
           </p>
         </motion.div>
 

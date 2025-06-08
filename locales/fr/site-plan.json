@@ -1,0 +1,212 @@
+{
+  "title": "Plan du Site",
+  "description": "Une vue d'ensemble complète de toutes les pages disponibles sur notre site web pour vous aider à naviguer dans notre présence numérique.",
+  "sections": {
+    "pledgeAndGrow": {
+      "title": "Pledge & Grow",
+      "links": {
+        "home": {
+          "name": "Accueil",
+          "description": "Notre page d'accueil avec un aperçu de nos services et de notre mission"
+        },
+        "contact": {
+          "name": "Contact",
+          "description": "Entrez en contact avec notre équipe pour des demandes et collaborations"
+        },
+        "services": {
+          "name": "Services",
+          "description": "Explorez notre gamme complète de services numériques"
+        },
+        "portfolio": {
+          "name": "Portfolio",
+          "description": "Consultez nos projets passés et les réussites de nos clients"
+        },
+        "startProject": {
+          "name": "Démarrer mon projet",
+          "description": "Commencez votre parcours numérique avec notre processus de création de projet"
+        }
+      }
+    },
+    "company": {
+      "title": "Entreprise",
+      "links": {
+        "identity": {
+          "name": "Identité",
+          "description": "Découvrez notre entreprise, notre mission et nos valeurs"
+        },
+        "progress": {
+          "name": "Progrès",
+          "description": "Suivez la croissance et les étapes de développement de notre entreprise"
+        },
+        "international": {
+          "name": "International",
+          "description": "Notre présence mondiale et nos services internationaux"
+        },
+        "ecosystem": {
+          "name": "Écosystème",
+          "description": "Notre écosystème numérique et notre approche collaborative"
+        },
+        "careers": {
+          "name": "Carrières",
+          "description": "Rejoignez notre équipe et explorez les opportunités de carrière"
+        },
+        "partners": {
+          "name": "Partenaires",
+          "description": "Notre réseau de partenaires et opportunités de collaboration"
+        },
+        "ambassadors": {
+          "name": "Ambassadeurs",
+          "description": "Nos ambassadeurs de marque et notre programme de promotion"
+        },
+        "grantsSubsidies": {
+          "name": "Subventions & Aides",
+          "description": "Opportunités de financement disponibles pour les projets numériques"
+        },
+        "businessSectors": {
+          "name": "Secteurs d'Activité",
+          "description": "Industries et secteurs que nous servons avec nos solutions numériques"
+        },
+        "membership": {
+          "name": "Adhésion",
+          "description": "Options d'adhésion et avantages pour notre communauté"
+        },
+        "discord": {
+          "name": "Discord",
+          "description": "Rejoignez notre communauté Discord pour des discussions et du support"
+        }
+      }
+    },
+    "expertise": {
+      "title": "Expertise",
+      "links": {
+        "website": {
+          "name": "Site Web",
+          "description": "Services de développement de sites web professionnels"
+        },
+        "saas": {
+          "name": "SaaS",
+          "description": "Développement et solutions de logiciels en tant que service"
+        },
+        "mobileApplication": {
+          "name": "Application Mobile",
+          "description": "Développement d'applications mobiles pour iOS et Android"
+        },
+        "software": {
+          "name": "Logiciel",
+          "description": "Développement et solutions logicielles personnalisées"
+        },
+        "videoGames": {
+          "name": "Jeux Vidéo",
+          "description": "Développement de jeux et expériences interactives"
+        },
+        "ecommerce": {
+          "name": "E-commerce",
+          "description": "Développement et optimisation de boutiques en ligne"
+        },
+        "aiAutomation": {
+          "name": "IA & Automatisation",
+          "description": "Solutions d'intelligence artificielle et d'automatisation"
+        },
+        "blockchain": {
+          "name": "Blockchain",
+          "description": "Technologie blockchain et solutions de cryptomonnaie"
+        },
+        "cybersecurity": {
+          "name": "Cybersécurité",
+          "description": "Services de sécurité numérique et de protection des données"
+        },
+        "cloudDevops": {
+          "name": "Cloud / DevOps",
+          "description": "Solutions d'infrastructure cloud et DevOps"
+        },
+        "documentation": {
+          "name": "Documentation",
+          "description": "Documentation complète et rédaction technique"
+        },
+        "uxUiDesign": {
+          "name": "Design UX/UI",
+          "description": "Services de conception d'expérience utilisateur et d'interface"
+        },
+        "seo": {
+          "name": "SEO",
+          "description": "Solutions d'optimisation pour les moteurs de recherche et de visibilité"
+        },
+        "maintenance": {
+          "name": "Maintenance",
+          "description": "Services de maintenance et de support continus"
+        },
+        "consultingTraining": {
+          "name": "Conseil / Formation",
+          "description": "Services de conseil et de formation par des experts"
+        }
+      }
+    },
+    "enterprise": {
+      "title": "Entreprise",
+      "links": {
+        "impact": {
+          "name": "Impact",
+          "description": "Nos initiatives d'impact social et environnemental"
+        },
+        "innovation": {
+          "name": "Innovation",
+          "description": "Notre approche de l'innovation et des technologies de pointe"
+        },
+        "groupe": {
+          "name": "Groupe",
+          "description": "Informations sur la structure de notre groupe d'entreprises"
+        },
+        "media": {
+          "name": "Médias",
+          "description": "Communiqués de presse, kit média et actualités de l'entreprise"
+        }
+      }
+    },
+    "resources": {
+      "title": "Ressources",
+      "links": {
+        "blog": {
+          "name": "Blog",
+          "description": "Articles, perspectives et mises à jour de notre équipe"
+        },
+        "helpCenter": {
+          "name": "Centre d'Aide",
+          "description": "Ressources d'assistance, FAQ et options de contact"
+        },
+        "references": {
+          "name": "Références",
+          "description": "Références officielles et listings pour Pledge & Grow"
+        },
+        "sitePlan": {
+          "name": "Plan du Site",
+          "description": "Vue d'ensemble complète de toutes les pages de notre site web"
+        }
+      }
+    },
+    "legal": {
+      "title": "Mentions Légales",
+      "links": {
+        "termsOfService": {
+          "name": "Conditions d'Utilisation",
+          "description": "Termes et conditions d'utilisation de nos services"
+        },
+        "privacyPolicy": {
+          "name": "Politique de Confidentialité",
+          "description": "Notre politique de confidentialité et nos pratiques de protection des données"
+        },
+        "cookiePolicy": {
+          "name": "Politique de Cookies",
+          "description": "Informations sur la façon dont nous utilisons les cookies sur notre site web"
+        },
+        "gdpr": {
+          "name": "RGPD",
+          "description": "Notre conformité au Règlement Général sur la Protection des Données"
+        },
+        "legalNotice": {
+          "name": "Mentions Légales",
+          "description": "Informations légales sur notre entreprise et notre site web"
+        }
+      }
+    }
+  }
+}

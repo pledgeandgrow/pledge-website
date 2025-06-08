@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "@/hooks/useTranslations";
 // Button import removed as it was unused
 // Link import removed as it was unused
 
 export default function AmbassadorsHero() {
+  const { t } = useTranslations('ambassadors');
   return (
     <section className="relative bg-gradient-to-b from-primary/10 to-background py-20 md:py-32 overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
@@ -15,10 +17,10 @@ export default function AmbassadorsHero() {
           className="text-center max-w-4xl mx-auto"
         >
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary">
-            Become Our Ambassador
+            {t('hero.title')}
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            Join SHARKA as an official brand representative and help us promote our mission and values worldwide.
+            {t('hero.description')}
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 text-left">
@@ -28,7 +30,7 @@ export default function AmbassadorsHero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="bg-card p-6 rounded-lg shadow-sm border border-border"
             >
-              <h3 className="text-xl font-bold mb-4">Eligibility Requirements</h3>
+              <h3 className="text-xl font-bold mb-4">{t('becomeAmbassador.responsibilities.title')}</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="bg-primary/10 p-1 rounded-full mr-3 mt-1">
@@ -36,7 +38,7 @@ export default function AmbassadorsHero() {
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                   </div>
-                  <span>Established online presence with active engagement</span>
+                  <span>{t('becomeAmbassador.responsibilities.items.represent.description')}</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-primary/10 p-1 rounded-full mr-3 mt-1">
@@ -44,7 +46,7 @@ export default function AmbassadorsHero() {
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                   </div>
-                  <span>Alignment with our brand values and mission</span>
+                  <span>{t('becomeAmbassador.responsibilities.items.promote.description')}</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-primary/10 p-1 rounded-full mr-3 mt-1">
@@ -52,7 +54,7 @@ export default function AmbassadorsHero() {
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                   </div>
-                  <span>Commitment to regular content creation and promotion</span>
+                  <span>{t('becomeAmbassador.responsibilities.items.connect.description')}</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-primary/10 p-1 rounded-full mr-3 mt-1">
@@ -60,7 +62,7 @@ export default function AmbassadorsHero() {
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                   </div>
-                  <span>Professional communication skills and reliability</span>
+                  <span>{t('becomeAmbassador.responsibilities.items.feedback.description')}</span>
                 </li>
               </ul>
             </motion.div>
@@ -71,7 +73,7 @@ export default function AmbassadorsHero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="bg-card p-6 rounded-lg shadow-sm border border-border"
             >
-              <h3 className="text-xl font-bold mb-4">Ambassador Types</h3>
+              <h3 className="text-xl font-bold mb-4">{t('ambassadorsList.regions.title')}</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="bg-primary/10 p-1 rounded-full mr-3 mt-1">
@@ -82,7 +84,7 @@ export default function AmbassadorsHero() {
                     </svg>
                   </div>
                   <div>
-                    <span className="font-medium">Global Ambassador</span>: SHARKA (France) - Our official global brand representative
+                    <span className="font-medium">{t('ambassadorsList.ambassador.globalRole')}</span>: {t('ambassadorsList.ambassador.globalExample')}
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -94,7 +96,7 @@ export default function AmbassadorsHero() {
                     </svg>
                   </div>
                   <div>
-                    <span className="font-medium">Community Ambassador</span>: None currently - Applications open for passionate community advocates
+                    <span className="font-medium">{t('ambassadorsList.ambassador.communityRole')}</span>: {t('ambassadorsList.ambassador.communityExample')}
                   </div>
                 </li>
               </ul>

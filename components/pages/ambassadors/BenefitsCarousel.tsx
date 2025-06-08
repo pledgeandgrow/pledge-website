@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Globe, Award, Users, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface BenefitCard {
   icon: React.ReactNode;
@@ -12,26 +13,27 @@ interface BenefitCard {
 }
 
 export default function BenefitsCarousel() {
+  const { t } = useTranslations('ambassadors');
   const benefits: BenefitCard[] = [
     {
       icon: <Globe className="text-primary h-6 w-6" />,
-      title: "Global Network",
-      description: "Connect with a diverse community of technology enthusiasts and professionals from around the world."
+      title: t('becomeAmbassador.benefits.globalNetwork.title'),
+      description: t('becomeAmbassador.benefits.globalNetwork.description')
     },
     {
       icon: <Award className="text-primary h-6 w-6" />,
-      title: "Exclusive Benefits",
-      description: "Gain access to exclusive resources, early product releases, and special ambassador-only events."
+      title: t('becomeAmbassador.benefits.exclusiveBenefits.title'),
+      description: t('becomeAmbassador.benefits.exclusiveBenefits.description')
     },
     {
       icon: <Users className="text-primary h-6 w-6" />,
-      title: "Community Impact",
-      description: "Make a difference in your local tech community by sharing knowledge and fostering innovation."
+      title: t('becomeAmbassador.benefits.communityImpact.title'),
+      description: t('becomeAmbassador.benefits.communityImpact.description')
     },
     {
       icon: <Megaphone className="text-primary h-6 w-6" />,
-      title: "Amplify Your Voice",
-      description: "Enhance your personal brand and establish yourself as a thought leader in your field."
+      title: t('becomeAmbassador.benefits.amplifyVoice.title'),
+      description: t('becomeAmbassador.benefits.amplifyVoice.description')
     }
   ];
 

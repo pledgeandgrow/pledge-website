@@ -1,0 +1,82 @@
+{
+  "id": "mobile-app",
+  "slug": "mobile-app",
+  "title": "Mobile Application Development",
+  "subtitle": "Create powerful, user-friendly mobile experiences",
+  "description": "We design and develop native and cross-platform mobile applications that engage users and drive business growth. Our mobile solutions are built for performance, usability, and seamless integration with your existing systems.",
+  "heroImage": "/images/expertise/mobile-app-hero.jpg",
+  "heroButton": "Start Your Mobile App Project",
+  "category": "Creation",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive mobile app development services"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "Leading frameworks for mobile development"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How mobile apps transform your business"
+    }
+  },
+  "features": [
+    {
+      "title": "Cross-Platform Development",
+      "description": "Build once, deploy everywhere with React Native",
+      "icon": "device-mobile"
+    },
+    {
+      "title": "Native Performance",
+      "description": "Fast, responsive apps that feel like native experiences",
+      "icon": "rocket"
+    },
+    {
+      "title": "Offline Functionality",
+      "description": "Apps that work even without an internet connection",
+      "icon": "cloud-off"
+    },
+    {
+      "title": "Seamless Integration",
+      "description": "Connect with your existing systems and APIs",
+      "icon": "link"
+    }
+  ],
+  "technologies": [
+    { "name": "React Native", "logo": "/images/tech/react-native.svg" },
+    { "name": "Flutter", "logo": "/images/tech/flutter.svg" },
+    { "name": "Swift", "logo": "/images/tech/swift.svg" },
+    { "name": "Kotlin", "logo": "/images/tech/kotlin.svg" },
+    { "name": "Firebase", "logo": "/images/tech/firebase.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Enhanced User Engagement",
+      "description": "Keep users connected with your brand through mobile experiences",
+      "icon": "heart"
+    },
+    {
+      "title": "Expanded Market Reach",
+      "description": "Access the growing mobile user base worldwide",
+      "icon": "globe"
+    },
+    {
+      "title": "Improved Customer Loyalty",
+      "description": "Build stronger relationships through personalized experiences",
+      "icon": "badge-check"
+    },
+    {
+      "title": "New Revenue Streams",
+      "description": "Create additional monetization opportunities",
+      "icon": "currency-dollar"
+    }
+  ],
+  "relatedExpertise": ["ux-ui-design", "e-commerce", "cloud-devops"],
+  "cta": {
+    "title": "Ready to build your mobile application?",
+    "description": "Let's discuss how we can create a powerful mobile experience that engages your users and drives growth.",
+    "buttonText": "Start Your Mobile App Project",
+    "buttonLink": "/digital-project?service=mobile-app"
+  }
+}

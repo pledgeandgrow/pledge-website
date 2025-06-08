@@ -1,19 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Euro, Calendar, Building, Users, Filter, Search, ExternalLink, ArrowRight } from "lucide-react";
+import { Euro, Calendar, Building, Users, Search, ExternalLink } from "lucide-react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 
-// Grant types
-type GrantCategory = "digital" | "innovation" | "sustainability" | "growth" | "research";
+import { useTranslations } from "@/hooks/useTranslations";
 
+// Grant interface
 interface Grant {
   id: string;
   title: string;
@@ -21,142 +18,116 @@ interface Grant {
   fundingAmount: string;
   deadline: string;
   eligibility: string[];
-  categories: GrantCategory[];
   organization: string;
   applicationLink: string;
 }
 
 export default function AvailableGrants() {
+  const { t } = useTranslations('grants-subsidies');
+
   // State for filtering and searching
-  const [activeTab, setActiveTab] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
-  const [filteredGrants, setFilteredGrants] = useState<Grant[]>([]);
-  const [selectedCategories, setSelectedCategories] = useState<GrantCategory[]>([]);
-  
-  // Available grant categories for filtering
-  const categories: { value: GrantCategory; label: string }[] = [
-    { value: "digital", label: "Digital Transformation" },
-    { value: "innovation", label: "Innovation" },
-    { value: "sustainability", label: "Sustainability" },
-    { value: "growth", label: "Business Growth" },
-    { value: "research", label: "Research & Development" }
-  ];
-  
-  // Sample grants data
-  const grants: Grant[] = [
-    {
-      id: "dts-2025",
-      title: "Digital Transformation Support 2025",
-      description: "Funding to help businesses implement digital solutions that improve efficiency, productivity, and competitiveness.",
-      fundingAmount: "Up to €50,000",
-      deadline: "September 30, 2025",
-      eligibility: ["SMEs", "Established for at least 2 years", "Fewer than 250 employees"],
-      categories: ["digital", "innovation"],
-      organization: "European Digital Innovation Hub",
-      applicationLink: "https://example.com/dts-2025"
-    },
-    {
-      id: "green-tech-fund",
-      title: "Green Technology Innovation Fund",
-      description: "Supporting businesses developing innovative solutions to environmental challenges through sustainable technology.",
-      fundingAmount: "€25,000 - €100,000",
-      deadline: "October 15, 2025",
-      eligibility: ["Startups", "SMEs", "Research institutions"],
-      categories: ["innovation", "sustainability", "research"],
-      organization: "Environmental Innovation Agency",
-      applicationLink: "https://example.com/green-tech-fund"
-    },
-    {
-      id: "sme-growth-2025",
-      title: "SME Growth Accelerator Program",
-      description: "Comprehensive support package including funding, mentoring, and resources to help small businesses scale rapidly.",
-      fundingAmount: "Up to €75,000",
-      deadline: "November 30, 2025",
-      eligibility: ["SMEs with growth potential", "3+ years in operation", "Minimum annual revenue of €100,000"],
-      categories: ["growth", "digital"],
-      organization: "Business Development Authority",
-      applicationLink: "https://example.com/sme-growth"
-    },
-    {
-      id: "ai-adoption-grant",
-      title: "AI Adoption for Business Grant",
-      description: "Funding to support the implementation of artificial intelligence solutions in business operations and services.",
-      fundingAmount: "€20,000 - €60,000",
-      deadline: "August 31, 2025",
-      eligibility: ["All business sizes", "Established for at least 1 year"],
-      categories: ["digital", "innovation", "research"],
-      organization: "National AI Initiative",
-      applicationLink: "https://example.com/ai-adoption"
-    },
-    {
-      id: "sustainable-ops-fund",
-      title: "Sustainable Operations Transition Fund",
-      description: "Supporting businesses in transitioning to more sustainable operational practices and reducing environmental impact.",
-      fundingAmount: "Up to €40,000",
-      deadline: "December 15, 2025",
-      eligibility: ["SMEs", "Large enterprises committed to sustainability goals"],
-      categories: ["sustainability", "innovation"],
-      organization: "Climate Action Partnership",
-      applicationLink: "https://example.com/sustainable-ops"
-    },
-    {
-      id: "rd-collab-grant",
-      title: "R&D Collaborative Innovation Grant",
-      description: "Funding for collaborative research and development projects between businesses and research institutions.",
-      fundingAmount: "€50,000 - €200,000",
-      deadline: "July 31, 2025",
-      eligibility: ["Businesses partnering with research institutions", "Innovative project proposals"],
-      categories: ["research", "innovation"],
-      organization: "National Research Council",
-      applicationLink: "https://example.com/rd-collab"
-    }
-  ];
-  
-  // Filter grants based on active tab, search query, and selected categories
-  useEffect(() => {
-    let results = grants;
-    
-    // Filter by tab
-    if (activeTab !== "all") {
-      results = results.filter(grant => {
-        if (activeTab === "upcoming") {
-          // Parse deadline and check if it's in the future
-          const deadlineDate = new Date(grant.deadline);
-          const currentDate = new Date();
-          return deadlineDate > currentDate;
-        }
-        return true;
-      });
-    }
-    
-    // Filter by search query
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      results = results.filter(grant => 
-        grant.title.toLowerCase().includes(query) || 
-        grant.description.toLowerCase().includes(query) ||
-        grant.organization.toLowerCase().includes(query)
-      );
-    }
-    
-    // Filter by selected categories
-    if (selectedCategories.length > 0) {
-      results = results.filter(grant => 
-        selectedCategories.some(category => grant.categories.includes(category))
-      );
-    }
-    
-    setFilteredGrants(results);
-  }, [activeTab, searchQuery, selectedCategories]);
-  
-  // Toggle category selection
-  const toggleCategory = (category: GrantCategory) => {
-    setSelectedCategories(prev => 
-      prev.includes(category)
-        ? prev.filter(c => c !== category)
-        : [...prev, category]
-    );
+
+  // Get grants data from translations
+  const createGrantsData = () => {
+    const grants: Grant[] = [
+      {
+        id: "cir",
+        title: t('availableGrants.programs.cir.title'),
+        description: t('availableGrants.programs.cir.description'),
+        fundingAmount: t('availableGrants.programs.cir.fundingAmount'),
+        deadline: t('availableGrants.programs.cir.applicationPeriod'),
+        eligibility: [t('availableGrants.programs.cir.eligibility')],
+
+        organization: "Ministère de l'Enseignement supérieur et de la Recherche",
+        applicationLink: "https://www.enseignementsup-recherche.gouv.fr/cid114521/guide-pratique-du-credit-d-impot-recherche-2021.html"
+      },
+      {
+        id: "bpifrance",
+        title: t('availableGrants.programs.bpifrance.title'),
+        description: t('availableGrants.programs.bpifrance.description'),
+        fundingAmount: t('availableGrants.programs.bpifrance.fundingAmount'),
+        deadline: t('availableGrants.programs.bpifrance.applicationPeriod'),
+        eligibility: [t('availableGrants.programs.bpifrance.eligibility')],
+
+        organization: "Bpifrance",
+        applicationLink: "https://www.bpifrance.fr/"
+      },
+      {
+        id: "fsn",
+        title: t('availableGrants.programs.fsn.title'),
+        description: t('availableGrants.programs.fsn.description'),
+        fundingAmount: t('availableGrants.programs.fsn.fundingAmount'),
+        deadline: t('availableGrants.programs.fsn.applicationPeriod'),
+        eligibility: [t('availableGrants.programs.fsn.eligibility')],
+
+        organization: "Caisse des Dépôts et Consignations",
+        applicationLink: "https://www.caissedesdepots.fr/"
+      },
+      {
+        id: "regional",
+        title: t('availableGrants.programs.regional.title'),
+        description: t('availableGrants.programs.regional.description'),
+        fundingAmount: t('availableGrants.programs.regional.fundingAmount'),
+        deadline: t('availableGrants.programs.regional.applicationPeriod'),
+        eligibility: [t('availableGrants.programs.regional.eligibility')],
+
+        organization: "Conseils Régionaux",
+        applicationLink: "https://www.regions-france.org/"
+      },
+      {
+        id: "horizonEurope",
+        title: t('availableGrants.programs.horizonEurope.title'),
+        description: t('availableGrants.programs.horizonEurope.description'),
+        fundingAmount: t('availableGrants.programs.horizonEurope.fundingAmount'),
+        deadline: t('availableGrants.programs.horizonEurope.applicationPeriod'),
+        eligibility: [t('availableGrants.programs.horizonEurope.eligibility')],
+
+        organization: "Commission Européenne",
+        applicationLink: "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en"
+      },
+      {
+        id: "digitalTransition",
+        title: t('availableGrants.programs.digitalTransition.title'),
+        description: t('availableGrants.programs.digitalTransition.description'),
+        fundingAmount: t('availableGrants.programs.digitalTransition.fundingAmount'),
+        deadline: t('availableGrants.programs.digitalTransition.applicationPeriod'),
+        eligibility: [t('availableGrants.programs.digitalTransition.eligibility')],
+
+        organization: "France Num",
+        applicationLink: "https://www.francenum.gouv.fr/"
+      },
+      {
+        id: "privateFunding",
+        title: t('availableGrants.programs.privateFunding.title'),
+        description: t('availableGrants.programs.privateFunding.description'),
+        fundingAmount: t('availableGrants.programs.privateFunding.fundingAmount'),
+        deadline: t('availableGrants.programs.privateFunding.applicationPeriod'),
+        eligibility: [t('availableGrants.programs.privateFunding.eligibility')],
+
+        organization: "Banques et institutions financières",
+        applicationLink: "https://www.economie.gouv.fr/entreprises/aides-financement-entreprises"
+      }
+    ];
+    return grants;
   };
+  
+  const grantsData: Grant[] = createGrantsData();
+  
+  // Filter grants based on search query only
+  const filteredGrants = useMemo(() => {
+    return grantsData
+      .filter((grant: Grant) => {
+        // Search filtering
+        if (!searchQuery) return true;
+        const query = searchQuery.toLowerCase();
+        return (
+          grant.title.toLowerCase().includes(query) ||
+          grant.description.toLowerCase().includes(query) ||
+          grant.fundingAmount.toLowerCase().includes(query)
+        );
+      });
+  }, [grantsData, searchQuery]);
   
   // Animation variants
   const containerVariants = {
@@ -184,65 +155,32 @@ export default function AvailableGrants() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Available Funding Opportunities</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('availableGrants.title')}</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Explore current grants and subsidies that can help finance your business growth and digital transformation initiatives.
+            {t('availableGrants.description')}
           </p>
         </motion.div>
         
         {/* Filtering and search controls */}
         <div className="mb-8 space-y-4">
           <div className="flex flex-col md:flex-row gap-4 justify-between">
-            <Tabs defaultValue="all" className="w-full md:w-auto" onValueChange={setActiveTab}>
-              <TabsList className="grid w-full md:w-auto grid-cols-2 md:grid-cols-3">
-                <TabsTrigger value="all">All Grants</TabsTrigger>
-                <TabsTrigger value="upcoming">Upcoming Deadlines</TabsTrigger>
-                <TabsTrigger value="featured" className="hidden md:block">Featured</TabsTrigger>
-              </TabsList>
-            </Tabs>
             
-            <div className="relative w-full md:w-72">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <div className="relative w-full md:w-80">
+              <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
               <Input
-                placeholder="Search grants..."
-                className="pl-9"
+                placeholder="Rechercher des aides..."
+                className="pl-8"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
             </div>
-          </div>
-          
-          <div className="flex flex-wrap gap-2 items-center">
-            <span className="flex items-center text-sm font-medium text-muted-foreground">
-              <Filter className="h-4 w-4 mr-2" /> Filter by category:
-            </span>
-            {categories.map((category) => (
-              <Badge
-                key={category.value}
-                variant={selectedCategories.includes(category.value) ? "default" : "outline"}
-                className="cursor-pointer"
-                onClick={() => toggleCategory(category.value)}
-              >
-                {category.label}
-              </Badge>
-            ))}
-            {selectedCategories.length > 0 && (
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setSelectedCategories([])}
-                className="text-xs h-7"
-              >
-                Clear filters
-              </Button>
-            )}
           </div>
         </div>
         
         {/* Grants listing */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={`grants-${activeTab}-${selectedCategories.join("-")}-${searchQuery}`}
+            key={`grants-${searchQuery}`}
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -265,7 +203,7 @@ export default function AvailableGrants() {
                       </div>
                       <div className="flex items-center gap-2">
                         <Calendar className="h-5 w-5 text-primary" />
-                        <span>Deadline: {grant.deadline}</span>
+                        <span>Échéance: {grant.deadline}</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <Building className="h-5 w-5 text-primary" />
@@ -274,7 +212,7 @@ export default function AvailableGrants() {
                       <div className="flex items-start gap-2">
                         <Users className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
                         <div>
-                          <span className="text-sm font-medium">Eligibility:</span>
+                          <span className="text-sm font-medium">Éligibilité:</span>
                           <ul className="text-sm list-disc list-inside ml-1 text-muted-foreground">
                             {grant.eligibility.map((item, index) => (
                               <li key={index}>{item}</li>
@@ -282,25 +220,13 @@ export default function AvailableGrants() {
                           </ul>
                         </div>
                       </div>
-                      <div className="flex flex-wrap gap-2 mt-3">
-                        {grant.categories.map((category) => (
-                          <Badge key={category} variant="secondary" className="text-xs">
-                            {categories.find(c => c.value === category)?.label || category}
-                          </Badge>
-                        ))}
-                      </div>
+
                     </CardContent>
                     <CardFooter className="pt-2 flex justify-between">
                       <Button asChild variant="outline" size="sm" className="gap-1">
                         <Link href={grant.applicationLink} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-3.5 w-3.5" />
-                          Visit Website
-                        </Link>
-                      </Button>
-                      <Button asChild size="sm" className="gap-1">
-                        <Link href="/contact?subject=Grant Inquiry: ${grant.title}">
-                          Get Support
-                          <ArrowRight className="h-3.5 w-3.5" />
+                          Visiter le site
                         </Link>
                       </Button>
                     </CardFooter>
@@ -314,13 +240,11 @@ export default function AvailableGrants() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
               >
-                <p className="text-lg text-muted-foreground mb-4">No grants found matching your criteria.</p>
+                <p className="text-lg text-muted-foreground mb-4">{t('availableGrants.noResults')}</p>
                 <Button onClick={() => {
                   setSearchQuery("");
-                  setSelectedCategories([]);
-                  setActiveTab("all");
                 }}>
-                  Reset Filters
+                  {t('availableGrants.clearFilters')}
                 </Button>
               </motion.div>
             )}
@@ -336,7 +260,7 @@ export default function AvailableGrants() {
           className="mt-12 bg-primary/5 p-6 rounded-xl border border-primary/10 text-center"
         >
           <p className="text-muted-foreground">
-            <span className="font-medium">Note:</span> Grant availability and criteria may change. Contact us for the most up-to-date information and personalized guidance on which funding opportunities are best suited for your business needs.
+            <span className="font-medium">{t('availableGrants.disclaimerTitle')}:</span> {t('availableGrants.disclaimer')}
           </p>
         </motion.div>
       </div>

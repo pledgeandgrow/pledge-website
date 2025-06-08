@@ -8,8 +8,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Briefcase, Lightbulb, TrendingUp, Zap } from "lucide-react";
 import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function InvestmentOpportunities() {
+  const { t } = useTranslations('investors');
   const [isMobile, setIsMobile] = useState(false);
   
   // Check if on mobile device
@@ -22,49 +24,35 @@ export default function InvestmentOpportunities() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+  
+  // Get opportunities from translations
   const opportunities = [
     {
-      title: "Verdalize",
-      status: "Active",
-      description: "AI powered financial solution that transforms how businesses manage their finances.",
-      details: [
-        "AI-driven financial analytics",
-        "Automated reporting systems",
-        "Predictive financial modeling"
-      ],
+      title: t('investmentOpportunities.opportunities.events.title'),
+      status: t('investmentOpportunities.opportunities.events.status'),
+      description: t('investmentOpportunities.opportunities.events.description'),
+      details: t('investmentOpportunities.opportunities.events.details', { returnObjects: true }) as string[],
       icon: <TrendingUp className="h-6 w-6" />
     },
     {
-      title: "Pledge & Cloud",
-      status: "Coming Soon",
-      description: "Cloud infrastructure and hosting solutions with scalable architecture for businesses of all sizes.",
-      details: [
-        "Scalable cloud infrastructure",
-        "Managed hosting services",
-        "Enterprise cloud solutions"
-      ],
+      title: t('investmentOpportunities.opportunities.cloud.title'),
+      status: t('investmentOpportunities.opportunities.cloud.status'),
+      description: t('investmentOpportunities.opportunities.cloud.description'),
+      details: t('investmentOpportunities.opportunities.cloud.details', { returnObjects: true }) as string[],
       icon: <Briefcase className="h-6 w-6" />
     },
     {
-      title: "Pledge & Properties",
-      status: "Coming Soon",
-      description: "Real estate development and property management with innovative smart building technologies.",
-      details: [
-        "Smart building technologies",
-        "Sustainable property development",
-        "Innovative living spaces"
-      ],
+      title: t('investmentOpportunities.opportunities.properties.title'),
+      status: t('investmentOpportunities.opportunities.properties.status'),
+      description: t('investmentOpportunities.opportunities.properties.description'),
+      details: t('investmentOpportunities.opportunities.properties.details', { returnObjects: true }) as string[],
       icon: <Zap className="h-6 w-6" />
     },
     {
-      title: "Pledge & Give",
-      status: "Coming Soon",
-      description: "Foundation dedicated to supporting orphans and providing essential care and opportunities.",
-      details: [
-        "Orphan support programs",
-        "Educational initiatives",
-        "Healthcare and wellbeing"
-      ],
+      title: t('investmentOpportunities.opportunities.give.title'),
+      status: t('investmentOpportunities.opportunities.give.status'),
+      description: t('investmentOpportunities.opportunities.give.description'),
+      details: t('investmentOpportunities.opportunities.give.details', { returnObjects: true }) as string[],
       icon: <Lightbulb className="h-6 w-6" />
     }
   ];
@@ -80,11 +68,10 @@ export default function InvestmentOpportunities() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Future Opportunities
+            {t('investmentOpportunities.title')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Discover current and upcoming opportunities with Pledge & Grow. 
-            We offer various ways to participate in our growth and innovation journey.
+            {t('investmentOpportunities.description')}
           </p>
         </motion.div>
 
@@ -111,7 +98,7 @@ export default function InvestmentOpportunities() {
                     </CardHeader>
                     <CardContent className="flex-grow">
                       <ul className="space-y-2">
-                        {opportunity.details.map((detail, i) => (
+                        {Array.isArray(opportunity.details) ? opportunity.details.map((detail, i) => (
                           <li key={i} className="flex items-start">
                             <div className="rounded-full bg-primary/10 p-1 mr-2 mt-0.5">
                               <svg
@@ -124,7 +111,20 @@ export default function InvestmentOpportunities() {
                             </div>
                             <span className="text-sm text-muted-foreground">{detail}</span>
                           </li>
-                        ))}
+                        )) : (
+                          <li className="flex items-start">
+                            <div className="rounded-full bg-primary/10 p-1 mr-2 mt-0.5">
+                              <svg
+                                className="h-2 w-2 fill-primary"
+                                viewBox="0 0 6 6"
+                                aria-hidden="true"
+                              >
+                                <circle cx="3" cy="3" r="3" />
+                              </svg>
+                            </div>
+                            <span className="text-sm text-muted-foreground">{opportunity.details ? (opportunity.details as unknown as string) : ''}</span>
+                          </li>
+                        )}
                       </ul>
                     </CardContent>
                     {/* Learn More button removed as requested */}
@@ -161,7 +161,7 @@ export default function InvestmentOpportunities() {
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <ul className="space-y-2">
-                      {opportunity.details.map((detail, i) => (
+                      {Array.isArray(opportunity.details) ? opportunity.details.map((detail, i) => (
                         <li key={i} className="flex items-start">
                           <div className="rounded-full bg-primary/10 p-1 mr-2 mt-0.5">
                             <svg
@@ -174,7 +174,20 @@ export default function InvestmentOpportunities() {
                           </div>
                           <span className="text-sm text-muted-foreground">{detail}</span>
                         </li>
-                      ))}
+                      )) : (
+                        <li className="flex items-start">
+                          <div className="rounded-full bg-primary/10 p-1 mr-2 mt-0.5">
+                            <svg
+                              className="h-2 w-2 fill-primary"
+                              viewBox="0 0 6 6"
+                              aria-hidden="true"
+                            >
+                              <circle cx="3" cy="3" r="3" />
+                            </svg>
+                          </div>
+                          <span className="text-sm text-muted-foreground">{opportunity.details ? (opportunity.details as unknown as string) : ''}</span>
+                        </li>
+                      )}
                     </ul>
                   </CardContent>
                   {/* Learn More button removed as requested */}

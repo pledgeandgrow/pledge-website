@@ -1,0 +1,83 @@
+{
+  "id": "e-commerce",
+  "slug": "e-commerce",
+  "title": "E-commerce Solutions",
+  "subtitle": "Build powerful online stores that drive sales and growth",
+  "description": "We create custom e-commerce solutions that help businesses sell products and services online effectively. From small boutique shops to large-scale marketplaces, our e-commerce platforms are designed for conversion, scalability, and seamless customer experiences.",
+  "heroImage": "/images/expertise/e-commerce-hero.jpg",
+  "heroButton": "Start Your E-commerce Project",
+  "category": "Creation",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive e-commerce solutions for your business"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "Leading platforms and tools for online stores"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How e-commerce transforms your business"
+    }
+  },
+  "features": [
+    {
+      "title": "Customized Shopping Experience",
+      "description": "Tailored user journeys that guide customers to purchase",
+      "icon": "shopping-cart"
+    },
+    {
+      "title": "Secure Payment Processing",
+      "description": "Multiple payment options with enterprise-grade security",
+      "icon": "credit-card"
+    },
+    {
+      "title": "Inventory Management",
+      "description": "Real-time stock tracking and automated notifications",
+      "icon": "clipboard-list"
+    },
+    {
+      "title": "Mobile Optimization",
+      "description": "Seamless shopping experience across all devices",
+      "icon": "device-mobile"
+    }
+  ],
+  "technologies": [
+    { "name": "Shopify", "logo": "/images/tech/shopify.svg" },
+    { "name": "WooCommerce", "logo": "/images/tech/woocommerce.svg" },
+    { "name": "Squarespace", "logo": "/images/tech/squarespace.svg" },
+    { "name": "Webflow", "logo": "/images/tech/webflow.svg" },
+    { "name": "Next.js", "logo": "/images/tech/nextjs.svg" },
+    { "name": "Stripe", "logo": "/images/tech/stripe.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Increased Sales",
+      "description": "Convert more visitors into customers with optimized checkout flows",
+      "icon": "trending-up"
+    },
+    {
+      "title": "Global Reach",
+      "description": "Sell to customers anywhere, anytime with 24/7 availability",
+      "icon": "globe"
+    },
+    {
+      "title": "Scalability",
+      "description": "Easily grow your store as your business expands",
+      "icon": "scale"
+    },
+    {
+      "title": "Data-Driven Insights",
+      "description": "Make informed decisions with comprehensive analytics",
+      "icon": "chart-pie"
+    }
+  ],
+  "relatedExpertise": ["website", "digital-marketing", "seo"],
+  "cta": {
+    "title": "Ready to boost your online sales?",
+    "description": "Let's create an e-commerce solution that converts visitors into loyal customers.",
+    "buttonText": "Start Your E-commerce Project",
+    "buttonLink": "/digital-project?service=e-commerce"
+  }
+}

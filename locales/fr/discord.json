@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "Communauté Discord | Pledge & Grow",
+    "description": "Rejoignez notre communauté Discord pour vous connecter avec des professionnels partageant les mêmes idées, obtenir un soutien en temps réel et rester informé des derniers événements et ressources de Pledge & Grow."
+  },
+  "hero": {
+    "title": "Rejoignez Notre Communauté Discord",
+    "description": "Connectez-vous avec des professionnels partageant les mêmes idées, obtenez un soutien en temps réel et restez informé des derniers événements et ressources de Pledge & Grow.",
+    "joinButton": "Rejoindre Discord",
+    "learnMoreButton": "En Savoir Plus",
+    "imageAlt": "Communauté Discord de Pledge & Grow",
+    "memberCount": "{{count}}+ membres et en croissance",
+    "activeNow": "{{count}}+ actifs maintenant"
+  },
+  "benefits": {
+    "title": "Pourquoi Rejoindre Notre Discord",
+    "description": "Notre serveur Discord est plus qu'une simple plateforme de discussion—c'est une communauté dynamique où vous pouvez apprendre, vous connecter et évoluer avec d'autres professionnels.",
+    "items": {
+      "realTimeSupport": {
+        "title": "Soutien en Temps Réel",
+        "description": "Obtenez une aide immédiate de notre équipe et des membres de la communauté chaque fois que vous en avez besoin."
+      },
+      "networking": {
+        "title": "Opportunités de Réseautage",
+        "description": "Connectez-vous avec des professionnels de l'industrie, des partenaires potentiels et des personnes partageant les mêmes idées."
+      },
+      "liveEvents": {
+        "title": "Événements en Direct",
+        "description": "Participez à des sessions de questions-réponses, des webinaires et des ateliers organisés directement sur notre serveur Discord."
+      },
+      "voiceChannels": {
+        "title": "Canaux Vocaux",
+        "description": "Rejoignez des discussions vocales, des sessions collaboratives et des réunions communautaires."
+      },
+      "exclusiveResources": {
+        "title": "Ressources Exclusives",
+        "description": "Accédez à des guides, des tutoriels et des ressources partagés uniquement avec notre communauté Discord."
+      },
+      "earlyUpdates": {
+        "title": "Mises à Jour Anticipées",
+        "description": "Soyez les premiers à connaître les nouvelles fonctionnalités, services et annonces de l'entreprise."
+      },
+      "globalCommunity": {
+        "title": "Communauté Mondiale",
+        "description": "Rejoignez une communauté diversifiée de professionnels du monde entier."
+      },
+      "safeEnvironment": {
+        "title": "Environnement Sécurisé",
+        "description": "Profitez d'un espace modéré qui favorise des discussions respectueuses et productives."
+      }
+    }
+  },
+  "channels": {
+    "title": "Canaux Discord",
+    "description": "Notre serveur est organisé en différents canaux pour vous aider à trouver les informations et le soutien dont vous avez besoin.",
+    "categories": {
+      "welcome": {
+        "title": "Bienvenue & Annonces",
+        "description": "Commencez avec notre communauté et restez informé des annonces importantes."
+      },
+      "general": {
+        "title": "Discussion Générale",
+        "description": "Discutez de sujets liés à l'industrie, partagez des idées et connectez-vous avec d'autres membres."
+      },
+      "support": {
+        "title": "Support & Aide",
+        "description": "Obtenez de l'aide pour les problèmes techniques, les questions sur les produits et plus encore."
+      },
+      "resources": {
+        "title": "Ressources & Apprentissage",
+        "description": "Accédez à du contenu éducatif, des guides et du matériel d'apprentissage."
+      },
+      "events": {
+        "title": "Événements & Webinaires",
+        "description": "Informations sur les événements à venir, les webinaires et les activités communautaires."
+      }
+    }
+  },
+  "guidelines": {
+    "title": "Directives Communautaires",
+    "description": "Pour assurer une expérience positive à tous les membres, nous demandons à chacun de suivre ces directives :",
+    "rules": {
+      "respect": {
+        "title": "Soyez Respectueux",
+        "description": "Traitez tous les membres avec respect et courtoisie. Le harcèlement et la discrimination ne sont pas tolérés."
+      },
+      "constructive": {
+        "title": "Soyez Constructif",
+        "description": "Fournissez des commentaires utiles et contribuez positivement aux discussions."
+      },
+      "ontopic": {
+        "title": "Restez dans le Sujet",
+        "description": "Utilisez les canaux pour leur objectif prévu afin de garder les discussions organisées."
+      },
+      "privacy": {
+        "title": "Respectez la Vie Privée",
+        "description": "Ne partagez pas d'informations personnelles vous concernant ou concernant d'autres personnes sans consentement."
+      }
+    }
+  },
+  "cta": {
+    "title": "Prêt à Rejoindre Notre Communauté ?",
+    "description": "Connectez-vous avec des professionnels, obtenez du soutien et restez informé des derniers développements. Notre communauté Discord vous attend !",
+    "joinButton": "Rejoindre Discord",
+    "contactButton": "Nous Contacter"
+  }
+}

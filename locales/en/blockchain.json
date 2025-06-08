@@ -1,0 +1,82 @@
+{
+  "id": "blockchain",
+  "slug": "blockchain",
+  "title": "Blockchain Solutions",
+  "subtitle": "Build secure, transparent, and decentralized applications",
+  "description": "We develop custom blockchain solutions that enhance security, transparency, and efficiency for businesses. From smart contracts to decentralized applications, our blockchain expertise helps you leverage this transformative technology for real business value.",
+  "heroImage": "/images/expertise/blockchain-hero.jpg",
+  "heroButton": "Start Your Blockchain Project",
+  "category": "Innovation",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive blockchain solutions for your business"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "Leading blockchain technologies and frameworks"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How blockchain technology transforms business"
+    }
+  },
+  "features": [
+    {
+      "title": "Smart Contracts",
+      "description": "Self-executing contracts with terms directly written into code",
+      "icon": "document-check"
+    },
+    {
+      "title": "Decentralized Applications",
+      "description": "Apps that run on a peer-to-peer network of computers",
+      "icon": "cube-transparent"
+    },
+    {
+      "title": "Tokenization",
+      "description": "Convert real-world assets into digital tokens",
+      "icon": "currency-dollar"
+    },
+    {
+      "title": "Private Blockchains",
+      "description": "Secure, permissioned networks for enterprise use",
+      "icon": "lock-closed"
+    }
+  ],
+  "technologies": [
+    { "name": "Rust", "logo": "/images/tech/rust.svg" },
+    { "name": "Solidity", "logo": "/images/tech/solidity.svg" },
+    { "name": "Python", "logo": "/images/tech/python.svg" },
+    { "name": "Web3.js", "logo": "/images/tech/web3js.svg" },
+    { "name": "Hedera", "logo": "/images/tech/hedera.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Enhanced Security",
+      "description": "Cryptographic protection against tampering and fraud",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Increased Transparency",
+      "description": "Immutable record of all transactions and changes",
+      "icon": "eye"
+    },
+    {
+      "title": "Reduced Costs",
+      "description": "Eliminate intermediaries and streamline processes",
+      "icon": "banknotes"
+    },
+    {
+      "title": "Business Innovation",
+      "description": "Enable new business models and revenue streams",
+      "icon": "sparkles"
+    }
+  ],
+  "relatedExpertise": ["cybersecurity", "cloud-services", "ai-solutions"],
+  "cta": {
+    "title": "Ready to explore blockchain for your business?",
+    "description": "Let's discuss how this transformative technology can solve your challenges and create new opportunities.",
+    "buttonText": "Start Your Blockchain Project",
+    "buttonLink": "/digital-project?service=blockchain"
+  }
+}

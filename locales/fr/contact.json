@@ -1,0 +1,84 @@
+{
+  "pageTitle": "Contactez-nous",
+  "pageDescription": "Entrez en contact avec notre équipe pour des renseignements, du support, ou pour discuter de votre projet.",
+  "form": {
+    "title": "Entrez en Contact",
+    "description": "Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.",
+    "nameLabel": "Votre Nom",
+    "namePlaceholder": "Entrez votre nom complet",
+    "emailLabel": "Adresse Email",
+    "emailPlaceholder": "Entrez votre adresse email",
+    "companyLabel": "Entreprise (Optionnel)",
+    "companyPlaceholder": "Entrez le nom de votre entreprise",
+    "phoneLabel": "Numéro de Téléphone (Optionnel)",
+    "phonePlaceholder": "Entrez votre numéro de téléphone",
+    "subjectLabel": "Sujet",
+    "subjectPlaceholder": "De quoi s'agit-il?",
+    "messageLabel": "Votre Message",
+    "messagePlaceholder": "Parlez-nous de votre projet ou de votre demande",
+    "submitButton": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "successMessage": "Merci !",
+    "successDescription": "Votre message a été reçu. Nous vous répondrons dans les plus brefs délais.",
+    "sendAnother": "Envoyer un autre message",
+    "errorMessage": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer."
+  },
+  "info": {
+    "title": "Informations de Contact",
+    "description": "Vous avez des questions ou besoin d'assistance? Contactez-nous par l'un de ces canaux.",
+    "supportTitle": "Support",
+    "commercialTitle": "Commercial",
+    "addressLabel": "Adresse",
+    "businesshoursLabel": "Heures d'Ouverture",
+    "addressText": "16 Rue Théroigne de Méricourt, 75013 Paris",
+    "businessHours": "Lundi - Vendredi: 9h00 - 18h00",
+    "socialTitle": "Suivez-nous",
+    "email": {
+      "title": "Email",
+      "general": "contact@pledgeandgrow.com",
+      "support": "support@pledgeandgrow.com"
+    },
+    "phone": {
+      "title": "Téléphone",
+      "main": "+33 1 23 45 67 89",
+      "support": "+33 1 23 45 67 90"
+    },
+    "hours": {
+      "title": "Heures d'Ouverture",
+      "weekdays": "Lundi - Vendredi: 9h00 - 18h00",
+      "weekends": "Samedi - Dimanche: Fermé"
+    }
+  },
+  "page": {
+    "loading": "Chargement de la page de contact..."
+  },
+  "map": {
+    "title": "Notre Emplacement",
+    "description": "Visitez-nous à notre bureau: 16 Rue Théroigne de Méricourt, 75013 Paris.",
+    "loading": "Chargement de la carte...",
+    "error": "Impossible de charger la carte. Veuillez vérifier votre connexion.",
+    "retry": "Réessayer"
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "description": "Trouvez des réponses aux questions courantes sur nos services et processus.",
+    "questions": [
+      {
+        "question": "Dans quel délai pouvez-vous répondre à ma demande?",
+        "answer": "Nous répondons généralement à toutes les demandes dans un délai de 24 à 48 heures ouvrables. Pour les questions urgentes, veuillez appeler directement notre ligne d'assistance."
+      },
+      {
+        "question": "Proposez-vous des services à l'international?",
+        "answer": "Oui, nous travaillons avec des clients du monde entier et avons l'expérience de la gestion de projets internationaux dans différents fuseaux horaires."
+      },
+      {
+        "question": "Quelles informations dois-je inclure dans ma demande initiale?",
+        "answer": "Pour nous aider à répondre le plus efficacement possible, veuillez inclure le calendrier de votre projet, la fourchette budgétaire et les objectifs ou défis spécifiques que vous souhaitez relever."
+      },
+      {
+        "question": "Puis-je planifier une consultation avant de m'engager dans un projet?",
+        "answer": "Absolument! Nous proposons des consultations initiales gratuites pour discuter de vos besoins et déterminer si nous sommes le bon partenaire pour votre projet."
+      }
+    ]
+  }
+}

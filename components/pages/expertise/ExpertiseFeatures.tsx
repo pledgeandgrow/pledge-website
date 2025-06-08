@@ -44,8 +44,8 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function ExpertiseFeatures({ 
   features, 
-  title = "Key Features", 
-  subtitle = "Everything you need for success" 
+  title = "Features", 
+  subtitle = "What we offer"
 }: ExpertiseFeaturesProps) {
   return (
     <section className="py-16 bg-background">
@@ -57,8 +57,12 @@ export default function ExpertiseFeatures({
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">{title}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">{subtitle}</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              {title}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {subtitle}
+            </p>
           </motion.div>
         </div>
         
@@ -75,8 +79,12 @@ export default function ExpertiseFeatures({
               <div className="text-primary mb-4">
                 {feature.icon && iconMap[feature.icon] ? iconMap[feature.icon] : <Code className="h-6 w-6" />}
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">
+                {feature.title}
+              </h3>
+              <p className="text-muted-foreground">
+                {feature.description}
+              </p>
             </motion.div>
           ))}
         </div>

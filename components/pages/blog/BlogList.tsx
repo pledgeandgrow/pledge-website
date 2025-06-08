@@ -25,10 +25,13 @@ import {
   PaginationPrevious 
 } from "../../../components/ui/pagination";
 import { CalendarIcon, Clock, Filter, Search, X, ChevronLeft, ChevronRight } from "lucide-react";
-import { articles, getAllCategories, searchArticles, getArticlesByCategory, Article } from "@/data/blog-data";
+import { useArticles, useAllCategories, useSearchArticles, Article } from "@/data/blog-data-i18n";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function BlogList() {
-  const allBlogPosts: Article[] = articles;
+  const { t } = useTranslations('blog');
+  const allBlogPosts: Article[] = useArticles();
+  const searchResults = useSearchArticles(""); // Initialize with empty search
 
   // State for filters and pagination
   const [searchTerm, setSearchTerm] = useState("");
@@ -43,22 +46,29 @@ export default function BlogList() {
   // Mobile carousel state
   const [mobileCurrentIndex, setMobileCurrentIndex] = useState(0);
 
-  // Filter posts based on active filters
+  // Reset filters when blog posts change
+  useEffect(() => {
+    setFilteredPosts(allBlogPosts);
+    setCurrentPage(1);
+  }, [allBlogPosts]);
+
+  // Filter posts when filters change
   useEffect(() => {
     let results = allBlogPosts;
     
     if (activeFilters.search) {
-      results = searchArticles(activeFilters.search);
+      results = searchResults.filter(post => 
+        post.title.toLowerCase().includes(activeFilters.search.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(activeFilters.search.toLowerCase())
+      );
     }
     
-    if (activeFilters.category !== "all") {
-      results = activeFilters.search ? 
-        results.filter(post => post.category === activeFilters.category) : 
-        getArticlesByCategory(activeFilters.category);
+    if (activeFilters.category && activeFilters.category !== "all") {
+      results = results.filter(post => post.category === activeFilters.category);
     }
     
     setFilteredPosts(results);
-  }, [activeFilters, allBlogPosts]);
+  }, [activeFilters, allBlogPosts, searchResults]);
 
   // Pagination settings
   const postsPerPage = 6;
@@ -138,6 +148,9 @@ export default function BlogList() {
     return items;
   };
 
+  // Get all categories for the filter
+  const categories = ["all", ...useAllCategories()];
+
   return (
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
@@ -148,9 +161,9 @@ export default function BlogList() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">All Articles</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">{t('pageTitle')}</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-center mb-8">
-            Browse our collection of articles on digital transformation, technology innovation, and business growth.
+            {t('pageDescription')}
           </p>
           
           {/* Search and filter */}
@@ -160,7 +173,7 @@ export default function BlogList() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
                   type="text"
-                  placeholder="Search articles..."
+                  placeholder={t('searchPlaceholder')}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="pl-10"
@@ -168,12 +181,12 @@ export default function BlogList() {
               </div>
               <Select value={selectedCategory} onValueChange={(value) => setSelectedCategory(value)}>
                 <SelectTrigger>
-                  <SelectValue placeholder="Select category" />
+                  <SelectValue placeholder={t('filterByCategory')} />
                 </SelectTrigger>
                 <SelectContent>
-                  {["all", ...getAllCategories()].map((category) => (
+                  {categories.map((category) => (
                     <SelectItem key={category} value={category}>
-                      {category === "all" ? "All Categories" : category}
+                      {category === "all" ? t('allCategories') : category}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -184,7 +197,7 @@ export default function BlogList() {
                   className="flex-1"
                 >
                   <Filter className="h-4 w-4 mr-2" />
-                  Apply Filters
+                  {t('filterByCategory')}
                 </Button>
                 <Button 
                   variant="outline" 
@@ -205,16 +218,16 @@ export default function BlogList() {
               <div className="flex flex-wrap gap-2 mt-4">
                 {activeFilters.search && (
                   <Badge variant="secondary" className="flex items-center gap-1">
-                    Search: {activeFilters.search}
+                    {t('searchPlaceholder').replace('...', '')}: {activeFilters.search}
                   </Badge>
                 )}
                 {activeFilters.category !== "all" && (
                   <Badge variant="secondary" className="flex items-center gap-1">
-                    Category: {activeFilters.category}
+                    {t('category')}: {activeFilters.category}
                   </Badge>
                 )}
                 <div className="text-sm text-muted-foreground ml-2">
-                  {filteredPosts.length} {filteredPosts.length === 1 ? 'result' : 'results'}
+                  {filteredPosts.length} {filteredPosts.length === 1 ? t('noPosts') : t('noPosts')}
                 </div>
               </div>
             )}
@@ -245,6 +258,11 @@ export default function BlogList() {
                               {post.category}
                             </Badge>
                           </div>
+                          <div className="absolute bottom-4 right-4">
+                            <Button variant="link" size="sm" className="p-0 h-auto font-medium">
+                              {t('readMore')}
+                            </Button>
+                          </div>
                         </div>
                         <CardHeader className="pb-2">
                           <CardTitle className="text-xl line-clamp-2 hover:text-primary transition-colors">
@@ -258,7 +276,7 @@ export default function BlogList() {
                         </CardContent>
                         <CardFooter className="flex items-center justify-between pt-0 text-sm text-muted-foreground">
                           <div className="flex items-center gap-2">
-                            <span>Nesrine CHTINI</span>
+                            <span>{post.author.name}</span>
                           </div>
                           <div className="flex items-center gap-4">
                             <div className="flex items-center gap-1">
@@ -267,7 +285,7 @@ export default function BlogList() {
                             </div>
                             <div className="flex items-center gap-1">
                               <Clock className="h-3.5 w-3.5" />
-                              <span>{post.readTime}</span>
+                              <span className="text-xs text-muted-foreground">{t('readTime', { time: post.readTime, defaultValue: '{{time}} min read' })}</span>
                             </div>
                           </div>
                         </CardFooter>
@@ -325,6 +343,11 @@ export default function BlogList() {
                                 {currentPosts[mobileCurrentIndex].category}
                               </Badge>
                             </div>
+                            <div className="absolute bottom-4 right-4">
+                              <Button variant="link" size="sm" className="p-0 h-auto font-medium">
+                                {t('readMore')}
+                              </Button>
+                            </div>
                           </div>
                           <CardHeader className="pb-2">
                             <CardTitle className="text-xl line-clamp-2 hover:text-primary transition-colors">
@@ -338,7 +361,7 @@ export default function BlogList() {
                           </CardContent>
                           <CardFooter className="flex items-center justify-between pt-0 text-sm text-muted-foreground">
                             <div className="flex items-center gap-2">
-                              <span>Nesrine CHTINI</span>
+                              <span>{currentPosts[mobileCurrentIndex].author.name}</span>
                             </div>
                             <div className="flex items-center gap-4">
                               <div className="flex items-center gap-1">
@@ -347,7 +370,7 @@ export default function BlogList() {
                               </div>
                               <div className="flex items-center gap-1">
                                 <Clock className="h-3.5 w-3.5" />
-                                <span>{currentPosts[mobileCurrentIndex].readTime}</span>
+                                <span className="text-xs text-muted-foreground">{t('readTime', { time: currentPosts[mobileCurrentIndex].readTime, defaultValue: '{{time}} min read' })}</span>
                               </div>
                             </div>
                           </CardFooter>
@@ -371,13 +394,13 @@ export default function BlogList() {
               </div>
             </>
           ) : (
-            <div className="text-center py-12">
-              <p className="text-lg text-muted-foreground mb-4">No articles found matching your criteria.</p>
+            <div className="text-center mt-8">
+              <p className="text-lg text-muted-foreground mb-4">{t('noPosts')}</p>
               <Button onClick={() => {
                 setActiveFilters({ search: "", category: "all" });
                 setSearchTerm("");
                 setSelectedCategory("all");
-              }} variant="outline">Clear Filters</Button>
+              }} variant="outline">{t('clearFilters', { defaultValue: 'Clear Filters' })}</Button>
             </div>
           )}
           

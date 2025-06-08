@@ -1,16 +1,15 @@
 "use client";
 
-// useState import removed as it was unused
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
 import Link from "next/link";
-// Switch import removed as it was unused
-// Label import removed as it was unused
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface PlanFeature {
+  key: string;
   name: string;
   included: boolean;
 }
@@ -26,22 +25,24 @@ interface Plan {
 }
 
 export default function MembershipPlans() {
+  const { t } = useTranslations("membership");
+  
   const plan: Plan = {
     id: "premium",
-    name: "Premium Membership",
-    description: "Exclusive benefits for businesses requiring dedicated support and premium service.",
+    name: t('plans.premium.name'),
+    description: t('plans.premium.description'),
     annualPrice: 15000,
-    buttonText: "Apply Now",
+    buttonText: t('plans.premium.buttonText'),
     buttonVariant: "default",
     features: [
-      { name: "Premium Technical Support", included: true },
-      { name: "Full Maintenance Coverage", included: true },
-      { name: "Extra Support and Care", included: true },
-      { name: "Dedicated Assigned Consultant", included: true },
-      { name: "No Waiting List for Urgent Issues", included: true },
-      { name: "Exclusive Partner Discounts", included: true },
-      { name: "Priority Feature Requests", included: true },
-      { name: "Quarterly Strategy Sessions", included: true },
+      { key: "premiumSupport", name: t('plans.premium.features.premiumSupport'), included: true },
+      { key: "maintenanceCoverage", name: t('plans.premium.features.maintenanceCoverage'), included: true },
+      { key: "extraSupport", name: t('plans.premium.features.extraSupport'), included: true },
+      { key: "dedicatedConsultant", name: t('plans.premium.features.dedicatedConsultant'), included: true },
+      { key: "noWaitingList", name: t('plans.premium.features.noWaitingList'), included: true },
+      { key: "exclusiveDiscounts", name: t('plans.premium.features.exclusiveDiscounts'), included: true },
+      { key: "priorityFeatures", name: t('plans.premium.features.priorityFeatures'), included: true },
+      { key: "quarterlyStrategy", name: t('plans.premium.features.quarterlyStrategy'), included: true },
     ]
   };
 
@@ -56,11 +57,10 @@ export default function MembershipPlans() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Premium Membership Plan
+            {t('plans.title')}
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Our exclusive membership plan offers comprehensive support and premium services 
-            for businesses that require dedicated technical assistance.
+            {t('plans.description')}
           </p>
         </motion.div>
 
@@ -75,7 +75,7 @@ export default function MembershipPlans() {
             <Card className="w-full flex flex-col relative border-primary shadow-lg">
               <div className="absolute top-0 right-0 transform translate-x-2 -translate-y-2">
                 <Badge className="bg-primary text-primary-foreground">
-                  Premium
+                  {t('plans.badge')}
                 </Badge>
               </div>
               <CardHeader>
@@ -88,13 +88,13 @@ export default function MembershipPlans() {
                     €{plan.annualPrice.toLocaleString()}
                   </p>
                   <p className="text-muted-foreground text-sm">
-                    per year
+                    {t('plans.premium.period')}
                   </p>
                 </div>
                 
                 <ul className="space-y-3">
-                  {plan.features.map((feature: PlanFeature, i: number) => (
-                    <li key={i} className="flex items-start">
+                  {plan.features.map((feature: PlanFeature) => (
+                    <li key={feature.key} className="flex items-start">
                       <Check className="mr-2 h-5 w-5 text-primary flex-shrink-0" />
                       <span>
                         {feature.name}

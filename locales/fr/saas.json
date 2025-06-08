@@ -1,0 +1,82 @@
+{
+  "id": "saas",
+  "slug": "saas",
+  "title": "Développement SaaS",
+  "subtitle": "Construisez des solutions logicielles évolutives basées sur le cloud",
+  "description": "Nous concevons et développons des applications Software-as-a-Service qui résolvent de vrais problèmes d'entreprise. Nos solutions SaaS sont construites pour l'évolutivité, la sécurité et la satisfaction des utilisateurs.",
+  "heroImage": "/images/expertise/saas-hero.jpg",
+  "heroButton": "Démarrer Votre Projet SaaS",
+  "category": "Création",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Des solutions SaaS complètes pour votre entreprise"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Les meilleures technologies pour votre solution SaaS"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Pourquoi choisir un modèle SaaS pour votre entreprise"
+    }
+  },
+  "features": [
+    {
+      "title": "Architecture Cloud",
+      "description": "Infrastructure évolutive qui grandit avec votre entreprise",
+      "icon": "cloud"
+    },
+    {
+      "title": "Multi-locataire",
+      "description": "Isolation sécurisée des données entre différents clients",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Gestion des Abonnements",
+      "description": "Facturation flexible et gestion des abonnements",
+      "icon": "credit-card"
+    },
+    {
+      "title": "Tableau de Bord Analytique",
+      "description": "Insights sur les modèles d'utilisation et les métriques commerciales",
+      "icon": "chart-pie"
+    }
+  ],
+  "technologies": [
+    { "name": "Node.js", "logo": "/images/tech/nodejs.svg" },
+    { "name": "React", "logo": "/images/tech/react.svg" },
+    { "name": "Angular", "logo": "/images/tech/angular.svg" },
+    { "name": "Java Spring", "logo": "/images/tech/spring.svg" },
+    { "name": "Docker", "logo": "/images/tech/docker.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Revenus Récurrents",
+      "description": "Modèle basé sur l'abonnement pour des revenus prévisibles",
+      "icon": "currency-dollar"
+    },
+    {
+      "title": "Évolutivité",
+      "description": "Passez facilement de dizaines à des milliers d'utilisateurs",
+      "icon": "arrow-trending-up"
+    },
+    {
+      "title": "Coût d'Acquisition Client Réduit",
+      "description": "Intégration efficace et capacités en libre-service",
+      "icon": "user-plus"
+    },
+    {
+      "title": "Amélioration Continue",
+      "description": "Mises à jour régulières et améliorations des fonctionnalités",
+      "icon": "sparkles"
+    }
+  ],
+  "relatedExpertise": ["software", "ai-automation", "cloud-solutions"],
+  "cta": {
+    "title": "Prêt à lancer votre produit SaaS?",
+    "description": "Discutons de la façon dont nous pouvons transformer votre idée en une solution SaaS évolutive et rentable.",
+    "buttonText": "Démarrer Votre Projet SaaS",
+    "buttonLink": "/digital-project?service=saas"
+  }
+}

@@ -1,0 +1,972 @@
+{
+  "title": "Notre Portfolio",
+  "subtitle": "Découvrez nos histoires de réussite client",
+  "search": "Rechercher des projets",
+  "findProjects": "Trouver des projets",
+  "resetFilters": "Réinitialiser les filtres",
+  "filters": {
+    "industry": "Industrie",
+    "year": "Année",
+    "all": "Tous"
+  },
+  "viewDetails": "Voir les détails",
+  "more": "de plus",
+  "logo": "logo",
+  "tags": {
+    "deliverables": "Livrables",
+    "technologies": "Technologies"
+  },
+  "modal": {
+    "close": "Fermer",
+    "tabs": {
+      "general": "Général",
+      "methodology": "Méthodologie",
+      "outcome": "Résultats"
+    },
+    "sections": {
+      "about": "À propos du projet",
+      "needs": "Besoins du client",
+      "deliverables": "Livrables",
+      "approach": "Notre approche",
+      "technologies": "Technologies",
+      "languages": "Langages de programmation",
+      "frameworks": "Frameworks",
+      "libraries": "Bibliothèques",
+      "apis": "APIs",
+      "benefits": "Avantages",
+      "improvements": "Améliorations"
+    },
+    "testimonial": "Témoignage client"
+  },
+  "pagination": {
+    "previous": "Précédent",
+    "next": "Suivant",
+    "showing": "Affichage de {{start}} à {{end}} sur {{total}} projets",
+    "page": "Page",
+    "of": "sur",
+    "noResults": "Aucun résultat"
+  },
+  "noResults": "Aucun projet trouvé correspondant à vos critères de recherche.",
+  "projects": {
+    "14": {
+      "name": "Cabinet Michou",
+      "logo": "/images/portfolio/cabinet-michou-logo.png",
+      "description": "Création complète d'un site web avec back-office pour une agence immobilière, comprenant la gestion des annonces, un portail client et un système de prise de rendez-vous.",
+      "industry": "Immobilier",
+      "year": 2025,
+      "deliverables": [
+        "Site Web Responsive",
+        "Système de Gestion Immobilière",
+        "Portail Client",
+        "Fonctionnalité de Recherche Avancée"
+      ],
+      "needs": [
+        "Créer une présence en ligne professionnelle pour l'agence immobilière",
+        "Mettre en place un système complet de gestion des annonces immobilières",
+        "Développer un portail client sécurisé pour acheteurs et vendeurs",
+        "Simplifier le processus de recherche de biens et de prise de rendez-vous"
+      ],
+      "methodology": {
+        "approach": "Nous avons développé une solution centrée sur l'utilisateur avec un accent sur la présentation des biens et l'efficacité de gestion. Le back-office a été conçu pour simplifier la gestion des annonces tandis que l'interface utilisateur offre une expérience de recherche immobilière intuitive.",
+        "technologies": ["Système de Gestion Immobilière", "Optimisation d'Images", "Planification de Rendez-vous", "Chiffrement SSL"],
+        "languages": ["TypeScript", "HTML5", "CSS3"],
+        "frameworks": ["Next.js", "Tailwind CSS"],
+        "libraries": ["React", "Framer Motion", "Leaflet", "PDF.js"],
+        "apis": ["Google Maps", "Google Calendar", "DocuSign", "Stripe"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation des Demandes de Biens", "value": "68%" },
+          { "label": "Taux de Satisfaction Client", "value": "96%" },
+          { "label": "Réduction du Temps Administratif", "value": "52%" }
+        ],
+        "benefits": [
+          "Image professionnelle améliorée avec un design élégant et moderne",
+          "Processus simplifié de gestion des annonces immobilières",
+          "Engagement client amélioré grâce au portail",
+          "Meilleure visibilité des biens et services mis en avant"
+        ],
+        "improvements": [
+          "Mise en place de visites virtuelles des biens",
+          "Intégration d'un système automatisé de planification de visites",
+          "Développement d'un tableau de bord d'analyse du marché immobilier",
+          "Optimisation pour les moteurs de recherche immobiliers"
+        ],
+        "testimonial": {
+          "quote": "Le site web et le système de back-office développés par Pledge & Grow ont révolutionné notre gestion immobilière et nos relations clients. L'interface intuitive a considérablement amélioré notre efficacité et notre présence en ligne.",
+          "author": "Jean Michou",
+          "position": "Directeur d'Agence"
+        }
+      }
+    },
+    "15": {
+      "name": "Cabinet Mas Rocher",
+      "logo": "/images/portfolio/mas-rocher-logo.png",
+      "description": "Création complète d'un site web avec back-office complet pour une agence immobilière, comprenant un système de gestion des biens, des outils de relation client et des fonctionnalités de recherche avancée.",
+      "industry": "Immobilier",
+      "year": 2025,
+      "deliverables": [
+        "Site Web Responsive",
+        "Système Avancé de Gestion Immobilière",
+        "Recherche Immobilière Interactive",
+        "Tableau de Bord Agent"
+      ],
+      "needs": [
+        "Créer une présence en ligne premium pour l'agence immobilière",
+        "Développer un back-office complet pour la gestion des biens",
+        "Mettre en place un système de recherche avancé avec options de filtrage",
+        "Simplifier la communication entre agents et clients"
+      ],
+      "methodology": {
+        "approach": "Nous avons créé une plateforme sophistiquée mais conviviale qui équilibre l'attrait esthétique avec des fonctionnalités puissantes. Le back-office a été conçu pour maximiser l'efficacité des agents tandis que l'interface utilisateur offre une expérience engageante de découverte immobilière.",
+        "technologies": ["Base de Données Immobilière", "Optimisation de Galerie d'Images", "Notifications en Temps Réel", "Authentification Sécurisée"],
+        "languages": ["TypeScript", "Python", "SQL"],
+        "frameworks": ["Next.js", "Express", "Tailwind CSS"],
+        "libraries": ["React", "Redux", "Leaflet", "Chart.js"],
+        "apis": ["Google Maps", "Données du Marché Immobilier", "DocuSign", "Stripe"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation des Annonces Immobilières", "value": "42%" },
+          { "label": "Taux de Conversion", "value": "8,7%" },
+          { "label": "Productivité des Agents", "value": "+65%" }
+        ],
+        "benefits": [
+          "Image de marque élevée avec un design premium et moderne",
+          "Flux de travail de gestion immobilière optimisé",
+          "Expérience client améliorée grâce à une recherche intuitive",
+          "Productivité et temps de réponse des agents améliorés"
+        ],
+        "improvements": [
+          "Mise en place de visites virtuelles 3D des biens",
+          "Développement d'outils d'analyse des tendances du marché",
+          "Intégration de fonctionnalités de gestion de la relation client",
+          "Création d'une application mobile pour les agents en déplacement"
+        ],
+        "testimonial": {
+          "quote": "Le site web et le système de gestion développés par Pledge & Grow ont transformé nos opérations commerciales. Le back-office intuitif a considérablement réduit notre charge administrative, tandis que l'interface élégante a attiré davantage de clients de qualité.",
+          "author": "Philippe Rocher",
+          "position": "PDG, Cabinet Mas Rocher"
+        }
+      }
+    },
+    "1": {
+      "name": "Dualink",
+      "logo": "/images/portfolio/dualink-logo.png",
+      "description": "Création complète d'un site web pour une agence de marketing digital avec intégration d'outils de génération de leads, CRM et fonctionnalités SEO avancées.",
+      "industry": "Marketing Digital",
+      "year": 2024,
+      "deliverables": [
+        "Site Web Responsive",
+        "Stratégie SEO",
+        "Génération de Leads",
+        "Intégration CRM"
+      ],
+      "needs": [
+        "Moderniser l'image de marque en ligne",
+        "Améliorer le positionnement sur les moteurs de recherche",
+        "Intégrer des outils de capture de leads",
+        "Faciliter la gestion de contenu marketing"
+      ],
+      "methodology": {
+        "approach": "Nous avons adopté une approche centrée sur l'utilisateur, en commençant par une analyse approfondie des besoins de l'agence et de ses clients cibles. Le développement a suivi une méthodologie Agile avec des sprints de deux semaines.",
+        "technologies": ["SEO", "Marketing Automation", "CMS", "Analytics"],
+        "languages": ["TypeScript", "HTML5", "CSS3"],
+        "frameworks": ["Next.js", "Tailwind CSS"],
+        "libraries": ["React", "Framer Motion", "Chart.js"],
+        "apis": ["Google Analytics", "HubSpot", "Mailchimp"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation du Trafic Organique", "value": "72%" },
+          { "label": "Taux de Conversion", "value": "4,8%" },
+          { "label": "Leads Générés par Mois", "value": "+45" }
+        ],
+        "benefits": [
+          "Image de marque renforcée avec un design moderne et professionnel",
+          "Meilleure visibilité sur les moteurs de recherche",
+          "Augmentation significative des demandes de devis",
+          "Processus de qualification des leads optimisé"
+        ],
+        "improvements": [
+          "Intégration d'un blog optimisé pour le SEO",
+          "Mise en place de formulaires intelligents pour la capture de leads",
+          "Création d'un tableau de bord pour le suivi des performances",
+          "Optimisation de l'expérience mobile"
+        ],
+        "testimonial": {
+          "quote": "Notre nouveau site web a complètement transformé notre présence en ligne. Les leads générés ont dépassé nos attentes et notre image de marque a été considérablement renforcée.",
+          "author": "Marie Dupont",
+          "position": "Directrice, Dualink"
+        }
+      }
+    },
+    "2": {
+      "name": "Global Corporate Business",
+      "logo": "/images/portfolio/gcb-logo.png",
+      "description": "Création complète d'un site web et développement d'une plateforme de conseil pour l'expansion des entreprises à Oman, incluant des outils d'analyse comptable et financière avec un portail client sécurisé.",
+      "industry": "Conseil & Finance",
+      "year": 2025,
+      "deliverables": [
+        "Plateforme Web",
+        "Outils d'Analyse Financière",
+        "Système de Gestion Documentaire",
+        "Portail Client"
+      ],
+      "needs": [
+        "Créer une plateforme pour faciliter l'expansion des entreprises à Oman",
+        "Développer des outils d'analyse comptable et financière",
+        "Mettre en place un système de gestion documentaire sécurisé",
+        "Fournir un portail client pour le suivi des dossiers"
+      ],
+      "methodology": {
+        "approach": "Nous avons utilisé une approche progressive, en commençant par les fonctionnalités essentielles puis en ajoutant des modules spécialisés. Une attention particulière a été portée à la sécurité des données financières et à la conformité réglementaire.",
+        "technologies": ["Cloud Computing", "FinTech", "Gestion Documentaire", "Sécurité des Données"],
+        "languages": ["TypeScript", "Python", "SQL"],
+        "frameworks": ["Next.js", "Django", "Express"],
+        "libraries": ["React", "Pandas", "NumPy", "PDF.js"],
+        "apis": ["APIs Bancaires", "Change de Devises", "Vérification de Documents"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Réduction du Temps de Traitement", "value": "65%" },
+          { "label": "Augmentation de la Clientèle", "value": "40%" },
+          { "label": "Taux de Satisfaction Client", "value": "94%" }
+        ],
+        "benefits": [
+          "Processus d'expansion à Oman simplifié et accéléré",
+          "Meilleure visibilité sur les aspects financiers et comptables",
+          "Échanges de documents sécurisés",
+          "Suivi en temps réel de l'avancement des dossiers"
+        ],
+        "improvements": [
+          "Automatisation des calculs financiers complexes",
+          "Mise en place d'un système d'alerte pour les échéances importantes",
+          "Création d'un tableau de bord personnalisable",
+          "Intégration d'un système de signature électronique"
+        ],
+        "testimonial": {
+          "quote": "La plateforme a révolutionné notre façon d'accompagner les entreprises dans leur expansion à Oman. Nos clients apprécient particulièrement la transparence et l'efficacité du suivi.",
+          "author": "Ahmed Al-Saadi",
+          "position": "Directeur, Global Corporate Business"
+        }
+      }
+    },
+    "3": {
+      "name": "ERB-BTP",
+      "logo": "/images/portfolio/erb-btp-logo.png",
+      "description": "Création complète d'un site web pour une entreprise de construction, rénovation, étanchéité et démolition avec un portfolio interactif des projets réalisés et un système de demande de devis.",
+      "industry": "Construction",
+      "year": 2025,
+      "deliverables": [
+        "Site Vitrine",
+        "Portfolio de Projets",
+        "Formulaire de Contact",
+        "Optimisation SEO"
+      ],
+      "needs": [
+        "Moderniser l'image en ligne de l'entreprise",
+        "Mettre en valeur les projets réalisés avec un portfolio détaillé",
+        "Faciliter le contact pour les prospects",
+        "Améliorer la visibilité sur les moteurs de recherche"
+      ],
+      "methodology": {
+        "approach": "Nous avons adopté une approche centrée sur le visuel, mettant en avant les réalisations de l'entreprise à travers des photos de haute qualité et des descriptions détaillées de projets. Le site a été conçu pour être facilement navigable et optimisé pour tous les appareils.",
+        "technologies": ["Design Responsive", "SEO", "CMS", "Optimisation d'Images"],
+        "languages": ["TypeScript", "HTML5", "CSS3"],
+        "frameworks": ["Next.js", "Tailwind CSS"],
+        "libraries": ["React", "Framer Motion", "React Hook Form"],
+        "apis": ["Google Maps", "Google Analytics"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation des Demandes de Devis", "value": "58%" },
+          { "label": "Amélioration du Positionnement SEO", "value": "Top 5" },
+          { "label": "Réduction du Taux de Rebond", "value": "-35%" }
+        ],
+        "benefits": [
+          "Image professionnelle renforcée avec un design moderne",
+          "Meilleure présentation des services et compétences",
+          "Augmentation des demandes de devis via le formulaire de contact",
+          "Amélioration de la visibilité locale sur les moteurs de recherche"
+        ],
+        "improvements": [
+          "Création d'un portfolio filtrable par type de projet",
+          "Intégration de témoignages clients",
+          "Optimisation des images pour un chargement rapide",
+          "Structure de navigation intuitive"
+        ],
+        "testimonial": {
+          "quote": "Notre nouveau site web reflète parfaitement notre expertise et notre professionnalisme. Les retours de nos clients sont excellents et nous avons constaté une augmentation significative des demandes de devis.",
+          "author": "Eric Bouton",
+          "position": "Directeur, ERB-BTP"
+        }
+      }
+    },
+    "16": {
+      "name": "La Goulette Bordeaux",
+      "logo": "/images/portfolio/la-goulette-logo.png",
+      "description": "Conseil digital pour un restaurant tunisien à Bordeaux, incluant une stratégie de présence en ligne, l'optimisation du référencement local et des recommandations pour améliorer l'expérience client.",
+      "industry": "Restauration",
+      "year": 2024,
+      "deliverables": [
+        "Audit Digital",
+        "Stratégie de Présence en Ligne",
+        "Optimisation SEO Local",
+        "Recommandations UX"
+      ],
+      "needs": [
+        "Améliorer la visibilité en ligne dans la région bordelaise",
+        "Attirer une clientèle locale intéressée par la cuisine tunisienne",
+        "Optimiser l'expérience client sur le site web",
+        "Renforcer la présence sur les plateformes de réservation"
+      ],
+      "methodology": {
+        "approach": "Nous avons réalisé une analyse complète de la présence en ligne du restaurant et de sa concurrence locale. Sur cette base, nous avons développé une stratégie digitale adaptée mettant en valeur l'authenticité de la cuisine tunisienne dans un contexte local.",
+        "technologies": ["SEO Local", "Marketing de Contenu", "UX/UI", "Google My Business"],
+        "languages": [],
+        "frameworks": [],
+        "libraries": [],
+        "apis": ["Google Maps", "TripAdvisor", "TheFork"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation des Réservations", "value": "68%" },
+          { "label": "Visibilité dans les Recherches Locales", "value": "+215%" },
+          { "label": "Taux d'Engagement sur les Réseaux", "value": "12,5%" }
+        ],
+        "benefits": [
+          "Visibilité accrue dans les recherches locales de restaurants tunisiens",
+          "Augmentation significative des réservations en ligne",
+          "Meilleure réputation en ligne grâce aux avis clients",
+          "Positionnement unique dans l'offre gastronomique bordelaise"
+        ],
+        "improvements": [
+          "Optimisation du profil Google My Business et des plateformes de réservation",
+          "Développement d'une stratégie de contenu mettant en valeur la cuisine tunisienne",
+          "Recommandations pour améliorer l'expérience utilisateur du site web",
+          "Mise en place d'une stratégie de collecte d'avis clients"
+        ],
+        "testimonial": {
+          "quote": "Le conseil digital nous a permis de nous démarquer dans un marché gastronomique très concurrentiel. Nous sommes maintenant beaucoup plus visibles localement et nos réservations ont considérablement augmenté.",
+          "author": "Mehdi Ben Ali",
+          "position": "Propriétaire, La Goulette Bordeaux"
+        }
+      }
+    },
+    "5": {
+      "name": "JABB Events",
+      "logo": "/images/portfolio/jabb-events-logo.png",
+      "description": "Création d'un site e-commerce pour une entreprise d'organisation d'événements, permettant la réservation et le paiement en ligne.",
+      "industry": "Organisation d'Événements",
+      "year": 2023,
+      "deliverables": [
+        "Site E-commerce",
+        "Système de Réservation",
+        "Passerelle de Paiement",
+        "Gestion des Événements"
+      ],
+      "needs": [
+        "Créer une plateforme permettant aux clients de réserver et payer des événements en ligne",
+        "Développer un système de gestion des événements pour l'entreprise",
+        "Améliorer la visibilité en ligne et attirer de nouveaux clients",
+        "Simplifier le processus de réservation et de paiement"
+      ],
+      "methodology": {
+        "approach": "Nous avons développé une solution e-commerce complète avec un système de réservation intuitif. L'accent a été mis sur l'expérience utilisateur et la sécurité des paiements.",
+        "technologies": ["E-commerce", "Système de Réservation", "Passerelle de Paiement", "Gestion de Contenu"],
+        "languages": ["JavaScript", "HTML5", "CSS3"],
+        "frameworks": ["Next.js", "Tailwind CSS"],
+        "libraries": ["React", "Stripe.js", "Date-fns", "Framer Motion"],
+        "apis": ["Stripe", "Google Calendar", "Mailchimp"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation des Réservations", "value": "124%" },
+          { "label": "Taux de Conversion", "value": "8.2%" },
+          { "label": "Temps Moyen de Réservation", "value": "-65%" }
+        ],
+        "benefits": [
+          "Processus de réservation simplifié et accessible 24/7",
+          "Augmentation significative des ventes et des réservations",
+          "Meilleure visibilité des événements disponibles",
+          "Réduction des tâches administratives liées aux réservations"
+        ],
+        "improvements": [
+          "Mise en place d'un système de réservation en ligne intuitif",
+          "Intégration d'une passerelle de paiement sécurisée",
+          "Développement d'un tableau de bord de gestion des événements",
+          "Création d'un système de notifications automatisées"
+        ],
+        "testimonial": {
+          "quote": "La plateforme e-commerce a transformé notre façon de gérer les réservations. Nos clients apprécient la simplicité du processus et nous avons constaté une augmentation significative des réservations en ligne.",
+          "author": "Sophie Martin",
+          "position": "Directrice, JABB Events"
+        }
+      }
+    },
+    "7": {
+      "name": "Mairie de Chelles",
+      "logo": "/images/portfolio/chelles-logo.png",
+      "description": "Création d'un site vitrine pour la ville de Chelles, mettant en valeur les services municipaux, les événements locaux et les informations pratiques.",
+      "industry": "Secteur Public",
+      "year": 2022,
+      "deliverables": [
+        "Site Web Institutionnel",
+        "Calendrier d'Événements",
+        "Annuaire des Services",
+        "Formulaires en Ligne"
+      ],
+      "needs": [
+        "Moderniser la présence en ligne de la ville",
+        "Faciliter l'accès aux informations et services municipaux",
+        "Promouvoir les événements et initiatives locales",
+        "Améliorer la communication avec les citoyens"
+      ],
+      "methodology": {
+        "approach": "Nous avons travaillé en étroite collaboration avec les services municipaux pour identifier les besoins des citoyens et créer une architecture d'information claire. Le site a été développé selon les normes d'accessibilité RGAA pour garantir l'accès à tous les utilisateurs.",
+        "technologies": ["Design Responsive", "Accessibilité", "CMS", "Gestion de Formulaires"],
+        "languages": ["JavaScript", "HTML5", "CSS3", "PHP"],
+        "frameworks": ["WordPress", "Bootstrap"],
+        "libraries": ["jQuery", "Leaflet"],
+        "apis": ["Google Maps", "OpenData"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation du Trafic Web", "value": "125%" },
+          { "label": "Réduction des Appels Téléphoniques", "value": "40%" },
+          { "label": "Formulaires Soumis en Ligne", "value": "+500/mois" }
+        ],
+        "benefits": [
+          "Meilleure communication entre la municipalité et les citoyens",
+          "Accès simplifié aux informations et services municipaux",
+          "Charge administrative réduite grâce aux formulaires en ligne",
+          "Promotion efficace des événements locaux"
+        ],
+        "improvements": [
+          "Création d'une architecture d'information intuitive",
+          "Développement d'un moteur de recherche interne puissant",
+          "Mise en place d'un système de notifications pour les actualités",
+          "Intégration d'une carte interactive des services municipaux"
+        ],
+        "testimonial": {
+          "quote": "Le nouveau site de la ville a considérablement amélioré notre communication avec les citoyens. Les retours sont très positifs et nous avons constaté une nette diminution des demandes d'information par téléphone.",
+          "author": "Brice Rabaste",
+          "position": "Maire de Chelles"
+        }
+      }
+    },
+    "6": {
+      "id": "6",
+      "name": "Gudule",
+      "logo": "/images/portfolio/gudule-logo.png",
+      "description": "Conseil IT pour une entreprise de formation, incluant l'audit des systèmes existants, l'élaboration d'une stratégie digitale et des recommandations pour l'implémentation d'une plateforme de formation en ligne.",
+      "industry": "Formation",
+      "year": 2023,
+      "deliverables": [
+        "Audit IT",
+        "Stratégie Digitale",
+        "Cahier des Charges",
+        "Recommandations Techniques"
+      ],
+      "needs": [
+        "Évaluer les systèmes IT existants",
+        "Élaborer une stratégie digitale adaptée aux besoins de formation",
+        "Définir les spécifications techniques pour une plateforme de formation",
+        "Conseiller sur les meilleures pratiques et technologies à adopter"
+      ],
+      "methodology": {
+        "approach": "Nous avons réalisé un audit complet des systèmes existants et analysé les besoins spécifiques de l'entreprise. Sur cette base, nous avons élaboré une stratégie digitale et fourni des recommandations détaillées pour l'implémentation d'une plateforme de formation en ligne adaptée.",
+        "technologies": ["Analyse de Systèmes", "Stratégie Digitale", "LMS", "Cloud Computing"],
+        "languages": [],
+        "frameworks": [],
+        "libraries": [],
+        "apis": ["Vimeo", "Google Drive", "Mailchimp"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Taux de Satisfaction Client", "value": "95%" },
+          { "label": "Réduction des Coûts", "value": "30%" },
+          { "label": "Augmentation de la Productivité", "value": "25%" }
+        ],
+        "benefits": [
+          "Stratégie digitale alignée avec les objectifs business",
+          "Feuille de route claire pour l'implémentation technologique",
+          "Optimisation des coûts et des ressources IT",
+          "Préparation adéquate pour la transformation digitale"
+        ],
+        "improvements": [
+          "Analyse approfondie des besoins et des systèmes existants",
+          "Élaboration d'un cahier des charges détaillé",
+          "Recommandations sur les technologies et plateformes LMS",
+          "Conseils sur la sécurité et la conformité des données"
+        ],
+        "testimonial": {
+          "quote": "Le conseil IT nous a permis de clarifier notre vision et d'établir une feuille de route précise pour notre transformation digitale. Les recommandations étaient parfaitement adaptées à nos besoins et nous ont aidés à prendre des décisions éclairées.",
+          "author": "Sophie Martin",
+          "position": "Directrice de Formation, Gudule"
+        }
+      }
+    },
+    "13": {
+      "name": "Beauty Salon 92",
+      "logo": "/images/portfolio/beauty-salon-92-logo.png",
+      "description": "Conseil digital pour un salon de beauté premium, portant sur la stratégie digitale, l'optimisation de la présence en ligne et des recommandations pour les systèmes de gestion des rendez-vous et de fidélisation client.",
+      "industry": "Beauté & Bien-être",
+      "year": 2024,
+      "deliverables": [
+        "Application Web",
+        "Application Mobile",
+        "Système de Réservation",
+        "Programme de Fidélité"
+      ],
+      "needs": [
+        "Créer un système de réservation en ligne intuitif",
+        "Développer un programme de fidélité digital",
+        "Permettre aux clients de consulter leur historique de soins",
+        "Faciliter la gestion des rendez-vous pour le personnel"
+      ],
+      "methodology": {
+        "approach": "Nous avons développé une solution sur mesure répondant aux besoins spécifiques d'un salon de beauté premium. L'accent a été mis sur l'expérience utilisateur, tant pour les clients que pour le personnel du salon.",
+        "technologies": ["Progressive Web App", "Développement Mobile", "Système de Réservation", "CRM"],
+        "languages": ["TypeScript", "Kotlin", "Swift", "SQL"],
+        "frameworks": ["Next.js", "React Native", "NestJS"],
+        "libraries": ["React", "Redux", "FullCalendar", "Chart.js"],
+        "apis": ["Stripe", "Notifications Push", "Google Calendar"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Réservations en Ligne", "value": "78%" },
+          { "label": "Réduction des Absences", "value": "85%" },
+          { "label": "Augmentation du Panier Moyen", "value": "24%" }
+        ],
+        "benefits": [
+          "Processus de réservation simplifié pour les clients",
+          "Réduction significative des tâches administratives",
+          "Fidélisation client accrue grâce au programme digital",
+          "Meilleure gestion des stocks et des ressources humaines"
+        ],
+        "improvements": [
+          "Mise en place d'un système de rappel automatique",
+          "Développement d'un tableau de bord d'analyse des performances",
+          "Création d'un programme de fidélité personnalisable",
+          "Intégration d'un système de recommandation de produits"
+        ],
+        "testimonial": {
+          "quote": "Cette application a révolutionné notre façon de travailler. Nos clients adorent pouvoir réserver en ligne et suivre leur programme de soins. Notre équipe gagne un temps précieux sur les tâches administratives pour se concentrer sur l'essentiel : le service client.",
+          "author": "Isabelle Moreau",
+          "position": "Directrice, Beauty Salon 92"
+        }
+      }
+    },
+    "12": {
+      "name": "Clean-E Sofa",
+      "logo": "/images/portfolio/clean-e-sofa-logo.png",
+      "description": "Conseil digital pour une entreprise de nettoyage de canapés et de meubles à domicile, visant à améliorer la visibilité locale et la génération de leads.",
+      "industry": "Services à Domicile",
+      "year": 2022,
+      "deliverables": [
+        "Audit SEO Local",
+        "Stratégie de Contenu",
+        "Plan de Présence Google My Business",
+        "Optimisation des Conversions"
+      ],
+      "needs": [
+        "Améliorer la visibilité dans les recherches locales",
+        "Développer une stratégie de contenu pertinente",
+        "Optimiser la présence sur Google My Business",
+        "Augmenter le taux de conversion visiteur-client"
+      ],
+      "methodology": {
+        "approach": "Nous avons adopté une approche centrée sur le SEO local et la génération de leads. L'accent a été mis sur l'optimisation de la présence Google My Business et la création de contenu répondant aux questions fréquentes des clients potentiels.",
+        "technologies": ["SEO Local", "Marketing de Contenu", "Optimisation du Taux de Conversion", "Google My Business"],
+        "languages": [],
+        "frameworks": [],
+        "libraries": [],
+        "apis": ["Google Maps", "Google Analytics"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation des Recherches Locales", "value": "185%" },
+          { "label": "Taux de Conversion", "value": "7,8%" },
+          { "label": "Avis Google Positifs", "value": "+45" }
+        ],
+        "benefits": [
+          "Visibilité considérablement améliorée dans les recherches locales",
+          "Augmentation substantielle des demandes de devis qualifiées",
+          "Meilleure réputation en ligne grâce aux avis clients",
+          "Coûts d'acquisition client réduits"
+        ],
+        "improvements": [
+          "Optimisation complète du profil Google My Business",
+          "Création d'une stratégie de collecte d'avis clients",
+          "Développement de contenu répondant aux questions fréquentes",
+          "Mise en place d'un suivi des performances marketing"
+        ],
+        "testimonial": {
+          "quote": "Le conseil digital a transformé notre activité. Nous sommes maintenant visibles localement et les clients nous trouvent facilement. Notre carnet de commandes est plein, et nous avons dû embaucher plus de personnel pour répondre à la demande.",
+          "author": "Sophie Lambert",
+          "position": "Directrice, Clean-E Sofa"
+        }
+      }
+    },
+    "11": {
+      "name": "AS13F",
+      "logo": "/images/portfolio/as13f-logo.png",
+      "description": "Conseil digital pour un club de football amateur visant à améliorer sa présence en ligne et sa communication avec les membres et supporters.",
+      "industry": "Sport",
+      "year": 2023,
+      "deliverables": [
+        "Audit Digital",
+        "Stratégie de Communication",
+        "Plan de Médias Sociaux",
+        "Formation des Bénévoles"
+      ],
+      "needs": [
+        "Analyser la présence digitale existante du club",
+        "Développer une stratégie de communication cohérente",
+        "Améliorer l'engagement des supporters sur les réseaux sociaux",
+        "Former les bénévoles à la gestion des outils digitaux"
+      ],
+      "methodology": {
+        "approach": "Nous avons réalisé un audit complet de la présence digitale du club, puis développé une stratégie adaptée à ses ressources limitées. L'accent a été mis sur des solutions pratiques pouvant être facilement mises en œuvre par les bénévoles.",
+        "technologies": ["Médias Sociaux", "Stratégie de Contenu", "Community Management", "Formation Digitale"],
+        "languages": [],
+        "frameworks": [],
+        "libraries": [],
+        "apis": ["Facebook", "Instagram", "Twitter"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation des Abonnés", "value": "210%" },
+          { "label": "Engagement des Publications", "value": "+175%" },
+          { "label": "Fréquentation des Matchs", "value": "+35%" }
+        ],
+        "benefits": [
+          "Communication plus efficace avec les membres et supporters",
+          "Meilleure visibilité locale pour attirer de nouveaux joueurs",
+          "Participation accrue aux événements du club",
+          "Autonomie des bénévoles dans la gestion des outils digitaux"
+        ],
+        "improvements": [
+          "Création d'un calendrier éditorial pour les réseaux sociaux",
+          "Mise en place d'un système de communication des résultats des matchs",
+          "Développement d'une stratégie de contenu mettant en valeur les joueurs",
+          "Formation des bénévoles aux outils simples de conception graphique"
+        ],
+        "testimonial": {
+          "quote": "Le conseil digital nous a permis de professionnaliser notre communication avec des ressources limitées. Nos supporters sont plus engagés et nous avons attiré de nouveaux joueurs grâce à notre présence en ligne améliorée.",
+          "author": "Marc Dubois",
+          "position": "Président, AS13F"
+        }
+      }
+    },
+    "10": {
+      "name": "Connect & Drive",
+      "logo": "/images/portfolio/connect-drive-logo.png",
+      "description": "Refonte du site web d'une entreprise d'installation de panneaux électriques avec amélioration du référencement et intégration d'un calculateur d'économies.",
+      "industry": "Énergie",
+      "year": 2024,
+      "deliverables": [
+        "Site Web Responsive",
+        "Calculateur d'Économies",
+        "Stratégie SEO",
+        "Formulaire de Devis"
+      ],
+      "needs": [
+        "Moderniser le site existant avec un design professionnel",
+        "Améliorer le référencement pour augmenter la visibilité",
+        "Intégrer un outil de calcul d'économies d'énergie",
+        "Faciliter les demandes de devis pour les prospects"
+      ],
+      "methodology": {
+        "approach": "Nous avons commencé par une analyse approfondie du marché des énergies renouvelables et des attentes des clients. La refonte s'est concentrée sur l'éducation et la démonstration des avantages économiques et écologiques des installations.",
+        "technologies": ["Design Responsive", "SEO", "Outils Interactifs", "UX/UI"],
+        "languages": ["TypeScript", "HTML5", "CSS3"],
+        "frameworks": ["Next.js", "Tailwind CSS"],
+        "libraries": ["React", "Chart.js", "React Hook Form"],
+        "apis": ["Google Analytics", "Google Maps", "API de Prix de l'Énergie"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation du Trafic Organique", "value": "95%" },
+          { "label": "Taux de Conversion des Devis", "value": "8,5%" },
+          { "label": "Utilisation du Calculateur", "value": "+300/mois" }
+        ],
+        "benefits": [
+          "Positionnement renforcé en tant qu'expert des installations électriques",
+          "Augmentation significative des demandes de devis qualifiées",
+          "Meilleure compréhension des avantages par les prospects",
+          "Image de marque modernisée et professionnelle"
+        ],
+        "improvements": [
+          "Développement d'un calculateur d'économies interactif",
+          "Création de contenu éducatif sur les énergies renouvelables",
+          "Optimisation technique du site pour améliorer les performances",
+          "Mise en place d'un système de suivi des demandes de devis"
+        ],
+        "testimonial": {
+          "quote": "Notre nouveau site web a considérablement amélioré notre image et notre capacité à convaincre les clients. Le calculateur d'économies est particulièrement apprécié et nous aide à convertir davantage de prospects.",
+          "author": "Pierre Martin",
+          "position": "Directeur, Connect & Drive"
+        }
+      }
+    },
+    "9": {
+      "name": "Melytop",
+      "logo": "/images/portfolio/melytop-logo.png",
+      "description": "Création d'une landing page pour une professionnelle indépendante spécialisée dans l'accompagnement à la maternité, avec un design chaleureux et rassurant.",
+      "industry": "Santé & Bien-être",
+      "year": 2025,
+      "deliverables": [
+        "Landing Page",
+        "Formulaire de Contact",
+        "Optimisation Mobile",
+        "Intégration de Témoignages"
+      ],
+      "needs": [
+        "Créer une présence en ligne professionnelle et rassurante",
+        "Mettre en valeur les services d'accompagnement à la maternité",
+        "Faciliter la prise de contact pour les futures mamans",
+        "Présenter les témoignages de clientes satisfaites"
+      ],
+      "methodology": {
+        "approach": "Nous avons adopté une approche centrée sur l'émotion et la confiance, en utilisant des couleurs douces et des images évocatrices. La landing page a été conçue pour être simple, rassurante et efficace pour générer des contacts.",
+        "technologies": ["Design Responsive", "SEO Local", "UX/UI", "Optimisation des Performances"],
+        "languages": ["HTML5", "CSS3", "JavaScript"],
+        "frameworks": ["Next.js", "Tailwind CSS"],
+        "libraries": ["React", "Framer Motion", "React Hook Form"],
+        "apis": ["Google Analytics", "Calendly"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation des Demandes de Contact", "value": "145%" },
+          { "label": "Taux de Conversion", "value": "6,2%" },
+          { "label": "Positionnement Local", "value": "Top 3" }
+        ],
+        "benefits": [
+          "Image professionnelle établie avec une présence en ligne de qualité",
+          "Augmentation significative des demandes de rendez-vous",
+          "Meilleure visibilité locale pour les services d'accompagnement",
+          "Confiance renforcée grâce aux témoignages mis en avant"
+        ],
+        "improvements": [
+          "Optimisation des temps de chargement pour une expérience fluide",
+          "Création d'un formulaire de contact intuitif et rassurant",
+          "Intégration d'une section de témoignages dynamique",
+          "Mise en place d'un système de réservation de rendez-vous en ligne"
+        ],
+        "testimonial": {
+          "quote": "Ma landing page a complètement transformé mon activité. Les futures mamans me contactent facilement et j'ai pu développer considérablement ma clientèle.",
+          "author": "Mélanie Dupont",
+          "position": "Fondatrice, Melytop"
+        }
+      }
+    },
+    "8": {
+      "name": "Chronos Corp.",
+      "logo": "/images/portfolio/chronos-logo.png",
+      "description": "Conseil digital et développement d'une application sur mesure pour la gestion du temps et des projets, intégrant des fonctionnalités avancées de reporting et d'analyse.",
+      "industry": "Logiciel d'Entreprise",
+      "year": 2022,
+      "deliverables": [
+        "Application Web",
+        "Application Mobile",
+        "Tableau de Bord Analytique",
+        "Système de Reporting"
+      ],
+      "needs": [
+        "Développer une solution personnalisée de gestion du temps et des projets",
+        "Intégrer des fonctionnalités avancées de reporting et d'analyse",
+        "Créer une interface utilisateur intuitive et responsive",
+        "Permettre l'accès mobile aux données"
+      ],
+      "methodology": {
+        "approach": "Nous avons adopté une approche de développement itérative, en commençant par un MVP puis en ajoutant progressivement des fonctionnalités basées sur les retours utilisateurs. L'accent a été mis sur la performance et la fiabilité du système.",
+        "technologies": ["Progressive Web App", "Analytique en Temps Réel", "Cloud Computing", "Développement Mobile"],
+        "languages": ["TypeScript", "Kotlin", "Swift", "SQL"],
+        "frameworks": ["Next.js", "React Native", "NestJS"],
+        "libraries": ["React", "Redux", "D3.js", "Chart.js"],
+        "apis": ["RESTful API", "GraphQL", "WebSockets"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation de la Productivité", "value": "32%" },
+          { "label": "Réduction des Erreurs de Saisie", "value": "95%" },
+          { "label": "Temps Économisé par Semaine", "value": "12h/utilisateur" }
+        ],
+        "benefits": [
+          "Gestion optimisée et centralisée du temps et des projets",
+          "Prise de décision facilitée grâce aux tableaux de bord analytiques",
+          "Réduction significative des tâches administratives",
+          "Meilleure visibilité sur l'allocation des ressources"
+        ],
+        "improvements": [
+          "Développement d'algorithmes d'analyse prédictive",
+          "Création d'interfaces personnalisables selon les rôles",
+          "Mise en place d'un système de notification intelligent",
+          "Intégration avec les outils existants de l'entreprise"
+        ],
+        "testimonial": {
+          "quote": "Cette solution a révolutionné notre façon de gérer les projets et le temps de nos équipes. Les fonctionnalités d'analyse nous permettent d'identifier rapidement les opportunités d'optimisation et d'améliorer continuellement nos processus.",
+          "author": "Thomas Leroy",
+          "position": "CTO, Chronos Corp."
+        }
+      }
+    },
+    "5bis": {
+      "name": "Chez Gustave",
+      "logo": "/images/portfolio/chez-gustave-logo.png",
+      "description": "Création d'un site web pour un restaurant gastronomique, incluant un système de réservation en ligne et une présentation des menus et spécialités.",
+      "industry": "Restauration",
+      "year": 2023,
+      "deliverables": [
+        "Site Web Responsive",
+        "Système de Réservation",
+        "Présentation des Menus",
+        "Galerie Photos"
+      ],
+      "needs": [
+        "Créer une présence en ligne élégante reflétant l'ambiance du restaurant",
+        "Permettre aux clients de réserver une table en ligne",
+        "Présenter les menus et spécialités de façon attrayante",
+        "Mettre en valeur l'intérieur du restaurant et les plats signature"
+      ],
+      "methodology": {
+        "approach": "Nous avons adopté une approche centrée sur l'expérience utilisateur et l'esthétique, en créant un site à l'image du restaurant : élégant et raffiné. Une attention particulière a été portée à la qualité des visuels et à la simplicité du processus de réservation.",
+        "technologies": ["Design Responsive", "Système de Réservation", "Galerie Interactive", "Optimisation SEO"],
+        "languages": ["JavaScript", "HTML5", "CSS3", "PHP"],
+        "frameworks": ["Next.js", "Tailwind CSS"],
+        "libraries": ["React", "Framer Motion", "React Hook Form"],
+        "apis": ["Google Maps", "Calendly"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Réservations en Ligne", "value": "65%" },
+          { "label": "Augmentation des Visites", "value": "40%" },
+          { "label": "Taux de Rebond", "value": "25%" }
+        ],
+        "benefits": [
+          "Image de marque renforcée par un site web à la hauteur de la qualité du restaurant",
+          "Processus de réservation simplifié pour les clients",
+          "Réduction de la charge de travail pour la gestion des réservations",
+          "Meilleure visibilité des menus et spécialités"
+        ],
+        "improvements": [
+          "Mise en place d'un système de réservation en ligne intuitif",
+          "Création d'une galerie photo professionnelle",
+          "Développement d'une interface de présentation des menus dynamique",
+          "Optimisation pour les recherches locales"
+        ],
+        "testimonial": {
+          "quote": "Notre nouveau site web reflète parfaitement l'esprit de notre restaurant et a considérablement facilité la gestion des réservations. Nos clients apprécient particulièrement de pouvoir consulter nos menus et réserver en quelques clics.",
+          "author": "Gustave Pelletier",
+          "position": "Chef et Propriétaire, Chez Gustave"
+        }
+      }
+    },
+    "4": {
+      "name": "JABB",
+      "logo": "/images/portfolio/jabb-logo.png",
+      "description": "Refonte complète du site web d'une entreprise d'imprimerie avec amélioration du référencement et intégration d'un système de devis en ligne.",
+      "industry": "Imprimerie",
+      "year": 2025,
+      "deliverables": [
+        "Site Web Responsive",
+        "Système de Devis en Ligne",
+        "Catalogue de Produits",
+        "Stratégie SEO"
+      ],
+      "needs": [
+        "Moderniser le site existant avec un design attractif",
+        "Améliorer le référencement pour augmenter la visibilité",
+        "Intégrer un système de devis en ligne pour les clients",
+        "Présenter clairement le catalogue de produits et services"
+      ],
+      "methodology": {
+        "approach": "Nous avons commencé par une analyse approfondie du site existant et de la concurrence pour identifier les axes d'amélioration. La refonte a été réalisée en mettant l'accent sur l'expérience utilisateur et l'optimisation pour les moteurs de recherche.",
+        "technologies": ["Design Responsive", "SEO", "E-commerce", "UX/UI"],
+        "languages": ["JavaScript", "HTML5", "CSS3", "PHP"],
+        "frameworks": ["WordPress", "WooCommerce"],
+        "libraries": ["jQuery", "Bootstrap"],
+        "apis": ["Google Analytics", "Mailchimp"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Augmentation du Trafic Organique", "value": "120%" },
+          { "label": "Taux de Conversion des Devis", "value": "18%" },
+          { "label": "Positionnement pour les Mots-clés Cibles", "value": "Top 3" }
+        ],
+        "benefits": [
+          "Visibilité considérablement améliorée sur les moteurs de recherche",
+          "Processus de demande de devis simplifié pour les clients",
+          "Présentation plus attractive des produits et services",
+          "Image de marque modernisée et professionnelle"
+        ],
+        "improvements": [
+          "Optimisation technique du site pour améliorer les performances",
+          "Création de contenu optimisé pour le SEO",
+          "Mise en place d'un système de devis personnalisé",
+          "Intégration d'une galerie de projets"
+        ],
+        "testimonial": {
+          "quote": "La refonte de notre site a eu un impact immédiat sur notre activité. Le nombre de demandes de devis a explosé et notre visibilité en ligne s'est considérablement améliorée.",
+          "author": "Jean Bertrand",
+          "position": "Directeur, JABB"
+        }
+      }
+    },
+    "17": {
+      "id": "17",
+      "name": "Plac'Occitanie",
+      "logo": "/images/portfolio/plac-occitanie-logo.png",
+      "description": "Conseil digital pour une agence régionale de placement professionnel spécialisée dans la mise en relation des entreprises locales avec des candidats qualifiés dans la région Occitanie en France.",
+      "industry": "Recrutement",
+      "year": 2024,
+      "deliverables": [
+        "Stratégie de Transformation Digitale",
+        "Implémentation CRM",
+        "Système de Matching de Candidats",
+        "Tableau de Bord Analytique"
+      ],
+      "needs": [
+        "Améliorer l'efficacité du processus de mise en relation entre candidats et entreprises",
+        "Développer une meilleure compréhension des tendances d'emploi régionales",
+        "Réduire la charge administrative des spécialistes du placement",
+        "Améliorer l'expérience candidat tout au long du processus de placement"
+      ],
+      "methodology": {
+        "approach": "Nous avons adopté une approche centrée sur l'optimisation des processus de matching et l'analyse des données. L'accent a été mis sur l'automatisation des tâches répétitives et l'exploitation des données pour une meilleure prise de décision.",
+        "technologies": ["CRM", "Analyse de Données", "Algorithmes de Matching", "Communication Digitale"],
+        "languages": [],
+        "frameworks": [],
+        "libraries": [],
+        "apis": ["LinkedIn", "Google Analytics", "Mailchimp", "Zapier"]
+      },
+      "outcome": {
+        "statistics": [
+          { "label": "Placements Réussis", "value": "+68%" },
+          { "label": "Temps de Recrutement", "value": "-42%" },
+          { "label": "Satisfaction Client", "value": "94%" }
+        ],
+        "benefits": [
+          "Matching plus efficace entre candidats et entreprises locales",
+          "Charge administrative réduite pour les spécialistes du placement",
+          "Meilleure compréhension des tendances d'emploi régionales",
+          "Amélioration de l'expérience candidat tout au long du processus"
+        ],
+        "improvements": [
+          "Mise en place d'un système de matching basé sur les compétences",
+          "Développement d'un tableau de bord des tendances d'emploi régionales",
+          "Création de flux de communication automatisés",
+          "Intégration avec les initiatives de développement économique régionales"
+        ],
+        "testimonial": {
+          "quote": "Les services de conseil digital ont révolutionné notre façon de connecter les talents avec les opportunités dans notre région. Nous disposons maintenant d'informations basées sur les données qui nous aident à mieux servir les chercheurs d'emploi et les entreprises, tout en réduisant considérablement notre charge administrative.",
+          "author": "Jean-Pierre Rousseau",
+          "position": "Directeur, Plac'Occitanie"
+        }
+      }
+    }
+  }
+}

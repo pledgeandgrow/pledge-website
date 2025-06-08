@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "Innovation | Pledge & Grow",
+    "description": "Découvrez l'approche de Pledge & Grow en matière d'innovation, notre radar technologique et comment nous restons à l'avant-garde de la transformation numérique."
+  },
+  "approach": {
+    "title": "Notre Approche de l'Innovation",
+    "description": "Chez Pledge & Grow, l'innovation n'est pas qu'un simple mot à la mode—c'est une pratique systématique ancrée dans notre culture et nos processus.",
+    "pillars": [
+      {
+        "title": "Apprentissage Continu",
+        "description": "Notre équipe consacre du temps chaque semaine à l'apprentissage de nouvelles technologies, frameworks et méthodologies grâce à des programmes d'apprentissage structurés et à l'exploration autodidacte."
+      },
+      {
+        "title": "Collaboration Pluridisciplinaire",
+        "description": "Nous encourageons la collaboration entre différentes disciplines, réunissant designers, développeurs et stratèges commerciaux pour créer des solutions innovantes à partir de perspectives diverses."
+      },
+      {
+        "title": "Recherche & Développement",
+        "description": "Nous investissons dans des initiatives de R&D dédiées pour explorer les technologies émergentes comme l'IA, la blockchain et la réalité étendue avant de les implémenter dans des projets clients."
+      },
+      {
+        "title": "Prototypage Rapide",
+        "description": "Nous adoptons le prototypage rapide et le développement de MVP pour tester rapidement des idées, recueillir des retours et itérer sur des solutions avant une implémentation à grande échelle."
+      },
+      {
+        "title": "Contribution Open Source",
+        "description": "Nous contribuons activement aux projets open source, partageant notre expertise avec la communauté mondiale des développeurs tout en restant connectés aux développements de pointe."
+      },
+      {
+        "title": "Sprints d'Innovation",
+        "description": "Des sprints d'innovation réguliers permettent à notre équipe de s'éloigner du travail client et de se concentrer sur la résolution créative de problèmes, explorant de nouvelles idées sans contraintes."
+      }
+    ]
+  },
+  "technologyRadar": {
+    "title": "Radar Technologique",
+    "description": "Notre radar technologique nous aide à suivre et à évaluer les technologies émergentes pour une adoption potentielle.",
+    "categories": {
+      "all": {
+        "name": "Toutes les Technologies",
+        "description": "Notre radar technologique complet à travers toutes les catégories"
+      },
+      "frontend": {
+        "name": "Frontend",
+        "description": "Technologies pour construire des interfaces utilisateur modernes et réactives"
+      },
+      "backend": {
+        "name": "Backend",
+        "description": "Technologies côté serveur pour un développement d'applications robuste"
+      },
+      "mobile": {
+        "name": "Mobile",
+        "description": "Technologies pour le développement iOS, Android et multiplateforme"
+      },
+      "data": {
+        "name": "Données & IA",
+        "description": "Outils et frameworks pour le traitement des données et l'intelligence artificielle"
+      },
+      "devops": {
+        "name": "DevOps & Cloud",
+        "description": "Technologies pour le déploiement, l'infrastructure et les opérations"
+      }
+    },
+    "status": {
+      "adopt": "Adopter",
+      "trial": "Essayer",
+      "assess": "Évaluer",
+      "hold": "Suspendre"
+    },
+    "statusDescriptions": {
+      "adopt": "Technologies que nous utilisons en production et recommandons pour une utilisation généralisée",
+      "trial": "Technologies que nous utilisons activement dans des projets et évaluons pour une adoption plus large",
+      "assess": "Technologies que nous explorons et expérimentons dans des environnements contrôlés",
+      "hold": "Technologies que nous abandonnons progressivement ou ne recommandons pas pour de nouveaux projets"
+    }
+  }
+}

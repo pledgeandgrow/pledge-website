@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Recycle, Zap, Cloud } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface PracticeProps {
   icon: React.ReactNode;
@@ -24,21 +25,29 @@ function PracticeCard({ icon, title, description }: PracticeProps) {
 }
 
 export default function SustainablePractices() {
+  const { t } = useTranslations('impact');
+  
+  const practiceIcons = {
+    cloud: <Cloud className="h-10 w-10" />,
+    recycle: <Recycle className="h-10 w-10" />,
+    energy: <Zap className="h-10 w-10" />
+  };
+  
   const practices = [
     {
-      icon: <Cloud className="h-10 w-10" />,
-      title: "Carbon-Neutral Cloud",
-      description: "We prioritize cloud providers with carbon-neutral operations and optimize our applications for energy efficiency."
+      icon: practiceIcons.cloud,
+      title: t('sustainablePractices.practices.0.title'),
+      description: t('sustainablePractices.practices.0.description')
     },
     {
-      icon: <Recycle className="h-10 w-10" />,
-      title: "Circular IT Practices",
-      description: "We extend device lifecycles, refurbish equipment, and ensure responsible recycling of electronic waste."
+      icon: practiceIcons.recycle,
+      title: t('sustainablePractices.practices.1.title'),
+      description: t('sustainablePractices.practices.1.description')
     },
     {
-      icon: <Zap className="h-10 w-10" />,
-      title: "Energy Efficiency",
-      description: "Our development practices emphasize code optimization to reduce computational resources and energy consumption."
+      icon: practiceIcons.energy,
+      title: t('sustainablePractices.practices.2.title'),
+      description: t('sustainablePractices.practices.2.description')
     }
   ];
 
@@ -54,10 +63,10 @@ export default function SustainablePractices() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">Sustainable Practices</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">{t('sustainablePractices.title')}</h2>
 
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Our approach to sustainability encompasses everything from our development practices and infrastructure choices to our office operations and supply chain management. We continuously measure, report, and improve our environmental performance.
+              {t('sustainablePractices.description')}
             </p>
             <div className="flex flex-col md:flex-row gap-4 mt-8">
               <div className="bg-card border border-border rounded-lg p-4 flex-1 shadow-sm">
@@ -66,7 +75,7 @@ export default function SustainablePractices() {
                     <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                   </svg>
                 </div>
-                <p className="text-foreground font-medium">Continuous Improvement</p>
+                <p className="text-foreground font-medium">{t('sustainablePractices.continuousImprovement')}</p>
               </div>
               <div className="bg-card border border-border rounded-lg p-4 flex-1 shadow-sm">
                 <div className="text-primary mb-2">
@@ -75,11 +84,11 @@ export default function SustainablePractices() {
                     <path d="M12 6v6l4 2"/>
                   </svg>
                 </div>
-                <p className="text-foreground font-medium">Long-term Commitment</p>
+                <p className="text-foreground font-medium">{t('sustainablePractices.longTermCommitment')}</p>
               </div>
             </div>
             <p className="text-lg text-muted-foreground mt-6 leading-relaxed">
-              Beyond our own operations, we actively seek opportunities to develop technology solutions that address environmental challenges and promote sustainable practices across industries.
+              {t('sustainablePractices.additionalText')}
             </p>
           </motion.div>
           
@@ -97,14 +106,14 @@ export default function SustainablePractices() {
             >
               <Image
                 src="/images/impact/impact3.png"
-                alt="Sustainable technology practices"
+                alt={t('sustainablePractices.imageAlt')}
                 fill
                 className="object-cover transition-transform duration-500"
               />
             </motion.div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-              <p className="text-sm font-medium">Our sustainable technology initiatives</p>
+              <p className="text-sm font-medium">{t('sustainablePractices.imageCaption')}</p>
             </div>
           </motion.div>
         </div>
@@ -132,12 +141,12 @@ export default function SustainablePractices() {
           viewport={{ once: true }}
           className="mt-16 bg-gradient-to-r from-green-500/10 to-primary/10 rounded-xl p-8 text-center"
         >
-          <h3 className="text-2xl font-bold mb-4">Our Environmental Commitment</h3>
+          <h3 className="text-2xl font-bold mb-4">{t('sustainablePractices.environmentalCommitment.title')}</h3>
           <p className="text-lg mb-2">
-            We&apos;re committed to achieving carbon neutrality in our operations by 2026 and helping our clients reduce their environmental impact through thoughtful technology solutions.
+            {t('sustainablePractices.environmentalCommitment.mainText')}
           </p>
           <p className="text-muted-foreground">
-            Each year, we publish a sustainability report detailing our progress and setting new targets for improvement.
+            {t('sustainablePractices.environmentalCommitment.subText')}
           </p>
         </motion.div>
       </div>

@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Notre Groupe | Pledge & Grow",
+    "description": "Découvrez le Groupe Pledge & Grow, notre vision, notre structure et les diverses entreprises qui composent notre écosystème."
+  },
+  "overview": {
+    "title": "Aperçu du Groupe",
+    "description": "Le Groupe Pledge & Grow rassemble un portefeuille d'entreprises complémentaires unies par une vision commune d'innovation et d'excellence.",
+    "items": [
+      {
+        "title": "Notre Vision",
+        "description": "Créer un écosystème où les entreprises innovantes peuvent prospérer ensemble, partageant ressources, connaissances et opportunités pour offrir une valeur exceptionnelle aux clients dans divers secteurs et marchés."
+      },
+      {
+        "title": "Notre Approche",
+        "description": "Nous encourageons la collaboration entre nos entreprises, favorisant le partage d'idées et d'expertise. Cette approche synergique nous permet de relever des défis complexes et de proposer des solutions complètes qui génèrent des résultats significatifs."
+      },
+      {
+        "title": "Investissements Stratégiques",
+        "description": "Nous investissons stratégiquement dans des projets prometteurs qui s'alignent avec nos valeurs et notre vision. En fournissant capital, mentorat et accès à notre réseau, nous aidons ces entreprises à se développer et à réussir sur des marchés compétitifs."
+      },
+      {
+        "title": "Présence Mondiale",
+        "description": "Avec des opérations dans plusieurs pays, notre groupe exploite des perspectives globales tout en maintenant une expertise locale approfondie. Cette empreinte internationale nous permet de servir des clients dans le monde entier avec des solutions culturellement pertinentes."
+      }
+    ]
+  },
+  "companies": {
+    "title": "Nos Entreprises",
+    "description": "Explorez les diverses entreprises qui composent le Groupe Pledge & Grow.",
+    "filters": {
+      "all": "Toutes les Entreprises",
+      "digital": "Services Numériques",
+      "automation": "Services d'Automatisation",
+      "health": "HealthTech",
+      "sustainability": "Développement Durable",
+      "education": "Éducation",
+      "fintech": "Technologie Financière"
+    },
+    "company": {
+      "founded": "Fondée",
+      "location": "Emplacement",
+      "team": "Équipe",
+      "website": "Site Web",
+      "visitWebsite": "Visiter le Site",
+      "learnMore": "En Savoir Plus",
+      "about": "À Propos"
+    },
+    "items": [
+      {
+        "id": "pledge-and-grow",
+        "name": "Pledge & Grow",
+        "logo": "/images/groupe/logo-pledge.png",
+        "category": "Services Numériques",
+        "description": "Cabinet de conseil en transformation numérique spécialisé dans le développement web, les applications mobiles et la stratégie numérique.",
+        "longDescription": "Pledge & Grow est l'entreprise phare de notre groupe, offrant des services complets de transformation numérique aux entreprises de divers secteurs. Notre équipe d'experts combine expertise technique et réflexion stratégique pour aider les organisations à tirer parti de la technologie pour une croissance durable. Du développement logiciel personnalisé aux stratégies de marketing numérique, nous fournissons des solutions de bout en bout adaptées aux besoins uniques de chaque client.",
+        "founded": "2022",
+        "location": "Paris, France",
+        "team": "45+ professionnels",
+        "website": "https://pledgeandgrow.com"
+      },
+      {
+        "id": "taskmate",
+        "name": "Taskmate",
+        "logo": "/images/groupe/logo-fintech.png",
+        "category": "Services d'Automatisation",
+        "description": "Solutions d'automatisation avancées pour rationaliser les processus d'entreprise et augmenter l'efficacité opérationnelle.",
+        "longDescription": "Taskmate se spécialise dans le développement de solutions d'automatisation intelligentes qui aident les entreprises à rationaliser leurs opérations et à réduire la charge de travail manuelle. Notre équipe combine expertise en optimisation des processus, IA et automatisation des flux de travail pour créer des solutions personnalisées qui répondent aux défis commerciaux complexes et améliorent la productivité dans divers secteurs.",
+        "founded": "2025",
+        "location": "Paris, France",
+        "team": "30+ spécialistes",
+        "website": "https://taskmate-ia.vercel.app/"
+      },
+      {
+        "id": "verdalize",
+        "name": "Verdalize",
+        "logo": "/images/groupe/logo-greentech.png",
+        "category": "Technologie Financière",
+        "description": "Solutions innovantes de technologie financière pour les banques, les compagnies d'assurance et les prestataires de services financiers.",
+        "longDescription": "Verdalize développe des produits de technologie financière de pointe qui aident les institutions financières traditionnelles à moderniser leurs opérations et à améliorer l'expérience client. Notre équipe combine une connaissance approfondie du secteur financier avec une expertise technique pour créer des solutions sécurisées, conformes et conviviales qui répondent aux besoins évolutifs du secteur financier.",
+        "founded": "2025",
+        "location": "Londres, Royaume-Uni",
+        "team": "25+ experts en environnement",
+        "website": "https://greentechinnovations.com"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Rejoignez Notre Écosystème",
+    "description": "Que vous soyez intéressé par un partenariat avec l'une de nos entreprises, l'exploration d'opportunités de carrière, ou la discussion d'investissements potentiels ou d'acquisitions, nous serions ravis d'échanger avec vous.",
+    "buttons": {
+      "partner": "Devenir Partenaire",
+      "careers": "Explorer les Carrières",
+      "contact": "Contacter la Direction du Groupe"
+    }
+  }
+}

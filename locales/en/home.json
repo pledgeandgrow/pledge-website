@@ -105,7 +105,42 @@
   "testimonials": {
     "title": "What Our Clients Say",
     "description": "Hear from businesses that have transformed their digital presence with our solutions.",
-    "leaveReview": "Leave a review"
+    "leaveReview": "Leave a review",
+    "defaultName": "Client",
+    "defaultRole": "Business Owner",
+    "defaultQuote": "Pledge & Grow delivered exceptional results for our business.",
+    "items": [
+      {
+        "name": "Jean Dupont",
+        "role": "CEO, Global Corporate Business",
+        "quote": "Pledge & Grow transformed our online presence and significantly increased our visibility. Their strategic approach and technical expertise exceeded our expectations.",
+        "rating": 5
+      },
+      {
+        "name": "Marie Laurent",
+        "role": "Marketing Director, ERB-BTP",
+        "quote": "The Pledge & Grow team perfectly understood our needs and delivered a website that perfectly represents our brand and values.",
+        "rating": 5
+      },
+      {
+        "name": "Thomas Moreau",
+        "role": "Founder, Connect & Drive",
+        "quote": "Thanks to Pledge & Grow, our company was able to reach new markets and significantly increase its revenue.",
+        "rating": 5
+      },
+      {
+        "name": "Sophie Dubois",
+        "role": "Marketing Manager, JABB Events",
+        "quote": "The e-commerce site developed by Pledge & Grow has significantly improved our booking process and increased our online sales.",
+        "rating": 5
+      },
+      {
+        "name": "Alexandre Martin",
+        "role": "CTO, Chronos Corp",
+        "quote": "The time management application developed by Pledge & Grow has allowed us to optimize our internal processes and improve our productivity.",
+        "rating": 5
+      }
+    ]
   },
   "team": {
     "title": "Meet Our Team",

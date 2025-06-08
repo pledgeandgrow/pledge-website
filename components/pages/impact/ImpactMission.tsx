@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function ImpactMission() {
+  const { t } = useTranslations('impact');
 
   return (
     <section id="mission" className="py-16 md:py-24 overflow-hidden relative">
@@ -18,18 +20,18 @@ export default function ImpactMission() {
             viewport={{ once: true }}
             className="lg:col-start-2"
           >
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">Our Mission</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">{t('mission.title')}</h2>
 
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              We&apos;re committed to using our skills, resources, and influence to support causes that align with our values. Through pro bono work, charitable initiatives, and sustainable practices, we strive to be a force for good in the communities we serve.
+              {t('mission.description')}
             </p>
             <div className="p-4 bg-card border border-border rounded-lg shadow-sm mt-8 mb-4">
               <p className="text-lg font-medium text-foreground italic">
-                &quot;Technology should serve humanity, not the other way around.&quot;
+                &quot;{t('mission.quote')}&quot;
               </p>
             </div>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              We&apos;re dedicated to developing solutions that empower people, protect our planet, and promote social justice.
+              {t('mission.commitment')}
             </p>
           </motion.div>
           
@@ -47,7 +49,7 @@ export default function ImpactMission() {
             >
               <Image
                 src="/images/impact/impact2.png"
-                alt="Pledge & Grow mission and values"
+                alt={t('mission.imageAlt')}
                 fill
                 className="object-cover transition-transform duration-500"
               />

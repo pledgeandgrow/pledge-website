@@ -2,27 +2,31 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
-import { getRelatedArticles } from '@/data/blog-data';
+import { getRelatedArticles, Article } from '@/data/blog-data-i18n';
+import { useTranslations } from '@/hooks/useTranslations';
 
 // Using the Article interface from data/blog-data.ts
 
 interface RelatedArticlesProps {
-  currentArticleId: string;
+  currentArticleId?: string;
   category?: string;
+  articles?: Article[];
 }
 
 const RelatedArticles: React.FC<RelatedArticlesProps> = ({ 
   currentArticleId,
-  category
+  category,
+  articles
 }) => {
-  // Get related articles based on category and tags
-  const relatedArticles = getRelatedArticles(currentArticleId, category, 3);
+  const { t } = useTranslations('blog');
+  // Use provided articles or get related articles based on category and tags
+  const relatedArticles = articles || (currentArticleId ? getRelatedArticles(currentArticleId, category, 3) : []);
 
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900 dark:text-white">
-          Related Articles
+          {t('relatedArticles')}
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -43,7 +47,7 @@ const RelatedArticles: React.FC<RelatedArticlesProps> = ({
                       {article.category}
                     </span>
                     <span className="text-xs text-gray-500 dark:text-gray-400 ml-auto">
-                      {article.readTime}
+                      {t('readTime', { time: article.readTime, defaultValue: '{{time}} min read' })}
                     </span>
                   </div>
                   <h3 className="font-semibold text-lg mb-2 text-gray-900 dark:text-white line-clamp-2">

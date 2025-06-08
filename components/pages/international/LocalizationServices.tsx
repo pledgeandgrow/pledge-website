@@ -6,9 +6,11 @@ import { motion } from "framer-motion";
 // Link import removed as it was unused
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check, Languages, Globe, FileText, Code } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function LocalizationServices() {
   const [isMobile, setIsMobile] = useState(false);
+  const { t } = useTranslations('international');
 
   useEffect(() => {
     const checkIfMobile = () => {
@@ -24,49 +26,51 @@ export default function LocalizationServices() {
     // Cleanup
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
-  const services = [
+
+  // Helper function to safely get features as an array
+  const getFeatures = (key: string): string[] => {
+    const features = t(key, { returnObjects: true });
+    // Si features est un tableau, le retourner, sinon retourner un tableau vide
+    return Array.isArray(features) ? features : [];
+  };
+  
+  // Helper function to safely get string translations
+  const getText = (key: string, fallback: string): string => {
+    const text = t(key);
+    return typeof text === 'string' ? text : fallback;
+  };
+
+  // Define a type for our services
+  interface ServiceItem {
+    title: string;
+    description: string;
+    features: string[];
+    icon: React.ReactNode;
+  }
+
+  const services: ServiceItem[] = [
     {
-      title: "Website & App Localization",
-      description: "Comprehensive localization of your digital products for global markets, including UI/UX adaptation, content translation, and cultural optimization.",
-      features: [
-        "Multi-language interface implementation",
-        "Bidirectional text support (RTL/LTR)",
-        "Currency, date, and number format adaptation",
-        "Cultural UX considerations"
-      ],
+      title: getText('localizationServices.services.webAppLocalization.title', "Website & App Localization"),
+      description: getText('localizationServices.services.webAppLocalization.description', "Comprehensive localization of your digital products for global markets, including UI/UX adaptation, content translation, and cultural optimization."),
+      features: getFeatures('localizationServices.services.webAppLocalization.features'),
       icon: <Globe className="h-6 w-6 text-primary" />
     },
     {
-      title: "Content Translation",
-      description: "Professional translation services for all your digital content, ensuring accurate and culturally appropriate messaging across languages.",
-      features: [
-        "Website and app content translation",
-        "Marketing material localization",
-        "Technical documentation translation",
-        "SEO-optimized multilingual content"
-      ],
+      title: getText('localizationServices.services.contentTranslation.title', "Content Translation"),
+      description: getText('localizationServices.services.contentTranslation.description', "Professional translation services for all your digital content, ensuring accurate and culturally appropriate messaging across languages."),
+      features: getFeatures('localizationServices.services.contentTranslation.features'),
       icon: <FileText className="h-6 w-6 text-primary" />
     },
     {
-      title: "Multilingual Development",
-      description: "Technical implementation of multilingual capabilities in your applications, with proper internationalization (i18n) architecture.",
-      features: [
-        "i18n framework implementation",
-        "Language switching functionality",
-        "Content management for multiple languages",
-        "Automated translation workflows"
-      ],
+      title: getText('localizationServices.services.multilingualDevelopment.title', "Multilingual Development"),
+      description: getText('localizationServices.services.multilingualDevelopment.description', "Technical implementation of multilingual capabilities in your applications, with proper internationalization (i18n) architecture."),
+      features: getFeatures('localizationServices.services.multilingualDevelopment.features'),
       icon: <Code className="h-6 w-6 text-primary" />
     },
     {
-      title: "Global Compliance",
-      description: "Ensuring your digital products comply with regional regulations and standards across different markets.",
-      features: [
-        "GDPR, CCPA, and other privacy regulations",
-        "Accessibility standards compliance",
-        "Regional legal requirements",
-        "Industry-specific compliance"
-      ],
+      title: getText('localizationServices.services.globalCompliance.title', "Global Compliance"),
+      description: getText('localizationServices.services.globalCompliance.description', "Ensuring your digital products comply with regional regulations and standards across different markets."),
+      features: getFeatures('localizationServices.services.globalCompliance.features'),
       icon: <Languages className="h-6 w-6 text-primary" />
     }
   ];
@@ -76,21 +80,24 @@ export default function LocalizationServices() {
   return (
     <section className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-16"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Localization Services
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            We help businesses reach global audiences with comprehensive localization services.
-            From translation to cultural adaptation, we ensure your digital products resonate worldwide.
-          </p>
-        </motion.div>
+        <div className="text-center mb-12">
+          <motion.h2 
+            className="text-3xl md:text-4xl font-bold mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            {getText('localizationServices.title', 'Localization Services')}
+          </motion.h2>
+          <motion.p 
+            className="text-lg text-muted-foreground max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            {t('localizationServices.description') || "We help businesses reach global audiences with comprehensive localization services. From translation to cultural adaptation, we ensure your digital products resonate worldwide."}
+          </motion.p>
+        </div>
 
         {/* Mobile Carousel View */}
         {isMobile && (

@@ -27,23 +27,24 @@
   },
   "companies": {
     "title": "Our Companies",
-    "description": "Explore the diverse businesses that make up the Pledge & Grow Group.",
+    "description": "Explore the diverse companies that make up the Pledge & Grow Group.",
     "filters": {
       "all": "All Companies",
       "digital": "Digital Services",
       "automation": "Automation Services",
       "health": "HealthTech",
       "sustainability": "Sustainability",
-      "education": "Education"
+      "education": "Education",
+      "fintech": "Financial Technology"
     },
     "company": {
       "founded": "Founded",
       "location": "Location",
       "team": "Team",
       "website": "Website",
-      "services": "Services",
-      "achievements": "Key Achievements",
-      "viewWebsite": "Visit Website"
+      "visitWebsite": "Visit Website",
+      "learnMore": "Learn More",
+      "about": "About"
     },
     "items": [
       {
@@ -56,20 +57,7 @@
         "founded": "2022",
         "location": "Paris, France",
         "team": "45+ professionals",
-        "website": "https://pledgeandgrow.com",
-        "services": [
-          "Custom Web Development",
-          "Mobile App Development",
-          "Digital Strategy Consulting",
-          "UX/UI Design",
-          "E-commerce Solutions"
-        ],
-        "achievements": [
-          "Delivered 100+ successful digital projects",
-          "Recognized as a top digital agency in France",
-          "Achieved 98% client satisfaction rate",
-          "Partnered with leading technology providers"
-        ]
+        "website": "https://pledgeandgrow.com"
       },
       {
         "id": "taskmate",
@@ -81,20 +69,19 @@
         "founded": "2025",
         "location": "Paris, France",
         "team": "30+ specialists",
-        "website": "https://taskmate-ia.vercel.app/",
-        "services": [
-          "Process Automation",
-          "AI-Powered Workflows",
-          "Custom Automation Solutions",
-          "Integration Services",
-          "Automation Consulting"
-        ],
-        "achievements": [
-          "Reduced operational costs by 40% for clients",
-          "Automated over 1,000 business processes",
-          "Saved clients 10,000+ work hours annually",
-          "Developed proprietary automation platform"
-        ]
+        "website": "https://taskmate-ia.vercel.app/"
+      },
+      {
+        "id": "verdalize",
+        "name": "Verdalize",
+        "logo": "/images/groupe/logo-greentech.png",
+        "category": "Financial Technology",
+        "description": "Innovative financial technology solutions for banks, insurance companies, and financial service providers.",
+        "longDescription": "Verdalize develops cutting-edge financial technology products that help traditional financial institutions modernize their operations and improve customer experiences. Our team combines deep financial industry knowledge with technical expertise to create secure, compliant, and user-friendly solutions that address the evolving needs of the financial sector.",
+        "founded": "2025",
+        "location": "London, UK",
+        "team": "25+ environmental experts",
+        "website": "https://greentechinnovations.com"
       }
     ]
   },

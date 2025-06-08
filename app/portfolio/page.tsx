@@ -1,7 +1,6 @@
 "use client";
 
 import { PortfolioGrid } from "@/components/pages/portfolio";
-import { portfolioProjects } from "@/data/portfolio-data";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -13,7 +12,7 @@ export default function PortfolioPage() {
         {/* Portfolio Grid Section */}
         <section className="py-16 px-4 bg-background">
           <div className="container mx-auto max-w-7xl">
-            <PortfolioGrid projects={portfolioProjects} />
+            <PortfolioGrid />
           </div>
         </section>
       </main>

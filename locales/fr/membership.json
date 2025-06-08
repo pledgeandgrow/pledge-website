@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "title": "Adhésion | Pledge & Grow",
+    "description": "Rejoignez notre programme d'adhésion exclusif et débloquez des avantages premium, des ressources et un soutien pour accélérer votre parcours de transformation numérique."
+  },
+  "hero": {
+    "title": "Adhésion Premium",
+    "description": "Notre programme d'adhésion exclusif est conçu pour les entreprises et les professionnels qui nécessitent un support dédié et des services premium pour leur parcours de transformation numérique.",
+    "idealFor": "Idéal Pour",
+    "enterpriseOrg": "Organisations d'Entreprise",
+    "enterpriseDesc": "recherchant un support technique dédié et un service prioritaire",
+    "growingBusiness": "Entreprises en Croissance",
+    "growingDesc": "qui ont besoin d'une maintenance technique fiable et constante",
+    "digitalFirst": "Entreprises Numériques",
+    "digitalDesc": "qui nécessitent une réponse immédiate aux problèmes techniques",
+    "imageAlt": "Avantages de l'Adhésion Premium"
+  },
+  "benefits": {
+    "title": "Avantages de l'Adhésion",
+    "description": "Notre programme d'adhésion offre une large gamme d'avantages exclusifs conçus pour soutenir votre croissance professionnelle et le succès de votre entreprise.",
+    "items": {
+      "exclusiveResources": {
+        "title": "Ressources Exclusives",
+        "description": "Accédez à notre bibliothèque de guides premium, de modèles et d'outils pour accélérer vos projets."
+      },
+      "communityAccess": {
+        "title": "Accès à la Communauté",
+        "description": "Connectez-vous avec des professionnels partageant les mêmes idées et des experts de l'industrie dans notre communauté privée."
+      },
+      "priorityEvents": {
+        "title": "Événements Prioritaires",
+        "description": "Accès anticipé et places réservées à nos ateliers, webinaires et conférences."
+      },
+      "certificationPathways": {
+        "title": "Parcours de Certification",
+        "description": "Programmes de certification exclusifs pour valider votre expertise et améliorer vos références."
+      },
+      "codeRepository": {
+        "title": "Dépôt de Code",
+        "description": "Accès à nos bibliothèques de code organisées, composants et ressources de développement."
+      },
+      "documentationAccess": {
+        "title": "Accès à la Documentation",
+        "description": "Documentation complète et meilleures pratiques pour implémenter nos solutions."
+      },
+      "prioritySupport": {
+        "title": "Support Prioritaire",
+        "description": "Canaux de support dédiés avec des temps de réponse plus rapides pour vos questions techniques."
+      },
+      "innovationInsights": {
+        "title": "Aperçus d'Innovation",
+        "description": "Accès anticipé aux articles de recherche, tendances technologiques et briefings d'innovation."
+      }
+    }
+  },
+  "plans": {
+    "title": "Plan d'Adhésion Premium",
+    "description": "Notre plan d'adhésion exclusif offre un support complet et des services premium pour les entreprises qui nécessitent une assistance technique dédiée.",
+    "premium": {
+      "name": "Adhésion Premium",
+      "description": "Avantages exclusifs pour les entreprises nécessitant un support dédié et un service premium.",
+      "price": "15 000 €",
+      "period": "par an",
+      "buttonText": "Postuler Maintenant",
+      "features": {
+        "premiumSupport": "Support Technique Premium",
+        "maintenanceCoverage": "Couverture Complète de Maintenance",
+        "extraSupport": "Support et Assistance Supplémentaires",
+        "dedicatedConsultant": "Consultant Dédié Attribué",
+        "noWaitingList": "Pas de Liste d'Attente pour les Problèmes Urgents",
+        "exclusiveDiscounts": "Remises Exclusives Partenaires",
+        "priorityFeatures": "Demandes de Fonctionnalités Prioritaires",
+        "quarterlyStrategy": "Sessions Stratégiques Trimestrielles"
+      }
+    },
+    "badge": "Premium"
+  },
+  "cta": {
+    "title": "Prêt à Rejoindre Notre Communauté ?",
+    "description": "Faites le prochain pas dans votre parcours professionnel. Rejoignez notre programme d'adhésion aujourd'hui et débloquez un monde de ressources, de support et d'opportunités.",
+    "getJob": "Obtenir un emploi",
+    "goHome": "Retourner à l'accueil"
+  }
+}

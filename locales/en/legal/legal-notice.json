@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "Legal Notice | Pledge & Grow",
+    "description": "Legal information about Pledge & Grow, including company details, ownership, and contact information."
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "legal": "Legal",
+    "legalNotice": "Legal Notice"
+  },
+  "hero": {
+    "title": "Legal Notice",
+    "subtitle": "Last updated: June 7, 2025"
+  },
+  "sections": {
+    "editorIdentification": {
+      "title": "Website Editor and Host Identification",
+      "content": [
+        "Editor and Owner:",
+        "Company Name: PLEDGE AND GROW",
+        "Registered Office: 4Bis Rue Alfred Nobel – Champs-sur-Marne – France",
+        "SIREN: 931577662",
+        "VAT Number: FR38931577662",
+        "Business Activity Code: 62.01Z - Computer Programming",
+        "Phone: +33 7 53 69 58 40",
+        "Website: pledgeandgrow.com",
+        "Email: contact@pledgeandgrow.com"
+      ]
+    },
+    "hostingProvider": {
+      "title": "Hosting Providers",
+      "content": [
+        "Vercel Inc",
+        "440 N Barranca Ave #4133",
+        "Covina, CA 91723",
+        "Email: privacy@vercel.com",
+        "For users in the EEA, UK, and California, Vercel may collect your personal data as a 'data controller' when it determines the means and purposes of processing (e.g., visitor data, event participants, or customers). As a 'data processor' or 'service provider', Vercel processes data on behalf of its customers who use its hosting services or analytics tools. More information is available at: Vercel.com"
+      ]
+    },
+    "siteAccess": {
+      "title": "Website Access",
+      "content": [
+        "The website is accessible from anywhere, 7 days a week, 24 hours a day, except in cases of force majeure, scheduled or unscheduled interruptions that may arise from maintenance requirements. In the event of modification, interruption, or suspension of services, the pledgeandgrow.com website cannot be held responsible."
+      ]
+    },
+    "dataCollection": {
+      "title": "Data Collection",
+      "content": [
+        "Users are informed that when visiting the site, a cookie may automatically install on their browser software. By browsing the site, users choose to accept cookies or not. A cookie is an element that does not identify the User but is used to record information relating to their navigation on the website. Users can disable cookies through the settings in their browser software."
+      ]
+    }
+
+  }
+}

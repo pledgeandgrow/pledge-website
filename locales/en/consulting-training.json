@@ -1,0 +1,82 @@
+{
+  "id": "consulting-training",
+  "slug": "consulting-training",
+  "title": "Consulting & Training",
+  "subtitle": "Expert guidance and knowledge transfer for digital transformation",
+  "description": "We provide strategic consulting and customized training to help organizations build internal capabilities and navigate digital transformation. Our experts share knowledge, best practices, and hands-on guidance to empower your team and drive sustainable success.",
+  "heroImage": "/images/expertise/consulting-training-hero.jpg",
+  "heroButton": "Explore Our Services",
+  "category": "Support",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive consulting and training solutions"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "Platforms and tools we use for effective knowledge transfer"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How our consulting and training services empower your team"
+    }
+  },
+  "features": [
+    {
+      "title": "Technical Consulting",
+      "description": "Expert guidance on technology selection and implementation",
+      "icon": "light-bulb"
+    },
+    {
+      "title": "Digital Strategy",
+      "description": "Roadmaps for successful digital transformation",
+      "icon": "map"
+    },
+    {
+      "title": "Developer Training",
+      "description": "Hands-on technical workshops for your development team",
+      "icon": "code"
+    },
+    {
+      "title": "Leadership Coaching",
+      "description": "Guidance for executives leading digital initiatives",
+      "icon": "user-group"
+    }
+  ],
+  "technologies": [
+    { "name": "Jira", "logo": "/images/tech/jira.svg" },
+    { "name": "Google Suite", "logo": "/images/tech/google-suite.svg" },
+    { "name": "Discord", "logo": "/images/tech/discord.svg" },
+    { "name": "WhatsApp", "logo": "/images/tech/whatsapp.svg" },
+    { "name": "Microsoft Suite", "logo": "/images/tech/microsoft-suite.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Enhanced Team Capabilities",
+      "description": "Build internal expertise and reduce dependency on external resources",
+      "icon": "user-plus"
+    },
+    {
+      "title": "Accelerated Innovation",
+      "description": "Implement new technologies and methodologies more quickly",
+      "icon": "rocket"
+    },
+    {
+      "title": "Risk Reduction",
+      "description": "Avoid common pitfalls with expert guidance",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Knowledge Retention",
+      "description": "Ensure critical skills and information remain within your organization",
+      "icon": "brain"
+    }
+  ],
+  "relatedExpertise": ["documentation", "maintenance", "website"],
+  "cta": {
+    "title": "Ready to build your team's capabilities?",
+    "description": "Let's discuss how our consulting and training services can help your organization thrive in the digital landscape.",
+    "buttonText": "Explore Consulting & Training",
+    "buttonLink": "/digital-project?service=consulting-training"
+  }
+}

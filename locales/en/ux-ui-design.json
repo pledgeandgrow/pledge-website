@@ -1,0 +1,82 @@
+{
+  "id": "ux-ui-design",
+  "slug": "ux-ui-design",
+  "title": "UX/UI Design",
+  "subtitle": "Create intuitive, engaging digital experiences that users love",
+  "description": "We design user-centered digital experiences that balance aesthetic appeal with functional usability. Our UX/UI design process focuses on understanding user needs and business goals to create interfaces that are both beautiful and effective.",
+  "heroImage": "/images/expertise/ux-ui-design-hero.jpg",
+  "heroButton": "Start Your Design Project",
+  "category": "Complementary",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive UX/UI design services"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "Industry-leading design tools and platforms"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How great design transforms user experience"
+    }
+  },
+  "features": [
+    {
+      "title": "User Research",
+      "description": "Deep understanding of your users' needs and behaviors",
+      "icon": "users"
+    },
+    {
+      "title": "Information Architecture",
+      "description": "Logical organization of content and functionality",
+      "icon": "template"
+    },
+    {
+      "title": "Wireframing & Prototyping",
+      "description": "Interactive models to test and refine concepts",
+      "icon": "layout"
+    },
+    {
+      "title": "Visual Design",
+      "description": "Stunning visuals that reinforce your brand identity",
+      "icon": "palette"
+    }
+  ],
+  "technologies": [
+    { "name": "Figma", "logo": "/images/tech/figma.svg" },
+    { "name": "Adobe XD", "logo": "/images/tech/adobe-xd.svg" },
+    { "name": "Sketch", "logo": "/images/tech/sketch.svg" },
+    { "name": "InVision", "logo": "/images/tech/invision.svg" },
+    { "name": "Framer", "logo": "/images/tech/framer.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Increased User Satisfaction",
+      "description": "Interfaces that users find intuitive and enjoyable to use",
+      "icon": "heart"
+    },
+    {
+      "title": "Higher Conversion Rates",
+      "description": "Designs that guide users toward desired actions",
+      "icon": "trending-up"
+    },
+    {
+      "title": "Reduced Development Costs",
+      "description": "Identifying and fixing issues before development begins",
+      "icon": "currency-dollar"
+    },
+    {
+      "title": "Brand Consistency",
+      "description": "Cohesive visual language across all digital touchpoints",
+      "icon": "check-badge"
+    }
+  ],
+  "relatedExpertise": ["website", "mobile-app", "e-commerce"],
+  "cta": {
+    "title": "Ready to transform your digital experience?",
+    "description": "Let's create intuitive, engaging interfaces that your users will love.",
+    "buttonText": "Start Your Design Project",
+    "buttonLink": "/digital-project?service=ux-ui-design"
+  }
+}

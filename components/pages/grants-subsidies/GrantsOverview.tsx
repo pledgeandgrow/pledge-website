@@ -14,9 +14,11 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-// Link import removed as it was unused
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function GrantsOverview() {
+  const { t } = useTranslations('grants-subsidies');
+  
   // State to track which benefit is being hovered or touched
   const [hoveredBenefit, setHoveredBenefit] = useState<number | null>(null);
   const [activeBenefitIndex, setActiveBenefitIndex] = useState(0);
@@ -25,43 +27,43 @@ export default function GrantsOverview() {
   const benefits = [
     {
       icon: <Euro className="h-8 w-8 text-primary" />,
-      title: "Financial Support",
-      description: "Access non-repayable funding to reduce the cost of your digital projects and innovation initiatives.",
-      stat: "Up to 50%",
-      statLabel: "cost reduction"
+      title: t('overview.benefits.financialSupport.title'),
+      description: t('overview.benefits.financialSupport.description'),
+      stat: t('overview.benefits.financialSupport.stat'),
+      statLabel: t('overview.benefits.financialSupport.statLabel')
     },
     {
       icon: <TrendingUp className="h-8 w-8 text-primary" />,
-      title: "Accelerated Growth",
-      description: "Fast-track your business development with resources that might otherwise be out of reach.",
-      stat: "2-3x",
-      statLabel: "faster growth"
+      title: t('overview.benefits.acceleratedGrowth.title'),
+      description: t('overview.benefits.acceleratedGrowth.description'),
+      stat: t('overview.benefits.acceleratedGrowth.stat'),
+      statLabel: t('overview.benefits.acceleratedGrowth.statLabel')
     },
     {
       icon: <Clock className="h-8 w-8 text-primary" />,
-      title: "Faster Implementation",
-      description: "Implement digital solutions more quickly with dedicated funding for technology adoption.",
-      stat: "4-6",
-      statLabel: "months saved"
+      title: t('overview.benefits.timeEfficiency.title'),
+      description: t('overview.benefits.timeEfficiency.description'),
+      stat: t('overview.benefits.timeEfficiency.stat'),
+      statLabel: t('overview.benefits.timeEfficiency.statLabel')
     },
     {
       icon: <Users className="h-8 w-8 text-primary" />,
-      title: "Expert Guidance",
-      description: "Benefit from our experience in navigating complex application processes and requirements.",
-      stat: "10+",
-      statLabel: "years experience"
+      title: t('overview.benefits.expertGuidance.title'),
+      description: t('overview.benefits.expertGuidance.description'),
+      stat: t('overview.benefits.expertGuidance.stat'),
+      statLabel: t('overview.benefits.expertGuidance.statLabel')
     },
     {
       icon: <CheckCircle className="h-8 w-8 text-primary" />,
-      title: "Higher Approval Rates",
-      description: "Increase your chances of success with professionally prepared applications and documentation.",
+      title: t('overview.process.steps.assessment.title'),
+      description: t('overview.process.steps.assessment.description'),
       stat: "85%",
-      statLabel: "success rate"
+      statLabel: t('overview.benefits.expertGuidance.statLabel')
     },
     {
       icon: <Lightbulb className="h-8 w-8 text-primary" />,
-      title: "Innovation Support",
-      description: "Secure funding specifically designed to foster innovation and digital transformation initiatives.",
+      title: t('overview.process.steps.strategy.title'),
+      description: t('overview.process.steps.strategy.description'),
       stat: "€250k+",
       statLabel: "avg. funding"
     }
@@ -142,10 +144,10 @@ export default function GrantsOverview() {
               className="text-center lg:text-left"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Unlock Your Business Potential
+                {t('overview.title')}
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Navigating the complex landscape of grants and subsidies can be challenging. Our expertise helps you identify, apply for, and secure the funding opportunities that align with your business goals.
+                {t('overview.description')}
               </p>
             </motion.div>
             

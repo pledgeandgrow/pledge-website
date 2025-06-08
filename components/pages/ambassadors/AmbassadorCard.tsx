@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Instagram, Twitter, Linkedin, Globe } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface SocialLink {
   platform: 'twitter' | 'linkedin' | 'instagram' | 'tiktok';
@@ -32,6 +33,7 @@ export default function AmbassadorCard({
   socialLinks, 
   featured = false 
 }: AmbassadorCardProps) {
+  const { t } = useTranslations('ambassadors');
   
   const getSocialIcon = (platform: string) => {
     switch (platform) {
@@ -48,7 +50,7 @@ export default function AmbassadorCard({
           </svg>
         );
       default:
-        return <ExternalLink size={16} />;
+        return <Globe size={16} />;
     }
   };
 
@@ -60,11 +62,10 @@ export default function AmbassadorCard({
       className="h-full"
     >
       <Card className={`h-full flex flex-col transition-all duration-300 hover:shadow-lg ${featured ? 'border-primary/50 bg-primary/5 dark:bg-primary/10' : ''}`}>
+        {featured && <Badge className="absolute top-4 right-4 bg-primary hover:bg-primary/90">{t('ambassadorsList.featured')}</Badge>}
         <CardHeader className="pb-4">
           <div className="flex justify-between items-start">
-            <Badge variant={featured ? "default" : "secondary"} className="mb-2">
-              {role}
-            </Badge>
+            <Badge variant="outline" className="mb-2">{role}</Badge>
           </div>
           <div className="flex justify-center items-center mb-4">
             <div className="relative w-32 h-32 overflow-hidden rounded-full border-4 border-background shadow-md">
@@ -77,12 +78,15 @@ export default function AmbassadorCard({
             </div>
           </div>
           <CardTitle className="text-xl text-center">{name}</CardTitle>
-          <CardDescription className="text-center text-sm">{location}</CardDescription>
+          <CardDescription className="text-center text-sm">
+            <span className="font-medium">{t('ambassadorsList.ambassador.location')}:</span> {location}
+          </CardDescription>
         </CardHeader>
         <CardContent className="flex-grow">
           <p className="text-sm text-muted-foreground">
-            {bio}
+            <span className="font-medium">{t('ambassadorsList.ambassador.role')}:</span> {role}
           </p>
+          <p className="text-sm text-muted-foreground mt-2">{bio}</p>
         </CardContent>
         <CardFooter className="pt-4 flex justify-center gap-2">
           {socialLinks.map((link, index) => (

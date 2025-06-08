@@ -3,10 +3,36 @@
     "title": "Careers | Pledge & Grow",
     "description": "Join our team at Pledge & Grow and be part of a dynamic company dedicated to creating innovative digital solutions. Explore open positions and our company culture."
   },
+  "breadcrumbs": {
+    "home": "Home",
+    "careers": "Careers",
+    "backToPositions": "Back to all positions"
+  },
   "whyJoinUs": {
     "title": "Why Join Pledge & Grow",
-    "description": "Become part of a team that's passionate about innovation, collaboration, and making a difference through technology.",
+    "description": "We're more than just a workplace. We're a community of passionate professionals dedicated to growth, innovation, and making a difference.",
+    "joinTeam": {
+      "title": "Join Our Team",
+      "subtitle": "Be part of something extraordinary"
+    },
+    "whatWeOffer": {
+      "title": "What We Offer",
+      "description": "At Pledge & Grow, we believe in creating an environment where talent thrives. Our team members enjoy competitive benefits, flexible work arrangements, and opportunities to work on cutting-edge projects that make a real difference."
+    },
+    "keyBenefits": "Key Benefits",
     "benefits": {
+      "benefit1": {
+        "title": "Collaborative Environment",
+        "description": "Join a supportive team that values collaboration, knowledge sharing, and mutual growth."
+      },
+      "benefit2": {
+        "title": "Global Opportunities",
+        "description": "Work with clients and teams from around the world, gaining international experience and perspective."
+      },
+      "benefit3": {
+        "title": "Career Growth",
+        "description": "Clear career paths and opportunities for advancement based on your skills and ambitions."
+      },
       "innovation": {
         "title": "Culture of Innovation",
         "description": "Work with cutting-edge technologies and contribute to projects that push the boundaries of what's possible."
@@ -35,21 +61,26 @@
   },
   "openPositions": {
     "title": "Open Positions",
-    "description": "Explore current opportunities to join our team and contribute to innovative digital projects.",
-    "noPositions": "No positions match your search criteria.",
+    "description": "Explore our current job openings and find the perfect role to match your skills and career goals.",
+    "noPositions": "No positions match your search criteria. Please try adjusting your filters.",
     "filters": {
       "search": "Search positions...",
-      "department": "Department",
-      "locationType": "Location Type",
+      "department": "Filter by department",
+      "locationType": "Filter by location type",
       "allDepartments": "All Departments",
       "allLocationTypes": "All Location Types"
     },
     "positionCard": {
       "applyNow": "Apply Now",
-      "postedOn": "Posted on",
+      "postedOn": "Posted",
+      "viewDetails": "View Details",
       "remote": "Remote",
       "hybrid": "Hybrid",
-      "onsite": "Onsite"
+      "onsite": "Onsite",
+      "fulltime": "Full-time",
+      "parttime": "Part-time",
+      "contract": "Contract",
+      "internship": "Internship"
     },
     "departments": {
       "engineering": "Engineering",
@@ -57,43 +88,233 @@
       "marketing": "Marketing",
       "sales": "Sales",
       "operations": "Operations",
-      "customerSupport": "Customer Support"
+      "customerSupport": "Customer Support",
+      "executive": "Executive",
+      "it": "IT",
+      "development": "Development"
     }
   },
   "applicationProcess": {
     "title": "Our Application Process",
-    "description": "We've designed a transparent and efficient hiring process to help us find the right talent and give you a clear understanding of what to expect.",
+    "description": "We've designed a straightforward and transparent hiring process to help us find the right talent and give you clarity every step of the way.",
     "steps": {
-      "application": {
+      "step1": {
         "title": "Application Submission",
-        "description": "Submit your resume and cover letter through our online portal. We review all applications carefully."
+        "description": "Submit your application through our careers portal with your resume, cover letter, and any relevant portfolio links."
       },
-      "initialScreen": {
+      "step2": {
         "title": "Initial Screening",
-        "description": "A brief phone or video call to discuss your background, experience, and interest in the role."
+        "description": "Our recruitment team will review your application and conduct an initial phone or video screening to discuss your experience and aspirations."
       },
-      "assessment": {
-        "title": "Skills Assessment",
-        "description": "Depending on the role, you may be asked to complete a technical assessment or case study."
-      },
-      "interviews": {
+      "step3": {
         "title": "Team Interviews",
-        "description": "Meet with potential team members and managers to discuss your skills, experience, and cultural fit."
+        "description": "Meet with potential team members and managers for in-depth discussions about your skills, experience, and fit with our culture."
       },
-      "finalDecision": {
-        "title": "Final Decision",
-        "description": "We aim to make a decision within one week of the final interview."
+      "step4": {
+        "title": "Assessment & Decision",
+        "description": "Complete any relevant technical assessments or case studies, after which we'll make a final decision based on all interview feedback."
       },
-      "onboarding": {
-        "title": "Onboarding",
-        "description": "A comprehensive onboarding program to help you integrate smoothly into our team and culture."
+      "step5": {
+        "title": "Offer & Onboarding",
+        "description": "If selected, you'll receive an offer and, upon acceptance, begin our comprehensive onboarding process to set you up for success."
       }
     }
   },
+  "jobDetail": {
+    "overview": "Overview",
+    "responsibilities": "Responsibilities",
+    "requirements": "Requirements",
+    "benefits": "Benefits",
+    "applicationProcess": "Application Process",
+    "reportingTo": "Reporting To",
+    "department": "Department",
+    "requiredSkills": "Required Skills",
+    "salaryRange": "Salary Range",
+    "applyNow": "Apply Now",
+    "startDate": "Start Date"
+  },
   "cta": {
-    "title": "Join Our Talented Team",
-    "description": "We're always looking for passionate individuals to help us build innovative digital solutions.",
+    "title": "Ready to Join Our Team?",
+    "description": "Take the next step in your career journey. Explore our open positions or send us your resume for future opportunities.",
+    "learnAboutUs": "Learn about us",
+    "joinOurTeam": "Join our team",
     "noOpenings": "Don't see a suitable opening? Send your resume to careers@pledgeandgrow.com and we'll keep you in mind for future opportunities.",
     "button": "View Open Positions"
+  },
+  "positions": {
+    "cso": {
+      "title": "Chief Sales Officer",
+      "department": "Executive",
+      "location": "Paris, France",
+      "locationType": "Hybrid",
+      "employmentType": "Full-time",
+      "description": "We're looking for an experienced Chief Sales Officer to lead our sales strategy, drive revenue growth, and build strong client relationships across all markets.",
+      "overview": "As the Chief Sales Officer at Pledge & Grow, you will be responsible for developing and executing our global sales strategy, building and leading high-performing sales teams, and driving sustainable revenue growth. You will work closely with the executive team to align sales objectives with our overall business goals and ensure consistent delivery of exceptional client experiences.",
+      "responsibilities": [
+        "Develop and implement comprehensive sales strategies to achieve revenue targets and business objectives",
+        "Build, lead, and mentor a high-performing sales team across multiple regions",
+        "Establish and maintain strong relationships with key clients and strategic partners",
+        "Collaborate with marketing to develop effective sales materials and campaigns",
+        "Analyze market trends, competitor activities, and sales performance to identify growth opportunities",
+        "Create accurate sales forecasts and reports for executive management",
+        "Optimize the sales process to improve efficiency and effectiveness",
+        "Represent the company at industry events and conferences"
+      ],
+      "requirements": [
+        "10+ years of progressive sales leadership experience, with at least 5 years in a senior management role",
+        "Proven track record of exceeding sales targets and driving business growth",
+        "Experience in the digital services, technology, or consulting industry",
+        "Strong understanding of B2B sales methodologies and best practices",
+        "Excellent leadership, communication, and negotiation skills",
+        "Strategic thinking with a data-driven approach to decision making",
+        "Bachelor's degree in Business, Marketing, or related field; MBA preferred",
+        "Willingness to travel as needed (approximately 25%)"
+      ],
+      "benefits": [
+        "Competitive base salary plus performance-based bonuses",
+        "Comprehensive health, dental, and vision insurance",
+        "Retirement plan with company matching",
+        "Generous paid time off and flexible work arrangements",
+        "Professional development and continuing education allowance",
+        "Company-sponsored events and team building activities",
+        "Modern office in central Paris with hybrid work options"
+      ],
+      "applicationProcess": "Our hiring process for this position includes an initial phone screening, followed by two rounds of interviews with the executive team and key stakeholders. Final candidates will be asked to present a 90-day sales strategy plan.",
+      "salary": "€120,000 - €150,000 annually plus performance bonuses",
+      "skills": ["Sales Leadership", "Strategic Planning", "Team Management", "Business Development", "Client Relationship Management", "Market Analysis", "Negotiation", "CRM Systems"],
+      "reportingTo": "CEO",
+      "startDate": "Immediate"
+    },
+    "marketing-intern": {
+      "title": "Marketing Intern",
+      "department": "Marketing",
+      "location": "Remote",
+      "locationType": "Remote",
+      "employmentType": "Full-time",
+      "description": "Join our marketing team to develop and implement internal marketing strategies that strengthen our brand identity and company culture.",
+      "overview": "As a Marketing Intern at Pledge & Grow, you will work directly with our Marketing team to support various marketing initiatives, gain hands-on experience in digital marketing, and contribute to our brand growth. This position offers an excellent opportunity to learn and develop practical marketing skills in a dynamic and supportive environment.",
+      "responsibilities": [
+        "Assist in creating and scheduling content for social media platforms",
+        "Help develop and implement internal communication strategies",
+        "Support the creation of marketing materials and presentations",
+        "Conduct market research and competitor analysis",
+        "Assist with email marketing campaigns and newsletter creation",
+        "Track and analyze marketing metrics and campaign performance",
+        "Participate in brainstorming sessions for new marketing initiatives",
+        "Support the team with administrative tasks related to marketing activities"
+      ],
+      "requirements": [
+        "Currently pursuing a degree in Marketing, Communications, Business, or related field",
+        "Strong interest in digital marketing and brand development",
+        "Excellent written and verbal communication skills",
+        "Basic knowledge of social media platforms and digital marketing concepts",
+        "Creativity and willingness to contribute ideas",
+        "Ability to work independently and as part of a team",
+        "Basic proficiency with design tools (Canva, Adobe Creative Suite) is a plus",
+        "Organized with good attention to detail"
+      ],
+      "benefits": [
+        "Paid internship with flexible remote working hours",
+        "Mentorship from experienced marketing professionals",
+        "Hands-on experience with real marketing projects and campaigns",
+        "Networking opportunities within the industry",
+        "Possibility of full-time employment upon successful completion",
+        "Access to online learning resources and training",
+        "Regular feedback and career development guidance"
+      ],
+      "applicationProcess": "Our selection process includes a resume review, a brief marketing assignment, and an interview with the Marketing Manager and team members. We aim to provide a decision within two weeks of application.",
+      "salary": "€1,200 - €1,500 monthly stipend",
+      "skills": ["Social Media Marketing", "Content Creation", "Market Research", "Email Marketing", "Analytics", "Communication", "Creativity", "Organization"],
+      "reportingTo": "Marketing Manager",
+      "startDate": "Flexible"
+    },
+    "it-intern": {
+      "title": "IT Development Intern",
+      "department": "Engineering",
+      "location": "Lyon, France",
+      "locationType": "Hybrid",
+      "employmentType": "Internship",
+      "description": "Join our engineering team as an IT Development Intern to gain hands-on experience with modern web technologies while working on real-world projects under experienced mentors.",
+      "overview": "As an IT Development Intern at Pledge & Grow, you will be immersed in our engineering team, working on real client projects while learning modern web development practices. This internship provides a structured learning environment where you'll gain practical experience with Next.js, React, and other cutting-edge technologies under the guidance of experienced developers.",
+      "responsibilities": [
+        "Assist in developing and maintaining web applications using Next.js and React",
+        "Collaborate with senior developers on feature implementation and bug fixes",
+        "Participate in code reviews and technical discussions",
+        "Learn and apply best practices in web development",
+        "Assist in writing and maintaining technical documentation",
+        "Contribute to UI/UX improvements and implementations",
+        "Test applications and identify issues",
+        "Participate in agile development processes including daily stand-ups and sprint planning"
+      ],
+      "requirements": [
+        "Currently pursuing a degree in Computer Science, Software Engineering, or related technical field",
+        "Basic knowledge of HTML, CSS, and JavaScript",
+        "Familiarity with React or similar frontend frameworks is a plus",
+        "Understanding of version control systems (Git)",
+        "Eager to learn and problem-solve",
+        "Good communication skills and ability to work in a team",
+        "Self-motivated with attention to detail",
+        "Interest in web development and modern technologies"
+      ],
+      "benefits": [
+        "Paid internship with flexible hybrid working arrangement",
+        "Hands-on experience with modern web technologies",
+        "Mentorship from senior developers",
+        "Exposure to the full software development lifecycle",
+        "Opportunity to work on real client projects",
+        "Regular feedback and code reviews",
+        "Networking opportunities within the tech industry",
+        "Possibility of full-time employment upon successful completion"
+      ],
+      "applicationProcess": "Our selection process includes a resume review, a technical assessment to evaluate your current skills, and an interview with the Engineering team. We value potential and enthusiasm over perfect technical knowledge.",
+      "salary": "€1,300 - €1,600 monthly stipend",
+      "skills": ["HTML/CSS", "JavaScript", "React", "Next.js", "Git", "Responsive Design", "Problem Solving", "Teamwork"],
+      "reportingTo": "Lead Developer",
+      "startDate": "June 2025"
+    },
+    "salesman": {
+      "title": "Salesman",
+      "department": "Sales",
+      "location": "Remote",
+      "locationType": "Remote",
+      "employmentType": "Full-time",
+      "description": "Drive revenue growth by identifying and pursuing new sales opportunities, building client relationships, and closing deals effectively.",
+      "overview": "As a Salesman at Pledge & Grow, you will be responsible for generating new business opportunities, managing the sales process from lead to close, and building lasting relationships with clients. You'll work closely with our marketing and delivery teams to ensure client needs are understood and met, contributing directly to our company's growth and success.",
+      "responsibilities": [
+        "Identify and pursue new sales opportunities through outbound calls, emails, and networking",
+        "Qualify leads and manage sales pipeline effectively",
+        "Conduct product demonstrations and presentations to potential clients",
+        "Understand client needs and propose appropriate solutions",
+        "Negotiate contracts and close deals to achieve sales targets",
+        "Maintain accurate records in our CRM system",
+        "Build and nurture relationships with existing and potential clients",
+        "Stay informed about industry trends, competitors, and market conditions"
+      ],
+      "requirements": [
+        "2+ years of B2B sales experience, preferably in technology or digital services",
+        "Proven track record of meeting or exceeding sales targets",
+        "Excellent communication, presentation, and negotiation skills",
+        "Strong relationship-building abilities with clients at various organizational levels",
+        "Self-motivated with a results-driven approach",
+        "Ability to work independently in a remote environment",
+        "Proficiency with CRM systems and sales tools",
+        "Bachelor's degree in Business, Marketing, or related field preferred"
+      ],
+      "benefits": [
+        "Competitive base salary plus commission structure",
+        "Comprehensive health insurance package",
+        "Retirement savings plan",
+        "Flexible remote working arrangement",
+        "Professional development opportunities",
+        "Modern sales enablement tools and resources",
+        "Regular team meetings and company events",
+        "Career advancement opportunities in a growing company"
+      ],
+      "applicationProcess": "Our hiring process includes an initial phone screening, a video interview with the Sales Manager, and a final interview that includes a sales role-play scenario. We aim to provide candidates with a decision within three weeks.",
+      "salary": "Competitive base + commission",
+      "skills": ["B2B Sales", "Lead Generation", "Negotiation", "CRM Management", "Relationship Building", "Product Demonstration", "Problem Solving", "Time Management"],
+      "reportingTo": "Sales Manager",
+      "startDate": "Immediate"
+    }
   }
 }

@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Heart, MessageSquare } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function ImpactCTA() {
+  const { t } = useTranslations('impact');
   return (
     <section className="py-16 md:py-24">
       <div className="container px-4 mx-auto">
@@ -22,13 +24,11 @@ export default function ImpactCTA() {
           
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6 text-foreground">
-              Join Us in Making a Difference
+              {t('cta.title')}
             </h2>
             
             <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Whether you&apos;re a nonprofit organization in need of technology support, 
-              a company looking to partner on social impact initiatives, 
-              or an individual who wants to contribute, we&apos;d love to hear from you.
+              {t('cta.description')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -39,7 +39,7 @@ export default function ImpactCTA() {
                 <Button asChild size="lg" className="px-6 py-6 h-auto text-base font-medium shadow-md">
                   <Link href="/contact?subject=Pro Bono Application" className="flex items-center gap-3">
                     <Heart className="h-5 w-5" /> 
-                    Save the World
+                    {t('cta.primaryButton')}
                   </Link>
                 </Button>
               </motion.div>
@@ -49,9 +49,9 @@ export default function ImpactCTA() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Button variant="outline" asChild size="lg" className="px-6 py-6 h-auto text-base font-medium shadow-sm">
-                  <Link href="/contact?subject=Impact Partnership" className="flex items-center gap-3">
+                  <Link href="/contact" className="flex items-center gap-3">
                     <MessageSquare className="h-5 w-5" /> 
-                    Community Partnership
+                    {t('cta.secondaryButton')}
                   </Link>
                 </Button>
               </motion.div>

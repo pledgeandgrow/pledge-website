@@ -1,0 +1,98 @@
+{
+  "meta": {
+    "title": "Présence Mondiale | Pledge & Grow",
+    "description": "Découvrez les opérations internationales de Pledge & Grow, l'expertise régionale et l'équipe mondiale qui fournit des solutions innovantes dans le monde entier."
+  },
+  "globalMap": {
+    "title": "Nos Contacts",
+    "description": "Nos contacts dans ces régions stratégiques collaborent avec nous et opèrent à distance dans leur région. Si vous souhaitez quelqu'un de local ou dans votre région, les voici.",
+    "regions": {
+      "europe": {
+        "title": "Europe",
+        "description": "Siège social à Paris avec des opérations dans les principales villes européennes",
+        "countries": ["France", "Royaume-Uni", "Allemagne", "Espagne", "Italie"]
+      },
+      "middleEast": {
+        "title": "Moyen-Orient",
+        "description": "Présence stratégique dans la région MENA soutenant les initiatives de transformation numérique",
+        "countries": ["EAU", "Arabie Saoudite", "Qatar"]
+      },
+      "africa": {
+        "title": "Afrique",
+        "description": "Présence croissante sur les principaux marchés africains",
+        "countries": ["Maroc", "Afrique du Sud", "Kenya", "Nigeria"]
+      },
+      "asia": {
+        "title": "Asie",
+        "description": "Expansion des opérations dans les principaux centres technologiques asiatiques",
+        "countries": ["Singapour", "Inde", "Japon"]
+      },
+      "americas": {
+        "title": "Amériques",
+        "description": "Partenariats stratégiques en Amérique du Nord et du Sud",
+        "countries": ["États-Unis", "Canada", "Brésil"]
+      }
+    },
+    "stats": {
+      "countries": "Plus de 20 pays",
+      "languages": "Plus de 15 langues",
+      "clients": "Plus de 100 clients mondiaux",
+      "team": "Équipe diverse de plus de 25 nationalités"
+    }
+  },
+  "localizationServices": {
+    "title": "Services de Localisation",
+    "description": "Nous aidons les entreprises à atteindre des audiences mondiales avec des services de localisation complets. De la traduction à l'adaptation culturelle, nous garantissons que vos produits numériques résonnent partout dans le monde.",
+    "services": {
+      "webAppLocalization": {
+        "title": "Localisation de Sites Web et Applications",
+        "description": "Localisation complète de vos produits numériques pour les marchés mondiaux, incluant l'adaptation UI/UX, la traduction de contenu et l'optimisation culturelle.",
+        "features": [
+          "Implémentation d'interfaces multilingues",
+          "Support de texte bidirectionnel (RTL/LTR)",
+          "Adaptation des formats de devise, date et nombre",
+          "Considérations UX culturelles"
+        ]
+      },
+      "contentTranslation": {
+        "title": "Traduction de Contenu",
+        "description": "Services de traduction professionnels pour tout votre contenu numérique, assurant des messages précis et culturellement appropriés dans toutes les langues.",
+        "features": [
+          "Traduction de contenu de sites web et d'applications",
+          "Localisation de matériel marketing",
+          "Traduction de documentation technique",
+          "Contenu multilingue optimisé pour le SEO"
+        ]
+      },
+      "multilingualDevelopment": {
+        "title": "Développement Multilingue",
+        "description": "Implémentation technique de capacités multilingues dans vos applications, avec une architecture d'internationalisation (i18n) appropriée.",
+        "features": [
+          "Implémentation de frameworks i18n",
+          "Fonctionnalité de changement de langue",
+          "Gestion de contenu pour plusieurs langues",
+          "Flux de travail de traduction automatisés"
+        ]
+      },
+      "globalCompliance": {
+        "title": "Conformité Mondiale",
+        "description": "Garantir que vos produits numériques sont conformes aux réglementations et normes régionales sur différents marchés.",
+        "features": [
+          "RGPD, CCPA et autres réglementations sur la confidentialité",
+          "Conformité aux normes d'accessibilité",
+          "Exigences légales régionales",
+          "Conformité spécifique à l'industrie"
+        ]
+      },
+      "cultural": {
+        "title": "Adaptation Culturelle",
+        "description": "Personnalisation des interfaces utilisateur et des expériences pour s'aligner sur les préférences culturelles locales"
+      }
+    }
+  },
+  "contactInfo": {
+    "title": "Contactez Notre Équipe Internationale",
+    "description": "Nos représentants régionaux sont prêts à discuter de vos besoins spécifiques.",
+    "cta": "Contactez-nous"
+  }
+}

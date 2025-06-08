@@ -1,0 +1,82 @@
+{
+  "id": "documentation",
+  "slug": "documentation",
+  "title": "Documentation Technique",
+  "subtitle": "Documentation claire et complète pour vos produits numériques",
+  "description": "Nous créons une documentation technique de haute qualité qui aide les utilisateurs à comprendre et à utiliser efficacement vos produits. Des guides d'utilisation et de la documentation d'API aux diagrammes d'architecture système, nos services de documentation garantissent que votre technologie est accessible et utilisable.",
+  "heroImage": "/images/expertise/documentation-hero.jpg",
+  "heroButton": "Démarrer Votre Projet de Documentation",
+  "category": "Complementary",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Solutions de documentation complètes"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Outils modernes pour une documentation efficace"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Comment une documentation de qualité améliore votre produit"
+    }
+  },
+  "features": [
+    {
+      "title": "Guides d'Utilisation",
+      "description": "Instructions claires pour les utilisateurs finaux de tous niveaux techniques",
+      "icon": "book-open"
+    },
+    {
+      "title": "Documentation d'API",
+      "description": "Références complètes pour les développeurs s'intégrant à vos APIs",
+      "icon": "code-bracket"
+    },
+    {
+      "title": "Architecture Système",
+      "description": "Diagrammes détaillés et explications des composants du système",
+      "icon": "rectangle-stack"
+    },
+    {
+      "title": "Bases de Connaissances",
+      "description": "Référentiels consultables d'informations sur les produits et FAQ",
+      "icon": "academic-cap"
+    }
+  ],
+  "technologies": [
+    { "name": "Notion", "logo": "/images/tech/notion.svg" },
+    { "name": "OneDrive", "logo": "/images/tech/onedrive.svg" },
+    { "name": "GitBook", "logo": "/images/tech/gitbook.svg" },
+    { "name": "Docusaurus", "logo": "/images/tech/docusaurus.svg" },
+    { "name": "Draw.io", "logo": "/images/tech/drawio.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Réduction des Coûts de Support",
+      "description": "Diminuez les tickets de support grâce à une documentation en libre-service",
+      "icon": "currency-dollar"
+    },
+    {
+      "title": "Intégration Plus Rapide des Utilisateurs",
+      "description": "Aidez les utilisateurs à démarrer rapidement et efficacement",
+      "icon": "rocket"
+    },
+    {
+      "title": "Amélioration de l'Expérience Développeur",
+      "description": "Facilitez l'intégration des développeurs avec vos produits",
+      "icon": "code"
+    },
+    {
+      "title": "Préservation des Connaissances",
+      "description": "Capturez et maintenez des informations techniques critiques",
+      "icon": "archive-box"
+    }
+  ],
+  "relatedExpertise": ["consulting-training", "maintenance", "saas"],
+  "cta": {
+    "title": "Prêt à améliorer votre documentation technique?",
+    "description": "Créons une documentation claire et complète qui améliore l'expérience utilisateur et réduit les coûts de support.",
+    "buttonText": "Démarrer Votre Projet de Documentation",
+    "buttonLink": "/digital-project?service=documentation"
+  }
+}

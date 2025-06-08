@@ -8,8 +8,7 @@ import {
   trackAuth, 
   trackFeatureUse,
   EventCategory,
-  EventAction,
-  EventProperties
+  EventAction
 } from '@/lib/analytics';
 import GoogleAnalytics from './GoogleAnalytics';
 

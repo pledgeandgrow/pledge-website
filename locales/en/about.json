@@ -2,28 +2,32 @@
   "hero": {
     "title": "About Pledge & Grow",
     "description": "We are a team of passionate designers and developers committed to creating exceptional digital experiences that help businesses thrive in the digital world.",
-    "imageAlt": "Our team collaborating"
+    "imageAlt": "Our team collaborating",
+    "image": "/images/about/team-collaboration.jpg"
   },
   "mission": {
     "title": "Our Mission",
-    "description": "We're on a mission to transform how businesses leverage technology to achieve their goals. Through innovative solutions and strategic partnerships, we help our clients navigate the digital landscape and unlock new opportunities for growth.",
+    "description": "We're on a mission to transform how businesses connect with their audiences through innovative digital solutions.",
     "items": {
       "simplify": {
         "title": "Simplify",
-        "description": "Making technology accessible to everyone through simplified solutions."
+        "description": "Making technology accessible to everyone through simplified solutions.",
+        "icon": "Lightbulb"
       },
       "connect": {
         "title": "Connect",
-        "description": "Linking innovation with business needs through strategic technology solutions."
+        "description": "Linking innovation with business needs through strategic technology solutions.",
+        "icon": "Link2"
       },
       "digitalize": {
         "title": "Digitalize",
-        "description": "Transforming businesses through custom software solutions that drive growth and efficiency."
+        "description": "Transforming businesses through custom software solutions that drive growth and efficiency.",
+        "icon": "Laptop"
       }
     }
   },
   "values": {
-    "title": "Our Values",
+    "title": "Our Core Values",
     "description": "Our values guide everything we do, from how we build our products to how we interact with our clients and each other.",
     "items": {
       "excellence": {
@@ -39,45 +43,164 @@
         "description": "We build lasting relationships based on trust, commitment, and mutual respect with our clients, team members, and stakeholders."
       },
       "privacy": {
-        "title": "Privacy (Anonymity)",
-        "description": "We respect and protect the privacy of our clients and users, ensuring data security and confidentiality in all our operations."
+        "title": "Privacy",
+        "description": "We are dedicated to protecting data confidentiality and respecting individual privacy rights in all our operations and solutions."
       }
     }
   },
   "history": {
-    "title": "Our History",
+    "title": "Our Journey",
     "description": "From our humble beginnings to our current position as a leading digital agency, our journey has been defined by innovation, growth, and a relentless pursuit of excellence.",
     "timeline": {
       "founding": {
-        "year": "2020",
-        "title": "Founding",
-        "description": "Pledge & Grow was founded with a vision to create innovative digital solutions."
+        "year": "2022",
+        "title": "The Vision Begins",
+        "description": "Started as a group of freelancers and entrepreneurs offering services in different fields through our brand and our names. We were planning on building a consulting agency that offered tailored solutions in various fields."
       },
       "expansion": {
-        "year": "2022",
-        "title": "Global Expansion",
-        "description": "Expanded operations to serve clients across multiple continents."
+        "year": "2023",
+        "title": "Growing Team & Diverse Clients",
+        "description": "The team expanded and began working with clients from different fields. We saw huge demands particularly in marketing and IT sectors, which helped shape our future direction."
       },
       "innovation": {
-        "year": "2023",
-        "title": "Innovation Hub",
-        "description": "Launched our innovation hub to explore emerging technologies."
+        "year": "2024",
+        "title": "Official Establishment & Specialization",
+        "description": "We transitioned completely and specialized in different IT fields and sectors due to increased demands and a growing network. The company was officially established in June of this year, marking a significant milestone in our journey."
       },
       "ecosystem": {
-        "year": "2024",
-        "title": "Ecosystem Growth",
-        "description": "Developed a comprehensive partner ecosystem to enhance our service offerings."
+        "year": "2025",
+        "title": "New Vision & Expansion",
+        "description": "Implemented a new roadmap, refined our vision, launched our new website, and set ambitious goals for the future. This marks the beginning of an exciting new chapter with much more to come."
       }
     }
   },
   "team": {
     "title": "Our Team",
     "description": "Meet the talented individuals who make our success possible. Our diverse team brings together expertise from various disciplines to deliver exceptional results.",
-    "joinCta": "Join our team"
+    "categories": {
+      "board": "Board Members",
+      "staff": "Staff"
+    },
+    "board": {
+      "mehdi": {
+        "name": "Mehdi BEREL",
+        "role": "Chairman",
+        "companyRole": "Chief Executive Officer",
+        "bio": "With extensive experience in business leadership, Mehdi drives the strategic vision and growth of our company.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "shihab": {
+        "name": "Shihab BEREL",
+        "role": "Chairman",
+        "companyRole": "Chief Technology Officer",
+        "bio": "Shihab brings innovative thinking and technical expertise to our leadership team, focusing on product development.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "ilyas": {
+        "name": "Ilyas BEREL",
+        "role": "Chairman",
+        "companyRole": "Chief Financial Officer",
+        "bio": "Ilyas oversees operations and client relationships, ensuring we deliver exceptional value and service.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "noah": {
+        "name": "Noah PLA",
+        "role": "Board Member",
+        "companyRole": "Chief Operating Officer",
+        "bio": "Noah contributes strategic insights and industry expertise to guide our company's direction and growth.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "maxime": {
+        "name": "Maxime NEAU",
+        "role": "Board Member",
+        "companyRole": "Ambassador",
+        "bio": "Maxime brings financial acumen and business development expertise to our board of directors.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "zakaria": {
+        "name": "Zakaria HADRAOUI",
+        "role": "Board Member",
+        "companyRole": "Chief Information Officer",
+        "bio": "Zakaria's technical background and innovation mindset help shape our product strategy and development.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "mazen": {
+        "name": "Mazen ISMAIL",
+        "role": "Board Member",
+        "companyRole": "Chief Blockchain Officer",
+        "bio": "Mazen's international business experience helps guide our global expansion and partnerships.",
+        "social": {
+          "linkedin": "#"
+        }
+      }
+    },
+    "staff": {
+      "louis": {
+        "name": "Louis JUNQUA",
+        "role": "Staff Member",
+        "companyRole": "Chargé commercial",
+        "bio": "Louis manages our commercial relationships and helps clients find the perfect solutions for their needs.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "lyna": {
+        "name": "Lyna",
+        "role": "Staff Member",
+        "companyRole": "Chargé de communication",
+        "bio": "Lyna oversees our communication strategy, ensuring our message reaches the right audience effectively.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "mehdi_ouali": {
+        "name": "Mehdi OUALI",
+        "role": "Staff Member",
+        "companyRole": "Chargé de réseaux sociaux",
+        "bio": "Mehdi manages our social media presence, creating engaging content that connects with our community.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "brandon": {
+        "name": "Brandon MERYEL",
+        "role": "Staff Member",
+        "companyRole": "Modérateur Discord",
+        "bio": "Brandon maintains our Discord community, ensuring a positive and supportive environment for all members.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "rayane": {
+        "name": "Rayane BEDRANI",
+        "role": "Staff Member",
+        "companyRole": "Business Développeur",
+        "bio": "Rayane identifies and pursues new business opportunities, helping our company grow and expand into new markets.",
+        "social": {
+          "linkedin": "#"
+        }
+      }
+    }
   },
   "cta": {
-    "title": "Ready to work with us?",
-    "description": "Let's discuss how we can help you achieve your digital goals.",
-    "button": "Get in touch"
+    "title": "Ready to Start Your Project?",
+    "description": "Let's work together to bring your vision to life with our expertise in design and development.",
+    "buttons": {
+      "contact": "Get in Touch",
+      "services": "View Our Services"
+    },
+    "link": "/contact"
   }
 }

@@ -3,11 +3,161 @@
     "title": "Our Partners | Pledge & Grow",
     "description": "Discover our strategic partnerships and collaborations that enable us to deliver exceptional digital solutions and services."
   },
+  "hero": {
+    "title": "Our Partnership Network",
+    "description": "We collaborate with a diverse range of partners across different categories to deliver exceptional value to our clients."
+  },
   "partnersList": {
     "title": "Our Strategic Partners",
     "description": "We collaborate with industry leaders and innovative companies to enhance our service offerings and deliver comprehensive solutions to our clients.",
+    "heading": "Our Partnership Network",
+    "subheading": "We collaborate with a diverse range of partners across different categories to deliver exceptional value to our clients.",
+    "categoryTitle": "{{category}} Partners",
+    "noPartnersFound": "No partners found in this category.",
+    "partnerData": [
+      {
+        "id": "1",
+        "name": "Acme Corporation",
+        "logo": "/images/partners/acme.svg",
+        "category": "Standard",
+        "description": "Long-term client with preferred contract terms. We've been supporting their digital transformation journey for over 5 years.",
+        "website": "https://example.com/acme",
+        "featured": true,
+        "partnerType": "standard"
+      },
+      {
+        "id": "2",
+        "name": "Global Enterprises",
+        "logo": "/images/partners/global.svg",
+        "category": "Standard",
+        "description": "Strategic client relationship with custom service agreements and dedicated support channels.",
+        "website": "https://example.com/global",
+        "partnerType": "standard"
+      },
+      {
+        "id": "3",
+        "name": "Pepite France",
+        "logo": "/images/partners/pepite.svg",
+        "category": "Culture",
+        "description": "National network supporting student entrepreneurship across France. We collaborate on innovation programs and mentorship for young entrepreneurs.",
+        "website": "https://www.pepite-france.fr",
+        "featured": true,
+        "partnerType": "culture"
+      },
+      {
+        "id": "5",
+        "name": "AWS",
+        "logo": "/images/partners/aws.svg",
+        "category": "Technology",
+        "description": "Cloud infrastructure provider powering our scalable, reliable, and secure hosting solutions for enterprise clients.",
+        "website": "https://aws.amazon.com",
+        "featured": true,
+        "partnerType": "technology"
+      },
+      {
+        "id": "6",
+        "name": "Vercel",
+        "logo": "/images/partners/vercel.svg",
+        "category": "Technology",
+        "description": "Frontend cloud platform enabling us to deliver fast, reliable web experiences with seamless deployment workflows.",
+        "website": "https://vercel.com",
+        "partnerType": "technology"
+      },
+      {
+        "id": "7",
+        "name": "OVH",
+        "logo": "/images/partners/ovh.svg",
+        "category": "Technology",
+        "description": "European cloud provider we recommend for clients with specific data sovereignty requirements and regional hosting needs.",
+        "website": "https://ovh.com",
+        "partnerType": "technology"
+      },
+      {
+        "id": "8",
+        "name": "Atlassian (JIRA)",
+        "logo": "/images/partners/atlassian.svg",
+        "category": "Technology",
+        "description": "Project management and collaboration tools that power our development workflows and client communication processes.",
+        "website": "https://atlassian.com",
+        "partnerType": "technology"
+      },
+      {
+        "id": "9",
+        "name": "ERB BTP",
+        "logo": "/images/partners/erb-btp.svg",
+        "category": "Exclusive",
+        "description": "Premium construction partner offering special rates on building services for clients referred through our network.",
+        "website": "https://erb-btp.com",
+        "featured": true,
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "10",
+        "name": "Global capital partner",
+        "logo": "/images/partners/ecd.svg",
+        "category": "Exclusive",
+        "description": "Exclusive consulting partner providing discounted business advisory services for our enterprise clients.",
+        "website": "https://www.globalcorporatebusiness.com/",
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "11",
+        "name": "Taskmate",
+        "logo": "/images/partners/taskmate.svg",
+        "category": "Exclusive",
+        "description": "Premium task management solution provider offering special subscription plans for our clients.",
+        "website": "https://taskmate-ia.vercel.app/",
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "12",
+        "name": "CordUnite",
+        "logo": "/images/partners/cordunite.svg",
+        "category": "Exclusive",
+        "description": "Exclusive communications platform with preferential rates for businesses in our partner network.",
+        "website": "https://cordunite.com/",
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "13",
+        "name": "N&I Personal Shopper",
+        "logo": "/images/partners/ni-shopper.svg",
+        "category": "Exclusive",
+        "description": "Luxury personal shopping service offering VIP packages for our enterprise clients and their executives.",
+        "website": "https://example.com/ni-shopper",
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "14",
+        "name": "Dualink",
+        "logo": "/images/partners/dualink.svg",
+        "category": "Exclusive",
+        "description": "Dual-market expansion specialists providing discounted consulting services for our international clients.",
+        "website": "https://dualink.fr/",
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "15",
+        "name": "Chronos Corp.",
+        "logo": "/images/partners/chronos.svg",
+        "category": "Exclusive",
+        "description": "Time management and productivity solution provider with exclusive offers for our business network members.",
+        "website": "https://www.instagram.com/chronos.corps/",
+        "partnerType": "exclusive"
+      }
+    ],
+    "typeDescriptions": {
+      "standard": "Loyal clients with preferred contract terms and conditions",
+      "culture": "Foundations, schools, associations, and community organizations",
+      "technology": "Platforms and tools we use and recommend for our development projects",
+      "exclusive": "Premium partners in our exclusive network offering special rates and promotions"
+    },
     "categories": {
       "title": "Partner Categories",
+      "Standard": "Standard",
+      "Technology": "Technology",
+      "Culture": "Culture",
+      "Exclusive": "Exclusive",
       "technology": {
         "title": "Technology Partners",
         "description": "Leading technology providers that complement our development capabilities and enhance our technical offerings."
@@ -25,6 +175,12 @@
         "description": "Research institutions and innovation hubs collaborating with us on cutting-edge projects and initiatives."
       }
     },
+    "partnerTypes": {
+      "standard": "Loyal clients with preferred contract terms and conditions",
+      "culture": "Foundations, schools, associations, and community organizations",
+      "technology": "Platforms and tools we use and recommend for our development projects",
+      "exclusive": "Premium partners in our exclusive network offering special rates and promotions"
+    },
     "partners": {
       "viewAll": "View All Partners",
       "filterBy": "Filter by category"
@@ -36,8 +192,27 @@
     }
   },
   "becomePartner": {
-    "title": "Become a Partner",
-    "description": "Join our partner ecosystem and unlock new opportunities for growth, collaboration, and innovation.",
+    "heading": "Become Our Partner",
+    "subheading": "Join our partner ecosystem and collaborate on innovative solutions. We're always looking for strategic partnerships that create value for our clients.",
+    "contactButton": "Contact Us About Partnership",
+    "partnerTypes": {
+      "strategic": {
+        "title": "Strategic Alliances",
+        "description": "Form strategic partnerships to expand market reach and create innovative solutions together."
+      },
+      "technology": {
+        "title": "Technology Partners",
+        "description": "Integrate your technology with our solutions to deliver enhanced value to our clients."
+      },
+      "solution": {
+        "title": "Solution Partners",
+        "description": "Collaborate on comprehensive solutions that address complex business challenges."
+      },
+      "channel": {
+        "title": "Channel Partners",
+        "description": "Resell or refer our solutions to your clients and earn competitive commissions."
+      }
+    },
     "benefits": {
       "title": "Partnership Benefits",
       "marketAccess": {

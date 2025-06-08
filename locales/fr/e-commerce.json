@@ -1,0 +1,83 @@
+{
+  "id": "e-commerce",
+  "slug": "e-commerce",
+  "title": "Solutions E-commerce",
+  "subtitle": "Créez des boutiques en ligne puissantes qui stimulent les ventes et la croissance",
+  "description": "Nous créons des solutions e-commerce personnalisées qui aident les entreprises à vendre efficacement des produits et services en ligne. Des petites boutiques aux grandes places de marché, nos plateformes e-commerce sont conçues pour la conversion, l'évolutivité et des expériences client fluides.",
+  "heroImage": "/images/expertise/e-commerce-hero.jpg",
+  "heroButton": "Démarrer Votre Projet E-commerce",
+  "category": "Creation",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Solutions e-commerce complètes pour votre entreprise"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Plateformes et outils de pointe pour les boutiques en ligne"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Comment l'e-commerce transforme votre entreprise"
+    }
+  },
+  "features": [
+    {
+      "title": "Expérience d'Achat Personnalisée",
+      "description": "Parcours utilisateur sur mesure qui guident les clients vers l'achat",
+      "icon": "shopping-cart"
+    },
+    {
+      "title": "Traitement Sécurisé des Paiements",
+      "description": "Options de paiement multiples avec sécurité de niveau entreprise",
+      "icon": "credit-card"
+    },
+    {
+      "title": "Gestion des Stocks",
+      "description": "Suivi des stocks en temps réel et notifications automatisées",
+      "icon": "clipboard-list"
+    },
+    {
+      "title": "Optimisation Mobile",
+      "description": "Expérience d'achat fluide sur tous les appareils",
+      "icon": "device-mobile"
+    }
+  ],
+  "technologies": [
+    { "name": "Shopify", "logo": "/images/tech/shopify.svg" },
+    { "name": "WooCommerce", "logo": "/images/tech/woocommerce.svg" },
+    { "name": "Squarespace", "logo": "/images/tech/squarespace.svg" },
+    { "name": "Webflow", "logo": "/images/tech/webflow.svg" },
+    { "name": "Next.js", "logo": "/images/tech/nextjs.svg" },
+    { "name": "Stripe", "logo": "/images/tech/stripe.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Augmentation des Ventes",
+      "description": "Convertissez plus de visiteurs en clients avec des flux de paiement optimisés",
+      "icon": "trending-up"
+    },
+    {
+      "title": "Portée Mondiale",
+      "description": "Vendez à des clients partout, à tout moment avec une disponibilité 24/7",
+      "icon": "globe"
+    },
+    {
+      "title": "Évolutivité",
+      "description": "Développez facilement votre boutique à mesure que votre entreprise s'agrandit",
+      "icon": "scale"
+    },
+    {
+      "title": "Insights Basés sur les Données",
+      "description": "Prenez des décisions éclairées grâce à des analyses complètes",
+      "icon": "chart-pie"
+    }
+  ],
+  "relatedExpertise": ["website", "digital-marketing", "seo"],
+  "cta": {
+    "title": "Prêt à stimuler vos ventes en ligne?",
+    "description": "Créons une solution e-commerce qui convertit les visiteurs en clients fidèles.",
+    "buttonText": "Démarrer Votre Projet E-commerce",
+    "buttonLink": "/digital-project?service=e-commerce"
+  }
+}

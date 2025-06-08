@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Percent, Users, Building } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function EcosystemeHero() {
+  const { t } = useTranslations('ecosystem');
+  
   return (
     <section className="relative pt-32 pb-20 md:pt-36 md:pb-28 overflow-hidden bg-white dark:bg-gray-950">
       <div className="absolute inset-0 bg-gradient-to-br from-green-100/70 to-transparent dark:from-green-950/30 dark:to-transparent"></div>
@@ -20,15 +23,15 @@ export default function EcosystemeHero() {
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-200 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-sm font-medium mb-2">
               <Percent className="w-4 h-4 mr-2" />
-              <span>Exclusive Benefits</span>
+              <span>{t('hero.subtitle')}</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-              Join Our <span className="text-primary dark:text-green-400">Powerful</span> Ecosystem
+              {t('hero.title')}
             </h1>
             
             <p className="text-lg text-gray-700 dark:text-gray-300 max-w-xl">
-              As a Pledge & Grow client, gain exclusive access to our network of group companies, innovation projects, and partners with significant discounts and benefits.
+              {t('hero.description')}
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
@@ -36,34 +39,34 @@ export default function EcosystemeHero() {
                 <div className="w-10 h-10 rounded-full bg-green-200 dark:bg-green-900/30 flex items-center justify-center text-primary dark:text-green-400">
                   <Building className="w-5 h-5" />
                 </div>
-                <span className="font-medium">Group Companies</span>
+                <span className="font-medium">{t('hero.features.partners')}</span>
               </div>
               
               <div className="flex items-center space-x-2">
                 <div className="w-10 h-10 rounded-full bg-green-200 dark:bg-green-900/30 flex items-center justify-center text-primary dark:text-green-400">
                   <Users className="w-5 h-5" />
                 </div>
-                <span className="font-medium">Exclusive Partners</span>
+                <span className="font-medium">{t('hero.features.innovation')}</span>
               </div>
               
               <div className="flex items-center space-x-2">
                 <div className="w-10 h-10 rounded-full bg-green-200 dark:bg-green-900/30 flex items-center justify-center text-primary dark:text-green-400">
                   <Percent className="w-5 h-5" />
                 </div>
-                <span className="font-medium">Special Discounts</span>
+                <span className="font-medium">{t('hero.features.discounts')}</span>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button asChild size="lg" className="gap-2">
                 <Link href="/contact">
-                  Become a Client
+                  {t('hero.cta.primary')}
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link href="/services">
-                  Our Services
+                  {t('hero.cta.secondary')}
                 </Link>
               </Button>
             </div>

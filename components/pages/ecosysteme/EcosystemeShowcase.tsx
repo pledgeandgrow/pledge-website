@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Network, Info, Plus, Minus } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -8,34 +8,9 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import EcosystemeModal from "@/components/pages/ecosysteme/EcosystemeModal";
+import { useTranslations } from "@/hooks/useTranslations";
 
-// Partner data
-const partners = [
-  { 
-    id: "taskmate",
-    name: "TaskMate", 
-    description: "AI-powered process automation and agent development platform for business efficiency.",
-    discount: "Free 3-month trial of premium features",
-    category: "Technology",
-    color: "#4ade80" // green-400
-  },
-  { 
-    id: "sharka",
-    name: "Sharka UGC", 
-    description: "UGC creation platform that helps businesses generate authentic user content at scale.",
-    discount: "20% discount on all UGC packages",
-    category: "Marketing",
-    color: "#f97316" // orange-500
-  },
-  { 
-    id: "cordunite",
-    name: "CordUnite", 
-    description: "Professional Discord community creation and management agency.",
-    discount: "15% off on community setup packages",
-    category: "Community",
-    color: "#8b5cf6" // violet-500
-  }
-];
+// Partner data will be loaded from translations
 
 // Function to generate positions in a circle
 function getCirclePosition(index: number, total: number, radius: number) {
@@ -47,8 +22,51 @@ function getCirclePosition(index: number, total: number, radius: number) {
 }
 
 export default function EcosystemeShowcase() {
-  const [selectedPartner, setSelectedPartner] = useState<(typeof partners)[0] | null>(null);
+  const { t } = useTranslations('ecosystem');
+  // Define partner type for better type safety
+  type Partner = {
+    id: string;
+    name: string;
+    description: string;
+    discount: string;
+    category: string;
+    color: string;
+    logo?: string;
+    benefits?: string[];
+    website?: string;
+    position?: { x: number; y: number };
+  };
+  
+  const [selectedPartner, setSelectedPartner] = useState<Partner | null>(null);
   const [open, setOpen] = useState(false);
+  
+  // Load partner data from translations
+  const partners = useMemo(() => [
+    { 
+      id: "taskmate",
+      name: t('showcase.partners.taskmate.name'),
+      description: t('showcase.partners.taskmate.description'),
+      discount: t('showcase.partners.taskmate.discount'),
+      category: t('showcase.partners.taskmate.category'),
+      color: "#4ade80" // green-400
+    },
+    { 
+      id: "sharka",
+      name: t('showcase.partners.sharka.name'),
+      description: t('showcase.partners.sharka.description'),
+      discount: t('showcase.partners.sharka.discount'),
+      category: t('showcase.partners.sharka.category'),
+      color: "#f97316" // orange-500
+    },
+    { 
+      id: "cordunite",
+      name: t('showcase.partners.cordunite.name'),
+      description: t('showcase.partners.cordunite.description'),
+      discount: t('showcase.partners.cordunite.discount'),
+      category: t('showcase.partners.cordunite.category'),
+      color: "#8b5cf6" // violet-500
+    }
+  ], [t]);
   const [isMobile, setIsMobile] = useState(false);
   const [zoomLevel, setZoomLevel] = useState(1);
   const [hoveredPartner, setHoveredPartner] = useState<string | null>(null);
@@ -94,7 +112,7 @@ export default function EcosystemeShowcase() {
   
   // Use client-side rendering only for slot positions
   const [slots, setSlots] = useState(() => {
-    return Array(totalSlots).fill(null).map((_, i) => ({
+    return Array(totalSlots).fill(null).map(() => ({
       position: { x: 0, y: 0 }, // Initial empty positions
       circle: "single"
     }));
@@ -102,17 +120,17 @@ export default function EcosystemeShowcase() {
   
   // Calculate positions client-side only
   useEffect(() => {
-    const calculatedSlots = Array(totalSlots).fill(null).map((_, i) => ({
-      position: getCirclePosition(i, totalSlots, circleRadius),
+    const calculatedSlots = Array(totalSlots).fill(null).map((_, index) => ({
+      position: getCirclePosition(index, totalSlots, circleRadius),
       circle: "single"
     }));
     setSlots(calculatedSlots);
   }, [totalSlots, circleRadius]);
   
+  // Partner type already defined above
+
   // Assign partners to slots (first 3 slots of inner circle)
-  const [partnersWithPositions, setPartnersWithPositions] = useState(() => {
-    return partners.map(partner => ({ ...partner, position: { x: 0, y: 0 } }));
-  });
+  const [partnersWithPositions, setPartnersWithPositions] = useState<Partner[]>([]);
   
   // Update partner positions when slots change
   useEffect(() => {
@@ -156,15 +174,15 @@ export default function EcosystemeShowcase() {
         >
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100/80 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-sm font-medium mb-4">
             <Network className="w-4 h-4 mr-2" />
-            <span>Partner Network</span>
+            <span>{t('showcase.subtitle')}</span>
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Our Growing Ecosystem
+            {t('showcase.title')}
           </h2>
           <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Explore our network of 60+ partners offering exclusive benefits to Pledge & Grow clients.
-            {!isMobile ? "Click on a partner to learn more about their services and special offers." : "Tap on a partner to learn more."}
+            {t('showcase.description')}
+            {!isMobile ? t('modal.cta.learnMore') : t('modal.cta.contact')}
           </p>
         </motion.div>
 
@@ -172,10 +190,10 @@ export default function EcosystemeShowcase() {
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {Array.from(new Set(partners.map(p => p.category))).map((category, index) => (
             <Badge key={index} variant="outline" className="bg-white dark:bg-gray-800 shadow-sm">
-              {category}
+              {t(`partners.categories.${category.toLowerCase().replace(/\s+/g, '_')}.title`, { fallback: category })}
             </Badge>
           ))}
-          <Badge variant="outline" className="bg-white dark:bg-gray-800 shadow-sm">+5 more categories</Badge>
+          <Badge variant="outline" className="bg-white dark:bg-gray-800 shadow-sm">{t('showcase.moreCategories')}</Badge>
         </div>
 
         {/* Zoom Controls */}
@@ -207,7 +225,7 @@ export default function EcosystemeShowcase() {
         {isMobile && (
           <div className="flex items-center justify-center gap-2 mb-6 text-sm text-gray-500 dark:text-gray-400">
             <Info className="h-4 w-4" />
-            <span>Pinch to zoom, tap partners to view details</span>
+            <span>{t('showcase.mobileInstructions')}</span>
           </div>
         )}
 
@@ -262,7 +280,7 @@ export default function EcosystemeShowcase() {
           {slots.map((slot, index) => {
             // Skip slots that have partners
             if (partnersWithPositions.some(p => 
-              p.position.x === slot.position.x && p.position.y === slot.position.y
+              p.position?.x === slot.position.x && p.position?.y === slot.position.y
             )) return null;
             
             const { position } = slot;
@@ -287,6 +305,9 @@ export default function EcosystemeShowcase() {
           
           {/* Partner nodes */}
           {partnersWithPositions.map((partner, index) => {
+            // Skip partners without position data
+            if (!partner.position) return null;
+            
             const { position, color } = partner;
             const isHovered = hoveredPartner === partner.id;
             
@@ -328,8 +349,8 @@ export default function EcosystemeShowcase() {
                         <line 
                           x1="0" 
                           y1="0" 
-                          x2={Math.round((partner.position.x - (partnersWithPositions.find(p => p.id === 'cordunite')?.position.x || 0)) * 100) / 100} 
-                          y2={Math.round((partner.position.y - (partnersWithPositions.find(p => p.id === 'cordunite')?.position.y || 0)) * 100) / 100} 
+                          x2={Math.round((position.x - (partnersWithPositions.find(p => p.id === 'cordunite')?.position?.x || 0)) * 100) / 100} 
+                          y2={Math.round((position.y - (partnersWithPositions.find(p => p.id === 'cordunite')?.position?.y || 0)) * 100) / 100} 
                           stroke="#8b5cf6" 
                           strokeWidth="1"
                           strokeOpacity="0.5"
@@ -350,7 +371,7 @@ export default function EcosystemeShowcase() {
           
           {/* Empty slots indicator */}
           <div className="absolute bottom-2 left-0 right-0 text-center text-gray-500 dark:text-gray-400 text-xs">
-            <p>+ {totalSlots - partners.length} more partner slots available</p>
+            <p>{t('showcase.availableSlots', { count: totalSlots - partners.length })}</p>
           </div>
         </div>
         
@@ -374,10 +395,13 @@ export default function EcosystemeShowcase() {
                   <DialogTitle>{selectedPartner.name}</DialogTitle>
                 </div>
                 <DialogDescription>
-                  <Badge variant="outline" className="mt-1">
-                    {selectedPartner.category} Partner
-                  </Badge>
+                  {selectedPartner.category}
                 </DialogDescription>
+                <div className="mt-2">
+                  <Badge variant="outline">
+                    {t('showcase.partnerCategory', { category: selectedPartner.category })}
+                  </Badge>
+                </div>
               </DialogHeader>
               <EcosystemeModal partner={selectedPartner} />
             </DialogContent>

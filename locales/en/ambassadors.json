@@ -13,11 +13,14 @@
     "description": "Our ambassadors come from diverse backgrounds and industries, united by their passion for digital innovation and growth.",
     "regions": {
       "title": "Ambassadors by Region",
+      "all": "All Regions",
+      "global": "Global",
+      "community": "Community",
       "europe": "Europe",
-      "middleEast": "Middle East",
-      "africa": "Africa",
+      "northamerica": "North America",
       "asia": "Asia",
-      "americas": "Americas",
+      "africa": "Africa",
+      "southamerica": "South America",
       "oceania": "Oceania"
     },
     "ambassador": {
@@ -25,16 +28,52 @@
       "expertise": "Expertise",
       "since": "Ambassador since",
       "connect": "Connect",
-      "viewProfile": "View Profile"
+      "viewProfile": "View Profile",
+      "role": "Role",
+      "globalRole": "Global Ambassador",
+      "globalExample": "SHARKA (France) - Our official global brand representative",
+      "communityRole": "Community Ambassador",
+      "communityExample": "None currently - Applications open for passionate community advocates"
+    },
+    "featured": "Featured",
+    "tryAdjusting": "Try adjusting your filters to find ambassadors.",
+    "ambassadorBios": {
+      "sharka": "SHARKA helps us promote our brand specifically for France and the French community. With a unique perspective and engaging presence, SHARKA helps communicate our values and mission to the French-speaking audience."
+    },
+    "countries": {
+      "france": "France",
+      "usa": "USA",
+      "uk": "United Kingdom",
+      "canada": "Canada",
+      "australia": "Australia",
+      "germany": "Germany",
+      "japan": "Japan"
     },
     "noAmbassadors": "No ambassadors found for this region yet.",
     "viewAll": "View All Ambassadors"
   },
   "becomeAmbassador": {
-    "title": "Become an Ambassador",
-    "description": "Join our global network of ambassadors and help us spread our mission while growing your professional network and influence.",
+    "title": "Join Our Community",
+    "description": "Join our global community of ambassadors and help us spread our mission. As an ambassador, you'll represent Pledge & Grow in your region and connect with like-minded professionals.",
+    "applyButton": "Apply to Become an Ambassador",
     "benefits": {
       "title": "Ambassador Benefits",
+      "globalNetwork": {
+        "title": "Global Network",
+        "description": "Connect with a diverse community of technology enthusiasts and professionals from around the world."
+      },
+      "exclusiveBenefits": {
+        "title": "Exclusive Benefits",
+        "description": "Gain access to exclusive resources, early product releases, and special ambassador-only events."
+      },
+      "communityImpact": {
+        "title": "Community Impact",
+        "description": "Make a difference in your local tech community by sharing knowledge and fostering innovation."
+      },
+      "amplifyVoice": {
+        "title": "Amplify Your Voice",
+        "description": "Enhance your personal brand and establish yourself as a thought leader in your field."
+      },
       "networkAccess": {
         "title": "Exclusive Network Access",
         "description": "Connect with industry leaders, innovators, and decision-makers in our global community."

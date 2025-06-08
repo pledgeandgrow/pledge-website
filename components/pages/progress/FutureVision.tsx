@@ -13,6 +13,7 @@ import {
   ChevronRight
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface VisionItem {
   icon: React.ReactNode;
@@ -22,6 +23,7 @@ interface VisionItem {
 }
 
 export default function FutureVision() {
+  const { t } = useTranslations('progress');
   const [currentIndex, setCurrentIndex] = useState(0);
   // Mobile detection is handled by CSS media queries instead
 
@@ -40,32 +42,32 @@ export default function FutureVision() {
   const visionItems: VisionItem[] = [
     {
       icon: <Globe className="h-10 w-10 text-blue-500" />,
-      title: "Global Expansion",
-      description: "Expanding our presence to new markets across Asia and the Americas, bringing our expertise to clients worldwide.",
+      title: t('futureVision.pillars.innovation.title') || "Continuous Innovation",
+      description: t('futureVision.pillars.innovation.description') || "Staying at the forefront of technological advancements to provide cutting-edge solutions",
       color: "bg-blue-500/10"
     },
     {
       icon: <Lightbulb className="h-10 w-10 text-amber-500" />,
-      title: "Innovation Hub",
-      description: "Establishing a dedicated innovation center to explore emerging technologies and develop groundbreaking solutions.",
+      title: t('futureVision.pillars.sustainability.title') || "Digital Sustainability",
+      description: t('futureVision.pillars.sustainability.description') || "Creating eco-friendly digital solutions that minimize environmental impact",
       color: "bg-amber-500/10"
     },
     {
       icon: <Users className="h-10 w-10 text-violet-500" />,
-      title: "Talent Development",
-      description: "Investing in our team through advanced training programs and partnerships with educational institutions.",
+      title: t('futureVision.pillars.accessibility.title') || "Universal Accessibility",
+      description: t('futureVision.pillars.accessibility.description') || "Making technology accessible to businesses of all sizes and industries",
       color: "bg-violet-500/10"
     },
     {
       icon: <Heart className="h-10 w-10 text-red-500" />,
-      title: "Community Impact",
-      description: "Expanding our social responsibility initiatives to make a meaningful difference in the communities we serve.",
+      title: t('futureVision.pillars.security.title') || "Uncompromising Security",
+      description: t('futureVision.pillars.security.description') || "Prioritizing data protection and privacy in all our solutions",
       color: "bg-red-500/10"
     },
     {
       icon: <Leaf className="h-10 w-10 text-green-500" />,
-      title: "Sustainability Leadership",
-      description: "Setting new industry standards for environmentally responsible digital solutions and business practices.",
+      title: t('futureVision.pillars.sustainability.title') || "Sustainability Leadership",
+      description: t('futureVision.pillars.sustainability.description') || "Setting new industry standards for environmentally responsible digital solutions",
       color: "bg-green-500/10"
     }
   ];
@@ -81,10 +83,10 @@ export default function FutureVision() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Our Vision for the Future
+            {t('futureVision.title') || "Our Vision for the Future"}
           </h2>
           <p className="text-lg text-muted-foreground">
-            As we look ahead, these are the key areas of focus that will drive our continued growth and impact.
+            {t('futureVision.description') || "We're building a future where technology empowers businesses to achieve more while maintaining security, privacy, and ethical standards."}
           </p>
         </motion.div>
 

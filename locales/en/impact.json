@@ -6,53 +6,48 @@
   "hero": {
     "tagline": "Technology for Good",
     "title": "Making a Positive Impact Through Technology",
-    "description": "At Pledge & Grow, we believe in the power of technology to create positive change. We're committed to leveraging our expertise to support causes that make the world a better place."
+    "description": "At Pledge & Grow, we believe in the power of technology to create positive change. We're committed to leveraging our expertise to support causes that make the world a better place.",
+    "imageAlt": "Pledge & Grow impact initiatives"
   },
   "mission": {
     "title": "Our Mission",
     "description": "We're committed to using our skills, resources, and influence to support causes that align with our values. Through pro bono work, charitable initiatives, and sustainable practices, we strive to be a force for good in the communities we serve.",
     "quote": "Technology should serve humanity, not the other way around.",
-    "commitment": "We're dedicated to developing solutions that empower people, protect our planet, and promote social justice."
+    "commitment": "We're dedicated to developing solutions that empower people, protect our planet, and promote social justice.",
+    "imageAlt": "Pledge & Grow mission and values"
   },
   "sustainablePractices": {
     "title": "Sustainable Practices",
-    "description": "Our commitment to sustainability extends to every aspect of our business operations.",
+    "description": "Our approach to sustainability encompasses everything from our development practices and infrastructure choices to our office operations and supply chain management. We continuously measure, report, and improve our environmental performance.",
+    "additionalText": "Beyond our own operations, we actively seek opportunities to develop technology solutions that address environmental challenges and promote sustainable practices across industries.",
+    "imageAlt": "Sustainable technology practices",
+    "imageCaption": "Our sustainable technology initiatives",
     "practices": [
       {
-        "title": "Green Hosting",
-        "description": "Using renewable energy-powered data centers for all our hosting services."
+        "title": "Carbon-Neutral Cloud",
+        "description": "We prioritize cloud providers with carbon-neutral operations and optimize our applications for energy efficiency."
       },
       {
-        "title": "Remote-First Culture",
-        "description": "Reducing commuting emissions through our flexible remote work policies."
+        "title": "Circular IT Practices",
+        "description": "We extend device lifecycles, refurbish equipment, and ensure responsible recycling of electronic waste."
       },
       {
-        "title": "Efficient Code",
-        "description": "Developing energy-efficient applications that minimize resource consumption."
-      },
-      {
-        "title": "Paperless Operations",
-        "description": "Implementing digital workflows to eliminate paper usage across our organization."
+        "title": "Energy Efficiency",
+        "description": "Our development practices emphasize code optimization to reduce computational resources and energy consumption."
       }
     ],
-    "metrics": {
-      "carbon": {
-        "title": "Carbon Footprint",
-        "value": "Reduced by 35% since 2022"
-      },
-      "energy": {
-        "title": "Renewable Energy",
-        "value": "78% of total energy consumption"
-      },
-      "waste": {
-        "title": "E-Waste Recycled",
-        "value": "100% of hardware properly recycled"
-      }
+    "continuousImprovement": "Continuous Improvement",
+    "longTermCommitment": "Long-term Commitment",
+    "environmentalCommitment": {
+      "title": "Our Environmental Commitment",
+      "mainText": "We're committed to achieving carbon neutrality in our operations by 2026 and helping our clients reduce their environmental impact through thoughtful technology solutions.",
+      "subText": "Each year, we publish a sustainability report detailing our progress and setting new targets for improvement."
     }
   },
   "cta": {
-    "title": "Join Our Impact Journey",
-    "description": "Partner with us to create technology solutions that drive positive change and sustainable growth.",
-    "button": "Contact Our Impact Team"
+    "title": "Join Us in Making a Difference",
+    "description": "Whether you're a nonprofit organization in need of technology support, a company looking to partner on social impact initiatives, or an individual who wants to contribute, we'd love to hear from you.",
+    "primaryButton": "Save the World",
+    "secondaryButton": "Contact Us"
   }
 }

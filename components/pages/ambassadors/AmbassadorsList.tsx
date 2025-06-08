@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "@/hooks/useTranslations";
 import AmbassadorCard from "./AmbassadorCard";
 import AmbassadorCategories from "./AmbassadorCategories";
 import AmbassadorCarousel from "./AmbassadorCarousel";
@@ -23,16 +24,16 @@ interface Ambassador {
   featured?: boolean;
 }
 
-// Sample ambassador data
-const ambassadorsData: Ambassador[] = [
+// Sample ambassador data function that uses translations
+const getAmbassadorsData = (t: (key: string) => string): Ambassador[] => [
   {
     id: "1",
     name: "SHARKA",
     image: "/images/ambassadors/sharka.jpg",
-    role: "Global",
-    location: "France",
+    role: t('ambassadorsList.regions.global'),
+    location: t('ambassadorsList.countries.france'),
     region: "Community",
-    bio: "SHARKA helps us promote our brand specifically for France and the French community. With a unique perspective and engaging presence, SHARKA helps communicate our values and mission to the French-speaking audience.",
+    bio: t('ambassadorsList.ambassadorBios.sharka'),
     socialLinks: [
       { platform: 'instagram', url: 'https://www.instagram.com/sharka_ugc?igsh=NzFoNmVhNWozYmd1' },
       { platform: 'tiktok', url: 'https://www.tiktok.com/@sharka.ugc?_t=ZN-8wkCdQWpoMI&_r=1' },
@@ -43,6 +44,11 @@ const ambassadorsData: Ambassador[] = [
 ];
 
 export default function AmbassadorsList() {
+  const { t } = useTranslations('ambassadors');
+  
+  // Get ambassadors data with translations
+  const ambassadorsData = getAmbassadorsData(t);
+  
   // Get unique regions from ambassadors data
   const regions = Array.from(new Set(ambassadorsData.map(ambassador => ambassador.region)));
   
@@ -69,13 +75,13 @@ export default function AmbassadorsList() {
   // Filter ambassadors based on active region
   const filteredAmbassadors = activeRegion === "all" 
     ? ambassadorsData 
-    : ambassadorsData.filter(ambassador => ambassador.region === activeRegion);
+    : ambassadorsData.filter(ambassador => ambassador.region.toLowerCase() === activeRegion.toLowerCase());
 
   return (
     <section id="ambassadors-list" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Meet Our Global Ambassadors
+          {t('ambassadorsList.title')}
         </h2>
         
         <AmbassadorCategories 
@@ -105,7 +111,7 @@ export default function AmbassadorsList() {
         
         {filteredAmbassadors.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-muted-foreground">No ambassadors found in this region.</p>
+            <p className="text-muted-foreground">{t('ambassadorsList.noAmbassadors')}</p>
           </div>
         )}
       </div>

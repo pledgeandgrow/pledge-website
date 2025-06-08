@@ -2,6 +2,7 @@
 
 import { useState, useEffect, lazy, Suspense } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useTranslations } from "@/hooks/useTranslations";
 
 // Use dynamic imports for service components to reduce initial bundle size
 const CreationServices = lazy(() => import("./CreationServices"));
@@ -9,16 +10,20 @@ const IntegrationServices = lazy(() => import("./IntegrationServices"));
 const ComplementaryServices = lazy(() => import("./ComplementaryServices"));
 
 // Loading placeholder
-const ServicePlaceholder = () => (
-  <div className="min-h-[300px] flex items-center justify-center">
-    <div className="animate-pulse text-muted-foreground">Loading service details...</div>
-  </div>
-);
+const ServicePlaceholder = () => {
+  const { t } = useTranslations('services');
+  return (
+    <div className="min-h-[300px] flex items-center justify-center">
+      <div className="animate-pulse text-muted-foreground">{t('tabbed.loading')}</div>
+    </div>
+  );
+};
 
 export default function ServicesTabbed() {
   // Track which tab is active to only load that component
   const [activeTab, setActiveTab] = useState("creation");
   const [hasInteracted, setHasInteracted] = useState(false);
+  const { t } = useTranslations('services');
 
   // Preload the creation services component on initial render
   useEffect(() => {
@@ -45,9 +50,9 @@ export default function ServicesTabbed() {
           onValueChange={handleTabChange}
         >
           <TabsList className="grid grid-cols-3 mb-12 w-full max-w-md mx-auto">
-            <TabsTrigger value="creation">Creation</TabsTrigger>
-            <TabsTrigger value="integration">Integration</TabsTrigger>
-            <TabsTrigger value="complementary">Complementary</TabsTrigger>
+            <TabsTrigger value="creation">{t('tabbed.tabs.creation')}</TabsTrigger>
+            <TabsTrigger value="integration">{t('tabbed.tabs.integration')}</TabsTrigger>
+            <TabsTrigger value="complementary">{t('tabbed.tabs.complementary')}</TabsTrigger>
           </TabsList>
           
           <TabsContent value="creation" className="py-8">

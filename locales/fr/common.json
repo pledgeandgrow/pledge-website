@@ -129,6 +129,22 @@
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
     "expandSection": "Développer la section",
-    "collapseSection": "Réduire la section"
+    "collapseSection": "Réduire la section",
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "cookieConsent": {
+    "title": "Consentement aux Cookies",
+    "description": "Nous utilisons des cookies pour améliorer votre expérience de navigation, diffuser des publicités ou du contenu personnalisés et analyser notre trafic. En cliquant sur \"Tout Accepter\", vous consentez à notre utilisation des cookies. Consultez notre",
+    "cookiePolicy": "Politique de Cookies",
+    "and": "et",
+    "privacyPolicy": "Politique de Confidentialité",
+    "forMoreInfo": "pour plus d'informations.",
+    "acceptAll": "Tout Accepter",
+    "decline": "Refuser",
+    "close": "Fermer la bannière de cookies"
+  },
+  "languageSwitcher": {
+    "switchLanguage": "Changer de Langue"
   }
 }

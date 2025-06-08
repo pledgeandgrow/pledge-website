@@ -6,6 +6,7 @@
   "roadmap": {
     "title": "Our Roadmap",
     "description": "Discover our strategic vision and upcoming milestones as we continue to innovate and expand our offerings.",
+    "updatedQuarterly": "Updated quarterly based on industry trends and client needs",
     "items": {
       "aiIntegration": {
         "title": "Advanced AI Integration",

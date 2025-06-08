@@ -12,6 +12,7 @@ import {
   ChevronRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslations } from "@/hooks/useTranslations";
 
 interface ProcessStep {
   id: string;
@@ -20,40 +21,42 @@ interface ProcessStep {
   icon: React.ReactNode;
 }
 
-const processSteps: ProcessStep[] = [
+const getProcessSteps = (t: (key: string) => string): ProcessStep[] => [
   {
     id: "discovery",
-    title: "Discovery & Planning",
-    description: "We start by understanding your business goals, target audience, and project requirements. This phase includes detailed discussions, research, and creating a comprehensive project roadmap.",
+    title: t('process.steps.0.title'),
+    description: t('process.steps.0.description'),
     icon: <Lightbulb className="h-8 w-8 text-primary" />
   },
   {
     id: "design-development",
-    title: "Design & Development",
-    description: "Our team creates wireframes, designs, and prototypes before moving to development. We follow industry best practices and use the latest technologies to build robust, scalable solutions.",
+    title: t('process.steps.1.title'),
+    description: t('process.steps.1.description'),
     icon: <Code className="h-8 w-8 text-primary" />
   },
   {
     id: "testing",
-    title: "Testing & Quality Assurance",
-    description: "We conduct thorough testing across different devices and platforms to ensure your project is bug-free, secure, and performs optimally under various conditions.",
+    title: t('process.steps.2.title'),
+    description: t('process.steps.2.description'),
     icon: <Shield className="h-8 w-8 text-primary" />
   },
   {
     id: "deployment",
-    title: "Deployment & Launch",
-    description: "Once approved, we deploy your project to production environments, ensuring a smooth transition. We handle all technical aspects of the launch process to minimize downtime.",
+    title: t('process.steps.3.title'),
+    description: t('process.steps.3.description'),
     icon: <Rocket className="h-8 w-8 text-primary" />
   },
   {
     id: "support",
-    title: "Ongoing Support & Optimization",
-    description: "Our relationship doesn't end at launch. We provide ongoing maintenance, support, and continuous improvements to keep your digital solution running smoothly and effectively.",
+    title: t('process.steps.4.title'),
+    description: t('process.steps.4.description'),
     icon: <Zap className="h-8 w-8 text-primary" />
   }
 ];
 
 export default function ProjectProcess() {
+  const { t } = useTranslations('digital-project');
+  const processSteps = getProcessSteps(t);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -84,9 +87,9 @@ export default function ProjectProcess() {
     <section className="py-16 bg-background dark:bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-foreground mb-4">Our Development Process</h2>
+          <h2 className="text-3xl font-bold text-foreground mb-4">{t('process.title')}</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            We follow a proven 5-step process to ensure your project is delivered on time, within budget, and exceeds your expectations.
+            {t('process.description')}
           </p>
         </div>
         
@@ -140,7 +143,7 @@ export default function ProjectProcess() {
                 disabled={currentIndex === 0}
               >
                 <ChevronLeft className="h-5 w-5" />
-                <span className="sr-only">Previous</span>
+                <span className="sr-only">{t('process.navigation.previous')}</span>
               </Button>
             </div>
 
@@ -153,7 +156,7 @@ export default function ProjectProcess() {
                 disabled={currentIndex >= processSteps.length - 1}
               >
                 <ChevronRight className="h-5 w-5" />
-                <span className="sr-only">Next</span>
+                <span className="sr-only">{t('process.navigation.next')}</span>
               </Button>
             </div>
 
@@ -171,7 +174,7 @@ export default function ProjectProcess() {
                 <h3 className="text-xl font-bold text-foreground mb-2 text-center">{processSteps[currentIndex].title}</h3>
                 <p className="text-muted-foreground text-center">{processSteps[currentIndex].description}</p>
                 <div className="mt-4 text-center text-primary font-medium">
-                  Step {currentIndex + 1} of {processSteps.length}
+                  {t('process.navigation.step')} {currentIndex + 1} {t('process.navigation.of')} {processSteps.length}
                 </div>
               </div>
               

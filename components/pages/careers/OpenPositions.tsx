@@ -9,21 +9,24 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ArrowRight, Search, MapPin, Briefcase, Clock } from "lucide-react";
 import Link from "next/link";
-import { jobPositions } from "@/data/careers-data";
+import { useTranslatedJobPositions } from "@/data/careers-data";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function OpenPositions() {
+  const { t } = useTranslations('careers');
+  const translatedJobs = useTranslatedJobPositions();
   const [searchTerm, setSearchTerm] = useState("");
   const [departmentFilter, setDepartmentFilter] = useState("all");
   const [locationTypeFilter, setLocationTypeFilter] = useState("all");
 
   // Get unique departments for filter
-  const departments = ["all", ...new Set(jobPositions.map(job => job.department))];
+  const departments = ["all", ...new Set(translatedJobs.map(job => job.department))];
   
   // Get unique location types for filter
-  const locationTypes = ["all", ...new Set(jobPositions.map(job => job.locationType))];
+  const locationTypes = ["all", ...new Set(translatedJobs.map(job => job.locationType))];
 
   // Filter jobs based on search term and filters
-  const filteredJobs = jobPositions.filter(job => {
+  const filteredJobs = translatedJobs.filter(job => {
     const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
                          job.description.toLowerCase().includes(searchTerm.toLowerCase());
     
@@ -50,10 +53,10 @@ export default function OpenPositions() {
           className="text-center max-w-3xl mx-auto mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Open Positions
+            {t('openPositions.title', { fallback: 'Open Positions' })}
           </h2>
           <p className="text-lg text-muted-foreground mb-8">
-            Explore our current job openings and find the perfect role to match your skills and career goals.
+            {t('openPositions.description', { fallback: 'Explore our current job openings and find the perfect role to match your skills and career goals.' })}
           </p>
         </motion.div>
 
@@ -62,7 +65,7 @@ export default function OpenPositions() {
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
               <Input
-                placeholder="Search positions..."
+                placeholder={t('openPositions.filters.search', { fallback: 'Search positions...' })}
                 className="pl-10"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
@@ -71,12 +74,12 @@ export default function OpenPositions() {
             
             <Select value={departmentFilter} onValueChange={setDepartmentFilter}>
               <SelectTrigger>
-                <SelectValue placeholder="Filter by department" />
+                <SelectValue placeholder={t('openPositions.filters.department', { fallback: 'Filter by department' })} />
               </SelectTrigger>
               <SelectContent>
                 {departments.map((department) => (
                   <SelectItem key={department} value={department}>
-                    {department === "all" ? "All Departments" : department}
+                    {department === "all" ? t('openPositions.filters.allDepartments', { fallback: 'All Departments' }) : t(`openPositions.departments.${department.toLowerCase()}`, { fallback: department })}
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -84,12 +87,12 @@ export default function OpenPositions() {
             
             <Select value={locationTypeFilter} onValueChange={setLocationTypeFilter}>
               <SelectTrigger>
-                <SelectValue placeholder="Filter by location type" />
+                <SelectValue placeholder={t('openPositions.filters.locationType', { fallback: 'Filter by location type' })} />
               </SelectTrigger>
               <SelectContent>
                 {locationTypes.map((locationType) => (
                   <SelectItem key={locationType} value={locationType}>
-                    {locationType === "all" ? "All Location Types" : locationType}
+                    {locationType === "all" ? t('openPositions.filters.allLocationTypes', { fallback: 'All Location Types' }) : t(`openPositions.positionCard.${locationType.toLowerCase()}`, { fallback: locationType })}
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -118,7 +121,7 @@ export default function OpenPositions() {
                         <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
                           <div className="flex items-center">
                             <Briefcase className="h-4 w-4 mr-2" />
-                            <span>{job.department} • {job.employmentType}</span>
+                            <span>{t(`openPositions.departments.${job.department.toLowerCase()}`, { fallback: job.department })} • {t(`openPositions.positionCard.${job.employmentType.toLowerCase()}`, { fallback: job.employmentType })}</span>
                           </div>
                           <div className="flex items-center">
                             <MapPin className="h-4 w-4 mr-2" />
@@ -126,7 +129,7 @@ export default function OpenPositions() {
                           </div>
                           <div className="flex items-center">
                             <Clock className="h-4 w-4 mr-2" />
-                            <span>Posted {formatDate(job.postedDate)}</span>
+                            <span>{t('openPositions.positionCard.postedOn', { fallback: 'Posted' })} {formatDate(job.postedDate)}</span>
                           </div>
                         </div>
                       </CardHeader>
@@ -136,7 +139,7 @@ export default function OpenPositions() {
                       <CardFooter>
                         <Button asChild className="w-full">
                           <Link href={`/careers/${job.id}`} className="flex items-center justify-center">
-                            View Details <ArrowRight className="ml-2 h-4 w-4" />
+                            {t('openPositions.positionCard.viewDetails', { fallback: 'View Details' })} <ArrowRight className="ml-2 h-4 w-4" />
                           </Link>
                         </Button>
                       </CardFooter>
@@ -183,7 +186,7 @@ export default function OpenPositions() {
                       <div className="flex flex-col space-y-2 text-sm text-muted-foreground">
                         <div className="flex items-center">
                           <Briefcase className="h-4 w-4 mr-2" />
-                          <span>{job.department} • {job.employmentType}</span>
+                          <span>{t(`openPositions.departments.${job.department.toLowerCase()}`, { fallback: job.department })} • {t(`openPositions.positionCard.${job.employmentType.toLowerCase()}`, { fallback: job.employmentType })}</span>
                         </div>
                         <div className="flex items-center">
                           <MapPin className="h-4 w-4 mr-2" />
@@ -191,7 +194,7 @@ export default function OpenPositions() {
                         </div>
                         <div className="flex items-center">
                           <Clock className="h-4 w-4 mr-2" />
-                          <span>Posted {formatDate(job.postedDate)}</span>
+                          <span>{t('openPositions.positionCard.postedOn', { fallback: 'Posted' })} {formatDate(job.postedDate)}</span>
                         </div>
                       </div>
                     </CardHeader>
@@ -201,7 +204,7 @@ export default function OpenPositions() {
                     <CardFooter>
                       <Button asChild className="w-full">
                         <Link href={`/careers/${job.id}`} className="flex items-center justify-center">
-                          View Details <ArrowRight className="ml-2 h-4 w-4" />
+                          {t('openPositions.positionCard.viewDetails', { fallback: 'View Details' })} <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
                     </CardFooter>
@@ -211,9 +214,9 @@ export default function OpenPositions() {
             </div>
           </>
         ) : (
-          <div className="text-center py-12 max-w-5xl mx-auto">
+          <div className="text-center py-12">
             <p className="text-lg text-muted-foreground">
-              No positions found matching your criteria. Please try different search terms or filters.
+              {t('openPositions.noPositions', { fallback: 'No positions match your search criteria. Please try adjusting your filters.' })}
             </p>
           </div>
         )}

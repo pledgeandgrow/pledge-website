@@ -1,0 +1,354 @@
+{
+  "hero": {
+    "title": "Lancez Votre Projet Digital Ultra Rapidement !",
+    "description": "Nous vous aidons à donner vie à votre vision numérique grâce à notre expertise en développement web, mobile et logiciel.",
+    "startButton": "Démarrer Mon Projet Maintenant",
+    "contactButton": "Contacter Notre Équipe"
+  },
+  "process": {
+    "title": "Notre Processus de Développement",
+    "description": "Nous suivons un processus en 5 étapes éprouvé pour garantir que votre projet soit livré dans les délais, dans le budget et dépasse vos attentes.",
+    "steps": [
+      {
+        "title": "Découverte et Planification",
+        "description": "Nous commençons par comprendre vos objectifs commerciaux, votre public cible et les exigences du projet. Cette phase comprend des discussions détaillées, des recherches et la création d'une feuille de route complète."
+      },
+      {
+        "title": "Conception et Développement",
+        "description": "Notre équipe crée des wireframes, des designs et des prototypes avant de passer au développement. Nous suivons les meilleures pratiques de l'industrie et utilisons les dernières technologies pour construire des solutions robustes et évolutives."
+      },
+      {
+        "title": "Tests et Assurance Qualité",
+        "description": "Nous effectuons des tests approfondis sur différents appareils et plateformes pour garantir que votre projet est sans bug, sécurisé et fonctionne de manière optimale dans diverses conditions."
+      },
+      {
+        "title": "Déploiement et Lancement",
+        "description": "Une fois approuvé, nous déployons votre projet dans des environnements de production, assurant une transition en douceur. Nous gérons tous les aspects techniques du processus de lancement pour minimiser les temps d'arrêt."
+      },
+      {
+        "title": "Support Continu et Optimisation",
+        "description": "Notre relation ne se termine pas au lancement. Nous fournissons une maintenance continue, un support et des améliorations constantes pour que votre solution numérique fonctionne efficacement."
+      }
+    ],
+    "navigation": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "step": "Étape",
+      "of": "sur"
+    }
+  },
+  "requirements": {
+    "title": "Nos Exigences de Collaboration",
+    "description": "Pour un partenariat réussi, nous avons établi ces exigences clés pour assurer une collaboration fluide et des résultats exceptionnels.",
+    "collaborationRequirements": [
+      {
+        "title": "Objectifs de Projet Clairs",
+        "description": "Fournissez une description claire de vos objectifs de projet, de votre public cible et des résultats attendus. Plus vous êtes précis, mieux nous pouvons adapter nos solutions à vos besoins."
+      },
+      {
+        "title": "Calendrier Réaliste",
+        "description": "Comprenez que les projets numériques de qualité prennent du temps. Nous travaillons efficacement mais ne compromettrons pas la qualité. Les projets typiques prennent 2 à 6 mois selon la complexité."
+      },
+      {
+        "title": "Budget Approprié",
+        "description": "Ayez un budget réaliste qui s'aligne avec l'étendue de votre projet. Le développement de qualité nécessite un investissement. Nous vous aiderons à prioriser les fonctionnalités pour correspondre à vos contraintes budgétaires."
+      },
+      {
+        "title": "Retours Rapides",
+        "description": "Engagez-vous à fournir des retours rapides pendant le processus de développement. Cela nous permet de rester sur la bonne voie et d'effectuer des ajustements rapidement sans retarder le projet."
+      },
+      {
+        "title": "Préparation du Contenu",
+        "description": "Soyez prêt à fournir le contenu nécessaire (texte, images, vidéos) en temps opportun. Les retards de contenu sont une cause fréquente de prolongation des délais de projet."
+      },
+      {
+        "title": "Décideur Désigné",
+        "description": "Désignez un point de contact principal ayant l'autorité de prendre des décisions. Trop de parties prenantes sans leadership clair peuvent entraîner confusion et retards."
+      }
+    ],
+    "clientProvisions": {
+      "title": "Ce Que Vous Devez Fournir",
+      "description": "Pour assurer un processus de développement plus rapide et plus efficace, veuillez préparer les éléments suivants avant que nous commencions :",
+      "categories": [
+        {
+          "title": "Actifs de Marque",
+          "items": [
+            "Fichiers logo en format vectoriel (SVG, AI, EPS)",
+            "Palette de couleurs de la marque avec codes hexadécimaux",
+            "Informations typographiques (noms de polices, poids)",
+            "Directives de marque si disponibles"
+          ]
+        },
+        {
+          "title": "Matériels de Contenu",
+          "items": [
+            "Contenu textuel pour toutes les pages",
+            "Images haute qualité (largeur minimale 1920px)",
+            "Vidéos au format MP4 (si applicable)",
+            "Documents à télécharger (si applicable)"
+          ]
+        },
+        {
+          "title": "Accès Technique",
+          "items": [
+            "Accès au registraire de domaine (ou capacité à mettre à jour le DNS)",
+            "Identifiants de compte d'hébergement (si utilisation d'un hébergement existant)",
+            "Identifiants de services tiers (analytics, outils marketing, etc.)",
+            "Sauvegardes de base de données existantes (pour les migrations)"
+          ]
+        },
+        {
+          "title": "Exigences Légales",
+          "items": [
+            "Contenu de politique de confidentialité",
+            "Contenu des conditions de service",
+            "Contenu de politique de cookies",
+            "Exigences de conformité RGPD"
+          ]
+        }
+      ],
+      "navigation": {
+        "previous": "Précédent",
+        "next": "Suivant",
+        "of": "sur"
+      }
+    }
+  },
+  "support": {
+    "title": "Technologies Que Nous Supportons",
+    "description": "Nous travaillons avec une large gamme de technologies pour offrir les meilleures solutions pour votre projet numérique.",
+    "searchPlaceholder": "Rechercher des technologies...",
+    "categories": {
+      "all": "Toutes les Technologies",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "database": "Bases de Données",
+      "cms": "CMS & E-commerce",
+      "cloud": "Cloud & DevOps"
+    },
+    "noTechnologiesFound": "Aucune technologie trouvée correspondant à votre recherche.",
+    "navigation": {
+      "page": "Page",
+      "of": "sur"
+    }
+  },
+  "form": {
+    "heading": "Démarrer Votre Projet",
+    "description": "Remplissez ce formulaire pour nous aider à comprendre vos besoins et vous fournir une estimation précise.",
+    "progress": "{{current}} sur {{total}}",
+    "buttons": {
+      "previous": "Précédent",
+      "back": "Retour",
+      "next": "Suivant",
+      "submit": "Soumettre",
+      "submitProject": "Soumettre le Projet",
+      "sending": "Envoi...",
+      "submitting": "Soumission..."
+    },
+    "toast": {
+      "success": {
+        "title": "Projet Soumis",
+        "description": "Les détails de votre projet ont été reçus et envoyés à notre équipe."
+      },
+      "error": {
+        "title": "Erreur de Soumission",
+        "description": "Il y a eu un problème lors de la soumission de votre projet. Veuillez réessayer.",
+        "unexpectedDescription": "Une erreur inattendue s'est produite. Veuillez réessayer."
+      }
+    },
+    "navigation": {
+      "previous": "Précédent",
+      "back": "Retour",
+      "next": "Suivant",
+      "submit": "Soumettre le Projet",
+      "submitShort": "Soumettre",
+      "step": "Étape",
+      "of": "sur"
+    },
+    "steps": [
+      {
+        "id": "project-type",
+        "title": "Type de Projet",
+        "description": "Sélectionnez le type de projet que vous souhaitez créer"
+      },
+      {
+        "id": "project-details",
+        "title": "Détails du Projet",
+        "description": "Parlez-nous davantage de votre projet"
+      },
+      {
+        "id": "timeline",
+        "title": "Calendrier",
+        "description": "Quand avez-vous besoin que votre projet soit terminé ?"
+      },
+      {
+        "id": "budget",
+        "title": "Budget",
+        "description": "Quel est votre budget pour ce projet ?"
+      },
+      {
+        "id": "contact",
+        "title": "Coordonnées",
+        "description": "Comment pouvons-nous vous contacter ?"
+      },
+      {
+        "id": "summary",
+        "title": "Résumé",
+        "description": "Vérifiez les détails de votre projet"
+      }
+    ],
+    "projectType": {
+      "label": "Type de Projet",
+      "placeholder": "Sélectionnez un type de projet",
+      "options": {
+        "web": "Développement Web",
+        "mobile": "Application Mobile",
+        "design": "Projet de Design",
+        "consulting": "Consultation"
+      },
+      "validation": {
+        "required": "Veuillez sélectionner un type de projet."
+      }
+    },
+    "projectDetails": {
+      "projectName": {
+        "label": "Nom du Projet",
+        "placeholder": "Entrez le nom du projet",
+        "validation": {
+          "minLength": "Le nom du projet doit comporter au moins 2 caractères."
+        }
+      },
+      "projectDescription": {
+        "label": "Description du Projet",
+        "placeholder": "Décrivez votre projet en détail",
+        "validation": {
+          "minLength": "La description du projet doit comporter au moins 10 caractères."
+        }
+      },
+      "targetAudience": {
+        "label": "Public Cible",
+        "placeholder": "Pour qui est ce projet ?",
+        "validation": {
+          "minLength": "Le public cible doit comporter au moins 5 caractères."
+        }
+      }
+    },
+    "timeline": {
+      "startDate": {
+        "label": "Date de Début",
+        "validation": {
+          "required": "Veuillez sélectionner une date de début."
+        }
+      },
+      "deadline": {
+        "label": "Date Limite (Optionnel)"
+      },
+      "flexibility": {
+        "label": "Flexibilité du Calendrier",
+        "options": {
+          "strict": "Strict - Doit être terminé avant la date limite",
+          "moderate": "Modéré - Une certaine flexibilité est permise",
+          "flexible": "Flexible - Ouvert à l'ajustement du calendrier"
+        }
+      }
+    },
+    "budget": {
+      "budgetRange": {
+        "label": "Fourchette de Budget",
+        "placeholder": "Sélectionnez une fourchette de budget",
+        "options": {
+          "0-1000": "0€ - 1 000€",
+          "1000-5000": "1 000€ - 5 000€",
+          "5000-10000": "5 000€ - 10 000€",
+          "10000+": "10 000€+",
+          "small": "0€ - 1 000€",
+          "medium": "1 000€ - 5 000€",
+          "large": "5 000€ - 10 000€",
+          "enterprise": "10 000€+"
+        },
+        "validation": {
+          "required": "Veuillez sélectionner une fourchette de budget."
+        }
+      },
+      "budgetAmount": {
+        "label": "Montant Spécifique du Budget (Optionnel)",
+        "placeholder": "Entrez votre budget exact",
+        "validation": {
+          "positive": "Le montant du budget doit être un nombre positif."
+        }
+      },
+      "paymentPreference": {
+        "label": "Préférence de Paiement",
+        "options": {
+          "milestone": "Étapes - Paiement lors de l'achèvement d'étapes spécifiques",
+          "monthly": "Mensuel - Paiements mensuels constants",
+          "completion": "Achèvement - Paiement intégral à la fin du projet"
+        },
+        "validation": {
+          "required": "Veuillez sélectionner une préférence de paiement."
+        }
+      }
+    },
+    "contact": {
+      "name": {
+        "label": "Nom Complet",
+        "placeholder": "Entrez votre nom complet",
+        "validation": {
+          "minLength": "Le nom doit comporter au moins 2 caractères."
+        }
+      },
+      "email": {
+        "label": "Adresse Email",
+        "placeholder": "Entrez votre adresse email",
+        "validation": {
+          "format": "Veuillez entrer une adresse email valide."
+        }
+      },
+      "company": {
+        "label": "Entreprise (Optionnel)",
+        "placeholder": "Entrez le nom de votre entreprise"
+      },
+      "phone": {
+        "label": "Numéro de Téléphone (Optionnel)",
+        "placeholder": "Entrez votre numéro de téléphone"
+      }
+    },
+    "summary": {
+      "notSpecified": "Non spécifié",
+      "projectInformation": {
+        "title": "Informations du Projet",
+        "projectType": "Type de Projet",
+        "projectName": "Nom du Projet",
+        "projectDescription": "Description du Projet",
+        "targetAudience": "Public Cible"
+      },
+      "timeline": {
+        "title": "Calendrier",
+        "startDate": "Date de Début",
+        "deadline": "Date Limite",
+        "flexibility": "Flexibilité"
+      },
+      "budget": {
+        "title": "Budget",
+        "budgetRange": "Fourchette de Budget",
+        "budgetAmount": "Montant Spécifique du Budget",
+        "paymentPreference": "Préférence de Paiement"
+      },
+      "contactInformation": {
+        "title": "Coordonnées",
+        "name": "Nom",
+        "email": "Email",
+        "company": "Entreprise",
+        "phone": "Téléphone"
+      }
+    },
+    "submission": {
+      "sending": "Soumission en cours...",
+      "sendingMobile": "Envoi...",
+      "errorTitle": "Erreur de Soumission",
+      "errorDescription": "Il y a eu un problème lors de la soumission de votre projet. Veuillez réessayer.",
+      "unexpectedErrorDescription": "Une erreur inattendue s'est produite. Veuillez réessayer."
+    }
+  }
+}

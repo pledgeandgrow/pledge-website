@@ -6,32 +6,38 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Handshake, Rocket, Shield, Users } from "lucide-react";
 import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
+import { useTranslations } from "@/hooks/useTranslations";
 
-// Partner type data
-const partnerTypes = [
+// Function to get partner type data with translations
+const getPartnerTypes = (t: (key: string) => string) => [
   {
     icon: <Handshake className="text-primary h-6 w-6" />,
-    title: "Strategic Alliances",
-    description: "Form strategic partnerships to expand market reach and create innovative solutions together."
+    title: t('becomePartner.partnerTypes.strategic.title') || "Strategic Alliances",
+    description: t('becomePartner.partnerTypes.strategic.description') || "Form strategic partnerships to expand market reach and create innovative solutions together."
   },
   {
     icon: <Rocket className="text-primary h-6 w-6" />,
-    title: "Technology Partners",
-    description: "Integrate your technology with our solutions to deliver enhanced value to our clients."
+    title: t('becomePartner.partnerTypes.technology.title') || "Technology Partners",
+    description: t('becomePartner.partnerTypes.technology.description') || "Integrate your technology with our solutions to deliver enhanced value to our clients."
   },
   {
     icon: <Shield className="text-primary h-6 w-6" />,
-    title: "Solution Partners",
-    description: "Collaborate on comprehensive solutions that address complex business challenges."
+    title: t('becomePartner.partnerTypes.solution.title') || "Solution Partners",
+    description: t('becomePartner.partnerTypes.solution.description') || "Collaborate on comprehensive solutions that address complex business challenges."
   },
   {
     icon: <Users className="text-primary h-6 w-6" />,
-    title: "Channel Partners",
-    description: "Resell or refer our solutions to your clients and earn competitive commissions."
+    title: t('becomePartner.partnerTypes.channel.title') || "Channel Partners",
+    description: t('becomePartner.partnerTypes.channel.description') || "Resell or refer our solutions to your clients and earn competitive commissions."
   }
 ];
 
 export default function BecomePartner() {
+  const { t } = useTranslations('partners');
+  
+  // Get partner types with translations
+  const partnerTypes = getPartnerTypes(t);
+  
   // State to detect if on mobile
   const [isMobile, setIsMobile] = useState(false);
   
@@ -57,11 +63,10 @@ export default function BecomePartner() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Become Our Partner
+              {t('becomePartner.heading') || "Become Our Partner"}
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Join our partner ecosystem and collaborate on innovative solutions. 
-              We&apos;re always looking for strategic partnerships that create value for our clients.
+              {t('becomePartner.subheading') || "Join our partner ecosystem and collaborate on innovative solutions. We're always looking for strategic partnerships that create value for our clients."}
             </p>
           </motion.div>
         </div>
@@ -120,7 +125,7 @@ export default function BecomePartner() {
         <div className="text-center">
           <Button asChild size="lg" className="font-medium">
             <Link href="/contact?subject=Partnership Inquiry">
-              Contact Us About Partnership
+              {t('becomePartner.contactButton') || "Contact Us About Partnership"}
             </Link>
           </Button>
         </div>

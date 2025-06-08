@@ -1,0 +1,82 @@
+{
+  "id": "software",
+  "slug": "software",
+  "title": "Software Development",
+  "subtitle": "Custom software solutions tailored to your business needs",
+  "description": "We develop custom software applications that solve complex business challenges and streamline operations. Our software development expertise combines technical excellence with business understanding to create solutions that drive efficiency and growth.",
+  "heroImage": "/images/expertise/software-hero.jpg",
+  "heroButton": "Start Your Software Project",
+  "category": "Creation",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Software solutions tailored to your needs"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "The best tools for your software solution"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "How our software transforms your business"
+    }
+  },
+  "features": [
+    {
+      "title": "Custom Applications",
+      "description": "Tailor-made software for your specific business requirements",
+      "icon": "code"
+    },
+    {
+      "title": "Integration Services",
+      "description": "Seamless connections between your existing systems",
+      "icon": "git-merge"
+    },
+    {
+      "title": "Legacy Modernization",
+      "description": "Updating outdated systems with modern technologies",
+      "icon": "refresh-cw"
+    },
+    {
+      "title": "Enterprise Solutions",
+      "description": "Scalable software for complex organizational needs",
+      "icon": "building"
+    }
+  ],
+  "technologies": [
+    { "name": "C++", "logo": "/images/tech/cpp.svg" },
+    { "name": "Python", "logo": "/images/tech/python.svg" },
+    { "name": "Java", "logo": "/images/tech/java.svg" },
+    { "name": "C#", "logo": "/images/tech/csharp.svg" },
+    { "name": "C", "logo": "/images/tech/c.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Increased Efficiency",
+      "description": "Streamlined processes that save time and reduce manual effort",
+      "icon": "zap"
+    },
+    {
+      "title": "Competitive Advantage",
+      "description": "Unique solutions that differentiate your business",
+      "icon": "award"
+    },
+    {
+      "title": "Scalability",
+      "description": "Software that grows with your business needs",
+      "icon": "trending-up"
+    },
+    {
+      "title": "Data-Driven Insights",
+      "description": "Better business intelligence for informed decision-making",
+      "icon": "bar-chart"
+    }
+  ],
+  "relatedExpertise": ["cloud-devops", "ai-automation", "maintenance"],
+  "cta": {
+    "title": "Ready to Build Your Custom Software?",
+    "description": "Let's discuss your business challenges and create a solution that drives efficiency and growth.",
+    "buttonText": "Start Your Software Project",
+    "buttonLink": "/contact"
+  }
+}

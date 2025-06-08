@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "title": "Secteurs d'Activité | Pledge & Grow",
+    "description": "Solutions numériques sur mesure pour diverses industries, conçues pour répondre à vos défis et opportunités spécifiques à votre secteur."
+  },
+  "overview": {
+    "title": "Solutions Numériques Spécifiques à l'Industrie",
+    "description": "Nous comprenons que chaque industrie fait face à des défis et opportunités uniques. Notre expertise sectorielle nous permet de fournir des solutions numériques sur mesure qui répondent à vos besoins commerciaux particuliers.",
+    "expertise": "Avec une expérience approfondie dans de multiples industries, nous combinons la connaissance du secteur avec l'expertise technique pour créer des solutions qui génèrent des résultats significatifs pour votre entreprise."
+  },
+  "industrySolutions": {
+    "title": "Nos Solutions par Industrie",
+    "description": "Découvrez comment notre expertise numérique s'applique à différents secteurs pour résoudre des défis spécifiques à chaque industrie.",
+    "viewSolutions": "Voir les Solutions",
+    "keySolutions": "Solutions Clés",
+    "industryChallenges": "Défis de l'Industrie",
+    "noSolutions": "Aucune solution spécifique listée.",
+    "noChallenges": "Aucun défi spécifique listé.",
+    "discussProject": "Discuter de Votre Projet",
+    "sectors": {
+      "finance": {
+        "title": "Finance & Banque",
+        "description": "Solutions numériques sécurisées, conformes et innovantes pour les institutions financières, de la banque mobile aux systèmes avancés de détection de fraude.",
+        "keyFeatures": [
+          "Plateformes de transactions sécurisées",
+          "Systèmes de conformité réglementaire",
+          "Portails financiers clients",
+          "Détection et prévention des fraudes"
+        ]
+      },
+      "healthcare": {
+        "title": "Santé & Sciences de la Vie",
+        "description": "Solutions numériques qui améliorent les soins aux patients, rationalisent les opérations et assurent la conformité aux réglementations de santé.",
+        "keyFeatures": [
+          "Systèmes de gestion des patients",
+          "Plateformes de télémédecine",
+          "Analyse de données médicales",
+          "Solutions de conformité en santé"
+        ]
+      },
+      "retail": {
+        "title": "Commerce de Détail & E-commerce",
+        "description": "Expériences omnicanales qui stimulent les ventes, améliorent l'engagement client et optimisent la gestion des stocks.",
+        "keyFeatures": [
+          "Plateformes e-commerce",
+          "Systèmes de gestion des stocks",
+          "Programmes de fidélité client",
+          "Expériences d'achat personnalisées"
+        ]
+      },
+      "manufacturing": {
+        "title": "Fabrication & Industrie",
+        "description": "Solutions de transformation numérique qui optimisent la production, améliorent le contrôle qualité et permettent la maintenance prédictive.",
+        "keyFeatures": [
+          "Surveillance de production IoT",
+          "Optimisation de la chaîne d'approvisionnement",
+          "Systèmes de contrôle qualité",
+          "Solutions de maintenance prédictive"
+        ]
+      },
+      "education": {
+        "title": "Éducation & E-learning",
+        "description": "Plateformes innovantes qui améliorent les expériences d'apprentissage, optimisent l'efficacité administrative et permettent l'éducation à distance.",
+        "keyFeatures": [
+          "Systèmes de gestion d'apprentissage",
+          "Classes virtuelles",
+          "Plateformes de contenu éducatif",
+          "Analyse de progression des étudiants"
+        ]
+      },
+      "government": {
+        "title": "Gouvernement & Secteur Public",
+        "description": "Services numériques sécurisés et accessibles qui améliorent l'engagement citoyen et rationalisent les processus administratifs.",
+        "keyFeatures": [
+          "Portails de services aux citoyens",
+          "Gestion sécurisée de documents",
+          "Systèmes d'information publique",
+          "Automatisation des flux administratifs"
+        ]
+      }
+    }
+  },
+  "approach": {
+    "title": "Notre Approche Spécifique au Secteur",
+    "description": "Nous suivons une méthodologie éprouvée pour garantir que nos solutions répondent aux exigences uniques de votre industrie.",
+    "steps": {
+      "research": {
+        "title": "Recherche Sectorielle",
+        "description": "Nous commençons par comprendre en profondeur les défis spécifiques, les réglementations et le paysage concurrentiel de votre secteur."
+      },
+      "assessment": {
+        "title": "Évaluation d'Entreprise",
+        "description": "Nous analysons la position unique de votre organisation au sein de l'industrie pour identifier les opportunités d'amélioration numérique."
+      },
+      "customization": {
+        "title": "Personnalisation de Solutions",
+        "description": "Nous adaptons nos solutions techniques pour répondre à vos exigences industrielles spécifiques et à vos objectifs commerciaux."
+      },
+      "implementation": {
+        "title": "Implémentation Spécialisée",
+        "description": "Notre processus d'implémentation intègre les meilleures pratiques du secteur et les considérations de conformité."
+      },
+      "optimization": {
+        "title": "Optimisation Continue",
+        "description": "Nous affinons régulièrement nos solutions pour les adapter aux tendances et réglementations changeantes de l'industrie."
+      }
+    }
+  },
+  "cta": {
+    "title": "Prêt à Transformer Votre Industrie ?",
+    "description": "Discutons de la façon dont notre expertise sectorielle peut vous aider à surmonter les défis et à saisir les opportunités dans votre industrie.",
+    "button": "Discuter de Vos Besoins Sectoriels",
+    "contactInfo": "Ou envoyez-nous un email à sectors@pledgeandgrow.com"
+  }
+}

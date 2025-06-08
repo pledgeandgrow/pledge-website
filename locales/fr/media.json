@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "title": "Centre Média | Pledge & Grow",
+    "description": "Explorez la présence médiatique de Pledge & Grow, les communiqués de presse, le kit média et les ressources pour les journalistes et créateurs de contenu."
+  },
+  "hero": {
+    "title": "Notre Présence Médiatique",
+    "description": "Découvrez les apparitions de Pledge & Grow sur diverses plateformes médiatiques, des réseaux sociaux aux émissions de télévision, podcasts et publications numériques."
+  },
+  "pressKit": {
+    "title": "Kit de Presse",
+    "description": "Téléchargez notre kit de presse officiel contenant les logos, les directives de marque, les biographies des dirigeants et des images haute résolution.",
+    "downloadButton": "Télécharger le Kit de Presse",
+    "logoInfo": "Notre logo est disponible en versions noire et blanche. Le logo noir est pour les fonds clairs, tandis que le logo blanc est pour les fonds sombres."
+  },
+  "socialMedia": {
+    "title": "Connectez-Vous Avec Nous",
+    "description": "Suivez-nous sur les réseaux sociaux pour les dernières mises à jour, le contenu en coulisses et l'engagement communautaire. Rejoignez notre communauté grandissante de passionnés de technologie et d'acteurs du changement.",
+    "followButton": "Nous Suivre",
+    "platforms": [
+      {
+        "platform": "Instagram",
+        "username": "pledgeandgrow",
+        "url": "https://instagram.com/pledgeandgrow",
+        "followers": "12,5K",
+        "description": "Suivez-nous pour des histoires inspirantes, du contenu en coulisses et des mises à jour sur nos derniers projets et initiatives.",
+        "bgColor": "bg-gradient-to-r from-purple-500 to-pink-500"
+      },
+      {
+        "platform": "Facebook",
+        "username": "pledgeandgrow",
+        "url": "https://facebook.com/pledgeandgrow",
+        "followers": "8,3K",
+        "description": "Rejoignez notre communauté pour rester informé des événements, des annonces et des discussions engageantes sur la technologie pour le bien.",
+        "bgColor": "bg-blue-600"
+      },
+      {
+        "platform": "TikTok",
+        "username": "pledgeandgrow",
+        "url": "https://tiktok.com/@pledgeandgrowfr",
+        "followers": "15,2K",
+        "description": "Regardez nos vidéos courtes présentant des conseils techniques, des points forts de l'innovation et des moments amusants de notre équipe.",
+        "bgColor": "bg-black"
+      },
+      {
+        "platform": "LinkedIn",
+        "username": "pledge-and-grow",
+        "url": "https://linkedin.com/company/pledge-and-grow",
+        "followers": "5,7K",
+        "description": "Connectez-vous avec nous professionnellement pour des aperçus de l'industrie, des opportunités de carrière et des discussions de partenariat commercial.",
+        "bgColor": "bg-blue-700"
+      },
+      {
+        "platform": "YouTube",
+        "username": "PledgeAndGrowOfficial",
+        "url": "https://www.youtube.com/@pledgeandgrow",
+        "followers": "7,1K",
+        "description": "Abonnez-vous à notre chaîne pour des tutoriels approfondis, des webinaires, des enregistrements d'événements et des histoires d'impact de nos projets.",
+        "bgColor": "bg-red-600"
+      },
+      {
+        "platform": "X",
+        "username": "pledgeandgrow",
+        "url": "https://x.com/PledgeandGrow",
+        "followers": "9,3K",
+        "description": "Suivez-nous pour les dernières actualités technologiques, les aperçus de l'industrie et les mises à jour rapides sur nos projets et initiatives.",
+        "bgColor": "bg-black"
+      },
+      {
+        "platform": "Discord",
+        "username": "pledgeandgrow",
+        "url": "https://discord.gg/Ud22W3Gp",
+        "followers": "3,8K",
+        "description": "Rejoignez notre communauté pour vous connecter avec des professionnels partageant les mêmes idées, participer à des discussions et obtenir un support en temps réel.",
+        "bgColor": "bg-indigo-600"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Connectez-Vous Avec Nous",
+    "description": "Intéressé à présenter Pledge & Grow dans votre publication, podcast ou émission ? Notre équipe d'experts est disponible pour des interviews, des conférences et des opportunités médiatiques.",
+    "button": "Demandes Médias"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "website",
+  "slug": "website",
+  "title": "Développement Web",
+  "subtitle": "Créez une présence en ligne puissante avec nos solutions web personnalisées",
+  "description": "Nous construisons des sites web réactifs et performants qui engagent votre audience et génèrent des conversions. Des simples pages d'atterrissage aux applications web complexes, notre expertise assure que votre présence en ligne se démarque.",
+  "heroImage": "/images/expertise/website-hero.jpg",
+  "heroButton": "Démarrer Votre Projet Web",
+  "category": "Création",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Des solutions web complètes pour votre entreprise"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Les meilleures technologies pour votre site web"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Pourquoi investir dans un site web professionnel"
+    }
+  },
+  "features": [
+    {
+      "title": "Design Responsive",
+      "description": "Sites web parfaitement adaptés à tous les appareils",
+      "icon": "device-mobile"
+    },
+    {
+      "title": "Optimisation de Performance",
+      "description": "Pages rapides qui maintiennent l'engagement des visiteurs",
+      "icon": "rocket"
+    },
+    {
+      "title": "Optimisé pour le SEO",
+      "description": "Conçu avec l'optimisation pour les moteurs de recherche",
+      "icon": "search"
+    },
+    {
+      "title": "Gestion de Contenu",
+      "description": "Systèmes faciles à utiliser pour mettre à jour votre contenu",
+      "icon": "pencil"
+    }
+  ],
+  "technologies": [
+    { "name": "Next.js", "logo": "/images/tech/nextjs.svg" },
+    { "name": "React", "logo": "/images/tech/react.svg" },
+    { "name": "TypeScript", "logo": "/images/tech/typescript.svg" },
+    { "name": "Tailwind CSS", "logo": "/images/tech/tailwind.svg" },
+    { "name": "WordPress", "logo": "/images/tech/wordpress.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Visibilité Accrue",
+      "description": "Atteignez plus de clients potentiels avec une présence en ligne professionnelle",
+      "icon": "eye"
+    },
+    {
+      "title": "Meilleure Expérience Utilisateur",
+      "description": "Gardez les visiteurs engagés avec une navigation et un design intuitifs",
+      "icon": "heart"
+    },
+    {
+      "title": "Taux de Conversion Plus Élevés",
+      "description": "Transformez les visiteurs en clients avec des appels à l'action stratégiques",
+      "icon": "chart-bar"
+    },
+    {
+      "title": "Crédibilité de Marque",
+      "description": "Établissez la confiance avec un site web professionnel et soigné",
+      "icon": "badge-check"
+    }
+  ],
+  "relatedExpertise": ["ux-ui-design", "seo", "e-commerce"],
+  "cta": {
+    "title": "Prêt à transformer votre présence en ligne?",
+    "description": "Discutons de la façon dont nous pouvons créer un site web qui représente parfaitement votre marque et atteint vos objectifs.",
+    "buttonText": "Démarrer Votre Projet Web",
+    "buttonLink": "/digital-project?service=website"
+  }
+}

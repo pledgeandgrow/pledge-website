@@ -1,0 +1,52 @@
+{
+  "title": "References & Listings",
+  "description": "Websites, directories, and publications that feature or mention Pledge & Grow.",
+  "categories": {
+    "legal": "Legal Listing",
+    "press": "Press Mention",
+    "directory": "Business Directory",
+    "partner": "Partner Platform"
+  },
+  "references": {
+    "hoodspot": {
+      "name": "01. Hoodspot",
+      "description": "Business analytics platform with detailed information about Pledge & Grow."
+    },
+    "figaro": {
+      "name": "02. Figaro Entreprise",
+      "description": "Business section of Le Figaro newspaper featuring company profiles including Pledge & Grow."
+    },
+    "dataGouv": {
+      "name": "03. Data Gouv",
+      "description": "French government open data platform with official business information about Pledge & Grow."
+    },
+    "societe": {
+      "name": "04. Société",
+      "description": "French company information database with legal and financial details about Pledge & Grow."
+    },
+    "pagesJaunes": {
+      "name": "05. Pages Jaunes",
+      "description": "French business directory with Pledge & Grow's contact information and services."
+    },
+    "legaliste": {
+      "name": "06. Le Légaliste",
+      "description": "Legal business information platform with company registration details for Pledge & Grow."
+    },
+    "greffe": {
+      "name": "07. Greffe",
+      "description": "Official commercial court registry with legal documentation for Pledge & Grow."
+    },
+    "sortlist": {
+      "name": "08. Sortlist",
+      "description": "Agency matching platform featuring Pledge & Grow's services and portfolio."
+    }
+  },
+  "visitButton": "Visit",
+  "contactText": "If you would like to feature Pledge & Grow on your platform or publication, please contact us.",
+  "contactButton": "Contact for Media Inquiries",
+  "dates": {
+    "updatedAnnually": "Updated annually",
+    "updatedQuarterly": "Updated quarterly",
+    "updated2024": "Updated 2024"
+  }
+}

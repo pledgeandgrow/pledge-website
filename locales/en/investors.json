@@ -9,15 +9,33 @@
     "keyMetrics": {
       "title": "Key Metrics",
       "founded": "Founded",
-      "foundedValue": "2018",
-      "employees": "Employees",
-      "employeesValue": "120+",
+      "foundedValue": "2022",
+      "employees": "Staff",
+      "employeesValue": "10",
       "clients": "Clients",
-      "clientsValue": "250+",
+      "clientsValue": "20",
       "annualGrowth": "Annual Growth",
       "annualGrowthValue": "35%",
       "countries": "Countries",
-      "countriesValue": "15+"
+      "countriesValue": "5+"
+    },
+    "highlights": {
+      "consistentGrowth": {
+        "title": "Consistent Growth",
+        "description": "35% year-over-year revenue growth since our founding"
+      },
+      "globalTeam": {
+        "title": "Global Team",
+        "description": "10+ talented professionals across 5 countries"
+      },
+      "marketReach": {
+        "title": "Market Reach",
+        "description": "Serving clients in over 5 countries worldwide"
+      },
+      "localRecognition": {
+        "title": "Local Recognition",
+        "description": "Recognized locally in France and steadily increasing our reach"
+      }
     },
     "mission": {
       "title": "Our Mission",
@@ -29,45 +47,90 @@
     }
   },
   "investorsPhase": {
-    "title": "Current Investment Phase",
-    "description": "We are currently in our Series B funding round, seeking strategic investors to support our European expansion and product development initiatives.",
-    "details": {
-      "round": {
-        "title": "Current Round",
-        "value": "Series B"
+    "comingSoon": "Coming Soon",
+    "title": "Investment Phases",
+    "description": "Our strategic investment plan is structured in three distinct phases, each offering unique opportunities for investors to participate in our growth journey.",
+    "phases": {
+      "seed": {
+        "title": "SEED",
+        "status": "active",
+        "description": "Initial funding round for early-stage development and market validation.",
+        "details": [
+          "5 angel investors",
+          "€100K investment per investor",
+          "1% non-dilutable equity per investor",
+          "Investment with guarantee",
+          "Limited availability"
+        ],
+        "cta": {
+          "text": "Inquire About Seed Investment",
+          "link": "/contact?subject=Seed%20Investment"
+        }
       },
-      "target": {
-        "title": "Funding Target",
-        "value": "€15 Million"
+      "grow": {
+        "title": "GROW",
+        "status": "coming-soon",
+        "description": "Second funding phase focused on scaling operations and market expansion.",
+        "details": [
+          "Projected for 2030"
+        ]
       },
-      "use": {
-        "title": "Use of Funds",
-        "value": "European Expansion, Product Development, Team Growth"
-      },
-      "timeline": {
-        "title": "Timeline",
-        "value": "Closing Q3 2025"
-      }
-    },
-    "previousRounds": {
-      "title": "Previous Funding Rounds",
-      "seedRound": {
-        "title": "Seed Round",
-        "amount": "€1.2 Million",
-        "date": "2019",
-        "investors": "Angel Investors, Founder Capital"
-      },
-      "seriesA": {
-        "title": "Series A",
-        "amount": "€5 Million",
-        "date": "2022",
-        "investors": "European Tech Ventures, Digital Growth Fund"
+      "pledge": {
+        "title": "PLEDGE",
+        "status": "coming-soon",
+        "description": "Final investment phase for established business with proven market success.",
+        "details": [
+          "Projected for 2035"
+        ]
       }
     }
   },
   "investmentOpportunities": {
-    "title": "Investment Opportunities",
-    "description": "Discover why Pledge & Grow represents an attractive investment opportunity with strong growth potential and a clear path to market leadership.",
+    "title": "Future Opportunities",
+    "description": "Discover current and upcoming opportunities with Pledge & Grow. We offer various ways to participate in our growth and innovation journey.",
+    "opportunities": {
+      "events": {
+        "title": "Pledge & Events",
+        "status": "Active",
+        "description": "Event management agency that transforms how businesses plan and execute corporate events.",
+        "details": [
+          "Premium corporate event management",
+          "International conference organization",
+          "Digital event platforms & analytics",
+          "Sustainable event solutions"
+        ]
+      },
+      "cloud": {
+        "title": "Pledge & Cloud",
+        "status": "Coming Soon",
+        "description": "Cloud infrastructure and hosting solutions with scalable architecture for businesses of all sizes.",
+        "details": [
+          "Scalable cloud infrastructure",
+          "Managed hosting services",
+          "Enterprise cloud solutions"
+        ]
+      },
+      "properties": {
+        "title": "Pledge & Properties",
+        "status": "Coming Soon",
+        "description": "Real estate development and property management with innovative smart building technologies.",
+        "details": [
+          "Smart building technologies",
+          "Sustainable property development",
+          "Innovative living spaces"
+        ]
+      },
+      "give": {
+        "title": "Pledge & Give",
+        "status": "Coming Soon",
+        "description": "Foundation dedicated to supporting orphans and providing essential care and opportunities.",
+        "details": [
+          "Orphan support programs",
+          "Educational initiatives",
+          "Healthcare and wellbeing"
+        ]
+      }
+    },
     "growthStrategy": {
       "title": "Growth Strategy",
       "description": "Our comprehensive growth strategy focuses on three key pillars:",

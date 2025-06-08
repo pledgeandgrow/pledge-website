@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "title": "Notre Impact | Pledge & Grow",
+    "description": "Découvrez l'engagement de Pledge & Grow envers la responsabilité sociale, la durabilité et la création d'un impact positif grâce à la technologie."
+  },
+  "hero": {
+    "tagline": "Technologie pour le Bien",
+    "title": "Créer un Impact Positif Grâce à la Technologie",
+    "description": "Chez Pledge & Grow, nous croyons au pouvoir de la technologie pour créer un changement positif. Nous nous engageons à utiliser notre expertise pour soutenir des causes qui rendent le monde meilleur.",
+    "imageAlt": "Initiatives d'impact de Pledge & Grow"
+  },
+  "mission": {
+    "title": "Notre Mission",
+    "description": "Nous nous engageons à utiliser nos compétences, nos ressources et notre influence pour soutenir des causes qui correspondent à nos valeurs. Grâce à des travaux pro bono, des initiatives caritatives et des pratiques durables, nous nous efforçons d'être une force positive dans les communautés que nous servons.",
+    "quote": "La technologie devrait servir l'humanité, et non l'inverse.",
+    "commitment": "Nous nous consacrons au développement de solutions qui autonomisent les personnes, protègent notre planète et promeuvent la justice sociale.",
+    "imageAlt": "Mission et valeurs de Pledge & Grow"
+  },
+  "sustainablePractices": {
+    "title": "Pratiques Durables",
+    "description": "Notre approche de la durabilité englobe tout, de nos pratiques de développement et de nos choix d'infrastructure à nos opérations de bureau et à la gestion de notre chaîne d'approvisionnement. Nous mesurons, rapportons et améliorons continuellement notre performance environnementale.",
+    "additionalText": "Au-delà de nos propres opérations, nous recherchons activement des opportunités pour développer des solutions technologiques qui répondent aux défis environnementaux et favorisent des pratiques durables dans tous les secteurs.",
+    "imageAlt": "Pratiques technologiques durables",
+    "imageCaption": "Nos initiatives technologiques durables",
+    "practices": [
+      {
+        "title": "Cloud Neutre en Carbone",
+        "description": "Nous privilégions les fournisseurs de cloud avec des opérations neutres en carbone et optimisons nos applications pour l'efficacité énergétique."
+      },
+      {
+        "title": "Pratiques IT Circulaires",
+        "description": "Nous prolongeons la durée de vie des appareils, reconditionnons l'équipement et assurons un recyclage responsable des déchets électroniques."
+      },
+      {
+        "title": "Efficacité Énergétique",
+        "description": "Nos pratiques de développement mettent l'accent sur l'optimisation du code pour réduire les ressources informatiques et la consommation d'énergie."
+      }
+    ],
+    "continuousImprovement": "Amélioration Continue",
+    "longTermCommitment": "Engagement à Long Terme",
+    "environmentalCommitment": {
+      "title": "Notre Engagement Environnemental",
+      "mainText": "Nous nous engageons à atteindre la neutralité carbone dans nos opérations d'ici 2026 et à aider nos clients à réduire leur impact environnemental grâce à des solutions technologiques réfléchies.",
+      "subText": "Chaque année, nous publions un rapport de durabilité détaillant nos progrès et fixant de nouveaux objectifs d'amélioration."
+    }
+  },
+  "cta": {
+    "title": "Rejoignez-nous pour Faire la Différence",
+    "description": "Que vous soyez une organisation à but non lucratif ayant besoin de soutien technologique, une entreprise souhaitant s'associer à des initiatives d'impact social, ou un individu qui souhaite contribuer, nous serions ravis d'avoir de vos nouvelles.",
+    "primaryButton": "Sauver le Monde",
+    "secondaryButton": "Contactez-nous"
+  }
+}

@@ -4,8 +4,8 @@
     "description": "Discover Pledge & Grow's international operations, regional expertise, and global team delivering innovative solutions worldwide."
   },
   "globalMap": {
-    "title": "Our Global Presence",
-    "description": "With offices and partners across multiple continents, we deliver localized solutions with global standards.",
+    "title": "Our Contacts",
+    "description": "Our contacts in those strategic regions collaborate with us and operate from distance in their region. If you want someone local or in your region, here they are.",
     "regions": {
       "europe": {
         "title": "Europe",
@@ -41,16 +41,48 @@
     }
   },
   "localizationServices": {
-    "title": "Global Solutions, Local Expertise",
-    "description": "We combine our global experience with local insights to deliver solutions that resonate with regional markets and user preferences.",
+    "title": "Localization Services",
+    "description": "We help businesses reach global audiences with comprehensive localization services. From translation to cultural adaptation, we ensure your digital products resonate worldwide.",
     "services": {
-      "localization": {
-        "title": "Product Localization",
-        "description": "Adapting digital products to meet local language, cultural, and regulatory requirements"
+      "webAppLocalization": {
+        "title": "Website & App Localization",
+        "description": "Comprehensive localization of your digital products for global markets, including UI/UX adaptation, content translation, and cultural optimization.",
+        "features": [
+          "Multi-language interface implementation",
+          "Bidirectional text support (RTL/LTR)",
+          "Currency, date, and number format adaptation",
+          "Cultural UX considerations"
+        ]
       },
-      "compliance": {
-        "title": "Regional Compliance",
-        "description": "Ensuring solutions adhere to local laws, regulations, and industry standards"
+      "contentTranslation": {
+        "title": "Content Translation",
+        "description": "Professional translation services for all your digital content, ensuring accurate and culturally appropriate messaging across languages.",
+        "features": [
+          "Website and app content translation",
+          "Marketing material localization",
+          "Technical documentation translation",
+          "SEO-optimized multilingual content"
+        ]
+      },
+      "multilingualDevelopment": {
+        "title": "Multilingual Development",
+        "description": "Technical implementation of multilingual capabilities in your applications, with proper internationalization (i18n) architecture.",
+        "features": [
+          "i18n framework implementation",
+          "Language switching functionality",
+          "Content management for multiple languages",
+          "Automated translation workflows"
+        ]
+      },
+      "globalCompliance": {
+        "title": "Global Compliance",
+        "description": "Ensuring your digital products comply with regional regulations and standards across different markets.",
+        "features": [
+          "GDPR, CCPA, and other privacy regulations",
+          "Accessibility standards compliance",
+          "Regional legal requirements",
+          "Industry-specific compliance"
+        ]
       },
       "culturalAdaptation": {
         "title": "Cultural Adaptation",

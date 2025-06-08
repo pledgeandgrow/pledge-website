@@ -1,0 +1,82 @@
+{
+  "id": "seo",
+  "slug": "seo",
+  "title": "Optimisation pour les Moteurs de Recherche",
+  "subtitle": "Améliorez la visibilité et générez du trafic organique vers votre site web",
+  "description": "Nous aidons les entreprises à améliorer leur classement dans les moteurs de recherche pour attirer des visiteurs plus qualifiés. Notre approche SEO complète combine l'optimisation technique, la stratégie de contenu et la création de liens pour offrir une croissance organique durable.",
+  "heroImage": "/images/expertise/seo-hero.jpg",
+  "heroButton": "Démarrer Votre Projet SEO",
+  "category": "Complementary",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Services SEO complets pour votre entreprise"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Outils et plateformes SEO de pointe"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Comment le SEO favorise une croissance durable"
+    }
+  },
+  "features": [
+    {
+      "title": "SEO Technique",
+      "description": "Optimisation de la structure du site, de la vitesse et de l'accessibilité",
+      "icon": "code"
+    },
+    {
+      "title": "Optimisation On-Page",
+      "description": "Amélioration du contenu et des métadonnées pour un meilleur classement",
+      "icon": "document-text"
+    },
+    {
+      "title": "Stratégie de Contenu",
+      "description": "Création de contenu de valeur qui se classe bien et convertit",
+      "icon": "pencil-square"
+    },
+    {
+      "title": "Création de Liens",
+      "description": "Obtention de backlinks de qualité pour renforcer l'autorité",
+      "icon": "link"
+    }
+  ],
+  "technologies": [
+    { "name": "Google Search Console", "logo": "/images/tech/google-search-console.svg" },
+    { "name": "SEMrush", "logo": "/images/tech/semrush.svg" },
+    { "name": "Ahrefs", "logo": "/images/tech/ahrefs.svg" },
+    { "name": "Screaming Frog", "logo": "/images/tech/screaming-frog.svg" },
+    { "name": "Google Analytics", "logo": "/images/tech/google-analytics.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Augmentation du Trafic Organique",
+      "description": "Attirez plus de visiteurs sans payer pour chaque clic",
+      "icon": "users"
+    },
+    {
+      "title": "Prospects de Meilleure Qualité",
+      "description": "Connectez-vous avec des utilisateurs recherchant activement vos solutions",
+      "icon": "user-plus"
+    },
+    {
+      "title": "Résultats à Long Terme",
+      "description": "Construisez un trafic durable qui continue de croître avec le temps",
+      "icon": "arrow-trending-up"
+    },
+    {
+      "title": "Crédibilité de Marque Renforcée",
+      "description": "Gagnez en confiance grâce à un meilleur classement et une meilleure visibilité",
+      "icon": "badge-check"
+    }
+  ],
+  "relatedExpertise": ["digital-marketing", "website", "content-strategy"],
+  "cta": {
+    "title": "Prêt à grimper dans les classements de recherche?",
+    "description": "Créons une stratégie SEO qui favorise une croissance organique durable pour votre entreprise.",
+    "buttonText": "Démarrer Votre Projet SEO",
+    "buttonLink": "/digital-project?service=seo"
+  }
+}

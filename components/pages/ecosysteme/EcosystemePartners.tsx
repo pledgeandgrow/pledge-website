@@ -1,14 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Handshake, BadgePercent, Users, Award, Shield } from "lucide-react";
 // Button import removed as it was unused
 import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
 // Link import removed as it was unused
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function EcosystemePartners() {
   const [isMobile, setIsMobile] = useState(false);
+  const { t } = useTranslations('ecosystem');
   
   // Check if on mobile device
   useEffect(() => {
@@ -20,28 +22,30 @@ export default function EcosystemePartners() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
-  const partnerBenefits = [
+  
+  // Memoize partner benefits to prevent unnecessary re-renders
+  const partnerBenefits = useMemo(() => [
     {
-      title: "Exclusive Discounts",
-      description: "Receive a minimum 5% reduction and special pricing on all services from our partner network",
+      title: t('advantages.items.exclusiveDiscounts.title'),
+      description: t('advantages.items.exclusiveDiscounts.description'),
       icon: <BadgePercent className="h-8 w-8 text-green-700 dark:text-green-400" />
     },
     {
-      title: "Priority Access",
-      description: "Get first access to new services and features from our partner network",
+      title: t('advantages.items.priorityAccess.title'),
+      description: t('advantages.items.priorityAccess.description'),
       icon: <Award className="h-8 w-8 text-green-600 dark:text-green-400" />
     },
     {
-      title: "Expanded Network",
-      description: "Connect with other businesses in our ecosystem for collaboration opportunities",
+      title: t('advantages.items.expandedNetwork.title'),
+      description: t('advantages.items.expandedNetwork.description'),
       icon: <Users className="h-8 w-8 text-green-600 dark:text-green-400" />
     },
     {
-      title: "Trusted Partners",
-      description: "Work with pre-vetted partners that meet our high quality standards",
+      title: t('advantages.items.trustedPartners.title'),
+      description: t('advantages.items.trustedPartners.description'),
       icon: <Shield className="h-8 w-8 text-green-600 dark:text-green-400" />
     }
-  ];
+  ], [t]);
   
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-900">
@@ -55,14 +59,14 @@ export default function EcosystemePartners() {
         >
           <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-sm font-medium mb-4">
             <Handshake className="w-4 h-4 mr-2" />
-            <span>Exclusive Partnerships</span>
+            <span>{t('partners.subtitle')}</span>
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Our Partner Ecosystem
+            {t('partners.title')}
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            As a Pledge & Grow client, you gain exclusive access to our network of trusted partners, each offering special discounts and benefits, including a minimum 5% reduction on all partner services.
+            {t('partners.clientBenefit')}
           </p>
         </motion.div>
 
@@ -118,42 +122,40 @@ export default function EcosystemePartners() {
         <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-md mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">A Growing Network of Industry Leaders</h3>
+              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">{t('partners.categories.title', { defaultValue: 'A Growing Network of Industry Leaders' })}</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Our partner ecosystem includes companies across various industries, from marketing and design to technology and finance. 
-                We carefully select partners who share our commitment to quality and innovation.
+                {t('partners.description')}
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                As our network continues to expand, you&apos;ll gain access to an ever-growing range of services and benefits, 
-                all designed to help your business thrive in today&apos;s competitive landscape.
+                {t('collaboration.description', { defaultValue: 'As our network continues to expand, you\'ll gain access to an ever-growing range of services and benefits, all designed to help your business thrive in today\'s competitive landscape.' })}
               </p>
             </div>
             <div className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/30 p-8 rounded-xl">
-              <h4 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Partner Network Benefits</h4>
+              <h4 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">{t('partners.benefits.title', { defaultValue: 'Partner Network Benefits' })}</h4>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-green-500/90 dark:bg-green-600/90 flex items-center justify-center text-white mr-3 flex-shrink-0">
                     <span className="text-xs font-bold">1</span>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300">Average of 15-30% discount on partner services</p>
+                  <p className="text-gray-700 dark:text-gray-300">{t('partners.benefits.discounts')}</p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-green-500/90 dark:bg-green-600/90 flex items-center justify-center text-white mr-3 flex-shrink-0">
                     <span className="text-xs font-bold">2</span>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300">Dedicated support channels for ecosystem members</p>
+                  <p className="text-gray-700 dark:text-gray-300">{t('partners.benefits.support')}</p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-green-500/90 dark:bg-green-600/90 flex items-center justify-center text-white mr-3 flex-shrink-0">
                     <span className="text-xs font-bold">3</span>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300">Quarterly networking events with partners and clients</p>
+                  <p className="text-gray-700 dark:text-gray-300">{t('collaboration.benefits.items.leads', { defaultValue: 'Quarterly networking events with partners and clients' })}</p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-green-500/90 dark:bg-green-600/90 flex items-center justify-center text-white mr-3 flex-shrink-0">
                     <span className="text-xs font-bold">4</span>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300">Seamless integration between partner services</p>
+                  <p className="text-gray-700 dark:text-gray-300">{t('partners.benefits.integration')}</p>
                 </div>
               </div>
             </div>

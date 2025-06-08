@@ -1,9 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "@/hooks/useTranslations";
 import PartnerCard from "./PartnerCard";
 import PartnerCategories from "./PartnerCategories";
 import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
+
 
 // Partner data interface
 interface Partner {
@@ -17,15 +19,15 @@ interface Partner {
   partnerType: 'standard' | 'culture' | 'technology' | 'exclusive';
 }
 
-// Sample partner data
-const partnersData: Partner[] = [
+// Function to get partner data with translations
+const getPartnersData = (t: (key: string) => string): Partner[] => [
   // Standard Partners - Loyal clients with contract conditions
   {
     id: "1",
     name: "Acme Corporation",
     logo: "/images/partners/acme.svg",
     category: "Standard",
-    description: "Long-term client with preferred contract terms. We've been supporting their digital transformation journey for over 5 years.",
+    description: t('partnersList.partnerData.0.description') || "Long-term client with preferred contract terms. We've been supporting their digital transformation journey for over 5 years.",
     website: "https://example.com/acme",
     featured: true,
     partnerType: "standard"
@@ -35,7 +37,7 @@ const partnersData: Partner[] = [
     name: "Global Enterprises",
     logo: "/images/partners/global.svg",
     category: "Standard",
-    description: "Strategic client relationship with custom service agreements and dedicated support channels.",
+    description: t('partnersList.partnerData.1.description') || "Strategic client relationship with custom service agreements and dedicated support channels.",
     website: "https://example.com/global",
     partnerType: "standard"
   },
@@ -46,7 +48,7 @@ const partnersData: Partner[] = [
     name: "Pepite France",
     logo: "/images/partners/pepite.svg",
     category: "Culture",
-    description: "National network supporting student entrepreneurship across France. We collaborate on innovation programs and mentorship for young entrepreneurs.",
+    description: t('partnersList.partnerData.2.description') || "National network supporting student entrepreneurship across France. We collaborate on innovation programs and mentorship for young entrepreneurs.",
     website: "https://www.pepite-france.fr",
     featured: true,
     partnerType: "culture"
@@ -58,7 +60,7 @@ const partnersData: Partner[] = [
     name: "AWS",
     logo: "/images/partners/aws.svg",
     category: "Technology",
-    description: "Cloud infrastructure provider powering our scalable, reliable, and secure hosting solutions for enterprise clients.",
+    description: t('partnersList.partnerData.3.description') || "Cloud infrastructure provider powering our scalable, reliable, and secure hosting solutions for enterprise clients.",
     website: "https://aws.amazon.com",
     featured: true,
     partnerType: "technology"
@@ -68,7 +70,7 @@ const partnersData: Partner[] = [
     name: "Vercel",
     logo: "/images/partners/vercel.svg",
     category: "Technology",
-    description: "Frontend cloud platform enabling us to deliver fast, reliable web experiences with seamless deployment workflows.",
+    description: t('partnersList.partnerData.4.description') || "Frontend cloud platform enabling us to deliver fast, reliable web experiences with seamless deployment workflows.",
     website: "https://vercel.com",
     partnerType: "technology"
   },
@@ -77,7 +79,7 @@ const partnersData: Partner[] = [
     name: "OVH",
     logo: "/images/partners/ovh.svg",
     category: "Technology",
-    description: "European cloud provider we recommend for clients with specific data sovereignty requirements and regional hosting needs.",
+    description: t('partnersList.partnerData.5.description') || "European cloud provider we recommend for clients with specific data sovereignty requirements and regional hosting needs.",
     website: "https://ovh.com",
     partnerType: "technology"
   },
@@ -86,7 +88,7 @@ const partnersData: Partner[] = [
     name: "Atlassian (JIRA)",
     logo: "/images/partners/atlassian.svg",
     category: "Technology",
-    description: "Project management and collaboration tools that power our development workflows and client communication processes.",
+    description: t('partnersList.partnerData.6.description') || "Project management and collaboration tools that power our development workflows and client communication processes.",
     website: "https://atlassian.com",
     partnerType: "technology"
   },
@@ -97,18 +99,18 @@ const partnersData: Partner[] = [
     name: "ERB BTP",
     logo: "/images/partners/erb-btp.svg",
     category: "Exclusive",
-    description: "Premium construction partner offering special rates on building services for clients referred through our network.",
-    website: "https://erb-btp.com",
+    description: t('partnersList.partnerData.7.description') || "Premium construction partner offering special rates on building services for clients referred through our network.",
+    website: "https://erb-btp.fr",
     featured: true,
     partnerType: "exclusive"
   },
   {
     id: "10",
-    name: "Cabinet ECD",
+    name: "Global capital partner",
     logo: "/images/partners/ecd.svg",
     category: "Exclusive",
-    description: "Exclusive consulting partner providing discounted business advisory services for our enterprise clients.",
-    website: "https://example.com/ecd",
+    description: t('partnersList.partnerData.8.description') || "Exclusive consulting partner providing discounted business advisory services for our enterprise clients.",
+    website: "https://www.globalcorporatebusiness.com/",
     partnerType: "exclusive"
   },
   {
@@ -116,7 +118,7 @@ const partnersData: Partner[] = [
     name: "Taskmate",
     logo: "/images/partners/taskmate.svg",
     category: "Exclusive",
-    description: "Premium task management solution provider offering special subscription plans for our clients.",
+    description: t('partnersList.partnerData.9.description') || "Premium task management solution provider offering special subscription plans for our clients.",
     website: "https://taskmate-ia.vercel.app/",
     partnerType: "exclusive"
   },
@@ -125,8 +127,8 @@ const partnersData: Partner[] = [
     name: "CordUnite",
     logo: "/images/partners/cordunite.svg",
     category: "Exclusive",
-    description: "Exclusive communications platform with preferential rates for businesses in our partner network.",
-    website: "https://example.com/cordunite",
+    description: t('partnersList.partnerData.10.description') || "Exclusive communications platform with preferential rates for businesses in our partner network.",
+    website: "https://cordunite.com/",
     partnerType: "exclusive"
   },
   {
@@ -134,7 +136,7 @@ const partnersData: Partner[] = [
     name: "N&I Personal Shopper",
     logo: "/images/partners/ni-shopper.svg",
     category: "Exclusive",
-    description: "Luxury personal shopping service offering VIP packages for our enterprise clients and their executives.",
+    description: t('partnersList.partnerData.11.description') || "Luxury personal shopping service offering VIP packages for our enterprise clients and their executives.",
     website: "https://example.com/ni-shopper",
     partnerType: "exclusive"
   },
@@ -143,8 +145,8 @@ const partnersData: Partner[] = [
     name: "Dualink",
     logo: "/images/partners/dualink.svg",
     category: "Exclusive",
-    description: "Dual-market expansion specialists providing discounted consulting services for our international clients.",
-    website: "https://example.com/dualink",
+    description: t('partnersList.partnerData.12.description') || "Dual-market expansion specialists providing discounted consulting services for our international clients.",
+    website: "https://dualink.fr/",
     partnerType: "exclusive"
   },
   {
@@ -152,13 +154,18 @@ const partnersData: Partner[] = [
     name: "Chronos Corp.",
     logo: "/images/partners/chronos.svg",
     category: "Exclusive",
-    description: "Time management and productivity solution provider with exclusive offers for our business network members.",
-    website: "https://example.com/chronos",
+    description: t('partnersList.partnerData.13.description') || "Time management and productivity solution provider with exclusive offers for our business network members.",
+    website: "https://www.instagram.com/chronos.corps/",
     partnerType: "exclusive"
   }
 ];
 
 export default function PartnersList() {
+  const { t } = useTranslations('partners');
+  
+  // Get partners data with translations
+  const partnersData = getPartnersData(t);
+  
   // State to detect if on mobile
   const [isMobile, setIsMobile] = useState(false);
   
@@ -172,12 +179,13 @@ export default function PartnersList() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+  
   // Define our partner type categories with descriptions
   const partnerTypeDescriptions = {
-    standard: "Loyal clients with preferred contract terms and conditions",
-    culture: "Foundations, schools, associations, and community organizations",
-    technology: "Platforms and tools we use and recommend for our development projects",
-    exclusive: "Premium partners in our exclusive network offering special rates and promotions"
+    standard: t('partnersList.typeDescriptions.standard') || "Loyal clients with preferred contract terms and conditions",
+    culture: t('partnersList.typeDescriptions.culture') || "Foundations, schools, associations, and community organizations",
+    technology: t('partnersList.typeDescriptions.technology') || "Platforms and tools we use and recommend for our development projects",
+    exclusive: t('partnersList.typeDescriptions.exclusive') || "Premium partners in our exclusive network offering special rates and promotions"
   };
   
   // Get unique categories from partners data
@@ -194,10 +202,10 @@ export default function PartnersList() {
     <section id="partners-list" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-          Our Partnership Network
+          {t('partnersList.heading') || "Our Partnership Network"}
         </h2>
         <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-8">
-          We collaborate with a diverse range of partners across different categories to deliver exceptional value to our clients.
+          {t('partnersList.subheading') || "We collaborate with a diverse range of partners across different categories to deliver exceptional value to our clients."}
         </p>
         
         <PartnerCategories 
@@ -208,7 +216,9 @@ export default function PartnersList() {
         
         {/* Category description */}
         <div className="mt-4 mb-8 p-6 bg-secondary/5 rounded-lg max-w-3xl mx-auto">
-          <h3 className="text-xl font-semibold mb-2">{activeCategory} Partners</h3>
+          <h3 className="text-xl font-semibold mb-2">
+            {(t('partnersList.categoryTitle') && t('partnersList.categoryTitle').replace('{{category}}', activeCategory)) || `${activeCategory} Partners`}
+          </h3>
           <p className="text-muted-foreground">
             {activeCategory === "Culture" && partnerTypeDescriptions.culture}
             {activeCategory === "Technology" && partnerTypeDescriptions.technology}
@@ -225,7 +235,6 @@ export default function PartnersList() {
                   <div className="px-1 py-2">
                     <PartnerCard 
                       name={partner.name}
-                      category={partner.category}
                       description={partner.description}
                       website={partner.website}
                       featured={partner.featured}
@@ -242,7 +251,6 @@ export default function PartnersList() {
               <PartnerCard 
                 key={partner.id}
                 name={partner.name}
-                category={partner.category}
                 description={partner.description}
                 website={partner.website}
                 featured={partner.featured}
@@ -253,7 +261,9 @@ export default function PartnersList() {
         
         {filteredPartners.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-muted-foreground">No partners found in this category.</p>
+            <p className="text-muted-foreground">
+              {t('partnersList.noPartnersFound') || "No partners found in this category."}
+            </p>
           </div>
         )}
         

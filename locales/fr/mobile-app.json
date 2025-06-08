@@ -1,0 +1,82 @@
+{
+  "id": "mobile-app",
+  "slug": "mobile-app",
+  "title": "Développement d'Applications Mobiles",
+  "subtitle": "Créez des expériences mobiles puissantes et conviviales",
+  "description": "Nous concevons et développons des applications mobiles natives et multiplateformes qui engagent les utilisateurs et stimulent la croissance des entreprises. Nos solutions mobiles sont construites pour la performance, la facilité d'utilisation et l'intégration transparente avec vos systèmes existants.",
+  "heroImage": "/images/expertise/mobile-app-hero.jpg",
+  "heroButton": "Démarrer Votre Projet d'Application Mobile",
+  "category": "Creation",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Services complets de développement d'applications mobiles"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Frameworks de pointe pour le développement mobile"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Comment les applications mobiles transforment votre entreprise"
+    }
+  },
+  "features": [
+    {
+      "title": "Développement Multiplateforme",
+      "description": "Construisez une fois, déployez partout avec React Native",
+      "icon": "device-mobile"
+    },
+    {
+      "title": "Performance Native",
+      "description": "Applications rapides et réactives qui offrent une expérience native",
+      "icon": "rocket"
+    },
+    {
+      "title": "Fonctionnalité Hors Ligne",
+      "description": "Applications qui fonctionnent même sans connexion internet",
+      "icon": "cloud-off"
+    },
+    {
+      "title": "Intégration Transparente",
+      "description": "Connectez-vous avec vos systèmes et APIs existants",
+      "icon": "link"
+    }
+  ],
+  "technologies": [
+    { "name": "React Native", "logo": "/images/tech/react-native.svg" },
+    { "name": "Flutter", "logo": "/images/tech/flutter.svg" },
+    { "name": "Swift", "logo": "/images/tech/swift.svg" },
+    { "name": "Kotlin", "logo": "/images/tech/kotlin.svg" },
+    { "name": "Firebase", "logo": "/images/tech/firebase.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Engagement Utilisateur Amélioré",
+      "description": "Gardez les utilisateurs connectés à votre marque grâce aux expériences mobiles",
+      "icon": "heart"
+    },
+    {
+      "title": "Portée de Marché Élargie",
+      "description": "Accédez à la base croissante d'utilisateurs mobiles dans le monde entier",
+      "icon": "globe"
+    },
+    {
+      "title": "Fidélité Client Améliorée",
+      "description": "Construisez des relations plus solides grâce à des expériences personnalisées",
+      "icon": "badge-check"
+    },
+    {
+      "title": "Nouveaux Flux de Revenus",
+      "description": "Créez des opportunités de monétisation supplémentaires",
+      "icon": "currency-dollar"
+    }
+  ],
+  "relatedExpertise": ["ux-ui-design", "e-commerce", "cloud-devops"],
+  "cta": {
+    "title": "Prêt à construire votre application mobile?",
+    "description": "Discutons de la façon dont nous pouvons créer une expérience mobile puissante qui engage vos utilisateurs et stimule la croissance.",
+    "buttonText": "Démarrer Votre Projet d'Application Mobile",
+    "buttonLink": "/digital-project?service=mobile-app"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "saas",
+  "slug": "saas",
+  "title": "SaaS Development",
+  "subtitle": "Build scalable, cloud-based software solutions",
+  "description": "We design and develop Software-as-a-Service applications that solve real business problems. Our SaaS solutions are built for scalability, security, and user satisfaction.",
+  "heroImage": "/images/expertise/saas-hero.jpg",
+  "heroButton": "Start Your SaaS Project",
+  "category": "Creation",
+  "sections": {
+    "features": {
+      "title": "What We Offer",
+      "subtitle": "Comprehensive SaaS solutions for your business"
+    },
+    "technologies": {
+      "title": "Technologies & Tools",
+      "subtitle": "The best technologies for your SaaS solution"
+    },
+    "benefits": {
+      "title": "Benefits",
+      "subtitle": "Why choose a SaaS model for your business"
+    }
+  },
+  "features": [
+    {
+      "title": "Cloud Architecture",
+      "description": "Scalable infrastructure that grows with your business",
+      "icon": "cloud"
+    },
+    {
+      "title": "Multi-tenancy",
+      "description": "Secure data isolation between different customers",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Subscription Management",
+      "description": "Flexible billing and subscription handling",
+      "icon": "credit-card"
+    },
+    {
+      "title": "Analytics Dashboard",
+      "description": "Insights into usage patterns and business metrics",
+      "icon": "chart-pie"
+    }
+  ],
+  "technologies": [
+    { "name": "Node.js", "logo": "/images/tech/nodejs.svg" },
+    { "name": "React", "logo": "/images/tech/react.svg" },
+    { "name": "Angular", "logo": "/images/tech/angular.svg" },
+    { "name": "Java Spring", "logo": "/images/tech/spring.svg" },
+    { "name": "Docker", "logo": "/images/tech/docker.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Recurring Revenue",
+      "description": "Subscription-based model for predictable income",
+      "icon": "currency-dollar"
+    },
+    {
+      "title": "Scalability",
+      "description": "Easily grow from dozens to thousands of users",
+      "icon": "arrow-trending-up"
+    },
+    {
+      "title": "Lower Customer Acquisition Cost",
+      "description": "Efficient onboarding and self-service capabilities",
+      "icon": "user-plus"
+    },
+    {
+      "title": "Continuous Improvement",
+      "description": "Regular updates and feature enhancements",
+      "icon": "sparkles"
+    }
+  ],
+  "relatedExpertise": ["cloud-devops", "ai-automation", "cybersecurity"],
+  "cta": {
+    "title": "Ready to build your SaaS product?",
+    "description": "Let's discuss how we can create a scalable, user-friendly SaaS solution for your business.",
+    "buttonText": "Start Your SaaS Project",
+    "buttonLink": "/digital-project?service=saas"
+  }
+}

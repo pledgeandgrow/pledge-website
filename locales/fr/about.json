@@ -1,0 +1,205 @@
+{
+  "hero": {
+    "title": "À propos de Pledge & Grow",
+    "description": "Nous sommes une équipe de designers et développeurs passionnés engagés à créer des expériences numériques exceptionnelles qui aident les entreprises à prospérer dans le monde numérique.",
+    "imageAlt": "Notre équipe en collaboration",
+    "image": "/images/about/team-collaboration.jpg"
+  },
+  "mission": {
+    "title": "Notre Mission",
+    "description": "Notre mission est de transformer la façon dont les entreprises se connectent avec leur public grâce à des solutions numériques innovantes.",
+    "items": {
+      "simplify": {
+        "title": "Simplifier",
+        "description": "Rendre la technologie accessible à tous grâce à des solutions simplifiées.",
+        "icon": "Lightbulb"
+      },
+      "connect": {
+        "title": "Connecter",
+        "description": "Lier l'innovation aux besoins des entreprises grâce à des solutions technologiques stratégiques.",
+        "icon": "Link2"
+      },
+      "digitalize": {
+        "title": "Digitaliser",
+        "description": "Transformer les entreprises grâce à des solutions logicielles personnalisées qui favorisent la croissance et l'efficacité.",
+        "icon": "Laptop"
+      }
+    }
+  },
+  "values": {
+    "title": "Nos Valeurs Fondamentales",
+    "description": "Nos valeurs guident tout ce que nous faisons, de la façon dont nous construisons nos produits à la façon dont nous interagissons avec nos clients et entre nous.",
+    "items": {
+      "excellence": {
+        "title": "Excellence",
+        "description": "Nous visons les plus hauts standards dans tout ce que nous faisons, repoussant constamment les limites pour offrir des résultats exceptionnels à nos clients."
+      },
+      "culture": {
+        "title": "Culture",
+        "description": "Nous favorisons un environnement diversifié et inclusif qui célèbre la créativité, la collaboration et la croissance continue pour notre équipe et nos partenaires."
+      },
+      "loyalty": {
+        "title": "Loyauté",
+        "description": "Nous construisons des relations durables basées sur la confiance, l'engagement et le respect mutuel avec nos clients, les membres de notre équipe et nos parties prenantes."
+      },
+      "privacy": {
+        "title": "Confidentialité",
+        "description": "Nous nous engageons à protéger la confidentialité des données et à respecter les droits individuels à la vie privée dans toutes nos opérations et solutions."
+      }
+    }
+  },
+  "history": {
+    "title": "Notre Parcours",
+    "description": "De nos humbles débuts à notre position actuelle en tant qu'agence numérique de premier plan, notre parcours a été défini par l'innovation, la croissance et une recherche incessante de l'excellence.",
+    "timeline": {
+      "founding": {
+        "year": "2022",
+        "title": "La Vision Commence",
+        "description": "Débuté comme un groupe de freelances et d'entrepreneurs offrant des services dans différents domaines sous notre marque et nos noms. Nous prévoyions de construire une agence de conseil offrant des solutions sur mesure dans divers domaines."
+      },
+      "expansion": {
+        "year": "2023",
+        "title": "Équipe Croissante & Clients Divers",
+        "description": "L'équipe s'est agrandie et a commencé à travailler avec des clients de différents domaines. Nous avons constaté une demande particulièrement importante dans les secteurs du marketing et de l'informatique, ce qui a contribué à façonner notre orientation future."
+      },
+      "innovation": {
+        "year": "2024",
+        "title": "Établissement Officiel & Spécialisation",
+        "description": "Nous avons complètement fait la transition et nous nous sommes spécialisés dans différents domaines et secteurs informatiques en raison de demandes accrues et d'un réseau en expansion. L'entreprise a été officiellement créée en juin de cette année, marquant une étape importante dans notre parcours."
+      },
+      "ecosystem": {
+        "year": "2025",
+        "title": "Nouvelle Vision & Expansion",
+        "description": "Mise en œuvre d'une nouvelle feuille de route, affinement de notre vision, lancement de notre nouveau site web et établissement d'objectifs ambitieux pour l'avenir. Cela marque le début d'un nouveau chapitre passionnant avec bien plus à venir."
+      }
+    }
+  },
+  "team": {
+    "title": "Notre Équipe",
+    "description": "Rencontrez les personnes talentueuses qui rendent notre succès possible. Notre équipe diversifiée réunit des expertises de diverses disciplines pour offrir des résultats exceptionnels.",
+    "categories": {
+      "board": "Membres du Conseil",
+      "staff": "Personnel"
+    },
+    "board": {
+      "mehdi": {
+        "name": "Mehdi BEREL",
+        "role": "Président",
+        "companyRole": "Directeur Général",
+        "bio": "Avec une vaste expérience en leadership d'entreprise, Mehdi dirige la vision stratégique et la croissance de notre entreprise.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "shihab": {
+        "name": "Shihab BEREL",
+        "role": "Président",
+        "companyRole": "Directeur Technique",
+        "bio": "Shihab apporte une pensée innovante et une expertise technique à notre équipe de direction, en se concentrant sur le développement de produits.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "ilyas": {
+        "name": "Ilyas BEREL",
+        "role": "Président",
+        "companyRole": "Directeur Financier",
+        "bio": "Ilyas supervise les opérations et les relations clients, garantissant que nous offrons une valeur et un service exceptionnels.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "noah": {
+        "name": "Noah PLA",
+        "role": "Membre du Conseil",
+        "companyRole": "Directeur des Opérations",
+        "bio": "Noah apporte des perspectives stratégiques et une expertise sectorielle pour guider la direction et la croissance de notre entreprise.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "maxime": {
+        "name": "Maxime NEAU",
+        "role": "Membre du Conseil",
+        "companyRole": "Ambassadeur",
+        "bio": "Maxime apporte une acuité financière et une expertise en développement commercial à notre conseil d'administration.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "zakaria": {
+        "name": "Zakaria HADRAOUI",
+        "role": "Membre du Conseil",
+        "companyRole": "Directeur des Systèmes d'Information",
+        "bio": "L'expertise technique et l'esprit d'innovation de Zakaria contribuent à façonner notre stratégie et notre développement de produits.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "mazen": {
+        "name": "Mazen ISMAIL",
+        "role": "Membre du Conseil",
+        "companyRole": "Directeur Blockchain",
+        "bio": "L'expérience internationale de Mazen en affaires aide à guider notre expansion mondiale et nos partenariats.",
+        "social": {
+          "linkedin": "#"
+        }
+      }
+    },
+    "staff": {
+      "louis": {
+        "name": "Louis JUNQUA",
+        "role": "Membre du Personnel",
+        "companyRole": "Chargé commercial",
+        "bio": "Louis gère nos relations commerciales et aide les clients à trouver les solutions parfaites pour leurs besoins.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "lyna": {
+        "name": "Lyna",
+        "role": "Membre du Personnel",
+        "companyRole": "Chargé de communication",
+        "bio": "Lyna supervise notre stratégie de communication, s'assurant que notre message atteint efficacement le bon public.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "mehdi_ouali": {
+        "name": "Mehdi OUALI",
+        "role": "Membre du Personnel",
+        "companyRole": "Chargé de réseaux sociaux",
+        "bio": "Mehdi gère notre présence sur les réseaux sociaux, créant du contenu engageant qui connecte avec notre communauté.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "brandon": {
+        "name": "Brandon MERYEL",
+        "role": "Membre du Personnel",
+        "companyRole": "Modérateur Discord",
+        "bio": "Brandon maintient notre communauté Discord, assurant un environnement positif et favorable pour tous les membres.",
+        "social": {
+          "linkedin": "#"
+        }
+      },
+      "rayane": {
+        "name": "Rayane BEDRANI",
+        "role": "Membre du Personnel",
+        "companyRole": "Business Développeur",
+        "bio": "Rayane identifie et poursuit de nouvelles opportunités commerciales, aidant notre entreprise à croître et à s'étendre sur de nouveaux marchés.",
+        "social": {
+          "linkedin": "#"
+        }
+      }
+    }
+  },
+  "cta": {
+    "title": "Prêt à Démarrer Votre Projet ?",
+    "description": "Travaillons ensemble pour donner vie à votre vision grâce à notre expertise en conception et développement.",
+    "buttons": {
+      "contact": "Contactez-nous",
+      "services": "Nos Services"
+    }
+  }
+}

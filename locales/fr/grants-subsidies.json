@@ -1,0 +1,137 @@
+{
+  "meta": {
+    "title": "Aides et Subventions | Pledge & Grow",
+    "description": "Débloquez des opportunités de financement pour accélérer votre transformation numérique et la croissance de votre entreprise grâce à nos conseils d'experts sur les aides et subventions."
+  },
+  "overview": {
+    "title": "Débloquez des Financements pour Vos Projets Numériques",
+    "description": "Découvrez comment les aides et subventions peuvent réduire considérablement le coût de vos initiatives de transformation numérique et accélérer la croissance de votre entreprise.",
+    "benefits": {
+      "financialSupport": {
+        "title": "Soutien Financier",
+        "description": "Accédez à des financements non remboursables pour réduire le coût de vos projets numériques et initiatives d'innovation.",
+        "stat": "Jusqu'à 50%",
+        "statLabel": "de réduction des coûts"
+      },
+      "acceleratedGrowth": {
+        "title": "Croissance Accélérée",
+        "description": "Accélérez le développement de votre entreprise avec des ressources qui seraient autrement hors de portée.",
+        "stat": "2-3x",
+        "statLabel": "croissance plus rapide"
+      },
+      "timeEfficiency": {
+        "title": "Gain de Temps",
+        "description": "Concentrez-vous sur votre cœur de métier pendant que nos experts gèrent les processus complexes de demande.",
+        "stat": "Économisez 100+",
+        "statLabel": "heures de travail"
+      },
+      "expertGuidance": {
+        "title": "Conseils d'Experts",
+        "description": "Bénéficiez de notre connaissance spécialisée des programmes de financement et des critères d'éligibilité.",
+        "stat": "90%+",
+        "statLabel": "taux de réussite"
+      }
+    },
+    "process": {
+      "title": "Comment Nous Vous Aidons à Obtenir des Financements",
+      "steps": {
+        "assessment": {
+          "title": "Évaluation d'Éligibilité",
+          "description": "Nous évaluons votre projet selon les critères de financement actuels pour identifier les meilleures opportunités."
+        },
+        "strategy": {
+          "title": "Stratégie de Financement",
+          "description": "Nous développons une approche sur mesure pour maximiser vos chances d'obtenir un financement optimal."
+        },
+        "application": {
+          "title": "Soutien à la Candidature",
+          "description": "Notre équipe gère les formalités complexes et les exigences documentaires."
+        },
+        "followUp": {
+          "title": "Suivi et Reporting",
+          "description": "Nous gérons toutes les exigences post-approbation pour assurer la conformité et le versement des fonds."
+        }
+      }
+    }
+  },
+  "availableGrants": {
+    "title": "Aides et Financements Disponibles",
+    "description": "Nous sommes spécialisés dans l'accompagnement des entreprises pour accéder à ces opportunités de financement clés pour les projets de transformation numérique et d'innovation.",
+    "categories": {
+      "digital": "Transformation Numérique",
+      "innovation": "Innovation",
+      "sustainability": "Développement Durable",
+      "growth": "Croissance d'Entreprise",
+      "research": "Recherche & Développement"
+    },
+    "tabs": {
+      "all": "Toutes les aides",
+      "upcoming": "Échéances à venir",
+      "featured": "En vedette"
+    },
+    "filterByCategory": "Filtrer par catégorie",
+    "clearFilters": "Réinitialiser les filtres",
+    "resetFilters": "Réinitialiser les filtres",
+    "noResults": "Aucune aide trouvée correspondant à vos critères.",
+    "disclaimerTitle": "Note",
+    "programs": {
+      "cir": {
+        "title": "Crédit d'Impôt Recherche (CIR)",
+        "description": "Le Crédit d'Impôt Recherche est un dispositif fiscal permettant aux entreprises de bénéficier d'un crédit d'impôt sur les dépenses de recherche et développement (R&D). Il peut couvrir jusqu'à 30% des dépenses éligibles, ce qui peut représenter un soutien financier considérable pour vos projets innovants.",
+        "eligibility": "Toutes les entreprises avec des dépenses de R&D éligibles",
+        "fundingAmount": "Jusqu'à 30% des dépenses éligibles",
+        "applicationPeriod": "Annuel"
+      },
+      "bpifrance": {
+        "title": "Aides de Bpifrance",
+        "description": "Bpifrance offre une gamme variée de financements et d'aides pour les entreprises de toutes tailles. Parmi ces aides, vous pouvez trouver : Prêts à l'innovation pour financer des projets innovants à tous les stades de développement, et des aides à l'innovation sous forme de subventions et avances remboursables pour les projets de recherche, développement et innovation.",
+        "eligibility": "PME, ETI, Startups",
+        "fundingAmount": "Variable selon le programme",
+        "applicationPeriod": "Continu"
+      },
+      "fsn": {
+        "title": "Le Fonds pour la Société Numérique (FSN)",
+        "description": "Le FSN finance des projets visant à développer les infrastructures numériques et les services numériques innovants. Les entreprises peuvent obtenir des subventions ou des prêts pour des projets répondant à ces critères.",
+        "eligibility": "Entreprises développant des infrastructures ou services numériques",
+        "fundingAmount": "Variable selon le projet",
+        "applicationPeriod": "Selon les appels à projets"
+      },
+      "regional": {
+        "title": "Subventions Régionales",
+        "description": "Les régions françaises offrent également des subventions pour soutenir les projets informatiques et numériques. Les critères d'éligibilité et les montants varient selon les régions, mais ces subventions peuvent représenter une aide précieuse.",
+        "eligibility": "Entreprises basées dans la région concernée",
+        "fundingAmount": "Variable selon la région",
+        "applicationPeriod": "Variable selon la région"
+      },
+      "horizonEurope": {
+        "title": "Programme Horizon Europe",
+        "description": "Horizon Europe est le programme cadre de l'Union Européenne pour la recherche et l'innovation. Il propose des financements pour des projets de recherche et d'innovation dans divers domaines y compris IT (information technology) et TIC (communication).",
+        "eligibility": "Entreprises de toutes tailles, universités, centres de recherche, consortiums internationaux",
+        "fundingAmount": "Variable selon l'appel à projets",
+        "applicationPeriod": "Plusieurs dates selon les appels"
+      },
+      "digitalTransition": {
+        "title": "Aide à la transition numérique",
+        "description": "Diverses aides sont disponibles pour accompagner les PME dans leur transition numérique, telles que le Chèque France Num (une aide forfaitaire pour financer des dépenses liées à la transformation numérique des entreprises) et des diagnostics numériques (des aides pour réaliser des audits et diagnostics de vos besoins numériques).",
+        "eligibility": "TPE, PME",
+        "fundingAmount": "Jusqu'à 500€ pour le Chèque France Num",
+        "applicationPeriod": "Variable selon le dispositif"
+      },
+      "privateFunding": {
+        "title": "Prêts Bancaires et Financements Privés",
+        "description": "Outre les aides publiques, les entreprises peuvent également se tourner vers des prêts bancaires et des financements privés pour soutenir leurs projets informatiques. De nombreuses banques et institutions financières offrent des solutions de financement adaptées aux besoins des entreprises technologiques.",
+        "eligibility": "Critères variables selon les institutions",
+        "fundingAmount": "Variable selon l'institution et le projet",
+        "applicationPeriod": "Continu"
+      }
+    },
+    "disclaimer": "La disponibilité et les critères des aides peuvent changer. Contactez-nous pour obtenir les informations les plus récentes."
+  },
+  "cta": {
+    "title": "Prêt à Explorer les Options de Financement ?",
+    "description": "Nos experts peuvent vous aider à identifier et à obtenir les aides et subventions adaptées à vos projets numériques.",
+    "button": "Planifier une Consultation",
+    "homeButton": "Retour à l'accueil",
+    "contactInfo": "Ou contactez-nous directement à funding@pledgeandgrow.com"
+  }
+}

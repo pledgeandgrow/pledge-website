@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { MessageSquare } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function DiscordCTA() {
+  const { t } = useTranslations("discord");
+  
   return (
     <section className="py-16 md:py-24 bg-primary/5">
       <div className="container mx-auto px-4">
@@ -17,20 +20,20 @@ export default function DiscordCTA() {
           className="text-center max-w-3xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Join Our Community?
+            {t("cta.title")}
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Connect with professionals, get support, and stay updated on the latest developments. Our Discord community is waiting for you!
+            {t("cta.description")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="font-medium">
               <Link href="https://discord.gg/pledgeandgrow" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                <MessageSquare className="h-5 w-5" /> Join Discord
+                <MessageSquare className="h-5 w-5" /> {t("cta.joinButton")}
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-medium">
               <Link href="/contact?subject=Discord Inquiry">
-                Contact Us
+                {t("cta.contactButton")}
               </Link>
             </Button>
           </div>

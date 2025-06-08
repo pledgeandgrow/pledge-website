@@ -1,0 +1,82 @@
+{
+  "id": "cloud-services",
+  "slug": "cloud-services",
+  "title": "Services Cloud",
+  "subtitle": "Développez votre entreprise avec une infrastructure cloud sécurisée et flexible",
+  "description": "Nous aidons les entreprises à migrer vers le cloud et à construire une infrastructure évolutive et résiliente. Nos solutions cloud optimisent les performances, renforcent la sécurité et réduisent les coûts opérationnels tout en offrant la flexibilité nécessaire pour s'adapter aux besoins changeants de l'entreprise.",
+  "heroImage": "/images/expertise/cloud-services-hero.jpg",
+  "heroButton": "Démarrer Votre Projet Cloud",
+  "category": "Infrastructure",
+  "sections": {
+    "features": {
+      "title": "Ce Que Nous Offrons",
+      "subtitle": "Solutions complètes de cloud et DevOps"
+    },
+    "technologies": {
+      "title": "Technologies & Outils",
+      "subtitle": "Plateformes et outils cloud de premier plan"
+    },
+    "benefits": {
+      "title": "Avantages",
+      "subtitle": "Comment les services cloud transforment votre infrastructure"
+    }
+  },
+  "features": [
+    {
+      "title": "Migration Cloud",
+      "description": "Transition transparente des environnements sur site vers le cloud",
+      "icon": "arrow-up-on-square"
+    },
+    {
+      "title": "Infrastructure as Code",
+      "description": "Déploiement automatisé et cohérent des ressources cloud",
+      "icon": "code"
+    },
+    {
+      "title": "Architecture Serverless",
+      "description": "Applications événementielles qui s'adaptent automatiquement",
+      "icon": "server"
+    },
+    {
+      "title": "Intégration DevOps",
+      "description": "Flux de travail rationalisés pour le développement et les opérations",
+      "icon": "arrow-path"
+    }
+  ],
+  "technologies": [
+    { "name": "AWS", "logo": "/images/tech/aws.svg" },
+    { "name": "Microsoft Azure", "logo": "/images/tech/azure.svg" },
+    { "name": "Google Cloud", "logo": "/images/tech/google-cloud.svg" },
+    { "name": "Kubernetes", "logo": "/images/tech/kubernetes.svg" },
+    { "name": "Terraform", "logo": "/images/tech/terraform.svg" }
+  ],
+  "benefits": [
+    {
+      "title": "Évolutivité",
+      "description": "Ajustez facilement les ressources en fonction des demandes changeantes",
+      "icon": "arrows-pointing-out"
+    },
+    {
+      "title": "Optimisation des Coûts",
+      "description": "Payez uniquement ce que vous utilisez avec des dépenses en capital réduites",
+      "icon": "currency-dollar"
+    },
+    {
+      "title": "Sécurité Renforcée",
+      "description": "Mettez en œuvre des mesures de sécurité robustes et des contrôles de conformité",
+      "icon": "shield-check"
+    },
+    {
+      "title": "Continuité des Activités",
+      "description": "Améliorez la fiabilité grâce à la redondance et à la reprise après sinistre",
+      "icon": "arrow-path"
+    }
+  ],
+  "relatedExpertise": ["ai-solutions", "saas", "website"],
+  "cta": {
+    "title": "Prêt à transformer votre infrastructure?",
+    "description": "Construisons une solution cloud qui donne à votre entreprise l'agilité et l'évolutivité dont elle a besoin pour prospérer.",
+    "buttonText": "Démarrer Votre Projet Cloud",
+    "buttonLink": "/digital-project?service=cloud-services"
+  }
+}

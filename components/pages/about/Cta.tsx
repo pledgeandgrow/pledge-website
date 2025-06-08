@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function Cta() {
+  const { t } = useTranslations('about');
   return (
     <section className="bg-background text-foreground py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -9,11 +11,11 @@ export default function Cta() {
           <div className="relative">
             <div className="absolute -inset-1 bg-primary/20 blur-xl rounded-full opacity-70"></div>
             <h2 className="relative text-3xl md:text-4xl font-bold mb-6">
-              Ready to Start Your Project?
+              {t('cta.title') || "Ready to Start Your Project?"}
             </h2>
           </div>
           <p className="text-muted-foreground text-lg md:text-xl mb-8">
-            Let&apos;s work together to bring your vision to life with our expertise in design and development.
+            {t('cta.description') || "Let's work together to bring your vision to life with our expertise in design and development."}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button 
@@ -22,7 +24,7 @@ export default function Cta() {
               style={{ animationDelay: "0.2s" }} 
               asChild
             >
-              <Link href="/contact">Get in Touch</Link>
+              <Link href="/contact">{t('cta.buttons.contact') || "Get in Touch"}</Link>
             </Button>
             <Button 
               size="lg" 
@@ -31,7 +33,7 @@ export default function Cta() {
               style={{ animationDelay: "0.3s" }} 
               asChild
             >
-              <Link href="/services">View Our Services</Link>
+              <Link href="/services">{t('cta.buttons.services') || "View Our Services"}</Link>
             </Button>
           </div>
         </div>

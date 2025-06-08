@@ -10,23 +10,26 @@ import {
   Globe, 
   TrendingUp 
 } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function WhyJoinUs() {
+  const { t } = useTranslations('careers');
+  
   // Mobile detection will be handled by CSS media queries instead of JS
   const benefits = [
     {
-      title: "Collaborative Environment",
-      description: "Join a supportive team that values collaboration, knowledge sharing, and mutual growth.",
+      title: t('whyJoinUs.benefits.benefit1.title', { fallback: 'Collaborative Environment' }),
+      description: t('whyJoinUs.benefits.benefit1.description', { fallback: 'Join a supportive team that values collaboration, knowledge sharing, and mutual growth.' }),
       icon: <Users className="h-6 w-6 text-primary" />
     },
     {
-      title: "Global Opportunities",
-      description: "Work with clients and teams from around the world, gaining international experience and perspective.",
+      title: t('whyJoinUs.benefits.benefit2.title', { fallback: 'Global Opportunities' }),
+      description: t('whyJoinUs.benefits.benefit2.description', { fallback: 'Work with clients and teams from around the world, gaining international experience and perspective.' }),
       icon: <Globe className="h-6 w-6 text-primary" />
     },
     {
-      title: "Career Growth",
-      description: "Clear career paths and opportunities for advancement based on your skills and ambitions.",
+      title: t('whyJoinUs.benefits.benefit3.title', { fallback: 'Career Growth' }),
+      description: t('whyJoinUs.benefits.benefit3.description', { fallback: 'Clear career paths and opportunities for advancement based on your skills and ambitions.' }),
       icon: <TrendingUp className="h-6 w-6 text-primary" />
     }
   ];
@@ -44,10 +47,10 @@ export default function WhyJoinUs() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Why Join Pledge & Grow
+            {t('whyJoinUs.title', { fallback: 'Why Join Pledge & Grow' })}
           </h2>
           <p className="text-lg text-muted-foreground">
-            We&apos;re more than just a workplace. We&apos;re a community of passionate professionals dedicated to growth, innovation, and making a difference.
+            {t('whyJoinUs.description', { fallback: "We're more than just a workplace. We're a community of passionate professionals dedicated to growth, innovation, and making a difference." })}
           </p>
         </motion.div>
         
@@ -70,8 +73,8 @@ export default function WhyJoinUs() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               <div className="absolute bottom-0 left-0 p-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">Join Our Team</h3>
-                <p className="text-white/90">Be part of something extraordinary</p>
+                <h3 className="text-2xl font-bold mb-2">{t('whyJoinUs.joinTeam.title', { fallback: 'Join Our Team' })}</h3>
+                <p className="text-white/90">{t('whyJoinUs.joinTeam.subtitle', { fallback: 'Be part of something extraordinary' })}</p>
               </div>
             </div>
           </motion.div>
@@ -84,16 +87,16 @@ export default function WhyJoinUs() {
             viewport={{ once: true }}
           >
             <div className="h-full flex flex-col justify-center">
-              <h3 className="text-2xl font-bold mb-4">What We Offer</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('whyJoinUs.whatWeOffer.title', { fallback: 'What We Offer' })}</h3>
               <p className="text-lg text-muted-foreground">
-                At Pledge & Grow, we believe in creating an environment where talent thrives. Our team members enjoy competitive benefits, flexible work arrangements, and opportunities to work on cutting-edge projects that make a real difference.
+                {t('whyJoinUs.whatWeOffer.description', { fallback: 'At Pledge & Grow, we believe in creating an environment where talent thrives. Our team members enjoy competitive benefits, flexible work arrangements, and opportunities to work on cutting-edge projects that make a real difference.' })}
               </p>
               {/* Removed additional paragraph as requested */}
             </div>
           </motion.div>
         </div>
 
-        <h3 className="text-2xl font-bold mb-8 text-center">Key Benefits</h3>
+        <h3 className="text-2xl font-bold mb-8 text-center">{t('whyJoinUs.keyBenefits', { fallback: 'Key Benefits' })}</h3>
         
         {/* Mobile Scroll View (visible only on mobile) */}
         <div className="md:hidden overflow-x-auto pb-6">

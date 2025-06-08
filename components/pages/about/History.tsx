@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 export default function History() {
+  const { t } = useTranslations('about');
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -19,26 +21,31 @@ export default function History() {
     // Cleanup
     return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
+  
   const milestones = [
     {
-      year: "2022",
-      title: "The Vision Begins",
-      description: "Started as a vision by Mehdi BEREL, as a group of freelancers and entrepreneurs offering services in different fields through our brand and our names. We were planning on building a consulting agency that offered tailored solutions in various fields."
+      key: 'founding',
+      year: t('history.timeline.founding.year') || "2022",
+      title: t('history.timeline.founding.title') || "The Vision Begins",
+      description: t('history.timeline.founding.description') || "Started as a group of freelancers and entrepreneurs offering services in different fields through our brand and our names. We were planning on building a consulting agency that offered tailored solutions in various fields."
     },
     {
-      year: "2023",
-      title: "Growing Team & Diverse Clients",
-      description: "The team expanded and began working with clients from different fields. We saw huge demands particularly in marketing and IT sectors, which helped shape our future direction."
+      key: 'expansion',
+      year: t('history.timeline.expansion.year') || "2023",
+      title: t('history.timeline.expansion.title') || "Growing Team & Diverse Clients",
+      description: t('history.timeline.expansion.description') || "The team expanded and began working with clients from different fields. We saw huge demands particularly in marketing and IT sectors, which helped shape our future direction."
     },
     {
-      year: "2024",
-      title: "Official Establishment & Specialization",
-      description: "We transitioned completely and specialized in different IT fields and sectors due to increased demands and a growing network. The company was officially established in June of this year, marking a significant milestone in our journey."
+      key: 'innovation',
+      year: t('history.timeline.innovation.year') || "2024",
+      title: t('history.timeline.innovation.title') || "Official Establishment & Specialization",
+      description: t('history.timeline.innovation.description') || "We transitioned completely and specialized in different IT fields and sectors due to increased demands and a growing network. The company was officially established in June of this year, marking a significant milestone in our journey."
     },
     {
-      year: "2025",
-      title: "New Vision & Expansion",
-      description: "Implemented a new roadmap, refined our vision, launched our new website, and set ambitious goals for the future. This marks the beginning of an exciting new chapter with much more to come."
+      key: 'ecosystem',
+      year: t('history.timeline.ecosystem.year') || "2025",
+      title: t('history.timeline.ecosystem.title') || "New Vision & Expansion",
+      description: t('history.timeline.ecosystem.description') || "Implemented a new roadmap, refined our vision, launched our new website, and set ambitious goals for the future. This marks the beginning of an exciting new chapter with much more to come."
     }
   ];
 
@@ -47,10 +54,10 @@ export default function History() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto mb-12 text-center animate-fade-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Our Journey
+            {t('history.title') || "Our Journey"}
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl">
-            From humble beginnings to where we are today, our story is one of vision, growth, and continuous innovation.
+            {t('history.description') || "From humble beginnings to where we are today, our story is one of vision, growth, and continuous innovation."}
           </p>
         </div>
         

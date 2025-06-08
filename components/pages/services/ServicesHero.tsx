@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "@/hooks/useTranslations";
 
 // Optimized version without heavy framer-motion dependency
 export default function ServicesHero() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const { t } = useTranslations('services');
   
   useEffect(() => {
     // Simulate the animation effect with a simple state change
@@ -21,12 +23,12 @@ export default function ServicesHero() {
           <h1 
             className={`text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           >
-            Our Services & Solutions
+            {t('hero.title')}
           </h1>
           <p 
             className={`text-xl text-muted-foreground mb-10 transition-all duration-500 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
           >
-            Comprehensive digital solutions tailored to your business needs, from web and mobile development to cloud hosting and VIP services.
+            {t('hero.description')}
           </p>
           
           <div
@@ -38,7 +40,7 @@ export default function ServicesHero() {
               asChild
             >
               <Link href="/digital-project">
-                Start Your Project
+                {t('hero.startButton')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -50,7 +52,7 @@ export default function ServicesHero() {
               asChild
             >
               <Link href="/contact">
-                Contact Our Team
+                {t('hero.contactButton')}
               </Link>
             </Button>
           </div>
