@@ -87,7 +87,7 @@ export default function ContactInfo() {
     {
       icon: <MessageCircle className="h-5 w-5" />,
       name: "WhatsApp",
-      link: "https://wa.me/33766580835"
+      link: "https://wa.me/33753695840"
     }
   ];
 

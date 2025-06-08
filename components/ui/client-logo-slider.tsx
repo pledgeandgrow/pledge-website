@@ -99,8 +99,8 @@ export function ClientLogoSlider({ className }: ClientLogoSliderProps) {
     { src: "/images/clients/gcb.png", alt: "GCB" },
     { src: "/images/clients/goulette.jpg", alt: "Goulette" },
     { src: "/images/clients/jabb-events.png", alt: "JABB Events" },
-    { src: "/images/clients/jabb.jpg", alt: "JABB" },
-    { src: "/images/clients/michou.svg", alt: "Michou" }
+    { src: "/images/clients/jabb.jpg", alt: "JABB" }
+    // { src: "/images/clients/michou.svg", alt: "Michou" } - Hidden as requested
     // Excluding melytop.ico as ICO files are not ideal for this use case
   ], []);
 

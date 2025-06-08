@@ -814,57 +814,7 @@
         }
       }
     },
-    "5bis": {
-      "name": "Chez Gustave",
-      "logo": "/images/portfolio/chez-gustave-logo.png",
-      "description": "Création d'un site web pour un restaurant gastronomique, incluant un système de réservation en ligne et une présentation des menus et spécialités.",
-      "industry": "Restauration",
-      "year": 2023,
-      "deliverables": [
-        "Site Web Responsive",
-        "Système de Réservation",
-        "Présentation des Menus",
-        "Galerie Photos"
-      ],
-      "needs": [
-        "Créer une présence en ligne élégante reflétant l'ambiance du restaurant",
-        "Permettre aux clients de réserver une table en ligne",
-        "Présenter les menus et spécialités de façon attrayante",
-        "Mettre en valeur l'intérieur du restaurant et les plats signature"
-      ],
-      "methodology": {
-        "approach": "Nous avons adopté une approche centrée sur l'expérience utilisateur et l'esthétique, en créant un site à l'image du restaurant : élégant et raffiné. Une attention particulière a été portée à la qualité des visuels et à la simplicité du processus de réservation.",
-        "technologies": ["Design Responsive", "Système de Réservation", "Galerie Interactive", "Optimisation SEO"],
-        "languages": ["JavaScript", "HTML5", "CSS3", "PHP"],
-        "frameworks": ["Next.js", "Tailwind CSS"],
-        "libraries": ["React", "Framer Motion", "React Hook Form"],
-        "apis": ["Google Maps", "Calendly"]
-      },
-      "outcome": {
-        "statistics": [
-          { "label": "Réservations en Ligne", "value": "65%" },
-          { "label": "Augmentation des Visites", "value": "40%" },
-          { "label": "Taux de Rebond", "value": "25%" }
-        ],
-        "benefits": [
-          "Image de marque renforcée par un site web à la hauteur de la qualité du restaurant",
-          "Processus de réservation simplifié pour les clients",
-          "Réduction de la charge de travail pour la gestion des réservations",
-          "Meilleure visibilité des menus et spécialités"
-        ],
-        "improvements": [
-          "Mise en place d'un système de réservation en ligne intuitif",
-          "Création d'une galerie photo professionnelle",
-          "Développement d'une interface de présentation des menus dynamique",
-          "Optimisation pour les recherches locales"
-        ],
-        "testimonial": {
-          "quote": "Notre nouveau site web reflète parfaitement l'esprit de notre restaurant et a considérablement facilité la gestion des réservations. Nos clients apprécient particulièrement de pouvoir consulter nos menus et réserver en quelques clics.",
-          "author": "Gustave Pelletier",
-          "position": "Chef et Propriétaire, Chez Gustave"
-        }
-      }
-    },
+
     "4": {
       "name": "JABB",
       "logo": "/images/portfolio/jabb-logo.png",
