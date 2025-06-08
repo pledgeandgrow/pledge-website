@@ -15,19 +15,19 @@ const CreationServices = () => {
       title: t("services.creation.webDevelopment.title"),
       description: t("services.creation.webDevelopment.description"),
       icon: <Globe className="w-10 h-10 text-primary" />,
-      link: "/services/web-development",
+      link: "/expertise/website",
     },
     {
       title: t("services.creation.mobileDevelopment.title"),
       description: t("services.creation.mobileDevelopment.description"),
       icon: <Smartphone className="w-10 h-10 text-primary" />,
-      link: "/services/mobile-development",
+      link: "/expertise/mobile-application",
     },
     {
       title: t("services.creation.saas.title"),
       description: t("services.creation.saas.description"),
       icon: <Layout className="w-10 h-10 text-primary" />,
-      link: "/services/saas",
+      link: "/expertise/saas",
     }
   ];
 
@@ -62,7 +62,7 @@ const CreationServices = () => {
               </p>
               <div className="text-center mt-auto">
                 <Button variant="outline" size="sm" className="w-full" asChild>
-                  <Link href={service.link}>En savoir plus</Link>
+                  <Link href={service.link}>{t("services.learnMore")}</Link>
                 </Button>
               </div>
             </div>
@@ -91,7 +91,7 @@ const CreationServices = () => {
             </p>
             <div className="text-center mt-auto">
               <Button variant="outline" size="sm" className="w-full" asChild>
-                <Link href={service.link}>Learn More</Link>
+                <Link href={service.link}>{t("services.learnMore")}</Link>
               </Button>
             </div>
           </div>
@@ -109,19 +109,19 @@ const IntegrationServices = () => {
       title: t("services.integration.ecommerce.title"),
       description: t("services.integration.ecommerce.description"),
       icon: <Database className="w-10 h-10 text-primary" />,
-      link: "/services/e-commerce",
+      link: "/expertise/e-commerce",
     },
     {
       title: t("services.integration.aiAutomation.title"),
       description: t("services.integration.aiAutomation.description"),
       icon: <Server className="w-10 h-10 text-primary" />,
-      link: "/services/ai-automation",
+      link: "/expertise/ai-automation",
     },
     {
       title: t("services.integration.blockchain.title"),
       description: t("services.integration.blockchain.description"),
       icon: <Cloud className="w-10 h-10 text-primary" />,
-      link: "/services/blockchain",
+      link: "/expertise/blockchain",
     }
   ];
 
@@ -156,7 +156,7 @@ const IntegrationServices = () => {
               </p>
               <div className="text-center mt-auto">
                 <Button variant="outline" size="sm" className="w-full" asChild>
-                  <Link href={service.link}>En savoir plus</Link>
+                  <Link href={service.link}>{t("services.learnMore")}</Link>
                 </Button>
               </div>
             </div>
@@ -185,7 +185,7 @@ const IntegrationServices = () => {
             </p>
             <div className="text-center mt-auto">
               <Button variant="outline" size="sm" className="w-full" asChild>
-                <Link href={service.link}>Learn More</Link>
+                <Link href={service.link}>{t("services.learnMore")}</Link>
               </Button>
             </div>
           </div>
@@ -203,19 +203,19 @@ const CustomSolutions = () => {
       title: t("services.complementary.maintenance.title"),
       description: t("services.complementary.maintenance.description"),
       icon: <Code className="w-10 h-10 text-primary" />,
-      link: "/services/maintenance",
+      link: "/expertise/maintenance",
     },
     {
       title: t("services.complementary.seo.title"),
       description: t("services.complementary.seo.description"),
       icon: <LineChart className="w-10 h-10 text-primary" />,
-      link: "/services/seo",
+      link: "/expertise/seo",
     },
     {
       title: t("services.complementary.uxUiDesign.title"),
       description: t("services.complementary.uxUiDesign.description"),
       icon: <Zap className="w-10 h-10 text-primary" />,
-      link: "/services/ux-ui-design",
+      link: "/expertise/design-ux-ui",
     }
   ];
 
@@ -250,7 +250,7 @@ const CustomSolutions = () => {
               </p>
               <div className="text-center mt-auto">
                 <Button variant="outline" size="sm" className="w-full" asChild>
-                  <Link href={service.link}>En savoir plus</Link>
+                  <Link href={service.link}>{t("services.learnMore")}</Link>
                 </Button>
               </div>
             </div>
@@ -279,7 +279,7 @@ const CustomSolutions = () => {
             </p>
             <div className="text-center mt-auto">
               <Button variant="outline" size="sm" className="w-full" asChild>
-                <Link href={service.link}>Learn More</Link>
+                <Link href={service.link}>{t("services.learnMore")}</Link>
               </Button>
             </div>
           </div>

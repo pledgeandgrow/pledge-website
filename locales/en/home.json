@@ -46,6 +46,7 @@
   "services": {
     "title": "Our Services",
     "description": "Comprehensive digital solutions tailored to your business needs",
+    "learnMore": "Learn more",
     "creation": {
       "title": "Creation Services",
       "description": "Our team builds beautiful, functional digital products from scratch using the latest technologies.",

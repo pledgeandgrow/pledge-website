@@ -46,6 +46,7 @@
   "services": {
     "title": "Nos Services",
     "description": "Des solutions numériques complètes adaptées aux besoins de votre entreprise",
+    "learnMore": "En savoir plus",
     "creation": {
       "title": "Services de Création",
       "description": "Notre équipe construit des produits numériques beaux et fonctionnels à partir de zéro en utilisant les dernières technologies.",
