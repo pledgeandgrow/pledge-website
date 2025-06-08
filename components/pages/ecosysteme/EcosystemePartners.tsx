@@ -1,51 +1,11 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
-import { Handshake, BadgePercent, Users, Award, Shield } from "lucide-react";
-// Button import removed as it was unused
-import { MobileCarousel, MobileCarouselItem } from "@/components/ui/mobile-carousel";
-// Link import removed as it was unused
+import { Handshake } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export default function EcosystemePartners() {
-  const [isMobile, setIsMobile] = useState(false);
   const { t } = useTranslations('ecosystem');
-  
-  // Check if on mobile device
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-  
-  // Memoize partner benefits to prevent unnecessary re-renders
-  const partnerBenefits = useMemo(() => [
-    {
-      title: t('advantages.items.exclusiveDiscounts.title', { fallback: 'Exclusive Discounts' }),
-      description: t('advantages.items.exclusiveDiscounts.description', { fallback: 'Access special offers and discounts from our ecosystem partners.' }),
-      icon: <BadgePercent className="h-8 w-8 text-green-700 dark:text-green-400" />
-    },
-    {
-      title: t('advantages.items.priorityAccess.title', { fallback: 'Priority Access' }),
-      description: t('advantages.items.priorityAccess.description', { fallback: 'Get early access to new features and services from our partners.' }),
-      icon: <Award className="h-8 w-8 text-green-600 dark:text-green-400" />
-    },
-    {
-      title: t('advantages.items.expandedNetwork.title', { fallback: 'Expanded Network' }),
-      description: t('advantages.items.expandedNetwork.description', { fallback: 'Connect with a wider network of professionals and businesses.' }),
-      icon: <Users className="h-8 w-8 text-green-600 dark:text-green-400" />
-    },
-    {
-      title: t('advantages.items.trustedPartners.title', { fallback: 'Trusted Partners' }),
-      description: t('advantages.items.trustedPartners.description', { fallback: 'Work with vetted and trusted partners in our ecosystem.' }),
-      icon: <Shield className="h-8 w-8 text-green-600 dark:text-green-400" />
-    }
-  ], [t]);
   
   return (
     <section className="py-20 bg-gray-50 dark:bg-gray-900">
@@ -70,54 +30,6 @@ export default function EcosystemePartners() {
           </p>
         </motion.div>
 
-        {/* Partner Benefits */}
-        {isMobile ? (
-          <div className="mb-16">
-            <MobileCarousel className="w-full">
-              {partnerBenefits.map((benefit, index) => (
-                <MobileCarouselItem key={index}>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow h-full"
-                  >
-                    <div className="flex flex-col items-center text-center">
-                      <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-4">
-                        {benefit.icon}
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{benefit.title}</h3>
-                      <p className="text-gray-600 dark:text-gray-300">{benefit.description}</p>
-                    </div>
-                  </motion.div>
-                </MobileCarouselItem>
-              ))}
-            </MobileCarousel>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {partnerBenefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mb-4">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{benefit.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300">{benefit.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        )}
-        
         {/* Partner Network Description */}
         <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-md mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -149,7 +61,7 @@ export default function EcosystemePartners() {
                   <div className="w-6 h-6 rounded-full bg-green-500/90 dark:bg-green-600/90 flex items-center justify-center text-white mr-3 flex-shrink-0">
                     <span className="text-xs font-bold">3</span>
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300">{t('collaboration.benefits.items.leads', { defaultValue: 'Quarterly networking events with partners and clients' })}</p>
+                  <p className="text-gray-700 dark:text-gray-300">{t('collaboration.benefits.items.businessGrowth', { defaultValue: 'Networking events and business development opportunities' })}</p>
                 </div>
                 <div className="flex items-start">
                   <div className="w-6 h-6 rounded-full bg-green-500/90 dark:bg-green-600/90 flex items-center justify-center text-white mr-3 flex-shrink-0">

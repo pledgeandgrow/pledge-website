@@ -45,18 +45,6 @@
       "earlyInnovation": {
         "title": "Early Innovation Access",
         "description": "Be among the first to test and implement cutting-edge solutions from our internal innovation projects."
-      },
-      "collaboration": {
-        "title": "Collaborative Innovation",
-        "description": "Access to shared knowledge, resources, and expertise across our partner network"
-      },
-      "trustedPartners": {
-        "title": "Trusted Partners",
-        "description": "Work with pre-vetted partners that meet our high quality standards"
-      },
-      "expandedNetwork": {
-        "title": "Expanded Network",
-        "description": "Connect with a broader ecosystem of businesses and potential clients"
       }
     }
   },
