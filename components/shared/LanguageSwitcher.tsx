@@ -83,29 +83,30 @@ export default function LanguageSwitcher() {
     <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
       <DropdownMenuTrigger asChild>
         <Button 
-          variant="ghost" 
-          size="icon" 
-          className="relative"
+          variant="outline" 
+          size="sm" 
+          className="flex items-center gap-2 px-3 py-1 h-9 border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           disabled={isPending}
         >
-          <Globe className="h-5 w-5" />
+          <Globe className="h-4 w-4" />
+          <span className="text-sm font-medium">{currentLocale === 'en' ? 'English' : 'Français'}</span>
           <span className="sr-only">{t('languageSwitcher.switchLanguage')}</span>
-          <span className="absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-medium text-primary-foreground">
-            {currentLocale.toUpperCase()}
-          </span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
+      <DropdownMenuContent align="end" className="w-40">
         {languages.map((language) => (
           <DropdownMenuItem
             key={language.code}
             onClick={() => handleLanguageChange(language.code)}
-            className={`flex items-center gap-2 ${
-              currentLocale === language.code ? 'font-bold bg-accent' : ''
-            }`}
+            className={`flex items-center gap-2 px-3 py-2 ${currentLocale === language.code 
+              ? 'font-medium bg-gray-100 dark:bg-gray-800 text-primary' 
+              : 'hover:bg-gray-50 dark:hover:bg-gray-900'}`}
           >
             <span className="text-base">{language.flag}</span>
             <span>{language.name}</span>
+            {currentLocale === language.code && (
+              <span className="ml-auto rounded-full w-2 h-2 bg-primary"></span>
+            )}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

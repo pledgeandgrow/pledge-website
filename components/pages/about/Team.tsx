@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Github, Linkedin, Twitter, ChevronLeft, ChevronRight } from "lucide-react";
+import { Linkedin, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
 // Button import removed as it was unused
@@ -263,12 +263,6 @@ export default function Team() {
               <div className="flex space-x-4">
                 <Link href={activeMembers[activeIndex].social.linkedin} className="text-muted-foreground hover:text-primary transition-colors">
                   <Linkedin className="h-5 w-5" />
-                </Link>
-                <Link href={activeMembers[activeIndex].social.twitter} className="text-muted-foreground hover:text-primary transition-colors">
-                  <Twitter className="h-5 w-5" />
-                </Link>
-                <Link href={activeMembers[activeIndex].social.github} className="text-muted-foreground hover:text-primary transition-colors">
-                  <Github className="h-5 w-5" />
                 </Link>
               </div>
             </div>

@@ -24,7 +24,7 @@ export default function Hero() {
             <div className="relative rounded-lg overflow-hidden">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary opacity-30 blur rounded-lg"></div>
               <Image
-                src={t('hero.image') || "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"}
+                src="/images/about/about.png"
                 alt={t('hero.imageAlt') || "Our team collaborating"}
                 width={600}
                 height={400}

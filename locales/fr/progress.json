@@ -32,6 +32,11 @@
         "title": "Plateforme d'Intégration Transparente",
         "description": "Plateforme unifiée pour connecter divers systèmes d'entreprise",
         "timeline": "T1 2027"
+      },
+      "anonymity": {
+        "title": "Outils de Développement Axés sur la Confidentialité",
+        "description": "Notre propre suite d'outils de développement axés sur la confidentialité",
+        "timeline": "T2 2027"
       }
     },
     "navigation": {

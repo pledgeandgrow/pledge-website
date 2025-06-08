@@ -47,12 +47,6 @@ export default function FutureVision() {
       color: "bg-blue-500/10"
     },
     {
-      icon: <Lightbulb className="h-10 w-10 text-amber-500" />,
-      title: t('futureVision.pillars.sustainability.title') || "Digital Sustainability",
-      description: t('futureVision.pillars.sustainability.description') || "Creating eco-friendly digital solutions that minimize environmental impact",
-      color: "bg-amber-500/10"
-    },
-    {
       icon: <Users className="h-10 w-10 text-violet-500" />,
       title: t('futureVision.pillars.accessibility.title') || "Universal Accessibility",
       description: t('futureVision.pillars.accessibility.description') || "Making technology accessible to businesses of all sizes and industries",
