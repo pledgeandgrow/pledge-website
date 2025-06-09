@@ -51,7 +51,6 @@ export default function InvestorsPage() {
       <main className="flex-grow pt-16">
         <CompanyOverview />
         <InvestorsPhase />
-        <InvestmentOpportunities />
       </main>
       <Footer />
     </div>
