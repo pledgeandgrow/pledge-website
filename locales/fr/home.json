@@ -1,12 +1,12 @@
 {
   "hero": {
-    "title": "Construire l'avenir",
+    "title": "Construisons l'avenir",
     "subtitle": "Nous créons des expériences numériques de pointe qui transforment les entreprises et ravissent les utilisateurs grâce à une technologie moderne et un design exceptionnel.",
     "ctaGetStarted": "Commencer",
     "ctaLearnMore": "En Savoir Plus"
   },
   "clients": {
-    "trustedBy": "Fait confiance par les leaders de l'industrie"
+    "trustedBy": "Fait confiance par"
   },
   "about": {
     "title": "Nous ne sommes pas une simple agence",
@@ -48,14 +48,14 @@
     "description": "Des solutions numériques complètes adaptées aux besoins de votre entreprise",
     "learnMore": "En savoir plus",
     "creation": {
-      "title": "Services de Création",
+      "title": "Création",
       "description": "Notre équipe construit des produits numériques beaux et fonctionnels à partir de zéro en utilisant les dernières technologies.",
       "webDevelopment": {
-        "title": "Développement Web",
+        "title": "Web",
         "description": "Sites web et applications web personnalisés construits avec Next.js, React et les technologies modernes."
       },
       "mobileDevelopment": {
-        "title": "Développement Mobile",
+        "title": "Mobile",
         "description": "Applications mobiles natives pour iOS et Android utilisant React Native."
       },
       "saas": {
@@ -64,7 +64,7 @@
       }
     },
     "integration": {
-      "title": "Services d'Intégration",
+      "title": "Intégration",
       "description": "Nous connectons les systèmes, les données et les services pour créer des écosystèmes numériques puissants et intégrés.",
       "ecommerce": {
         "title": "E-commerce",

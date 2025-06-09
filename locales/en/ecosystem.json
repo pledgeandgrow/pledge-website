@@ -190,6 +190,13 @@
     "title": "Join Our Ecosystem Today",
     "subtitle": "Grow Together",
     "description": "Becoming a Pledge & Grow client is your gateway to exclusive benefits, resources, and opportunities that will accelerate your business growth.",
+    "diagram": {
+      "client": "Client",
+      "groupCompanies": "Group Companies",
+      "partners": "Partners",
+      "discounts": "Discounts",
+      "innovation": "Innovation"
+    },
     "options": {
       "partner": {
         "title": "Become a Partner",

@@ -61,20 +61,7 @@ export default function ContactForm() {
     "Ambassadors", 
     "Feedback", 
     "Careers", 
-    "VIP",
-    "Grants",
-    "Ambassador Program",
-    "Reference Request",
-    "Discord",
-    "VIP Membership",
-    "Grant Inquiry",
-    "Premium Membership",
-    "Media",
-    "Seed Investment",
-    "Pro Bono Application",
-    "Impact Partnership",
-    "Groupe",
-    "Industry Solutions"
+    "VIP"
   ];
   
   // Format the URL subject to match our options (capitalize first letter, handle URL encoding)
@@ -86,7 +73,7 @@ export default function ContactForm() {
       
   // Map common inquiry types to our valid subjects
   const subjectMapping: Record<string, string> = {
-    // Existing mappings
+    // Subject mappings
     "partnership inquiry": "Partnership",
     "partnership": "Partnership",
     "commercial": "Commercial",
@@ -95,23 +82,7 @@ export default function ContactForm() {
     "ambassadors": "Ambassadors",
     "feedback": "Feedback",
     "careers": "Careers",
-    "vip": "VIP",
-    
-    // New mappings from site links
-    "grants inquiry": "Grants",
-    "ambassador program inquiry": "Ambassador Program",
-    "reference request": "Reference Request",
-    "discord inquiry": "Discord",
-    "vip membership": "VIP Membership",
-    "grant inquiry": "Grant Inquiry",
-    "premium membership inquiry": "Premium Membership",
-    "media inquiry": "Media",
-    "investment inquiry": "Investment",
-    "seed investment": "Seed Investment",
-    "pro bono application": "Pro Bono Application",
-    "impact partnership": "Impact Partnership",
-    "groupe inquiry": "Groupe",
-    "industry solutions": "Industry Solutions"
+    "vip": "VIP"
   };
   
   // Handle dynamic subjects that contain variable parts
@@ -301,19 +272,6 @@ export default function ContactForm() {
                     <SelectItem value="Feedback">Feedback</SelectItem>
                     <SelectItem value="Careers">Careers</SelectItem>
                     <SelectItem value="VIP">VIP</SelectItem>
-                    <SelectItem value="Grants">Grants</SelectItem>
-                    <SelectItem value="Ambassador Program">Ambassador Program</SelectItem>
-                    <SelectItem value="Reference Request">Reference Request</SelectItem>
-                    <SelectItem value="Discord">Discord</SelectItem>
-                    <SelectItem value="VIP Membership">VIP Membership</SelectItem>
-                    <SelectItem value="Grant Inquiry">Grant Inquiry</SelectItem>
-                    <SelectItem value="Premium Membership">Premium Membership</SelectItem>
-                    <SelectItem value="Media">Media</SelectItem>
-                    <SelectItem value="Seed Investment">Seed Investment</SelectItem>
-                    <SelectItem value="Pro Bono Application">Pro Bono Application</SelectItem>
-                    <SelectItem value="Impact Partnership">Impact Partnership</SelectItem>
-                    <SelectItem value="Groupe">Groupe</SelectItem>
-                    <SelectItem value="Industry Solutions">Industry Solutions</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />

@@ -6,7 +6,7 @@
     "ctaLearnMore": "Learn More"
   },
   "clients": {
-    "trustedBy": "Trusted by industry leaders"
+    "trustedBy": "Trusted by"
   },
   "about": {
     "title": "We're not just another agency",
@@ -48,14 +48,14 @@
     "description": "Comprehensive digital solutions tailored to your business needs",
     "learnMore": "Learn more",
     "creation": {
-      "title": "Creation Services",
+      "title": "Creation",
       "description": "Our team builds beautiful, functional digital products from scratch using the latest technologies.",
       "webDevelopment": {
-        "title": "Web Development",
+        "title": "Web",
         "description": "Custom websites and web applications built with Next.js, React, and modern technologies."
       },
       "mobileDevelopment": {
-        "title": "Mobile Development",
+        "title": "Mobile",
         "description": "Native mobile applications for iOS and Android using React Native."
       },
       "saas": {
@@ -64,7 +64,7 @@
       }
     },
     "integration": {
-      "title": "Integration Services",
+      "title": "Integration",
       "description": "We connect systems, data, and services to create powerful, integrated digital ecosystems.",
       "ecommerce": {
         "title": "E-commerce",
@@ -80,7 +80,7 @@
       }
     },
     "complementary": {
-      "title": "Complementary Services",
+      "title": "Complementary",
       "description": "We provide essential supporting services to enhance, maintain, and optimize your digital products.",
       "maintenance": {
         "title": "Maintenance",

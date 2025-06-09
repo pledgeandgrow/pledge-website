@@ -76,7 +76,7 @@ export default function Hero() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight leading-none mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent drop-shadow-sm">
+              <h1 className="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight leading-none mb-6 text-foreground">
                 {t("hero.title")}
               </h1>
               <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mb-8 leading-relaxed">

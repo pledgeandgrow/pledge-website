@@ -17,7 +17,7 @@ export default function MembershipHero() {
             transition={{ duration: 0.5 }}
             className="text-center lg:text-left"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
               {t('hero.title')}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-3xl mx-auto lg:mx-0">
