@@ -30,7 +30,7 @@
     "commercialTitle": "Commercial",
     "addressLabel": "Address",
     "businesshoursLabel": "Business Hours",
-    "addressText": "16 Rue Théroigne de Méricourt, 75013 Paris",
+    "addressText": "Paris, France",
     "businessHours": "Monday - Friday: 9am - 6pm",
     "socialTitle": "Follow Us",
     "email": {
@@ -54,10 +54,12 @@
   },
   "map": {
     "title": "Our Location",
-    "description": "Visit us at our office: 16 Rue Théroigne de Méricourt, 75013 Paris.",
+    "description": "Visit us at our office in Paris.",
     "loading": "Loading map...",
     "error": "Unable to load map. Please check your connection.",
-    "retry": "Retry"
+    "retry": "Retry",
+    "openInMaps": "Open in Google Maps",
+    "getDirections": "Get directions to our office"
   },
   "faq": {
     "title": "Frequently Asked Questions",

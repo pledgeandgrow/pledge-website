@@ -30,7 +30,7 @@
     "commercialTitle": "Commercial",
     "addressLabel": "Adresse",
     "businesshoursLabel": "Heures d'Ouverture",
-    "addressText": "16 Rue Théroigne de Méricourt, 75013 Paris",
+    "addressText": "Paris, France",
     "businessHours": "Lundi - Vendredi: 9h00 - 18h00",
     "socialTitle": "Suivez-nous",
     "email": {
@@ -54,10 +54,12 @@
   },
   "map": {
     "title": "Notre Emplacement",
-    "description": "Visitez-nous à notre bureau: 16 Rue Théroigne de Méricourt, 75013 Paris.",
+    "description": "Visitez-nous à notre bureau à Paris.",
     "loading": "Chargement de la carte...",
     "error": "Impossible de charger la carte. Veuillez vérifier votre connexion.",
-    "retry": "Réessayer"
+    "retry": "Réessayer",
+    "openInMaps": "Ouvrir dans Google Maps",
+    "getDirections": "Obtenir l'itinéraire vers notre bureau"
   },
   "faq": {
     "title": "Questions Fréquemment Posées",
