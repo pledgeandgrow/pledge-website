@@ -35,8 +35,8 @@
         "apis": "APIs",
         "benefits": "Benefits",
         "improvements": "Improvements"
-      },
-      "testimonial": "Client Testimonial"
+      }
+
     },
     "pagination": {
       "previous": "Previous",
@@ -92,12 +92,8 @@
             "Integration of automated viewing appointment scheduling",
             "Development of a property market analysis dashboard",
             "Optimization for real estate search engines"
-          ],
-          "testimonial": {
-            "quote": "The website and back office system developed by Pledge & Grow have revolutionized our property management and client relationships. The intuitive interface has significantly improved our efficiency and online presence.",
-            "author": "Jean Michou",
-            "position": "Agency Director"
-          }
+          ]
+
         }
       },
       "15": {
@@ -144,12 +140,7 @@
             "Development of market trend analysis tools",
             "Integration of client relationship management features",
             "Creation of a mobile app for agents on the go"
-          ],
-          "testimonial": {
-            "quote": "The website and management system developed by Pledge & Grow have transformed our business operations. The intuitive back office has significantly reduced our administrative workload, while the elegant front-end has attracted more quality clients.",
-            "author": "Philippe Rocher",
-            "position": "CEO, Cabinet Mas Rocher"
-          }
+          ]
         }
       },
       "1": {
@@ -196,12 +187,7 @@
           "Implementation of smart forms for lead capture",
           "Creation of a dashboard for performance tracking",
           "Optimization of the mobile experience"
-        ],
-        "testimonial": {
-          "quote": "Our new website has completely transformed our online presence. The leads generated have exceeded our expectations and our brand image has been significantly strengthened.",
-          "author": "Marie Dupont",
-          "position": "Director, Dualink"
-        }
+        ]
       }
     },
     "2": {
@@ -248,12 +234,7 @@
           "Implementation of an alert system for important deadlines",
           "Creation of a customizable dashboard",
           "Integration of an electronic signature system"
-        ],
-        "testimonial": {
-          "quote": "The platform has revolutionized our way of supporting businesses in their expansion to Oman. Our clients particularly appreciate the transparency and efficiency of the tracking.",
-          "author": "Ahmed Al-Saadi",
-          "position": "Director, Global Corporate Business"
-        }
+        ]
       }
     },
     "3": {
@@ -300,12 +281,7 @@
           "Integration of client testimonials",
           "Optimization of images for fast loading",
           "Intuitive navigation structure"
-        ],
-        "testimonial": {
-          "quote": "Our new website perfectly reflects our expertise and professionalism. The feedback from our clients is excellent and we have seen a significant increase in quote requests.",
-          "author": "Eric Bouton",
-          "position": "Director, ERB-BTP"
-        }
+        ]
       }
     },
     "4": {
@@ -352,12 +328,7 @@
           "Creation of SEO-optimized content",
           "Implementation of a customized quote system",
           "Integration of a project gallery"
-        ],
-        "testimonial": {
-          "quote": "The redesign of our site had an immediate impact on our business. The number of quote requests has exploded and our online visibility has improved considerably.",
-          "author": "Jean Bertrand",
-          "position": "Manager, JABB"
-        }
+        ]
       }
     },
     "5": {
@@ -404,12 +375,7 @@
           "Integration of an interactive calendar for availability",
           "Creation of a comprehensive administrator dashboard",
           "Automation of email confirmations and reminders"
-        ],
-        "testimonial": {
-          "quote": "The platform has transformed our way of managing events. Our clients appreciate the simplicity of booking and we have significantly reduced our administrative workload.",
-          "author": "Sophie Martin",
-          "position": "Director, JABB Events"
-        }
+        ]
       }
     },
     "6": {
@@ -456,12 +422,7 @@
           "Integration of interactive quizzes and practical exercises",
           "Development of a customized dashboard for learners",
           "Implementation of a badge and certification system"
-        ],
-        "testimonial": {
-          "quote": "The platform has transformed our training offerings. Our trainers can easily create quality content and our learners benefit from an optimal learning experience.",
-          "author": "Claire Dubois",
-          "position": "Training Manager, Gudule"
-        }
+        ]
       }
     },
     "7": {
@@ -508,12 +469,7 @@
           "Development of a powerful internal search engine",
           "Implementation of a notification system for news",
           "Integration of an interactive map of municipal services"
-        ],
-        "testimonial": {
-          "quote": "The new city website has significantly improved our communication with citizens. The feedback is very positive and we have seen a significant reduction in information requests by phone.",
-          "author": "Brice Rabaste",
-          "position": "Mayor of Chelles"
-        }
+        ]
       }
     },
     "8": {
@@ -560,12 +516,7 @@
           "Creation of customizable interfaces based on roles",
           "Implementation of an intelligent notification system",
           "Integration with existing company tools"
-        ],
-        "testimonial": {
-          "quote": "This solution has revolutionized the way we manage projects and our teams' time. The analysis features allow us to quickly identify optimization opportunities and continuously improve our processes.",
-          "author": "Thomas Leroy",
-          "position": "CTO, Chronos Corp."
-        }
+        ]
       }
     },
     "9": {
@@ -612,12 +563,7 @@
           "Creation of an intuitive and reassuring contact form",
           "Integration of a dynamic testimonials section",
           "Implementation of an online appointment booking system"
-        ],
-        "testimonial": {
-          "quote": "My landing page has completely transformed my business. Expectant mothers contact me easily and I have been able to significantly grow my client base.",
-          "author": "Mélanie Dupont",
-          "position": "Founder, Melytop"
-        }
+        ]
       }
     },
     "10": {
@@ -664,12 +610,7 @@
           "Creation of educational content on renewable energy",
           "Technical optimization of the site to improve performance",
           "Implementation of a quote request tracking system"
-        ],
-        "testimonial": {
-          "quote": "Our new website has significantly improved our image and our ability to convince customers. The savings calculator is particularly appreciated and helps us convert more prospects.",
-          "author": "Pierre Martin",
-          "position": "Director, Connect & Drive"
-        }
+        ]
       }
     },
     "11": {
@@ -716,12 +657,7 @@
           "Implementation of a match results communication system",
           "Development of a content strategy highlighting players",
           "Training volunteers in simple graphic design tools"
-        ],
-        "testimonial": {
-          "quote": "The digital consulting allowed us to professionalize our communication with limited resources. Our supporters are more engaged and we've attracted new players thanks to our improved online presence.",
-          "author": "Marc Dubois",
-          "position": "President, AS13F"
-        }
+        ]
       }
     },
     "12": {
@@ -768,12 +704,7 @@
           "Creation of a customer review collection strategy",
           "Development of content addressing frequently asked questions",
           "Implementation of marketing performance tracking"
-        ],
-        "testimonial": {
-          "quote": "The digital consulting transformed our business. We are now visible locally and customers find us easily. Our order book is full, and we've had to hire more staff to meet demand.",
-          "author": "Sophie Lambert",
-          "position": "Manager, Clean-E Sofa"
-        }
+        ]
       }
     },
     "13": {
@@ -820,12 +751,7 @@
           "Development of a dashboard for performance analysis",
           "Creation of a customizable loyalty program",
           "Integration of a product recommendation system"
-        ],
-        "testimonial": {
-          "quote": "This application has revolutionized our way of working. Our clients love being able to book online and track their treatment program. Our team saves precious time on administrative tasks to focus on what's essential: customer service.",
-          "author": "Isabelle Moreau",
-          "position": "Director, Beauty Salon 92"
-        }
+        ]
       }
     },
     "16": {
@@ -872,12 +798,7 @@
           "Implementation of a volunteer management system",
           "Development of multilingual communication strategies",
           "Integration of digital payment systems for donations and event tickets"
-        ],
-        "testimonial": {
-          "quote": "The digital consulting provided by Pledge & Grow transformed our ability to connect with diaspora communities. Our events now reach a much wider audience, and we've built a vibrant online community that complements our physical gatherings.",
-          "author": "Aminata Diop",
-          "position": "President, Diaspora Medina"
-        }
+        ]
       }
     },
     "17": {
@@ -924,12 +845,7 @@
           "Development of a regional employment trends dashboard",
           "Creation of automated communication workflows",
           "Integration with regional economic development initiatives"
-        ],
-        "testimonial": {
-          "quote": "The digital consulting services have revolutionized how we connect talent with opportunity in our region. We now have data-driven insights that help us better serve both job seekers and businesses, while significantly reducing our administrative burden.",
-          "author": "Jean-Pierre Rousseau",
-          "position": "Director, Plac'Occitanie"
-        }
+        ]
       }
     }
   }

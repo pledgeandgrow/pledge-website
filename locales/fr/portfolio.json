@@ -35,8 +35,8 @@
       "apis": "APIs",
       "benefits": "Avantages",
       "improvements": "Améliorations"
-    },
-    "testimonial": "Témoignage client"
+    }
+
   },
   "pagination": {
     "previous": "Précédent",
@@ -91,12 +91,7 @@
           "Intégration d'un système automatisé de planification de visites",
           "Développement d'un tableau de bord d'analyse du marché immobilier",
           "Optimisation pour les moteurs de recherche immobiliers"
-        ],
-        "testimonial": {
-          "quote": "Le site web et le système de back-office développés par Pledge & Grow ont révolutionné notre gestion immobilière et nos relations clients. L'interface intuitive a considérablement amélioré notre efficacité et notre présence en ligne.",
-          "author": "Jean Michou",
-          "position": "Directeur d'Agence"
-        }
+        ]
       }
     },
     "15": {
@@ -142,12 +137,7 @@
           "Développement d'outils d'analyse des tendances du marché",
           "Intégration de fonctionnalités de gestion de la relation client",
           "Création d'une application mobile pour les agents en déplacement"
-        ],
-        "testimonial": {
-          "quote": "Le site web et le système de gestion développés par Pledge & Grow ont transformé nos opérations commerciales. Le back-office intuitif a considérablement réduit notre charge administrative, tandis que l'interface élégante a attiré davantage de clients de qualité.",
-          "author": "Philippe Rocher",
-          "position": "PDG, Cabinet Mas Rocher"
-        }
+        ]
       }
     },
     "1": {
@@ -193,12 +183,7 @@
           "Mise en place de formulaires intelligents pour la capture de leads",
           "Création d'un tableau de bord pour le suivi des performances",
           "Optimisation de l'expérience mobile"
-        ],
-        "testimonial": {
-          "quote": "Notre nouveau site web a complètement transformé notre présence en ligne. Les leads générés ont dépassé nos attentes et notre image de marque a été considérablement renforcée.",
-          "author": "Marie Dupont",
-          "position": "Directrice, Dualink"
-        }
+        ]
       }
     },
     "2": {
@@ -244,12 +229,7 @@
           "Mise en place d'un système d'alerte pour les échéances importantes",
           "Création d'un tableau de bord personnalisable",
           "Intégration d'un système de signature électronique"
-        ],
-        "testimonial": {
-          "quote": "La plateforme a révolutionné notre façon d'accompagner les entreprises dans leur expansion à Oman. Nos clients apprécient particulièrement la transparence et l'efficacité du suivi.",
-          "author": "Ahmed Al-Saadi",
-          "position": "Directeur, Global Corporate Business"
-        }
+        ]
       }
     },
     "3": {
@@ -295,12 +275,7 @@
           "Intégration de témoignages clients",
           "Optimisation des images pour un chargement rapide",
           "Structure de navigation intuitive"
-        ],
-        "testimonial": {
-          "quote": "Notre nouveau site web reflète parfaitement notre expertise et notre professionnalisme. Les retours de nos clients sont excellents et nous avons constaté une augmentation significative des demandes de devis.",
-          "author": "Eric Bouton",
-          "position": "Directeur, ERB-BTP"
-        }
+        ]
       }
     },
     "16": {
@@ -346,12 +321,7 @@
           "Développement d'une stratégie de contenu mettant en valeur la cuisine tunisienne",
           "Recommandations pour améliorer l'expérience utilisateur du site web",
           "Mise en place d'une stratégie de collecte d'avis clients"
-        ],
-        "testimonial": {
-          "quote": "Le conseil digital nous a permis de nous démarquer dans un marché gastronomique très concurrentiel. Nous sommes maintenant beaucoup plus visibles localement et nos réservations ont considérablement augmenté.",
-          "author": "Mehdi Ben Ali",
-          "position": "Propriétaire, La Goulette Bordeaux"
-        }
+        ]
       }
     },
     "5": {
@@ -397,12 +367,7 @@
           "Intégration d'une passerelle de paiement sécurisée",
           "Développement d'un tableau de bord de gestion des événements",
           "Création d'un système de notifications automatisées"
-        ],
-        "testimonial": {
-          "quote": "La plateforme e-commerce a transformé notre façon de gérer les réservations. Nos clients apprécient la simplicité du processus et nous avons constaté une augmentation significative des réservations en ligne.",
-          "author": "Sophie Martin",
-          "position": "Directrice, JABB Events"
-        }
+        ]
       }
     },
     "7": {
@@ -448,12 +413,7 @@
           "Développement d'un moteur de recherche interne puissant",
           "Mise en place d'un système de notifications pour les actualités",
           "Intégration d'une carte interactive des services municipaux"
-        ],
-        "testimonial": {
-          "quote": "Le nouveau site de la ville a considérablement amélioré notre communication avec les citoyens. Les retours sont très positifs et nous avons constaté une nette diminution des demandes d'information par téléphone.",
-          "author": "Brice Rabaste",
-          "position": "Maire de Chelles"
-        }
+        ]
       }
     },
     "6": {
@@ -500,12 +460,7 @@
           "Élaboration d'un cahier des charges détaillé",
           "Recommandations sur les technologies et plateformes LMS",
           "Conseils sur la sécurité et la conformité des données"
-        ],
-        "testimonial": {
-          "quote": "Le conseil IT nous a permis de clarifier notre vision et d'établir une feuille de route précise pour notre transformation digitale. Les recommandations étaient parfaitement adaptées à nos besoins et nous ont aidés à prendre des décisions éclairées.",
-          "author": "Sophie Martin",
-          "position": "Directrice de Formation, Gudule"
-        }
+        ]
       }
     },
     "13": {
@@ -551,12 +506,7 @@
           "Développement d'un tableau de bord d'analyse des performances",
           "Création d'un programme de fidélité personnalisable",
           "Intégration d'un système de recommandation de produits"
-        ],
-        "testimonial": {
-          "quote": "Cette application a révolutionné notre façon de travailler. Nos clients adorent pouvoir réserver en ligne et suivre leur programme de soins. Notre équipe gagne un temps précieux sur les tâches administratives pour se concentrer sur l'essentiel : le service client.",
-          "author": "Isabelle Moreau",
-          "position": "Directrice, Beauty Salon 92"
-        }
+        ]
       }
     },
     "12": {
@@ -602,12 +552,7 @@
           "Création d'une stratégie de collecte d'avis clients",
           "Développement de contenu répondant aux questions fréquentes",
           "Mise en place d'un suivi des performances marketing"
-        ],
-        "testimonial": {
-          "quote": "Le conseil digital a transformé notre activité. Nous sommes maintenant visibles localement et les clients nous trouvent facilement. Notre carnet de commandes est plein, et nous avons dû embaucher plus de personnel pour répondre à la demande.",
-          "author": "Sophie Lambert",
-          "position": "Directrice, Clean-E Sofa"
-        }
+        ]
       }
     },
     "11": {
@@ -653,12 +598,7 @@
           "Mise en place d'un système de communication des résultats des matchs",
           "Développement d'une stratégie de contenu mettant en valeur les joueurs",
           "Formation des bénévoles aux outils simples de conception graphique"
-        ],
-        "testimonial": {
-          "quote": "Le conseil digital nous a permis de professionnaliser notre communication avec des ressources limitées. Nos supporters sont plus engagés et nous avons attiré de nouveaux joueurs grâce à notre présence en ligne améliorée.",
-          "author": "Marc Dubois",
-          "position": "Président, AS13F"
-        }
+        ]
       }
     },
     "10": {
@@ -704,12 +644,7 @@
           "Création de contenu éducatif sur les énergies renouvelables",
           "Optimisation technique du site pour améliorer les performances",
           "Mise en place d'un système de suivi des demandes de devis"
-        ],
-        "testimonial": {
-          "quote": "Notre nouveau site web a considérablement amélioré notre image et notre capacité à convaincre les clients. Le calculateur d'économies est particulièrement apprécié et nous aide à convertir davantage de prospects.",
-          "author": "Pierre Martin",
-          "position": "Directeur, Connect & Drive"
-        }
+        ]
       }
     },
     "9": {
@@ -755,12 +690,7 @@
           "Création d'un formulaire de contact intuitif et rassurant",
           "Intégration d'une section de témoignages dynamique",
           "Mise en place d'un système de réservation de rendez-vous en ligne"
-        ],
-        "testimonial": {
-          "quote": "Ma landing page a complètement transformé mon activité. Les futures mamans me contactent facilement et j'ai pu développer considérablement ma clientèle.",
-          "author": "Mélanie Dupont",
-          "position": "Fondatrice, Melytop"
-        }
+        ]
       }
     },
     "8": {
@@ -806,12 +736,7 @@
           "Création d'interfaces personnalisables selon les rôles",
           "Mise en place d'un système de notification intelligent",
           "Intégration avec les outils existants de l'entreprise"
-        ],
-        "testimonial": {
-          "quote": "Cette solution a révolutionné notre façon de gérer les projets et le temps de nos équipes. Les fonctionnalités d'analyse nous permettent d'identifier rapidement les opportunités d'optimisation et d'améliorer continuellement nos processus.",
-          "author": "Thomas Leroy",
-          "position": "CTO, Chronos Corp."
-        }
+        ]
       }
     },
 
@@ -858,12 +783,7 @@
           "Création de contenu optimisé pour le SEO",
           "Mise en place d'un système de devis personnalisé",
           "Intégration d'une galerie de projets"
-        ],
-        "testimonial": {
-          "quote": "La refonte de notre site a eu un impact immédiat sur notre activité. Le nombre de demandes de devis a explosé et notre visibilité en ligne s'est considérablement améliorée.",
-          "author": "Jean Bertrand",
-          "position": "Directeur, JABB"
-        }
+        ]
       }
     },
     "17": {
@@ -910,12 +830,7 @@
           "Développement d'un tableau de bord des tendances d'emploi régionales",
           "Création de flux de communication automatisés",
           "Intégration avec les initiatives de développement économique régionales"
-        ],
-        "testimonial": {
-          "quote": "Les services de conseil digital ont révolutionné notre façon de connecter les talents avec les opportunités dans notre région. Nous disposons maintenant d'informations basées sur les données qui nous aident à mieux servir les chercheurs d'emploi et les entreprises, tout en réduisant considérablement notre charge administrative.",
-          "author": "Jean-Pierre Rousseau",
-          "position": "Directeur, Plac'Occitanie"
-        }
+        ]
       }
     }
   }

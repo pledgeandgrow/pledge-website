@@ -38,11 +38,7 @@ export interface ClientProject {
     }[];
     benefits: string[];
     improvements: string[];
-    testimonial?: {
-      quote: string;
-      author: string;
-      position: string;
-    };
+
   };
 }
 
@@ -212,20 +208,7 @@ export function ClientModal({ project, isOpen, onClose }: ClientModalProps) {
               </ul>
             </div>
             
-            {project.outcome.testimonial && (
-              <div>
-                <h2 className="text-xl font-bold mb-2">{t('modal.testimonial')}</h2>
-                <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
-                  <blockquote className="text-lg italic text-gray-700 dark:text-gray-300">
-                    &quot;{project.outcome.testimonial.quote}&quot;
-                  </blockquote>
-                  <div className="mt-4">
-                    <p className="font-semibold">{project.outcome.testimonial.author}</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{project.outcome.testimonial.position}</p>
-                  </div>
-                </div>
-              </div>
-            )}
+
           </TabsContent>
         </Tabs>
       </DialogContent>
