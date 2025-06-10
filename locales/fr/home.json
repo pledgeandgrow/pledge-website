@@ -143,6 +143,30 @@
         "role": "PDG, Dualink",
         "quote": "Leur app de gestion du temps a vraiment optimisé nos processus. Notre équipe est bien plus productive maintenant !",
         "rating": 5
+      },
+      {
+        "name": "Jonathan ALEV",
+        "role": "PDG, JABB",
+        "quote": "La refonte de notre site web a considérablement amélioré notre présence en ligne et l'engagement des clients.",
+        "rating": 5
+      },
+      {
+        "name": "Alexandre BESOMBES",
+        "role": "PDG, Gudule",
+        "quote": "Le conseil IT nous a permis de clarifier notre vision et d'établir une feuille de route précise pour notre transformation digitale.",
+        "rating": 5
+      },
+      {
+        "name": "Melissa CHEGOURRI",
+        "role": "Indépendante, Melytop",
+        "quote": "Ma landing page a complètement transformé mon activité et m'a aidée à développer considérablement ma clientèle.",
+        "rating": 5
+      },
+      {
+        "name": "Naveck Ngoma",
+        "role": "PDG, Clean-E Sofa",
+        "quote": "Le conseil digital a transformé notre visibilité locale et nous a aidés à attirer davantage de clients.",
+        "rating": 5
       }
     ]
   },

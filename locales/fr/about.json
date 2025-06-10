@@ -79,7 +79,7 @@
     "description": "Rencontrez les personnes talentueuses qui rendent notre succès possible. Notre équipe diversifiée réunit des expertises de diverses disciplines pour offrir des résultats exceptionnels.",
     "categories": {
       "board": "Membres du Conseil",
-      "staff": "Personnel"
+      "staff": "Membres"
     },
     "board": {
       "mehdi": {
@@ -149,7 +149,7 @@
     "staff": {
       "louis": {
         "name": "Louis JUNQUA",
-        "role": "Membre du Personnel",
+        "role": "Membre",
         "companyRole": "Chargé commercial",
         "bio": "Louis gère nos relations commerciales et aide les clients à trouver les solutions parfaites pour leurs besoins.",
         "social": {
@@ -158,7 +158,7 @@
       },
       "lyna": {
         "name": "Lyna",
-        "role": "Membre du Personnel",
+        "role": "Membre",
         "companyRole": "Chargé de communication",
         "bio": "Lyna supervise notre stratégie de communication, s'assurant que notre message atteint efficacement le bon public.",
         "social": {
@@ -167,7 +167,7 @@
       },
       "mehdi_ouali": {
         "name": "Mehdi OUALI",
-        "role": "Membre du Personnel",
+        "role": "Membre",
         "companyRole": "Chargé de réseaux sociaux",
         "bio": "Mehdi gère notre présence sur les réseaux sociaux, créant du contenu engageant qui connecte avec notre communauté.",
         "social": {
@@ -176,7 +176,7 @@
       },
       "brandon": {
         "name": "Brandon MERYEL",
-        "role": "Membre du Personnel",
+        "role": "Membre",
         "companyRole": "Modérateur Discord",
         "bio": "Brandon maintient notre communauté Discord, assurant un environnement positif et favorable pour tous les membres.",
         "social": {
@@ -185,7 +185,7 @@
       },
       "rayane": {
         "name": "Rayane BEDRANI",
-        "role": "Membre du Personnel",
+        "role": "Membre",
         "companyRole": "Business Développeur",
         "bio": "Rayane identifie et poursuit de nouvelles opportunités commerciales, aidant notre entreprise à croître et à s'étendre sur de nouveaux marchés.",
         "social": {

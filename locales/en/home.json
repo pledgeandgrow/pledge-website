@@ -143,6 +143,30 @@
         "role": "CEO, Dualink",
         "quote": "Their time management app has really optimized our processes. Our team is much more productive now!",
         "rating": 5
+      },
+      {
+        "name": "Jonathan ALEV",
+        "role": "CEO, JABB",
+        "quote": "The redesign of our website has significantly improved our online presence and customer engagement.",
+        "rating": 5
+      },
+      {
+        "name": "Alexandre BESOMBES",
+        "role": "CEO, Gudule",
+        "quote": "The IT consulting services provided clear vision and a precise roadmap for our digital transformation.",
+        "rating": 5
+      },
+      {
+        "name": "Melissa CHEGOURRI",
+        "role": "Independent, Melytop",
+        "quote": "My landing page has completely transformed my business and helped me grow my client base significantly.",
+        "rating": 5
+      },
+      {
+        "name": "Naveck Ngoma",
+        "role": "CEO, Clean-E Sofa",
+        "quote": "The digital consulting has transformed our local visibility and helped us attract more customers.",
+        "rating": 5
       }
     ]
   },
