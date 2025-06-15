@@ -11,7 +11,8 @@ import {
   Database, 
   Globe, 
   Layers, 
-  Shield
+  Shield,
+  Lightbulb
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "@/hooks/useTranslations";
@@ -55,10 +56,10 @@ const getItems = (t: (key: string) => string): RoadmapItem[] => [
     icon: <Layers className="h-5 w-5" />
   },
   {
-    title: t('roadmap.items.anonymity.title') || "Anonymity & Proprietary Tools",
-    description: t('roadmap.items.anonymity.description') || "Our own suite of privacy-focused development tools",
-    timeline: t('roadmap.items.anonymity.timeline') || "Q1 2027",
-    icon: <Shield className="h-5 w-5" />
+    title: t('roadmap.items.anonymity.title') || "Innovation Hub",
+    description: t('roadmap.items.anonymity.description') || "Development of applications tied to innovations and supporting projects as an incubator",
+    timeline: t('roadmap.items.anonymity.timeline') || "Q2 2027",
+    icon: <Lightbulb className="h-5 w-5" />
   }
 ];
 

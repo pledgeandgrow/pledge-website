@@ -85,7 +85,7 @@ export default function MembershipPlans() {
               <CardContent className="flex-grow">
                 <div className="mb-6">
                   <p className="text-4xl font-bold">
-                    €{plan.annualPrice.toLocaleString()}
+                    €{plan.annualPrice.toLocaleString('en-US')}
                   </p>
                   <p className="text-muted-foreground text-sm">
                     {t('plans.premium.period')}

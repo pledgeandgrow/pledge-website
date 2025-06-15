@@ -1,7 +1,8 @@
 "use client";
 
+import { Suspense, lazy } from "react";
 import { 
-  Hero, 
+  Hero,
   About, 
   Advantages, 
   Services, 
@@ -16,6 +17,25 @@ import { OrganizationSchema, WebsiteSchema, ServiceSchema, CanonicalUrl } from "
 
 // Section IDs removed as they were unused
 
+// Simple loading fallback for sections
+const SectionLoading = ({ height = "h-64" }: { height?: string }) => (
+  <div className={`w-full ${height} flex items-center justify-center`}>
+    <div className="animate-pulse flex flex-col items-center gap-4">
+      <div className="h-8 w-32 bg-muted/60 rounded"></div>
+      <div className="h-4 w-48 bg-muted/60 rounded"></div>
+    </div>
+  </div>
+);
+
+// Section wrapper with suspense
+const Section = ({ id, children }: { id: string; children: React.ReactNode }) => (
+  <section id={id}>
+    <Suspense fallback={<SectionLoading />}>
+      {children}
+    </Suspense>
+  </section>
+);
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -26,37 +46,37 @@ export default function Home() {
       <Navbar />
       
       <main className="flex-grow pt-16">
-        <section id="hero">
+        <Section id="hero">
           <Hero />
-        </section>
+        </Section>
         
-        <section id="about">
+        <Section id="about">
           <About />
-        </section>
+        </Section>
         
-        <section id="advantages">
+        <Section id="advantages">
           <Advantages />
-        </section>
+        </Section>
         
-        <section id="services">
+        <Section id="services">
           <Services />
-        </section>
+        </Section>
         
-        <section id="case-studies">
+        <Section id="case-studies">
           <CaseStudies />
-        </section>
+        </Section>
         
-        {/* <section id="team">
+        {/* <Section id="team">
           <Team />
-        </section> */}
+        </Section> */}
         
-        <section id="testimonials">
+        <Section id="testimonials">
           <Testimonials />
-        </section>
+        </Section>
         
-        <section id="cta">
+        <Section id="cta">
           <Cta />
-        </section>
+        </Section>
       </main>
       <Footer />
     </div>

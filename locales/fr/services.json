@@ -18,7 +18,7 @@
     "description": "Nous concevons et développons des produits numériques qui aident les entreprises à se développer et à réussir dans le paysage numérique.",
     "services": {
       "website": {
-        "title": "Site Web",
+        "title": "Web",
         "description": "Sites web professionnels pour entreprises et organisations avec design responsive."
       },
       "saas": {
@@ -34,7 +34,7 @@
         "description": "Logiciels personnalisés pour répondre aux besoins spécifiques de votre entreprise."
       },
       "video-games": {
-        "title": "Jeux Vidéo",
+        "title": "Jeux",
         "description": "Jeux vidéo captivants pour plusieurs plateformes avec des expériences immersives."
       }
     }
@@ -74,7 +74,7 @@
         "description": "Services de documentation complets pour vos produits numériques et systèmes techniques."
       },
       "ux-ui-design": {
-        "title": "UX/UI Design",
+        "title": "UX/UI",
         "description": "Services de conception centrés sur l'utilisateur qui créent des expériences numériques intuitives."
       },
       "seo": {
@@ -157,6 +157,6 @@
       }
     },
     "disclaimer": "L'adhésion VIP est disponible sur demande et est soumise à approbation. Contactez-nous pour discuter de votre éligibilité et de la façon dont nous pouvons adapter nos services VIP à vos besoins spécifiques.",
-    "contactButton": "Contactez-nous pour l'Accès VIP"
+    "contactButton": "En Savoir plus"
   }
 }

@@ -18,7 +18,7 @@
     "description": "We design and develop digital products that help businesses grow and succeed in the digital landscape.",
     "services": {
       "website": {
-        "title": "Website",
+        "title": "Web",
         "description": "Professional websites for businesses and organizations with responsive design."
       },
       "saas": {
@@ -34,7 +34,7 @@
         "description": "Custom software to meet the specific needs of your business."
       },
       "video-games": {
-        "title": "Video Games",
+        "title": "Games",
         "description": "Engaging video games for multiple platforms with immersive experiences."
       }
     }
@@ -74,7 +74,7 @@
         "description": "Comprehensive documentation services for your digital products and technical systems."
       },
       "ux-ui-design": {
-        "title": "UX/UI Design",
+        "title": "UX/UI",
         "description": "User-centered design services that create intuitive digital experiences."
       },
       "seo": {
@@ -157,6 +157,6 @@
       }
     },
     "disclaimer": "VIP membership is available by application and is subject to approval. Contact us to discuss your eligibility and how we can tailor our VIP services to your specific needs.",
-    "contactButton": "Contact Us for VIP Access"
+    "contactButton": "Learn More"
   }
 }

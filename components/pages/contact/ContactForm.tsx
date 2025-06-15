@@ -61,7 +61,8 @@ export default function ContactForm() {
     "Ambassadors", 
     "Feedback", 
     "Careers", 
-    "VIP"
+    "VIP",
+    "Grants"
   ];
   
   // Format the URL subject to match our options (capitalize first letter, handle URL encoding)
@@ -82,7 +83,9 @@ export default function ContactForm() {
     "ambassadors": "Ambassadors",
     "feedback": "Feedback",
     "careers": "Careers",
-    "vip": "VIP"
+    "vip": "VIP",
+    "grants": "Grants",
+    "grant inquiry": "Grants"
   };
   
   // Handle dynamic subjects that contain variable parts
@@ -136,16 +139,26 @@ export default function ContactForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...values,
-          emailSubject: `New Contact Form Submission: ${values.subject}`
+          name: values.name,
+          email: values.email,
+          subject: values.subject || 'General Inquiry',
+          message: values.message,
+          company: values.company || '',
+          phone: values.phone || '',
+          emailSubject: `New Contact Form Submission: ${values.subject || 'General Inquiry'}`
         }),
       });
       
-      const data = await response.json();
-      
+      // Only try to parse JSON if the response is ok
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to send message');
+        // Get status text as fallback error message
+        const errorMessage = `Error ${response.status}: ${response.statusText}`;
+        console.error('API error:', errorMessage);
+        throw new Error('Failed to send message. Server returned an error.');
       }
+      
+      // Now safely parse the JSON
+      const data = await response.json();
       
       // Success - track successful submission
       trackFormSubmission('contact_form', true);
@@ -272,6 +285,7 @@ export default function ContactForm() {
                     <SelectItem value="Feedback">Feedback</SelectItem>
                     <SelectItem value="Careers">Careers</SelectItem>
                     <SelectItem value="VIP">VIP</SelectItem>
+                    <SelectItem value="Grants">Grants</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />

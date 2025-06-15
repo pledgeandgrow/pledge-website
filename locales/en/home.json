@@ -10,8 +10,8 @@
   },
   "about": {
     "title": "We're not just another agency",
-    "description": "We believe in transparency, collaboration, and delivering results that exceed expectations. Our approach is centered around understanding your unique needs and crafting solutions that drive growth and innovation.",
-    "ctaLearnMore": "Learn more about us"
+    "description": "Our approach is centered around understanding your unique needs and crafting solutions that drive growth and innovation.",
+    "ctaLearnMore": "Learn more"
   },
   "whyChooseUs": {
     "title": "Why Choose Pledge & Grow?",
@@ -91,7 +91,7 @@
         "description": "Search engine optimization strategies to improve visibility, drive traffic, and increase conversions."
       },
       "uxUiDesign": {
-        "title": "UX/UI Design",
+        "title": "UX/UI",
         "description": "User-centered design that creates intuitive, engaging, and accessible digital experiences."
       }
     }
@@ -99,15 +99,15 @@
   "caseStudies": {
     "title": "Case Studies",
     "description": "Explore our recent projects and see how we've helped businesses achieve their goals.",
-    "viewAll": "View All Case Studies"
+    "viewAll": "View More"
   },
   "buttons": {
     "viewCaseStudy": "View Case Study",
     "viewAllCaseStudies": "View All Case Studies",
-    "viewAll": "View All Services"
+    "viewAll": "View All"
   },
   "testimonials": {
-    "title": "What Our Clients Say",
+    "title": "Our Reviews",
     "description": "Hear from businesses that have transformed their digital presence with our solutions.",
     "leaveReview": "Leave a review",
     "defaultName": "Client",
@@ -176,9 +176,9 @@
     "viewTeam": "View Full Team"
   },
   "cta": {
-    "title": "Ready to transform your digital presence?",
-    "description": "Let's discuss how we can help you achieve your business goals with our digital solutions.",
-    "button": "Contact Us Today"
+    "title": "Ready to digitalize your business?",
+    "description": "Let's discuss how we can help you achieve your business goals",
+    "button": "Contact Us"
   },
   "accessibility": {
     "previous": "Previous",

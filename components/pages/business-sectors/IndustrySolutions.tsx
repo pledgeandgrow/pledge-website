@@ -25,7 +25,6 @@ interface Industry {
   description: string;
   icon: React.ReactNode;
   solutions: string[];
-  challenges: string[];
   caseStudyAvailable: boolean;
 }
 
@@ -55,7 +54,6 @@ export default function IndustrySolutions() {
       description: t('industrySolutions.sectors.retail.description'),
       icon: <ShoppingBag className="h-10 w-10 text-primary" />,
       solutions: t('industrySolutions.sectors.retail.keyFeatures', { returnObjects: true }) as string[],
-      challenges: t('industrySolutions.sectors.retail.challenges', { returnObjects: true }) as string[],
       caseStudyAvailable: true
     },
     {
@@ -64,7 +62,6 @@ export default function IndustrySolutions() {
       description: t('industrySolutions.sectors.manufacturing.description'),
       icon: <Building2 className="h-10 w-10 text-primary" />,
       solutions: t('industrySolutions.sectors.manufacturing.keyFeatures', { returnObjects: true }) as string[],
-      challenges: t('industrySolutions.sectors.manufacturing.challenges', { returnObjects: true }) as string[],
       caseStudyAvailable: true
     },
     {
@@ -73,7 +70,6 @@ export default function IndustrySolutions() {
       description: t('industrySolutions.sectors.healthcare.description'),
       icon: <Stethoscope className="h-10 w-10 text-primary" />,
       solutions: t('industrySolutions.sectors.healthcare.keyFeatures', { returnObjects: true }) as string[],
-      challenges: t('industrySolutions.sectors.healthcare.challenges', { returnObjects: true }) as string[],
       caseStudyAvailable: true
     },
     {
@@ -82,7 +78,6 @@ export default function IndustrySolutions() {
       description: t('industrySolutions.sectors.education.description'),
       icon: <GraduationCap className="h-10 w-10 text-primary" />,
       solutions: t('industrySolutions.sectors.education.keyFeatures', { returnObjects: true }) as string[],
-      challenges: t('industrySolutions.sectors.education.challenges', { returnObjects: true }) as string[],
       caseStudyAvailable: false
     },
     {
@@ -91,34 +86,30 @@ export default function IndustrySolutions() {
       description: t('industrySolutions.sectors.finance.description'),
       icon: <Briefcase className="h-10 w-10 text-primary" />,
       solutions: t('industrySolutions.sectors.finance.keyFeatures', { returnObjects: true }) as string[],
-      challenges: t('industrySolutions.sectors.finance.challenges', { returnObjects: true }) as string[],
       caseStudyAvailable: true
     },
     {
       id: "logistics",
-      title: "Logistics & Transportation",
-      description: "Technology solutions that optimize routes, enhance tracking capabilities, and improve overall supply chain efficiency.",
+      title: t('industrySolutions.sectors.logistics.title', { defaultValue: "Logistics" }),
+      description: t('industrySolutions.sectors.logistics.description', { defaultValue: "Technology solutions that optimize routes, enhance tracking capabilities, and improve overall supply chain efficiency." }),
       icon: <Truck className="h-10 w-10 text-primary" />,
-      solutions: ["Fleet management", "Route optimization", "Shipment tracking", "Warehouse management", "Supply chain visibility"],
-      challenges: ["Route efficiency", "Real-time tracking", "Fuel management", "Delivery timeframes"],
+      solutions: t('industrySolutions.sectors.logistics.keyFeatures', { returnObjects: true, defaultValue: ["Fleet management", "Route optimization", "Shipment tracking", "Warehouse management"] }) as string[],
       caseStudyAvailable: false
     },
     {
       id: "hospitality",
-      title: "Hospitality & Tourism",
-      description: "Digital solutions that enhance guest experiences, streamline bookings, and optimize operational efficiency in hospitality businesses.",
+      title: t('industrySolutions.sectors.hospitality.title', { defaultValue: "Hospitality" }),
+      description: t('industrySolutions.sectors.hospitality.description', { defaultValue: "Digital solutions that enhance guest experiences, streamline bookings, and optimize operational efficiency in hospitality businesses." }),
       icon: <Hotel className="h-10 w-10 text-primary" />,
-      solutions: ["Booking systems", "Guest experience platforms", "Property management", "Revenue management", "Contactless solutions"],
-      challenges: ["Guest expectations", "Seasonal demand", "Staff efficiency", "Online reputation management"],
+      solutions: t('industrySolutions.sectors.hospitality.keyFeatures', { returnObjects: true, defaultValue: ["Booking systems", "Guest experience platforms", "Property management", "Revenue management"] }) as string[],
       caseStudyAvailable: true
     },
     {
       id: "government",
-      title: "Government & Public Sector",
-      description: "Secure and accessible digital solutions that improve citizen services, enhance internal processes, and ensure data protection.",
+      title: t('industrySolutions.sectors.government.title'),
+      description: t('industrySolutions.sectors.government.description'),
       icon: <Landmark className="h-10 w-10 text-primary" />,
-      solutions: ["Citizen service portals", "Document management", "Public information systems", "Regulatory compliance", "Data security"],
-      challenges: ["Legacy system integration", "Budget constraints", "Data privacy", "Accessibility requirements"],
+      solutions: t('industrySolutions.sectors.government.keyFeatures', { returnObjects: true }) as string[],
       caseStudyAvailable: false
     }
   ];
@@ -259,37 +250,16 @@ export default function IndustrySolutions() {
                   </Button>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="grid grid-cols-1 gap-6 mb-8">
                   <div>
-                    <h4 className="text-lg font-semibold mb-3">{t('industrySolutions.keySolutions', { defaultValue: 'Key Solutions' })}</h4>
+                    <h4 className="text-lg font-semibold mb-3">{t('industrySolutions.solutionsTitle', { defaultValue: 'Our Solutions' })}</h4>
                     <ul className="space-y-2">
-                      {Array.isArray(activeIndustry.solutions) ? activeIndustry.solutions.map((solution, index) => (
-                        <li key={index} className="flex items-center gap-2">
-                          <div className="bg-primary/10 p-1 rounded-full">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                              <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                          </div>
-                          {solution}
+                      {activeIndustry.solutions.map((solution: string, index: number) => (
+                        <li key={index} className="flex items-start">
+                          <div className="mr-2 mt-1 text-primary">•</div>
+                          <div>{solution}</div>
                         </li>
-                      )) : <li className="text-muted-foreground">{t('industrySolutions.noSolutions', { defaultValue: 'No specific solutions listed.' })}</li>}
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-3">{t('industrySolutions.industryChallenges', { defaultValue: 'Industry Challenges' })}</h4>
-                    <ul className="space-y-2">
-                      {Array.isArray(activeIndustry.challenges) ? activeIndustry.challenges.map((challenge, index) => (
-                        <li key={index} className="flex items-center gap-2">
-                          <div className="bg-primary/10 p-1 rounded-full">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                              <circle cx="12" cy="12" r="10"></circle>
-                              <line x1="12" y1="8" x2="12" y2="16"></line>
-                              <line x1="8" y1="12" x2="16" y2="12"></line>
-                            </svg>
-                          </div>
-                          {challenge}
-                        </li>
-                      )) : <li className="text-muted-foreground">{t('industrySolutions.noChallenges', { defaultValue: 'No specific challenges listed.' })}</li>}
+                      ))}
                     </ul>
                   </div>
                 </div>

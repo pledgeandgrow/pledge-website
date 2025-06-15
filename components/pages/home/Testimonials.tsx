@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, Suspense } from "react";
 import { Star, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "@/hooks/useTranslations";
+import { TestimonialSkeleton } from "@/components/ui/LoadingSkeleton";
 
 type Testimonial = {
   name: string;
@@ -14,18 +15,83 @@ type Testimonial = {
   rating: number;
 };
 
-export default function Testimonials() {
+function TestimonialsContent() {
   const { t } = useTranslations("home");
   const [currentIndex, setCurrentIndex] = useState(0);
   // For desktop view, we'll show 3 cards at a time
   const [desktopStartIndex, setDesktopStartIndex] = useState(0);
   const cardsPerPage = 3;
   
-  // Get testimonials from translation files
+  // Get testimonials from translation files with better error handling
   const testimonials = useMemo(() => {
     try {
-      const items = t('testimonials.items', { returnObjects: true });
-      return Array.isArray(items) ? items as Testimonial[] : [];
+      // First try to get the testimonials directly
+      let items;
+      try {
+        // Try to get items directly as an array
+        items = t('testimonials.items', { returnObjects: true });
+      } catch (e) {
+        console.warn('Error getting testimonials directly:', e);
+        // Fallback to hardcoded testimonials if translation fails
+        items = [
+          {
+            name: "Aida BEN SALAH",
+            role: "CEO, Global Corporate Business",
+            quote: "Pledge & Grow really transformed our online presence. Their technical expertise is impressive!",
+            rating: 5
+          },
+          {
+            name: "Ali TOMBARI",
+            role: "CEO, ERB-BTP",
+            quote: "They perfectly understood our needs and created a site that truly represents our brand. Very satisfied!",
+            rating: 5
+          },
+          {
+            name: "Boubaker SRIRI",
+            role: "Founder, Connect & Drive",
+            quote: "Thanks to them, we've reached new markets and increased our revenue. Excellent work!",
+            rating: 5
+          }
+        ];
+      }
+      
+      // Safety checks
+      if (!items) {
+        console.warn('No testimonials found in translation files');
+        return [];
+      }
+      
+      // Handle case where items might be an object instead of array
+      if (!Array.isArray(items)) {
+        console.warn('Testimonials is not an array, attempting to convert:', items);
+        // Try to convert object to array if possible
+        if (typeof items === 'object') {
+          const convertedItems = Object.values(items);
+          if (Array.isArray(convertedItems) && convertedItems.length > 0) {
+            items = convertedItems;
+          } else {
+            return [];
+          }
+        } else {
+          return [];
+        }
+      }
+      
+      // Validate each testimonial item
+      return items.filter(item => {
+        const isValid = 
+          item && 
+          typeof item === 'object' && 
+          typeof item.name === 'string' && 
+          typeof item.role === 'string' && 
+          typeof item.quote === 'string' && 
+          (typeof item.rating === 'number' || item.rating === undefined);
+        
+        if (!isValid) {
+          console.warn('Invalid testimonial item:', item);
+        }
+        return isValid;
+      }) as Testimonial[];
     } catch (error) {
       console.error('Error loading testimonials:', error);
       return [];
@@ -72,6 +138,27 @@ export default function Testimonials() {
     ));
   };
 
+  // If no testimonials are available, show a minimal version
+  if (!testimonials.length) {
+    return (
+      <section className="bg-background text-foreground py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12 animate-fade-up">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              {t("testimonials.title")}
+            </h2>
+            <p className="text-muted-foreground text-lg md:text-xl">
+              {t("testimonials.description")}
+            </p>
+          </div>
+          <div className="text-center py-8">
+            <p className="text-muted-foreground">{t("testimonials.noTestimonialsYet") || "No testimonials available yet."}</p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="bg-background text-foreground py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -86,7 +173,7 @@ export default function Testimonials() {
         
         {/* Desktop View - 3 cards per row with navigation */}
         <div className="hidden md:block relative">
-          <div className="grid gap-8 grid-cols-3">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {testimonials
               .slice(desktopStartIndex, desktopStartIndex + cardsPerPage)
               .map((testimonial, index) => (
@@ -153,7 +240,7 @@ export default function Testimonials() {
                   </blockquote>
                   <div className="flex items-center">
                     <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                      {testimonials[currentIndex]?.name?.charAt(0) || 'C'}
+                      {(testimonials[currentIndex]?.name?.charAt(0) || 'C').toUpperCase()}
                     </div>
                     <div className="ml-3">
                       <h3 className="text-base font-medium">{testimonials[currentIndex]?.name || t('testimonials.defaultName')}</h3>
@@ -199,7 +286,7 @@ export default function Testimonials() {
         </div>
         
         {/* Leave a Review Button */}
-        <div className="mt-12 text-center">
+        <div className="mt-10 text-center">
           <Button asChild className="group">
             <a 
               href="https://g.co/kgs/Nkzc3iu" 
@@ -214,5 +301,33 @@ export default function Testimonials() {
         </div>
       </div>
     </section>
+  );
+}
+
+// Wrap the component with suspense
+export default function Testimonials() {
+  return (
+    <Suspense fallback={
+      <section className="bg-background text-foreground py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
+            <p className="text-muted-foreground text-lg md:text-xl">
+              Hear from businesses that have transformed their digital presence with our solutions.
+            </p>
+          </div>
+          <div className="hidden md:grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <TestimonialSkeleton />
+            <TestimonialSkeleton />
+            <TestimonialSkeleton />
+          </div>
+          <div className="md:hidden max-w-sm mx-auto">
+            <TestimonialSkeleton />
+          </div>
+        </div>
+      </section>
+    }>
+      <TestimonialsContent />
+    </Suspense>
   );
 }

@@ -135,8 +135,18 @@
         "name": "Chronos Corp.",
         "logo": "/images/partners/chronos.svg",
         "category": "Exclusive",
-        "description": "Fournisseur de solutions de gestion du temps et de productivité avec des offres exclusives pour les membres de notre réseau d'affaires.",
-        "website": "https://example.com/chronos",
+        "description": "Fournisseur de solutions de gestion du temps et de productivité avec des offres exclusives pour les membres de notre réseau professionnel.",
+        "website": "https://www.instagram.com/chronos.corps/",
+        "partnerType": "exclusive"
+      },
+      {
+        "id": "16",
+        "name": "Sharka UGC",
+        "logo": "/images/partners/sharka.svg",
+        "category": "Exclusive",
+        "description": "Plateforme premium de contenu généré par les utilisateurs fournissant des outils propulsés par l'IA pour la création, la modération et l'analyse de contenu pour les marques de luxe.",
+        "website": "https://sharka-ugc.com",
+        "featured": true,
         "partnerType": "exclusive"
       }
     ],

@@ -4,9 +4,8 @@
     "description": "Solutions numériques sur mesure pour diverses industries, conçues pour répondre à vos défis et opportunités spécifiques à votre secteur."
   },
   "overview": {
-    "title": "Solutions Numériques Spécifiques à l'Industrie",
-    "description": "Nous comprenons que chaque industrie fait face à des défis et opportunités uniques. Notre expertise sectorielle nous permet de fournir des solutions numériques sur mesure qui répondent à vos besoins commerciaux particuliers.",
-    "expertise": "Avec une expérience approfondie dans de multiples industries, nous combinons la connaissance du secteur avec l'expertise technique pour créer des solutions qui génèrent des résultats significatifs pour votre entreprise."
+    "title": "Solutions Spécifiques",
+    "description": "Nous comprenons que chaque industrie fait face à des défis et opportunités uniques. Notre expertise sectorielle nous permet de fournir des solutions numériques sur mesure qui répondent à vos besoins commerciaux particuliers."
   },
   "industrySolutions": {
     "title": "Nos Solutions par Industrie",
@@ -19,7 +18,7 @@
     "discussProject": "Discuter de Votre Projet",
     "sectors": {
       "finance": {
-        "title": "Finance & Banque",
+        "title": "Finance",
         "description": "Solutions numériques sécurisées, conformes et innovantes pour les institutions financières, de la banque mobile aux systèmes avancés de détection de fraude.",
         "keyFeatures": [
           "Plateformes de transactions sécurisées",
@@ -29,7 +28,7 @@
         ]
       },
       "healthcare": {
-        "title": "Santé & Sciences de la Vie",
+        "title": "Santé",
         "description": "Solutions numériques qui améliorent les soins aux patients, rationalisent les opérations et assurent la conformité aux réglementations de santé.",
         "keyFeatures": [
           "Systèmes de gestion des patients",
@@ -39,7 +38,7 @@
         ]
       },
       "retail": {
-        "title": "Commerce de Détail & E-commerce",
+        "title": "Commerce de Détail",
         "description": "Expériences omnicanales qui stimulent les ventes, améliorent l'engagement client et optimisent la gestion des stocks.",
         "keyFeatures": [
           "Plateformes e-commerce",
@@ -49,7 +48,7 @@
         ]
       },
       "manufacturing": {
-        "title": "Fabrication & Industrie",
+        "title": "Fabrication",
         "description": "Solutions de transformation numérique qui optimisent la production, améliorent le contrôle qualité et permettent la maintenance prédictive.",
         "keyFeatures": [
           "Surveillance de production IoT",
@@ -59,7 +58,7 @@
         ]
       },
       "education": {
-        "title": "Éducation & E-learning",
+        "title": "Éducation",
         "description": "Plateformes innovantes qui améliorent les expériences d'apprentissage, optimisent l'efficacité administrative et permettent l'éducation à distance.",
         "keyFeatures": [
           "Systèmes de gestion d'apprentissage",
@@ -69,19 +68,41 @@
         ]
       },
       "government": {
-        "title": "Gouvernement & Secteur Public",
+        "title": "Secteur Public",
         "description": "Services numériques sécurisés et accessibles qui améliorent l'engagement citoyen et rationalisent les processus administratifs.",
         "keyFeatures": [
           "Portails de services aux citoyens",
-          "Gestion sécurisée de documents",
+          "Gestion sécurisée des documents",
           "Systèmes d'information publique",
-          "Automatisation des flux administratifs"
+          "Automatisation des flux de travail administratifs"
+        ]
+      },
+      "logistics": {
+        "title": "Logistique",
+        "description": "Solutions technologiques qui optimisent les itinéraires, améliorent les capacités de suivi et augmentent l'efficacité globale de la chaîne d'approvisionnement.",
+        "keyFeatures": [
+          "Gestion de flotte",
+          "Optimisation des itinéraires",
+          "Suivi des expéditions",
+          "Gestion d'entrepôt",
+          "Visibilité de la chaîne d'approvisionnement"
+        ]
+      },
+      "hospitality": {
+        "title": "Hôtellerie",
+        "description": "Solutions numériques qui améliorent l'expérience client, rationalisent les réservations et optimisent l'efficacité opérationnelle dans les entreprises hôtelières.",
+        "keyFeatures": [
+          "Systèmes de réservation",
+          "Plateformes d'expérience client",
+          "Gestion immobilière",
+          "Gestion des revenus",
+          "Solutions sans contact"
         ]
       }
     }
   },
   "approach": {
-    "title": "Notre Approche Spécifique au Secteur",
+    "title": "Notre Approche",
     "description": "Nous suivons une méthodologie éprouvée pour garantir que nos solutions répondent aux exigences uniques de votre industrie.",
     "steps": {
       "research": {
@@ -109,7 +130,7 @@
   "cta": {
     "title": "Prêt à Transformer Votre Industrie ?",
     "description": "Discutons de la façon dont notre expertise sectorielle peut vous aider à surmonter les défis et à saisir les opportunités dans votre industrie.",
-    "button": "Discuter de Vos Besoins Sectoriels",
-    "contactInfo": "Ou envoyez-nous un email à sectors@pledgeandgrow.com"
+    "button": "Voir nos solutions",
+    "contactInfo": "Contactez-nous"
   }
 }

@@ -16,7 +16,7 @@
       },
       "connect": {
         "title": "Connecter",
-        "description": "Lier l'innovation aux besoins des entreprises grâce à des solutions technologiques stratégiques.",
+        "description": "Lier l'innovation aux besoins des entreprises grâce à des solutions technologiques.",
         "icon": "Link2"
       },
       "digitalize": {
@@ -54,29 +54,29 @@
     "timeline": {
       "founding": {
         "year": "2022",
-        "title": "La Vision Commence",
-        "description": "Débuté comme un groupe de freelances et d'entrepreneurs offrant des services dans différents domaines sous notre marque et nos noms. Nous prévoyions de construire une agence de conseil offrant des solutions sur mesure dans divers domaines."
+        "title": "Origine ",
+        "description": "Débuté comme un groupe de freelances et d'entrepreneurs offrant des services dans différents domaines sous notre marque et nos noms."
       },
       "expansion": {
         "year": "2023",
-        "title": "Équipe Croissante & Clients Divers",
-        "description": "L'équipe s'est agrandie et a commencé à travailler avec des clients de différents domaines. Nous avons constaté une demande particulièrement importante dans les secteurs du marketing et de l'informatique, ce qui a contribué à façonner notre orientation future."
+        "title": "Développement",
+        "description": "L'équipe s'est agrandie et a commencé à travailler avec des clients de différents domaines."
       },
       "innovation": {
         "year": "2024",
-        "title": "Établissement Officiel & Spécialisation",
-        "description": "Nous avons complètement fait la transition et nous nous sommes spécialisés dans différents domaines et secteurs informatiques en raison de demandes accrues et d'un réseau en expansion. L'entreprise a été officiellement créée en juin de cette année, marquant une étape importante dans notre parcours."
+        "title": "Déclaration & Spécialisation",
+        "description": "Suite à une réorientation stratégique, nous nous concentrons aujourd’hui sur des domaines variés de l’IT. L’entreprise a été fondée officiellement en juin 2025."
       },
       "ecosystem": {
         "year": "2025",
         "title": "Nouvelle Vision & Expansion",
-        "description": "Mise en œuvre d'une nouvelle feuille de route, affinement de notre vision, lancement de notre nouveau site web et établissement d'objectifs ambitieux pour l'avenir. Cela marque le début d'un nouveau chapitre passionnant avec bien plus à venir."
+        "description": "Nouveau site lancé, infrastructure optimisée, équipe réorganisée et objectifs ambitieux fixés. Un nouveau chapitre commence."
       }
     }
   },
   "team": {
     "title": "Notre Équipe",
-    "description": "Rencontrez les personnes talentueuses qui rendent notre succès possible. Notre équipe diversifiée réunit des expertises de diverses disciplines pour offrir des résultats exceptionnels.",
+    "description": "Rencontrez les personnes talentueuses qui rendent notre succès possible.",
     "categories": {
       "board": "Membres du Conseil",
       "staff": "Membres"
@@ -196,7 +196,7 @@
   },
   "cta": {
     "title": "Prêt à Démarrer Votre Projet ?",
-    "description": "Travaillons ensemble pour donner vie à votre vision grâce à notre expertise en conception et développement.",
+    "description": "Travaillons ensemble pour donner vie à votre vision.",
     "buttons": {
       "contact": "Contactez-nous",
       "services": "Nos Services"

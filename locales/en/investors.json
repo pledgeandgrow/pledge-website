@@ -33,7 +33,7 @@
         "description": "Serving clients in over 5 countries worldwide"
       },
       "localRecognition": {
-        "title": "Local Recognition",
+        "title": "Recognition",
         "description": "Recognized locally in France and steadily increasing our reach"
       }
     },
@@ -43,7 +43,7 @@
     },
     "vision": {
       "title": "Our Vision",
-      "description": "To become the leading digital transformation partner for businesses across Europe, known for our innovative solutions, exceptional service, and measurable impact."
+      "description": ""
     }
   },
   "investorsPhase": {
@@ -63,7 +63,7 @@
           "Limited availability"
         ],
         "cta": {
-          "text": "Inquire About Seed Investment",
+          "text": "Inquire About",
           "link": "/contact?subject=Seed%20Investment"
         }
       },

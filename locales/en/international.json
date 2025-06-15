@@ -42,10 +42,10 @@
   },
   "localizationServices": {
     "title": "Localization Services",
-    "description": "We help businesses reach global audiences with comprehensive localization services. From translation to cultural adaptation, we ensure your digital products resonate worldwide.",
+    "description": "We help businesses reach global audiences with comprehensive localization services.",
     "services": {
       "webAppLocalization": {
-        "title": "Website & App Localization",
+        "title": "Localization",
         "description": "Comprehensive localization of your digital products for global markets, including UI/UX adaptation, content translation, and cultural optimization.",
         "features": [
           "Multi-language interface implementation",
@@ -55,7 +55,7 @@
         ]
       },
       "contentTranslation": {
-        "title": "Content Translation",
+        "title": "Translation",
         "description": "Professional translation services for all your digital content, ensuring accurate and culturally appropriate messaging across languages.",
         "features": [
           "Website and app content translation",
@@ -65,7 +65,7 @@
         ]
       },
       "multilingualDevelopment": {
-        "title": "Multilingual Development",
+        "title": "Multilingual",
         "description": "Technical implementation of multilingual capabilities in your applications, with proper internationalization (i18n) architecture.",
         "features": [
           "i18n framework implementation",
@@ -75,7 +75,7 @@
         ]
       },
       "globalCompliance": {
-        "title": "Global Compliance",
+        "title": "Compliance",
         "description": "Ensuring your digital products comply with regional regulations and standards across different markets.",
         "features": [
           "GDPR, CCPA, and other privacy regulations",

@@ -4,10 +4,8 @@
     "description": "Join our Discord community to connect with like-minded professionals, get real-time support, and stay updated on the latest Pledge & Grow events and resources."
   },
   "hero": {
-    "title": "Join Our Discord Community",
+    "title": "Join Our Community",
     "description": "Connect with like-minded professionals, get real-time support, and stay updated on the latest Pledge & Grow events and resources.",
-    "joinButton": "Join Discord",
-    "learnMoreButton": "Learn More",
     "imageAlt": "Pledge & Grow Discord Community",
     "memberCount": "{{count}}+ members and growing",
     "activeNow": "{{count}}+ active now"

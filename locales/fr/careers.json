@@ -161,7 +161,7 @@
     "startDate": "Date de Début"
   },
   "cta": {
-    "title": "Prêt à Rejoindre Notre Équipe ?",
+    "title": "Prêt à  Nous Rejoindre?",
     "description": "Franchissez la prochaine étape de votre parcours professionnel. Explorez nos postes ouverts ou envoyez-nous votre CV pour de futures opportunités.",
     "learnAboutUs": "En savoir plus sur nous",
     "joinOurTeam": "Rejoindre notre équipe",
@@ -197,17 +197,7 @@
         "Diplôme universitaire en commerce, marketing ou domaine connexe; MBA préféré",
         "Volonté de voyager selon les besoins (environ 25%)"
       ],
-      "benefits": [
-        "Salaire de base compétitif plus primes basées sur la performance",
-        "Assurance santé, dentaire et vision complète",
-        "Plan de retraite avec contribution de l'entreprise",
-        "Congés payés généreux et arrangements de travail flexibles",
-        "Allocation pour le développement professionnel et la formation continue",
-        "Événements sponsorisés par l'entreprise et activités de team building",
-        "Bureau moderne dans le centre de Paris avec options de travail hybride"
-      ],
       "applicationProcess": "Notre processus d'embauche pour ce poste comprend un entretien téléphonique initial, suivi de deux séries d'entretiens avec l'équipe de direction et les parties prenantes clés. Les candidats finalistes seront invités à présenter un plan stratégique de vente sur 90 jours.",
-      "salary": "120 000 € - 150 000 € par an plus primes de performance",
       "skills": ["Leadership Commercial", "Planification Stratégique", "Gestion d'Équipe", "Développement Commercial", "Gestion de la Relation Client", "Analyse de Marché", "Négociation", "Systèmes CRM"],
       "reportingTo": "PDG",
       "startDate": "Immédiate"
@@ -240,17 +230,7 @@
         "Maîtrise de base des outils de design (Canva, Adobe Creative Suite) est un plus",
         "Organisé avec une bonne attention aux détails"
       ],
-      "benefits": [
-        "Stage rémunéré avec des horaires de travail à distance flexibles",
-        "Mentorat de professionnels du marketing expérimentés",
-        "Expérience pratique avec de vrais projets et campagnes marketing",
-        "Opportunités de réseautage dans l'industrie",
-        "Possibilité d'emploi à temps plein après réussite du stage",
-        "Accès à des ressources d'apprentissage en ligne et à des formations",
-        "Retours réguliers et conseils de développement de carrière"
-      ],
       "applicationProcess": "Notre processus de sélection comprend un examen de CV, un bref exercice marketing, et un entretien avec le Responsable Marketing et les membres de l'équipe. Nous visons à fournir une décision dans les deux semaines suivant la candidature.",
-      "salary": "1 200 € - 1 500 € d'indemnité mensuelle",
       "skills": ["Marketing des Médias Sociaux", "Création de Contenu", "Étude de Marché", "Marketing par E-mail", "Analytique", "Communication", "Créativité", "Organisation"],
       "reportingTo": "Responsable Marketing",
       "startDate": "Flexible"
@@ -283,18 +263,7 @@
         "Auto-motivé avec attention aux détails",
         "Intérêt pour le développement web et les technologies modernes"
       ],
-      "benefits": [
-        "Stage rémunéré avec arrangement de travail hybride flexible",
-        "Expérience pratique avec des technologies web modernes",
-        "Mentorat de développeurs seniors",
-        "Exposition au cycle de vie complet du développement logiciel",
-        "Opportunité de travailler sur de vrais projets clients",
-        "Feedback régulier et revues de code",
-        "Opportunités de réseautage dans l'industrie tech",
-        "Possibilité d'emploi à temps plein après réussite du stage"
-      ],
       "applicationProcess": "Notre processus de sélection comprend une revue de CV, une évaluation technique pour évaluer vos compétences actuelles, et un entretien avec l'équipe d'Ingénierie. Nous valorisons le potentiel et l'enthousiasme plus que la connaissance technique parfaite.",
-      "salary": "1 300 € - 1 600 € d'indemnité mensuelle",
       "skills": ["HTML/CSS", "JavaScript", "React", "Next.js", "Git", "Design Responsive", "Résolution de Problèmes", "Travail d'Équipe"],
       "reportingTo": "Développeur Principal",
       "startDate": "Juin 2025"
@@ -327,18 +296,7 @@
         "Maîtrise des systèmes CRM et des outils de vente",
         "Diplôme universitaire en Commerce, Marketing ou domaine connexe préféré"
       ],
-      "benefits": [
-        "Salaire de base compétitif plus structure de commission",
-        "Package d'assurance santé complet",
-        "Plan d'épargne retraite",
-        "Arrangement de travail à distance flexible",
-        "Opportunités de développement professionnel",
-        "Outils et ressources modernes d'aide à la vente",
-        "Réunions d'équipe régulières et événements d'entreprise",
-        "Opportunités d'avancement de carrière dans une entreprise en croissance"
-      ],
       "applicationProcess": "Notre processus d'embauche comprend un entretien téléphonique initial, un entretien vidéo avec le Responsable des Ventes, et un entretien final qui inclut un scénario de jeu de rôle de vente. Nous visons à fournir aux candidats une décision dans les trois semaines.",
-      "salary": "Base compétitive + commission",
       "skills": ["Vente B2B", "Génération de Leads", "Négociation", "Gestion CRM", "Construction de Relations", "Démonstration de Produit", "Résolution de Problèmes", "Gestion du Temps"],
       "reportingTo": "Responsable des Ventes",
       "startDate": "Immédiate"

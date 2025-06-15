@@ -161,7 +161,7 @@
     "startDate": "Start Date"
   },
   "cta": {
-    "title": "Ready to Join Our Team?",
+    "title": "Ready to Join us?",
     "description": "Take the next step in your career journey. Explore our open positions or send us your resume for future opportunities.",
     "learnAboutUs": "Learn about us",
     "joinOurTeam": "Join our team",
@@ -197,17 +197,7 @@
         "Bachelor's degree in Business, Marketing, or related field; MBA preferred",
         "Willingness to travel as needed (approximately 25%)"
       ],
-      "benefits": [
-        "Competitive base salary plus performance-based bonuses",
-        "Comprehensive health, dental, and vision insurance",
-        "Retirement plan with company matching",
-        "Generous paid time off and flexible work arrangements",
-        "Professional development and continuing education allowance",
-        "Company-sponsored events and team building activities",
-        "Modern office in central Paris with hybrid work options"
-      ],
       "applicationProcess": "Our hiring process for this position includes an initial phone screening, followed by two rounds of interviews with the executive team and key stakeholders. Final candidates will be asked to present a 90-day sales strategy plan.",
-      "salary": "€120,000 - €150,000 annually plus performance bonuses",
       "skills": ["Sales Leadership", "Strategic Planning", "Team Management", "Business Development", "Client Relationship Management", "Market Analysis", "Negotiation", "CRM Systems"],
       "reportingTo": "CEO",
       "startDate": "Immediate"
@@ -240,17 +230,7 @@
         "Basic proficiency with design tools (Canva, Adobe Creative Suite) is a plus",
         "Organized with good attention to detail"
       ],
-      "benefits": [
-        "Paid internship with flexible remote working hours",
-        "Mentorship from experienced marketing professionals",
-        "Hands-on experience with real marketing projects and campaigns",
-        "Networking opportunities within the industry",
-        "Possibility of full-time employment upon successful completion",
-        "Access to online learning resources and training",
-        "Regular feedback and career development guidance"
-      ],
       "applicationProcess": "Our selection process includes a resume review, a brief marketing assignment, and an interview with the Marketing Manager and team members. We aim to provide a decision within two weeks of application.",
-      "salary": "€1,200 - €1,500 monthly stipend",
       "skills": ["Social Media Marketing", "Content Creation", "Market Research", "Email Marketing", "Analytics", "Communication", "Creativity", "Organization"],
       "reportingTo": "Marketing Manager",
       "startDate": "Flexible"
@@ -283,18 +263,7 @@
         "Self-motivated with attention to detail",
         "Interest in web development and modern technologies"
       ],
-      "benefits": [
-        "Paid internship with flexible hybrid working arrangement",
-        "Hands-on experience with modern web technologies",
-        "Mentorship from senior developers",
-        "Exposure to the full software development lifecycle",
-        "Opportunity to work on real client projects",
-        "Regular feedback and code reviews",
-        "Networking opportunities within the tech industry",
-        "Possibility of full-time employment upon successful completion"
-      ],
       "applicationProcess": "Our selection process includes a resume review, a technical assessment to evaluate your current skills, and an interview with the Engineering team. We value potential and enthusiasm over perfect technical knowledge.",
-      "salary": "€1,300 - €1,600 monthly stipend",
       "skills": ["HTML/CSS", "JavaScript", "React", "Next.js", "Git", "Responsive Design", "Problem Solving", "Teamwork"],
       "reportingTo": "Lead Developer",
       "startDate": "June 2025"
@@ -327,18 +296,7 @@
         "Proficiency with CRM systems and sales tools",
         "Bachelor's degree in Business, Marketing, or related field preferred"
       ],
-      "benefits": [
-        "Competitive base salary plus commission structure",
-        "Comprehensive health insurance package",
-        "Retirement savings plan",
-        "Flexible remote working arrangement",
-        "Professional development opportunities",
-        "Modern sales enablement tools and resources",
-        "Regular team meetings and company events",
-        "Career advancement opportunities in a growing company"
-      ],
       "applicationProcess": "Our hiring process includes an initial phone screening, a video interview with the Sales Manager, and a final interview that includes a sales role-play scenario. We aim to provide candidates with a decision within three weeks.",
-      "salary": "Competitive base + commission",
       "skills": ["B2B Sales", "Lead Generation", "Negotiation", "CRM Management", "Relationship Building", "Product Demonstration", "Problem Solving", "Time Management"],
       "reportingTo": "Sales Manager",
       "startDate": "Immediate"

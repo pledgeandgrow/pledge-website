@@ -48,9 +48,6 @@ export default function SectorsOverview() {
             <p className="text-lg text-muted-foreground mb-6">
               {t('overview.description')}
             </p>
-            <p className="text-lg text-muted-foreground mb-6">
-              {t('overview.expertise')}
-            </p>
           </motion.div>
           
           {/* Image section - visible only on mobile, after the text */}

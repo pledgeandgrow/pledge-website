@@ -16,40 +16,40 @@
     "imageAlt": "Avantages de l'Adhésion Premium"
   },
   "benefits": {
-    "title": "Avantages de l'Adhésion",
-    "description": "Notre programme d'adhésion offre une large gamme d'avantages exclusifs conçus pour soutenir votre croissance professionnelle et le succès de votre entreprise.",
+    "title": "Privilèges d'Adhésion Élite",
+    "description": "Notre programme d'adhésion exclusif offre des avantages inégalés conçus pour les clients exigeants qui recherchent l'excellence en matière d'innovation numérique et de sophistication technologique.",
     "items": {
       "exclusiveResources": {
-        "title": "Ressources Exclusives",
-        "description": "Accédez à notre bibliothèque de guides premium, de modèles et d'outils pour accélérer vos projets."
+        "title": "Solutions Numériques Sur Mesure",
+        "description": "Accès à des actifs numériques personnalisés et des cadres propriétaires développés exclusivement pour notre clientèle élite."
       },
       "communityAccess": {
-        "title": "Accès à la Communauté",
-        "description": "Connectez-vous avec des professionnels partageant les mêmes idées et des experts de l'industrie dans notre communauté privée."
+        "title": "Réseau Exécutif",
+        "description": "Invitation à notre réseau privé de dirigeants, leaders de l'industrie et innovateurs numériques pour des partenariats stratégiques et collaborations."
       },
       "priorityEvents": {
-        "title": "Événements Prioritaires",
-        "description": "Accès anticipé et places réservées à nos ateliers, webinaires et conférences."
+        "title": "Événements VIP de l'Industrie",
+        "description": "Invitations exclusives aux présentations technologiques à huis clos, partenariats avec des marques de luxe et expériences numériques avant-gardistes."
       },
       "certificationPathways": {
-        "title": "Parcours de Certification",
-        "description": "Programmes de certification exclusifs pour valider votre expertise et améliorer vos références."
+        "title": "Conciergerie Technologique",
+        "description": "Service de conciergerie technologique personnelle offrant des recommandations sur mesure et des stratégies d'implémentation pour les technologies émergentes."
       },
       "codeRepository": {
-        "title": "Dépôt de Code",
-        "description": "Accès à nos bibliothèques de code organisées, composants et ressources de développement."
+        "title": "Accès aux Technologies Propriétaires",
+        "description": "Accès privilégié à nos algorithmes propriétaires, modèles d'IA et frameworks de code de pointe avant leur commercialisation."
       },
       "documentationAccess": {
-        "title": "Accès à la Documentation",
-        "description": "Documentation complète et meilleures pratiques pour implémenter nos solutions."
+        "title": "Feuille de Route Numérique Stratégique",
+        "description": "Stratégies complètes de transformation numérique et briefings exécutifs adaptés à la vision et à la position sur le marché de votre organisation."
       },
       "prioritySupport": {
-        "title": "Support Prioritaire",
-        "description": "Canaux de support dédiés avec des temps de réponse plus rapides pour vos questions techniques."
+        "title": "Support Gants Blancs 24/7",
+        "description": "Conciergerie technique dédiée disponible 24h/24 et 7j/7 avec des temps de réponse garantis et une résolution personnalisée des problèmes."
       },
       "innovationInsights": {
-        "title": "Aperçus d'Innovation",
-        "description": "Accès anticipé aux articles de recherche, tendances technologiques et briefings d'innovation."
+        "title": "Laboratoire d'Innovation Exclusif",
+        "description": "Accès en avant-première aux développements de notre laboratoire d'innovation, aux prototypes de technologies émergentes et aux prévisions de tendances numériques."
       }
     }
   },
@@ -61,7 +61,7 @@
       "description": "Avantages exclusifs pour les entreprises nécessitant un support dédié et un service premium.",
       "price": "15 000 €",
       "period": "par an",
-      "buttonText": "Postuler Maintenant",
+      "buttonText": "Adhérer",
       "features": {
         "premiumSupport": "Support Technique Premium",
         "maintenanceCoverage": "Couverture Complète de Maintenance",
@@ -74,11 +74,5 @@
       }
     },
     "badge": "Premium"
-  },
-  "cta": {
-    "title": "Prêt à Rejoindre Notre Communauté ?",
-    "description": "Faites le prochain pas dans votre parcours professionnel. Rejoignez notre programme d'adhésion aujourd'hui et débloquez un monde de ressources, de support et d'opportunités.",
-    "getJob": "Obtenir un emploi",
-    "goHome": "Retourner à l'accueil"
   }
 }

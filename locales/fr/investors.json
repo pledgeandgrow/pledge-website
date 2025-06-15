@@ -33,7 +33,7 @@
         "description": "Service aux clients dans plus de 5 pays à travers le monde"
       },
       "localRecognition": {
-        "title": "Reconnaissance Locale",
+        "title": "Reconnaissance",
         "description": "Reconnu localement en France et augmentant progressivement notre portée"
       }
     },
@@ -43,7 +43,7 @@
     },
     "vision": {
       "title": "Notre Vision",
-      "description": "Devenir le partenaire leader de la transformation numérique pour les entreprises à travers l'Europe, reconnu pour nos solutions innovantes, notre service exceptionnel et notre impact mesurable."
+      "description": ""
     }
   },
   "investorsPhase": {
@@ -63,7 +63,7 @@
           "Disponibilité limitée"
         ],
         "cta": {
-          "text": "Se renseigner sur l'investissement Seed",
+          "text": "Se renseigner",
           "link": "/contact?subject=Investissement%20Seed"
         }
       },

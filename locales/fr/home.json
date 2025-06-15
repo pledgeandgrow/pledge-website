@@ -10,8 +10,8 @@
   },
   "about": {
     "title": "Nous ne sommes pas une simple agence",
-    "description": "Nous croyons en la transparence, la collaboration et la livraison de résultats qui dépassent les attentes. Notre approche est centrée sur la compréhension de vos besoins uniques et l'élaboration de solutions qui favorisent la croissance et l'innovation.",
-    "ctaLearnMore": "En savoir plus sur nous"
+    "description": "Notre approche est centrée sur la compréhension de vos besoins uniques et l'élaboration de solutions qui favorisent la croissance et l'innovation.",
+    "ctaLearnMore": "En savoir plus"
   },
   "whyChooseUs": {
     "title": "Pourquoi Choisir Pledge & Grow ?",
@@ -99,15 +99,15 @@
   "caseStudies": {
     "title": "Études de Cas",
     "description": "Explorez nos projets récents et découvrez comment nous avons aidé des entreprises à atteindre leurs objectifs.",
-    "viewAll": "Voir Toutes les Études de Cas"
+    "viewAll": "Voir Plus"
   },
   "buttons": {
     "viewCaseStudy": "Voir l'étude de cas",
     "viewAllCaseStudies": "Voir toutes les études de cas",
-    "viewAll": "Voir tous les services"
+    "viewAll": "Voir Plus"
   },
   "testimonials": {
-    "title": "Ce Que Disent Nos Clients",
+    "title": "Nos Avis",
     "description": "Écoutez les entreprises qui ont transformé leur présence numérique avec nos solutions.",
     "leaveReview": "Laisser un avis",
     "defaultName": "Client",
@@ -176,9 +176,9 @@
     "viewTeam": "Voir l'Équipe Complète"
   },
   "cta": {
-    "title": "Prêt à transformer votre présence numérique ?",
-    "description": "Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs commerciaux avec nos solutions numériques.",
-    "button": "Contactez-Nous Aujourd'hui"
+    "title": "Prêt à digitaliser votre entreprise ?",
+    "description": "Discutons de la façon dont nous pouvons vous aider à atteindre vos objectifs.",
+    "button": "Contactez-Nous"
   },
   "accessibility": {
     "previous": "Précédent",

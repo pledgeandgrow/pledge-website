@@ -16,12 +16,12 @@
       },
       "connect": {
         "title": "Connect",
-        "description": "Linking innovation with business needs through strategic technology solutions.",
+        "description": "Linking innovation with business needs through technology solutions.",
         "icon": "Link2"
       },
       "digitalize": {
         "title": "Digitalize",
-        "description": "Transforming businesses through custom software solutions that drive growth and efficiency.",
+        "description": "Transforming businesses through custom solutions that drive growth and efficiency.",
         "icon": "Laptop"
       }
     }
@@ -54,29 +54,29 @@
     "timeline": {
       "founding": {
         "year": "2022",
-        "title": "The Vision Begins",
-        "description": "Started as a group of freelancers and entrepreneurs offering services in different fields through our brand and our names. We were planning on building a consulting agency that offered tailored solutions in various fields."
+        "title": "Origin",
+        "description": "Started as a group of freelancers and entrepreneurs offering services in different fields through our brand and our names."
       },
       "expansion": {
         "year": "2023",
-        "title": "Growing Team & Diverse Clients",
-        "description": "The team expanded and began working with clients from different fields. We saw huge demands particularly in marketing and IT sectors, which helped shape our future direction."
+        "title": "Development",
+        "description": "The team expanded and began working with clients from different fields."
       },
       "innovation": {
         "year": "2024",
-        "title": "Official Establishment & Specialization",
-        "description": "We transitioned completely and specialized in different IT fields and sectors due to increased demands and a growing network. The company was officially established in June of this year, marking a significant milestone in our journey."
+        "title": "Establishment & Specialization",
+        "description": "We have fully transitioned and now specialize in various IT domains and sectors. The company was officially established in June of this year."
       },
       "ecosystem": {
         "year": "2025",
         "title": "New Vision & Expansion",
-        "description": "Implemented a new roadmap, refined our vision, launched our new website, and set ambitious goals for the future. This marks the beginning of an exciting new chapter with much more to come."
+        "description": "Launched our new website, upgraded our infrastructure, restructured our team, and set ambitious goals for the future. This marks the beginning of a new chapter."
       }
     }
   },
   "team": {
     "title": "Our Team",
-    "description": "Meet the talented individuals who make our success possible. Our diverse team brings together expertise from various disciplines to deliver exceptional results.",
+    "description": "Meet the talented individuals who make our success possible.",
     "categories": {
       "board": "Board Members",
       "staff": "Members"
@@ -196,7 +196,7 @@
   },
   "cta": {
     "title": "Ready to Start Your Project?",
-    "description": "Let's work together to bring your vision to life with our expertise in design and development.",
+    "description": "Let's work together to bring your vision to life.",
     "buttons": {
       "contact": "Get in Touch",
       "services": "View Our Services"

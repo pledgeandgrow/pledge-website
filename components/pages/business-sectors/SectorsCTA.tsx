@@ -26,12 +26,12 @@ export default function SectorsCTA() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="font-medium">
-              <Link href="/contact?subject=Industry Solutions" className="flex items-center gap-2">
+              <Link href="/services" className="flex items-center gap-2">
                 <MessageSquare className="h-5 w-5" /> {t('cta.button')}
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-medium">
-              <Link href="/services" className="flex items-center gap-2">
+              <Link href="/contact" className="flex items-center gap-2">
                 {t('cta.contactInfo')} <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>

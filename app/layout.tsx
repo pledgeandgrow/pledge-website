@@ -5,6 +5,9 @@ import { Providers } from "@/components/theme/Providers";
 import "@/utils/i18n-client";
 import { AnalyticsProvider } from "@/components/analytics";
 import ClientCookieConsent from "@/components/shared/ClientCookieConsent";
+import ErrorTracker from "@/components/ui/ErrorTracker";
+import { LoadingProvider } from "@/components/ui/loading-provider";
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -84,10 +87,13 @@ export default function RootLayout({
       <body className="font-sans" suppressHydrationWarning>
         <Providers>
           <AnalyticsProvider measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}>
-            <div className="flex min-h-screen flex-col bg-background text-foreground">
-              {children}
-              <ClientCookieConsent />
-            </div>
+            <LoadingProvider>
+              <div className="flex min-h-screen flex-col bg-background text-foreground">
+                <ErrorTracker />
+                {children}
+                <ClientCookieConsent />
+              </div>
+            </LoadingProvider>
           </AnalyticsProvider>
         </Providers>
       </body>

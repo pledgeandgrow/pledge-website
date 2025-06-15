@@ -38,7 +38,7 @@
     "featured": "Featured",
     "tryAdjusting": "Try adjusting your filters to find ambassadors.",
     "ambassadorBios": {
-      "sharka": "SHARKA helps us promote our brand specifically for France and the French community. With a unique perspective and engaging presence, SHARKA helps communicate our values and mission to the French-speaking audience."
+      "sharka": "SHARKA helps us promote our brand for the French community."
     },
     "countries": {
       "france": "France",
@@ -70,25 +70,9 @@
         "title": "Community Impact",
         "description": "Make a difference in your local tech community by sharing knowledge and fostering innovation."
       },
-      "amplifyVoice": {
+      "amplifyYourVoice": {
         "title": "Amplify Your Voice",
         "description": "Enhance your personal brand and establish yourself as a thought leader in your field."
-      },
-      "networkAccess": {
-        "title": "Exclusive Network Access",
-        "description": "Connect with industry leaders, innovators, and decision-makers in our global community."
-      },
-      "professionalGrowth": {
-        "title": "Professional Growth",
-        "description": "Enhance your personal brand and visibility as a thought leader in digital innovation."
-      },
-      "earlyAccess": {
-        "title": "Early Access",
-        "description": "Be the first to learn about and test new technologies, services, and initiatives."
-      },
-      "recognition": {
-        "title": "Recognition & Rewards",
-        "description": "Receive recognition for your contributions and earn rewards based on your impact."
       }
     },
     "responsibilities": {

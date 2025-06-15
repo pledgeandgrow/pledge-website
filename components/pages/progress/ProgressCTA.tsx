@@ -26,13 +26,13 @@ export default function ProgressCTA() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="font-medium">
-              <Link href="/contact" className="flex items-center gap-2">
-                <MessageSquare className="h-5 w-5" /> {t('cta.button') || "Partner with Us"}
+              <Link href="/careers" className="flex items-center gap-2">
+                <MessageSquare className="h-5 w-5" /> {t('cta.button') || "Join Us"}
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="font-medium">
-              <Link href="/careers" className="flex items-center gap-2">
-                {t('cta.button') || "Partner with Us"} <ArrowRight className="h-4 w-4" />
+              <Link href="/investors" className="flex items-center gap-2">
+                {t('cta.investButton') || "Invest"} <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
           </div>

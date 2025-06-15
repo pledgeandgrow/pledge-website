@@ -4,9 +4,8 @@
     "description": "Tailored digital solutions for diverse industries, designed to address your sector-specific challenges and opportunities."
   },
   "overview": {
-    "title": "Industry-Specific Digital Solutions",
-    "description": "We understand that each industry faces unique challenges and opportunities. Our sector-specific expertise allows us to deliver tailored digital solutions that address your particular business needs.",
-    "expertise": "With deep experience across multiple industries, we combine sector knowledge with technical expertise to create solutions that drive meaningful results for your business."
+    "title": "Industry-Specific Solutions",
+    "description": "We understand that each industry faces unique challenges and opportunities. Our sector-specific expertise allows us to deliver tailored digital solutions that address your particular business needs."
   },
   "industrySolutions": {
     "title": "Our Industry Solutions",
@@ -19,7 +18,7 @@
     "discussProject": "Discuss Your Project",
     "sectors": {
       "finance": {
-        "title": "Finance & Banking",
+        "title": "Finance",
         "description": "Secure, compliant, and innovative digital solutions for financial institutions, from mobile banking to advanced fraud detection systems.",
         "keyFeatures": [
           "Secure transaction platforms",
@@ -29,7 +28,7 @@
         ]
       },
       "healthcare": {
-        "title": "Healthcare & Life Sciences",
+        "title": "Healthcare",
         "description": "Digital solutions that improve patient care, streamline operations, and ensure compliance with healthcare regulations.",
         "keyFeatures": [
           "Patient management systems",
@@ -39,7 +38,7 @@
         ]
       },
       "retail": {
-        "title": "Retail & E-commerce",
+        "title": "Retail",
         "description": "Omnichannel experiences that drive sales, improve customer engagement, and optimize inventory management.",
         "keyFeatures": [
           "E-commerce platforms",
@@ -49,7 +48,7 @@
         ]
       },
       "manufacturing": {
-        "title": "Manufacturing & Industry",
+        "title": "Manufacturing",
         "description": "Digital transformation solutions that optimize production, improve quality control, and enable predictive maintenance.",
         "keyFeatures": [
           "IoT production monitoring",
@@ -59,7 +58,7 @@
         ]
       },
       "education": {
-        "title": "Education & E-learning",
+        "title": "Education",
         "description": "Innovative platforms that enhance learning experiences, improve administrative efficiency, and enable remote education.",
         "keyFeatures": [
           "Learning management systems",
@@ -69,7 +68,7 @@
         ]
       },
       "government": {
-        "title": "Government & Public Sector",
+        "title": "Public Sector",
         "description": "Secure, accessible digital services that improve citizen engagement and streamline administrative processes.",
         "keyFeatures": [
           "Citizen service portals",
@@ -77,11 +76,33 @@
           "Public information systems",
           "Administrative workflow automation"
         ]
+      },
+      "logistics": {
+        "title": "Logistics",
+        "description": "Technology solutions that optimize routes, enhance tracking capabilities, and improve overall supply chain efficiency.",
+        "keyFeatures": [
+          "Fleet management",
+          "Route optimization",
+          "Shipment tracking",
+          "Warehouse management",
+          "Supply chain visibility"
+        ]
+      },
+      "hospitality": {
+        "title": "Hospitality",
+        "description": "Digital solutions that enhance guest experiences, streamline bookings, and optimize operational efficiency in hospitality businesses.",
+        "keyFeatures": [
+          "Booking systems",
+          "Guest experience platforms",
+          "Property management",
+          "Revenue management",
+          "Contactless solutions"
+        ]
       }
     }
   },
   "approach": {
-    "title": "Our Sector-Specific Approach",
+    "title": "Our Approach",
     "description": "We follow a proven methodology to ensure our solutions address your industry's unique requirements.",
     "steps": {
       "research": {

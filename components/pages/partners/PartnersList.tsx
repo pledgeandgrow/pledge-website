@@ -157,6 +157,16 @@ const getPartnersData = (t: (key: string) => string): Partner[] => [
     description: t('partnersList.partnerData.13.description') || "Time management and productivity solution provider with exclusive offers for our business network members.",
     website: "https://www.instagram.com/chronos.corps/",
     partnerType: "exclusive"
+  },
+  {
+    id: "16",
+    name: "Sharka UGC",
+    logo: "/images/partners/sharka-ugc.svg",
+    category: "Exclusive",
+    description: t('partnersList.partnerData.14.description') || "Premium user-generated content platform with AI-powered tools for luxury brands.",
+    website: "https://sharka-ugc.com",
+    featured: true,
+    partnerType: "exclusive"
   }
 ];
 

@@ -4,38 +4,38 @@
     "description": "Explore our journey, milestones, and achievements as we continue to grow and make a positive impact in the digital landscape."
   },
   "roadmap": {
-    "title": "Our Roadmap",
+    "title": "Roadmap",
     "description": "Discover our strategic vision and upcoming milestones as we continue to innovate and expand our offerings.",
     "updatedQuarterly": "Updated quarterly based on industry trends and client needs",
     "items": {
       "aiIntegration": {
-        "title": "Advanced AI Integration",
+        "title": "AI Integration",
         "description": "Implementing AI solutions for predictive analytics and automation",
         "timeline": "Q3 2025"
       },
       "blockchain": {
-        "title": "Enterprise Blockchain Solutions",
+        "title": "Blockchain Solutions",
         "description": "Secure, scalable blockchain infrastructure for businesses",
         "timeline": "Q4 2025"
       },
       "globalCenters": {
-        "title": "Global Development Centers",
+        "title": "Global Development",
         "description": "24/7 support and development capabilities worldwide",
         "timeline": "Q2 2026"
       },
       "security": {
-        "title": "Enhanced Security Framework",
+        "title": "Enhanced Security",
         "description": "Next-generation security protocols for enterprise applications",
         "timeline": "Q3 2026"
       },
       "integration": {
-        "title": "Seamless Integration Platform",
-        "description": "Unified platform for connecting diverse business systems",
+        "title": "Internal Application",
+        "description": "Unified platform for connecting our business systems",
         "timeline": "Q1 2027"
       },
       "anonymity": {
-        "title": "Privacy-Focused Development Tools",
-        "description": "Our own suite of privacy-focused development tools",
+        "title": "Innovation Hub",
+        "description": "Development of applications tied to innovations and supporting projects as an incubator",
         "timeline": "Q2 2027"
       }
     },
@@ -45,30 +45,39 @@
     }
   },
   "futureVision": {
-    "title": "Our Vision for the Future",
-    "description": "We're building a future where technology empowers businesses to achieve more while maintaining security, privacy, and ethical standards.",
+    "title": "What's Up",
+    "description": "Here's what we currently offer and support. Our services and capabilities are constantly evolving to meet client needs.",
     "pillars": {
-      "innovation": {
-        "title": "Continuous Innovation",
-        "description": "Staying at the forefront of technological advancements to provide cutting-edge solutions"
+      "crypto": {
+        "title": "Cryptocurrencies",
+        "description": "We currently accept payments in most utilized cryptocurrencies and stablecoins. Will soon be available in France."
       },
-      "sustainability": {
-        "title": "Digital Sustainability",
-        "description": "Creating eco-friendly digital solutions that minimize environmental impact"
+      "charity": {
+        "title": "Charity",
+        "description": "Pledge & Grow is dedicated to helping others and occasionally works for free on projects dedicated to humanity or charity. Feel free to reach out."
       },
-      "accessibility": {
-        "title": "Universal Accessibility",
-        "description": "Making technology accessible to businesses of all sizes and industries"
+      "team": {
+        "title": "Team",
+        "description": "Our team is constantly evolving, a lot of people come and go. We limited our board member size to 10 members with 5 active currently."
       },
-      "security": {
-        "title": "Uncompromising Security",
-        "description": "Prioritizing data protection and privacy in all our solutions"
+      "membership": {
+        "title": "Membership",
+        "description": "We plan to add more benefits overtime. VIP have access to community groups and full support, they don't have to go through the waitlist"
+      },
+      "realtime": {
+        "title": "AI Support",
+        "description": "Currently supporting OpenAI and Claude integration, we're also researching other AI such as Gemini, Deepseek, Grok and others to provide enhanced support solutions."
+      },
+      "international": {
+        "title": "Privacy",
+        "description": "You can choose to not appear on our website, have us sign NDAs, or communicate through privacy apps. We also provide support for building onion websites."
       }
     }
   },
   "cta": {
-    "title": "Join Us on Our Journey",
-    "description": "Be part of our growth story and help shape the future of digital innovation.",
-    "button": "Partner with Us"
+    "title": "Join Us",
+    "description": "Be part of our growth story and help us shape the future.",
+    "button": "Contribute",
+    "investButton": "Invest"
   }
 }

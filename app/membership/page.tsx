@@ -4,8 +4,7 @@ import Footer from "@/components/layout/Footer";
 import { 
   MembershipHero, 
   MembershipBenefits,
-  MembershipPlans,
-  MembershipCTA
+  MembershipPlans
 } from "@/components/pages/membership";
 
 export const metadata: Metadata = {
@@ -37,7 +36,6 @@ export default function MembershipPage() {
         <MembershipHero />
         <MembershipBenefits />
         <MembershipPlans />
-        <MembershipCTA />
       </main>
       <Footer />
     </div>

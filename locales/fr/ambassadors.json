@@ -38,7 +38,7 @@
     "featured": "En vedette",
     "tryAdjusting": "Essayez d'ajuster vos filtres pour trouver des ambassadeurs.",
     "ambassadorBios": {
-      "sharka": "SHARKA nous aide à promouvoir notre marque spécifiquement pour la France et la communauté française. Avec une perspective unique et une présence engageante, SHARKA aide à communiquer nos valeurs et notre mission à l'audience francophone."
+      "sharka": "SHARKA nous aide à promouvoir notre marque pour la communauté française."
     },
     "countries": {
       "france": "France",
@@ -70,25 +70,9 @@
         "title": "Impact Communautaire",
         "description": "Faites une différence dans votre communauté technologique locale en partageant des connaissances et en favorisant l'innovation."
       },
-      "amplifyVoice": {
+      "amplifyYourVoice": {
         "title": "Amplifiez Votre Voix",
         "description": "Renforcez votre marque personnelle et établissez-vous comme un leader d'opinion dans votre domaine."
-      },
-      "networkAccess": {
-        "title": "Accès à un Réseau Exclusif",
-        "description": "Connectez-vous avec des leaders de l'industrie, des innovateurs et des décideurs dans notre communauté mondiale."
-      },
-      "professionalGrowth": {
-        "title": "Croissance Professionnelle",
-        "description": "Améliorez votre marque personnelle et votre visibilité en tant que leader d'opinion dans l'innovation numérique."
-      },
-      "earlyAccess": {
-        "title": "Accès Anticipé",
-        "description": "Soyez les premiers à découvrir et à tester de nouvelles technologies, services et initiatives."
-      },
-      "recognition": {
-        "title": "Reconnaissance et Récompenses",
-        "description": "Recevez une reconnaissance pour vos contributions et gagnez des récompenses basées sur votre impact."
       }
     },
     "responsibilities": {

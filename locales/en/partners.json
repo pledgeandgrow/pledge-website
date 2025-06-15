@@ -144,6 +144,16 @@
         "description": "Time management and productivity solution provider with exclusive offers for our business network members.",
         "website": "https://www.instagram.com/chronos.corps/",
         "partnerType": "exclusive"
+      },
+      {
+        "id": "16",
+        "name": "Sharka UGC",
+        "logo": "/images/partners/sharka.svg",
+        "category": "Exclusive",
+        "description": "Premium user-generated content platform providing AI-powered tools for content creation, moderation, and analytics for luxury brands.",
+        "website": "https://sharka-ugc.com",
+        "featured": true,
+        "partnerType": "exclusive"
       }
     ],
     "typeDescriptions": {

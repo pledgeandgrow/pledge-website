@@ -4,13 +4,14 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
-  Globe, 
-  Lightbulb, 
+  Bitcoin, 
+  Heart, 
   Users, 
-  Heart,
-  Leaf,
+  Crown,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Bot,
+  Lightbulb
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "@/hooks/useTranslations";
@@ -41,28 +42,40 @@ export default function FutureVision() {
   
   const visionItems: VisionItem[] = [
     {
-      icon: <Globe className="h-10 w-10 text-blue-500" />,
-      title: t('futureVision.pillars.innovation.title') || "Continuous Innovation",
-      description: t('futureVision.pillars.innovation.description') || "Staying at the forefront of technological advancements to provide cutting-edge solutions",
-      color: "bg-blue-500/10"
-    },
-    {
-      icon: <Users className="h-10 w-10 text-violet-500" />,
-      title: t('futureVision.pillars.accessibility.title') || "Universal Accessibility",
-      description: t('futureVision.pillars.accessibility.description') || "Making technology accessible to businesses of all sizes and industries",
-      color: "bg-violet-500/10"
+      icon: <Bitcoin className="h-10 w-10 text-amber-500" />,
+      title: t('futureVision.pillars.crypto.title') || "Cryptocurrencies",
+      description: t('futureVision.pillars.crypto.description') || "We currently accept missions in most utilized cryptocurrencies and stablecoins. Will soon be available in France.",
+      color: "bg-amber-500/10"
     },
     {
       icon: <Heart className="h-10 w-10 text-red-500" />,
-      title: t('futureVision.pillars.security.title') || "Uncompromising Security",
-      description: t('futureVision.pillars.security.description') || "Prioritizing data protection and privacy in all our solutions",
+      title: t('futureVision.pillars.charity.title') || "Charity",
+      description: t('futureVision.pillars.charity.description') || "Pledge & Grow is dedicated to helping others and occasionally works for free on projects dedicated to humanity or charity.",
       color: "bg-red-500/10"
     },
     {
-      icon: <Leaf className="h-10 w-10 text-green-500" />,
-      title: t('futureVision.pillars.sustainability.title') || "Sustainability Leadership",
-      description: t('futureVision.pillars.sustainability.description') || "Setting new industry standards for environmentally responsible digital solutions",
+      icon: <Users className="h-10 w-10 text-blue-500" />,
+      title: t('futureVision.pillars.team.title') || "Team",
+      description: t('futureVision.pillars.team.description') || "Our team is constantly evolving, a lot of people come and go. We limited our board member size to 10 members with 5 active currently.",
+      color: "bg-blue-500/10"
+    },
+    {
+      icon: <Crown className="h-10 w-10 text-purple-500" />,
+      title: t('futureVision.pillars.membership.title') || "Membership",
+      description: t('futureVision.pillars.membership.description') || "We plan to add more benefits overtime. VIP have access to community groups and full support, they don't have to go through the waitlist.",
+      color: "bg-purple-500/10"
+    },
+    {
+      icon: <Bot className="h-10 w-10 text-green-500" />,
+      title: t('futureVision.pillars.realtime.title') || "AI Support",
+      description: t('futureVision.pillars.realtime.description') || "Currently supporting OpenAI and Claude integration, we're also researching other AI such as the upcoming Gemini, Deepseek and Grok.",
       color: "bg-green-500/10"
+    },
+    {
+      icon: <Lightbulb className="h-10 w-10 text-cyan-500" />,
+      title: t('futureVision.pillars.international.title') || "Innovation Hub",
+      description: t('futureVision.pillars.international.description') || "Development of applications tied to innovations and supporting projects as an incubator. We help turn innovative ideas into reality through mentorship, resources, and technical expertise.",
+      color: "bg-cyan-500/10"
     }
   ];
 
@@ -70,22 +83,25 @@ export default function FutureVision() {
     <section className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            {t('futureVision.title') || "Our Vision for the Future"}
+          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-3 text-xs font-medium rounded-full bg-primary/10 text-primary">
+            {new Date().getFullYear()}
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            {t('futureVision.title')}
           </h2>
-          <p className="text-lg text-muted-foreground">
-            {t('futureVision.description') || "We're building a future where technology empowers businesses to achieve more while maintaining security, privacy, and ethical standards."}
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            {t('futureVision.description')}
           </p>
         </motion.div>
 
         {/* Desktop Grid View */}
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {visionItems.map((item, index) => (
             <motion.div
               key={index}
@@ -93,15 +109,15 @@ export default function FutureVision() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className={index === visionItems.length - 1 && visionItems.length % 3 === 1 ? "lg:col-span-3 lg:max-w-md lg:mx-auto" : ""}
             >
-              <Card className="h-full border-0 shadow-md hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <div className={`${item.color} p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto`}>
+              <Card className="h-full border border-primary/10 bg-gradient-to-br from-background to-primary/5 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                <CardContent className="p-8 relative">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 z-0"></div>
+                  <div className={`${item.color} p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     {item.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-center">{item.title}</h3>
-                  <p className="text-muted-foreground text-center">
+                  <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">
                     {item.description}
                   </p>
                 </CardContent>
@@ -112,7 +128,7 @@ export default function FutureVision() {
 
         {/* Mobile Carousel View */}
         <div className="md:hidden max-w-sm mx-auto">
-          <div className="overflow-hidden relative min-h-[300px]">
+          <div className="overflow-hidden relative min-h-[400px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -122,13 +138,14 @@ export default function FutureVision() {
                 transition={{ duration: 0.3 }}
                 className="w-full"
               >
-                <Card className="h-full border-0 shadow-md">
-                  <CardContent className="p-6">
-                    <div className={`${visionItems[currentIndex].color} p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto`}>
+                <Card className="h-full border border-primary/10 bg-gradient-to-br from-background to-primary/5 shadow-lg overflow-hidden">
+                  <CardContent className="p-8 relative">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16 z-0"></div>
+                    <div className={`${visionItems[currentIndex].color} p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 animate-pulse`}>
                       {visionItems[currentIndex].icon}
                     </div>
-                    <h3 className="text-xl font-semibold mb-3 text-center">{visionItems[currentIndex].title}</h3>
-                    <p className="text-muted-foreground text-center">
+                    <h3 className="text-2xl font-bold mb-4">{visionItems[currentIndex].title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">
                       {visionItems[currentIndex].description}
                     </p>
                   </CardContent>
@@ -137,23 +154,23 @@ export default function FutureVision() {
             </AnimatePresence>
           </div>
           
-          <div className="flex justify-center gap-4 mt-6">
+          <div className="flex justify-center gap-4 mt-8">
             <button 
               onClick={prevSlide}
-              className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
+              className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
               aria-label="Previous slide"
             >
-              <ChevronLeft className="h-5 w-5" />
+              <ChevronLeft className="h-5 w-5 text-primary" />
             </button>
             
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-2">
               {visionItems.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={cn(
-                    "w-2 h-2 rounded-full transition-colors",
-                    currentIndex === index ? "bg-primary" : "bg-muted-foreground/30"
+                    "w-3 h-3 rounded-full transition-all duration-300",
+                    currentIndex === index ? "bg-primary scale-125" : "bg-primary/30"
                   )}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -162,10 +179,10 @@ export default function FutureVision() {
             
             <button 
               onClick={nextSlide}
-              className="p-2 rounded-full bg-muted hover:bg-muted/80 transition-colors"
+              className="p-3 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
               aria-label="Next slide"
             >
-              <ChevronRight className="h-5 w-5" />
+              <ChevronRight className="h-5 w-5 text-primary" />
             </button>
           </div>
         </div>

@@ -4,38 +4,38 @@
     "description": "Explorez notre parcours, nos étapes clés et nos réalisations alors que nous continuons à grandir et à avoir un impact positif dans le paysage numérique."
   },
   "roadmap": {
-    "title": "Notre Feuille de Route",
+    "title": "Roadmap",
     "description": "Découvrez notre vision stratégique et nos prochaines étapes alors que nous continuons à innover et à élargir nos offres.",
     "updatedQuarterly": "Mis à jour trimestriellement selon les tendances du secteur et les besoins des clients",
     "items": {
       "aiIntegration": {
-        "title": "Intégration Avancée d'IA",
+        "title": "Intégration d'IA",
         "description": "Mise en œuvre de solutions d'IA pour l'analyse prédictive et l'automatisation",
         "timeline": "T3 2025"
       },
       "blockchain": {
-        "title": "Solutions Blockchain pour Entreprises",
+        "title": "Solutions Blockchain",
         "description": "Infrastructure blockchain sécurisée et évolutive pour les entreprises",
         "timeline": "T4 2025"
       },
       "globalCenters": {
-        "title": "Centres de Développement Mondiaux",
+        "title": "Expansion mondiale",
         "description": "Support et capacités de développement 24/7 dans le monde entier",
         "timeline": "T2 2026"
       },
       "security": {
-        "title": "Cadre de Sécurité Amélioré",
+        "title": "Sécurité Améliorée",
         "description": "Protocoles de sécurité de nouvelle génération pour les applications d'entreprise",
         "timeline": "T3 2026"
       },
       "integration": {
-        "title": "Plateforme d'Intégration Transparente",
+        "title": "Plateforme Entreprise",
         "description": "Plateforme unifiée pour connecter divers systèmes d'entreprise",
         "timeline": "T1 2027"
       },
       "anonymity": {
-        "title": "Outils de Développement Axés sur la Confidentialité",
-        "description": "Notre propre suite d'outils de développement axés sur la confidentialité",
+        "title": "Hub d'Innovation",
+        "description": "Développement d'applications liées aux innovations et soutien de projets en tant qu'incubateur",
         "timeline": "T2 2027"
       }
     },
@@ -45,30 +45,39 @@
     }
   },
   "futureVision": {
-    "title": "Notre Vision pour l'Avenir",
-    "description": "Nous construisons un avenir où la technologie permet aux entreprises d'accomplir davantage tout en maintenant la sécurité, la confidentialité et les normes éthiques.",
+    "title": "Actualité",
+    "description": "Voici ce que nous offrons et soutenons actuellement. Nos services et capacités évoluent constamment pour répondre aux besoins des clients.",
     "pillars": {
-      "innovation": {
-        "title": "Innovation Continue",
-        "description": "Rester à la pointe des avancées technologiques pour fournir des solutions de pointe"
+      "crypto": {
+        "title": "Cryptomonnaies",
+        "description": "Nous acceptons actuellement des missions dans la plupart des cryptomonnaies et stablecoins les plus utilisés. Bientôt disponible en France"
       },
-      "sustainability": {
-        "title": "Durabilité Numérique",
-        "description": "Créer des solutions numériques écologiques qui minimisent l'impact environnemental"
+      "charity": {
+        "title": "Charité",
+        "description": "Pledge & Grow se consacre à l'entraide et intervient occasionnellement à titre gratuit sur des projets à vocation humanitaire ou caritative. N'hésitez pas à venir nous en parler."
       },
-      "accessibility": {
-        "title": "Accessibilité Universelle",
-        "description": "Rendre la technologie accessible aux entreprises de toutes tailles et de tous secteurs"
+      "team": {
+        "title": "Équipe",
+        "description": "Notre équipe évolue constamment, beaucoup de personnes vont et viennent. Nous limitons notre conseil d'administration à 10 membres avec 5 actuellement actifs."
       },
-      "security": {
-        "title": "Sécurité Sans Compromis",
-        "description": "Prioriser la protection des données et la confidentialité dans toutes nos solutions"
+      "membership": {
+        "title": "Adhésion",
+        "description": "Nous prévoyons d'ajouter plus d'avantages au fil du temps. Les VIP ont accès aux groupes VIP et à un support complet, ils n'ont pas à passer par la liste d'attente"
+      },
+      "realtime": {
+        "title": "Support IA",
+        "description": "Actuellement compatible avec OpenAI et Claude, nous étudions également d'autres IA comme Gemini, Deepseek, Grok et d'autres pour offrir des solutions de support améliorées."
+      },
+      "international": {
+        "title": "Confidentialité",
+        "description": "Vous pouvez choisir de ne pas apparaître sur notre site, nous faire signer des accords de confidentialité ou communiquer via des applications sécurisées. Nous proposons également un support pour la création de sites onion."
       }
     }
   },
   "cta": {
-    "title": "Rejoignez-nous dans Notre Parcours",
-    "description": "Faites partie de notre histoire de croissance et aidez à façonner l'avenir de l'innovation numérique.",
-    "button": "Devenez Partenaire"
+    "title": "Rejoignez-nous",
+    "description": "Faites partie de notre histoire de croissance et aidez nous à façonner l'avenir.",
+    "button": "Contribuer",
+    "investButton": "Investir"
   }
 }

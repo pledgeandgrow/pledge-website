@@ -42,10 +42,10 @@
   },
   "localizationServices": {
     "title": "Services de Localisation",
-    "description": "Nous aidons les entreprises à atteindre des audiences mondiales avec des services de localisation complets. De la traduction à l'adaptation culturelle, nous garantissons que vos produits numériques résonnent partout dans le monde.",
+    "description": "Nous aidons les entreprises à atteindre des audiences mondiales avec des services de localisation complets.",
     "services": {
       "webAppLocalization": {
-        "title": "Localisation de Sites Web et Applications",
+        "title": "Localisation",
         "description": "Localisation complète de vos produits numériques pour les marchés mondiaux, incluant l'adaptation UI/UX, la traduction de contenu et l'optimisation culturelle.",
         "features": [
           "Implémentation d'interfaces multilingues",
@@ -55,7 +55,7 @@
         ]
       },
       "contentTranslation": {
-        "title": "Traduction de Contenu",
+        "title": "Traduction",
         "description": "Services de traduction professionnels pour tout votre contenu numérique, assurant des messages précis et culturellement appropriés dans toutes les langues.",
         "features": [
           "Traduction de contenu de sites web et d'applications",
@@ -65,7 +65,7 @@
         ]
       },
       "multilingualDevelopment": {
-        "title": "Développement Multilingue",
+        "title": "Multilingue",
         "description": "Implémentation technique de capacités multilingues dans vos applications, avec une architecture d'internationalisation (i18n) appropriée.",
         "features": [
           "Implémentation de frameworks i18n",
@@ -75,7 +75,7 @@
         ]
       },
       "globalCompliance": {
-        "title": "Conformité Mondiale",
+        "title": "Conformité",
         "description": "Garantir que vos produits numériques sont conformes aux réglementations et normes régionales sur différents marchés.",
         "features": [
           "RGPD, CCPA et autres réglementations sur la confidentialité",

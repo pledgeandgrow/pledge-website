@@ -128,7 +128,7 @@ export default function VipServices() {
               </CardContent>
               <CardFooter className="border-t border-primary/20 pt-6">
                 <Button asChild className="w-full">
-                  <Link href="/contact?subject=VIP%20Membership">
+                  <Link href="/contact">
                     {t('vip.card.applyButton')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -183,7 +183,7 @@ export default function VipServices() {
           className={`text-center mt-8 transition-all duration-500 delay-700 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
         >
           <Button size="lg" asChild>
-            <Link href="/contact">
+            <Link href="/membership">
               {t('vip.contactButton')}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>

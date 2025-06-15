@@ -1,10 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, MessageSquare } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 
 export default function DiscordHero() {
@@ -26,18 +23,7 @@ export default function DiscordHero() {
             <p className="text-xl text-muted-foreground mb-8 max-w-lg mx-auto md:mx-0">
               {t("hero.description")}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button asChild size="lg" className="font-medium">
-                <Link href="https://discord.gg/pledgeandgrow" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <MessageSquare className="h-5 w-5" /> {t("hero.joinButton")}
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="font-medium">
-                <Link href="#discord-benefits" className="flex items-center gap-2">
-                  {t("hero.learnMoreButton")} <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
+            {/* Buttons removed as requested */}
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}

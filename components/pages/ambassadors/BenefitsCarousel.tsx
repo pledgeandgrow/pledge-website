@@ -32,8 +32,8 @@ export default function BenefitsCarousel() {
     },
     {
       icon: <Megaphone className="text-primary h-6 w-6" />,
-      title: t('becomeAmbassador.benefits.amplifyVoice.title'),
-      description: t('becomeAmbassador.benefits.amplifyVoice.description')
+      title: t('becomeAmbassador.benefits.amplifyYourVoice.title'),
+      description: t('becomeAmbassador.benefits.amplifyYourVoice.description')
     }
   ];
 
