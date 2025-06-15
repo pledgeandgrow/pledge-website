@@ -237,7 +237,7 @@ export default function ProjectSupport() {
           viewport={{ once: true }}
           className="text-center max-w-4xl mx-auto mb-10"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
             {t('support.title')}
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
