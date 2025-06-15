@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { 
   ExpertiseLayout, 
   ExpertiseFeatures, 
@@ -28,7 +28,8 @@ interface BenefitItem {
   icon: string;
 }
 
-export default function DocumentationExpertisePage() {
+// Component to handle the actual content rendering
+function DocumentationExpertiseContent() {
   // Use translations for this expertise page
   const { t, isLoading, translations } = useTranslations('documentation');
 
@@ -115,4 +116,11 @@ export default function DocumentationExpertisePage() {
   );
 }
 
-
+// Main page component with Suspense boundary
+export default function DocumentationExpertisePage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading documentation expertise...</div>}>
+      <DocumentationExpertiseContent />
+    </Suspense>
+  );
+}

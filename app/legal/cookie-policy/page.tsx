@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { Suspense } from 'react';
 import { 
   Cookie, 
   Info, 
@@ -17,7 +17,8 @@ import { useTranslations } from '@/hooks/useTranslations';
 
 // Metadata is now handled by metadata.ts
 
-export default function CookiePolicyPage() {
+// Component to handle the actual content rendering
+function CookiePolicyContent() {
   const { t } = useTranslations('legal/cookie-policy');
   
   // Define sections for the table of contents based on translations
@@ -96,5 +97,14 @@ export default function CookiePolicyPage() {
         </LegalSection>
       ))}
     </LegalPageLayout>
+  );
+}
+
+// Main page component with Suspense boundary
+export default function CookiePolicyPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading cookie policy...</div>}>
+      <CookiePolicyContent />
+    </Suspense>
   );
 }

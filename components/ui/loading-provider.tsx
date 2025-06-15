@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, Suspense } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
 
@@ -11,9 +11,8 @@ interface LoadingContextType {
 
 const LoadingContext = createContext<LoadingContextType | undefined>(undefined);
 
-export function LoadingProvider({ children }: { children: React.ReactNode }) {
-  const [isLoading, setLoading] = useState(false);
-  const [isNavigating, setIsNavigating] = useState(false);
+// Navigation tracker component that uses useSearchParams
+function NavigationTracker({ setIsNavigating }: { setIsNavigating: (value: boolean) => void }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -27,7 +26,14 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
     }, 300);
     
     return () => clearTimeout(timer);
-  }, [pathname, searchParams]);
+  }, [pathname, searchParams, setIsNavigating]);
+
+  return null;
+}
+
+export function LoadingProvider({ children }: { children: React.ReactNode }) {
+  const [isLoading, setLoading] = useState(false);
+  const [isNavigating, setIsNavigating] = useState(false);
 
   return (
     <LoadingContext.Provider value={{ isLoading, setLoading }}>
@@ -37,6 +43,9 @@ export function LoadingProvider({ children }: { children: React.ReactNode }) {
           <div className="h-full bg-white/30 animate-pulse" style={{ width: '30%' }}></div>
         </div>
       )}
+      <Suspense fallback={null}>
+        <NavigationTracker setIsNavigating={setIsNavigating} />
+      </Suspense>
       {children}
     </LoadingContext.Provider>
   );

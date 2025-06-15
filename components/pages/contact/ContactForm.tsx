@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -40,17 +40,43 @@ const formSchema = z.object({
   message: z.string().min(10, { message: "Message must be at least 10 characters" }),
 });
 
+// Component to handle form parameters from URL
+function ContactFormWithParams({ 
+  onSubjectFound: setUrlSubject 
+}: { 
+  onSubjectFound: (subject: string | null) => void 
+}) {
+  const searchParams = useSearchParams();
+  
+  useEffect(() => {
+    // Get subject from URL if available
+    const subject = searchParams.get('subject');
+    setUrlSubject(subject);
+  }, [searchParams, setUrlSubject]);
+  
+  return null;
+}
+
 export default function ContactForm() {
+  const [urlSubject, setUrlSubject] = useState<string | null>(null);
+  
+  return (
+    <>
+      <Suspense fallback={null}>
+        <ContactFormWithParams onSubjectFound={setUrlSubject} />
+      </Suspense>
+      <ContactFormContent initialSubject={urlSubject} />
+    </>
+  );
+}
+
+function ContactFormContent({ initialSubject }: { initialSubject: string | null }) {
   const { t } = useTranslations('contact');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const searchParams = useSearchParams();
   
   // Initialize analytics tracking
   const { trackEvent, trackFormSubmission } = useAnalytics();
-
-  // Get subject from URL if available
-  const urlSubject = searchParams.get('subject');
   
   // List of valid subjects for validation
   const validSubjects = [
@@ -66,8 +92,8 @@ export default function ContactForm() {
   ];
   
   // Format the URL subject to match our options (capitalize first letter, handle URL encoding)
-  const formattedUrlSubject = urlSubject ? 
-    decodeURIComponent(urlSubject.replace(/%20/g, ' '))
+  const formattedUrlSubject = initialSubject ? 
+    decodeURIComponent(initialSubject.replace(/%20/g, ' '))
       .split(' ')
       .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
       .join(' ') : "";
@@ -100,7 +126,7 @@ export default function ContactForm() {
   
   // Check if the formatted subject is in our mapping or valid subjects list
   const mappedSubject = subjectMapping[formattedUrlSubject.toLowerCase()] || "";
-  const initialSubject = mappedSubject || (validSubjects.includes(formattedUrlSubject) ? formattedUrlSubject : "");
+  const derivedSubject = mappedSubject || (validSubjects.includes(formattedUrlSubject) ? formattedUrlSubject : "");
   
   // Initialize form
   const form = useForm<z.infer<typeof formSchema>>({
@@ -110,17 +136,17 @@ export default function ContactForm() {
       email: "",
       company: "",
       phone: "",
-      subject: initialSubject,
+      subject: derivedSubject,
       message: "",
     },
   });
   
   // Update form values when URL parameters change
   useEffect(() => {
-    if (initialSubject && !form.getValues('subject')) {
-      form.setValue('subject', initialSubject);
+    if (derivedSubject && !form.getValues('subject')) {
+      form.setValue('subject', derivedSubject);
     }
-  }, [initialSubject, form, searchParams]);
+  }, [derivedSubject, form]);
 
   // Form submission handler
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -201,7 +227,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-card border border-border rounded-lg p-8 shadow-sm animate-fade-in">
+    <div className="w-full max-w-2xl mx-auto">
       <h2 className="text-2xl font-bold mb-6">{t('form.title', { defaultValue: 'Get in Touch' })}</h2>
       <p className="text-muted-foreground mb-6">{t('form.description', { defaultValue: 'Fill out the form below and we\'ll get back to you as soon as possible.' })}</p>
       <Form {...form}>
@@ -270,7 +296,7 @@ export default function ContactForm() {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>{t('form.subjectLabel', { defaultValue: 'Subject' })}</FormLabel>
-                <Select onValueChange={field.onChange} value={field.value || initialSubject}>
+                <Select onValueChange={field.onChange} value={field.value || derivedSubject}>
                   <FormControl>
                     <SelectTrigger>
                       <SelectValue placeholder={t('form.subjectPlaceholder', { defaultValue: 'What is this regarding?' })} />
