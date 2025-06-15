@@ -1,12 +1,12 @@
 {
   "hero": {
-    "title": "Lancez Votre Projet Digital Ultra Rapidement !",
+    "title": "Lancez Votre Projet",
     "description": "Nous vous aidons à donner vie à votre vision numérique grâce à notre expertise en développement web, mobile et logiciel.",
     "startButton": "Démarrer Mon Projet Maintenant",
     "contactButton": "Contacter Notre Équipe"
   },
   "process": {
-    "title": "Notre Processus de Développement",
+    "title": "Notre Processus",
     "description": "Nous suivons un processus en 5 étapes éprouvé pour garantir que votre projet soit livré dans les délais, dans le budget et dépasse vos attentes.",
     "steps": [
       {
@@ -125,7 +125,10 @@
       "mobile": "Mobile",
       "database": "Bases de Données",
       "cms": "CMS & E-commerce",
-      "cloud": "Cloud & DevOps"
+      "cloud": "Cloud & DevOps",
+      "blockchain": "Blockchain",
+      "software": "Logiciels",
+      "ai": "IA & ML"
     },
     "noTechnologiesFound": "Aucune technologie trouvée correspondant à votre recherche.",
     "navigation": {
@@ -164,7 +167,9 @@
       "submit": "Soumettre le Projet",
       "submitShort": "Soumettre",
       "step": "Étape",
-      "of": "sur"
+      "of": "sur",
+      "returnHome": "Retour à l'Accueil",
+      "startNewProject": "Démarrer un Nouveau Projet"
     },
     "steps": [
       {
@@ -348,7 +353,20 @@
       "sendingMobile": "Envoi...",
       "errorTitle": "Erreur de Soumission",
       "errorDescription": "Il y a eu un problème lors de la soumission de votre projet. Veuillez réessayer.",
-      "unexpectedErrorDescription": "Une erreur inattendue s'est produite. Veuillez réessayer."
+      "unexpectedErrorDescription": "Une erreur inattendue s'est produite. Veuillez réessayer.",
+      "validation": {
+        "title": "Erreur de Validation",
+        "description": "Veuillez vérifier le formulaire pour les erreurs et réessayer."
+      },
+      "error": {
+        "title": "Erreur de Soumission",
+        "description": "Il y a eu un problème lors de la soumission de votre projet. Veuillez réessayer.",
+        "retry": "Réessayer"
+      },
+      "success": {
+        "title": "Projet Soumis avec Succès",
+        "description": "Merci ! Nous avons reçu les détails de votre projet et nous vous contacterons bientôt."
+      }
     }
   }
 }

@@ -1,12 +1,12 @@
 {
   "hero": {
-    "title": "Start Your Digital Project Ultra Fast!",
+    "title": "Start Your Project",
     "description": "We help you bring your digital vision to life with our expertise in web, mobile, and software development.",
     "startButton": "Start My Project Now",
     "contactButton": "Contact Our Team"
   },
   "process": {
-    "title": "Our Development Process",
+    "title": "Our Process",
     "description": "We follow a proven 5-step process to ensure your project is delivered on time, within budget, and exceeds your expectations.",
     "steps": [
       {
@@ -125,7 +125,10 @@
       "mobile": "Mobile",
       "database": "Databases",
       "cms": "CMS & E-commerce",
-      "cloud": "Cloud & DevOps"
+      "cloud": "Cloud & DevOps",
+      "blockchain": "Blockchain",
+      "software": "Software",
+      "ai": "AI & ML"
     },
     "noTechnologiesFound": "No technologies found matching your search.",
     "navigation": {
@@ -164,7 +167,9 @@
       "submit": "Submit Project",
       "submitShort": "Submit",
       "step": "Step",
-      "of": "of"
+      "of": "of",
+      "returnHome": "Return to Home",
+      "startNewProject": "Start New Project"
     },
     "steps": [
       {
@@ -348,7 +353,20 @@
       "sendingMobile": "Sending...",
       "errorTitle": "Submission Error",
       "errorDescription": "There was an issue submitting your project. Please try again.",
-      "unexpectedErrorDescription": "An unexpected error occurred. Please try again."
+      "unexpectedErrorDescription": "An unexpected error occurred. Please try again.",
+      "validation": {
+        "title": "Validation Error",
+        "description": "Please check the form for errors and try again."
+      },
+      "error": {
+        "title": "Submission Error",
+        "description": "There was an issue submitting your project. Please try again.",
+        "retry": "Try Again"
+      },
+      "success": {
+        "title": "Project Submitted Successfully",
+        "description": "Thank you! We've received your project details and will be in touch soon."
+      }
     }
   }
 }

@@ -13,6 +13,7 @@ import { useTranslations } from "@/hooks/useTranslations";
 // UI Components
 import { Button } from "@/components/ui/button";
 import {
+  Form,
   FormControl,
   FormField,
   FormItem,
@@ -492,6 +493,7 @@ export default function ProjectForm() {
       const emailPayload = {
         name: formData.name,
         email: formData.email,
+        to: emailData.to, // Add recipient email address
         subject: emailData.subject,
         message: emailData.body,
         phone: formData.phone || '',
@@ -529,51 +531,66 @@ export default function ProjectForm() {
   const submitForm = async () => {
     setIsSubmitting(true);
     
-    // Track form submission attempt
-    trackEvent(EventCategory.FORM, EventAction.FORM_SUBMIT, 'project_form', {
-      project_type: formData.projectType,
-      step_count: formSteps.length
-    });
-    
+    // First, validate all fields
     try {
+      // Trigger validation for the current form
+      const isValid = await contactForm.trigger();
+      
+      if (!isValid) {
+        toast({
+          title: t('form.submission.validation.title'),
+          description: t('form.submission.validation.description'),
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      }
+      
       // Prepare email data
       const emailData: EmailData = {
         to: 'commercial@pledgeandgrow.com',
-        subject: `Nouveau projet digital: ${formData.projectName || 'Sans nom'}`,
+        subject: `New Digital Project: ${formData.projectName || 'Unnamed'}`,
         body: formatEmailBody(formData)
       };
       
-      // Send email
+      // All validation passed, proceed with submission
       const success = await sendEmail(emailData);
       
       if (success) {
-        setIsSubmitted(true);
+        // Track successful submission
+        trackEvent(EventCategory.FORM, EventAction.FORM_SUCCESS, 'digital_project_form', {
+          project_type: formData.projectType,
+          has_deadline: !!formData.deadline
+        });
         toast({
           title: t('form.submission.success.title'),
           description: t('form.submission.success.description'),
+        });
+        setIsSubmitted(true);
+      } else {
+        toast({
+          title: t('form.submission.error.title'),
+          description: t('form.submission.error.description'),
+          variant: "destructive",
           action: (
-            <ToastAction altText="OK">
-              OK
+            <ToastAction altText={t('form.submission.error.retry')} onClick={() => submitForm()}>
+              {t('form.submission.error.retry')}
             </ToastAction>
           ),
         });
-        
-        // Track successful submission
-        trackEvent(EventCategory.FORM, EventAction.FORM_SUCCESS, 'project_form_success', {
-          project_type: formData.projectType
-        });
-      } else {
-        throw new Error('Failed to send email');
       }
     } catch (error) {
       console.error('Form submission error:', error);
+      // Provide more specific error message if possible
+      const errorMessage = error instanceof Error ? error.message : t('form.submission.error.description');
+      
       toast({
         variant: "destructive",
         title: t('form.submission.error.title'),
-        description: t('form.submission.error.description'),
+        description: errorMessage,
         action: (
-          <ToastAction altText="Réessayer">
-            Réessayer
+          <ToastAction altText={t('form.submission.error.retry')} onClick={() => submitForm()}>
+            {t('form.submission.error.retry')}
           </ToastAction>
         ),
       });
@@ -582,13 +599,54 @@ export default function ProjectForm() {
     }
   };
 
+  // Form Navigation Component
+  const FormNavigation = ({ isLastStep = false }: { isLastStep?: boolean }) => {
+    return (
+      <div className="flex justify-between mt-8">
+        {currentStep > 0 && (
+          <Button
+            type="button"
+            variant="outline"
+            onClick={prevStep}
+            className="flex items-center gap-2"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            {t('form.navigation.back')}
+          </Button>
+        )}
+        
+        {currentStep === 0 && <div></div>} {/* Empty div for flex spacing on first step */}
+        
+        <Button
+          type="submit"
+          className="flex items-center gap-2"
+        >
+          {isLastStep ? (
+            <>
+              <Send className="h-4 w-4" />
+              {t('form.navigation.submit')}
+            </>
+          ) : (
+            <>
+              {t('form.navigation.next')}
+              <ArrowRight className="h-4 w-4" />
+            </>
+          )}
+        </Button>
+      </div>
+    );
+  };
+  
   // Render the form steps
   const renderFormStep = () => {
     switch (currentStep) {
       case 0: // Project Type
         return (
           <FormProvider {...projectTypeForm}>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              projectTypeForm.handleSubmit(() => nextStep())();
+            }}>
               <FormField
                 control={projectTypeForm.control}
                 name="projectType"
@@ -646,7 +704,10 @@ export default function ProjectForm() {
       case 1: // Project Details
         return (
           <FormProvider {...projectDetailsForm}>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              projectDetailsForm.handleSubmit(() => nextStep())();
+            }}>
               <FormField
                 control={projectDetailsForm.control}
                 name="projectName"
@@ -706,7 +767,10 @@ export default function ProjectForm() {
       case 2: // Timeline
         return (
           <FormProvider {...timelineForm}>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              timelineForm.handleSubmit(() => nextStep())();
+            }}>
               <FormField
                 control={timelineForm.control}
                 name="startDate"
@@ -790,7 +854,10 @@ export default function ProjectForm() {
       case 3: // Budget
         return (
           <FormProvider {...budgetForm}>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              budgetForm.handleSubmit(() => nextStep())();
+            }}>
               <FormField
                 control={budgetForm.control}
                 name="budgetRange"
@@ -890,7 +957,10 @@ export default function ProjectForm() {
       case 4: // Contact
         return (
           <FormProvider {...contactForm}>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              contactForm.handleSubmit(() => submitForm())();
+            }}>
               <FormField
                 control={contactForm.control}
                 name="name"
@@ -967,40 +1037,7 @@ export default function ProjectForm() {
       case 5: // Summary
         return (
           <>
-            <div className="flex justify-between mt-8">
-              {!isSubmitted && (
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={prevStep}
-                  className="flex items-center gap-2"
-                  disabled={isSubmitting}
-                >
-                  <ArrowLeft className="h-4 w-4" />
-                  {t('form.navigation.back')}
-                </Button>
-              )}
-              
-              {!isSubmitted ? (
-                <Button
-                  type="button"
-                  onClick={submitForm}
-                  className="flex items-center gap-2"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="h-4 w-4 animate-spin" />
-                      {t('form.navigation.submitting')}
-                    </>
-                  ) : (
-                    <>
-                      <Send className="h-4 w-4" />
-                      {t('form.navigation.submit')}
-                    </>
-                  )}
-                </Button>
-              ) : (
+            {isSubmitted && (
                 <div className="w-full flex flex-col items-center justify-center space-y-4">
                   <div className="bg-green-50 dark:bg-green-900 p-4 rounded-lg w-full text-center">
                     <div className="flex justify-center mb-2">
@@ -1013,17 +1050,55 @@ export default function ProjectForm() {
                       {t('form.submission.success.description')}
                     </p>
                   </div>
-                  <Button
-                    type="button"
-                    variant="outline"
-                    onClick={() => window.location.href = '/'}
-                    className="flex items-center gap-2"
-                  >
-                    {t('form.navigation.returnHome')}
-                  </Button>
+                  <div className="flex flex-col sm:flex-row gap-3 w-full">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      onClick={() => window.location.href = '/'}
+                      className="flex items-center gap-2 flex-1"
+                    >
+                      {t('form.navigation.returnHome')}
+                    </Button>
+                    <Button
+                      type="button"
+                      onClick={() => {
+                        // Reset form state
+                        setIsSubmitted(false);
+                        setIsSubmitting(false);
+                        setCurrentStep(0);
+                        setFormData({
+                          projectType: "",
+                          projectName: "",
+                          projectDescription: "",
+                          targetAudience: "",
+                          startDate: "",
+                          deadline: "",
+                          flexibility: "moderate",
+                          budgetRange: "",
+                          paymentPreference: "milestone",
+                          name: "",
+                          email: "",
+                          company: "",
+                          phone: ""
+                        });
+                        
+                        // Reset all form instances
+                        projectTypeForm.reset();
+                        projectDetailsForm.reset();
+                        timelineForm.reset();
+                        budgetForm.reset();
+                        contactForm.reset();
+                        
+                        // Track new form start
+                        trackEvent(EventCategory.FORM, EventAction.CLICK, 'start_new_project');
+                      }}
+                      className="flex items-center gap-2 flex-1"
+                    >
+                      {t('form.navigation.startNewProject') || 'Start New Project'}
+                    </Button>
+                  </div>
                 </div>
-              )}
-            </div>
+            )}
       
             <div className="space-y-6 mt-8">
               <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
@@ -1147,10 +1222,10 @@ export default function ProjectForm() {
     <div className="max-w-3xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-          {t('title')}
+          {t('form.heading')}
         </h1>
         <p className="text-gray-600 dark:text-gray-300">
-          {t('description')}
+          {t('form.description')}
         </p>
       </div>
       
@@ -1159,7 +1234,7 @@ export default function ProjectForm() {
         <Progress value={(currentStep / (formSteps.length - 1)) * 100} />
         <div className="flex justify-between mt-2">
           <span className="text-sm text-gray-500 dark:text-gray-400">
-            {t('form.progress.step')} {currentStep + 1} {t('form.progress.of')} {formSteps.length}
+            {t('form.navigation.step')} {currentStep + 1} {t('form.navigation.of')} {formSteps.length}
           </span>
           <span className="text-sm font-medium text-gray-900 dark:text-white">
             {formSteps[currentStep]?.title}
@@ -1178,6 +1253,62 @@ export default function ProjectForm() {
             transition={{ duration: 0.2 }}
           >
             {renderFormStep()}
+            
+            {/* Form Navigation */}
+            {!isSubmitted && (
+              <div className="flex justify-between mt-8">
+                {currentStep > 0 && (
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={prevStep}
+                    className="flex items-center gap-2"
+                    disabled={isSubmitting}
+                  >
+                    <ArrowLeft className="h-4 w-4" />
+                    {t('form.navigation.back')}
+                  </Button>
+                )}
+                
+                {currentStep === 0 && <div></div>} {/* Empty div for flex spacing on first step */}
+                
+                {currentStep < formSteps.length - 1 ? (
+                  <Button
+                    type="button"
+                    onClick={() => {
+                      const currentForm = getCurrentForm();
+                      if (currentForm) {
+                        currentForm.handleSubmit(() => nextStep())();
+                      }
+                    }}
+                    className="flex items-center gap-2"
+                  >
+                    {t('form.navigation.next')}
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                ) : (
+                  <Button
+                    type="button"
+                    onClick={submitForm}
+                    className="flex items-center gap-2"
+                    disabled={isSubmitting}
+                    aria-busy={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                        {t('form.navigation.submitting')}
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-4 w-4" />
+                        {t('form.navigation.submit')}
+                      </>
+                    )}
+                  </Button>
+                )}
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>

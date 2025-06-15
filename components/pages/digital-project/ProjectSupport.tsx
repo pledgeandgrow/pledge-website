@@ -47,14 +47,15 @@ const technologies: Technology[] = [
   { name: "Swift", icon: "SiSwift", category: "mobile", color: "text-orange-500" },
   { name: "Kotlin", icon: "SiKotlin", category: "mobile", color: "text-purple-500" },
   { name: "Ionic", icon: "SiIonic", category: "mobile", color: "text-blue-600" },
+  { name: "Expo", icon: "SiExpo", category: "mobile", color: "text-black" },
   
   // Databases
   { name: "PostgreSQL", icon: "SiPostgresql", category: "database", color: "text-blue-700" },
+  { name: "MySQL", icon: "SiMysql", category: "database", color: "text-blue-800" },
   { name: "MongoDB", icon: "SiMongodb", category: "database", color: "text-green-600" },
-  { name: "MySQL", icon: "SiMysql", category: "database", color: "text-blue-500" },
-  { name: "Redis", icon: "SiRedis", category: "database", color: "text-red-500" },
-  { name: "Supabase", icon: "SiSupabase", category: "database", color: "text-emerald-600" },
+  { name: "Redis", icon: "SiRedis", category: "database", color: "text-red-600" },
   { name: "Firebase", icon: "SiFirebase", category: "database", color: "text-yellow-500" },
+  { name: "Supabase", icon: "SiSupabase", category: "database", color: "text-green-500" },
   
   // CMS
   { name: "WordPress", icon: "SiWordpress", category: "cms", color: "text-blue-600" },
@@ -64,14 +65,34 @@ const technologies: Technology[] = [
   { name: "Drupal", icon: "SiDrupal", category: "cms", color: "text-blue-700" },
   
   // Cloud & DevOps
-  { name: "AWS", icon: "SiAmazonaws", category: "cloud", color: "text-orange-500" },
+  { name: "AWS", icon: "SiAmazonwebservices", category: "cloud", color: "text-orange-500" },
   { name: "Google Cloud", icon: "SiGooglecloud", category: "cloud", color: "text-blue-500" },
-  { name: "Azure", icon: "SiMicrosoftazure", category: "cloud", color: "text-blue-600" },
+  { name: "Azure", icon: "SiMicrosoft", category: "cloud", color: "text-blue-600" },
   { name: "Docker", icon: "SiDocker", category: "cloud", color: "text-blue-500" },
   { name: "Kubernetes", icon: "SiKubernetes", category: "cloud", color: "text-blue-600" },
   { name: "GitHub Actions", icon: "SiGithubactions", category: "cloud", color: "text-gray-700" },
   { name: "Vercel", icon: "SiVercel", category: "cloud" },
   { name: "Netlify", icon: "SiNetlify", category: "cloud", color: "text-teal-500" },
+  
+  // Blockchain
+  { name: "Rust", icon: "SiRust", category: "blockchain", color: "text-orange-600" },
+  { name: "Solidity", icon: "SiSolidity", category: "blockchain", color: "text-gray-600" },
+  
+  // Software
+  { name: "Electron", icon: "SiElectron", category: "software", color: "text-blue-400" },
+  { name: "C++", icon: "SiCplusplus", category: "software", color: "text-blue-700" },
+  { name: "Assembly", icon: "SiAssemblyscript", category: "software", color: "text-gray-700" },
+  { name: "C#", icon: "SiCsharp", category: "software", color: "text-green-600" },
+  { name: "Python", icon: "SiPython", category: "backend", color: "text-blue-500" },
+  
+  // Games
+  { name: "Unity", icon: "SiUnity", category: "games", color: "text-gray-800" },
+  { name: "Unreal Engine", icon: "SiUnrealengine", category: "games", color: "text-gray-700" },
+  
+  // AI
+  { name: "Anthropic", icon: "SiOpenai", category: "ai", color: "text-purple-600" },
+  { name: "Mistral", icon: "SiOpenai", category: "ai", color: "text-blue-500" },
+  { name: "OpenAI", icon: "SiOpenai", category: "ai", color: "text-green-500" },
 ];
 
 const getCategories = (t: (key: string) => string) => [
@@ -82,7 +103,37 @@ const getCategories = (t: (key: string) => string) => [
   { id: "database", name: t('support.categories.database') },
   { id: "cms", name: t('support.categories.cms') },
   { id: "cloud", name: t('support.categories.cloud') },
+  { id: "blockchain", name: t('support.categories.blockchain') },
+  { id: "software", name: t('support.categories.software') },
+  { id: "games", name: t('support.categories.games') },
+  { id: "ai", name: t('support.categories.ai') },
 ];
+
+// Function to get icon for each category
+const getCategoryIcon = (categoryId: string) => {
+  switch (categoryId) {
+    case 'frontend':
+      return <div className="text-blue-500"><SiIcons.SiReact className="w-6 h-6" /></div>;
+    case 'backend':
+      return <div className="text-green-600"><SiIcons.SiNodedotjs className="w-6 h-6" /></div>;
+    case 'mobile':
+      return <div className="text-blue-400"><SiIcons.SiReact className="w-6 h-6" /></div>;
+    case 'database':
+      return <div className="text-blue-700"><SiIcons.SiPostgresql className="w-6 h-6" /></div>;
+    case 'cms':
+      return <div className="text-blue-600"><SiIcons.SiWordpress className="w-6 h-6" /></div>;
+    case 'cloud':
+      return <div className="text-orange-500"><SiIcons.SiAmazonwebservices className="w-6 h-6" /></div>;
+    case 'blockchain':
+      return <div className="text-orange-600"><SiIcons.SiRust className="w-6 h-6" /></div>;
+    case 'software':
+      return <div className="text-blue-400"><SiIcons.SiElectron className="w-6 h-6" /></div>;
+    case 'ai':
+      return <div className="text-green-500"><SiIcons.SiOpenai className="w-6 h-6" /></div>;
+    default:
+      return <div className="text-primary"><Search className="w-6 h-6" /></div>;
+  }
+};
 
 export default function ProjectSupport() {
   const { t } = useTranslations('digital-project');
@@ -93,6 +144,8 @@ export default function ProjectSupport() {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [showMoreCategories, setShowMoreCategories] = useState(false);
+  const [sliderPosition, setSliderPosition] = useState(0);
 
   // Check if the screen is mobile size
   useEffect(() => {
@@ -140,6 +193,16 @@ export default function ProjectSupport() {
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
   };
   
+  // Slider navigation for categories
+  const slideCategories = (direction: 'left' | 'right') => {
+    const maxSlide = Math.max(0, categories.length - (isMobile ? 3 : 6));
+    if (direction === 'left') {
+      setSliderPosition(Math.max(0, sliderPosition - 1));
+    } else {
+      setSliderPosition(Math.min(maxSlide, sliderPosition + 1));
+    }
+  };
+  
   // Get current page items
   const getCurrentPageItems = () => {
     if (!isMobile) return filteredTechnologies;
@@ -172,15 +235,15 @@ export default function ProjectSupport() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-10"
+          className="text-center max-w-4xl mx-auto mb-10"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
             {t('support.title')}
           </h2>
-          <p className="text-lg text-muted-foreground mb-8">
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
             {t('support.description')}
           </p>
-
+          
           {/* Search input */}
           <div className="relative max-w-md mx-auto">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -202,24 +265,60 @@ export default function ProjectSupport() {
         </motion.div>
 
         <div className="w-full max-w-5xl mx-auto">
-          {/* Category tabs - horizontally scrollable on mobile */}
-          <div className="flex justify-start md:justify-center mb-8 overflow-x-auto pb-2 scrollbar-hide">
-            <Tabs value={activeCategory} onValueChange={handleCategoryChange}>
-              <TabsList className="flex flex-nowrap">
-                {categories.map((category) => (
-                  <TabsTrigger 
-                    key={category.id} 
-                    value={category.id} 
-                    className={cn(
-                      "whitespace-nowrap px-4 py-2 text-sm md:text-base",
-                      activeCategory === category.id ? "bg-primary text-primary-foreground" : ""
-                    )}
+          {/* Category tabs with horizontal scrolling and pagination */}
+          <div className="mb-8">
+            {/* Only show pagination controls on desktop */}
+            {!isMobile && (
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex-1"></div>
+                <div className="flex gap-2">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="h-8 w-8"
+                    onClick={() => {
+                      const tabsContainer = document.querySelector('.tabs-scroll-container');
+                      if (tabsContainer) {
+                        tabsContainer.scrollBy({ left: -200, behavior: 'smooth' });
+                      }
+                    }}
                   >
-                    {category.name}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-            </Tabs>
+                    <ChevronLeft className="h-4 w-4" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="h-8 w-8"
+                    onClick={() => {
+                      const tabsContainer = document.querySelector('.tabs-scroll-container');
+                      if (tabsContainer) {
+                        tabsContainer.scrollBy({ left: 200, behavior: 'smooth' });
+                      }
+                    }}
+                  >
+                    <ChevronRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+            )}
+            <div className="w-full overflow-x-auto scrollbar-hide tabs-scroll-container" style={{ cursor: 'grab', WebkitOverflowScrolling: 'touch' }}>
+              <Tabs value={activeCategory} onValueChange={handleCategoryChange} className="w-full">
+                <TabsList className="flex flex-nowrap p-1 bg-muted/50 border border-border/50 min-w-max" style={{ touchAction: 'pan-x' }}>
+                  {categories.map((category) => (
+                    <TabsTrigger 
+                      key={category.id} 
+                      value={category.id} 
+                      className={cn(
+                        "whitespace-nowrap px-4 py-2 text-sm md:text-base",
+                        activeCategory === category.id ? "bg-primary text-primary-foreground" : ""
+                      )}
+                    >
+                      {category.name}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+              </Tabs>
+            </div>
           </div>
           
           {/* Technology grid with improved responsiveness */}
@@ -229,7 +328,7 @@ export default function ProjectSupport() {
               {isMobile && filteredTechnologies.length > 4 && (
                 <div className="flex justify-between items-center mb-4">
                   <div className="text-sm font-medium">
-                    {t('support.pagination.page')} {currentPage + 1} {t('support.pagination.of')} {totalPages}
+                    {t('support.navigation.page')} {currentPage + 1} {t('support.navigation.of')} {totalPages}
                   </div>
                   <div className="flex gap-2">
                     <Button 
@@ -252,6 +351,8 @@ export default function ProjectSupport() {
                 </div>
               )}
               
+              {/* Technology grid content */}
+              
               <AnimatePresence mode="wait">
                 <motion.div 
                   key={activeCategory + searchQuery + currentPage}
@@ -269,23 +370,64 @@ export default function ProjectSupport() {
                             <TooltipTrigger asChild>
                               <motion.div
                                 variants={itemVariants}
-                                whileHover={{ scale: 1.05, boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)" }}
-                                className="flex flex-col items-center justify-center gap-2 md:gap-3 p-3 md:p-4 bg-card rounded-lg hover:bg-accent/50 transition-all cursor-pointer border border-transparent hover:border-border"
+                                className={cn(
+                                  "flex flex-col items-center justify-center gap-2 md:gap-3 p-3 md:p-4 rounded-lg cursor-pointer border",
+                                  "bg-card border-transparent"
+                                )}
                               >
                                 <div className="bg-muted/50 p-2 md:p-3 rounded-lg flex items-center justify-center w-12 h-12 md:w-16 md:h-16">
                                   {(() => {
                                     // Dynamically import the icon
-                                    const IconComponent = SiIcons[tech.icon as keyof typeof SiIcons];
-                                    return IconComponent ? (
-                                      <IconComponent
-                                        className={cn(
-                                          "h-7 w-7 md:h-10 md:w-10",
-                                          tech.color || "text-foreground"
-                                        )}
-                                      />
-                                    ) : (
-                                      <div className="h-7 w-7 md:h-10 md:w-10 bg-muted rounded-full" />
-                                    );
+                                    if (tech.name === "Azure") {
+                                      // Use a custom SVG for Azure
+                                      return (
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          viewBox="0 0 48 48"
+                                          className={cn(
+                                            "h-7 w-7 md:h-10 md:w-10",
+                                            tech.color || "text-foreground"
+                                          )}
+                                        >
+                                          <path fill="currentColor" d="M9.5 33.5l8.85-15.175 9.25 11.075-16.6 4.1z" />
+                                          <path fill="currentColor" d="M23.3 14.775l6.3 14.525L38.5 33.5l-15.2-18.725z" />
+                                        </svg>
+                                      );
+                                    } else if (tech.name === "Mistral") {
+                                      // Use image from public directory for Mistral
+                                      return (
+                                        <img 
+                                          src="/mistral.png" 
+                                          alt="Mistral" 
+                                          className={cn(
+                                            "h-7 w-7 md:h-10 md:w-10"
+                                          )}
+                                        />
+                                      );
+                                    } else if (tech.name === "Claude") {
+                                      // Use image from public directory for Claude
+                                      return (
+                                        <img 
+                                          src="/claude.png" 
+                                          alt="Claude" 
+                                          className={cn(
+                                            "h-7 w-7 md:h-10 md:w-10"
+                                          )}
+                                        />
+                                      );
+                                    } else {
+                                      const IconComponent = SiIcons[tech.icon as keyof typeof SiIcons];
+                                      return IconComponent ? (
+                                        <IconComponent
+                                          className={cn(
+                                            "h-7 w-7 md:h-10 md:w-10",
+                                            tech.color || "text-foreground"
+                                          )}
+                                        />
+                                      ) : (
+                                        <div className="h-7 w-7 md:h-10 md:w-10 bg-muted rounded-full" />
+                                      );
+                                    }
                                   })()}
                                 </div>
                                 <span className="text-xs md:text-sm text-center font-medium line-clamp-2">{tech.name}</span>
@@ -293,14 +435,16 @@ export default function ProjectSupport() {
                             </TooltipTrigger>
                             <TooltipContent side="top" className="bg-background border border-border shadow-md">
                               <p className="font-medium">{tech.name}</p>
+                              <p className="text-xs text-muted-foreground capitalize">{tech.category}</p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
                       );
                     })
                   ) : (
-                    <div className="col-span-full py-12 text-center">
-                      <p className="text-muted-foreground">{t('support.noResults')}</p>
+                    <div className="col-span-full flex flex-col items-center justify-center py-10">
+                      <Search className="h-10 w-10 text-muted-foreground mb-4" />
+                      <p className="text-muted-foreground">{t('support.noTechnologiesFound')}</p>
                     </div>
                   )}
                 </motion.div>

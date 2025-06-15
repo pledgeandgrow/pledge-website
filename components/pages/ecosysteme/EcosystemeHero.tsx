@@ -58,19 +58,7 @@ export default function EcosystemeHero() {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button asChild size="lg" className="gap-2">
-                <Link href="/contact">
-                  {t('hero.cta.primary')}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/services">
-                  {t('hero.cta.secondary')}
-                </Link>
-              </Button>
-            </div>
+            {/* Buttons removed as requested */}
           </motion.div>
           
           <motion.div

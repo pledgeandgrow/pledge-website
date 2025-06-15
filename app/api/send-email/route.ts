@@ -55,7 +55,7 @@ export async function POST(request: Request) {
     
     // Parse the request body
     const body = await request.json();
-    const { name, email, subject, message, phone, company, service } = body;
+    const { name, email, subject, message, phone, company, service, to } = body;
 
     // Validate required fields
     if (!name || !email || !message) {
@@ -102,12 +102,16 @@ export async function POST(request: Request) {
     // Create a transporter using SMTP
     let transporter;
     try {
-      transporter = nodemailer.createTransport({
-        host: smtpHost || 'ssl0.ovh.net',
-        port: parseInt(smtpPort || '587'),
-        secure: smtpSecure === 'true',
+      // OVH SMTP Configuration
+      // For OVH Roundcube mail with @pledgeandgrow.com
+      const useOvhDefaults = !smtpHost || smtpHost.includes('ovh');
+      
+      const transportConfig = {
+        host: useOvhDefaults ? 'ssl0.ovh.net' : smtpHost,
+        port: parseInt(smtpPort || (useOvhDefaults ? '587' : '25')),
+        secure: smtpSecure === 'true' || (useOvhDefaults && false), // OVH typically uses STARTTLS (not secure:true)
         auth: {
-          user: smtpUser,
+          user: smtpUser, // Should be full email address for OVH
           pass: smtpPassword,
         },
         tls: {
@@ -115,9 +119,25 @@ export async function POST(request: Request) {
           rejectUnauthorized: false
         },
         debug: true
+      };
+      
+      console.log('Creating SMTP transport with config:', {
+        host: transportConfig.host,
+        port: transportConfig.port,
+        secure: transportConfig.secure,
+        user: transportConfig.auth.user ? '(set)' : '(not set)',
+        usingOvhDefaults: useOvhDefaults
       });
       
-      console.log('SMTP Transporter created successfully');
+      transporter = nodemailer.createTransport(transportConfig);
+      
+      // Verify SMTP connection configuration
+      await transporter.verify().catch(error => {
+        console.error('SMTP Verification failed:', error);
+        throw new Error(`SMTP verification failed: ${error.message}`);
+      });
+      
+      console.log('SMTP Transporter created and verified successfully');
     } catch (transporterError) {
       console.error('Error creating SMTP transporter:', transporterError);
       return NextResponse.json(
@@ -147,8 +167,13 @@ export async function POST(request: Request) {
     // Determine the appropriate recipient based on the subject
     let recipient = 'support@pledgeandgrow.com';
     
-    // Route emails based on subject
-    if (subject === 'Commercial' || subject === 'Partnership' || service === 'web' || service === 'mobile' || service === 'design') {
+    // Use the provided 'to' field if available
+    if (to) {
+      recipient = to;
+      console.log(`Using provided recipient email: ${recipient}`);
+    }
+    // Otherwise route emails based on subject
+    else if (subject === 'Commercial' || subject === 'Partnership' || service === 'web' || service === 'mobile' || service === 'design') {
       recipient = 'commercial@pledgeandgrow.com';
     } else if (subject === 'Investment') {
       recipient = 'investment@pledgeandgrow.com';
@@ -212,59 +237,57 @@ export async function POST(request: Request) {
     };
 
     try {
-      // Verify SMTP connection before sending
+      // Send email to admin with better error handling
+      console.log(`Attempting to send admin notification to ${recipient}...`);
       try {
-        await transporter.verify();
-        console.log('SMTP connection verified successfully');
-      } catch (verifyError) {
-        console.error('SMTP connection verification failed:', verifyError);
-        return NextResponse.json(
-          { error: 'Failed to connect to email server. Please try again later.' },
-          { status: 500 }
-        );
-      }
-      
-      // Send the admin notification email
-      try {
-        const adminEmailResult = await transporter.sendMail(adminMailOptions);
-        console.log('Admin email sent:', adminEmailResult.messageId);
+        const adminInfo = await transporter.sendMail(adminMailOptions);
+        console.log(`Admin notification sent successfully to ${recipient}`);
+        console.log(`Message ID: ${adminInfo.messageId}`);
       } catch (adminEmailError) {
-        console.error('Error sending admin notification email:', adminEmailError);
-        return NextResponse.json(
-          { error: 'Failed to send your message. Please try again later.' },
-          { status: 500 }
-        );
+        console.error(`Failed to send admin notification to ${recipient}:`, adminEmailError);
+        throw new Error(`Admin email failed: ${adminEmailError.message}`);
       }
       
-      // Send confirmation to user (don't fail the whole process if this fails)
+      // Send confirmation to user with better error handling
+      console.log(`Attempting to send confirmation email to ${email}...`);
       try {
-        const userEmailResult = await transporter.sendMail(userMailOptions);
-        console.log('User confirmation email sent:', userEmailResult.messageId);
+        const userInfo = await transporter.sendMail(userMailOptions);
+        console.log(`Confirmation email sent successfully to ${email}`);
+        console.log(`Message ID: ${userInfo.messageId}`);
       } catch (userEmailError) {
-        // Log the error but don't fail the whole process
-        console.error('Error sending user confirmation email:', userEmailError);
-        // Still consider the submission successful if admin notification was sent
+        // Log error but don't fail the whole request if only user email fails
+        console.error(`Failed to send confirmation to ${email}:`, userEmailError);
+        // Continue processing as admin notification is more important
       }
       
+      return NextResponse.json({ 
+        success: true,
+        message: 'Email sent successfully',
+        recipient: recipient
+      });
     } catch (error) {
-      console.error('Unexpected error in email sending process:', error);
+      console.error('Error in email sending process:', error);
+      // Log detailed error information
+      if (error instanceof Error) {
+        console.error('Error name:', error.name);
+        console.error('Error message:', error.message);
+        console.error('Error stack:', error.stack);
+      }
+      
       return NextResponse.json(
-        { error: 'An unexpected error occurred. Please try again later.' },
+        { 
+          error: 'Failed to send email. Please try again later.',
+          details: error instanceof Error ? error.message : 'Unknown error'
+        },
         { status: 500 }
       );
     }
 
-    // Return success response
-    return NextResponse.json({ 
-      success: true, 
-      message: 'Email sent successfully' 
-    });
-    
   } catch (error) {
-    console.error('Error sending email:', error);
+    console.error('Error in API route:', error);
     
     return NextResponse.json(
-      { error: 'Failed to send email. Please try again later.' },
+      { error: 'Failed to process request. Please try again later.' },
       { status: 500 }
     );
   }
