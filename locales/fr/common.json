@@ -146,5 +146,12 @@
   },
   "languageSwitcher": {
     "switchLanguage": "Changer de Langue"
+  },
+  "navigation": {
+    "backToHome": "Retour à l'Accueil"
+  },
+  "legal": {
+    "tableOfContents": "Table des Matières",
+    "relatedDocuments": "Documents Juridiques Associés"
   }
 }

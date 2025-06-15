@@ -40,12 +40,14 @@ function CookiePolicyContent() {
     };
   });
 
-  // Define related legal pages with hardcoded values to ensure they always display correctly
+  // Define related legal pages using translations
+  const { t: commonT } = useTranslations('common');
+  
   const relatedPages = [
-    { title: 'Privacy Policy', href: '/legal/privacy-policy' },
-    { title: 'GDPR Compliance', href: '/legal/gdpr' },
-    { title: 'Terms & Conditions', href: '/legal/terms-conditions' },
-    { title: 'Legal Notice', href: '/legal/legal-notice' }
+    { title: commonT('footer.legal.privacyPolicy', 'Privacy Policy'), href: '/legal/privacy-policy' },
+    { title: commonT('footer.legal.gdpr', 'GDPR Compliance'), href: '/legal/gdpr' },
+    { title: commonT('footer.legal.termsOfService', 'Terms & Conditions'), href: '/legal/terms-conditions' },
+    { title: commonT('footer.legal.legalNotice', 'Legal Notice'), href: '/legal/legal-notice' }
   ];
 
   // Map section keys to icons

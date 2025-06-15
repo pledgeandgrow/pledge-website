@@ -5,7 +5,7 @@
   },
   "breadcrumbs": {
     "home": "Accueil",
-    "legal": "Mentions légales",
+    "legal": "Mentions Légales",
     "privacyPolicy": "Politique de Confidentialité"
   },
   "hero": {
@@ -133,8 +133,8 @@
       ],
       "address": [
         "Pledge & Grow",
-        "123 rue de l'Innovation",
-        "75001 Paris, France",
+        "4bis Rue Alfred Nobel",
+        "77420 Champs sur Marne, France",
         "support@pledgeandgrow.com"
       ]
     }

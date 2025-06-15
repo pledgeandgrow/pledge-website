@@ -5,7 +5,7 @@
   },
   "breadcrumbs": {
     "home": "Accueil",
-    "legal": "Mentions légales",
+    "legal": "Mentions Légales",
     "gdpr": "Conformité RGPD"
   },
   "hero": {
@@ -23,7 +23,7 @@
     "dataController": {
       "title": "Responsable du traitement",
       "content": [
-        "Pledge & Grow, situé au 123 rue de l'Innovation, 75001 Paris, France, est le responsable du traitement de vos données personnelles. Cela signifie que nous déterminons les finalités et les moyens du traitement des données personnelles."
+        "Pledge & Grow, situé au 4bis Rue Alfred Nobel, 77420 Champs sur Marne, France, est le responsable du traitement de vos données personnelles. Cela signifie que nous déterminons les finalités et les moyens du traitement des données personnelles."
       ]
     },
     "dataProtectionOfficer": {
@@ -31,7 +31,7 @@
       "content": [
         "Nous avons nommé un Délégué à la Protection des Données (DPD) qui est responsable de superviser les questions relatives à cette notice de confidentialité. Si vous avez des questions concernant cette notice de confidentialité, y compris toute demande d'exercice de vos droits légaux, veuillez contacter le DPD en utilisant les coordonnées indiquées ci-dessous :",
         "Adresse e-mail : support@pledgeandgrow.com",
-        "Adresse postale : Délégué à la Protection des Données, Pledge & Grow, 123 rue de l'Innovation, 75001 Paris, France"
+        "Adresse postale : Délégué à la Protection des Données, Pledge & Grow, 4bis Rue Alfred Nobel, 77420 Champs sur Marne, France"
       ]
     },
     "dataProcessingPrinciples": {
@@ -113,8 +113,8 @@
       "address": [
         "Délégué à la Protection des Données",
         "Pledge & Grow",
-        "123 rue de l'Innovation",
-        "75001 Paris",
+        "4bis Rue Alfred Nobel",
+        "77420 Champs sur Marne",
         "France"
       ]
     }

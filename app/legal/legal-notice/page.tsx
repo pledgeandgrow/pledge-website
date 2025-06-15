@@ -31,12 +31,14 @@ export default function LegalNoticePage() {
     };
   });
 
-  // Define related legal pages with hardcoded values to ensure they always display correctly
+  // Define related legal pages using translations
+  const { t: commonT } = useTranslations('common');
+  
   const relatedPages = [
-    { title: 'Privacy Policy', href: '/legal/privacy-policy' },
-    { title: 'Cookie Policy', href: '/legal/cookie-policy' },
-    { title: 'Terms & Conditions', href: '/legal/terms-conditions' },
-    { title: 'GDPR Compliance', href: '/legal/gdpr' }
+    { title: commonT('footer.legal.privacyPolicy', 'Privacy Policy'), href: '/legal/privacy-policy' },
+    { title: commonT('footer.legal.cookiePolicy', 'Cookie Policy'), href: '/legal/cookie-policy' },
+    { title: commonT('footer.legal.termsOfService', 'Terms & Conditions'), href: '/legal/terms-conditions' },
+    { title: commonT('footer.legal.gdpr', 'GDPR Compliance'), href: '/legal/gdpr' }
   ];
 
   // Map section keys to icons
