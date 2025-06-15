@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import { 
   FAQs, 
   ContactSupport
@@ -24,8 +25,12 @@ export default function HelpCenterPage() {
     <>
       <Navbar />
       <main className="flex-grow pt-16">
-        <ContactSupport />
-        <FAQs />
+        <Suspense fallback={<div className="container mx-auto px-4 py-12 text-center">Loading support...</div>}>
+          <ContactSupport />
+        </Suspense>
+        <Suspense fallback={<div className="container mx-auto px-4 py-12 text-center">Loading FAQs...</div>}>
+          <FAQs />
+        </Suspense>
       </main>
       <Footer />
     </>
