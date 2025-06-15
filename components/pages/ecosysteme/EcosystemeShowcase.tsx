@@ -200,7 +200,6 @@ export default function EcosystemeShowcase() {
           </h2>
           <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             {t('showcase.description')}
-            {!isMobile ? t('modal.cta.learnMore') : t('modal.cta.contact')}
           </p>
         </motion.div>
 

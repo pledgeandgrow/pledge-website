@@ -220,7 +220,7 @@ export default function EcosystemeModal({ partner }: EcosystemeModalProps) {
         <Button variant="outline" size="sm" asChild className="sm:w-auto w-full">
           <Link href="/contact" className="flex items-center justify-center gap-1">
             <ExternalLink className="h-4 w-4" />
-            <span>{t('modal.cta.learnMore')}</span>
+            <span>Details</span>
           </Link>
         </Button>
         <Button 

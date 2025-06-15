@@ -72,7 +72,7 @@ export default function EcosystemeCollaboration() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <Card className="h-full border-none shadow-md hover:shadow-lg transition-shadow">
+                    <Card className="h-full border-none shadow-md bg-white dark:bg-gray-800 hover:shadow-lg transition-shadow">
                       <CardContent className="p-6 flex flex-col items-center text-center">
                         <div className="mb-4 w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
                           {benefit.icon}
@@ -96,7 +96,7 @@ export default function EcosystemeCollaboration() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full border-none shadow-md hover:shadow-lg transition-shadow">
+                <Card className="h-full border-none shadow-md bg-white dark:bg-gray-800 hover:shadow-lg transition-shadow">
                   <CardContent className="p-6 flex flex-col items-center text-center">
                     <div className="mb-4 w-20 h-20 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
                       {benefit.icon}

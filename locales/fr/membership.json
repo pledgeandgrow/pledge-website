@@ -16,11 +16,11 @@
     "imageAlt": "Avantages de l'Adhésion Premium"
   },
   "benefits": {
-    "title": "Privilèges d'Adhésion Élite",
-    "description": "Notre programme d'adhésion exclusif offre des avantages inégalés conçus pour les clients exigeants qui recherchent l'excellence en matière d'innovation numérique et de sophistication technologique.",
+    "title": "Privilèges d'Adhésion",
+    "description": "Notre programme d'adhésion exclusif offre des avantages conçus pour les clients exigeants qui recherchent l'excellence en matière d'innovation numérique.",
     "items": {
       "exclusiveResources": {
-        "title": "Solutions Numériques Sur Mesure",
+        "title": "Solutions Numériques",
         "description": "Accès à des actifs numériques personnalisés et des cadres propriétaires développés exclusivement pour notre clientèle élite."
       },
       "communityAccess": {
@@ -28,27 +28,27 @@
         "description": "Invitation à notre réseau privé de dirigeants, leaders de l'industrie et innovateurs numériques pour des partenariats stratégiques et collaborations."
       },
       "priorityEvents": {
-        "title": "Événements VIP de l'Industrie",
+        "title": "Événements VIP",
         "description": "Invitations exclusives aux présentations technologiques à huis clos, partenariats avec des marques de luxe et expériences numériques avant-gardistes."
       },
       "certificationPathways": {
-        "title": "Conciergerie Technologique",
+        "title": "Conciergerie d'Elite",
         "description": "Service de conciergerie technologique personnelle offrant des recommandations sur mesure et des stratégies d'implémentation pour les technologies émergentes."
       },
       "codeRepository": {
-        "title": "Accès aux Technologies Propriétaires",
+        "title": "Accès Propriétaires",
         "description": "Accès privilégié à nos algorithmes propriétaires, modèles d'IA et frameworks de code de pointe avant leur commercialisation."
       },
       "documentationAccess": {
-        "title": "Feuille de Route Numérique Stratégique",
+        "title": "Roadmap Stratégique",
         "description": "Stratégies complètes de transformation numérique et briefings exécutifs adaptés à la vision et à la position sur le marché de votre organisation."
       },
       "prioritySupport": {
-        "title": "Support Gants Blancs 24/7",
+        "title": "Support 24/7",
         "description": "Conciergerie technique dédiée disponible 24h/24 et 7j/7 avec des temps de réponse garantis et une résolution personnalisée des problèmes."
       },
       "innovationInsights": {
-        "title": "Laboratoire d'Innovation Exclusif",
+        "title": "Laboratoire d'Innovation",
         "description": "Accès en avant-première aux développements de notre laboratoire d'innovation, aux prototypes de technologies émergentes et aux prévisions de tendances numériques."
       }
     }

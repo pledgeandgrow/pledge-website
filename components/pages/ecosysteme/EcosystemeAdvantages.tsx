@@ -50,7 +50,7 @@ export default function EcosystemeAdvantages() {
   }, [t, isLoading]);
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section className="py-20 bg-white dark:bg-gray-950">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -77,7 +77,7 @@ export default function EcosystemeAdvantages() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <Card className="h-full border-none shadow-md bg-white dark:bg-gray-900 hover:shadow-lg transition-shadow">
+                  <Card className="h-full border-none shadow-md bg-white dark:bg-gray-800 hover:shadow-lg transition-shadow">
                     <CardContent className="p-6">
                       <div className="mb-4 w-12 h-12 rounded-full bg-green-100/80 dark:bg-green-900/40 flex items-center justify-center text-green-700 dark:text-green-400">
                         {advantage.icon}
@@ -100,7 +100,7 @@ export default function EcosystemeAdvantages() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full border-none shadow-md bg-white dark:bg-gray-900 hover:shadow-lg transition-shadow">
+                <Card className="h-full border-none shadow-md bg-white dark:bg-gray-800 hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <div className="mb-4 w-12 h-12 rounded-full bg-green-100/80 dark:bg-green-900/40 flex items-center justify-center text-green-700 dark:text-green-400">
                       {advantage.icon}

@@ -43,7 +43,7 @@
         "description": "Bénéficiez d'un support dédié et d'heures de service étendues exclusivement disponibles pour les membres de l'écosystème."
       },
       "earlyInnovation": {
-        "title": "Accès Anticipé à l'Innovation",
+        "title": "Accès Anticipé",
         "description": "Soyez parmi les premiers à tester et à mettre en œuvre des solutions de pointe issues de nos projets d'innovation internes."
       }
     }
@@ -182,8 +182,7 @@
       "billingDetail": "Facturation consolidée et gestion simplifiée"
     },
     "cta": {
-      "contact": "Contactez-Nous",
-      "learnMore": "En Savoir Plus"
+      "contact": "Contactez-Nous"
     }
   },
   "collaboration": {
@@ -232,7 +231,7 @@
       "Recevez un plan d'accès à l'écosystème personnalisé",
       "Devenez client et débloquez tous les avantages de l'écosystème"
     ],
-    "contactCta": "Contactez-Nous pour En Savoir Plus"
+    "contactCta": "Contactez-Nous"
   },
   "approach": {
     "title": "Notre Approche d'Écosystème",

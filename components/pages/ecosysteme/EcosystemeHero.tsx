@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Percent, Users, Building } from "lucide-react";
 import { useTranslations } from "@/hooks/useTranslations";
 
@@ -79,47 +80,14 @@ export default function EcosystemeHero() {
             className="relative"
           >
             <div className="aspect-square max-w-lg mx-auto rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-green-500 to-emerald-700 p-1">
-              <div className="w-full h-full bg-white dark:bg-gray-900 rounded-xl overflow-hidden flex items-center justify-center">
-                <svg className="w-full h-full p-8 text-green-600 dark:text-green-400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                  <g fill="none" stroke="currentColor">
-                    {/* Central node - Pledge & Grow */}
-                    <circle cx="100" cy="100" r="20" className="fill-green-500 dark:fill-green-700" />
-                    <text x="100" y="104" textAnchor="middle" className="fill-white text-[8px] font-bold">P&G</text>
-                    
-                    {/* Group Companies */}
-                    <circle cx="60" cy="60" r="12" className="fill-green-200 dark:fill-green-900/50" />
-                    <circle cx="140" cy="60" r="12" className="fill-green-200 dark:fill-green-900/50" />
-                    <circle cx="60" cy="140" r="12" className="fill-green-200 dark:fill-green-900/50" />
-                    
-                    {/* Partners */}
-                    <circle cx="140" cy="140" r="10" className="fill-green-100 dark:fill-green-900/30" />
-                    <circle cx="160" cy="100" r="8" className="fill-green-100 dark:fill-green-900/30" />
-                    <circle cx="40" cy="100" r="8" className="fill-green-100 dark:fill-green-900/30" />
-                    <circle cx="100" cy="40" r="8" className="fill-green-100 dark:fill-green-900/30" />
-                    <circle cx="100" cy="160" r="8" className="fill-green-100 dark:fill-green-900/30" />
-                    
-                    {/* Connection lines */}
-                    <line x1="100" y1="100" x2="60" y2="60" stroke="currentColor" strokeWidth="2" />
-                    <line x1="100" y1="100" x2="140" y2="60" stroke="currentColor" strokeWidth="2" />
-                    <line x1="100" y1="100" x2="60" y2="140" stroke="currentColor" strokeWidth="2" />
-                    <line x1="100" y1="100" x2="140" y2="140" stroke="currentColor" strokeWidth="2" />
-                    <line x1="100" y1="100" x2="40" y2="100" stroke="currentColor" strokeWidth="2" />
-                    <line x1="100" y1="100" x2="160" y2="100" stroke="currentColor" strokeWidth="2" />
-                    <line x1="100" y1="100" x2="100" y2="40" stroke="currentColor" strokeWidth="2" />
-                    <line x1="100" y1="100" x2="100" y2="160" stroke="currentColor" strokeWidth="2" />
-                    
-                    {/* Dotted connections between partners */}
-                    <circle cx="120" cy="120" r="6" className="fill-green-100 dark:fill-green-900/30" />
-                    <circle cx="80" cy="120" r="6" className="fill-green-100 dark:fill-green-900/30" />
-                    <circle cx="120" cy="80" r="6" className="fill-green-100 dark:fill-green-900/30" />
-                    <circle cx="80" cy="80" r="6" className="fill-green-100 dark:fill-green-900/30" />
-                    
-                    <line x1="100" y1="100" x2="120" y2="120" stroke="currentColor" strokeWidth="1.5" />
-                    <line x1="100" y1="100" x2="80" y2="120" stroke="currentColor" strokeWidth="1.5" />
-                    <line x1="100" y1="100" x2="120" y2="80" stroke="currentColor" strokeWidth="1.5" />
-                    <line x1="100" y1="100" x2="80" y2="80" stroke="currentColor" strokeWidth="1.5" />
-                  </g>
-                </svg>
+              <div className="w-full h-full bg-white dark:bg-gray-900 rounded-xl overflow-hidden flex items-center justify-center relative">
+                <Image 
+                  src="/images/ecosystem/ecosystem.png" 
+                  alt="Pledge & Grow Ecosystem" 
+                  fill 
+                  className="object-cover" 
+                  priority 
+                />
               </div>
             </div>
             

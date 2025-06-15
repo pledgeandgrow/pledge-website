@@ -50,15 +50,15 @@
     "pillars": {
       "crypto": {
         "title": "Cryptomonnaies",
-        "description": "Nous acceptons actuellement des missions dans la plupart des cryptomonnaies et stablecoins les plus utilisés. Bientôt disponible en France"
+        "description": "Nous acceptons les paiements en cryptomonnaies et stablecoins les plus utilisés. Bientôt disponible en France"
       },
       "charity": {
         "title": "Charité",
-        "description": "Pledge & Grow se consacre à l'entraide et intervient occasionnellement à titre gratuit sur des projets à vocation humanitaire ou caritative. N'hésitez pas à venir nous en parler."
+        "description": "Pledge & Grow intervient occasionnellement à titre gratuit sur des projets à vocation humanitaire ou caritative. N'hésitez pas à venir nous en parler."
       },
       "team": {
         "title": "Équipe",
-        "description": "Notre équipe évolue constamment, beaucoup de personnes vont et viennent. Nous limitons notre conseil d'administration à 10 membres avec 5 actuellement actifs."
+        "description": "Notre équipe évolue constamment, beaucoup de personnes vont et viennent. Nous limitons notre conseil d'administration à 10 membres"
       },
       "membership": {
         "title": "Adhésion",

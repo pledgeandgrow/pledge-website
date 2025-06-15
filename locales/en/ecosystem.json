@@ -182,8 +182,7 @@
       "billingDetail": "Consolidated billing and simplified management"
     },
     "cta": {
-      "contact": "Contact Us",
-      "learnMore": "Learn More"
+      "contact": "Contact Us"
     }
   },
   "collaboration": {
@@ -232,7 +231,7 @@
       "Receive a tailored ecosystem access plan",
       "Become a client and unlock all ecosystem benefits"
     ],
-    "contactCta": "Contact Us to Learn More"
+    "contactCta": "Contact Us"
   },
   "approach": {
     "title": "Our Ecosystem Approach",

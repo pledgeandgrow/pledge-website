@@ -66,7 +66,7 @@ export default function GlobalMap() {
       region: "Europe",
       address: "Louis Junqua-Salanne",
       phone: "+44 7535 740594",
-      email: "louis.junqua-salanne@pledgeandgrow.com",
+      email: "louis.junqua@pledgeandgrow.com",
       teamSize: 38,
       timezone: "GMT (UTC+0)",
       coordinates: { x: 45, y: 29.5 }
